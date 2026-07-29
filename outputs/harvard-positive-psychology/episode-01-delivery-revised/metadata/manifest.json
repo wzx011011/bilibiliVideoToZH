@@ -1,0 +1,48 @@
+{
+  "title": "Harvard Positive Psychology - Episode 01 - What Is Positive Psychology?",
+  "episode": 1,
+  "source_duration_seconds": 4532.790136,
+  "video": {
+    "path": "video/episode-01.dual-audio.bilingual-subtitles.mp4",
+    "video_codec": "av1",
+    "audio_tracks": [
+      {
+        "language": "zho",
+        "title": "Mandarin dub",
+        "default": true
+      },
+      {
+        "language": "eng",
+        "title": "Original English",
+        "default": false
+      }
+    ],
+    "subtitle_tracks": [
+      {
+        "language": "zho",
+        "title": "Chinese subtitles",
+        "default": true
+      },
+      {
+        "language": "eng",
+        "title": "English subtitles",
+        "default": false
+      }
+    ]
+  },
+  "audio": [
+    "audio/episode-01.zh-CN.dub.m4a",
+    "audio/episode-01.en.original.m4a"
+  ],
+  "subtitles": [
+    "subtitles/episode-01.zh-CN.srt",
+    "subtitles/episode-01.en.srt"
+  ],
+  "revision": {
+    "speech_tempo": 0.98,
+    "max_tempo": 1.05,
+    "chinese_subtitle_cues": 572,
+    "ocr_deduplication": "Removed rolling OCR subtitle overlaps and reviewed ambiguous cases.",
+    "resynthesized_chinese_clips": 134
+  }
+}

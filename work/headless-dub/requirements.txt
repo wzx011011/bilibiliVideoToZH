@@ -1,0 +1,10 @@
+edge-tts==7.2.8
+faster-whisper==1.2.1
+numpy>=2.2,<3
+opencv-python>=4.12,<5
+pydub==0.25.1
+pytest==8.4.2
+rapidocr-onnxruntime>=1.4,<2
+requests>=2.32,<3
+sentencepiece==0.2.1
+soundcard==0.4.5

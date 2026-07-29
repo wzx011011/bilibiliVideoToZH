@@ -1,0 +1,61 @@
+# ============ Build / runtime artifacts ============
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+venv*/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ============ Binary media (too large for git; excluded by design) ============
+# Source videos, deliveries, dub audio, voice references, etc.
+*.mp4
+*.m4v
+*.mkv
+*.mov
+*.avi
+*.webm
+*.flv
+*.m4a
+*.wav
+*.mp3
+*.aac
+*.flac
+*.ogg
+*.opus
+
+# ============ Models & weight caches ============
+model-cache/
+**/models--*/
+*.bin
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# ============ Bundled binaries (use system tools instead) ============
+work/video-tools/
+*.exe
+*.dll
+
+# ============ Scratch / sample images ============
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+
+# ============ Secrets / local env ============
+.env
+*.env
+!*.env.example
+
+# ============ OS / editor ============
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

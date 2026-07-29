@@ -1,0 +1,11 @@
+# 音频输出(运行产物,不提交)
+audio_out/
+*.ogg
+*.mp3
+*.wav
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

@@ -1,0 +1,7 @@
+f930d5cdbc5e33c312ded8ec60442731e67991f83f4d5eeb225c400e9b1ab0dc  video/episode-01.dual-audio.bilingual-subtitles.mp4
+d48debae68729821cbd5c5a9b4b6635272e37366d22006ebb1aa3d4c2a0dacd6  audio/episode-01.zh-CN.dub.m4a
+36bcd4ba2347e037325572a5ab4de8283aceb3c9a026c7eb379506531236c40b  audio/episode-01.en.original.m4a
+05874f246e9f4be4ebef2c489ad1593f8e31741c3a9a040d305abf295850cf25  subtitles/episode-01.zh-CN.srt
+4ac183402723d2a0bfd06b218c10339b45b8b4191e6cebacd2eb12e45b7be22b  subtitles/episode-01.en.srt
+555780b85ad10b78292d394f908ae718985adc3d166f4e09e9ec06527fec6fc0  metadata/manifest.json
+639935d1f8342d286ec56d856aebe33502044f01fd6d08386f0466cee2d7e78c  metadata/ffprobe.json
