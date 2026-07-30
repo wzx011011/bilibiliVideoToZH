@@ -1,0 +1,2591 @@
+1
+00:00:06,580 --> 00:00:22,000
+Hi, good morning. So, first of all, are there any junior parents here today? Welcome, welcome.
+
+2
+00:00:22,320 --> 00:00:26,520
+I'm so glad you're here. I'm even glad you weren't here on Tuesday.
+
+3
+00:00:33,570 --> 00:00:40,330
+So, just a couple of announcements.
+
+4
+00:00:40,770 --> 00:00:45,090
+Yeah, you know, I was asking myself after Tuesday, are they ever going to take me seriously again?
+
+5
+00:00:45,770 --> 00:00:48,270
+I hope so. Or will they love me tomorrow?
+
+6
+00:00:51,700 --> 00:00:53,420
+So just a couple of announcements.
+
+7
+00:00:54,020 --> 00:01:05,520
+First, there were many emails regarding the response papers, whether the gratitude letter that you write, you also need to submit to your TF as the response paper.
+
+8
+00:01:05,680 --> 00:01:07,960
+So the answer is yes and no.
+
+9
+00:01:08,600 --> 00:01:09,380
+All right, next.
+
+10
+00:01:10,480 --> 00:01:20,440
+Yes, you do need to submit it. However, if the letter is too personal or you don't feel comfortable for any reason submitting it to your TF as well,
+
+11
+00:01:20,560 --> 00:01:25,700
+Just send your TF a note saying, I wrote the letter, and we'll take your word for it.
+
+12
+00:01:26,780 --> 00:01:29,180
+And so you don't have to submit it, though.
+
+13
+00:01:30,160 --> 00:01:32,120
+It would be great if you do.
+
+14
+00:01:36,620 --> 00:01:42,760
+The midterm is coming up in a week and a half. So just a couple of words about the midterm.
+
+15
+00:01:43,020 --> 00:01:50,120
+What we've decided to do is to just have a multiple-choice midterm.
+
+16
+00:01:51,040 --> 00:02:01,180
+There will be 50 questions on the multiple choice, and you'll have the 75 minutes to do it.
+
+17
+00:02:01,260 --> 00:02:05,080
+So we will allow for the 10 minutes or 15 minutes to get organized here.
+
+18
+00:02:07,580 --> 00:02:14,960
+It's not going to be a difficult, you know, trying to fool you or to catch you. It's going to be pretty straightforward.
+
+19
+00:02:15,440 --> 00:02:20,200
+I've told you my philosophy about exams during the first class, those of you who remember.
+
+20
+00:02:22,020 --> 00:02:29,900
+In the past, I didn't used to have exams because I remember that I wasn't happy taking exams as an undergrad and, you know, do not do unto others.
+
+21
+00:02:31,280 --> 00:02:39,160
+But then I realized that there was a value to them, not a value in terms of differentiation, you know, in grades and stuff, not that.
+
+22
+00:02:39,260 --> 00:02:50,440
+The value is that a midterm or a final gets you to sit down and synthesize all the material. So if it was a take home, you look for the answers where you are and you just get part of it.
+
+23
+00:02:50,440 --> 00:02:57,520
+Whereas with the midterm or final, you sit down and you read everything from lesson one to lesson 26.
+
+24
+00:02:58,800 --> 00:03:07,660
+And then that helps you synthesize and hence internalize the material. Because remember what I've mentioned time and again, this class is built around the spiral theory of knowledge.
+
+25
+00:03:08,120 --> 00:03:17,280
+Meaning everything that we talked about in lesson one, in class one, is related to class three, is related to class seven, is related to class 24.
+
+26
+00:03:17,940 --> 00:03:27,980
+Everything is interconnected. connected. And it's when you sit down, you know, when I talk about the material, you know, I know what's going to come, you know, three weeks from now, and I know the connection. You still don't.
+
+27
+00:03:28,060 --> 00:03:38,300
+But when you sit down and study for the exam, that's when you get to make the connection. And that's when you really internalize the material at a much higher level. So this is why we have it. I
+
+28
+00:03:38,300 --> 00:03:48,240
+know it's not fun. However, I think it is pedagogically. It's it is important to sit down and have a run-through, whether it's the midterm and, again, for the final.
+
+29
+00:03:48,440 --> 00:03:53,280
+Again, it won't be a difficult one, but do study for it. It will be very straightforward, fact-based.
+
+30
+00:03:53,700 --> 00:03:56,800
+The midterm, as you can imagine, is not about showing creativity.
+
+31
+00:03:57,580 --> 00:04:08,220
+Our goal is that you go over the material and synthesize it. If you have any questions, please email your TFs, and they'll be able to answer, or if not, they'll email me.
+
+32
+00:04:10,460 --> 00:04:13,100
+Okay, so where were we last time?
+
+33
+00:04:13,600 --> 00:04:16,240
+I actually can't remember. I think I repressed the whole lesson.
+
+34
+00:04:17,280 --> 00:04:23,680
+But I was told that I skipped a few things so that I could get to the show at the end.
+
+35
+00:04:24,620 --> 00:04:27,480
+And one thing that I skipped and I want to talk about, go back to,
+
+36
+00:04:27,940 --> 00:04:34,300
+after we talked about the body feedback hypothesis. Do you remember the body feedback hypothesis? How you shake your hand, how you carry yourself,
+
+37
+00:04:34,960 --> 00:04:38,080
+the facial feedback hypothesis, whether you smile, you frown.
+
+38
+00:04:38,820 --> 00:04:43,520
+That communicates a certain message to other people who then reflect back to us
+
+39
+00:04:44,360 --> 00:04:48,180
+and at the same time we're also communicating to ourselves.
+
+40
+00:04:48,740 --> 00:04:52,740
+Am I confident? Am I proud? Or am I afraid and scared?
+
+41
+00:04:53,940 --> 00:05:01,440
+And very often we need to, as we talked about, fake it till we make it because our body, our behavior sends messages
+
+42
+00:05:02,460 --> 00:05:05,900
+to our mind, to our emotions and affects them.
+
+43
+00:05:07,260 --> 00:05:14,800
+There's a wonderful research done by Hammerly and second author Montgomery.
+
+44
+00:05:15,680 --> 00:05:23,880
+Hammerly and Montgomery did the following research. They recruited shy heterosexual men,
+
+45
+00:05:24,300 --> 00:05:34,740
+recruited them for this study, shy heterosexual men. And the study was run as follows. These men were told that the study was about taking a certain test,
+
+46
+00:05:36,100 --> 00:05:40,960
+and they were invited into the equivalent of William James Hall.
+
+47
+00:05:41,660 --> 00:05:45,740
+And then they were told, unfortunately, we're running behind, so you will have to wait.
+
+48
+00:05:46,680 --> 00:05:54,520
+You will have to wait until the study actually takes place. And in the meantime, here is a waiting room and there are other people who are waiting for the same test
+
+49
+00:05:55,320 --> 00:06:00,960
+and we'll come and get you. It may take a while. Sorry, we'll pay you for it for the time that you have to wait extra.
+
+50
+00:06:01,380 --> 00:06:04,460
+So they ended up waiting in a waiting room.
+
+51
+00:06:04,740 --> 00:06:14,130
+And with them was waiting another person, a female, who unbeknownst to them was actually a confederate,
+
+52
+00:06:14,230 --> 00:06:23,230
+was actually a part of the study. But they thought she was just like them, also waiting in line for the study to take place.
+
+53
+00:06:23,230 --> 00:06:37,510
+So they were sitting there for 12 minutes with a woman whose instructions was to strike up a conversation with this shy, heterosexual man
+
+54
+00:06:37,510 --> 00:06:43,010
+and to express a lot of interest and excitement about what they were saying.
+
+55
+00:06:44,660 --> 00:06:51,540
+So they were listening and they were asking questions and, wow, really? And they were laughing at what they were saying for 12 minutes.
+
+56
+00:06:51,540 --> 00:07:00,460
+and then that the woman went into the experiment or so they thought and another woman comes in again for 12 minutes
+
+57
+00:07:00,460 --> 00:07:11,880
+and she sits down with the shy heterosexual man and seems very interested and laughs at what he has to say and asks questions and so on and so on for 12 minutes
+
+58
+00:07:11,880 --> 00:07:20,280
+and then the next woman comes in as she goes into the experiment and so on six times
+
+59
+00:07:21,140 --> 00:07:27,580
+six women sitting with a shy heterosexual man being very interested in what they have to say
+
+60
+00:07:28,660 --> 00:07:34,360
+striking a conversation 72 minutes total and then they go into the real experiment
+
+61
+00:07:34,920 --> 00:07:36,000
+whatever it was
+
+62
+00:07:37,280 --> 00:07:47,520
+and then the next day they're invited for the same experiment again and once again they go through the exact same procedure for 72 minutes they sit down with six women
+
+63
+00:07:47,520 --> 00:07:49,480
+who are very interested in what they have to say
+
+64
+00:07:49,480 --> 00:07:59,770
+And, of course, what really the experimenters were interested in was what effect does this have?
+
+65
+00:07:59,830 --> 00:08:06,150
+What effect does this behavior have on their shyness? And it had radical effects.
+
+66
+00:08:06,410 --> 00:08:14,950
+So over the next six months, when they followed up on these, these men suddenly became far less anxious in general and specifically around women.
+
+67
+00:08:15,410 --> 00:08:17,150
+They became less shy.
+
+68
+00:08:18,210 --> 00:08:24,870
+these men often for the first time in their lives initiated relationships and started to date
+
+69
+00:08:25,610 --> 00:08:29,090
+after 144 minutes of intervention
+
+70
+00:08:30,470 --> 00:08:36,490
+radical difference but there was a problem what's the problem with many of these psychological experiments
+
+71
+00:08:37,430 --> 00:08:39,170
+that you have to debrief
+
+72
+00:08:41,700 --> 00:08:46,180
+exactly you have to debrief so six months later the study was over
+
+73
+00:08:47,100 --> 00:08:58,560
+the researchers invite the men in and tell them that this was just a study. And these women were actually part of the experiment.
+
+74
+00:08:58,620 --> 00:09:01,720
+They were told to seem interested. Cruel, right?
+
+75
+00:09:02,420 --> 00:09:04,720
+Well, less than they thought,
+
+76
+00:09:06,060 --> 00:09:14,420
+it made no difference to these men. Because by this time, they were much more outgoing. They were doing well with the opposite sex.
+
+77
+00:09:14,950 --> 00:09:16,220
+They were going on dates.
+
+78
+00:09:16,580 --> 00:09:21,840
+They were less shy. It started a positive spiral. It didn't matter at all.
+
+79
+00:09:22,800 --> 00:09:25,360
+144 minutes changed their lives.
+
+80
+00:09:26,260 --> 00:09:30,600
+As far as the dating was concerned, at least, if not more.
+
+81
+00:09:31,740 --> 00:09:32,120
+Why?
+
+82
+00:09:32,680 --> 00:09:35,560
+Think back to Bandura's work on self-efficacy.
+
+83
+00:09:38,190 --> 00:09:44,330
+Nothing breeds success like success. When they succeeded, they did well. They saw themselves doing well.
+
+84
+00:09:44,810 --> 00:09:56,530
+self-perception theory, certain conclusions about who they are, what they are, and that led to an upward spiral and continued that upward spiral.
+
+85
+00:09:58,810 --> 00:10:03,350
+Again, we talked about fake it till we make it. We then watched Marva Collins.
+
+86
+00:10:05,700 --> 00:10:14,400
+Chapters of the Fathers, Pirkei Avot, one of the seminal Jewish texts. Those whose deeds exceed their wisdom, their wisdom shall endure.
+
+87
+00:10:14,680 --> 00:10:19,180
+But those whose wisdom exceeds their deeds, their wisdom shall not endure.
+
+88
+00:10:19,800 --> 00:10:36,660
+If we just, remember what I talked about, if we just go to a workshop or a class and understand it on the cognitive level, even have an aha moment, a breakthrough, nothing will happen unless we follow our newfound wisdom or understanding with deeds, with action.
+
+89
+00:10:36,660 --> 00:10:47,700
+Why? Because we first make our habits, and then our habits make us. And if we're before the workshop or class here, and then our attitude changes, but our behavior doesn't,
+
+90
+00:10:47,840 --> 00:10:55,640
+our attitude will be pulled down over time by our habits. So it's only if we also change our habits over time.
+
+91
+00:10:55,940 --> 00:11:06,820
+If we start doing things, if we, for example, put ourselves on the line, cope, or if we start doing the gratitude exercise or writing letters on a regular basis or starting physical exercise,
+
+92
+00:11:07,620 --> 00:11:13,460
+arguably the most powerful intervention to deal with anxiety, depression, as well as ADHD.
+
+93
+00:11:14,480 --> 00:11:17,360
+Unless we start doing these things right after,
+
+94
+00:11:17,860 --> 00:11:23,060
+the change is going to be ephemeral. We're going to go back to where we were before. Last and permanent change,
+
+95
+00:11:23,480 --> 00:11:27,520
+attitude change has to be matched by deeds, by behavior.
+
+96
+00:11:29,080 --> 00:11:40,400
+Dan Millman, I mentioned him in class a couple of weeks ago, The Way of the Peaceful Warrior. talks about the importance of action and change.
+
+97
+00:11:41,200 --> 00:11:46,860
+He says, quote, To change the course of your life, choose one of two basic methods.
+
+98
+00:11:47,700 --> 00:11:52,540
+One, you can direct your energy and attention toward trying to fix your mind,
+
+99
+00:11:53,000 --> 00:11:55,300
+find your focus, affirm your power,
+
+100
+00:11:55,860 --> 00:12:03,940
+free your emotions and visualize positive outcomes so that you can finally develop the confidence to display the courage
+
+101
+00:12:03,940 --> 00:12:09,060
+to discover the determination to make the commitment to feel sufficiently motivated
+
+102
+00:12:09,060 --> 00:12:21,030
+to do what it is that you need to do or you can just do it you know sometimes easier said than
+
+103
+00:12:21,030 --> 00:12:31,510
+done however very often you know it's just jumping into the water just doing it taking action has
+
+104
+00:12:31,510 --> 00:12:36,850
+the same effect as all the preparation or even a better effect and leads to an upward spiral
+
+105
+00:12:42,580 --> 00:12:49,070
+Okay, then we talked about coping and exiting your comfort zone. Parents, please close your eyes at this point.
+
+106
+00:12:50,610 --> 00:12:51,330
+All right.
+
+107
+00:12:54,120 --> 00:13:00,760
+And I ended by talking about attaining your optimum level of discomfort. What does this mean? What does this mean?
+
+108
+00:13:00,980 --> 00:13:10,700
+So we can look at approaches to change or reactions to change, behavioral change, along the continuum of tension.
+
+109
+00:13:12,200 --> 00:13:18,200
+most of us most of the time are in our comfort zone it's great it's wonderful however when we're
+
+110
+00:13:18,200 --> 00:13:24,660
+in the comfort zone very little change happens if we go a bit beyond that we get to our stretch
+
+111
+00:13:24,660 --> 00:13:30,600
+zone this is what we call the optimal discomfort zone this is where change actually happens
+
+112
+00:13:31,300 --> 00:13:35,620
+beyond that is the panic zone this is where we have anxiety and difficulty
+
+113
+00:13:36,400 --> 00:13:46,400
+This is a place that's usually unhealthy, unhealthy for change, because very often we can go back on where we were before. You can think about this with a metaphor.
+
+114
+00:13:46,540 --> 00:13:49,480
+The comfort zone would be freezing water.
+
+115
+00:13:50,100 --> 00:13:52,920
+The stretch zone would be flowing water.
+
+116
+00:13:53,400 --> 00:13:56,580
+The panic zone would be boiling water.
+
+117
+00:13:56,980 --> 00:14:00,540
+Again, a lot of movement, but out of control and potentially dangerous.
+
+118
+00:14:01,000 --> 00:14:06,780
+The best way to be usually is in the stretch zone. You will read about it next week when you read about flow.
+
+119
+00:14:07,280 --> 00:14:11,600
+Flow is when you have optimal level of arousal, optimal level of tension.
+
+120
+00:14:12,220 --> 00:14:17,160
+When the task that you're doing or whatever you're doing is not too difficult nor too easy.
+
+121
+00:14:17,900 --> 00:14:23,880
+See, what I did at the end of last class was certainly, as I said, as you saw, I hope, out of my comfort zone.
+
+122
+00:14:24,580 --> 00:14:30,040
+However, it wasn't enough, well, maybe, but probably not in the panic zone.
+
+123
+00:14:32,040 --> 00:14:39,020
+why because i already know you you know we've been together for for over a month um it's already
+
+124
+00:14:39,020 --> 00:14:47,220
+past ad drop date so too late for you so i wasn't taking that much of a risk it was just stretching
+
+125
+00:14:47,760 --> 00:14:52,280
+and it was important for me to i mean it really is personally important for me to do it because it
+
+126
+00:14:52,280 --> 00:15:03,550
+does stretch me and make get me more in touch with my with my humanity or for example let's say
+
+127
+00:15:03,550 --> 00:15:12,370
+want to start an exercise regime you realize how important it is you read the research you're exposed to that research you see it really has an important effect and you start exercising well
+
+128
+00:15:12,370 --> 00:15:24,110
+if you haven't exercised for five years and you go out and start running you know eight miles a day that's a problem you're over stretching you'll probably get injured if you continue sitting in
+
+129
+00:15:24,110 --> 00:15:34,230
+front of the tv or playing game boy that's also not good for change that's the comfort zone perhaps not good stretch would be okay so let me start brisk walking for you know two miles a day
+
+130
+00:15:34,230 --> 00:15:41,550
+and then build it up gradually stretch myself but not too much or if you think about starting to
+
+131
+00:15:41,550 --> 00:15:47,950
+give lectures to others paying it forward and positive psychology or biology or whatever your
+
+132
+00:15:47,950 --> 00:15:59,530
+topic is and you get anxious in front of an audience you don't start giving a lecture in theater. You know, you start initially with your friends, teammates. This is how I started with my
+
+133
+00:15:59,530 --> 00:16:09,350
+squash teammates. I gave the first lecture to you, and then I gave it to my family. Gradually, out of the comfort zone, a little bit of a stretch, and then build it over time. This is the helpful way
+
+134
+00:16:09,350 --> 00:16:17,450
+of approaching change. Sometimes, though, we have to go to the panic zone. Why? Because some things
+
+135
+00:16:17,450 --> 00:16:24,570
+cannot be changed or almost impossible to change gradually for example addiction if i'm addicted to
+
+136
+00:16:24,570 --> 00:16:34,710
+drugs it's very difficult to say okay well today i'll have just a little bit less you know i'll inject a little bit less today and a little bit less tomorrow it usually has to be abrupt
+
+137
+00:16:35,290 --> 00:16:43,630
+and then we're in the boiling realm then we're in the panic zone quite literally at times which is why we need help.
+
+138
+00:16:44,270 --> 00:16:53,450
+In this area, we need someone to hold us, someone to comfort us, someone to protect us because it is such a volatile zone and potentially dangerous.
+
+139
+00:16:54,450 --> 00:17:01,110
+But generally, if we want to change, the healthy approach to change would be along the stretch zone.
+
+140
+00:17:03,230 --> 00:17:12,390
+It's impossible to change in theory. I've said this so many times, and yet very often people who take the class
+
+141
+00:17:12,870 --> 00:17:24,070
+as you know many of them do change many of them do say well my life is better today for having taken it and other people say well I took the class and it didn't make a difference in my life it was a fun experience at times
+
+142
+00:17:24,070 --> 00:17:27,930
+the pink shirt and others but it didn't make a real lasting difference in my life
+
+143
+00:17:28,510 --> 00:17:38,790
+almost all, not in all cases but in almost all cases it's because there wasn't behavioral change associated with the attitudinal change or with the insights or understandings or recognition
+
+144
+00:17:39,890 --> 00:17:48,770
+there has to be a bias for action and that bias for action just to name a few examples to increase confidence we do it by
+
+145
+00:17:48,770 --> 00:17:57,350
+taking risks not by talking and thinking about or standing in front of the mirror and saying to myself i have a lot of confidence i have self-esteem i'm great i'm terrific i'm gorgeous
+
+146
+00:17:57,350 --> 00:18:04,260
+not enough how do we reduce stress in our lives and we'll talk about this next week
+
+147
+00:18:04,260 --> 00:18:09,500
+by simplifying by doing less rather than more and we'll talk about how actually doing less at times
+
+148
+00:18:10,360 --> 00:18:15,620
+doesn't just lead to more happiness, it also leads to more success, more creativity, as well as productivity.
+
+149
+00:18:16,600 --> 00:18:18,940
+But we can't reduce the stress in theory.
+
+150
+00:18:21,720 --> 00:18:29,940
+Chipping away through the gratefulness, creating more positive channels, becoming more of a benefit finder over time. It takes time, it doesn't happen overnight.
+
+151
+00:18:30,740 --> 00:18:40,180
+The nice thing, though, is that when we're afraid, when we think it's too much for us to take certain action, we can use our internal simulator.
+
+152
+00:18:40,180 --> 00:18:50,660
+Remember, the mind doesn't know the difference between the real thing and the imaginary thing. And if we imagine something, if we, in the CBT language, if we engage in exposure,
+
+153
+00:18:51,020 --> 00:18:55,420
+either through the imagination or through actual action, when we engage in exposure,
+
+154
+00:18:55,980 --> 00:18:59,640
+over time we become more confident, which is, as I told you, what I do,
+
+155
+00:19:00,340 --> 00:19:09,720
+preparing for lectures, seeing myself, doing it in my mind's eye, and the mind doesn't know the difference in the real and the imagined, and over time we become more confident.
+
+156
+00:19:10,580 --> 00:19:18,600
+It's a good start. It's not enough, but certainly goes hand in hand and a very useful technique to explore and to try.
+
+157
+00:19:21,800 --> 00:19:32,420
+So all this is well and good, and I'm sure some of you are thinking about it. And actually, some came after class last time and talked to me about it and said, OK, so we know action is important, but there's a problem.
+
+158
+00:19:33,640 --> 00:19:43,340
+And the problem is that I don't, or many people don't, have enough discipline to engage in this action,
+
+159
+00:19:43,640 --> 00:19:47,380
+to get out and run three times or five times a week.
+
+160
+00:19:48,140 --> 00:19:55,780
+We're lazy. It's much more fun playing with our Nintendo than going and doing yoga for an hour, at least initially.
+
+161
+00:19:58,290 --> 00:20:03,450
+So I don't have enough discipline for change. I just want a quick show of hands here. Be honest.
+
+162
+00:20:04,470 --> 00:20:13,910
+Put up your hand if you believe that if you had more self-discipline, now you may have a lot of self-discipline or very little self-discipline,
+
+163
+00:20:14,030 --> 00:20:26,030
+but if you had more self-discipline, you could potentially be happier and or more successful if you had more self-discipline. Be honest. I mean, my hand is very much up.
+
+164
+00:20:26,290 --> 00:20:31,990
+Okay, so it's most people think that. So I have good news for you and bad news for you.
+
+165
+00:20:32,690 --> 00:20:35,090
+I'll start with the bad because I like finishing on the positive.
+
+166
+00:20:35,630 --> 00:20:46,150
+So the bad news is, you ain't going to get any more self-discipline. What you have is what you got and what you will get.
+
+167
+00:20:46,750 --> 00:20:48,030
+That's it. Sorry.
+
+168
+00:20:48,850 --> 00:20:58,610
+Tough luck. Most people, overwhelming majority of people, think that they need and want more self-discipline and believe that they don't have enough.
+
+169
+00:20:59,770 --> 00:21:09,860
+and most just about all people cannot get any more self-discipline nature that's it so that's
+
+170
+00:21:09,860 --> 00:21:16,520
+the bad news the good news it's actually not that important nor for success neither for success
+
+171
+00:21:16,520 --> 00:21:22,020
+nor for happiness you can be more successful and happier with the self-discipline that you
+
+172
+00:21:22,020 --> 00:21:31,540
+currently have. How? If you change your focus from relying on self-discipline for bringing
+
+173
+00:21:31,540 --> 00:21:39,900
+about change to introducing rituals. Changing your focus from self-discipline to rituals.
+
+174
+00:21:40,320 --> 00:21:52,000
+I'm going to talk about an idea now that is talked about in greater length in The Power of Full Engagement by Jim Lohr and Tony Schwartz, an excellent, excellent book.
+
+175
+00:21:54,280 --> 00:21:59,640
+And what they're talking about is essentially a paradigm shift, a paradigm shift where we
+
+176
+00:21:59,640 --> 00:22:09,360
+need to stop trying to get more self-discipline because that in and of itself is not enough for success, for well-being, for change.
+
+177
+00:22:09,540 --> 00:22:12,860
+And it's because people rely on self-discipline for change.
+
+178
+00:22:13,720 --> 00:22:18,020
+That's the reason why most organizational as well as individual change efforts fail.
+
+179
+00:22:19,020 --> 00:22:29,100
+So let me share with you a fun study. This was done by Roy Baumeister, one of the leading social psychologists of the 20th and beginning of the 21st century.
+
+180
+00:22:29,660 --> 00:22:30,580
+Great researcher.
+
+181
+00:22:31,560 --> 00:22:37,020
+Here is what he did. He brought in a group of people individually.
+
+182
+00:22:37,800 --> 00:22:48,060
+So the person walks into the experiment, and they're told, once again, Again, you'll have to wait in this room, a waiting room, for the experiment to start.
+
+183
+00:22:50,960 --> 00:22:54,960
+So the person sits down. There is a table right next to that person.
+
+184
+00:22:55,500 --> 00:23:06,780
+And on the table, there is a bowl. And in the bowl, there are freshly baked chocolate chip cookies. Just came out of the oven.
+
+185
+00:23:08,000 --> 00:23:10,740
+Smell the aroma, engulfing them.
+
+186
+00:23:11,300 --> 00:23:13,600
+You know, like in those cartoons going into their nose.
+
+187
+00:23:14,740 --> 00:23:18,880
+Phenomenal smell. They're sitting there next to the chocolate chip cookies that are in a bowl.
+
+188
+00:23:20,340 --> 00:23:25,360
+The experimenter puts down and says, I'll come pick you up in about 10 minutes for the experiment.
+
+189
+00:23:27,140 --> 00:23:35,220
+They walk out, and as they're walking out, they tell them, oh, and just, by the way, these chocolate chip cookies, they're for the next experiment, so if you don't mind, don't touch them.
+
+190
+00:23:37,870 --> 00:23:42,450
+So you're sitting there, almost dying, but you're not touching it.
+
+191
+00:23:44,570 --> 00:23:48,950
+and 10 minutes later, the experiment does come in, takes you to the experiment.
+
+192
+00:23:49,470 --> 00:24:00,000
+The experiment is a very difficult test that you need to take,
+
+193
+00:24:00,060 --> 00:24:09,420
+a test that most people don't solve and requires a lot of perseverance and hard work. But most people, even with perseverance and hard work, do not solve it.
+
+194
+00:24:09,520 --> 00:24:21,280
+So the outcome measure, what the researcher is interested in, is mostly how much did you persevere before giving up on that test? How much did you persevere before giving up on that test?
+
+195
+00:24:23,020 --> 00:24:27,300
+That was the outcome measure, the dependent variable.
+
+196
+00:24:30,520 --> 00:24:38,900
+Second group, randomly picked, come into the same room, sit on the same chair, have the same ball on the table.
+
+197
+00:24:39,520 --> 00:24:51,180
+But instead of chocolate chip cookies, What they have in the bowl are red beetroots, freshly baked, just came out of the oven.
+
+198
+00:24:52,760 --> 00:25:02,400
+And they're sitting there. And the experimenter is about to walk out. He says, just one more thing. If you don't mind, don't touch those beetroots. They are for the next experiment.
+
+199
+00:25:03,240 --> 00:25:04,020
+Okay, fine.
+
+200
+00:25:05,560 --> 00:25:16,400
+So you're sitting there for 10 minutes. Ten minutes later, the experimenter comes in, takes you to the real experiment. Sitting down, you're taking the exact same test, the exact same puzzle.
+
+201
+00:25:18,330 --> 00:25:22,390
+And once again, how long will you persevere before giving up?
+
+202
+00:25:25,000 --> 00:25:36,480
+Think about it for yourself for a second. Who do you think persevered more, the chocolate chip cookies group or the beetroots group? Think for yourself for a second. By the way, I guessed wrong when I was asked this question.
+
+203
+00:25:38,540 --> 00:25:38,870
+Okay.
+
+204
+00:25:40,070 --> 00:25:41,990
+Significantly more perseverance.
+
+205
+00:25:42,410 --> 00:25:43,970
+Significantly more. It wasn't close.
+
+206
+00:25:45,830 --> 00:25:54,990
+The group that had the beetroots persevered a lot more. Why? When Baumeister wanted to understand the mechanism,
+
+207
+00:25:55,730 --> 00:25:58,510
+and he did some more experiments to explain the mechanism,
+
+208
+00:25:58,870 --> 00:26:05,790
+it's because the chocolate chip cookie group had used self-discipline not to touch.
+
+209
+00:26:08,680 --> 00:26:10,580
+They really wanted to touch it.
+
+210
+00:26:13,840 --> 00:26:20,360
+But they couldn't, so they used their quota of self-discipline. And when they went into the quote-unquote real experiment,
+
+211
+00:26:21,580 --> 00:26:27,020
+what happened was that they had little or no self-discipline left.
+
+212
+00:26:27,360 --> 00:26:33,880
+And that maze, that experiment, that test required a lot of self-discipline.
+
+213
+00:26:34,680 --> 00:26:38,940
+The point of this study, we all have a limited amount of self-discipline.
+
+214
+00:26:39,360 --> 00:26:41,500
+And the question is, what do we use it on?
+
+215
+00:26:43,020 --> 00:26:49,820
+another question for you how many people here have those of you who did set new year's resolutions
+
+216
+00:26:49,820 --> 00:27:00,680
+put your hand up if you're fulfilled every single one of the new year's resolutions that you ever set for yourself put your hand up every single new year's resolution if you did set new year's
+
+217
+00:27:00,680 --> 00:27:09,120
+resolutions but higher please well i certainly didn't but here's another question for you
+
+218
+00:27:10,240 --> 00:27:16,220
+how many people here this is an important question so please put your hand up if the answer is in the affirmative
+
+219
+00:27:17,680 --> 00:27:18,960
+how many people here
+
+220
+00:27:20,780 --> 00:27:22,440
+brushed their teeth this morning
+
+221
+00:27:22,980 --> 00:27:24,280
+put your hand up high
+
+222
+00:27:25,760 --> 00:27:29,720
+I'm glad to see this you can all come and talk to me after real close
+
+223
+00:27:30,220 --> 00:27:36,100
+so let me just imagine what happened this morning, the scenario so you got up in the morning, you were tired
+
+224
+00:27:37,180 --> 00:27:47,640
+and then you said to yourself okay today's the day today's the day i am going to do it i am going to brush my teeth this morning
+
+225
+00:27:47,640 --> 00:27:51,000
+right and to really motivate you as you got out of bed
+
+226
+00:27:57,820 --> 00:28:09,720
+here i come rena i mean here i come to brush and you brush your teeth right today is the day because I have 1504. I'm going to brush my teeth. Yes!
+
+227
+00:28:11,580 --> 00:28:13,100
+No, of course not.
+
+228
+00:28:13,960 --> 00:28:16,860
+You know, you rolled out of bed, you know, barely alive.
+
+229
+00:28:17,740 --> 00:28:21,460
+You probably don't even remember that you brushed your teeth because you were asleep still.
+
+230
+00:28:23,800 --> 00:28:24,840
+Now, why?
+
+231
+00:28:25,460 --> 00:28:33,420
+Why did everyone, I think, I hope everyone, brush their teeth this morning whereas no one, no one person out of more than 600 students
+
+232
+00:28:34,480 --> 00:28:36,320
+fulfill their New Year's resolutions.
+
+233
+00:28:36,740 --> 00:28:40,540
+Why? Because New Year's resolutions rely on self-discipline.
+
+234
+00:28:41,560 --> 00:28:47,800
+Brushing our teeth relies on a ritual. We do it every day. It's automatic.
+
+235
+00:28:50,830 --> 00:29:00,290
+Now, there are rituals. We know brushing our teeth is important. People won't talk to us if we don't. But we also know that physical exercise is very important.
+
+236
+00:29:00,670 --> 00:29:07,570
+And yet most people in the world, not at Harvard, But in the world, don't do physical exercise and pay a very high price for it.
+
+237
+00:29:08,250 --> 00:29:19,750
+You know, it always amazed me when people used to comment on my incredible self-discipline when I was a squash player. It always used to amaze me because I don't see myself as a person with self-discipline.
+
+238
+00:29:19,870 --> 00:29:22,330
+You know that we don't have chocolate chip cookies at home.
+
+239
+00:29:23,010 --> 00:29:24,910
+And if we do, Tommy hides them.
+
+240
+00:29:25,910 --> 00:29:28,830
+Because if they were there, they would disappear two minutes later.
+
+241
+00:29:29,810 --> 00:29:38,870
+Zero self-discipline when it comes to these things. And yet, with squash, I did have what people thought, and what I thought for many years, self-discipline.
+
+242
+00:29:39,070 --> 00:29:46,110
+Because I would get up in the morning and go for my run. I would then go to school, and after school, straight to the course, have a session with my coach,
+
+243
+00:29:46,790 --> 00:29:54,070
+regular session with my coach, then play games, matches, and then, as you can see, went to the gym and worked out.
+
+244
+00:29:55,910 --> 00:29:57,050
+Every single day.
+
+245
+00:29:59,410 --> 00:30:02,750
+And then I went home, did my homework, and went to bed. It was a ritual.
+
+246
+00:30:05,210 --> 00:30:13,690
+That is what athletes do. They have rituals, which is why they're able to maintain what seems from the outside such high levels of discipline.
+
+247
+00:30:14,230 --> 00:30:16,910
+At times superhuman. It's not. It's rituals.
+
+248
+00:30:20,930 --> 00:30:22,410
+Jim Law and Tony Schwartz.
+
+249
+00:30:23,130 --> 00:30:29,170
+Building rituals requires defining very precise behaviors and performing them at very specific times,
+
+250
+00:30:29,810 --> 00:30:32,890
+motivated by deeply held values.
+
+251
+00:30:34,690 --> 00:30:36,730
+Let me give you some personal examples.
+
+252
+00:30:38,900 --> 00:30:40,240
+Physical exercise.
+
+253
+00:30:41,500 --> 00:30:47,940
+Deeply held value for me, has always been, and especially now when I know the research, the data on physical exercise.
+
+254
+00:30:48,300 --> 00:30:49,120
+So I have a ritual.
+
+255
+00:30:49,820 --> 00:30:55,120
+Three times a week, between 30 and 45 minutes, I run.
+
+256
+00:30:56,760 --> 00:30:58,940
+After that, do my stretching.
+
+257
+00:31:00,020 --> 00:31:04,980
+I know how important yoga and meditation is for me. I have a ritual, and I do it.
+
+258
+00:31:05,900 --> 00:31:11,740
+First thing when I wake up in the morning, a few deep breaths. We'll talk about it more after break.
+
+259
+00:31:12,340 --> 00:31:13,360
+It's a ritual.
+
+260
+00:31:14,080 --> 00:31:24,340
+Every time when I teach here, every time when I get up in front of the audience, I run before. This morning, I ran. On Tuesday, I ran twice as hard.
+
+261
+00:31:24,620 --> 00:31:27,660
+Why? Because it releases anxiety.
+
+262
+00:31:28,040 --> 00:31:29,220
+It helps me.
+
+263
+00:31:30,420 --> 00:31:33,040
+Globally, generally, and specifically for the class.
+
+264
+00:31:35,560 --> 00:31:37,520
+Another very important value for me.
+
+265
+00:31:39,160 --> 00:31:41,400
+My wife. Our relationship.
+
+266
+00:31:42,500 --> 00:31:43,880
+See the movie Hitch?
+
+267
+00:31:44,500 --> 00:31:45,280
+Fantastic movie.
+
+268
+00:31:47,630 --> 00:31:49,370
+It's a very important value for me.
+
+269
+00:31:50,750 --> 00:31:55,770
+And therefore, my wife and I have rituals, and we have two ritual dates a week.
+
+270
+00:31:57,130 --> 00:32:07,950
+Now, when people hear it, they say, oh, come on, where is the spontaneity in love? Well, there is a lot of spontaneity in terms of what we do during these dates. But the dates are set in stone.
+
+271
+00:32:08,030 --> 00:32:19,830
+And if I'm traveling, or my wife is traveling, and we miss a date, we make up for it. after. Why? Because if we didn't have this ritual, then we'd have two dates, a decade
+
+272
+00:32:20,830 --> 00:32:31,890
+as opposed to a week. And a deeply held value for both of us is our relationship. In our modern world where there are so many conflicting demands on our time, rituals
+
+273
+00:32:32,830 --> 00:32:36,250
+are not just important, they're absolutely necessary
+
+274
+00:32:37,130 --> 00:32:39,950
+if we're to do the things that are important for us that we care
+
+275
+00:32:39,950 --> 00:32:50,720
+about other examples of rituals writing a thank you note once a week once a month making a gratitude
+
+276
+00:32:50,720 --> 00:32:57,160
+visit once a month once a month or once every two months doing the gratitude exercise on a daily
+
+277
+00:32:57,160 --> 00:33:02,980
+basis these are rituals that we can introduce and can actually make an important difference
+
+278
+00:33:02,980 --> 00:33:13,560
+we also have a ritual ritual dinners with a family as a whole so every shabbat dinner friday night dinner we have together with a family. It's a ritual. It's a wonderful
+
+279
+00:33:13,560 --> 00:33:25,440
+ritual. During the week we also have days when we're together because family is an important value to us. Now sometimes for example because of travel or other reasons, rituals are
+
+280
+00:33:25,440 --> 00:33:28,640
+broken. Then you can make up for it later.
+
+281
+00:33:30,220 --> 00:33:32,240
+There can also be negative rituals.
+
+282
+00:33:33,180 --> 00:33:43,100
+Three hours of not checking email. I know it's hard but it's an important ritual. And we'll talk about the effect of having our email on constantly. Because when
+
+283
+00:33:43,100 --> 00:33:51,660
+we're constantly connected to technology, we're often disconnected from the important things
+
+284
+00:33:51,660 --> 00:34:01,780
+in our lives. We'll talk about that after break. Rituals, introduced rituals. One of the fears that people have when they hear about rituals is that they say, well, that
+
+285
+00:34:01,780 --> 00:34:07,540
+will take away from my productivity. And if not productivity, creativity. Not so.
+
+286
+00:34:08,100 --> 00:34:15,600
+In fact, the exact opposite is the case. If you look, and this is historical research, if you look at all the great artists,
+
+287
+00:34:16,620 --> 00:34:20,900
+whether it's writers, the Hemingways, or whether it's the Da Vinci's,
+
+288
+00:34:23,960 --> 00:34:30,780
+they had a ritual in their life. And the ritual was, for example, from 7 to 10 a.m. in the morning, I write. No matter what.
+
+289
+00:34:32,840 --> 00:34:36,900
+6 to 10 at night, if I'm more of a night person, I paint.
+
+290
+00:34:37,820 --> 00:34:48,820
+They had rituals. And it's because of these rituals that they were able to be creative. Because then they could think about their subject material as opposed to a million other things. Well, maybe I should be doing something else and there are other distractions.
+
+291
+00:34:49,020 --> 00:34:50,860
+No, there was a ritual. That's what I did now.
+
+292
+00:34:52,040 --> 00:34:55,920
+Almost mindless getting there, just like we brush our teeth.
+
+293
+00:34:56,820 --> 00:35:01,700
+But when they were there, there was space, openness to be creative.
+
+294
+00:35:04,000 --> 00:35:13,340
+Now, the key is to give yourself time to create the ritual. You see, maintaining a ritual requires some self-discipline, but not a lot.
+
+295
+00:35:14,380 --> 00:35:17,740
+Creating a ritual requires a lot of self-discipline.
+
+296
+00:35:18,560 --> 00:35:24,220
+Once again, because we go back to our old habits. Let's do a quick exercise. So why don't you take your hands and just fold them.
+
+297
+00:35:24,980 --> 00:35:26,160
+Fold your hands for a minute.
+
+298
+00:35:31,900 --> 00:35:32,160
+All right.
+
+299
+00:35:33,480 --> 00:35:40,440
+Now, continue to fold your hands, only this time in the opposite direction.
+
+300
+00:35:40,860 --> 00:35:43,920
+Meaning this hand below and this hand above.
+
+301
+00:35:46,930 --> 00:35:52,630
+Yeah, yeah. I see especially the men are not really getting it, but it's okay.
+
+302
+00:35:53,590 --> 00:35:55,130
+Now, how does that feel?
+
+303
+00:35:55,890 --> 00:35:57,110
+Not comfortable, right?
+
+304
+00:35:57,490 --> 00:36:06,270
+Now, this is such a simple movement, you know, folding hands, and yet we feel very uncomfortable. Something is wrong here, and we want to go back to our folding before.
+
+305
+00:36:06,890 --> 00:36:08,010
+Much more comfortable.
+
+306
+00:36:08,710 --> 00:36:12,390
+We first make our habits, and then our habits make us.
+
+307
+00:36:12,890 --> 00:36:13,310
+Okay.
+
+308
+00:36:13,850 --> 00:36:17,970
+So the key is, here we're talking about a very simple change, folding hands.
+
+309
+00:36:18,410 --> 00:36:26,390
+How much more difficult is it when we have habits that we've cultivated for many years and are much more significant in our lives?
+
+310
+00:36:27,030 --> 00:36:30,690
+Very difficult to change them. It takes time.
+
+311
+00:36:31,270 --> 00:36:34,890
+William James, as I mentioned before, says it takes 21 days to change a habit.
+
+312
+00:36:35,450 --> 00:36:41,550
+Lauren Schwartz, in their book, The Power of Full Engagement, talk about 30 days to change it.
+
+313
+00:36:42,030 --> 00:36:50,250
+And of course, it depends on what habit. So give yourself 30 days to start the gratitude. Give yourself 30 days to build a new ritual of exercising regularly.
+
+314
+00:36:50,730 --> 00:36:57,770
+And the key is to give yourself no more than one or two rituals each 30 days.
+
+315
+00:36:58,250 --> 00:37:07,350
+Why? Because as we mentioned earlier, it takes a lot of self-discipline to create a ritual, and we don't have much self-discipline.
+
+316
+00:37:07,450 --> 00:37:13,610
+Which is why when we have a list of 10 changes that we want to introduce in our lives today, we end up doing none.
+
+317
+00:37:15,130 --> 00:37:16,450
+We end up doing none.
+
+318
+00:37:17,970 --> 00:37:25,370
+Because we're overextending our self-discipline and we break down. It takes a lot of discipline to start a ritual, but once we start it,
+
+319
+00:37:27,130 --> 00:37:29,550
+after a month when it's habituated,
+
+320
+00:37:29,910 --> 00:37:33,270
+when it's grooved in, when a neural pathway has begun to form,
+
+321
+00:37:33,770 --> 00:37:39,530
+then we can move on to the next ritual and introduce it, if we're ready. No more than two, ideally one ritual.
+
+322
+00:37:42,650 --> 00:37:47,840
+Next week in your response paper, you're going to choose a ritual, two rituals for this month
+
+323
+00:37:47,840 --> 00:37:54,720
+that hopefully you will also introduce because there cannot be change without behavioral change.
+
+324
+00:37:55,600 --> 00:37:59,320
+Lauren Schwartz, incremental change is better than ambitious failure.
+
+325
+00:37:59,680 --> 00:38:10,920
+Success feeds on itself. We see it on the individual level. We see it on the organizational level. John Carter from the business school does a lot of work on change in organizations.
+
+326
+00:38:10,920 --> 00:38:15,900
+in the realm of leadership. What he talks about a lot is how you need small successes
+
+327
+00:38:16,560 --> 00:38:18,800
+and then build on these successes.
+
+328
+00:38:21,720 --> 00:38:27,380
+One thing that happened to me, I remember when I was an undergraduate, and it happened to me my sophomore year.
+
+329
+00:38:27,960 --> 00:38:37,940
+I played on the varsity team, didn't have a good season my sophomore year, was burnt out, got injured, and couldn't wait for the first of March.
+
+330
+00:38:38,500 --> 00:38:42,860
+March 1 is the last, or March 2, sometimes the last day of the season.
+
+331
+00:38:44,220 --> 00:38:50,180
+And I couldn't wait because after that, I could stop playing squash and focus on my studies.
+
+332
+00:38:52,470 --> 00:39:03,450
+Then I could get a lot of work done. Because with squash, we were at the courts, training physically for two hours, but a total of three hours a day. Weekends, we were traveling mostly or had matches at home.
+
+333
+00:39:04,330 --> 00:39:09,430
+Mornings, at least two mornings a week, we were lifting weights or in the gym. So it was rough.
+
+334
+00:39:10,110 --> 00:39:37,870
+A lot of work. And I said, you know, I can't wait to have the freedom without squash, especially given that I wasn't enjoying it that much at that point. Can't wait not to do it anymore. And just to focus on my classes, catch up on all the readings and writings and stuff. March one came. I stopped playing completely. And instead of becoming more productive, I became far less productive.
+
+335
+00:39:40,160 --> 00:39:43,720
+Now, I see a lot of you nodding. The athletes know what I'm talking about.
+
+336
+00:39:45,520 --> 00:39:49,240
+Why did I become more or rather less productive?
+
+337
+00:39:50,000 --> 00:39:52,880
+Procrastination, whoa, skyrocketed.
+
+338
+00:39:54,620 --> 00:39:59,620
+Why? Because for years I've been told that I'm a person with self-discipline.
+
+339
+00:40:00,940 --> 00:40:02,400
+And I started to believe it.
+
+340
+00:40:02,940 --> 00:40:08,980
+Yeah, I have a lot of self-discipline. Look at me. I train so hard. I work, you know, when I play on the circuit six hours a day.
+
+341
+00:40:09,720 --> 00:40:11,220
+that's a lot of self-discipline.
+
+342
+00:40:12,720 --> 00:40:15,340
+And suddenly, the squash season ended,
+
+343
+00:40:15,880 --> 00:40:20,620
+and I said, all right, let's see this discipline at work. And I wasn't getting any work done.
+
+344
+00:40:21,000 --> 00:40:21,480
+Why?
+
+345
+00:40:21,920 --> 00:40:23,800
+Because I gave up my rituals.
+
+346
+00:40:24,660 --> 00:40:36,480
+You see, during the season, those of you who play varsity or are very involved in music or a club know that. When you're investing a lot in a certain organization, your time has to be ritualized.
+
+347
+00:40:36,680 --> 00:40:45,020
+So you know that you're in practice then, or you're at the Crimson at these hours or you're having meetings at these hours and after that you have to go back and work
+
+348
+00:40:45,460 --> 00:40:49,360
+because you only have two hours to do it and you want to get an okay night's sleep.
+
+349
+00:40:51,490 --> 00:40:57,230
+You have rituals and you're productive and you're creative. And suddenly the rituals go away
+
+350
+00:40:57,910 --> 00:41:00,650
+and you say, okay, now I'm going to work more and the exact opposite happens
+
+351
+00:41:01,970 --> 00:41:07,230
+because we have a limited amount. It was only when I came to terms with the fact that I have a limited amount of self-discipline.
+
+352
+00:41:08,490 --> 00:41:20,310
+it's only when i came to terms with the human nature nature should be commanded must be obeyed it was only then that i actually became productive because i created new rituals
+
+353
+00:41:21,150 --> 00:41:31,110
+in my life after that rituals very important and significant the only way for lasting change
+
+354
+00:41:31,110 --> 00:41:42,450
+let me talk about cognition now the c so we talked about affect emotions we talked about behavior, how important that is, both acute and gradual.
+
+355
+00:41:42,810 --> 00:41:44,370
+Let's talk about cognition.
+
+356
+00:41:48,370 --> 00:41:54,630
+We'll talk again about cognitive reconstruction, which is the gradual way of bringing about change.
+
+357
+00:41:54,930 --> 00:42:04,990
+And then we'll talk about the faster way of bringing about change, which is the eureka experience, the aha moment.
+
+358
+00:42:06,450 --> 00:42:08,670
+So first, cognitive reconstruction.
+
+359
+00:42:14,030 --> 00:42:19,470
+As we mentioned before, an interpretation is a neural pathway.
+
+360
+00:42:19,730 --> 00:42:29,990
+If I interpret the world as a fault finder, the fortified neural pathways in my brain are the negative ones. There's an experience, and I go immediately to the negative interpretation,
+
+361
+00:42:29,990 --> 00:42:32,390
+and that gets reinforced over time.
+
+362
+00:42:33,230 --> 00:42:42,030
+If I am a merit finder, I will look at the exact same experiences and interpret them very differently
+
+363
+00:42:42,030 --> 00:42:48,770
+because I have different neural pathways in the brain. And, of course, there are consequences to how we interpret our experiences.
+
+364
+00:42:49,450 --> 00:42:51,670
+Not necessarily as things happening for the best,
+
+365
+00:42:52,170 --> 00:42:57,650
+but as a benefit finder, sorry, I changed that, as a benefit finder,
+
+366
+00:42:58,710 --> 00:43:03,850
+looking more at the positive with each experience.
+
+367
+00:43:04,490 --> 00:43:08,750
+Now, remember the study on the identical twins and how much genes actually matter.
+
+368
+00:43:09,710 --> 00:43:12,450
+But they only account for 50% of the variants.
+
+369
+00:43:12,810 --> 00:43:18,610
+So here is a story that's told in many Intro to Psych textbooks.
+
+370
+00:43:21,220 --> 00:43:25,180
+And it's about twins who were raised in the same home.
+
+371
+00:43:25,580 --> 00:43:32,020
+And their father was abusive toward them, toward their mother.
+
+372
+00:43:33,730 --> 00:43:43,350
+He was very often drunk, very often on drugs. and really an awful, awful childhood. The worst you can imagine.
+
+373
+00:43:45,740 --> 00:43:49,120
+And these twins grow up in that home with that father
+
+374
+00:43:50,970 --> 00:44:01,730
+and they go off, they leave the home, run away from home later on in life and they reach the age of 30.
+
+375
+00:44:02,910 --> 00:44:10,470
+And then at the age of 30, a psychologist who is doing research on twins goes and visits them. And he goes to the first twin.
+
+376
+00:44:11,810 --> 00:44:15,050
+And what he sees there, the twin is in a relationship.
+
+377
+00:44:15,530 --> 00:44:22,930
+He's abusing his family, very often drunk, very often on drugs.
+
+378
+00:44:24,630 --> 00:44:28,950
+Then the psychologist is able to find him in a moment of soberness
+
+379
+00:44:29,910 --> 00:44:35,510
+and says to the twin, what's going on? What are you doing? What's happening here?
+
+380
+00:44:37,420 --> 00:44:47,790
+And the twin, who knows, the psychologist is doing research on the effect of genes and the effect of upbringing, says, you know my father.
+
+381
+00:44:48,210 --> 00:44:55,230
+I mean, you know the kind of childhood that I endured. How do you expect me to be any other way?
+
+382
+00:44:57,300 --> 00:45:01,080
+And the psychologist, who knows the effect of upbringing, shrugs.
+
+383
+00:45:02,280 --> 00:45:04,720
+And then he goes to the second twin.
+
+384
+00:45:06,140 --> 00:45:16,920
+the second twin happens to be the exact same age as the first one he goes to the second twin also 30 years old walks into the house
+
+385
+00:45:16,920 --> 00:45:19,400
+and cannot believe his eyes
+
+386
+00:45:20,740 --> 00:45:31,960
+such peace such equanimity such love between him and his wife and the kids he's doing well in his career
+
+387
+00:45:31,960 --> 00:45:40,440
+doing well with his family he comes back again After a while, see, maybe that was a fluke. Maybe he's putting on a show. But no, it's the real thing.
+
+388
+00:45:41,580 --> 00:45:44,580
+Phenomenal family life, phenomenal professional life.
+
+389
+00:45:45,780 --> 00:45:49,860
+And he goes to him and says, in disbelief, how?
+
+390
+00:45:52,350 --> 00:45:57,310
+Now, that twin also knows that he's doing research. And he says, what do you mean how?
+
+391
+00:45:59,030 --> 00:46:00,530
+You know my father.
+
+392
+00:46:00,890 --> 00:46:02,950
+You know how I was raised.
+
+393
+00:46:03,410 --> 00:46:08,170
+You know what he did to us. How do you expect me to be any other way?
+
+394
+00:46:09,610 --> 00:46:16,610
+I know how much he hurt us. How do you expect me to be any other way like him?
+
+395
+00:46:17,730 --> 00:46:26,150
+Same experiences, monozygotic twins, same genes, radically different interpretation.
+
+396
+00:46:26,470 --> 00:46:37,620
+One, continuing the hell that he endured as a child. The other, creating a heaven, all because of interpretation.
+
+397
+00:46:37,660 --> 00:46:44,080
+What do you do with it? Well, I have no choice. This is the way I was raised. This is the model, passive victim.
+
+398
+00:46:44,780 --> 00:46:51,620
+The other, I'm not going to be like that. I'm not going to be like my father, active agent.
+
+399
+00:46:53,220 --> 00:46:55,800
+So much of it is a matter of interpretation.
+
+400
+00:46:57,840 --> 00:47:09,560
+Happiness, well-being, as we've mentioned many times before, is not so much contingent on external circumstances, not so much contingent on our status or the state of our bank account.
+
+401
+00:47:09,560 --> 00:47:13,020
+It's contingent on our state of mind.
+
+402
+00:47:16,220 --> 00:47:26,640
+The thing to remember, though, is that there are no shortcuts, unfortunately. There are no quick fixes, unfortunately. If there were, I promise you, I would have told you.
+
+403
+00:47:26,720 --> 00:47:30,080
+If I find out next week about a shortcut, even if it's over spring break,
+
+404
+00:47:30,820 --> 00:47:32,280
+you'll get an email from me.
+
+405
+00:47:33,280 --> 00:47:34,680
+But I don't think there are.
+
+406
+00:47:35,860 --> 00:47:39,880
+And very often the hope of finding a quick fix leads to more unhappiness.
+
+407
+00:47:43,560 --> 00:47:46,060
+Here are some examples of cognitive reconstruction.
+
+408
+00:47:48,530 --> 00:47:56,630
+This is work done by Tomaka on whether we perceive an activity as a challenge or as a threat.
+
+409
+00:47:56,630 --> 00:48:03,810
+Because we can perceive the exact same activity and cognitively reconstruct our understanding of it. So let me give you an example.
+
+410
+00:48:06,060 --> 00:48:10,840
+When I, after being thrown out of Cambridge, I applied for PhD programs.
+
+411
+00:48:11,960 --> 00:48:15,000
+One of the programs I applied to was here, was hoping to get in.
+
+412
+00:48:15,760 --> 00:48:24,640
+And when I got in, I wanted to come back, because overall I had a very good experience here as an undergrad, with all the difficulties and hardship, I was glad, wanted to be back.
+
+413
+00:48:26,940 --> 00:48:35,100
+And when I got in, you know, I suddenly became a little bit concerned, because I said, you know, I experienced a lot of anxiety as an undergrad.
+
+414
+00:48:35,520 --> 00:48:38,760
+A lot of anxiety as an undergrad. And I said, I don't want to relive that again.
+
+415
+00:48:39,180 --> 00:48:40,660
+Maybe I should go elsewhere.
+
+416
+00:48:41,260 --> 00:48:48,500
+And then I turned it around and I said, okay, instead of looking at Harvard as a threat to me, to my calm,
+
+417
+00:48:49,400 --> 00:48:52,240
+I'm going to look at it as a challenge.
+
+418
+00:48:52,840 --> 00:48:58,140
+And my challenge became explicitly, I mean, I wrote it in my journal, wrote about it, thought about it a lot, explicitly.
+
+419
+00:48:59,100 --> 00:49:09,280
+My goal over the six years that I got my PhD was to maintain calm. because I said to myself, if I can maintain calm at Harvard, I can maintain calm anywhere.
+
+420
+00:49:11,550 --> 00:49:20,830
+And I worked on it. I really worked on it. And it became a challenge. And just that change helped me get so much more out of my experience here as a graduate student.
+
+421
+00:49:22,130 --> 00:49:29,330
+Even through the hardships, the generals and the failures and the anxiety. But overall, a much better experience.
+
+422
+00:49:29,950 --> 00:49:35,490
+Recently, I just did it. So, you know, once in a while I travel right after class.
+
+423
+00:49:35,490 --> 00:49:42,770
+So three weeks ago, I traveled to Florida, and I had a very important talk there with a company that I really wanted to work with.
+
+424
+00:49:42,870 --> 00:49:50,050
+It was my first event there, a company that I cared about, and I think is doing fantastic things around the world, and I really wanted to do well.
+
+425
+00:49:51,370 --> 00:49:53,890
+And I felt a lot of anxiety before that talk.
+
+426
+00:49:54,690 --> 00:50:04,670
+And then I cognitively reconstructed it. I said, okay, it's anxiety-inducing, permission to be human, experience the experience, but let's look at it as a challenge.
+
+427
+00:50:04,670 --> 00:50:13,650
+that I have this wonderful opportunity to speak to such a great company, such wonderful people, I'm going to make the best of it.
+
+428
+00:50:13,890 --> 00:50:24,470
+Turned it from a threat into a challenge, into an opportunity. And that made a big difference in my approach to it. Think about areas in your life. What is it?
+
+429
+00:50:24,530 --> 00:50:28,650
+Is it a play you want to try out for? Is it someone you want to ask out?
+
+430
+00:50:29,570 --> 00:50:32,330
+Is it speaking up in section?
+
+431
+00:50:38,440 --> 00:50:42,960
+This is a study. Those who took Psych 1 or Psych 15 have encountered that.
+
+432
+00:50:43,620 --> 00:50:55,080
+The work of Schachter and Singer back in the early 60s. Today, they would never be able to get this past the ethics committee, just like Milgram wouldn't have been able to get his study passed. Here is what they did.
+
+433
+00:50:55,340 --> 00:51:00,080
+So they brought people into the experiment and injected them with epinephrine.
+
+434
+00:51:01,540 --> 00:51:04,860
+Epinephrine arouses the body. It shots of adrenaline.
+
+435
+00:51:06,060 --> 00:51:17,480
+but they thought it was just vitamin C they didn't know it was epinephrine and then they were sitting in the experiment waiting for again the real experiment
+
+436
+00:51:18,220 --> 00:51:29,720
+they were sitting in the waiting room and while they were sitting they were asked to fill out a questionnaire now remember they just got a shot of adrenaline but they didn't know that they got a shot of adrenaline
+
+437
+00:51:29,720 --> 00:51:33,780
+so they're sitting filling in a questionnaire and in the first condition
+
+438
+00:51:35,160 --> 00:51:44,000
+the questionnaire had very provocative questions to say the least for example one of these questions
+
+439
+00:51:44,000 --> 00:51:54,060
+was so um how many men did your mom sleep with before she got married to your dad that's one of the questions you know they will never be able to get away with this study today but
+
+440
+00:51:54,060 --> 00:52:01,220
+you know back in the 60s so they were answered this now next to them next to them there is a
+
+441
+00:52:01,220 --> 00:52:06,780
+confederate, someone whom they don't know is part of the study, and this guy is going ballistic.
+
+442
+00:52:08,120 --> 00:52:15,260
+How dare they, you know, really getting angry, and then you get angry too, and you get even
+
+443
+00:52:15,260 --> 00:52:21,600
+angrier than the control group who went through the exact same thing except for the fact that they didn't get the injection.
+
+444
+00:52:22,660 --> 00:52:34,480
+So what they did was they saw their bodies as getting very aroused, and they interpreted this arousal as, oh, I must be really angry, and they really did get even angrier than
+
+445
+00:52:34,480 --> 00:52:40,380
+they would have. They got angry in the control group as well, but less angry than those who were injected
+
+446
+00:52:41,400 --> 00:52:42,360
+the epinephrine.
+
+447
+00:52:43,500 --> 00:52:54,700
+Now, second condition, also injected, had a questionnaire without any provocative questions, and next to them there was again a confederate, whom they thought was also doing the experiment,
+
+448
+00:52:54,700 --> 00:53:07,180
+And that confederate found, by happenstance, a hula hoop on the floor and started to shake it, you know, and dance and, you know, was going crazy there and happy and laughing.
+
+449
+00:53:07,400 --> 00:53:22,160
+And the person who was just injected the epinephrine went wild, so happy and joyous, much more happy than the control group who were in a room with a person dancing with a hula hoop but did not get the injection.
+
+450
+00:53:22,860 --> 00:53:30,940
+In other words, he interpreted the raising adrenaline, oh, I must be really happy now. And they were really happier.
+
+451
+00:53:32,940 --> 00:53:35,900
+In other words, very often it's the interpretation,
+
+452
+00:53:36,320 --> 00:53:47,560
+in this case, of a physical symptom that determines what we will feel, joy or anger, because they're quite similar.
+
+453
+00:53:48,120 --> 00:53:50,280
+In both of them, there is an adrenaline rush.
+
+454
+00:53:52,580 --> 00:54:01,800
+So how do we interpret a situation as arousal or as euphoria or as anger. Here's another study.
+
+455
+00:54:02,340 --> 00:54:04,940
+This is done by Lee Ross and his colleagues.
+
+456
+00:54:07,280 --> 00:54:15,860
+They asked people, college students, he's from Stanford, college students to volunteer their most generous and benevolent friends,
+
+457
+00:54:16,080 --> 00:54:21,200
+to name them, and their most competitive cutthroat friends.
+
+458
+00:54:22,500 --> 00:54:23,960
+And tell them who they are.
+
+459
+00:54:24,560 --> 00:54:27,260
+And then they contacted them to be part of a study.
+
+460
+00:54:27,260 --> 00:54:39,560
+And what they wanted to see was their behavior in a situation, in a game, where you can cooperate or you can be competitive.
+
+461
+00:54:42,650 --> 00:54:48,090
+The intervention was that these students were randomly divided into two groups.
+
+462
+00:54:48,190 --> 00:54:58,950
+And in the two groups, there were people who were deemed very competitive or people who were deemed very generous and benevolent. And in the second group, same thing. Half of the people were very generous and benevolent.
+
+463
+00:54:58,950 --> 00:55:05,050
+Half of the people were very competitive and cutthroat, as perceived by their friends.
+
+464
+00:55:07,390 --> 00:55:13,170
+And in the first group, they got a game, and the game was called the community game.
+
+465
+00:55:14,750 --> 00:55:21,650
+And the second group got the exact same game, a game where you had the opportunity either to cooperate or to compete.
+
+466
+00:55:21,930 --> 00:55:28,050
+But the game, instead of a community game, even though it was the exact same game, it was called Wall Street game.
+
+467
+00:55:29,430 --> 00:55:35,150
+and they wanted to see how many people cooperate versus how many people compete and they wanted
+
+468
+00:55:35,150 --> 00:55:44,620
+to see what predicts it well whether the kids whether the participants were deemed cooperative
+
+469
+00:55:44,620 --> 00:55:53,440
+or competitive predicted nothing nothing whether or not they would compete or cooperate
+
+470
+00:55:53,440 --> 00:56:03,740
+what predicted everything was whether they were in the community game or in the wall street game If they were in the community game, they were much more likely to cooperate.
+
+471
+00:56:03,920 --> 00:56:08,760
+If they were in the Wall Street game, whether they were generous, benevolent, or cutthroat competitive,
+
+472
+00:56:09,280 --> 00:56:11,740
+they were much more likely to be cutthroat competitive.
+
+473
+00:56:12,520 --> 00:56:18,980
+In other words, how we frame a situation, community, Wall Street, can make all the difference.
+
+474
+00:56:19,720 --> 00:56:22,040
+Threat, opportunity, maybe the exact same thing.
+
+475
+00:56:22,540 --> 00:56:25,100
+How we frame it can make all the difference.
+
+476
+00:56:27,390 --> 00:56:31,610
+This is a study done by one of my ex-students, Lisa Leroux,
+
+477
+00:56:32,790 --> 00:56:36,530
+who asked herself a very important question. Remember, questions begin a quest.
+
+478
+00:56:37,210 --> 00:56:43,050
+A very important question, which is, how can we raise the level of volunteerism at Harvard and beyond?
+
+479
+00:56:45,240 --> 00:56:48,760
+And the wonderful answer that she came up with is,
+
+480
+00:56:49,120 --> 00:57:00,400
+let's get students, as well as people in society at large, to reframe how we look at volunteering rather than as duty, something I have to do that is odd,
+
+481
+00:57:00,600 --> 00:57:02,060
+why don't I look at it as a privilege?
+
+482
+00:57:02,800 --> 00:57:13,000
+I have the privilege of helping. And it is a real privilege. Remember the study on kindness, one of the best interventions for well-being. It is a real privilege to give, to help.
+
+483
+00:57:15,170 --> 00:57:19,070
+And when people reframe this, they are much more likely to volunteer.
+
+484
+00:57:19,970 --> 00:57:27,450
+This has implications for child-rearing. This has implications, of course, for education. It has implications for society as a whole.
+
+485
+00:57:30,180 --> 00:57:36,160
+This is a topic that I'm going to talk about a lot. I'm going to dedicate much time to it when we discuss relationships.
+
+486
+00:57:36,580 --> 00:57:44,600
+But just very briefly, this understanding for me transformed, literally transformed my relationship with my wife.
+
+487
+00:57:44,880 --> 00:57:52,320
+It transformed and is transforming my relationship with my friends as well as students and colleagues.
+
+488
+00:57:53,820 --> 00:58:04,660
+You see, we go into a relationship, most people think that the important thing about relationship is that we're validated. We get pats on our back. Now, that's important
+
+489
+00:58:04,660 --> 00:58:12,880
+in a relationship. Surely, it's important to be validated in any relationship, whether it's with a student-teacher, whether it's with friends, certainly in a romantic relationship.
+
+490
+00:58:13,260 --> 00:58:19,820
+However, what David Schnark talks about is that primarily, if we want long-term, successful,
+
+491
+00:58:21,000 --> 00:58:26,760
+thriving, passionate relationships, the first objective, the primary objective is to go
+
+492
+00:58:26,760 --> 00:58:37,920
+into the relationship to be known, to be known rather than to be validated, meaning going in there and saying, okay, so how can my partner get to know me even better?
+
+493
+00:58:38,280 --> 00:58:41,680
+Doing it gradually, of course, and on the first stage, you don't want to reveal all your secrets.
+
+494
+00:58:42,640 --> 00:58:48,580
+Doing it gradually, gradually, you know, thinking about it, but opening up more and more.
+
+495
+00:58:48,740 --> 00:58:54,900
+And couples who over time open up more and more are able to sustain the relationship as
+
+496
+00:58:54,900 --> 00:59:05,140
+well as their passion over time and again i'm going to talk about it much more i'm going to devote you know two classes at least two relationships this is going to be one of the
+
+497
+00:59:05,140 --> 00:59:16,560
+central pillars of successful long-term relationships also with students the same applies you know when i initially started to teach i really wanted the validation from the
+
+498
+00:59:16,560 --> 00:59:20,860
+students so how can i have my students perceive me as you know as a good teacher i want them to like
+
+499
+00:59:20,860 --> 00:59:29,360
+me. And, you know, that's important for everyone. We all like to be liked. However, when I switched
+
+500
+00:59:29,360 --> 00:59:38,440
+my focus, I said, yeah, I still want to be liked, but my main focus is I want my students to know me. I want them to know the topic that I'm most passionate about in the world.
+
+501
+00:59:40,220 --> 00:59:46,340
+That really changed a lot. It was no longer to be validated, i.e. to appear perfect, but
+
+502
+00:59:46,340 --> 00:59:54,540
+it was to be known as a human being, of course, permission to be human, and that actually
+
+503
+00:59:54,540 --> 00:59:59,180
+improved my teaching a great deal, and I enjoy it so much more because there's so much less
+
+504
+00:59:59,180 --> 01:00:10,810
+pressure on us in a relationship, any relationship, when we go in with the intention of being known, of expressing rather than impressing.
+
+505
+01:00:11,410 --> 01:00:21,330
+We can feel so much lighter, and the wonderful thing is that it also makes the relationship so much healthier. But again, much more on that because it's so important,
+
+506
+01:00:21,450 --> 01:00:24,050
+so important topic.
+
+507
+01:00:25,570 --> 01:00:32,650
+We talked about this a lot. How do we perceive failure as a stumbling block, as a catastrophe, or as an opportunity,
+
+508
+01:00:33,190 --> 01:00:41,970
+as a growth experience? And that can make all the difference. We'll talk about it after spring break when we discuss perfectionism and the fear of failure.
+
+509
+01:00:43,410 --> 01:00:48,970
+And finally, the study that you read by Allie Crum and Ellen Langer.
+
+510
+01:00:49,610 --> 01:00:55,430
+So just to give you a little bit of background about this study, and I will briefly mention it because hopefully you've read it already.
+
+511
+01:00:56,270 --> 01:01:00,850
+Allie Crum was my student since her freshman year.
+
+512
+01:01:01,230 --> 01:01:08,670
+I was her TF when I taught with Phil Stone. And then I was her thesis advisor with Ellen Langer.
+
+513
+01:01:09,410 --> 01:01:11,350
+And this was the topic of her thesis.
+
+514
+01:01:13,130 --> 01:01:16,330
+when Ellen Langer came up with the idea for the thesis
+
+515
+01:01:18,030 --> 01:01:28,150
+and she told Ali and me, this is what I think would be a very interesting study, I took Ellen aside after the study, after the meeting, after Ali went away and I told her
+
+516
+01:01:28,890 --> 01:01:30,210
+Ellen, I don't think it's fair
+
+517
+01:01:31,230 --> 01:01:36,050
+I don't think it's fair that Ali will do her thesis on it because the thesis is very
+
+518
+01:01:37,070 --> 01:01:39,990
+tough experiment, you'll hear about it if you haven't read about it in a minute
+
+519
+01:01:40,410 --> 01:01:43,350
+it will take a lot of time from her she's not going to get any results
+
+520
+01:01:44,310 --> 01:01:51,830
+now, you can write a senior thesis with getting a null result without getting a result that's okay, but I said why waste her time, her senior year
+
+521
+01:01:52,810 --> 01:01:56,370
+and she said to me it will work, I said to her no it won't
+
+522
+01:01:57,750 --> 01:01:59,010
+and boy did it work
+
+523
+01:01:59,830 --> 01:02:09,130
+now I've learned since then not to argue with Ellen Langer because she has ideas that you would never think work, but they do like the study we mentioned with the 1979
+
+524
+01:02:09,130 --> 01:02:17,970
+going back to 1959, or with the eye test, being simply in a flight simulator improves your eyesight.
+
+525
+01:02:18,890 --> 01:02:25,790
+Again, ideas that seem fantastic, but she proves them right. So the same happened here with this study.
+
+526
+01:02:25,930 --> 01:02:32,970
+The study was that Ellie went to hotels and worked with the ladies who were cleaning the hotels.
+
+527
+01:02:33,410 --> 01:02:39,110
+And she went to them, to two groups, and told both groups the importance of physical exercise.
+
+528
+01:02:39,490 --> 01:02:46,610
+And she said, this is something brought to you by your hotel, just to show you, to help you how important exercise is.
+
+529
+01:02:49,180 --> 01:03:03,380
+And then she tested them on all these physical measures, whether it was body fat, blood sample, how much fat they had in their blood, weight, psychological measures, depression, anxiety, and so on and so on.
+
+530
+01:03:04,340 --> 01:03:15,850
+And what she did was, to the one group, she just left them after all these tests. The second group, she said to them, and this was the intervention,
+
+531
+01:03:16,050 --> 01:03:27,470
+you know, the work that you're doing is actually physical exercise. And she calculated how much calories it takes to pick up sheets, to go like this, and then to put it on the bed.
+
+532
+01:03:27,470 --> 01:03:36,550
+How much calories it takes to actually vacuum. She estimated all those things. And then she gave them the statistics of how many calories you should expand a day doing exercise.
+
+533
+01:03:36,550 --> 01:03:39,610
+And she said, what you're doing is working out, actually.
+
+534
+01:03:41,110 --> 01:03:42,630
+This was the intervention.
+
+535
+01:03:43,790 --> 01:03:53,910
+And she went back eight weeks later. Eight weeks later, eight weeks later, she ran the exact same tests again. And some of the results that she found, some of them are in the article.
+
+536
+01:03:54,890 --> 01:03:56,090
+Others are not.
+
+537
+01:03:59,360 --> 01:04:01,960
+Blood pressure decreased significantly.
+
+538
+01:04:03,220 --> 01:04:14,600
+the fat in the blood decreased significantly body weight after the 8 weeks for the intervention group not for the control group control group no change
+
+539
+01:04:14,600 --> 01:04:26,420
+over that period body weight decreased significantly their self esteem went up depression levels went down anxiety levels went down
+
+540
+01:04:26,420 --> 01:04:38,300
+and energy levels went up all as a result now she asked Did you do anything differently? Are you exercising more than you did before? No difference between the control group and the intervention group.
+
+541
+01:04:38,440 --> 01:04:40,620
+The only difference was perception.
+
+542
+01:04:41,420 --> 01:04:44,180
+Now, they may have worked harder. We don't know.
+
+543
+01:04:44,560 --> 01:04:55,120
+It may be just the mind over body. We don't know. But the fact is, because they reframed, they reconstructed their experience from a chore,
+
+544
+01:04:56,100 --> 01:05:03,240
+I have to clean 30 rooms a day, to this is exercise and it's good for me,
+
+545
+01:05:03,640 --> 01:05:09,000
+that made all the difference, physically as well as psychologically.
+
+546
+01:05:12,090 --> 01:05:14,550
+Here is an example of acute change.
+
+547
+01:05:15,070 --> 01:05:25,690
+This is change that happens like a sledgehammer. And this is the Eureka experience. There's a lot of talk, a lot of research, a lot of interest in this area
+
+548
+01:05:25,690 --> 01:05:36,570
+of the Eureka experience, the aha moment, the insight, so valuable, so important, and there is much misunderstanding about it. Because people think we suddenly have this insight. Not so.
+
+549
+01:05:36,870 --> 01:05:45,670
+There's a whole process involved. And the process begins with immersion. This is when we prepare for the insight. This is when we learn.
+
+550
+01:05:47,150 --> 01:05:58,930
+Howard Gardner has done a lot of work on extraordinary individuals throughout the world. And what he found is that generally for people to become experts in a field to become capital C creative in a field.
+
+551
+01:05:59,730 --> 01:06:08,070
+They have to have invested in it at least 10 years of very hard work. This is the preparation. This is when you immerse yourself in the material.
+
+552
+01:06:08,530 --> 01:06:09,930
+Look, for example, at Beethoven.
+
+553
+01:06:10,570 --> 01:06:14,050
+Those of you who listen to his music and know the trajectory.
+
+554
+01:06:14,450 --> 01:06:16,750
+Symphony I and II, Mozart.
+
+555
+01:06:17,150 --> 01:06:19,210
+Sounds very similar to Mozart.
+
+556
+01:06:20,690 --> 01:06:23,330
+Third symphony, Eroica, it's Beethoven.
+
+557
+01:06:24,190 --> 01:06:29,190
+he immersed himself a great deal in the music of the day studied it, learned it
+
+558
+01:06:29,850 --> 01:06:32,450
+and then after many years
+
+559
+01:06:33,370 --> 01:06:34,230
+was able
+
+560
+01:06:34,930 --> 01:06:38,130
+to become Beethoven and creative and transform
+
+561
+01:06:39,950 --> 01:06:41,670
+the whole field of music
+
+562
+01:06:42,290 --> 01:06:44,130
+being one of the first romantics
+
+563
+01:06:50,540 --> 01:06:56,040
+second stage after we prepare and he takes again a lot of hard work whether it's preparation that was done by Bill Gates
+
+564
+01:06:56,640 --> 01:07:03,580
+when he was skipping class or whether it's Bill Clinton. A lot of preparation before you become an expert in a field
+
+565
+01:07:03,580 --> 01:07:08,680
+and are able to introduce, capital C, creativity.
+
+566
+01:07:09,660 --> 01:07:11,620
+Have that eureka, the insight.
+
+567
+01:07:12,380 --> 01:07:13,960
+Second stage is incubation.
+
+568
+01:07:14,860 --> 01:07:20,560
+And you sit with all the creative individuals. After you immerse yourself in an area, you do nothing.
+
+569
+01:07:21,360 --> 01:07:23,800
+You just allow it to marinate.
+
+570
+01:07:24,220 --> 01:07:33,300
+For example, it's no coincidence that we get some of our best ideas in the shower. It's no coincidence that Archimedes got his best idea in the bath.
+
+571
+01:07:36,660 --> 01:07:43,580
+Mozart used to spend hours a day just driving around Salzburg.
+
+572
+01:07:44,120 --> 01:07:51,840
+And then suddenly he would have the aha experience, the Eureka. And he said, I could hear the symphony in a second.
+
+573
+01:07:52,980 --> 01:08:02,920
+In a second he could hear just about everything. Okay, so that's Mozart. But you hear Shakespeare would spend hours driving around in his carriage,
+
+574
+01:08:03,080 --> 01:08:05,920
+and then Sonny would have the insight, okay, so this is what the story is about.
+
+575
+01:08:07,360 --> 01:08:11,560
+And then he would go on and write it. The incubation stage, so, so important.
+
+576
+01:08:12,280 --> 01:08:17,540
+J.P. Morgan, I can do a year's work in nine months, but not in 12.
+
+577
+01:08:18,520 --> 01:08:22,780
+J.P. Morgan understood, arguably the greatest entrepreneur this country has ever seen,
+
+578
+01:08:24,140 --> 01:08:26,000
+understood the importance for creativity.
+
+579
+01:08:29,200 --> 01:08:30,780
+of taking time off.
+
+580
+01:08:32,340 --> 01:08:34,480
+Today, business people, leaders,
+
+581
+01:08:35,720 --> 01:08:40,740
+don't take enough time off because we think it's a waste of time.
+
+582
+01:08:41,860 --> 01:08:44,060
+We think that if we just sit there and do nothing,
+
+583
+01:08:45,240 --> 01:08:54,460
+we're really doing nothing. Well, no, the mind works. The mind works and the mind needs it for the creative insight. In fact, leaders, I know many of you will go into leadership positions,
+
+584
+01:08:55,380 --> 01:08:58,400
+need time off more than anyone else
+
+585
+01:08:59,200 --> 01:09:03,460
+because they need to be creative. They need to think about the next thing for the company, for the organization,
+
+586
+01:09:06,420 --> 01:09:11,840
+taking time in, invaluable, not just for memory, also for creativity.
+
+587
+01:09:12,900 --> 01:09:17,060
+One of the things that I do when I work as a consultant in organizations
+
+588
+01:09:17,660 --> 01:09:23,180
+is I just take the management on a retreat with no agenda. We're just going to hang out.
+
+589
+01:09:25,860 --> 01:09:32,220
+And very often, within as little as a half hour or an hour, ideas begin to come out. Why? Because for the first time they have time.
+
+590
+01:09:32,960 --> 01:09:34,940
+No coincidence that we often wake up
+
+591
+01:09:35,740 --> 01:09:39,740
+with a solution to a problem we had because the subconscious mind
+
+592
+01:09:40,220 --> 01:09:41,720
+is making connections then.
+
+593
+01:09:42,700 --> 01:09:43,580
+Joseph Campbell.
+
+594
+01:09:44,880 --> 01:09:56,040
+You must have a room or a certain hour or so a day when you don't know what was in the newspapers that morning. You don't know who your friends are. You don't know what you owe anybody. You don't know what anybody
+
+595
+01:09:56,040 --> 01:10:03,760
+owes you. This is a place where you can simply experience and bring forth what you are and what you might be. This is
+
+596
+01:10:03,760 --> 01:10:10,460
+the place of creative incubation. At first, you may find that nothing happens there. But if you have
+
+597
+01:10:10,460 --> 01:10:20,040
+such a sacred place and use it, something eventually will happen. And very often it's during
+
+598
+01:10:20,040 --> 01:10:30,800
+these incubation times, during these timings, during those times when you have an opportunity to reflect, whether it's on a response paper or just hang out and listen to music. That's very
+
+599
+01:10:30,800 --> 01:10:36,300
+often when the aha moment comes, the Eureka experience, that one second, I see the symphony.
+
+600
+01:10:38,060 --> 01:10:48,720
+You know, in some way, you can think about an analogy of how this happens. You can think about stage one, or you can think about it in the context of sexual intercourse,
+
+601
+01:10:50,140 --> 01:10:51,360
+of making love.
+
+602
+01:10:52,840 --> 01:10:56,980
+Preparation and incubation can be the equivalent to foreplay.
+
+603
+01:10:58,580 --> 01:11:01,600
+the eureka experience the orgasm
+
+604
+01:11:02,680 --> 01:11:13,220
+now the important thing to understand about this process is you have to go through preparation and incubation to get to the eureka experience in other words you need the foreplay did you hear that man?
+
+605
+01:11:13,660 --> 01:11:17,240
+you need the foreplay to get to the next level
+
+606
+01:11:18,610 --> 01:11:21,930
+it's important, it's part of the creative process
+
+607
+01:11:22,750 --> 01:11:23,870
+it's significant
+
+608
+01:11:24,750 --> 01:11:29,490
+it's very significant for love, it's significant also for this process.
+
+609
+01:11:32,700 --> 01:11:33,900
+And then afterwards,
+
+610
+01:11:35,540 --> 01:11:40,260
+after you've come up with a eureka, that's when you evaluate and you ask yourself, is this a good idea?
+
+611
+01:11:41,460 --> 01:11:42,320
+Does it work?
+
+612
+01:11:44,040 --> 01:11:54,560
+Or is it just something that, you know, women and... Most ideas, most eureka experiences actually end up not working. And therefore, evaluation is important. Is this really a good piece?
+
+613
+01:11:54,620 --> 01:11:56,120
+Is this really a good idea for the story?
+
+614
+01:11:57,460 --> 01:12:08,620
+Shakespeare asked. Is this really a good idea for a philosophical treatise, Descartes, who spent a lot of time on his own reflecting. Is this a really good idea for a philosophical treatise?
+
+615
+01:12:09,000 --> 01:12:10,440
+Is this a good business plan?
+
+616
+01:12:11,620 --> 01:12:13,160
+Is this the next Facebook?
+
+617
+01:12:14,120 --> 01:12:20,300
+Or is it just something that I had, you know, an idea that I had at 3 a.m. in the morning and someone has already done it or it won't work?
+
+618
+01:12:21,080 --> 01:12:22,380
+Evaluation is important.
+
+619
+01:12:22,980 --> 01:12:26,440
+There are many ideas out there. Not all of them work.
+
+620
+01:12:27,660 --> 01:12:44,460
+Or to go back to our analogy of making love, so you have the first stage, the foreplay, you have the orgasm, and afterwards, here is the question that you may be asking when you evaluate it.
+
+621
+01:13:57,290 --> 01:14:10,830
+So, do you know who they are? I mean, not the parents. Do the students know who, do you recognize them? The Shirelles. The Shirelles. Actually, my favorite group.
+
+622
+01:14:12,170 --> 01:14:23,890
+But really, my daughter's name, some of you know, is Shirel. And we were looking for a name that would make sense in Hebrew as well as in English.
+
+623
+01:14:24,150 --> 01:14:31,010
+And my wife came up with the name Shirel, which means in Hebrew, Song of God.
+
+624
+01:14:31,630 --> 01:14:37,150
+And then you have the Shirels. So it was just, when we found out that, it was just the perfect name.
+
+625
+01:14:37,850 --> 01:14:41,530
+You know what I love so much about it? And you can see the naivete in the dance.
+
+626
+01:14:41,910 --> 01:14:44,350
+I love that era. Just love it. Just love it.
+
+627
+01:14:48,310 --> 01:14:52,950
+Anyway, go on YouTube and do the Shirelles. You'll see other songs by them.
+
+628
+01:14:53,830 --> 01:14:55,410
+So this is when you evaluate.
+
+629
+01:14:55,770 --> 01:15:05,940
+We're almost done. This is when you evaluate. Is this something that will last? Is this something that is real? A really good idea, a really good relationship, for example.
+
+630
+01:15:06,080 --> 01:15:09,840
+And after that, and this doesn't have a parallel to lovemaking,
+
+631
+01:15:10,600 --> 01:15:11,460
+You elaborate.
+
+632
+01:15:11,920 --> 01:15:18,680
+You elaborate on the idea. So you write out the symphony.
+
+633
+01:15:19,180 --> 01:15:24,500
+This is when you write out the treaties.
+
+634
+01:15:24,860 --> 01:15:26,580
+This is when you make the business plan.
+
+635
+01:15:27,620 --> 01:15:35,680
+When I put together this course, I went through this process. So I started off by preparing.
+
+636
+01:15:35,940 --> 01:15:40,720
+So even though I had very good preparation before, studying for the generals twice,
+
+637
+01:15:41,820 --> 01:15:49,460
+um teaching with professor philip stone is it i was his ta twice tf um even though i studied social
+
+638
+01:15:49,460 --> 01:16:00,360
+psychology for many years and had read i took time off where i immersed myself in positive psychology material i read the handbook of positive psychology which is a very good weapon to use
+
+639
+01:16:00,360 --> 01:16:06,000
+you know if anyone comes close you can just throw it at them it's about this big but very good i read
+
+640
+01:16:06,000 --> 01:16:14,020
+hundreds of academic journal articles and then i took time off and during that time off i talked
+
+641
+01:16:14,020 --> 01:16:25,960
+about positive psychology but i didn't work in positive psychology i had conversation with my wife with phil stone with my brother about this and that's when the eurekas came that's when the
+
+642
+01:16:25,960 --> 01:16:30,440
+insights came and i said okay so this is how the course is going to be built this is the spiral
+
+643
+01:16:31,080 --> 01:16:35,940
+Then I had the idea of the PPEO, post-peak experience order, as an idea, aha moment.
+
+644
+01:16:37,540 --> 01:16:48,420
+And afterwards, I evaluated. I evaluated myself. I evaluated by talking to other people about it to see if it works. And then I sat down and spent hours and hours and hours writing out the lectures.
+
+645
+01:16:48,640 --> 01:16:55,860
+All my lectures are written out. And obviously, I don't read them. But in preparation, when I prepare for the lectures, I do read them a few times.
+
+646
+01:16:56,740 --> 01:16:59,680
+That was the elaboration. That is the creative process.
+
+647
+01:16:59,680 --> 01:17:10,820
+Whether it's of putting together a class, of putting together a great organization, of writing a great book, or of creating a great relationship.
+
+648
+01:17:11,240 --> 01:17:13,220
+I'll see you next week. Have a wonderful weekend.

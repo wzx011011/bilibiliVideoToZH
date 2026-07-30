@@ -17,9 +17,10 @@ from pathlib import Path
 
 import requests
 
-# --- 路径常量（与 dub_pipeline.py 一致）---
+# --- 路径常量 ---
 ROOT = Path(__file__).resolve().parents[2]
-GPT_SOVITS_DIR = ROOT / "work" / "gpt-sovits"
+# GPT-SoVITS 实际安装在 Codex 工作区（非 D:\work\wzx\work 下）。
+GPT_SOVITS_DIR = Path(r"C:\Users\QPRJ\Documents\Codex\2026-07-24\kai\work\gpt-sovits")
 GPT_SOVITS_VENV_PYTHON = GPT_SOVITS_DIR / ".venv" / "Scripts" / "python.exe"
 GPT_SOVITS_API = GPT_SOVITS_DIR / "api_v2.py"
 GPT_SOVITS_CONFIG = GPT_SOVITS_DIR / "GPT_SoVITS" / "configs" / "tts_infer.yaml"
