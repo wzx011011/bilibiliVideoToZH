@@ -1,49 +1,53 @@
-// MAIN world 注入：hook WebSocket/fetch 抓 api_app_key + 设备参数
 (function () {
-  if (window.__doubaoHooked) return;
-  window.__doubaoHooked = true;
+  "use strict";
+  if (window.__doubaoCourseAssistantHooked) return;
+  window.__doubaoCourseAssistantHooked = true;
 
-  function send(payload) {
-    window.postMessage({ source: "doubao-inject", payload }, "*");
-  }
-
-  // Hook WebSocket
-  const OriginalWS = window.WebSocket;
-  function HookedWS(url, protocols) {
+  function normalizedUrl(value) {
     try {
-      if (typeof url === "string" && url.includes("doubao")) {
-        send({ kind: "websocket", url: url });
-      }
-    } catch (e) {}
-    return protocols !== undefined ? new OriginalWS(url, protocols) : new OriginalWS(url);
+      if (value instanceof Request) return value.url;
+      return String(value instanceof URL ? value.href : value || "");
+    } catch {
+      return "";
+    }
   }
-  HookedWS.prototype = OriginalWS.prototype;
-  HookedWS.CONNECTING = OriginalWS.CONNECTING;
-  HookedWS.OPEN = OriginalWS.OPEN;
-  HookedWS.CLOSING = OriginalWS.CLOSING;
-  HookedWS.CLOSED = OriginalWS.CLOSED;
-  window.WebSocket = HookedWS;
 
-  // Hook fetch
+  function capture(kind, value) {
+    const url = normalizedUrl(value);
+    try {
+      const parsed = new URL(url, location.href);
+      if (!parsed.hostname.endsWith("doubao.com")) return;
+      window.postMessage({
+        source: "doubao-inject",
+        payload: { kind, url: parsed.href },
+      }, location.origin);
+    } catch {
+      // Ignore malformed URLs from page code.
+    }
+  }
+
+  const OriginalWebSocket = window.WebSocket;
+  function HookedWebSocket(url, protocols) {
+    capture("websocket", url);
+    return protocols === undefined
+      ? new OriginalWebSocket(url)
+      : new OriginalWebSocket(url, protocols);
+  }
+  HookedWebSocket.prototype = OriginalWebSocket.prototype;
+  Object.setPrototypeOf(HookedWebSocket, OriginalWebSocket);
+  window.WebSocket = HookedWebSocket;
+
   const originalFetch = window.fetch;
-  window.fetch = function (input, init) {
-    try {
-      const url = typeof input === "string" ? input : input?.url;
-      if (url && url.includes("doubao.com")) {
-        send({ kind: "fetch", url: url });
-      }
-    } catch (e) {}
+  window.fetch = function (input) {
+    capture("fetch", input);
     return originalFetch.apply(this, arguments);
   };
 
-  // Hook XHR
   const originalOpen = XMLHttpRequest.prototype.open;
   XMLHttpRequest.prototype.open = function (method, url) {
-    try {
-      if (url && url.includes("doubao.com")) send({ kind: "xhr", url: url });
-    } catch (e) {}
+    capture("xhr", url);
     return originalOpen.apply(this, arguments);
   };
 
-  console.log("[豆包抓取] hook 已注入");
+  console.info("[豆包课程配音助手] 页面捕获已启用");
 })();

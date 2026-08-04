@@ -19,7 +19,7 @@ bilibiliVideoToZH/
 │   ├── doubao_pipeline.py       分块/切割/字幕生成
 │   ├── make_episode.py          单集制作主控
 │   ├── make_cover_video.py      封面图+字幕+水印→MP4
-│   └── captcha-extension/       豆包凭据抓取扩展
+│   └── captcha-extension/       豆包凭据抓取 + 分块自动发送扩展
 ├── subtitles/                   各集中文字幕（SRT）
 ├── videos/                      成品视频
 ├── downloads/                   下载的原视频
@@ -57,9 +57,9 @@ work/.venv-ocr/Scripts/python src/download.py "B站URL" --episode 2
 # 2. 提取字幕（如需要，视频需有硬字幕）
 #    使用 subtitle_ocr.py 从画面 OCR 中文字幕
 
-# 3. 豆包配音（半自动）
+# 3. 豆包配音
 work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step prep
-# → 在豆包网页发送生成的 txt（src/captcha-extension 可帮助抓凭据）
+# → 用 src/captcha-extension 选择 manifest.json + 全部 txt，自动依次发送
 work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step build
 # → videos/episode-02.mp4
 ```
@@ -72,5 +72,5 @@ work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step build
 ## 技术要点
 
 - **豆包配音**：豆包朗读是 chat_tts 模式（朗读已生成回复），通过提示词让豆包给无标点字幕加标点+润色语气后朗读
-- **签名风控**：豆包发消息有 a_bogus 签名，需在浏览器手动发送（浏览器自动加签）
+- **签名风控**：扩展操作豆包网页原生输入框和发送动作，由浏览器页面完成正常签名
 - **字幕延后**：豆包朗读节奏与字符比例切割有时间差，字幕整体延后 0.5 秒
