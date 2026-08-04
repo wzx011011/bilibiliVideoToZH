@@ -1,9 +1,0 @@
-{
-  "schema_version": 1,
-  "subtitle_source": "ocr",
-  "ocr_model": "rapidocr",
-  "tts_engine": "gpt-sovits",
-  "reference_audio": "cn-pro-ref.wav",
-  "speech_tempo": 0.98,
-  "max_tempo": 1.05
-}

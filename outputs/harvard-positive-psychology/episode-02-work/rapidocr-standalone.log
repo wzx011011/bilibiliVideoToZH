@@ -1,10 +1,0 @@
-[A] 采用 640 条 Whisper 锚点作为字幕时间戳...
-
-[A] 完成：640 条字幕事件
-[B] 用 rapidocr 识别 640 条字幕...
-[B] 50/640[B] 100/640[B] 150/640[B] 200/640[B] 250/640[B] 300/640[B] 350/640[B] 400/640[B] 450/640[B] 500/640[B] 550/640[B] 600/640[B] 640/640
-[B] 完成
-[C] 输出 637 条字幕：episode-02.source.zh-CN-ocr.srt
-[info] 加载 640 条英文 anchor
-[done] SRT: D:\work\wzx\outputs\harvard-positive-psychology\episode-02-work\episode-02.source.zh-CN-ocr.srt
-[done] JSON: D:\work\wzx\outputs\harvard-positive-psychology\episode-02-work\episode-02.source.zh-CN-ocr.json

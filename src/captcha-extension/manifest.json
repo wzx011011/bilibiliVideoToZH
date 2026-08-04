@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "豆包朗读凭据抓取",
+  "version": "1.0.0",
+  "description": "自动抓取豆包网页版朗读所需的 cookie、设备参数和 api_app_key，一键生成 .env",
+  "permissions": ["cookies", "webRequest", "storage"],
+  "host_permissions": ["*://*.doubao.com/*", "wss://*.doubao.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["*://*.doubao.com/*"],
+    "js": ["relay.js"],
+    "run_at": "document_start",
+    "all_frames": true
+  }],
+  "web_accessible_resources": [{
+    "resources": ["inject.js"],
+    "matches": ["*://*.doubao.com/*"]
+  }],
+  "action": {
+    "default_title": "豆包凭据抓取",
+    "default_popup": "popup.html"
+  }
+}

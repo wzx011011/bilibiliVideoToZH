@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+body { width: 420px; font-family: "Microsoft YaHei", sans-serif; font-size: 13px; margin: 0; padding: 14px 16px; }
+h2 { font-size: 15px; margin: 0 0 4px; }
+.hint { color: #888; font-size: 12px; margin-bottom: 12px; line-height: 1.5; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+td { padding: 4px 6px; border-bottom: 1px solid #eee; vertical-align: middle; }
+td.status { width: 24px; text-align: center; }
+td.field { font-family: monospace; color: #555; white-space: nowrap; }
+td.value { font-family: monospace; font-size: 11px; color: #2a7; max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+td.value.missing { color: #c33; }
+.ok { color: #2a7; font-weight: bold; }
+.miss { color: #c33; }
+button { flex: 1; padding: 8px; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
+.btn-copy { background: #2563eb; color: #fff; }
+.btn-refresh { background: #e5e7eb; color: #333; }
+.btns { display: flex; gap: 8px; }
+.toast { display: none; color: #2a7; font-size: 12px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h2>豆包朗读凭据抓取</h2>
+<div class="hint">保持本页打开，在豆包网页正常浏览。✗ 的字段按提示操作即可补齐。</div>
+<table id="fields"></table>
+<div class="btns">
+  <button class="btn-refresh" id="refresh">刷新</button>
+  <button class="btn-copy" id="copy">复制 .env 内容</button>
+</div>
+<div class="toast" id="toast">已复制到剪贴板 ✓</div>
+<div class="hint" style="margin-top:10px;">
+  <b>缺 api_app_key？</b> 在豆包点回复的朗读按钮 🔊，扩展会抓到 wss 连接里的 appkey。<br>
+  <b>缺其它字段？</b> 在 doubao.com 随便浏览、发一条消息即可。
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

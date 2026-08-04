@@ -1,25 +1,76 @@
-# 哈佛积极心理学中文配音项目
+# B站视频 → 中文配音视频
 
-当前唯一认可的成品位于：
+把 B站视频（如哈佛积极心理学课程）自动转换成"封面图 + 豆包中文配音 + 中文字幕"的视频。
 
-`outputs/harvard-positive-psychology/episode-01-delivery-revised`
+## 流水线
 
-请观看其中的：
+```
+下载（yt-dlp）→ 字幕提取（RapidOCR）→ 豆包配音（豆包朗读）→ 视频生成（封面图+字幕）
+```
 
-`video/episode-01.dual-audio.bilingual-subtitles.mp4`
+## 目录结构
 
-它是后续第 2 至 23 集的质量标准：默认普通话音轨和中文字幕、原英文第二音轨、
-英文字幕、572 条已复核中文字幕，以及 `0.98` 自然语速和 `1.05` 最高加速限制。
+```
+bilibiliVideoToZH/
+├── src/                         代码
+│   ├── download.py              B站下载（yt-dlp）
+│   ├── subtitle_ocr.py          硬字幕 OCR 提取
+│   ├── doubao_reader.py         豆包朗读基础能力
+│   ├── doubao_pipeline.py       分块/切割/字幕生成
+│   ├── make_episode.py          单集制作主控
+│   ├── make_cover_video.py      封面图+字幕+水印→MP4
+│   └── captcha-extension/       豆包凭据抓取扩展
+├── subtitles/                   各集中文字幕（SRT）
+├── videos/                      成品视频
+├── downloads/                   下载的原视频
+├── work/                        工作目录（中间产物）
+│   ├── .venv-ocr/               Python 虚拟环境
+│   └── video-tools/             ffmpeg/ffprobe
+├── tests/                       测试
+├── requirements.txt             依赖
+└── .env                         豆包凭据（gitignore，用扩展生成）
+```
 
-保留内容：
+## 环境搭建
 
-- `outputs/harvard-positive-psychology/01-*.mp4` 至 `23-*.mp4`：原始课程视频
-- `outputs/harvard-positive-psychology/episode-01-delivery-revised/`：已验证交付
-- `work/headless-dub/dub_pipeline.py`：字幕、配音、封装和发布流程
-- `work/headless-dub/subtitle_ocr.py`：Qwen 视觉 OCR
-- `work/headless-dub/tts_gpt_sovits.py`：GPT-SoVITS 合成封装
-- `work/headless-dub/review-overrides/`：每集人工复核记录
-- `work/headless-dub/voice-refs/cn-pro-ref.wav`：已批准的中文参考音频
+```bash
+# 1. Python 虚拟环境
+python -m venv work/.venv-ocr
+work/.venv-ocr/Scripts/python -m pip install -r requirements.txt
 
-后续制作请严格遵循 [WORKFLOW.md](WORKFLOW.md)。不要把临时 OCR、样片或未复核的
-工作目录作为交付。
+# 2. ffmpeg（放入 work/video-tools/）
+# 下载 ffmpeg.exe 和 ffprobe.exe 到 work/video-tools/
+
+# 3. 豆包凭据（用扩展抓取，见 src/captcha-extension/README.md）
+# 复制结果到 .env
+
+# 4. 运行前去掉 SOCKS 代理（豆包 WS 不支持）
+unset all_proxy ALL_PROXY
+```
+
+## 制作一集
+
+```bash
+# 1. 下载视频（如需要）
+work/.venv-ocr/Scripts/python src/download.py "B站URL" --episode 2
+
+# 2. 提取字幕（如需要，视频需有硬字幕）
+#    使用 subtitle_ocr.py 从画面 OCR 中文字幕
+
+# 3. 豆包配音（半自动）
+work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step prep
+# → 在豆包网页发送生成的 txt（src/captcha-extension 可帮助抓凭据）
+work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step build
+# → videos/episode-02.mp4
+```
+
+## 已完成
+
+- 第 1-11 集中文字幕（subtitles/，原片 OCR + 人工复核）
+- 第 1-2 集豆包配音视频（videos/）
+
+## 技术要点
+
+- **豆包配音**：豆包朗读是 chat_tts 模式（朗读已生成回复），通过提示词让豆包给无标点字幕加标点+润色语气后朗读
+- **签名风控**：豆包发消息有 a_bogus 签名，需在浏览器手动发送（浏览器自动加签）
+- **字幕延后**：豆包朗读节奏与字符比例切割有时间差，字幕整体延后 0.5 秒
