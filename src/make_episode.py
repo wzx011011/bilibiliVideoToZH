@@ -271,8 +271,8 @@ def main() -> None:
     # ---------- 步骤 4: 出 MP4 ----------
     print("[4/4] make_cover_video: 封面图 + 字幕 + 水印 → MP4")
     output_mp4 = ROOT / "videos" / f"episode-{ep:02d}.mp4"
-    # 复用第1集的封面图，或自动生成
-    cover = TOOL_DIR / "cover.jpg"
+    # 复用封面图
+    cover = ROOT / "videos" / "cover.jpg"
     cmd = [
         PY, str(TOOL_DIR / "make_cover_video.py"),
         "--cover", str(cover),
@@ -283,6 +283,20 @@ def main() -> None:
         "-o", str(output_mp4),
     ]
     subprocess.run(cmd, check=True)
+
+    # ---------- 步骤 5: 归档产物到 episodes/ ----------
+    print("[归档] 保存音频+字幕+分块到 episodes/")
+    ep_archive = ROOT / "episodes" / f"ep-{ep:02d}"
+    ep_archive.mkdir(parents=True, exist_ok=True)
+    import shutil
+    shutil.copy2(audio_mp3, ep_archive / audio_mp3.name)
+    shutil.copy2(final_srt, ep_archive / final_srt.name)
+    shutil.copy2(raw_srt, ep_archive / raw_srt.name)
+    shutil.copy2(chunks_dir / "manifest.json", ep_archive / "manifest.json")
+    for txt in chunks_dir.glob("*.txt"):
+        shutil.copy2(txt, ep_archive / txt.name)
+    print(f"  归档 → {ep_archive}/")
+
     print(f"\n[✓✓] 第{ep:02d}集完成: {output_mp4}")
 
 
