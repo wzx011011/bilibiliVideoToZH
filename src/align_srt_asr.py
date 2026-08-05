@@ -147,6 +147,8 @@ def align(original_cues: list[tuple[float, float, str]],
             raw_matches.append((None, orig_text))  # 无匹配
 
     # 第二遍：处理同一 ASR 段被多条字幕匹配的情况
+    # 关键：多条字幕匹配同一 ASR 段时，合并成一条，用 ASR 段的完整时间戳。
+    # 因为豆包朗读是一整段连读，字幕按标点分开会在语音还在说前半句时就显示后半句。
     aligned = []
     i = 0
     n = len(raw_matches)
@@ -159,39 +161,19 @@ def align(original_cues: list[tuple[float, float, str]],
             continue
 
         # 收集所有匹配到同一 ASR 段的连续字幕
-        group = [i]
+        group_texts = [text]
         while i + 1 < n and raw_matches[i + 1][0] == asr_j:
-            group.append(i + 1)
+            group_texts.append(raw_matches[i + 1][1])
             i += 1
 
         asr_start, asr_end, _ = asr_segments[asr_j]
-        seg_duration = asr_end - asr_start
-
-        if len(group) == 1:
-            # 单条匹配，直接用 ASR 时间戳
-            aligned.append((asr_start, asr_end, text))
-        else:
-            # 多条匹配同一 ASR 段：按字符比例细分
-            texts = [original_cues[g][2] for g in group]
-            weights = [_char_weight(t) for t in texts]
-            total_w = sum(weights)
-            cum = 0.0
-            for g, w, t in zip(group, weights, texts):
-                start_frac = cum / total_w
-                cum += w
-                end_frac = cum / total_w
-                s = asr_start + start_frac * seg_duration
-                e = asr_start + end_frac * seg_duration
-                aligned.append((s, e, t))
+        # 合并文本（多条字幕合并为一条，空格连接）
+        merged_text = " ".join(group_texts)
+        aligned.append((asr_start, asr_end, merged_text))
 
         i += 1
 
     return aligned
-
-
-def _char_weight(text: str) -> float:
-    """字符权重（用于多条字幕落到同一 ASR 段时细分时间）。"""
-    return max(float(len(text)), 1.0)
 
 
 def write_srt(cues: list[tuple[float, float, str]], out_path: Path) -> None:

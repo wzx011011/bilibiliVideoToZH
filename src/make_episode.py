@@ -427,6 +427,8 @@ def main() -> None:
                         help="工作目录（默认 ep-XX/）")
     parser.add_argument("--subtitle-delay", type=float, default=SUBTITLE_DELAY)
     parser.add_argument("--watermark", default=WATERMARK)
+    parser.add_argument("--no-asr-align", action="store_true",
+                        help="跳过 ASR 字幕对齐（默认启用，用配音音频真实节奏）")
     parser.add_argument("--title", default=None, help="封面标题（默认自动）")
     parser.add_argument("--send-record", type=Path, default=None,
                         help="扩展导出的发送记录（用于精确匹配回复）")
@@ -502,6 +504,15 @@ def main() -> None:
     for idx in harvested:
         ogg = chunks_dir / f"{idx:02d}.ogg"
         wav = chunks_dir / f"{idx:02d}.wav"
+    manifest = json.loads((chunks_dir / "manifest.json").read_text(encoding="utf-8"))
+    expected = sorted(int(chunk["chunk_index"]) for chunk in manifest["chunks"])
+    harvested = sorted(int(index) for index in manifest.get("harvested_chunks", []))
+    if harvested != expected:
+        sys.exit(f"[✗] manifest 音频不完整：{harvested} / {expected}")
+    # 先确保所有块都有 wav
+    for idx in harvested:
+        ogg = chunks_dir / f"{idx:02d}.ogg"
+        wav = chunks_dir / f"{idx:02d}.wav"
         if not wav.exists() and ogg.exists():
             wav_tmp = wav.with_name(f"{wav.stem}.part{wav.suffix}")
             wav_tmp.unlink(missing_ok=True)
@@ -535,6 +546,17 @@ def main() -> None:
     os.replace(audio_tmp, audio_mp3)
     list_file.unlink(missing_ok=True)
     print(f"  音频拼接 → {audio_mp3.name} ({audio_mp3.stat().st_size // 1024 // 1024}MB)")
+
+    # ---------- 步骤 3.5: ASR 对齐字幕（用配音音频真实节奏替换字符比例估算）----------
+    if not args.no_asr_align:
+        print("[3.5/4] ASR 对齐字幕到配音实际节奏")
+        asr_srt = work_dir / f"episode-{ep:02d}-asr.srt"
+        run([
+            PY, str(TOOL_DIR / "align_srt_asr.py"),
+            str(audio_mp3), str(final_srt), "-o", str(asr_srt),
+        ])
+        final_srt = asr_srt  # 后续用 ASR 字幕出视频
+        print(f"  ASR 对齐 → {final_srt.name}")
 
     # ---------- 步骤 4: 出 MP4 ----------
     print("[4/4] make_cover_video: 封面图 + 字幕 + 水印 → MP4")
