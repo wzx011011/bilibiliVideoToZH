@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -30,8 +31,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOL_DIR = Path(__file__).resolve().parent
-PY = str(ROOT / "work" / ".venv-ocr" / "Scripts" / "python.exe")
 FFMPEG = str(ROOT / "work" / "video-tools" / "ffmpeg.exe")
+
+# venv launcher (.venv-ocr/Scripts/python.exe) 会 spawn base python 子进程，
+# 两个进程跑同一脚本写同一文件会互相覆盖。直接用 base python + PYTHONPATH 绕过。
+VENV_PY = str(ROOT / "work" / ".venv-ocr" / "Scripts" / "python.exe")
+BASE_PY = r"C:\Python311\python.exe"
+PY = BASE_PY if Path(BASE_PY).exists() else VENV_PY
+_VENV_SITE = str(ROOT / "work" / ".venv-ocr" / "Lib" / "site-packages")
 
 # 字幕源目录
 SUBTITLE_BASE = ROOT / "subtitles"
@@ -50,9 +57,21 @@ def find_srt(episode: int) -> Path:
     sys.exit(f"[✗] 找不到第{episode}集的中文字幕")
 
 
+def _subprocess_env(cmd: list[str]) -> dict | None:
+    """若 cmd 调用的是 base python（绕过 venv launcher），注入 PYTHONPATH。"""
+    if cmd and str(cmd[0]) == BASE_PY:
+        env = os.environ.copy()
+        env["PYTHONPATH"] = _VENV_SITE + os.pathsep + env.get("PYTHONPATH", "")
+        return env
+    return None
+
+
 def run(cmd: list[str], **kw) -> str:
     """运行命令，返回 stdout。"""
     print(f"  $ {' '.join(str(c) for c in cmd[:4])}...", file=sys.stderr)
+    env = _subprocess_env(cmd)
+    if env:
+        kw.setdefault("env", env)
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode != 0:
         sys.exit(f"[✗] 命令失败: {' '.join(cmd)}\n{r.stderr[-500:]}")
@@ -282,7 +301,7 @@ def main() -> None:
         "--title", title,
         "-o", str(output_mp4),
     ]
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd, check=True, env=_subprocess_env(cmd) or None)
 
     # ---------- 步骤 5: 归档产物到 episodes/ ----------
     print("[归档] 保存音频+字幕+分块到 episodes/")
