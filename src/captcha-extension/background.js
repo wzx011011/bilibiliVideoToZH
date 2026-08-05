@@ -3,6 +3,14 @@ importScripts("sender-core.js");
 const DOUBAO_COOKIE_DOMAIN = "https://www.doubao.com/";
 const SENDER_KEY = "senderState";
 const MAX_LOGS = 100;
+const BRIDGE_BASE_URL = "http://127.0.0.1:8765";
+const BRIDGE_TIMEOUT_MS = 5000;
+const BRIDGE_SERVICE = "doubao-build-bridge";
+const BRIDGE_VERSION = 1;
+const CAPTURE_HOSTS = new Set([
+  "www.doubao.com",
+  "frontier-audio-web-ws.doubao.com",
+]);
 const URL_FIELDS = {
   device_id: "DOUBAO_DEVICE_ID",
   web_id: "DOUBAO_WEB_ID",
@@ -42,7 +50,7 @@ function conversationKey(value) {
 function parseQuery(value) {
   try {
     const url = new URL(String(value));
-    if (!url.hostname.endsWith("doubao.com")) return {};
+    if (!CAPTURE_HOSTS.has(url.hostname) || !["https:", "wss:"].includes(url.protocol)) return {};
     return Object.fromEntries(url.searchParams.entries());
   } catch {
     return {};
@@ -90,6 +98,7 @@ function defaultSenderState() {
     completedAt: null,
     updatedAt: nowIso(),
     error: null,
+    build: DoubaoSenderCore.normalizeBuildOptions({ enabled: false }),
     logs: [],
   };
 }
@@ -119,6 +128,149 @@ function updateSenderState(patch, logMessage = null, itemUpdate = null) {
   return senderUpdateChain;
 }
 
+async function bridgeRequest(path, options = {}) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), BRIDGE_TIMEOUT_MS);
+  try {
+    const response = await fetch(`${BRIDGE_BASE_URL}${path}`, {
+      cache: "no-store",
+      ...options,
+      signal: controller.signal,
+      headers: {
+        ...(options.body ? { "Content-Type": "application/json" } : {}),
+        ...(options.headers || {}),
+      },
+    });
+    let payload = {};
+    try {
+      payload = await response.json();
+    } catch {
+      // The status code still produces a useful error below.
+    }
+    if (!response.ok || payload.ok === false) {
+      throw new Error(payload.error || `本地构建服务返回 HTTP ${response.status}`);
+    }
+    return payload;
+  } catch (error) {
+    if (error.name === "AbortError") throw new Error("连接本地构建服务超时");
+    if (error instanceof TypeError) {
+      throw new Error("本地构建服务未启动，请先运行 python src/doubao_bridge.py start");
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function bridgeHealth(requireCredentials = false) {
+  const response = await bridgeRequest("/api/health");
+  if (response.service !== BRIDGE_SERVICE || response.version !== BRIDGE_VERSION) {
+    throw new Error("127.0.0.1:8765 不是本项目的豆包构建服务");
+  }
+  if (requireCredentials && !response.credentials_ready) {
+    const missing = Array.isArray(response.missing_credentials)
+      ? response.missing_credentials.join(", ")
+      : "DOUBAO_COOKIE 等字段";
+    throw new Error(`自动构建缺少凭据：${missing}。请先复制扩展凭据到项目 .env`);
+  }
+  return response;
+}
+
+function buildFromJob(previous, job) {
+  return {
+    ...previous,
+    status: job?.status || previous.status,
+    jobId: job?.job_id || previous.jobId,
+    error: job?.error || null,
+    output: job?.output_mp4 || previous.output || null,
+    logFile: job?.log_file || previous.logFile || null,
+    updatedAt: nowIso(),
+  };
+}
+
+async function submitBuild(state, force = false) {
+  const build = state?.build;
+  if (!build?.enabled || state.status !== "completed") return state;
+  const recoverInterruptedSubmit = force && build.status === "submitting" && !build.jobId;
+  if (["submitting", "queued", "running", "completed"].includes(build.status) &&
+      !recoverInterruptedSubmit) return state;
+  if (build.status === "failed" && !force) return state;
+  const allItemsDone = Array.isArray(state.items) && state.items.length > 0 &&
+    state.items.every((item) => item.status === "done");
+  if (!allItemsDone) {
+    return updateSenderState({
+      build: {
+        ...build,
+        status: "failed",
+        error: "队列包含跳过或未完成的分块，不能生成完整成品",
+        updatedAt: nowIso(),
+      },
+    }, "本地构建已阻止：队列不完整");
+  }
+
+  let current = await updateSenderState({
+    build: { ...build, status: "submitting", error: null, updatedAt: nowIso() },
+  }, `正在提交第 ${build.episode} 集本地构建`);
+  try {
+    const payload = {
+      ...DoubaoSenderCore.exportableState(current),
+      episode: build.episode,
+    };
+    const response = await bridgeRequest("/api/build", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    });
+    current = await updateSenderState({
+      build: buildFromJob(current.build, response.job),
+    }, `第 ${build.episode} 集已进入本地构建队列`);
+  } catch (error) {
+    current = await updateSenderState({
+      build: {
+        ...current.build,
+        status: "failed",
+        error: error.message,
+        updatedAt: nowIso(),
+      },
+    }, `本地构建提交失败：${error.message}`);
+  }
+  return current;
+}
+
+async function refreshBuildStatus() {
+  const state = await getSenderState();
+  const build = state.build;
+  if (!build?.enabled || !build.jobId) return state;
+  try {
+    const response = await bridgeRequest(`/api/jobs/${encodeURIComponent(build.jobId)}`);
+    const nextBuild = buildFromJob(build, response.job);
+    const changed = nextBuild.status !== build.status || nextBuild.error !== build.error ||
+      nextBuild.output !== build.output;
+    if (!changed) return state;
+    const finished = ["completed", "failed"].includes(nextBuild.status);
+    return updateSenderState(
+      { build: nextBuild },
+      finished
+        ? `本地构建${nextBuild.status === "completed" ? "完成" : "失败"}`
+        : null,
+    );
+  } catch (error) {
+    if (build.error === error.message) return state;
+    return updateSenderState({
+      build: { ...build, error: error.message, updatedAt: nowIso() },
+    });
+  }
+}
+
+async function reconcileBuildState() {
+  const state = await getSenderState();
+  const build = state.build;
+  if (state.status === "completed" && build?.enabled) {
+    if (build.status === "waiting") return submitBuild(state);
+    if (build.status === "submitting" && !build.jobId) return submitBuild(state, true);
+  }
+  return refreshBuildStatus();
+}
+
 async function activeDoubaoTab() {
   const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
   const tab = tabs[0];
@@ -145,9 +297,11 @@ function senderOwnsMessage(sender, state) {
     conversationKey(sender.url || sender.tab.url) === conversationKey(state.conversationUrl);
 }
 
-async function startSender(items, delayMs) {
+async function startSender(items, delayMs, buildOptions = {}) {
   const tab = await activeDoubaoTab();
   const normalized = DoubaoSenderCore.validateItems(items);
+  const build = DoubaoSenderCore.normalizeBuildOptions(buildOptions);
+  if (build.enabled) await bridgeHealth(true);
   const state = {
     ...defaultSenderState(),
     runId: crypto.randomUUID(),
@@ -159,11 +313,21 @@ async function startSender(items, delayMs) {
     conversationUrl: tab.url,
     delayMs: Math.min(60000, Math.max(1000, Number(delayMs) || 5000)),
     startedAt: nowIso(),
+    build,
     logs: [{ at: nowIso(), message: `已载入 ${normalized.length} 个分块` }],
   };
   await chrome.storage.local.set({ [SENDER_KEY]: state });
-  const response = await sendTabMessage(tab.id, { type: "doubaoSenderStart", state });
-  if (!response.ok) throw new Error(response.error || "页面拒绝启动发送队列");
+  try {
+    const response = await sendTabMessage(tab.id, { type: "doubaoSenderStart", state });
+    if (!response.ok) throw new Error(response.error || "页面拒绝启动发送队列");
+  } catch (error) {
+    await updateSenderState({
+      status: "failed",
+      phase: "control_error",
+      error: error.message,
+    }, `队列启动失败：${error.message}`);
+    throw error;
+  }
   return state;
 }
 
@@ -174,7 +338,15 @@ async function pauseSender() {
     { status: "pausing", error: null },
     "已请求暂停；当前回复完成后暂停",
   );
-  if (state.tabId) await sendTabMessage(state.tabId, { type: "doubaoSenderPause", runId: state.runId });
+  try {
+    if (state.tabId) await sendTabMessage(state.tabId, { type: "doubaoSenderPause", runId: state.runId });
+  } catch (error) {
+    return updateSenderState({
+      status: "failed",
+      phase: "control_error",
+      error: error.message,
+    }, `暂停失败：${error.message}`);
+  }
   return next;
 }
 
@@ -189,8 +361,16 @@ async function resumeSender() {
     { status: "running", phase: "resuming", tabId: tab.id, error: null },
     `从 ${state.items[state.index].name} 继续`,
   );
-  const response = await sendTabMessage(tab.id, { type: "doubaoSenderStart", state: next });
-  if (!response.ok) throw new Error(response.error || "页面拒绝继续队列");
+  try {
+    const response = await sendTabMessage(tab.id, { type: "doubaoSenderStart", state: next });
+    if (!response.ok) throw new Error(response.error || "页面拒绝继续队列");
+  } catch (error) {
+    return updateSenderState({
+      status: "failed",
+      phase: "control_error",
+      error: error.message,
+    }, `继续失败：${error.message}`);
+  }
   return next;
 }
 
@@ -217,7 +397,7 @@ async function skipCurrent() {
   }
   const index = state.index + 1;
   const completed = index >= state.total;
-  return updateSenderState(
+  const next = await updateSenderState(
     {
       index,
       status: completed ? "completed" : "paused",
@@ -228,6 +408,7 @@ async function skipCurrent() {
     `已跳过 ${state.items[state.index].name}`,
     { index: state.index, patch: { status: "skipped", error: "用户跳过" } },
   );
+  return next.status === "completed" ? submitBuild(next) : next;
 }
 
 chrome.webRequest.onBeforeRequest.addListener(
@@ -253,14 +434,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         return { ok: true };
       case "getCreds":
         return { ok: true, creds: await refreshCookie() };
-      case "senderGetState":
-        return { ok: true, state: await getSenderState() };
+      case "senderGetState": {
+        const state = await reconcileBuildState();
+        return { ok: true, state };
+      }
+      case "bridgeProbe":
+        return { ok: true, bridge: await bridgeHealth() };
       case "senderProbe": {
         const tab = await activeDoubaoTab();
         return await sendTabMessage(tab.id, { type: "doubaoSenderProbe" });
       }
       case "senderStart":
-        return { ok: true, state: await startSender(message.items, message.delayMs) };
+        return {
+          ok: true,
+          state: await startSender(message.items, message.delayMs, message.build),
+        };
       case "senderPause":
         return { ok: true, state: await pauseSender() };
       case "senderResume":
@@ -269,6 +457,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         return { ok: true, state: await skipCurrent() };
       case "senderStop":
         return { ok: true, state: await stopSender() };
+      case "buildRetry": {
+        const state = await getSenderState();
+        if (state.status !== "completed" || !state.build?.enabled) {
+          throw new Error("当前队列不满足自动构建条件");
+        }
+        if (!Array.isArray(state.items) || !state.items.every((item) => item.status === "done")) {
+          throw new Error("队列包含跳过或未完成的分块，不能重试构建");
+        }
+        const reset = await updateSenderState({
+          build: { ...state.build, status: "waiting", error: null, updatedAt: nowIso() },
+        });
+        return { ok: true, state: await submitBuild(reset, true) };
+      }
       case "senderUpdate": {
         const state = await getSenderState();
         if (message.runId !== state.runId || !senderOwnsMessage(sender, state)) {
@@ -283,10 +484,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         const itemUpdate = Number.isInteger(message.itemIndex) && message.itemPatch
           ? { index: message.itemIndex, patch: message.itemPatch }
           : null;
-        return {
-          ok: true,
-          state: await updateSenderState(allowed, message.log || null, itemUpdate),
-        };
+        const next = await updateSenderState(allowed, message.log || null, itemUpdate);
+        return { ok: true, state: next.status === "completed" ? await submitBuild(next) : next };
       }
       case "senderReady": {
         const state = await getSenderState();

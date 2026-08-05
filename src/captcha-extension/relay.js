@@ -396,7 +396,7 @@
         !["websocket", "fetch", "xhr"].includes(data.payload?.kind)) return;
     try {
       const url = new URL(String(data.payload.url));
-      if (!url.hostname.endsWith("doubao.com")) return;
+      if (!["www.doubao.com", "frontier-audio-web-ws.doubao.com"].includes(url.hostname)) return;
       chrome.runtime.sendMessage({ type: "capturedUrl", payload: data.payload });
     } catch {
       // Ignore malformed page messages.

@@ -1,10 +1,13 @@
 {
   "manifest_version": 3,
   "name": "豆包课程配音助手",
-  "version": "2.0.0",
-  "description": "抓取豆包朗读凭据，并按队列自动发送课程字幕分块",
+  "version": "2.1.0",
+  "description": "自动发送课程字幕分块，并触发本地豆包朗读和视频构建",
   "permissions": ["activeTab", "cookies", "webRequest", "storage"],
-  "host_permissions": ["*://*.doubao.com/*"],
+  "host_permissions": [
+    "*://*.doubao.com/*",
+    "http://127.0.0.1/*"
+  ],
   "background": { "service_worker": "background.js" },
   "content_scripts": [{
     "matches": ["*://*.doubao.com/*"],

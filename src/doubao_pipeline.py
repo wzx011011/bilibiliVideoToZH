@@ -126,7 +126,14 @@ def cmd_prep(args: argparse.Namespace) -> None:
             "txt_file": txt_path.name,
         })
 
+    expected_txt = {chunk["txt_file"] for chunk in chunks_meta}
+    for old_txt in chunks_dir.glob("*.txt"):
+        if old_txt.name not in expected_txt:
+            old_txt.unlink()
+
+    episode_match = re.search(r"episode-(\d+)", srt_path.name, re.IGNORECASE)
     manifest = {
+        "episode": int(episode_match.group(1)) if episode_match else None,
         "srt_source": str(srt_path),
         "total_cues": len(cues),
         "chunk_size": chunk_size,
@@ -555,7 +562,24 @@ def _fetch_all_recent_replies(conv_limit: int = 30, per_conv: int = 15) -> list[
             except json.JSONDecodeError:
                 continue
         conv_id = conv.get("conversation_id", "")
-        for m in conv.get("messages", []):
+        messages = conv.get("messages", [])
+        questions: dict[str, dict] = {}
+        for message in messages:
+            if str(message.get("user_type")) != "1":
+                continue
+            message_id = str(message.get("message_id", ""))
+            if not message_id:
+                continue
+            try:
+                create_time = int(message.get("create_time", 0))
+            except (TypeError, ValueError):
+                create_time = 0
+            questions[message_id] = {
+                "text": (message.get("tts_content") or message.get("brief") or "").strip(),
+                "create_time": create_time,
+            }
+
+        for m in messages:
             if str(m.get("user_type")) != "2":  # 只取豆包回复
                 continue
             mid = str(m.get("message_id", ""))
@@ -575,15 +599,19 @@ def _fetch_all_recent_replies(conv_limit: int = 30, per_conv: int = 15) -> list[
                 ct = int(m.get("create_time", 0))
             except (TypeError, ValueError):
                 ct = 0
+            question_id = str(m.get("bot_reply_message_id", ""))
+            question = questions.get(question_id, {})
             replies.append({
                 "message_id": mid,
-                "bot_reply_message_id": str(m.get("bot_reply_message_id", "")),
+                "bot_reply_message_id": question_id,
                 "conversation_id": str(conv_id),
                 "section_id": str(m.get("section_id", "")),
                 "reply_unique_key": ruk,
                 "tts_content": (m.get("tts_content") or "").strip(),
                 "brief": (m.get("brief") or "").strip(),
                 "create_time": ct,
+                "question_text": question.get("text", ""),
+                "question_create_time": question.get("create_time", 0),
             })
     replies.sort(key=lambda x: x["create_time"], reverse=True)
     return replies

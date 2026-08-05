@@ -16,7 +16,7 @@
     const url = normalizedUrl(value);
     try {
       const parsed = new URL(url, location.href);
-      if (!parsed.hostname.endsWith("doubao.com")) return;
+      if (!["www.doubao.com", "frontier-audio-web-ws.doubao.com"].includes(parsed.hostname)) return;
       window.postMessage({
         source: "doubao-inject",
         payload: { kind, url: parsed.href },

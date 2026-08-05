@@ -30,6 +30,11 @@ test("validateItems normalizes queue metadata", () => {
   assert.equal(item.fingerprint, core.fingerprint("第一块"));
 });
 
+test("validateItems normalizes Windows line endings before sending", () => {
+  const [item] = core.validateItems([{ name: "01.txt", text: "第一行\r\n第二行" }]);
+  assert.equal(item.text, "第一行\n第二行");
+});
+
 test("exportableState omits prompt text", () => {
   const output = core.exportableState({
     runId: "run-1",
@@ -49,4 +54,41 @@ test("exportableState omits prompt text", () => {
   });
   assert.equal(output.items[0].name, "01.txt");
   assert.equal("text" in output.items[0], false);
+});
+
+test("normalizeBuildOptions requires a valid episode when enabled", () => {
+  assert.throws(
+    () => core.normalizeBuildOptions({ enabled: true, episode: null }),
+    /有效集数/,
+  );
+  assert.deepEqual(core.normalizeBuildOptions({ enabled: true, episode: 3 }), {
+    enabled: true,
+    episode: 3,
+    status: "waiting",
+    jobId: null,
+    error: null,
+    output: null,
+    logFile: null,
+    updatedAt: null,
+  });
+});
+
+test("exportableState includes build status but never credentials", () => {
+  const output = core.exportableState({
+    runId: "run-2",
+    build: {
+      enabled: true,
+      episode: 3,
+      status: "running",
+      jobId: "job-2",
+      error: null,
+      output: null,
+      logFile: "work/doubao-bridge/jobs/job-2.log",
+      credentials: { DOUBAO_COOKIE: "secret" },
+    },
+  });
+  assert.equal(output.build.episode, 3);
+  assert.equal(output.build.job_id, "job-2");
+  assert.equal(output.build.log_file, "work/doubao-bridge/jobs/job-2.log");
+  assert.equal("credentials" in output.build, false);
 });

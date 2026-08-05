@@ -38,7 +38,10 @@
     let totalChars = 0;
     const normalized = items.map((item, index) => {
       const name = String(item?.name || `${index + 1}.txt`).trim();
-      const text = String(item?.text || "").replace(/^\uFEFF/, "").trim();
+      const text = String(item?.text || "")
+        .replace(/^\uFEFF/, "")
+        .replace(/\r\n?/g, "\n")
+        .trim();
       if (!name || names.has(name)) throw new Error(`文件名重复或为空：${name}`);
       if (!text) throw new Error(`分块内容为空：${name}`);
       if (text.length > MAX_ITEM_CHARS) throw new Error(`分块过大：${name}`);
@@ -62,6 +65,24 @@
     return normalized;
   }
 
+  function normalizeBuildOptions(value) {
+    const enabled = Boolean(value?.enabled);
+    const episode = Number(value?.episode);
+    if (enabled && (!Number.isInteger(episode) || episode < 1 || episode > 999)) {
+      throw new Error("自动构建需要 manifest 中的有效集数");
+    }
+    return {
+      enabled,
+      episode: enabled ? episode : null,
+      status: enabled ? "waiting" : "disabled",
+      jobId: null,
+      error: null,
+      output: null,
+      logFile: null,
+      updatedAt: null,
+    };
+  }
+
   function exportableState(state) {
     return {
       schema_version: 1,
@@ -73,6 +94,15 @@
       current_index: Number.isInteger(state?.index) ? state.index : 0,
       total: Number.isInteger(state?.total) ? state.total : 0,
       error: state?.error || null,
+      build: state?.build ? {
+        enabled: Boolean(state.build.enabled),
+        episode: Number.isInteger(state.build.episode) ? state.build.episode : null,
+        status: state.build.status || "disabled",
+        job_id: state.build.jobId || null,
+        error: state.build.error || null,
+        output: state.build.output || null,
+        log_file: state.build.logFile || null,
+      } : null,
       items: Array.isArray(state?.items)
         ? state.items.map((item) => ({
             name: item.name,
@@ -88,5 +118,5 @@
     };
   }
 
-  return { fingerprint, naturalCompare, validateItems, exportableState };
+  return { fingerprint, naturalCompare, validateItems, normalizeBuildOptions, exportableState };
 });
