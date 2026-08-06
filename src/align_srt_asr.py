@@ -124,6 +124,7 @@ def align(original_cues: list[tuple[float, float, str]],
     按字符比例在该段内细分时间，保证字幕不重叠。
     """
     # 第一遍：每条原字幕找到最佳匹配的 ASR 段
+    # 关键约束：ASR 游标只往后走，不允许回溯（否则时间戳会倒退导致重叠）
     raw_matches = []  # [(asr_j, orig_text), ...]
     asr_idx = 0
 
@@ -131,7 +132,8 @@ def align(original_cues: list[tuple[float, float, str]],
         best_score = 0.0
         best_j = asr_idx
 
-        search_start = max(0, asr_idx - 2)
+        # 只往后搜索，不允许回溯到已用过的 ASR 段
+        search_start = asr_idx
         search_end = min(len(asr_segments), asr_idx + 10)
 
         for j in range(search_start, search_end):
@@ -179,15 +181,21 @@ def align(original_cues: list[tuple[float, float, str]],
 def write_srt(cues: list[tuple[float, float, str]], out_path: Path) -> None:
     """写 SRT 文件。
 
-    延长每条字幕的结束时间到下一条字幕的开始，避免字幕间隙消失太快看不全。
+    - 强制时间戳单调递增（不允许重叠，否则播放器会同时显示多条）
+    - 延长每条字幕的结束时间到下一条开始前 0.1s，避免消失太快看不全
     """
     lines = []
     n = len(cues)
+    max_end = 0.0
     for i, (start, end, text) in enumerate(cues, 1):
-        # 延长结束时间：到下一条开始前 0.1s（保留极小间隙避免视觉粘连）
+        # 强制单调递增：start 不能小于上一条的 end
+        start = max(start, max_end)
+        # 延长结束时间：到下一条开始前 0.1s
         if i < n:
-            next_start = cues[i][0]  # cues[i] 是下一条（0-indexed）
+            next_start = cues[i][0]
             end = max(end, next_start - 0.1)
+        end = max(end, start + 0.5)  # 至少显示 0.5s
+        max_end = end
         lines.append(str(i))
         lines.append(f"{_to_ts(start)} --> {_to_ts(end)}")
         lines.append(text)
