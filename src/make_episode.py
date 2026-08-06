@@ -547,16 +547,16 @@ def main() -> None:
     list_file.unlink(missing_ok=True)
     print(f"  音频拼接 → {audio_mp3.name} ({audio_mp3.stat().st_size // 1024 // 1024}MB)")
 
-    # ---------- 步骤 3.5: ASR 对齐字幕（用配音音频真实节奏替换字符比例估算）----------
+    # ---------- 步骤 3.5: ASR 字幕（直接用配音音频的语音识别做字幕，时间戳最准）----------
     if not args.no_asr_align:
-        print("[3.5/4] ASR 对齐字幕到配音实际节奏")
+        print("[3.5/4] ASR 字幕生成（配音音频→语音识别→字幕）")
         asr_srt = work_dir / f"episode-{ep:02d}-asr.srt"
         run([
             PY, str(TOOL_DIR / "align_srt_asr.py"),
-            str(audio_mp3), str(final_srt), "-o", str(asr_srt),
+            str(audio_mp3), "-o", str(asr_srt), "--asr-only",
         ])
         final_srt = asr_srt  # 后续用 ASR 字幕出视频
-        print(f"  ASR 对齐 → {final_srt.name}")
+        print(f"  ASR 字幕 → {final_srt.name}")
 
     # ---------- 步骤 4: 出 MP4 ----------
     print("[4/4] make_cover_video: 封面图 + 字幕 + 水印 → MP4")

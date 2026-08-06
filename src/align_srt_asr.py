@@ -310,21 +310,34 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="用 ASR 给字幕重新打时间戳（对齐到配音实际节奏）")
     parser.add_argument("audio", type=Path, help="配音音频文件")
-    parser.add_argument("srt", type=Path, help="原字幕 SRT（gen-srt 生成的）")
+    parser.add_argument("srt", type=Path, nargs="?", default=None,
+                        help="原字幕 SRT（gen-srt 生成的）。--asr-only 时不需要")
     parser.add_argument("-o", "--output", type=Path, required=True,
                         help="输出 SRT 路径")
     parser.add_argument("--model", default="large-v3-turbo",
                         help="whisper 模型（默认 large-v3-turbo）")
+    parser.add_argument("--asr-only", action="store_true",
+                        help="直接用 ASR 识别文本做字幕（不引用原字幕，最准）")
     args = parser.parse_args()
+
+    # ASR 识别（缓存到 audio 同目录的 .asr.json）
+    cache_path = args.audio.with_suffix(args.audio.suffix + ".asr.json")
+    asr_segments = transcribe(args.audio, model_size=args.model,
+                              cache_path=cache_path)
+
+    if args.asr_only:
+        # 直接用 ASR 结果做字幕（时间戳和文本都来自语音识别，最准）
+        cues = [(s, e, t) for s, e, t in asr_segments if t.strip()]
+        print(f"ASR-only 模式：{len(cues)} 条字幕（直接来自语音识别）")
+        write_srt(cues, args.output)
+        return
+
+    if not args.srt:
+        sys.exit("[✗] 非 --asr-only 模式需要提供原字幕 SRT")
 
     # 1. 读原字幕
     original_cues = parse_srt(args.srt)
     print(f"原字幕：{len(original_cues)} 条")
-
-    # 2. ASR 识别（缓存到 audio 同目录的 .asr.json）
-    cache_path = args.audio.with_suffix(args.audio.suffix + ".asr.json")
-    asr_segments = transcribe(args.audio, model_size=args.model,
-                              cache_path=cache_path)
 
     # 3. 对齐
     print("\n[对齐] 把原字幕文本匹配到 ASR 时间戳...", file=sys.stderr)
