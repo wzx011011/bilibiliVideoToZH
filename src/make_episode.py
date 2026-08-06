@@ -267,7 +267,7 @@ def harvest_auto(ep: int, chunks_dir: Path, send_record: Path | None = None) -> 
     # 延迟导入 doubao_reader，便于 prep 和纯函数测试不要求凭据。
     sys.path.insert(0, str(TOOL_DIR))
     import doubao_reader as dr
-    from doubao_pipeline import _fetch_all_recent_replies, _probe_duration
+    from doubao_pipeline import _fetch_all_recent_replies, _probe_duration, strip_boilerplate
 
     manifest_path = chunks_dir / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -386,7 +386,7 @@ def harvest_auto(ep: int, chunks_dir: Path, send_record: Path | None = None) -> 
             print(f"    ✓ {n // 1024}KB, {duration:.0f}s")
             harvested.add(index)
             chunk.update({
-                "tts_content": reply.get("tts_content", ""),
+                "tts_content": strip_boilerplate(reply.get("tts_content", "")),
                 "reply_message_id": message_id,
                 "conversation_id": reply.get("conversation_id", ""),
                 "reply_unique_key": reply.get("reply_unique_key", ""),
