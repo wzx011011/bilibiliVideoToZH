@@ -100,8 +100,10 @@ def main() -> None:
     cover = args.cover
     if cover is None or not cover.exists():
         if args.gen_cover:
-            cover = args.output.parent / "cover.jpg"
+            # 用 --cover 指定的路径，或默认输出目录
+            cover = cover or (args.output.parent / "cover.jpg")
             gen_cover(args.title, args.subtitle, cover, args.width, args.height)
+            print(f"[✓] 生成封面: {cover}")
         else:
             sys.exit("[✗] 无封面图，加 --gen-cover 自动生成，或 --cover 指定")
 
@@ -115,7 +117,7 @@ def main() -> None:
     srt_escaped = str(args.srt.resolve()).replace("\\", "/").replace(":", "\\:")
     vf = f"subtitles='{srt_escaped}':force_style='Fontname=Microsoft YaHei," \
          f"FontSize=22,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000," \
-         f"BorderStyle=3,Outline=2,Alignment=2,MarginV=60'"
+         f"BorderStyle=3,Outline=2,Alignment=2,MarginV=30'"
 
     # 左下角水印（drawtext，用微软雅黑避免 Fontconfig 问题）
     if args.watermark:

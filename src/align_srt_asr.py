@@ -177,9 +177,17 @@ def align(original_cues: list[tuple[float, float, str]],
 
 
 def write_srt(cues: list[tuple[float, float, str]], out_path: Path) -> None:
-    """写 SRT 文件。"""
+    """写 SRT 文件。
+
+    延长每条字幕的结束时间到下一条字幕的开始，避免字幕间隙消失太快看不全。
+    """
     lines = []
+    n = len(cues)
     for i, (start, end, text) in enumerate(cues, 1):
+        # 延长结束时间：到下一条开始前 0.1s（保留极小间隙避免视觉粘连）
+        if i < n:
+            next_start = cues[i][0]  # cues[i] 是下一条（0-indexed）
+            end = max(end, next_start - 0.1)
         lines.append(str(i))
         lines.append(f"{_to_ts(start)} --> {_to_ts(end)}")
         lines.append(text)

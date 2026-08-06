@@ -564,11 +564,12 @@ def main() -> None:
     output_mp4.parent.mkdir(parents=True, exist_ok=True)
     output_tmp = output_mp4.with_name(f"{output_mp4.stem}.part{output_mp4.suffix}")
     output_tmp.unlink(missing_ok=True)
-    # 复用封面图
-    cover = ROOT / "videos" / "cover.jpg"
+    # 每集独立封面（带集数标题）
+    cover = ROOT / "videos" / f"cover-ep{ep:02d}.jpg"
     cmd = [
         PY, str(TOOL_DIR / "make_cover_video.py"),
         "--cover", str(cover),
+        "--gen-cover",  # 封面不存在时自动生成
         "--audio", str(audio_mp3),
         "--srt", str(final_srt),
         "--watermark", args.watermark,
