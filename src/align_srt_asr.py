@@ -130,7 +130,7 @@ def align(original_cues: list[tuple[float, float, str]],
 
     for orig_start, orig_end, orig_text in original_cues:
         best_score = 0.0
-        best_j = asr_idx
+        best_j = -1
 
         # 只往后搜索，不允许回溯到已用过的 ASR 段
         search_start = asr_idx
@@ -142,40 +142,138 @@ def align(original_cues: list[tuple[float, float, str]],
                 best_score = score
                 best_j = j
 
-        if best_score > 0.3:
+        if best_score > 0.3 and best_j >= 0:
             raw_matches.append((best_j, orig_text))
             asr_idx = best_j + 1
         else:
-            raw_matches.append((None, orig_text))  # 无匹配
+            # 无匹配：不推进游标，后续字幕仍能搜索全部 ASR 段
+            raw_matches.append((None, orig_text))
 
     # 第二遍：处理同一 ASR 段被多条字幕匹配的情况
     # 关键：多条字幕匹配同一 ASR 段时，合并成一条，用 ASR 段的完整时间戳。
     # 因为豆包朗读是一整段连读，字幕按标点分开会在语音还在说前半句时就显示后半句。
-    aligned = []
+    # 第二遍：构建已匹配锚点，对无匹配字幕做时间插值
+    # 锚点 = (orig_index, asr_start, asr_end)
+    anchors = []
+    for idx, (asr_j, _) in enumerate(raw_matches):
+        if asr_j is not None:
+            anchors.append((idx, asr_segments[asr_j][0], asr_segments[asr_j][1]))
+
+    aligned = list(original_cues)  # 先复制原时间戳，后面替换已匹配的
+
+    # 替换已匹配的字幕（含合并逻辑）
     i = 0
     n = len(raw_matches)
+    replacements = {}  # orig_index → (start, end, text)
     while i < n:
         asr_j, text = raw_matches[i]
         if asr_j is None:
-            # 无匹配，保留原时间戳
-            aligned.append((original_cues[i][0], original_cues[i][1], text))
             i += 1
             continue
-
-        # 收集所有匹配到同一 ASR 段的连续字幕
+        group_indices = [i]
         group_texts = [text]
         while i + 1 < n and raw_matches[i + 1][0] == asr_j:
+            group_indices.append(i + 1)
             group_texts.append(raw_matches[i + 1][1])
             i += 1
 
         asr_start, asr_end, _ = asr_segments[asr_j]
-        # 合并文本（多条字幕合并为一条，空格连接）
         merged_text = " ".join(group_texts)
-        aligned.append((asr_start, asr_end, merged_text))
 
+        # 检查 ASR 段是否异常长（可能匹配错误）
+        char_count = len(re.sub(r'[^\u4e00-\u9fff\w]', '', merged_text))
+        expected_dur = max(char_count / 4.0, 1.0)  # 4字/秒
+        actual_dur = asr_end - asr_start
+
+        if actual_dur > expected_dur * 4:
+            # 异常长：视为误匹配，当作无匹配处理（留给插值逻辑）
+            # 不放入 replacements，让插值逻辑处理
+            i += 1
+            continue
+
+        # 正常：第一条用完整时间段，其余条标记为待删除
+        replacements[group_indices[0]] = (asr_start, asr_end, merged_text)
+        for gi in group_indices[1:]:
+            replacements[gi] = None  # 合并掉了
         i += 1
 
-    return aligned
+    # 对无匹配字幕：在前后锚点间按字符比例插值时间
+    for idx in range(len(raw_matches)):
+        if idx in replacements:
+            continue
+        if replacements.get(idx) is None:
+            continue
+        # 找前一个锚点
+        prev_anchor = None
+        for a in anchors:
+            if a[0] < idx:
+                prev_anchor = a
+            else:
+                break
+
+        # 如果无匹配字幕的原始时间戳落在前锚点 ASR 段内，合并到前锚点
+        orig_start = original_cues[idx][0]
+        if prev_anchor:
+            pa_start, pa_end = asr_segments[
+                raw_matches[prev_anchor[0]][0]][0], asr_segments[
+                raw_matches[prev_anchor[0]][0]][1]
+            # 允许一定误差（原始时间戳可能不准）
+            if pa_start - 2 <= orig_start <= pa_end + 2:
+                # 合并到前锚点对应的已匹配字幕
+                if prev_anchor[0] in replacements and replacements[prev_anchor[0]] is not None:
+                    old_s, old_e, old_t = replacements[prev_anchor[0]]
+                    replacements[prev_anchor[0]] = (old_s, old_e, old_t + " " + original_cues[idx][2])
+                    replacements[idx] = None  # 标记为合并
+                    continue
+
+        # 找后一个锚点
+        next_anchor = None
+        for a in anchors:
+            if a[0] > idx:
+                next_anchor = a
+                break
+        # 找后一个锚点
+        next_anchor = None
+        for a in anchors:
+            if a[0] > idx:
+                next_anchor = a
+                break
+        if prev_anchor and next_anchor:
+            # 在两个锚点间按字符比例分配时间
+            gap_start = prev_anchor[2]  # 前锚点 ASR 段结束
+            gap_end = next_anchor[1]    # 后锚点 ASR 段开始
+            # 收集这个区间内所有无匹配字幕
+            group = []
+            j = idx
+            while j < next_anchor[0]:
+                if j not in replacements or replacements.get(j) is not None:
+                    if raw_matches[j][0] is None:
+                        group.append(j)
+                j += 1
+            if group:
+                texts = [original_cues[g][2] for g in group]
+                weights = [max(len(re.sub(r'[^\u4e00-\u9fff\w]', '', t)), 1.0) for t in texts]
+                total_w = sum(weights)
+                cum = 0.0
+                for g, w in zip(group, weights):
+                    frac = cum / total_w
+                    cum += w
+                    end_frac = cum / total_w
+                    s_time = gap_start + frac * (gap_end - gap_start)
+                    e_time = gap_start + end_frac * (gap_end - gap_start)
+                    replacements[g] = (s_time, e_time, original_cues[g][2])
+
+    # 应用替换，跳过被合并的
+    final = []
+    for idx in range(len(original_cues)):
+        if idx in replacements:
+            r = replacements[idx]
+            if r is not None:
+                final.append(r)
+        else:
+            final.append(original_cues[idx])
+
+    return final
 
 
 def write_srt(cues: list[tuple[float, float, str]], out_path: Path) -> None:
@@ -190,10 +288,14 @@ def write_srt(cues: list[tuple[float, float, str]], out_path: Path) -> None:
     for i, (start, end, text) in enumerate(cues, 1):
         # 强制单调递增：start 不能小于上一条的 end
         start = max(start, max_end)
-        # 延长结束时间：到下一条开始前 0.1s
+        # 延长结束时间：到下一条开始前 0.1s，但不超过原时长的 3 倍
+        # （避免 gen-srt 时间戳和 ASR 时间戳混用时产生超长字幕）
+        orig_dur = end - start
         if i < n:
             next_start = cues[i][0]
-            end = max(end, next_start - 0.1)
+            extended = next_start - 0.1
+            max_allowed = start + max(orig_dur * 3, 5.0)  # 至少允许延长到 5s
+            end = min(max(end, extended), max_allowed)
         end = max(end, start + 0.5)  # 至少显示 0.5s
         max_end = end
         lines.append(str(i))
