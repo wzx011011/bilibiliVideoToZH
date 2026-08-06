@@ -8,6 +8,51 @@ test("naturalCompare sorts numbered chunk names", () => {
   assert.deepEqual(names, ["1.txt", "02.txt", "10.txt"]);
 });
 
+test("isEditorValueEmpty ignores invisible editor format characters", () => {
+  assert.equal(core.isEditorValueEmpty(" \n\u200B\u200C\u200D\u2060\uFEFF\t"), true);
+  assert.equal(core.isEditorValueEmpty("\u200B课程字幕"), false);
+});
+
+test("chat URL supports an initial route and locks a concrete conversation", () => {
+  assert.equal(core.isDoubaoChatUrl("https://www.doubao.com/chat"), true);
+  assert.equal(core.isInitialChatUrl("https://www.doubao.com/chat/"), true);
+  assert.equal(core.conversationKey("https://www.doubao.com/chat"), null);
+  assert.equal(
+    core.conversationKey("https://www.doubao.com/chat/38436626777215234/?from=test"),
+    "https://www.doubao.com/chat/38436626777215234",
+  );
+  assert.equal(core.isDoubaoChatUrl("https://www.doubao.com/chat/a/b"), false);
+});
+
+test("newResponseRevision detects an appended duplicate response", () => {
+  assert.equal(
+    core.newResponseRevision(["old:3"], ["old:3", "old:3"]),
+    "count:2|new:old:3",
+  );
+  assert.equal(
+    core.newResponseRevision(["old:3"], ["reply:8", "old:3"]),
+    "count:2|new:reply:8",
+  );
+});
+
+test("newResponseRevision detects streaming text changes", () => {
+  assert.equal(
+    core.newResponseRevision(["old:3", "reply:4"], ["old:3", "reply:8"]),
+    "count:2|new:reply:8",
+  );
+  assert.equal(core.newResponseRevision(["old:3"], ["old:3"]), null);
+});
+
+test("doubaoUidFromCookies extracts the active numeric uid from multi_sids", () => {
+  assert.equal(core.doubaoUidFromCookies([
+    { name: "sessionid", value: "secret" },
+    { name: "multi_sids", value: "12345678901234%3Aabcdef0123456789" },
+  ]), "12345678901234");
+  assert.equal(core.doubaoUidFromCookies([
+    { name: "multi_sids", value: "not-a-valid-account-entry" },
+  ]), null);
+});
+
 test("fingerprint is stable and includes text length", () => {
   assert.equal(core.fingerprint("课程字幕"), core.fingerprint("课程字幕"));
   assert.notEqual(core.fingerprint("课程字幕"), core.fingerprint("课程字幕。"));

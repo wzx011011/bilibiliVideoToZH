@@ -30,21 +30,14 @@ function isDoubaoUrl(value, requireChat = false) {
   try {
     const url = new URL(String(value || ""));
     return url.protocol === "https:" && url.hostname === "www.doubao.com" &&
-      (!requireChat || url.pathname.startsWith("/chat/"));
+      (!requireChat || DoubaoSenderCore.isDoubaoChatUrl(url.href));
   } catch {
     return false;
   }
 }
 
 function conversationKey(value) {
-  try {
-    const url = new URL(String(value || ""));
-    return url.hostname === "www.doubao.com" && url.pathname.startsWith("/chat/")
-      ? `${url.origin}${url.pathname}`
-      : null;
-  } catch {
-    return null;
-  }
+  return DoubaoSenderCore.conversationKey(value);
 }
 
 function parseQuery(value) {
@@ -70,7 +63,10 @@ function updateCreds(updates) {
 async function refreshCookie() {
   const cookies = await chrome.cookies.getAll({ url: DOUBAO_COOKIE_DOMAIN });
   const cookie = cookies.map((item) => `${item.name}=${item.value}`).join("; ");
-  return updateCreds({ DOUBAO_COOKIE: cookie });
+  const updates = { DOUBAO_COOKIE: cookie };
+  const uid = DoubaoSenderCore.doubaoUidFromCookies(cookies);
+  if (uid) updates.DOUBAO_UID = uid;
+  return updateCreds(updates);
 }
 
 async function processUrl(value) {
@@ -293,8 +289,12 @@ function sendTabMessage(tabId, message) {
 }
 
 function senderOwnsMessage(sender, state) {
-  return sender?.tab?.id === state.tabId &&
-    conversationKey(sender.url || sender.tab.url) === conversationKey(state.conversationUrl);
+  if (sender?.tab?.id !== state.tabId) return false;
+  const senderUrl = sender.url || sender.tab?.url;
+  const expected = conversationKey(state.conversationUrl);
+  if (expected) return conversationKey(senderUrl) === expected;
+  return DoubaoSenderCore.isInitialChatUrl(state.conversationUrl) &&
+    DoubaoSenderCore.isDoubaoChatUrl(senderUrl);
 }
 
 async function startSender(items, delayMs, buildOptions = {}) {
@@ -480,6 +480,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           if (Object.prototype.hasOwnProperty.call(message.patch || {}, key)) {
             allowed[key] = message.patch[key];
           }
+        }
+        if (Object.prototype.hasOwnProperty.call(message.patch || {}, "conversationUrl")) {
+          const boundConversation = conversationKey(message.patch.conversationUrl);
+          if (!boundConversation || conversationKey(state.conversationUrl) ||
+              !DoubaoSenderCore.isInitialChatUrl(state.conversationUrl)) {
+            throw new Error("新建豆包会话绑定无效");
+          }
+          allowed.conversationUrl = boundConversation;
         }
         const itemUpdate = Number.isInteger(message.itemIndex) && message.itemPatch
           ? { index: message.itemIndex, patch: message.itemPatch }

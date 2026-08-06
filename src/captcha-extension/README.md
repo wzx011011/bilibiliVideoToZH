@@ -57,7 +57,7 @@ content script 执行。每个分块依次经过：
 → 点击页面发送动作
 → 确认输入框清空
 → 确认新的用户消息出现
-→ 等待该回复新增“朗读”按钮
+→ 等待该回复新增“朗读”按钮，并确认回复文本稳定
 → 进入下一块
 ```
 
@@ -98,8 +98,8 @@ Python 不再按“最近回复”猜测自动任务。它会使用会话 ID、T
 
 - `DOUBAO_COOKIE`，包括 HttpOnly 登录 Cookie。
 - `DOUBAO_API_APP_KEY`，来自朗读 WebSocket URL。
-- `DOUBAO_DEVICE_ID`、`DOUBAO_UID`、`DOUBAO_WEB_TAB_ID`、`DOUBAO_WEB_ID`、
-  `DOUBAO_TEA_UUID`。
+- `DOUBAO_DEVICE_ID`、`DOUBAO_WEB_TAB_ID`、`DOUBAO_WEB_ID`、`DOUBAO_TEA_UUID`，
+  来自豆包页面请求；`DOUBAO_UID` 从登录 Cookie 的 `multi_sids` 自动解析。
 
 缺少 `api_app_key` 时，在豆包页面点击任意回复的“朗读”按钮，再刷新扩展状态。复制的
 `.env` 含登录凭据，只能保存在项目根目录，不能提交或分享。

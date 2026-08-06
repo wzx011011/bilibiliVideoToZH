@@ -2,6 +2,7 @@
   "use strict";
 
   const RESPONSE_TIMEOUT_MS = 300000;
+  const RESPONSE_STABLE_MS = 2500;
   const EDITOR_SELECTORS = [
     'textarea[placeholder="发消息或按住空格说话..."]',
     'textarea[placeholder*="发消息"]',
@@ -12,18 +13,16 @@
   let activeRun = null;
 
   function conversationKey(value) {
-    try {
-      const url = new URL(String(value || ""), location.href);
-      return url.hostname === "www.doubao.com" && url.pathname.startsWith("/chat/")
-        ? `${url.origin}${url.pathname}`
-        : null;
-    } catch {
-      return null;
-    }
+    return DoubaoSenderCore.conversationKey(value);
   }
 
   function assertConversation(run) {
-    if (conversationKey(location.href) !== conversationKey(run.conversationUrl)) {
+    const expected = conversationKey(run.conversationUrl);
+    if (expected && conversationKey(location.href) !== expected) {
+      throw new Error("豆包对话已切换，队列已暂停以避免发错会话");
+    }
+    if (!expected && (!DoubaoSenderCore.isInitialChatUrl(run.conversationUrl) ||
+        !DoubaoSenderCore.isDoubaoChatUrl(location.href))) {
       throw new Error("豆包对话已切换，队列已暂停以避免发错会话");
     }
   }
@@ -128,38 +127,18 @@
   }
 
   function responseSignatures() {
-    const signatures = new Set();
+    const signatures = [];
     for (const button of document.querySelectorAll('button[aria-label="朗读"]')) {
       let node = button.parentElement;
       for (let depth = 0; node && depth < 9; depth += 1, node = node.parentElement) {
         const text = String(node.innerText || "").replace(/\s+/g, " ").trim();
         if (text.length >= 20) {
-          signatures.add(DoubaoSenderCore.fingerprint(text));
+          signatures.push(DoubaoSenderCore.fingerprint(text));
           break;
         }
       }
     }
     return signatures;
-  }
-
-  function hasNewResponse(before) {
-    return [...responseSignatures()].some((signature) => !before.has(signature));
-  }
-
-  function occurrenceCount(text, marker) {
-    if (!marker) return 0;
-    let count = 0;
-    let start = 0;
-    while ((start = text.indexOf(marker, start)) !== -1) {
-      count += 1;
-      start += marker.length;
-    }
-    return count;
-  }
-
-  function deliveryMarker(text) {
-    const compact = String(text).replace(/\s+/g, " ").trim();
-    return compact.slice(-100);
   }
 
   function pageHasChallenge() {
@@ -183,16 +162,23 @@
     throw new Error(`${description}超时`);
   }
 
-  async function waitForDomQuiet(quietMs, timeoutMs, run) {
-    let lastMutation = Date.now();
-    const observer = new MutationObserver(() => { lastMutation = Date.now(); });
-    observer.observe(document.body, { childList: true, characterData: true, subtree: true });
-    try {
-      await waitUntil(() => Date.now() - lastMutation >= quietMs, timeoutMs,
-        "等待回复页面稳定", run);
-    } finally {
-      observer.disconnect();
-    }
+  async function waitForResponseStable(before, quietMs, timeoutMs, run) {
+    let lastRevision = null;
+    let stableSince = 0;
+    await waitUntil(() => {
+      const revision = DoubaoSenderCore.newResponseRevision(before, responseSignatures());
+      if (!revision) {
+        lastRevision = null;
+        stableSince = 0;
+        return false;
+      }
+      if (revision !== lastRevision) {
+        lastRevision = revision;
+        stableSince = Date.now();
+        return false;
+      }
+      return Date.now() - stableSince >= quietMs;
+    }, timeoutMs, "等待豆包回复完成", run);
   }
 
   function sendRuntime(message) {
@@ -208,6 +194,9 @@
   async function report(run, patch, log = null, itemIndex = null, itemPatch = null) {
     if (Object.prototype.hasOwnProperty.call(patch || {}, "phase")) run.phase = patch.phase;
     if (Object.prototype.hasOwnProperty.call(patch || {}, "index")) run.index = patch.index;
+    if (Object.prototype.hasOwnProperty.call(patch || {}, "conversationUrl")) {
+      run.conversationUrl = patch.conversationUrl;
+    }
     return sendRuntime({
       type: "senderUpdate",
       runId: run.runId,
@@ -225,6 +214,14 @@
     if (run.stopped) throw new Error("队列已停止");
   }
 
+  async function bindCreatedConversation(run) {
+    if (conversationKey(run.conversationUrl)) return;
+    await waitUntil(() => Boolean(conversationKey(location.href)), 20000,
+      "等待新建豆包会话创建", run);
+    const conversationUrl = conversationKey(location.href);
+    await report(run, { conversationUrl }, "已绑定新建豆包会话");
+  }
+
   async function sendItem(run, item, index) {
     await waitWhilePaused(run, item.name);
     assertConversation(run);
@@ -237,12 +234,9 @@
     );
 
     const editor = findEditor();
-    if (String(editor.value || "").trim()) {
+    if (!DoubaoSenderCore.isEditorValueEmpty(editor.value)) {
       throw new Error("豆包输入框已有未发送内容，已暂停以避免覆盖草稿");
     }
-    const marker = deliveryMarker(item.text);
-    const pageTextBefore = String(document.body?.innerText || "").replace(/\s+/g, " ");
-    const markerCountBefore = occurrenceCount(pageTextBefore, marker);
     const responsesBefore = responseSignatures();
 
     setEditorText(editor, item.text);
@@ -256,23 +250,19 @@
     action.click();
 
     await report(run, { phase: "confirming_send" });
-    await waitUntil(() => String(editor.value || "").trim() === "", 15000, "等待输入框清空", run);
-    await waitUntil(() => {
-      const pageText = String(document.body?.innerText || "").replace(/\s+/g, " ");
-      return occurrenceCount(pageText, marker) > markerCountBefore;
-    }, 20000, "确认用户消息送达", run);
+    await waitUntil(() => DoubaoSenderCore.isEditorValueEmpty(editor.value), 15000,
+      "等待输入框清空", run);
 
     const sentAt = new Date().toISOString();
+    await bindCreatedConversation(run);
     await report(
       run,
       { phase: "waiting_reply" },
-      `${item.name} 已送达，等待豆包回复完成`,
+      `${item.name} 已提交，等待豆包回复完成`,
       index,
       { status: "waiting_reply", sentAt },
     );
-    await waitUntil(() => hasNewResponse(responsesBefore), RESPONSE_TIMEOUT_MS,
-      "等待豆包回复完成", run);
-    await waitForDomQuiet(2500, 30000, run);
+    await waitForResponseStable(responsesBefore, RESPONSE_STABLE_MS, RESPONSE_TIMEOUT_MS, run);
 
     const replyAt = new Date().toISOString();
     await report(
@@ -331,7 +321,7 @@
 
   function probePage() {
     try {
-      if (location.hostname !== "www.doubao.com" || !location.pathname.startsWith("/chat/")) {
+      if (!DoubaoSenderCore.isDoubaoChatUrl(location.href)) {
         throw new Error("当前页面不是豆包对话页");
       }
       const editor = findEditor();

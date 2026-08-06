@@ -26,6 +26,73 @@
     });
   }
 
+  function isEditorValueEmpty(value) {
+    // Some rich editors preserve invisible format characters after clearing.
+    return String(value ?? "").replace(/[\u200B-\u200D\u2060\uFEFF]/g, "").trim() === "";
+  }
+
+  function parseDoubaoChatUrl(value) {
+    try {
+      const url = new URL(String(value || ""));
+      if (url.protocol !== "https:" || url.hostname !== "www.doubao.com") return null;
+      const pathname = url.pathname.replace(/\/+$/, "") || "/";
+      if (pathname === "/chat") {
+        return { conversationUrl: null, initial: true };
+      }
+      if (!/^\/chat\/[^/]+$/.test(pathname)) return null;
+      return { conversationUrl: `${url.origin}${pathname}`, initial: false };
+    } catch {
+      return null;
+    }
+  }
+
+  function isDoubaoChatUrl(value) {
+    return parseDoubaoChatUrl(value) !== null;
+  }
+
+  function isInitialChatUrl(value) {
+    return parseDoubaoChatUrl(value)?.initial === true;
+  }
+
+  function conversationKey(value) {
+    return parseDoubaoChatUrl(value)?.conversationUrl || null;
+  }
+
+  function newResponseRevision(before, current) {
+    const baseline = Array.isArray(before) ? before.map(String) : [...(before || [])].map(String);
+    const latest = Array.isArray(current) ? current.map(String) : [...(current || [])].map(String);
+    const remaining = new Map();
+    for (const signature of baseline) {
+      remaining.set(signature, (remaining.get(signature) || 0) + 1);
+    }
+    const unseen = [];
+    for (const signature of latest) {
+      const count = remaining.get(signature) || 0;
+      if (count > 0) remaining.set(signature, count - 1);
+      else unseen.push(signature);
+    }
+    return unseen.length ? `count:${latest.length}|new:${unseen.join("|")}` : null;
+  }
+
+  function doubaoUidFromCookies(cookies) {
+    const candidates = Array.isArray(cookies)
+      ? cookies.filter((cookie) => cookie?.name === "multi_sids")
+      : [];
+    for (const cookie of candidates) {
+      let value = String(cookie.value || "");
+      try {
+        value = decodeURIComponent(value);
+      } catch {
+        // Keep the raw value when a malformed escape sequence is present.
+      }
+      for (const entry of value.split(/[|,]/)) {
+        const match = entry.trim().match(/^(\d{6,30}):/);
+        if (match) return match[1];
+      }
+    }
+    return null;
+  }
+
   function validateItems(items) {
     if (!Array.isArray(items) || items.length === 0) {
       throw new Error("请选择至少一个 TXT 分块");
@@ -118,5 +185,17 @@
     };
   }
 
-  return { fingerprint, naturalCompare, validateItems, normalizeBuildOptions, exportableState };
+  return {
+    fingerprint,
+    naturalCompare,
+    isEditorValueEmpty,
+    isDoubaoChatUrl,
+    isInitialChatUrl,
+    conversationKey,
+    newResponseRevision,
+    doubaoUidFromCookies,
+    validateItems,
+    normalizeBuildOptions,
+    exportableState,
+  };
 });
