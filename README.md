@@ -5,7 +5,7 @@
 ## 流水线
 
 ```
-下载（yt-dlp）→ 字幕提取（RapidOCR）→ 豆包配音（豆包朗读）→ 视频生成（封面图+字幕）
+下载（yt-dlp）→ 字幕提取（RapidOCR）→ 豆包配音（豆包朗读）→ ASR 字幕对齐（faster-whisper）→ 视频生成
 ```
 
 ## 目录结构
@@ -18,6 +18,7 @@ bilibiliVideoToZH/
 │   ├── doubao_reader.py         豆包朗读基础能力
 │   ├── doubao_pipeline.py       分块/切割/字幕生成
 │   ├── doubao_bridge.py         扩展到本地构建的回环服务
+│   ├── align_srt_asr.py         ASR 字幕对齐（配音音频→真实时间戳）
 │   ├── make_episode.py          单集制作主控
 │   ├── make_cover_video.py      封面图+字幕+水印→MP4
 │   └── captcha-extension/       豆包凭据抓取 + 分块自动发送扩展
@@ -53,6 +54,21 @@ python src/doubao_bridge.py start
 unset all_proxy ALL_PROXY
 ```
 
+### ⚠️ Windows venv launcher 注意
+
+Windows 下 `work/.venv-ocr/Scripts/python.exe` 是 venv launcher（shim），
+运行时会 spawn base python（如 `C:\Python311\python.exe`）子进程。
+两个进程跑同一脚本写同一缓存文件会互相损坏。
+
+**解决**：跑 CPU 密集脚本（subtitle_ocr / align_srt_asr）时，直接用
+base python + PYTHONPATH 指向 venv 的 site-packages：
+
+```bash
+PYTHONPATH="work/.venv-ocr/Lib/site-packages" C:/Python311/python.exe src/subtitle_ocr.py ...
+```
+
+`make_episode.py` 已内置此逻辑（自动检测并注入 PYTHONPATH）。
+
 ## 制作一集
 
 ```bash
@@ -76,8 +92,8 @@ work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step build
 
 ## 已完成
 
-- 第 1-11 集中文字幕（subtitles/，原片 OCR + 人工复核）
-- 第 1-2 集豆包配音视频（videos/）
+- 第 1-23 集中文字幕（subtitles/，RapidOCR 从 B站原片提取）
+- 第 1-2 集豆包配音视频（videos/，第 2 集已用 ASR 对齐字幕）
 
 ## 技术要点
 
@@ -85,4 +101,8 @@ work/.venv-ocr/Scripts/python src/make_episode.py --episode 2 --step build
 - **签名风控**：扩展操作豆包网页原生输入框和发送动作，由浏览器页面完成正常签名
 - **精确匹配**：本地构建按会话 ID、原始提问指纹和提问/回复 ID 逐块绑定，缺失或歧义时拒绝生成
 - **本地桥接**：服务只监听 `127.0.0.1:8765`，不接受客户端提供命令或工作路径
-- **字幕延后**：豆包朗读节奏与字符比例切割有时间差，字幕整体延后 0.5 秒
+- **ASR 字幕对齐**：豆包朗读节奏与字符比例估算不匹配会导致字幕偏快。build 步骤 3.5 用
+  faster-whisper（large-v3-turbo，CPU/int8）对配音音频做中文 ASR，得到每段话的真实起止时间，
+  替换 gen-srt 的字符比例时间戳。多条字幕匹配同一 ASR 段时合并为一条（豆包连读时不应拆开）。
+  ASR 结果缓存为 `.asr.json`，调对齐逻辑时秒级完成，不用重跑识别。
+  `--no-asr-align` 可跳过此步骤。
