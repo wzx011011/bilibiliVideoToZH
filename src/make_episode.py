@@ -413,8 +413,14 @@ def harvest_auto(ep: int, chunks_dir: Path, send_record: Path | None = None) -> 
             os.replace(temporary_wav, wav)
             print(f"    ✓ {n // 1024}KB, {duration:.0f}s")
             harvested.add(index)
+            cleaned_tts = strip_boilerplate(reply.get("tts_content", ""))
+            if not cleaned_tts.strip():
+                raise RuntimeError(
+                    f"回复清洗后为空（豆包可能只回了客套话没给正文），"
+                    f"请在豆包重新发送该分块"
+                )
             chunk.update({
-                "tts_content": strip_boilerplate(reply.get("tts_content", "")),
+                "tts_content": cleaned_tts,
                 "reply_message_id": message_id,
                 "conversation_id": reply.get("conversation_id", ""),
                 "reply_unique_key": reply.get("reply_unique_key", ""),
