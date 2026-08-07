@@ -450,8 +450,8 @@ def main() -> None:
     _configure_stdio()
     parser = argparse.ArgumentParser(description="单集豆包配音视频制作")
     parser.add_argument("--episode", type=int, required=True, help="集数（如 2）")
-    parser.add_argument("--step", choices=["prep", "build", "audio", "video"],
-                        default="prep", help="执行阶段：prep=分块, audio=配音+字幕, video=渲染, build=audio+video")
+    parser.add_argument("--step", choices=["prep", "build", "audio", "subtitle", "video"],
+                        default="prep", help="执行阶段：prep=分块, audio=配音, subtitle=ASR字幕, video=渲染, build=audio+subtitle+video")
     parser.add_argument("--work-dir", type=Path, default=None,
                         help="工作目录（默认 ep-XX/）")
     parser.add_argument("--subtitle-delay", type=float, default=SUBTITLE_DELAY)
@@ -578,8 +578,13 @@ def main() -> None:
     print(f"  音频拼接 → {audio_mp3.name} ({audio_mp3.stat().st_size // 1024 // 1024}MB)")
 
     # ---------- 步骤 3.5: ASR 字幕（直接用配音音频的语音识别做字幕，时间戳最准）----------
-    if args.step in ("build", "audio") and not args.no_asr_align:
-        print("[audio] ASR 字幕生成（配音音频→语音识别→字幕）")
+    if args.step in ("build", "subtitle") and not args.no_asr_align:
+        # subtitle 步骤单独跑时，定位已有的音频
+        if args.step == "subtitle":
+            audio_mp3 = work_dir / f"episode-{ep:02d}-audio.mp3"
+            if not audio_mp3.exists():
+                sys.exit(f"[✗] 音频不存在: {audio_mp3}，请先运行 --step audio")
+        print("[subtitle] ASR 字幕生成（配音音频→语音识别→字幕）")
         asr_srt = work_dir / f"episode-{ep:02d}-asr.srt"
         run([
             PY, str(TOOL_DIR / "align_srt_asr.py"),
@@ -598,7 +603,7 @@ def main() -> None:
             if not audio_mp3.exists():
                 sys.exit(f"[✗] 音频不存在: {audio_mp3}，请先运行 --step audio")
             if not final_srt.exists():
-                sys.exit(f"[✗] 字幕不存在: {final_srt}，请先运行 --step audio")
+                sys.exit(f"[✗] 字幕不存在: {final_srt}，请先运行 --step subtitle")
 
         print("[video] make_cover_video: 封面图 + 字幕 + 水印 → MP4")
         output_mp4 = ROOT / "videos" / f"episode-{ep:02d}.mp4"
@@ -640,6 +645,9 @@ def main() -> None:
         print(f"\n[✓✓] 第{ep:02d}集完成: {output_mp4}")
     elif args.step == "audio":
         print(f"\n[✓] 第{ep:02d}集音频完成: {audio_mp3}")
+        print(f"    下一步: --episode {ep} --step subtitle")
+    elif args.step == "subtitle":
+        print(f"\n[✓] 第{ep:02d}集字幕完成: {final_srt}")
         print(f"    下一步: --episode {ep} --step video")
 
 
