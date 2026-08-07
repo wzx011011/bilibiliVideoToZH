@@ -72,11 +72,13 @@ td.value.missing { color: #b91c1c; }
   </div>
   <progress id="sender-bar" max="1" value="0"></progress>
   <div id="sender-error" class="hint error"></div>
+  <div id="sender-conversation" class="probe">队列绑定：未绑定</div>
   <div class="buttons">
     <button id="probe">检测页面</button>
     <button id="start" class="primary">开始发送</button>
     <button id="pause">暂停</button>
     <button id="resume">重试/继续</button>
+    <button id="rebind">重新绑定</button>
     <button id="skip">跳过当前</button>
     <button id="stop" class="danger">停止</button>
     <button id="build-retry">重试构建</button>

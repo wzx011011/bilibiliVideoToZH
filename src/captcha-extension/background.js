@@ -288,13 +288,26 @@ function sendTabMessage(tabId, message) {
   });
 }
 
-function senderOwnsMessage(sender, state) {
-  if (sender?.tab?.id !== state.tabId) return false;
-  const senderUrl = sender.url || sender.tab?.url;
-  const expected = conversationKey(state.conversationUrl);
-  if (expected) return conversationKey(senderUrl) === expected;
-  return DoubaoSenderCore.isInitialChatUrl(state.conversationUrl) &&
-    DoubaoSenderCore.isDoubaoChatUrl(senderUrl);
+async function senderMessageIdentity(sender, state, pageUrl = null) {
+  if (sender?.tab?.id !== state.tabId) return { owns: false, currentUrl: null };
+  let tabUrl = sender.tab?.url;
+  if (!DoubaoSenderCore.isDoubaoChatUrl(pageUrl)) {
+    try {
+      tabUrl = (await chrome.tabs.get(sender.tab.id))?.url || tabUrl;
+    } catch {
+      // Fall back to the sender metadata if the tab disappears during validation.
+    }
+  }
+  const currentUrl = DoubaoSenderCore.currentChatUrl(sender.url, tabUrl, pageUrl);
+  return {
+    owns: DoubaoSenderCore.senderOwnsConversation(
+      sender.url,
+      tabUrl,
+      state.conversationUrl,
+      pageUrl,
+    ),
+    currentUrl,
+  };
 }
 
 async function startSender(items, delayMs, buildOptions = {}) {
@@ -355,7 +368,7 @@ async function resumeSender() {
   if (!state.runId || state.index >= state.total) throw new Error("没有可继续的分块");
   const tab = await activeDoubaoTab();
   if (conversationKey(tab.url) !== conversationKey(state.conversationUrl)) {
-    throw new Error("当前豆包对话与队列绑定的对话不同，已拒绝继续");
+    throw new Error("当前豆包对话与队列绑定的对话不同，已拒绝继续（点'重新绑定'切换到当前对话）");
   }
   const next = await updateSenderState(
     { status: "running", phase: "resuming", tabId: tab.id, error: null },
@@ -371,6 +384,22 @@ async function resumeSender() {
       error: error.message,
     }, `继续失败：${error.message}`);
   }
+  return next;
+}
+
+async function rebindSender() {
+  const state = await getSenderState();
+  if (!state.runId) throw new Error("没有活跃的队列可重新绑定");
+  const tab = await activeDoubaoTab();
+  const newUrl = conversationKey(tab.url);
+  if (!newUrl && !DoubaoSenderCore.isInitialChatUrl(tab.url)) {
+    throw new Error("当前标签页不是豆包对话页");
+  }
+  const next = await updateSenderState(
+    { conversationUrl: tab.url, tabId: tab.id, status: "paused", error: null,
+      phase: "rebound" },
+    `队列已重新绑定到当前对话`,
+  );
   return next;
 }
 
@@ -453,6 +482,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         return { ok: true, state: await pauseSender() };
       case "senderResume":
         return { ok: true, state: await resumeSender() };
+      case "senderRebind":
+        return { ok: true, state: await rebindSender() };
       case "senderSkip":
         return { ok: true, state: await skipCurrent() };
       case "senderStop":
@@ -472,7 +503,22 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       }
       case "senderUpdate": {
         const state = await getSenderState();
-        if (message.runId !== state.runId || !senderOwnsMessage(sender, state)) {
+        if (message.runId !== state.runId) {
+          throw new Error("发送状态来源无效");
+        }
+        const identity = await senderMessageIdentity(sender, state, message.pageUrl);
+        if (!identity.owns) {
+          if (sender?.tab?.id === state.tabId &&
+              ["starting", "running", "pausing"].includes(state.status)) {
+            const expected = conversationKey(state.conversationUrl)?.split("/").pop() || "待绑定";
+            const current = conversationKey(identity.currentUrl)?.split("/").pop() || "未知";
+            const error = `会话不一致：队列 ${expected}，页面 ${current}；队列已暂停`;
+            await updateSenderState({
+              status: "failed",
+              phase: "source_validation_failed",
+              error,
+            }, `队列暂停：${error}`);
+          }
           throw new Error("发送状态来源无效");
         }
         const allowed = {};
@@ -483,8 +529,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         }
         if (Object.prototype.hasOwnProperty.call(message.patch || {}, "conversationUrl")) {
           const boundConversation = conversationKey(message.patch.conversationUrl);
+          const pageConversation = conversationKey(message.pageUrl);
           if (!boundConversation || conversationKey(state.conversationUrl) ||
-              !DoubaoSenderCore.isInitialChatUrl(state.conversationUrl)) {
+              !DoubaoSenderCore.isInitialChatUrl(state.conversationUrl) ||
+              pageConversation !== boundConversation) {
             throw new Error("新建豆包会话绑定无效");
           }
           allowed.conversationUrl = boundConversation;
@@ -497,7 +545,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       }
       case "senderReady": {
         const state = await getSenderState();
-        if (!senderOwnsMessage(sender, state) || !["starting", "running", "pausing"].includes(state.status)) {
+        const identity = await senderMessageIdentity(sender, state, message.pageUrl);
+        if (!identity.owns ||
+            !["starting", "running", "pausing"].includes(state.status)) {
           return { ok: true, resume: null };
         }
         if (["sending", "confirming_send", "waiting_reply"].includes(state.phase)) {

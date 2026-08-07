@@ -50,6 +50,13 @@ function mask(value) {
   return text;
 }
 
+function conversationLabel(value) {
+  const conversation = DoubaoSenderCore.conversationKey(value);
+  if (conversation) return conversation.split("/").pop();
+  if (DoubaoSenderCore.isInitialChatUrl(value)) return "新会话（首次发送后绑定）";
+  return "未绑定";
+}
+
 function renderCreds(creds) {
   const tbody = document.getElementById("fields");
   tbody.replaceChildren();
@@ -159,6 +166,8 @@ function renderSender(state) {
   bar.max = Math.max(total, 1);
   bar.value = index;
   document.getElementById("sender-error").textContent = state?.error || "";
+  document.getElementById("sender-conversation").textContent =
+    `队列绑定：${conversationLabel(state?.conversationUrl)}`;
 
   const build = state?.build;
   const buildLabel = BUILD_STATUS_LABELS[build?.status] || build?.status || "未启用";
@@ -174,6 +183,7 @@ function renderSender(state) {
   document.getElementById("start").disabled = active;
   document.getElementById("pause").disabled = !["starting", "running"].includes(state?.status);
   document.getElementById("resume").disabled = !resumable;
+  document.getElementById("rebind").disabled = !["paused", "failed"].includes(state?.status);
   document.getElementById("skip").disabled = !["paused", "failed"].includes(state?.status) || index >= total;
   document.getElementById("stop").disabled = !active;
   const allItemsDone = Array.isArray(state?.items) && state.items.length > 0 &&
@@ -226,7 +236,8 @@ document.getElementById("probe").addEventListener("click", async () => {
     const response = await runtimeMessage({ type: "senderProbe" });
     const probe = response.probe;
     target.textContent = probe?.ready
-      ? `页面可用：${probe.editor}；回复标记 ${probe.responseControls} 个`
+      ? `当前会话：${conversationLabel(probe.url)}；页面可用：${probe.editor}；` +
+        `回复标记 ${probe.responseControls} 个`
       : `页面不可用：${probe?.error || "未知原因"}`;
   } catch (error) {
     target.textContent = `检测失败：${error.message}`;
@@ -272,6 +283,7 @@ document.getElementById("start").addEventListener("click", async () => {
 
 document.getElementById("pause").addEventListener("click", () => runAction("senderPause"));
 document.getElementById("resume").addEventListener("click", () => runAction("senderResume"));
+document.getElementById("rebind").addEventListener("click", () => runAction("senderRebind"));
 document.getElementById("skip").addEventListener("click", () => runAction("senderSkip"));
 document.getElementById("stop").addEventListener("click", () => runAction("senderStop"));
 document.getElementById("build-retry").addEventListener("click", () => runAction("buildRetry"));
