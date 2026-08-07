@@ -2,7 +2,8 @@
 
 The extension cannot launch local processes directly. This service accepts one
 strictly validated, idempotent build request, stores the send record, and starts
-``make_episode.py --step build`` in a detached worker process.
+``make_episode.py --step audio`` in a detached worker process (harvest + concat only;
+ASR subtitle and video render are run manually via --step subtitle / --step video).
 
 Only fixed repository paths and commands are used. The HTTP server listens on
 127.0.0.1 and accepts browser requests only from extension origins.
@@ -444,7 +445,7 @@ def run_job(job_path: Path) -> int:
             python_command(),
             str(TOOL_DIR / "make_episode.py"),
             "--episode", str(job["episode"]),
-            "--step", "build",
+            "--step", "audio",
             "--send-record", str(record_path),
         ]
         log_path = Path(job["log_file"])
