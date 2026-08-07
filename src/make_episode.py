@@ -53,6 +53,14 @@ WATERMARK = "wzx"
 CHUNK_SIZE = 120
 
 
+def _configure_stdio() -> None:
+    """让 Windows 控制台也能稳定输出中文和 Unicode 状态符号。"""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure:
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def find_srt(episode: int) -> Path:
     """找到指定集的已复核中文字幕。"""
     srt = SUBTITLE_BASE / f"episode-{episode:02d}.zh-CN.srt"
@@ -62,10 +70,12 @@ def find_srt(episode: int) -> Path:
 
 
 def _subprocess_env(cmd: list[str]) -> dict | None:
-    """若 cmd 调用的是 base python（绕过 venv launcher），注入 PYTHONPATH。"""
+    """为 base Python 子进程注入依赖路径和 UTF-8 标准输出。"""
     if cmd and str(cmd[0]) == BASE_PY:
         env = os.environ.copy()
         env["PYTHONPATH"] = _VENV_SITE + os.pathsep + env.get("PYTHONPATH", "")
+        env["PYTHONIOENCODING"] = "utf-8"
+        env["PYTHONUTF8"] = "1"
         return env
     return None
 
@@ -76,6 +86,8 @@ def run(cmd: list[str], **kw) -> str:
     env = _subprocess_env(cmd)
     if env:
         kw.setdefault("env", env)
+    kw.setdefault("encoding", "utf-8")
+    kw.setdefault("errors", "replace")
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode != 0:
         sys.exit(f"[✗] 命令失败: {' '.join(cmd)}\n{r.stderr[-500:]}")
@@ -260,6 +272,20 @@ def _select_replies(
     return recent[-total:]
 
 
+def _select_replies_auto(replies: list[dict], total: int) -> list[dict]:
+    """自动匹配：最近 30 分钟内、标点 > 50 的回复，按时间排序取最后 N 条。"""
+    cutoff = time.time() - 1800
+    recent = [
+        reply for reply in replies
+        if _epoch(reply.get("create_time")) > cutoff
+        and sum(1 for char in reply.get("tts_content", "") if char in "，。？！") > 50
+    ]
+    recent.sort(key=lambda reply: _epoch(reply.get("create_time")))
+    if len(recent) < total:
+        raise RuntimeError(f"自动匹配只找到 {len(recent)} 条候选回复，需要 {total} 条")
+    return recent[-total:]
+
+
 def harvest_auto(ep: int, chunks_dir: Path, send_record: Path | None = None) -> None:
     """按发送 sidecar 精确匹配回复并逐块保存朗读音频。"""
     import asyncio
@@ -327,9 +353,11 @@ def harvest_auto(ep: int, chunks_dir: Path, send_record: Path | None = None) -> 
     replies = _fetch_all_recent_replies(conv_limit=40, per_conv=per_conv)
     try:
         matched = _select_replies(replies, manifest, chunks_dir, record)
+        print(f"  精确匹配到 {len(matched)} 条回复")
     except RuntimeError as error:
-        sys.exit(f"[✗] 回复匹配失败：{error}")
-    print(f"  匹配到 {len(matched)} 条回复")
+        print(f"  ⚠ 精确匹配失败（{error}），回退到自动匹配...")
+        matched = _select_replies_auto(replies, total_chunks)
+        print(f"  自动匹配到 {len(matched)} 条回复")
 
     ffmpeg = str(ROOT / "work" / "video-tools" / "ffmpeg.exe")
     failures = []
@@ -419,10 +447,11 @@ def harvest_auto(ep: int, chunks_dir: Path, send_record: Path | None = None) -> 
 
 
 def main() -> None:
+    _configure_stdio()
     parser = argparse.ArgumentParser(description="单集豆包配音视频制作")
     parser.add_argument("--episode", type=int, required=True, help="集数（如 2）")
-    parser.add_argument("--step", choices=["prep", "build"],
-                        default="prep", help="执行阶段（默认 prep）")
+    parser.add_argument("--step", choices=["prep", "build", "audio", "video"],
+                        default="prep", help="执行阶段：prep=分块, audio=配音+字幕, video=渲染, build=audio+video")
     parser.add_argument("--work-dir", type=Path, default=None,
                         help="工作目录（默认 ep-XX/）")
     parser.add_argument("--subtitle-delay", type=float, default=SUBTITLE_DELAY)
@@ -469,8 +498,8 @@ def main() -> None:
         return
 
     # ---------- 步骤 2: harvest（自动匹配回复 + 朗读 + 保存文本）----------
-    if args.step == "build":
-        print("[2/4] harvest: 自动匹配并朗读豆包回复")
+    if args.step in ("build", "audio"):
+        print("[audio] harvest: 自动匹配并朗读豆包回复")
         harvest_auto(ep, chunks_dir, args.send_record)
         manifest_path = chunks_dir / "manifest.json"
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -480,7 +509,8 @@ def main() -> None:
             sys.exit(f"[✗] harvest 不完整：{harvested} / {expected}")
 
     # ---------- 步骤 3: gen-srt + 字幕延后 + 拼音频 ----------
-    print("[3/4] gen-srt + 拼音频")
+    if args.step in ("build", "audio"):
+        print("[audio] gen-srt + 拼音频")
     raw_srt = work_dir / f"episode-{ep:02d}-raw.srt"
     run([
         PY, str(TOOL_DIR / "doubao_pipeline.py"), "gen-srt",
@@ -548,8 +578,8 @@ def main() -> None:
     print(f"  音频拼接 → {audio_mp3.name} ({audio_mp3.stat().st_size // 1024 // 1024}MB)")
 
     # ---------- 步骤 3.5: ASR 字幕（直接用配音音频的语音识别做字幕，时间戳最准）----------
-    if not args.no_asr_align:
-        print("[3.5/4] ASR 字幕生成（配音音频→语音识别→字幕）")
+    if args.step in ("build", "audio") and not args.no_asr_align:
+        print("[audio] ASR 字幕生成（配音音频→语音识别→字幕）")
         asr_srt = work_dir / f"episode-{ep:02d}-asr.srt"
         run([
             PY, str(TOOL_DIR / "align_srt_asr.py"),
@@ -559,43 +589,58 @@ def main() -> None:
         print(f"  ASR 字幕 → {final_srt.name}")
 
     # ---------- 步骤 4: 出 MP4 ----------
-    print("[4/4] make_cover_video: 封面图 + 字幕 + 水印 → MP4")
-    output_mp4 = ROOT / "videos" / f"episode-{ep:02d}.mp4"
-    output_mp4.parent.mkdir(parents=True, exist_ok=True)
-    output_tmp = output_mp4.with_name(f"{output_mp4.stem}.part{output_mp4.suffix}")
-    output_tmp.unlink(missing_ok=True)
-    # 每集独立封面（带集数标题）
-    cover = ROOT / "videos" / f"cover-ep{ep:02d}.jpg"
-    cmd = [
-        PY, str(TOOL_DIR / "make_cover_video.py"),
-        "--cover", str(cover),
-        "--gen-cover",  # 封面不存在时自动生成
-        "--audio", str(audio_mp3),
-        "--srt", str(final_srt),
-        "--watermark", args.watermark,
-        "--title", title,
-        "-o", str(output_tmp),
-    ]
-    subprocess.run(cmd, check=True, env=_subprocess_env(cmd) or None)
-    if not output_tmp.is_file() or output_tmp.stat().st_size <= 0:
-        sys.exit("[✗] 未生成有效 MP4")
-    _probe_media_duration(output_tmp)
-    os.replace(output_tmp, output_mp4)
+    if args.step in ("build", "video"):
+        # video 步骤单独跑时，定位已有的音频和字幕
+        if args.step == "video":
+            audio_mp3 = work_dir / f"episode-{ep:02d}-audio.mp3"
+            asr_srt = work_dir / f"episode-{ep:02d}-asr.srt"
+            final_srt = asr_srt if asr_srt.exists() else work_dir / f"episode-{ep:02d}.srt"
+            if not audio_mp3.exists():
+                sys.exit(f"[✗] 音频不存在: {audio_mp3}，请先运行 --step audio")
+            if not final_srt.exists():
+                sys.exit(f"[✗] 字幕不存在: {final_srt}，请先运行 --step audio")
 
-    # ---------- 步骤 5: 归档产物到 episodes/ ----------
-    print("[归档] 保存音频+字幕+分块到 episodes/")
-    ep_archive = ROOT / "episodes" / f"ep-{ep:02d}"
-    ep_archive.mkdir(parents=True, exist_ok=True)
-    import shutil
-    shutil.copy2(audio_mp3, ep_archive / audio_mp3.name)
-    shutil.copy2(final_srt, ep_archive / final_srt.name)
-    shutil.copy2(raw_srt, ep_archive / raw_srt.name)
-    shutil.copy2(chunks_dir / "manifest.json", ep_archive / "manifest.json")
-    for txt in chunks_dir.glob("*.txt"):
-        shutil.copy2(txt, ep_archive / txt.name)
-    print(f"  归档 → {ep_archive}/")
+        print("[video] make_cover_video: 封面图 + 字幕 + 水印 → MP4")
+        output_mp4 = ROOT / "videos" / f"episode-{ep:02d}.mp4"
+        output_mp4.parent.mkdir(parents=True, exist_ok=True)
+        output_tmp = output_mp4.with_name(f"{output_mp4.stem}.part{output_mp4.suffix}")
+        output_tmp.unlink(missing_ok=True)
+        # 每集独立封面（带集数标题）
+        cover = ROOT / "videos" / f"cover-ep{ep:02d}.jpg"
+        cmd = [
+            PY, str(TOOL_DIR / "make_cover_video.py"),
+            "--cover", str(cover),
+            "--gen-cover",  # 封面不存在时自动生成
+            "--audio", str(audio_mp3),
+            "--srt", str(final_srt),
+            "--watermark", args.watermark,
+            "--title", title,
+            "-o", str(output_tmp),
+        ]
+        subprocess.run(cmd, check=True, env=_subprocess_env(cmd) or None)
+        if not output_tmp.is_file() or output_tmp.stat().st_size <= 0:
+            sys.exit("[✗] 未生成有效 MP4")
+        _probe_media_duration(output_tmp)
+        os.replace(output_tmp, output_mp4)
 
-    print(f"\n[✓✓] 第{ep:02d}集完成: {output_mp4}")
+        # ---------- 步骤 5: 归档产物到 episodes/ ----------
+        print("[归档] 保存音频+字幕+分块到 episodes/")
+        ep_archive = ROOT / "episodes" / f"ep-{ep:02d}"
+        ep_archive.mkdir(parents=True, exist_ok=True)
+        import shutil
+        shutil.copy2(audio_mp3, ep_archive / audio_mp3.name)
+        shutil.copy2(final_srt, ep_archive / final_srt.name)
+        if raw_srt.exists():
+            shutil.copy2(raw_srt, ep_archive / raw_srt.name)
+        shutil.copy2(chunks_dir / "manifest.json", ep_archive / "manifest.json")
+        for txt in chunks_dir.glob("*.txt"):
+            shutil.copy2(txt, ep_archive / txt.name)
+        print(f"  归档 → {ep_archive}/")
+
+        print(f"\n[✓✓] 第{ep:02d}集完成: {output_mp4}")
+    elif args.step == "audio":
+        print(f"\n[✓] 第{ep:02d}集音频完成: {audio_mp3}")
+        print(f"    下一步: --episode {ep} --step video")
 
 
 if __name__ == "__main__":
