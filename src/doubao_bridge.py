@@ -19,6 +19,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+import uuid
 from datetime import datetime, timezone
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -40,6 +41,96 @@ BRIDGE_LOG = BRIDGE_DIR / "bridge.log"
 MAX_REQUEST_BYTES = 256 * 1024
 JOB_STARTING_SECONDS = 5 * 60
 JOB_ID_RE = re.compile(r"^[A-Za-z0-9_-]{8,100}$")
+TOTAL_EPISODES = 23
+
+
+def _file_mb(path: Path) -> float:
+    try:
+        return round(path.stat().st_size / 1048576, 1) if path.is_file() else 0
+    except OSError:
+        return 0
+
+
+def scan_pipeline_status() -> dict:
+    """扫描所有集的流水线状态，基于文件存在性判断。"""
+    episodes = []
+    video_done = audio_done = subtitle_done = 0
+
+    for ep in range(1, TOTAL_EPISODES + 1):
+        ep_s = f"{ep:02d}"
+        work_dir = ROOT / "work" / f"ep-{ep_s}"
+        chunks_dir = work_dir / "chunks"
+        srt_src = ROOT / "subtitles" / f"episode-{ep_s}.zh-CN.srt"
+        manifest = chunks_dir / "manifest.json"
+        send_record = work_dir / "doubao-send.json"
+        audio_mp3 = work_dir / f"episode-{ep_s}-audio.mp3"
+        asr_srt = work_dir / f"episode-{ep_s}-asr.srt"
+        video_mp4 = ROOT / "videos" / f"episode-{ep_s}.mp4"
+
+        stages = {
+            "subtitle_source": srt_src.is_file(),
+            "prep": manifest.is_file(),
+            "sent": send_record.is_file(),
+            "audio": audio_mp3.is_file(),
+            "subtitle": asr_srt.is_file(),
+            "video": video_mp4.is_file(),
+        }
+
+        sizes = {
+            "audio_mb": _file_mb(audio_mp3),
+            "subtitle_mb": _file_mb(asr_srt),
+            "video_mb": _file_mb(video_mp4),
+        }
+
+        chunks_info = {"total": 0, "harvested": 0}
+        if manifest.is_file():
+            try:
+                m = load_json(manifest)
+                chunks_info = {
+                    "total": len(m.get("chunks", [])),
+                    "harvested": len(m.get("harvested_chunks", [])),
+                }
+            except (OSError, ValueError):
+                pass
+
+        if stages["video"]:
+            video_done += 1
+        if stages["audio"]:
+            audio_done += 1
+        if stages["subtitle"]:
+            subtitle_done += 1
+
+        episodes.append({
+            "episode": ep,
+            "stages": stages,
+            "sizes": sizes,
+            "chunks": chunks_info,
+        })
+
+    # 正在运行的 job
+    running = []
+    try:
+        for job_file in JOBS_DIR.glob("*.json"):
+            job = load_json(job_file)
+            if job.get("status") in ("queued", "running"):
+                running.append({
+                    "job_id": job.get("job_id"),
+                    "episode": job.get("episode"),
+                    "status": job.get("status"),
+                })
+    except OSError:
+        pass
+
+    return {
+        "episodes": episodes,
+        "summary": {
+            "total": TOTAL_EPISODES,
+            "video_done": video_done,
+            "audio_done": audio_done,
+            "subtitle_done": subtitle_done,
+        },
+        "running": running,
+    }
 CONVERSATION_ID_RE = re.compile(r"^[A-Za-z0-9_-]{6,100}$")
 READER_CREDENTIALS = {
   "DOUBAO_COOKIE",
@@ -425,6 +516,93 @@ def enqueue_build(payload: object) -> tuple[dict, bool]:
         return job, True
 
 
+def _gen_job_id() -> str:
+    return uuid.uuid4().hex[:16]
+
+
+def enqueue_pipeline_job(episode: int, step: str) -> dict:
+    """触发单集指定步骤（subtitle/video/audio/build），不带 send-record。"""
+    job_id = f"pipe-{episode:02d}-{step}-{_gen_job_id()}"
+    job_path = JOBS_DIR / f"{job_id}.json"
+
+    with _job_lock:
+        active = _active_job_for_episode(episode)
+        if active:
+            raise BridgeRequestError(
+                f"第 {episode} 集已有任务 {active.get('job_id')} 在运行"
+            )
+        job = {
+            "schema_version": 1,
+            "job_id": job_id,
+            "run_id": job_id,
+            "episode": episode,
+            "step": step,
+            "status": "queued",
+            "created_at": utc_now(),
+            "started_at": None,
+            "completed_at": None,
+            "exit_code": None,
+            "error": None,
+            "pid": None,
+            "log_file": str(JOBS_DIR / f"{job_id}.log"),
+            "output_mp4": str(ROOT / "videos" / f"episode-{episode:02d}.mp4"),
+        }
+        atomic_write_json(job_path, job)
+        try:
+            _launch_job(job_path)
+        except Exception:
+            job["status"] = "failed"
+            job["completed_at"] = utc_now()
+            job["error"] = "无法启动进程，可重试"
+            atomic_write_json(job_path, job)
+        return job
+
+
+def enqueue_batch_job(episodes: list, step: str) -> dict:
+    """批量串行：写一个 batch job，worker 内部串行跑各集。"""
+    episodes = [e for e in episodes if isinstance(e, int) and 1 <= e <= TOTAL_EPISODES]
+    if not episodes:
+        raise BridgeRequestError("没有有效的集数")
+
+    job_id = f"batch-{step}-{_gen_job_id()}"
+    job_path = JOBS_DIR / f"{job_id}.json"
+
+    with _job_lock:
+        # 检查这些集是否有正在运行的任务
+        for ep in episodes:
+            active = _active_job_for_episode(ep)
+            if active:
+                raise BridgeRequestError(
+                    f"第 {ep} 集已有任务 {active.get('job_id')} 在运行"
+                )
+        job = {
+            "schema_version": 1,
+            "job_id": job_id,
+            "run_id": job_id,
+            "episode": episodes[0],
+            "episodes": episodes,
+            "step": step,
+            "status": "queued",
+            "created_at": utc_now(),
+            "started_at": None,
+            "completed_at": None,
+            "exit_code": None,
+            "error": None,
+            "pid": None,
+            "log_file": str(JOBS_DIR / f"{job_id}.log"),
+            "output_mp4": "",
+        }
+        atomic_write_json(job_path, job)
+        try:
+            _launch_job(job_path)
+        except Exception:
+            job["status"] = "failed"
+            job["completed_at"] = utc_now()
+            job["error"] = "无法启动进程，可重试"
+            atomic_write_json(job_path, job)
+        return job
+
+
 def run_job(job_path: Path) -> int:
     resolved = job_path.resolve()
     jobs_root = JOBS_DIR.resolve()
@@ -440,32 +618,66 @@ def run_job(job_path: Path) -> int:
     result_code = -1
     error_message = None
     try:
-        record_path = Path(job["record_file"])
-        command = [
-            python_command(),
-            str(TOOL_DIR / "make_episode.py"),
-            "--episode", str(job["episode"]),
-            "--step", "audio",
-            "--send-record", str(record_path),
-        ]
+        step = job.get("step", "audio")
+        episodes_list = job.get("episodes")  # batch job
         log_path = Path(job["log_file"])
         log_path.parent.mkdir(parents=True, exist_ok=True)
-        with log_path.open("w", encoding="utf-8", newline="\n") as log:
-            log.write(f"[{utc_now()}] {' '.join(command)}\n")
-            log.flush()
-            result = subprocess.run(
-                command,
-                cwd=ROOT,
-                env=child_environment(),
-                stdin=subprocess.DEVNULL,
-                stdout=log,
-                stderr=subprocess.STDOUT,
-                text=True,
-                shell=False,
-            )
-        result_code = result.returncode
+
+        if episodes_list:
+            # batch job：串行跑多集
+            result_code = 0
+            with log_path.open("w", encoding="utf-8", newline="\n") as log:
+                for ep in episodes_list:
+                    cmd = [
+                        python_command(),
+                        str(TOOL_DIR / "make_episode.py"),
+                        "--episode", str(ep),
+                        "--step", step,
+                    ]
+                    log.write(f"\n[{utc_now()}] EP{ep:02d} {step}: {' '.join(cmd)}\n")
+                    log.flush()
+                    r = subprocess.run(cmd, cwd=ROOT, env=child_environment(),
+                                       stdin=subprocess.DEVNULL, stdout=log,
+                                       stderr=subprocess.STDOUT, text=True, shell=False)
+                    if r.returncode != 0:
+                        result_code = r.returncode
+                        error_message = f"EP{ep:02d} {step} 失败 (exit {r.returncode})"
+                        break
+                    log.write(f"[{utc_now()}] EP{ep:02d} {step} 完成\n")
+        elif "record_file" in job and step == "audio":
+            # 原有 build job（带 send-record）
+            record_path = Path(job["record_file"])
+            command = [
+                python_command(),
+                str(TOOL_DIR / "make_episode.py"),
+                "--episode", str(job["episode"]),
+                "--step", "audio",
+                "--send-record", str(record_path),
+            ]
+            with log_path.open("w", encoding="utf-8", newline="\n") as log:
+                log.write(f"[{utc_now()}] {' '.join(command)}\n")
+                log.flush()
+                result = subprocess.run(command, cwd=ROOT, env=child_environment(),
+                                        stdin=subprocess.DEVNULL, stdout=log,
+                                        stderr=subprocess.STDOUT, text=True, shell=False)
+            result_code = result.returncode
+        else:
+            # pipeline job（subtitle/video/audio/build，无 send-record）
+            command = [
+                python_command(),
+                str(TOOL_DIR / "make_episode.py"),
+                "--episode", str(job["episode"]),
+                "--step", step,
+            ]
+            with log_path.open("w", encoding="utf-8", newline="\n") as log:
+                log.write(f"[{utc_now()}] {' '.join(command)}\n")
+                log.flush()
+                result = subprocess.run(command, cwd=ROOT, env=child_environment(),
+                                        stdin=subprocess.DEVNULL, stdout=log,
+                                        stderr=subprocess.STDOUT, text=True, shell=False)
+            result_code = result.returncode
     except Exception:
-        error_message = "构建 worker 异常退出，查看日志或重试"
+        error_message = "worker 异常退出，查看日志或重试"
 
     try:
         job = load_json(resolved)
@@ -490,7 +702,10 @@ def run_job(job_path: Path) -> int:
 def origin_allowed(origin: str | None) -> bool:
     if not origin:
         return True
-    return origin.startswith("chrome-extension://") or origin.startswith("edge-extension://")
+    if origin.startswith("chrome-extension://") or origin.startswith("edge-extension://"):
+        return True
+    # Allow same-origin dashboard (http://127.0.0.1:8765)
+    return origin in ("http://127.0.0.1:8765", "http://localhost:8765")
 
 
 class BridgeHandler(BaseHTTPRequestHandler):
@@ -540,6 +755,21 @@ class BridgeHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802
         if not self._authorized():
             return
+        if self.path in ("/dashboard", "/dashboard/"):
+            dashboard_html = TOOL_DIR / "dashboard.html"
+            if not dashboard_html.is_file():
+                self._send_json(HTTPStatus.NOT_FOUND, {"ok": False, "error": "dashboard.html 不存在"})
+                return
+            body = dashboard_html.read_bytes()
+            self.send_response(HTTPStatus.OK)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if self.path == "/api/status":
+            self._send_json(HTTPStatus.OK, {"ok": True, **scan_pipeline_status()})
+            return
         if self.path == "/api/health":
             ready, missing = credential_status()
             self._send_json(HTTPStatus.OK, {
@@ -573,6 +803,60 @@ class BridgeHandler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:  # noqa: N802
         if not self._authorized():
             return
+
+        # /api/run — 触发单集指定步骤
+        if self.path == "/api/run":
+            content_type = self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+            if content_type != "application/json":
+                self._send_json(HTTPStatus.UNSUPPORTED_MEDIA_TYPE, {"ok": False, "error": "Content-Type 必须是 application/json"})
+                return
+            try:
+                length = int(self.headers.get("Content-Length", "0"))
+                payload = json.loads(self.rfile.read(max(0, min(length, MAX_REQUEST_BYTES))).decode("utf-8"))
+            except (ValueError, UnicodeDecodeError, json.JSONDecodeError):
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "JSON 无效"})
+                return
+            episode = payload.get("episode")
+            step = payload.get("step")
+            if not isinstance(episode, int) or not (1 <= episode <= TOTAL_EPISODES):
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "episode 无效"})
+                return
+            if step not in ("subtitle", "video", "audio", "build"):
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "step 无效"})
+                return
+            try:
+                job = enqueue_pipeline_job(episode, step)
+                self._send_json(HTTPStatus.ACCEPTED, {"ok": True, "job": job})
+                return
+            except BridgeRequestError as e:
+                self._send_json(HTTPStatus.CONFLICT, {"ok": False, "error": str(e)})
+                return
+
+        # /api/batch — 批量串行
+        if self.path == "/api/batch":
+            content_type = self.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+            if content_type != "application/json":
+                self._send_json(HTTPStatus.UNSUPPORTED_MEDIA_TYPE, {"ok": False, "error": "Content-Type 必须是 application/json"})
+                return
+            try:
+                length = int(self.headers.get("Content-Length", "0"))
+                payload = json.loads(self.rfile.read(max(0, min(length, MAX_REQUEST_BYTES))).decode("utf-8"))
+            except (ValueError, UnicodeDecodeError, json.JSONDecodeError):
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "JSON 无效"})
+                return
+            step = payload.get("step")
+            episodes = payload.get("episodes")
+            if step not in ("subtitle", "video", "audio", "build") or not isinstance(episodes, list):
+                self._send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": "参数无效"})
+                return
+            try:
+                job = enqueue_batch_job(episodes, step)
+                self._send_json(HTTPStatus.ACCEPTED, {"ok": True, "job": job})
+                return
+            except BridgeRequestError as e:
+                self._send_json(HTTPStatus.CONFLICT, {"ok": False, "error": str(e)})
+                return
+
         if self.path != "/api/build":
             self._send_json(HTTPStatus.NOT_FOUND, {"ok": False, "error": "接口不存在"})
             return
