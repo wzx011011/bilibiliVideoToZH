@@ -37,6 +37,9 @@ work/video-tools/
 work/
 downloads/
 
+# ============ YouTube 下载视频（体积大，本地保存）============
+youtube/
+
 # ============ 临时图片 ============
 *.png
 *.bmp
