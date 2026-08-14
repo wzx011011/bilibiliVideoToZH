@@ -5,7 +5,7 @@ B站视频(哈佛积极心理学课)→ 豆包中文配音 + 中文字幕视频�
 
 ## 目录
 
-- `src/` 全部代码。`make_episode.py` 是单集制作主控;`align_srt_asr.py` ASR字幕(独立轻量,不依赖 doubao_pipeline);`make_cover_video.py` 渲染(libass 烧硬字幕);`captcha-extension/` 浏览器扩展(豆包凭据抓取+分块发送);`dashboard.html` 流水线监控面板(doubao_bridge 在 http://127.0.0.1:8765/dashboard 提供)
+- `src/` 全部代码。`make_episode.py` 是单集制作主控;`align_srt_asr.py` ASR字幕(独立轻量,不依赖 doubao_pipeline);`make_cover_video.py` 渲染(libass 烧硬字幕);`captcha-extension/` 浏览器扩展(豆包凭据抓取+分块发送);`interview_lib.py` 访谈处理(说话人分离/分角色分块/多音色拼接);`pipeline_admin.py` + `admin.html` 多流水线管理后台(`http://127.0.0.1:8766`,默认 0.0.0.0 局域网可访问);`dashboard.html` 流水线监控面板(doubao_bridge 在 http://127.0.0.1:8765/dashboard 提供)
 - `work/` 实际工作目录(每集 ep-XX,gitignore);`episodes/` 是成品归档副本
 - `subtitles/` OCR 中文字幕;`videos/` 成品 mp4;`downloads/` B站原片;`youtube/` YouTube 下载(按人物分目录,gitignore)
 - `.env` 豆包凭据(gitignore,由扩展生成)
@@ -29,6 +29,10 @@ node src/captcha-extension/sender-core.test.cjs
 
 # 桥接服务(仅 127.0.0.1:8765)
 $PY src/doubao_bridge.py start
+
+# 多流水线管理后台(0.0.0.0:8766,局域网可访问;--host 127.0.0.1 仅本机)
+$PY src/pipeline_admin.py
+# 首次局域网访问需放行防火墙: 右键管理员运行 allow-lan-8766.cmd
 ```
 
 ## 架构边界

@@ -13,11 +13,14 @@
 半自动环节与现有课程流程一致:分块完成后需要用户在浏览器扩展里手动发送
 (绕豆包签名风控),本服务轮询 doubao-send.json 自动感知发送完成。
 
-服务只监听 127.0.0.1:8766(与 doubao_bridge 的 8765 并存,互不影响)。
+服务默认绑定 0.0.0.0:8766,局域网内设备可访问(与 doubao_bridge 的
+8765 并存,互不影响)。注意:创建任务会执行本地命令,只应在可信局域网
+使用;仅本机访问时用 --host 127.0.0.1。
 
 用法:
-  work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py
-  打开 http://127.0.0.1:8766
+  work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py            # 局域网
+  work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py --host 127.0.0.1  # 仅本机
+  Windows 双击 start-pipeline-admin.cmd
 """
 from __future__ import annotations
 
@@ -761,11 +764,41 @@ class Handler(BaseHTTPRequestHandler):
         return self._json({"ok": False, "error": f"未知 action {action}"}, 400)
 
 
+def _lan_ips() -> list[str]:
+    """列出本机局域网 IPv4(排除回环/虚拟网卡常见网段尽力而为)。"""
+    import socket
+    ips: set[str] = set()
+    try:
+        host = socket.gethostname()
+        for info in socket.getaddrinfo(host, None, socket.AF_INET):
+            ip = info[4][0]
+            if not ip.startswith(("127.", "169.254.")):
+                ips.add(ip)
+    except OSError:
+        pass
+    # 排除常见虚拟网卡网段(WSL/VMware/Hyper-V)
+    return sorted(ip for ip in ips
+                  if not ip.startswith(("172.2", "192.168.106.", "192.168.220.")))
+
+
 def main() -> None:
+    import argparse
+    parser = argparse.ArgumentParser(description="多流水线管理后台")
+    parser.add_argument("--host", default="0.0.0.0",
+                        help="绑定地址(默认 0.0.0.0 局域网可访问;仅本机用 127.0.0.1)")
+    parser.add_argument("--port", type=int, default=PORT)
+    args = parser.parse_args()
+
     TASKS_DIR.mkdir(parents=True, exist_ok=True)
-    addr = ("127.0.0.1", PORT)
-    srv = ThreadingHTTPServer(addr, Handler)
-    print(f"[pipeline-admin] http://127.0.0.1:{PORT}  (流水线:{', '.join(PIPELINES)})")
+    srv = ThreadingHTTPServer((args.host, args.port), Handler)
+    print(f"[pipeline-admin] 绑定 {args.host}:{args.port}")
+    print(f"[pipeline-admin] 本机: http://127.0.0.1:{args.port}")
+    for ip in _lan_ips():
+        print(f"[pipeline-admin] 局域网: http://{ip}:{args.port}")
+    print(f"[pipeline-admin] 流水线: {', '.join(PIPELINES)}")
+    if args.host == "0.0.0.0":
+        print("[pipeline-admin] 注意: 局域网内任何设备都可创建任务(会执行本地命令),"
+              "请只在可信网络使用")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
