@@ -70,7 +70,7 @@ PIPELINES: dict[str, dict] = {
             {"key": "ensure_source", "label": "准备原片", "type": "auto"},
             {"key": "ocr_subtitle", "label": "OCR 提取字幕", "type": "auto"},
             {"key": "chunk_prep", "label": "分块", "type": "auto"},
-            {"key": "send_chunks", "label": "扩展发送(手动)", "type": "manual"},
+            {"key": "send_chunks", "label": "豆包发送(自动)", "type": "auto"},
             {"key": "harvest_audio", "label": "朗读配音", "type": "auto"},
             {"key": "asr_subtitle", "label": "ASR 字幕", "type": "auto"},
             {"key": "render", "label": "渲染视频", "type": "auto"},
@@ -98,7 +98,7 @@ PIPELINES: dict[str, dict] = {
             {"key": "asr_source", "label": "英文转写", "type": "auto"},
             {"key": "diarize", "label": "说话人分离", "type": "auto"},
             {"key": "chunk_by_speaker", "label": "分角色分块", "type": "auto"},
-            {"key": "send_chunks", "label": "扩展发送翻译(手动)", "type": "manual"},
+            {"key": "send_chunks", "label": "豆包发送翻译(自动)", "type": "auto"},
             {"key": "harvest_multi_voice", "label": "多音色朗读", "type": "auto"},
             {"key": "asr_subtitle", "label": "ASR 字幕", "type": "auto"},
             {"key": "render", "label": "渲染视频", "type": "auto"},
@@ -124,7 +124,7 @@ PIPELINES: dict[str, dict] = {
             {"key": "asr_source", "label": "中文转写", "type": "auto"},
             {"key": "diarize", "label": "说话人分离", "type": "auto"},
             {"key": "chunk_by_speaker", "label": "分角色分块", "type": "auto"},
-            {"key": "send_chunks", "label": "扩展发送润色(手动)", "type": "manual"},
+            {"key": "send_chunks", "label": "豆包发送润色(自动)", "type": "auto"},
             {"key": "harvest_multi_voice", "label": "多音色朗读", "type": "auto"},
             {"key": "asr_subtitle", "label": "ASR 字幕", "type": "auto"},
             {"key": "render", "label": "渲染视频", "type": "auto"},
@@ -542,12 +542,84 @@ def ex_iv_render(task: Task) -> str:
     return f"成品: {out.name}"
 
 
+# =====================================================================
+# 自动发送(Playwright 驱动豆包页面,替代浏览器扩展手动发送)
+# =====================================================================
+
+def _fnv1a_fingerprint(text: str) -> str:
+    """与 captcha-extension/sender-core.js fingerprint 完全一致(FNV-1a)。"""
+    h = 2166136261
+    for ch in text:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return f"{h:08x}:{len(text)}"
+
+
+def _chunks_dir_for(task: Task) -> Path:
+    if task.pipeline.startswith("interview"):
+        return _iv_dir(task) / "chunks"
+    return _ep_dir(task) / "chunks"
+
+
+def ex_auto_send_chunks(task: Task) -> str:
+    """自动发送全部分块到豆包(Playwright),写 doubao-send.json(与扩展同格式)。
+
+    发送失败(如触发安全验证)抛异常 → 任务 failed,可在页面重试,
+    或建任务时选 send_mode=manual 回退到扩展手动发送。
+    """
+    from doubao_autosend import DoubaoAutoSender
+
+    cdir = _chunks_dir_for(task)
+    files = sorted(cdir.glob("*.txt"))
+    if not files:
+        raise RuntimeError(f"分块目录为空: {cdir}")
+    task.log(f"自动发送 {len(files)} 块(Playwright → 豆包页面)")
+
+    items = []
+    with DoubaoAutoSender(headless=False) as sender:
+        sender.open_chat()
+        for i, f in enumerate(files, 1):
+            text = f.read_text(encoding="utf-8")
+            task.log(f"[{i}/{len(files)}] 发送 {f.name}({len(text)}字)")
+            sender.send_one(text)
+            items.append({
+                "name": f.name,
+                "chunk_index": i,
+                "fingerprint": _fnv1a_fingerprint(text),
+                "status": "done",
+                "sent_at": time.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+                "reply_at": time.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
+                "error": None,
+            })
+            sender.page.wait_for_timeout(1500)
+        conv_url = sender.page.url
+
+    record = {
+        "schema_version": 1,
+        "run_id": task.id,
+        "episode": task.params.get("episode") if not task.pipeline.startswith("interview") else None,
+        "status": "completed",
+        "conversation_url": conv_url,
+        "conversation_id": (conv_url.rstrip("/").split("/")[-1]
+                            if "/chat/" in conv_url else None),
+        "started_at": items[0]["sent_at"] if items else None,
+        "completed_at": items[-1]["reply_at"] if items else None,
+        "total": len(items),
+        "items": items,
+    }
+    rec_path = _send_record_path(task)
+    rec_path.parent.mkdir(parents=True, exist_ok=True)
+    rec_path.write_text(json.dumps(record, ensure_ascii=False, indent=2),
+                        encoding="utf-8")
+    return f"已自动发送 {len(items)} 块 → {rec_path.name}"
+
+
 EXECUTORS = {
     "course": {
         "ensure_source": ex_course_ensure_source,
         "ocr_subtitle": ex_course_ocr,
         "chunk_prep": ex_course_chunk_prep,
-        "send_chunks": ex_course_send_chunks,
+        "send_chunks": ex_auto_send_chunks,
         "harvest_audio": ex_course_harvest_audio,
         "asr_subtitle": ex_course_asr_subtitle,
         "render": ex_course_render,
@@ -558,7 +630,7 @@ EXECUTORS = {
         "asr_source": ex_iv_asr_source,
         "diarize": ex_iv_diarize,
         "chunk_by_speaker": ex_iv_chunk_by_speaker,
-        "send_chunks": ex_iv_send_chunks,
+        "send_chunks": ex_auto_send_chunks,
         "harvest_multi_voice": ex_iv_harvest_multi_voice,
         "asr_subtitle": ex_iv_asr_subtitle,
         "render": ex_iv_render,
@@ -582,7 +654,10 @@ def run_task(task: Task) -> None:
         if st["status"] == STAGE_DONE:
             task.current += 1
             continue
-        if st["type"] == "manual":
+        # 发送环节:默认 Playwright 全自动;send_mode=manual 时回退扩展手动发送
+        manual_mode = (st["key"] == "send_chunks"
+                       and task.params.get("send_mode") == "manual")
+        if st["type"] == "manual" or manual_mode:
             task.mark(st["key"], STAGE_WAITING,
                       note=f"请在扩展中发送 {task.params.get('slug', task.params.get('episode', ''))} 的分块")
             task.status = TASK_WAITING

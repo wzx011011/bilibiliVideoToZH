@@ -44,10 +44,46 @@ def test_every_auto_stage_has_executor():
                 assert st["type"] == "manual"
 
 
-def test_every_pipeline_has_exactly_one_manual_gate():
+def test_every_pipeline_has_send_stage_with_auto_executor():
+    """发送环节默认全自动(Playwright),并有执行器。"""
     for key, pipe in pa.PIPELINES.items():
-        manuals = [s for s in pipe["stages"] if s["type"] == "manual"]
-        assert len(manuals) == 1 and manuals[0]["key"] == "send_chunks", key
+        sends = [s for s in pipe["stages"] if s["key"] == "send_chunks"]
+        assert len(sends) == 1 and sends[0]["type"] == "auto", key
+        group = pa.EXECUTORS["interview" if key.startswith("interview") else "course"]
+        assert "send_chunks" in group, key
+
+
+def test_fnv1a_fingerprint_matches_extension():
+    """与 sender-core.js 的 fingerprint 算法一致(抽样对照 JS 实现手算值)。"""
+    # JS: "你好" → 手动按 FNV-1a 逐字符算
+    def js_fp(text):
+        h = 2166136261
+        for ch in text:
+            h ^= ord(ch)
+            h = (h * 16777619) & 0xFFFFFFFF
+        return f"{h:08x}:{len(text)}"
+    for sample in ("你好", "Hello world", "哈佛积极心理学第22讲字幕块" * 5):
+        assert pa._fnv1a_fingerprint(sample) == js_fp(sample)
+
+
+def test_send_mode_manual_keeps_gate(tmp_path, monkeypatch):
+    """send_mode=manual 时发送环节仍走人工门(回退路径)。"""
+    group = {"ensure": lambda t: "ok", "send_chunks": lambda t: "ok"}
+    monkeypatch.setitem(pa.PIPELINES, "mock", dict(
+        key="mock", name="m", desc="", dims={}, params=[],
+        stages=[{"key": "send_chunks", "label": "发送", "type": "auto"}]))
+    monkeypatch.setattr(pa, "executor_group", lambda t: group)
+    monkeypatch.setattr(pa, "TASKS_DIR", tmp_path)
+    monkeypatch.setattr(pa, "_ep_dir", lambda t: tmp_path)
+
+    task = pa.Task("mock", "t", {"episode": 1, "send_mode": "manual"})
+    task.save()
+    pa.run_task(task)
+    assert task.status == pa.TASK_WAITING  # 停在人工门,没自动发
+
+    task2 = pa.Task("mock", "t2", {"episode": 1})  # 默认 auto
+    pa.run_task(task2)
+    assert task2.status == pa.TASK_DONE  # 直接自动完成
 
 
 def test_unified_products_stages_present():
