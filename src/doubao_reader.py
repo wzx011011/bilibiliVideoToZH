@@ -216,7 +216,7 @@ def parse_fields(data):
 
 
 # ======================== 朗读 WS ========================
-def make_payload(reply):
+def make_payload(reply, speaker: str | None = None):
     common = {
         "business": 1,
         "conversation_id": reply["conversation_id"],
@@ -244,7 +244,7 @@ def make_payload(reply):
         "interrupt_type": 0,
         "query_mode": 2,
         "tts": {
-            "speaker": SPEAKER,
+            "speaker": speaker or SPEAKER,
             "audio_config": {"bit_rate": 32000, "format": "ogg_opus", "sample_rate": 24000},
             "extra": {"chat_next": "1", "post_process": {"pitch": 0, "speech_rate": 1}},
         },
@@ -257,8 +257,11 @@ def make_payload(reply):
     return json.dumps(common, ensure_ascii=False)
 
 
-async def read_reply(reply, output_path, verbose=True):
-    """朗读一条回复,保存为 ogg。返回音频字节数"""
+async def read_reply(reply, output_path, verbose=True, speaker: str | None = None):
+    """朗读一条回复,保存为 ogg。返回音频字节数。
+
+    speaker: 音色 ID,默认用模块级 SPEAKER(桃桃)。多人物配音时按说话人传不同 ID。
+    """
     task_id = str(uuid.uuid4())
     ws_url = (
         "wss://frontier-audio-web-ws.doubao.com/api/v2/sami/voicegenie"
@@ -283,9 +286,9 @@ async def read_reply(reply, output_path, verbose=True):
     async with websockets.connect(ws_url, additional_headers=headers) as ws:
         await ws.send(build_message(API_APP_KEY, "VoiceGenie", "StartTask", "{}"))
         await ws.send(build_message(API_APP_KEY, "VoiceGenie", "StartSession",
-                                    make_payload(reply), task_id))
+                                    make_payload(reply, speaker), task_id))
         await ws.send(build_message(API_APP_KEY, "VoiceGenie", "StartTTS",
-                                    make_payload(reply), task_id))
+                                    make_payload(reply, speaker), task_id))
         finished = False
         got_audio = False
         last_print = 0
