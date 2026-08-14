@@ -20,6 +20,15 @@ import sys
 from pathlib import Path
 from difflib import SequenceMatcher
 
+# 字幕单条最大字符数：两行的安全容量（一行约 27 字 × 2）。
+# 优先保证语义完整：整句 ≤ 此值就不切（显示为两行），超长才在逗号处断开。
+# （libass force_style 不支持 max_lines，从文本端控制是唯一可靠路径）
+MAX_SUBTITLE_CHARS = 54
+
+# 断句正则（与 doubao_pipeline._split_into_lines 一致）
+_SENTENCE_END = re.compile(r"[。？！；\n]")
+_CLAUSE_END = re.compile(r"[，、：]")
+
 
 def parse_srt(srt_path: Path) -> list[tuple[float, float, str]]:
     """解析 SRT → [(start_sec, end_sec, text), ...]"""
@@ -306,6 +315,79 @@ def write_srt(cues: list[tuple[float, float, str]], out_path: Path) -> None:
     print(f"[✓] 输出 {len(cues)} 条字幕 → {out_path}")
 
 
+def _split_text(text: str, max_chars: int = MAX_SUBTITLE_CHARS) -> list[str]:
+    """把一段文本按标点断句，每段不超过 max_chars 字符。
+
+    三级断句：句末标点（。？！；）→ 逗号（，、：）→ 硬切。
+    （逻辑与 doubao_pipeline._split_into_lines 一致，内联以保持模块轻量。）
+    """
+    parts = _SENTENCE_END.split(text)
+    puncts = _SENTENCE_END.findall(text)
+    sentences = []
+    for i, part in enumerate(parts):
+        part = part.strip()
+        if not part:
+            continue
+        if i < len(puncts):
+            part += puncts[i]
+        sentences.append(part)
+
+    lines = []
+    for sent in sentences:
+        if len(sent) <= max_chars:
+            lines.append(sent)
+            continue
+        # 句子超长：按逗号再分
+        sub_parts = _CLAUSE_END.split(sent)
+        sub_puncts = _CLAUSE_END.findall(sent)
+        cur = ""
+        for j, sub in enumerate(sub_parts):
+            if j < len(sub_puncts):
+                sub += sub_puncts[j]
+            if len(cur) + len(sub) <= max_chars:
+                cur += sub
+            else:
+                if cur:
+                    lines.append(cur)
+                # 单个子句仍超长，硬切
+                while len(sub) > max_chars:
+                    lines.append(sub[:max_chars])
+                    sub = sub[max_chars:]
+                cur = sub
+        if cur:
+            lines.append(cur)
+    return lines
+
+
+def _split_cue(
+    start: float, end: float, text: str, max_chars: int = MAX_SUBTITLE_CHARS
+) -> list[tuple[float, float, str]]:
+    """把一条 ASR segment 切成多条字幕，时间按字符比例分配。
+
+    短文本（≤max_chars）原样返回；长文本按标点断句后，把 [start,end]
+    按各段字符数比例分摊，保证切出的每条字幕都 ≤max_chars（一行内）。
+    """
+    lines = _split_text(text, max_chars)
+    if len(lines) <= 1:
+        return [(start, end, text)]
+
+    weights = [max(len(l), 1) for l in lines]
+    total_w = sum(weights)
+    dur = end - start
+    result = []
+    cur = start
+    w_acc = 0.0
+    for i, (line, w) in enumerate(zip(lines, weights)):
+        w_acc += w
+        if i == len(lines) - 1:
+            seg_end = end  # 末条对齐到原 segment 结束
+        else:
+            seg_end = start + dur * (w_acc / total_w)
+        result.append((cur, seg_end, line))
+        cur = seg_end
+    return result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="用 ASR 给字幕重新打时间戳（对齐到配音实际节奏）")
@@ -318,6 +400,9 @@ def main() -> None:
                         help="whisper 模型（默认 large-v3-turbo）")
     parser.add_argument("--asr-only", action="store_true",
                         help="直接用 ASR 识别文本做字幕（不引用原字幕，最准）")
+    parser.add_argument("--max-chars", type=int, default=MAX_SUBTITLE_CHARS,
+                        help=f"字幕单条最大字符数（默认 {MAX_SUBTITLE_CHARS}，"
+                             f"超长则按标点断句拆成多条；保证一行内显示）")
     args = parser.parse_args()
 
     # ASR 识别（缓存到 audio 同目录的 .asr.json）
@@ -327,8 +412,14 @@ def main() -> None:
 
     if args.asr_only:
         # 直接用 ASR 结果做字幕（时间戳和文本都来自语音识别，最准）
-        cues = [(s, e, t) for s, e, t in asr_segments if t.strip()]
-        print(f"ASR-only 模式：{len(cues)} 条字幕（直接来自语音识别）")
+        # 再按标点 + 字符数二次切分，保证每条字幕 ≤max_chars（一行内显示）
+        cues = []
+        for s, e, t in asr_segments:
+            if not t.strip():
+                continue
+            cues.extend(_split_cue(s, e, t, args.max_chars))
+        print(f"ASR-only 模式：{len(asr_segments)} 段 → 切分后 {len(cues)} 条字幕"
+              f"（每条 ≤{args.max_chars} 字）")
         write_srt(cues, args.output)
         return
 
