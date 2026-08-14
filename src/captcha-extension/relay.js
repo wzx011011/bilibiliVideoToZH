@@ -192,19 +192,21 @@
   }
 
   async function report(run, patch, log = null, itemIndex = null, itemPatch = null) {
-    if (Object.prototype.hasOwnProperty.call(patch || {}, "phase")) run.phase = patch.phase;
-    if (Object.prototype.hasOwnProperty.call(patch || {}, "index")) run.index = patch.index;
-    if (Object.prototype.hasOwnProperty.call(patch || {}, "conversationUrl")) {
-      run.conversationUrl = patch.conversationUrl;
-    }
-    return sendRuntime({
+    const response = await sendRuntime({
       type: "senderUpdate",
       runId: run.runId,
+      pageUrl: location.href,
       patch,
       log,
       itemIndex,
       itemPatch,
     });
+    if (Object.prototype.hasOwnProperty.call(patch || {}, "phase")) run.phase = patch.phase;
+    if (Object.prototype.hasOwnProperty.call(patch || {}, "index")) run.index = patch.index;
+    if (Object.prototype.hasOwnProperty.call(patch || {}, "conversationUrl")) {
+      run.conversationUrl = patch.conversationUrl;
+    }
+    return response;
   }
 
   async function waitWhilePaused(run, itemName) {
@@ -219,7 +221,8 @@
     await waitUntil(() => Boolean(conversationKey(location.href)), 20000,
       "等待新建豆包会话创建", run);
     const conversationUrl = conversationKey(location.href);
-    await report(run, { conversationUrl }, "已绑定新建豆包会话");
+    const conversationId = conversationUrl.split("/").pop();
+    await report(run, { conversationUrl }, `已绑定新建豆包会话 ${conversationId}`);
   }
 
   async function sendItem(run, item, index) {
@@ -421,7 +424,7 @@
   });
 
   injectCaptureHook();
-  sendRuntime({ type: "senderReady" }).then((response) => {
+  sendRuntime({ type: "senderReady", pageUrl: location.href }).then((response) => {
     if (response.resume) startRun(response.resume);
   }).catch(() => {
     // The background may still be starting after an extension reload.

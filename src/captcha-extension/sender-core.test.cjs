@@ -24,6 +24,55 @@ test("chat URL supports an initial route and locks a concrete conversation", () 
   assert.equal(core.isDoubaoChatUrl("https://www.doubao.com/chat/a/b"), false);
 });
 
+test("sender ownership follows the live page after a new-chat SPA transition", () => {
+  const conversation = "https://www.doubao.com/chat/38436936866872066";
+  assert.equal(core.senderOwnsConversation(
+    "https://www.doubao.com/chat",
+    "https://www.doubao.com/chat",
+    conversation,
+  ), false);
+  assert.equal(core.senderOwnsConversation(
+    "https://www.doubao.com/chat",
+    conversation,
+    conversation,
+  ), true);
+  assert.equal(core.senderOwnsConversation(
+    "https://www.doubao.com/chat",
+    "https://www.doubao.com/chat",
+    conversation,
+    conversation,
+  ), true);
+  assert.equal(core.senderOwnsConversation(
+    conversation,
+    conversation,
+    conversation,
+    "https://www.doubao.com/chat/another-conversation",
+  ), false);
+  assert.equal(core.senderOwnsConversation(
+    conversation,
+    "https://www.doubao.com/chat/another-conversation",
+    conversation,
+  ), false);
+  assert.equal(core.senderOwnsConversation(
+    "https://www.doubao.com/chat",
+    conversation,
+    "https://www.doubao.com/chat",
+  ), true);
+});
+
+test("currentChatUrl prefers the live page over delayed tab metadata", () => {
+  assert.equal(core.currentChatUrl(
+    "https://www.doubao.com/chat",
+    "https://www.doubao.com/chat",
+    "https://www.doubao.com/chat/current-conversation",
+  ), "https://www.doubao.com/chat/current-conversation");
+  assert.equal(core.currentChatUrl(
+    "https://www.doubao.com/chat/sender-conversation",
+    "https://www.doubao.com/chat/tab-conversation",
+    "https://example.com/not-doubao",
+  ), "https://www.doubao.com/chat/tab-conversation");
+});
+
 test("newResponseRevision detects an appended duplicate response", () => {
   assert.equal(
     core.newResponseRevision(["old:3"], ["old:3", "old:3"]),

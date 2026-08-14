@@ -58,6 +58,20 @@
     return parseDoubaoChatUrl(value)?.conversationUrl || null;
   }
 
+  function currentChatUrl(senderUrl, tabUrl, pageUrl) {
+    for (const candidate of [pageUrl, tabUrl, senderUrl]) {
+      if (isDoubaoChatUrl(candidate)) return candidate;
+    }
+    return null;
+  }
+
+  function senderOwnsConversation(senderUrl, tabUrl, expectedUrl, pageUrl = null) {
+    const currentUrl = currentChatUrl(senderUrl, tabUrl, pageUrl);
+    const expected = conversationKey(expectedUrl);
+    if (expected) return conversationKey(currentUrl) === expected;
+    return isInitialChatUrl(expectedUrl) && isDoubaoChatUrl(currentUrl);
+  }
+
   function newResponseRevision(before, current) {
     const baseline = Array.isArray(before) ? before.map(String) : [...(before || [])].map(String);
     const latest = Array.isArray(current) ? current.map(String) : [...(current || [])].map(String);
@@ -192,6 +206,8 @@
     isDoubaoChatUrl,
     isInitialChatUrl,
     conversationKey,
+    currentChatUrl,
+    senderOwnsConversation,
     newResponseRevision,
     doubaoUidFromCookies,
     validateItems,
