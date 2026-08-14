@@ -74,10 +74,14 @@ JS_FIND_AND_CLICK = """
       item.getAttribute("aria-disabled") !== "true" && !item.disabled;
   });
   // 生成中:发送按钮切换为"停止"(同一位置)。此时点击=停止生成,必须等待。
+  // label 是 aria-label/title/textContent 拼接串,按词拆开判断,避免
+  // "停止 停止"这类拼接后 ^$ 锚点失效。
   const generating = all.some((item) => {
     const label = [item.getAttribute("aria-label"), item.getAttribute("title"),
-                   item.textContent].filter(Boolean).join(" ");
-    return /停止生成|停止回答|^停止$|^stop$/i.test(label.trim());
+                   item.textContent].filter(Boolean).join(" ").trim();
+    if (/停止生成|停止回答/.test(label)) return true;
+    return label.split(/\\s+/).some(
+      (w) => /^(停止|stop|pause)$/i.test(w));
   });
   if (generating && !semantic.length) {
     return { ok: false, error: "generating" };
