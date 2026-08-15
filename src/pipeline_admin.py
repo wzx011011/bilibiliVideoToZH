@@ -794,6 +794,8 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:  # noqa: N802
         if self.path == "/api/tasks":
             return self._create_task()
+        if self.path == "/api/selftest":
+            return self._selftest()
         m = re.fullmatch(r"/api/tasks/([A-Za-z0-9-]+)/action", self.path)
         if m:
             return self._task_action(m.group(1))
@@ -837,6 +839,67 @@ class Handler(BaseHTTPRequestHandler):
             ok = retry_stage(t)
             return self._json({"ok": ok, "error": None if ok else "任务不在失败状态"})
         return self._json({"ok": False, "error": f"未知 action {action}"}, 400)
+
+    # ---------- 链路自检 ----------
+
+    def _selftest(self) -> None:
+        """豆包链路健康检测:登录态/消息拉取 → TTS 朗读 →(可选)真实发送。
+
+        body: {"full": true} 额外走一次 Playwright 发送(会真发一条测试消息)。
+        自检与正式发送共用 .env 凭据(doubao_autosend.load_env)。
+        """
+        body = self._body()
+        result = {"auth": False, "tts": False, "send": None,
+                  "detail": [], "checked_at": time.strftime("%H:%M:%S")}
+        try:
+            from doubao_autosend import load_env as _le
+            for k, v in _le().items():
+                os.environ.setdefault(k, v)
+        except Exception as e:  # noqa: BLE001
+            result["detail"].append(f".env 读取异常: {e}")
+            return self._json(result)
+
+        # 1) 登录态 + 消息拉取(只读)
+        try:
+            import doubao_reader as dr
+            msgs = dr.fetch_messages(limit=3, per_conv=2)
+            result["auth"] = True
+            result["detail"].append(f"登录/消息拉取 ✓(最近 {len(msgs)} 条)")
+        except Exception as e:  # noqa: BLE001
+            result["detail"].append(f"登录/消息拉取 ✗: {str(e)[:120]}")
+            return self._json(result)
+
+        # 2) TTS 朗读(读一条已有回复,不发新消息)
+        try:
+            import asyncio
+            r = next((m for m in msgs if (m.get("tts_content") or "").strip()), None)
+            if not r:
+                result["detail"].append("TTS 跳过(无历史回复)")
+            else:
+                probe = STATE_DIR / "selftest-tts.ogg"
+                n = asyncio.run(dr.read_reply(r, str(probe), verbose=False))
+                result["tts"] = n > 0
+                result["detail"].append(
+                    f"TTS 朗读 {'✓ ' + str(n // 1024) + 'KB' if n > 0 else '✗ 无音频(可能风控 3003)'}")
+                if n > 0:
+                    probe.unlink(missing_ok=True)
+        except Exception as e:  # noqa: BLE001
+            result["detail"].append(f"TTS 异常: {str(e)[:120]}")
+
+        # 3) 完整发送链路(可选)
+        if body.get("full"):
+            try:
+                from doubao_autosend import DoubaoAutoSender
+                with DoubaoAutoSender(headless=False) as s:
+                    s.open_chat()
+                    s.send_one("链路自检:请只回复:OK")
+                result["send"] = True
+                result["detail"].append("自动发送 ✓(测试消息已发出并收到回复)")
+            except Exception as e:  # noqa: BLE001
+                result["send"] = False
+                result["detail"].append(f"自动发送 ✗: {str(e)[:120]}")
+
+        self._json(result)
 
 
 def _lan_ips() -> list[str]:

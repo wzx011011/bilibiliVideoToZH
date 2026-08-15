@@ -65,6 +65,11 @@ pre.log { background: #111827; color: #d1d5db; font-size: 11px; line-height: 1.5
   <h1>多流水线视频制作管理</h1>
   <span class="hint">统一产物:封面 + 中文配音 + 中文字幕 → MP4;差异在三类资源的生成方式(源语言 × 字幕来源 × 说话人)</span>
   <span class="refresh-indicator" id="refresh-time"></span>
+  <div style="margin-top:12px; display:flex; gap:8px; align-items:center;">
+    <button class="btn" onclick="selftest(false)">豆包链路自检(只读)</button>
+    <button class="btn" onclick="selftest(true)">完整自检(含真实发送测试)</button>
+    <span class="hint" id="selftest-result"></span>
+  </div>
 </div>
 
 <div class="card">
@@ -206,6 +211,25 @@ async function doAction(id, action) {
   const d = await r.json();
   if (d.ok) showToast('已执行'); else showToast(d.error || '操作失败', true);
   setTimeout(fetchTasks, 800);
+}
+
+async function selftest(full) {
+  const el = document.getElementById('selftest-result');
+  el.textContent = '自检中' + (full ? '(会弹出浏览器并发送测试消息)' : '') + '...';
+  try {
+    const r = await fetch('/api/selftest', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ full })
+    });
+    const d = await r.json();
+    const icons = [];
+    icons.push(d.auth ? '✓登录' : '✗登录');
+    icons.push(d.tts ? '✓朗读' : '✗朗读');
+    if (d.send !== null && d.send !== undefined) icons.push(d.send ? '✓发送' : '✗发送');
+    el.innerHTML = icons.join(' ') + ' <span class="hint">' + (d.detail || []).join('; ') + '</span>';
+  } catch (e) {
+    el.textContent = '自检失败: ' + e.message;
+  }
 }
 
 function showToast(msg, isError) {
