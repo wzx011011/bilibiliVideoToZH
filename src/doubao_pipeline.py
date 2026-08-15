@@ -125,26 +125,46 @@ def cmd_prep(args: argparse.Namespace) -> None:
 
     chunks_dir.mkdir(parents=True, exist_ok=True)
 
-    # 分块：每 chunk_size 条拼一块
+    # 分块：条数(chunk_size)与字符数(MAX_CHUNK_CHARS)双上限,先到先切。
+    # 背景:ep-22 的 OCR 字幕单条超长(平均 273 字/条,正常集是 ~21 字),
+    # 只按条数分块会把整集塞进一个 52KB 巨块,豆包无法产出音频。
     chunks_meta = []
-    for i in range(0, len(cues), chunk_size):
-        chunk_cues = cues[i:i + chunk_size]
-        chunk_idx = len(chunks_meta) + 1
-        # 拼文本：每条字幕之间加空格（豆包朗读会自然停顿）
-        joined_text = " ".join(c["text"] for c in chunk_cues)
-        prompt = PROMPT_TEMPLATE.format(text=joined_text)
+    cur_cues: list[dict] = []
+    cur_chars = 0
+    cue_seq = 0  # 全局 1-based 序号(clips 编号依据)
 
+    def flush_chunk():
+        nonlocal cur_cues, cur_chars, cue_seq
+        if not cur_cues:
+            return
+        chunk_idx = len(chunks_meta) + 1
+        joined_text = " ".join(c[2] for c in cur_cues)
+        prompt = PROMPT_TEMPLATE.format(text=joined_text)
         txt_path = chunks_dir / f"{chunk_idx:02d}.txt"
         txt_path.write_text(prompt, encoding="utf-8")
-
         chunks_meta.append({
             "chunk_index": chunk_idx,
-            "cue_start": i + 1,          # 1-based，对应 clips 编号
-            "cue_end": i + len(chunk_cues),
-            "cue_count": len(chunk_cues),
-            "texts": [c["text"] for c in chunk_cues],
+            "cue_start": cur_cues[0][0],
+            "cue_end": cur_cues[-1][0],
+            "cue_count": len(cur_cues),
+            "texts": [c[2] for c in cur_cues],
             "txt_file": txt_path.name,
         })
+        cur_cues, cur_chars = [], 0
+
+    for cue in cues:
+        cue_seq += 1
+        entry = (cue_seq, cue, cue["text"])
+        text = cue["text"]
+        # 累计超字符上限 → 先封当前块(保证每块不超;单条超长则独占一块)
+        if cur_cues and cur_chars + len(text) + 1 > args.max_chars:
+            flush_chunk()
+        cur_cues.append(entry)
+        cur_chars += len(text) + 1
+        # 条数上限
+        if len(cur_cues) >= chunk_size:
+            flush_chunk()
+    flush_chunk()
 
     expected_txt = {chunk["txt_file"] for chunk in chunks_meta}
     for old_txt in chunks_dir.glob("*.txt"):
@@ -657,6 +677,9 @@ def main() -> None:
                         help="分块输出目录（默认 chunks/）")
     p_prep.add_argument("--chunk-size", type=int, default=60,
                         help="每块字幕条数（默认 60）")
+    p_prep.add_argument("--max-chars", type=int, default=3000,
+                        help="每块最大字符数（默认 3000;与条数上限先到先切,"
+                             "防止超长 cue 集被塞进单块）")
     p_prep.add_argument("--limit", type=int, default=None,
                         help="只取前 N 条字幕（用于端到端验证，默认全部）")
 

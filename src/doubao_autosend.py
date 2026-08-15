@@ -110,6 +110,25 @@ JS_FIND_AND_CLICK = """
 }
 """
 
+# 只查询是否在生成中(不点击)——回复完成的判定信号:
+# 豆包生成期间按钮组里出现"停止"按钮,回复完成即消失。
+JS_IS_GENERATING = """
+() => {
+  const isVisible = (el) => {
+    const r = el.getBoundingClientRect();
+    const s = getComputedStyle(el);
+    return r.width > 0 && r.height > 0 && s.display !== "none" && s.visibility !== "hidden";
+  };
+  const all = [...document.querySelectorAll('button,[role="button"]')].filter(isVisible);
+  return all.some((item) => {
+    const label = [item.getAttribute("aria-label"), item.getAttribute("title"),
+                   item.textContent].filter(Boolean).join(" ").trim();
+    if (/停止生成|停止回答/.test(label)) return true;
+    return label.split(/\\s+/).some((w) => /^(停止|stop|pause)$/i.test(w));
+  });
+}
+"""
+
 
 def load_env() -> dict[str, str]:
     """读项目 .env(不覆盖已有环境变量)。"""
@@ -243,12 +262,18 @@ class DoubaoAutoSender:
             self.page.wait_for_timeout(2000)
 
     def send_one(self, text: str, timeout_s: float = RESPONSE_TIMEOUT_S) -> None:
-        """发送一条消息并等回复完成(流式 body 真正结束)。
+        """发送一条消息,以「服务端落库新回复」为完成判据。
 
-        回复判定:completion 响应 finished()(不只响应头——expect_response
-        事件在 headers 到达即触发,body 要显式等;实测 4k 字块流式约需
-        数十秒)。不依赖 DOM 悬停元素(朗读按钮只在鼠标悬停时渲染)。
+        实测结论(ep-22 踩坑链):
+        - completion 只是提交接口(秒回),回复内容走 WS/拉取通道,
+          网络事件不能判定"回复完成";
+        - "停止按钮"图标无 aria-label/text,DOM 检测不到;
+        - 浏览器在 local_ 态关闭会丢整段会话。
+        所以直接轮询 fetch_messages:出现新的 message_id = 回复已生成
+        且落库,此时关浏览器也安全。
         """
+        import doubao_reader as dr
+
         self._check_challenge()
         editor = self._wait_editor()
         for attempt in range(5):
@@ -262,20 +287,38 @@ class DoubaoAutoSender:
             if attempt == 4:
                 raise RuntimeError("输入内容未能进入豆包输入框(React state 未接收)")
 
-        with self.page.expect_response(
-                lambda r: "completion" in r.url and r.status == 200,
-                timeout=timeout_s * 1000) as resp_info:
-            self._click_send_when_ready(timeout_s)
-        resp_info.value.finished()  # 等 SSE body 流结束
-        # 回复流结束后静默,确保前端渲染完、按钮恢复发送态
-        self.page.wait_for_timeout(RESPONSE_STABLE_S * 1000)
-        # 旁证:输入框被清空(消息确实发出)
+        # 发送前基线:服务端已有回复的 message_id 集合
+        baseline: set[str] = set()
         try:
-            cleared = not (editor.input_value() or "").strip()
+            baseline = {m["message_id"]
+                        for m in dr.fetch_messages(limit=15, per_conv=5)}
         except Exception:
-            cleared = True  # 元素重建也说明界面翻转了
-        if not cleared:
-            raise RuntimeError("点击发送后输入框未清空,消息可能未发出")
+            pass  # 拉取失败不阻塞发送,完成判定仍靠后续轮询
+
+        # 点击并确认发出:输入框清空
+        send_deadline = time.time() + 60
+        while time.time() < send_deadline:
+            self._click_send_when_ready(timeout_s)
+            self.page.wait_for_timeout(1500)
+            try:
+                if not (editor.input_value() or "").strip():
+                    break  # 已发出
+            except Exception:
+                break  # 元素重建=界面翻转
+        else:
+            raise RuntimeError("多次点击后输入框仍未清空,消息未发出")
+
+        # 等服务端出现新回复(message_id 不在基线里)
+        gen_deadline = time.time() + timeout_s
+        while time.time() < gen_deadline:
+            try:
+                msgs = dr.fetch_messages(limit=15, per_conv=5)
+                if any(m["message_id"] not in baseline for m in msgs):
+                    return  # 新回复已落库
+            except Exception:
+                pass  # 网络抖动,继续轮询
+            self.page.wait_for_timeout(3000)
+        raise RuntimeError(f"等待服务端新回复超时({timeout_s}s)")
 
     def send_chunks(self, chunk_files: list[Path], pause_s: float = 2.0) -> int:
         """依次发送一组分块文件,返回成功数。"""
