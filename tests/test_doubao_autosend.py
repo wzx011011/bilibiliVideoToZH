@@ -117,3 +117,39 @@ def test_js_find_and_click_semantics_dry_run():
     proc = subprocess.run([node, "-e", js3], capture_output=True, text=True, timeout=30)
     assert proc.returncode == 0, proc.stderr[:300]
     assert '"ok":true' in proc.stdout
+
+
+# ======================== 回复形态校验 ========================
+from doubao_autosend import reply_shape_ok  # noqa: E402
+
+
+def test_shape_ok_normal_polished_reply():
+    """正常润色回复(长度接近原文、带标点正文)→ 合格。"""
+    sent = "待处理的字幕文字:\n\n" + "我们都是在困境中成长的。" * 150
+    reply = "我们都是在困境中成长的。" * 145
+    ok, why = reply_shape_ok(reply, sent)
+    assert ok, why
+
+
+def test_shape_rejects_canvas():
+    sent = "x" * 3000
+    reply = '<canvas_command>\n  <action>create</action>' + "y" * 3000
+    ok, why = reply_shape_ok(reply, sent)
+    assert not ok and "画布" in why
+
+
+def test_shape_rejects_html_doc():
+    reply = '<p id="1">哈佛学习障碍协会' + "。" * 2500
+    ok, why = reply_shape_ok(reply, "x" * 3000)
+    assert not ok
+
+
+def test_shape_rejects_question_and_summary():
+    sent = "x" * 3000
+    ok1, _ = reply_shape_ok("需要我帮你做词语节奏调整吗?", sent)
+    ok2, _ = reply_shape_ok("积极心理学提出,幸福是可以习得的能力。", sent)  # 127字摘要 vs 阈值1050
+    assert not ok1 and not ok2
+
+
+def test_shape_rejects_empty():
+    assert not reply_shape_ok("", "x" * 100)[0]

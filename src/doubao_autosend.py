@@ -130,6 +130,30 @@ JS_IS_GENERATING = """
 """
 
 
+# 回复形态校验:豆包新版对润色/翻译请求容易走偏(实测形态):
+#   <canvas_command>…(画布命令)、<p id="1">…(HTML 文档)、
+#   "需要我帮你…吗?"(反问)、短摘要、承诺式开头。
+# 这些形态一旦漏进 harvest,朗读出来的就是 XML/反问句。
+BAD_HEAD_PREFIXES = ("<canvas", "<p", "<div", "<!DOCTYPE")
+BAD_HEAD_MARKS = ("需要我", "帮你", "我接下来", "已为你生成", "已生成", "以下是")
+MIN_RATIO = 0.35  # 合格回复长度 ≥ 输入正文的比例(润色后长度应接近原文)
+
+
+def reply_shape_ok(tts: str, sent_text: str) -> tuple[bool, str]:
+    """校验豆包回复是否为可朗读形态。返回 (合格, 原因)。"""
+    if not tts or not tts.strip():
+        return False, "回复为空"
+    head = tts.lstrip()[:150]
+    if head.startswith(BAD_HEAD_PREFIXES):
+        return False, f"文档/画布形态(开头 {head[:20]!r})"
+    if any(m in tts[:80] for m in BAD_HEAD_MARKS) and len(tts) < 500:
+        return False, "反问/承诺式开头且过短"
+    threshold = max(120, int(len(sent_text) * MIN_RATIO))
+    if len(tts) < threshold:
+        return False, f"回复过短({len(tts)}字 < 阈值{threshold},疑似摘要/反问)"
+    return True, ""
+
+
 def load_env() -> dict[str, str]:
     """读项目 .env(不覆盖已有环境变量)。"""
     env = {}
@@ -308,13 +332,21 @@ class DoubaoAutoSender:
         else:
             raise RuntimeError("多次点击后输入框仍未清空,消息未发出")
 
-        # 等服务端出现新回复(message_id 不在基线里)
+        # 等服务端出现新回复(message_id 不在基线里),并校验其形态可朗读
         gen_deadline = time.time() + timeout_s
         while time.time() < gen_deadline:
             try:
                 msgs = dr.fetch_messages(limit=15, per_conv=5)
-                if any(m["message_id"] not in baseline for m in msgs):
-                    return  # 新回复已落库
+                fresh = [m for m in msgs if m["message_id"] not in baseline]
+                if fresh:
+                    tts = fresh[0].get("tts_content") or ""
+                    ok, why = reply_shape_ok(tts, text)
+                    if ok:
+                        return  # 新回复已落库且形态合格
+                    raise RuntimeError(f"回复形态异常: {why}(开头: {tts[:40]!r})。"
+                                       "豆包可能走了文档/画布/反问路线,请重试该块")
+            except RuntimeError:
+                raise
             except Exception:
                 pass  # 网络抖动,继续轮询
             self.page.wait_for_timeout(3000)
