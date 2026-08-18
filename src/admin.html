@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>多流水线视频制作管理</title>
+<title>视频汉化工作台</title>
 <style>
 :root { color-scheme: light; }
 * { box-sizing: border-box; }
@@ -13,17 +13,18 @@ h2 { font-size: 16px; margin: 0 0 12px; color: #374151; }
 .hint { color: #6b7280; font-size: 13px; }
 .refresh-indicator { font-size: 12px; color: #9ca3af; margin-left: 12px; }
 .card { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-.pipes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
-.pipe { border: 2px solid #e5e7eb; border-radius: 8px; padding: 14px; cursor: pointer; transition: all .15s; }
-.pipe:hover { border-color: #93c5fd; }
-.pipe.active { border-color: #2563eb; background: #eff6ff; }
-.pipe-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
-.pipe-dims { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
-.dim { font-size: 11px; background: #f3f4f6; border-radius: 4px; padding: 2px 8px; color: #4b5563; }
-.pipe-desc { font-size: 12px; color: #6b7280; line-height: 1.5; }
-.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 12px 0; }
+.types { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.type { border: 2px solid #e5e7eb; border-radius: 8px; padding: 12px; cursor: pointer; transition: all .15s; }
+.type:hover { border-color: #93c5fd; }
+.type.active { border-color: #2563eb; background: #eff6ff; }
+.type-name { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.type-dims { display: flex; gap: 5px; margin-bottom: 6px; flex-wrap: wrap; }
+.dim { font-size: 10px; background: #f3f4f6; border-radius: 4px; padding: 1px 7px; color: #4b5563; }
+.type-desc { font-size: 11px; color: #6b7280; line-height: 1.5; }
+.stage-preview { margin-top: 8px; font-size: 11px; color: #2563eb; }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 12px 0; }
 .field label { display: block; font-size: 12px; color: #4b5563; margin-bottom: 4px; font-weight: 600; }
-.field input { width: 100%; padding: 7px 10px; border: 1px solid #d1d5db; border-radius: 5px; font-size: 13px; }
+.field input, .field select { width: 100%; padding: 7px 10px; border: 1px solid #d1d5db; border-radius: 5px; font-size: 13px; }
 .field .req { color: #dc2626; }
 .field .tip { font-size: 11px; color: #9ca3af; margin-top: 3px; }
 .btn { padding: 6px 14px; border: 0; border-radius: 5px; cursor: pointer; font-size: 13px; background: #e5e7eb; color: #1f2937; }
@@ -31,55 +32,71 @@ h2 { font-size: 16px; margin: 0 0 12px; color: #374151; }
 .btn.primary { background: #2563eb; color: #fff; }
 .btn.primary:hover { background: #1d4ed8; }
 .btn.warn { background: #d97706; color: #fff; }
-.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn.sm { padding: 2px 9px; font-size: 11px; }
 .task { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; margin-bottom: 12px; }
 .task-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .task-name { font-weight: 700; font-size: 15px; }
 .badge { font-size: 11px; padding: 2px 10px; border-radius: 10px; color: #fff; }
-.badge.running { background: #2563eb; }
-.badge.waiting_user { background: #d97706; animation: pulse 1.5s infinite; }
+.badge.running { background: #2563eb; animation: pulse 1.5s infinite; }
 .badge.done { background: #047857; }
 .badge.failed { background: #b91c1c; }
 .pipeline-tag { font-size: 12px; color: #6b7280; }
 .stages { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 8px; }
-.stage { font-size: 12px; padding: 4px 10px; border-radius: 12px; border: 1px solid #e5e7eb; color: #9ca3af; display: flex; align-items: center; gap: 5px; }
+.stage { font-size: 12px; padding: 4px 10px; border-radius: 12px; border: 1px solid #e5e7eb; color: #9ca3af; }
 .stage.done { border-color: #a7f3d0; background: #ecfdf5; color: #047857; }
 .stage.running { border-color: #bfdbfe; background: #eff6ff; color: #2563eb; animation: pulse 1.5s infinite; }
-.stage.waiting_user { border-color: #fde68a; background: #fffbeb; color: #b45309; }
 .stage.failed { border-color: #fecaca; background: #fef2f2; color: #b91c1c; }
-.manual-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 10px 12px; font-size: 13px; margin: 8px 0; line-height: 1.7; }
-.products { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
-.product { font-size: 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 5px; padding: 4px 10px; }
-.err { color: #b91c1c; font-size: 12px; margin-top: 6px; white-space: pre-wrap; }
-details log, details pre { margin-top: 8px; }
+.artifacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 8px; margin-top: 10px; }
+.art { border: 1px solid #e5e7eb; border-radius: 6px; padding: 8px 10px; font-size: 12px; background: #f9fafb; }
+.art.empty { opacity: .45; }
+.art-title { font-weight: 700; margin-bottom: 3px; }
+.art-status { color: #047857; }
+.art-status.off { color: #9ca3af; }
+.art-status.err { color: #b91c1c; }
+.art-path { color: #6b7280; font-size: 11px; word-break: break-all; margin-top: 2px; }
 pre.log { background: #111827; color: #d1d5db; font-size: 11px; line-height: 1.5; padding: 10px; border-radius: 6px; max-height: 260px; overflow: auto; white-space: pre-wrap; word-break: break-all; }
 .toast { position: fixed; top: 20px; right: 20px; background: #047857; color: #fff; padding: 10px 18px; border-radius: 6px; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,.15); display: none; z-index: 999; }
 .toast.error { background: #b91c1c; }
 .empty { color: #9ca3af; text-align: center; padding: 30px; }
+.err { color: #b91c1c; font-size: 12px; margin-top: 6px; white-space: pre-wrap; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
 </style>
 </head>
 <body>
 
 <div class="card">
-  <h1>多流水线视频制作管理</h1>
-  <span class="hint">统一产物:封面 + 中文配音 + 中文字幕 → MP4;差异在三类资源的生成方式(源语言 × 字幕来源 × 说话人)</span>
+  <h1>视频汉化工作台</h1>
+  <span class="hint">选视频类型 → 自动路由工作流 → 五件套产物(视频源/英文字幕/中文字幕/中文音频/成品)自动归档 NAS</span>
   <span class="refresh-indicator" id="refresh-time"></span>
-  <div style="margin-top:12px; display:flex; gap:8px; align-items:center;">
-    <button class="btn" onclick="selftest(false)">豆包链路自检(只读)</button>
-    <button class="btn" onclick="selftest(true)">完整自检(含真实发送测试)</button>
+  <div style="margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+    <button class="btn" onclick="selftest()">环境自检(Ollama/CosyVoice/NAS)</button>
     <span class="hint" id="selftest-result"></span>
   </div>
 </div>
 
 <div class="card">
-  <h2>① 选择流水线</h2>
-  <div class="pipes" id="pipes"></div>
+  <h2>① 选择视频类型</h2>
+  <div class="types" id="types"></div>
   <div id="form-area" style="display:none">
     <h2 style="margin-top:18px">② 新建任务</h2>
+    <div class="stage-preview" id="stage-preview"></div>
     <div class="form-grid" id="form-fields"></div>
-    <button class="btn primary" id="create-btn" onclick="createTask()">创建并开始</button>
+    <button class="btn primary" onclick="createTask()">创建并开始</button>
   </div>
+</div>
+
+<div class="card">
+  <h2>音色库 <span class="hint">(CosyVoice 克隆参考,任务中复用)</span></h2>
+  <div id="voices" class="hint">加载中…</div>
+  <details style="margin-top:8px">
+    <summary class="hint" style="cursor:pointer">注册新音色</summary>
+    <div class="form-grid" style="margin-top:8px">
+      <div class="field"><label>音色名 <span class="req">*</span></label><input id="v-name" placeholder="如 orig-musk"></div>
+      <div class="field"><label>参考音频路径 <span class="req">*</span></label><input id="v-audio" placeholder="本地 wav 路径(几秒干净人声)"></div>
+      <div class="field"><label>参考文本 <span class="req">*</span></label><input id="v-text" placeholder="参考音频说的一句话(原文)"></div>
+    </div>
+    <button class="btn" onclick="createVoice()">注册</button>
+  </details>
 </div>
 
 <div class="card">
@@ -90,146 +107,156 @@ pre.log { background: #111827; color: #d1d5db; font-size: 11px; line-height: 1.5
 <div class="toast" id="toast"></div>
 
 <script>
-let PIPELINES = [];
-let selected = null;
-let tasks = [];
+let TYPES = {}, VOICES = [], selected = null, tasks = [];
 
-async function loadPipelines() {
-  const r = await fetch('/api/pipelines');
-  PIPELINES = Object.values(await r.json());
-  renderPipes();
+async function loadTypes() {
+  TYPES = Object.values(await (await fetch('/api/types')).json());
+  renderTypes();
 }
 
-function renderPipes() {
-  document.getElementById('pipes').innerHTML = PIPELINES.map(p => {
+function renderTypes() {
+  document.getElementById('types').innerHTML = TYPES.map(t => {
     const dims = [
-      p.dims.lang === 'en' ? '英文源' : '中文源',
-      p.dims.subtitle_source === 'ocr' ? '画面硬字幕' : '语音转写',
-      p.dims.speakers > 1 ? '多人物' : '单人'
+      t.dims.subtitle === 'en_vtt' ? '有英文字幕' : t.dims.subtitle === 'none' ? '无字幕' : '中文硬字幕',
+      t.dims.speakers > 1 ? '多人' : '单人',
+      '默认' + (t.default_render === 'original' ? '原片' : '封面')
     ];
-    return `<div class="pipe ${selected===p.key?'active':''}" onclick="selectPipe('${p.key}')">
-      <div class="pipe-name">${p.name}</div>
-      <div class="pipe-dims">${dims.map(d=>`<span class="dim">${d}</span>`).join('')}</div>
-      <div class="pipe-desc">${p.desc}</div>
+    return `<div class="type ${selected===t.key?'active':''}" onclick="selectType('${t.key}')">
+      <div class="type-name">${t.name}</div>
+      <div class="type-dims">${dims.map(d=>`<span class="dim">${d}</span>`).join('')}</div>
+      <div class="type-desc">${t.desc}</div>
     </div>`;
   }).join('');
 }
 
-function selectPipe(key) {
+function selectType(key) {
   selected = key;
-  renderPipes();
-  const p = PIPELINES.find(x => x.key === key);
+  renderTypes();
+  const t = TYPES.find(x => x.key === key);
   document.getElementById('form-area').style.display = 'block';
-  document.getElementById('form-fields').innerHTML = p.params.map(f => `
-    <div class="field">
+  document.getElementById('stage-preview').textContent = '工作流: ' +
+    t.stages.map(s => STAGE_CN[s] || s).join(' → ');
+  document.getElementById('form-fields').innerHTML = t.params.map(f => {
+    if (f.type === 'voice') {
+      const opts = VOICES.map(v => `<option value="${v.name}">${v.name}</option>`).join('');
+      return `<div class="field"><label>${f.label}</label>
+        <select id="param-${f.key}"><option value="">默认 doubao-taotao</option>${opts}</select>
+        ${f.hint ? `<div class="tip">${f.hint}</div>` : ''}</div>`;
+    }
+    return `<div class="field">
       <label>${f.label}${f.required?' <span class="req">*</span>':''}</label>
       <input id="param-${f.key}" placeholder="${f.hint||''}">
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
+const STAGE_CN = {ensure_source:'准备原片', extract_audio:'提取音频', en_slots:'英文字幕成槽',
+  translate:'Ollama翻译', ocr_zh:'OCR字幕', cut_items:'文本切块', gen_audio:'CosyVoice配音',
+  assemble_audio:'时间轴合成', zh_subtitle:'ASR中文字幕', render:'渲染成品'};
+
+async function loadVoices() {
+  VOICES = await (await fetch('/api/voices')).json();
+  document.getElementById('voices').textContent =
+    VOICES.length ? VOICES.map(v => `🎙 ${v.name}${v.note ? ' — ' + v.note : ''}`).join('   |   ') : '(空)';
+}
+
+async function createVoice() {
+  const body = {name: v('v-name'), ref_audio: v('v-audio'), ref_text: v('v-text')};
+  const d = await (await fetch('/api/voices', {method:'POST',
+    headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)})).json();
+  d.ok ? (showToast('音色已注册'), loadVoices()) : showToast(d.error, true);
+}
+
+const v = id => document.getElementById(id).value.trim();
+
 async function createTask() {
-  const p = PIPELINES.find(x => x.key === selected);
+  const t = TYPES.find(x => x.key === selected);
   const params = {};
-  for (const f of p.params) {
-    const v = document.getElementById('param-' + f.key).value.trim();
-    if (v) params[f.key] = v;
+  for (const f of t.params) {
+    const el = document.getElementById('param-' + f.key);
+    if (el && el.value.trim()) params[f.key] = el.value.trim();
   }
-  const r = await fetch('/api/tasks', {
-    method: 'POST', headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ pipeline: selected, params })
-  });
-  const d = await r.json();
-  if (d.ok) { showToast('任务已创建,自动阶段开始执行'); fetchTasks(); }
-  else showToast(d.error || '创建失败', true);
+  const d = await (await fetch('/api/tasks', {method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({type: selected, params})})).json();
+  d.ok ? showToast('任务已创建,开始执行') : showToast(d.error, true);
+  fetchTasks();
 }
 
 async function fetchTasks() {
   try {
-    const r = await fetch('/api/tasks');
-    tasks = await r.json();
+    tasks = await (await fetch('/api/tasks')).json();
     renderTasks();
     document.getElementById('refresh-time').textContent = '更新于 ' + new Date().toLocaleTimeString();
-  } catch (e) {
-    document.getElementById('tasks').innerHTML = '<div class="empty">连接失败: ' + e.message + '</div>';
-  }
+  } catch (e) { document.getElementById('tasks').innerHTML = '<div class="empty">连接失败: ' + e.message + '</div>'; }
 }
 
-const STATUS_CN = { running:'执行中', waiting_user:'等你操作', done:'完成', failed:'失败' };
-const STAGE_ICON = { pending:'·', running:'⏳', waiting_user:'👤', done:'✓', failed:'✗' };
+const STATUS_CN = {running:'执行中', done:'完成', failed:'失败'};
+const SLOT_CN = {source_video:'视频源', en_subtitle:'英文字幕', zh_subtitle:'中文字幕', zh_audio:'中文音频', final_video:'成品'};
+const STAGE_ICON = {pending:'·', running:'⏳', done:'✓', failed:'✗'};
 
 function renderTasks() {
   const box = document.getElementById('tasks');
-  if (!tasks.length) { box.innerHTML = '<div class="empty">还没有任务,先在上面选流水线创建</div>'; return; }
+  if (!tasks.length) { box.innerHTML = '<div class="empty">还没有任务,先在上面选类型创建</div>'; return; }
   box.innerHTML = tasks.map(t => {
-    const pipe = PIPELINES.find(p => p.key === t.pipeline);
     const stages = t.stages.map(s =>
       `<span class="stage ${s.status}" title="${s.status}">${STAGE_ICON[s.status]} ${s.label}</span>`).join('');
-    let manual = '';
-    if (t.status === 'waiting_user') {
-      const ws = t.stages.find(s => s.status === 'waiting_user');
-      manual = `<div class="manual-box">👤 <b>需要你操作:</b>在浏览器扩展中选择任务的 chunks 目录(manifest.json + 全部 TXT)并发送。
-        页面每 3 秒自动检测发送记录(doubao-send.json),全部发送成功会自动继续;
-        也可以 <a href="#" onclick="doAction('${t.id}','confirm_send');return false">手动确认已发送</a>。</div>`;
-    }
-    let actions = '';
-    if (t.status === 'failed') actions = `<button class="btn warn" onclick="doAction('${t.id}','retry')">重试失败阶段</button>`;
-    if (t.status === 'waiting_user') actions = `<button class="btn" onclick="doAction('${t.id}','confirm_send')">我已发送完成</button>`;
-    const products = Object.entries(t.products || {}).map(([k,v]) =>
-      `<span class="product">${k==='audio'?'音频':k==='subtitle'?'字幕':k==='video'?'视频':'分块'}: ${v}</span>`).join('');
+    const arts = Object.entries(t.artifacts).map(([k, a]) => {
+      const isEmpty = !a.local_path;
+      const status = a.local_path ? (a.error ? '<span class="art-status err">本地✓ NAS✗</span>' : '<span class="art-status">✓ ' + fmtSize(a.size) + '</span>') : '<span class="art-status off">—</span>';
+      return `<div class="art ${isEmpty?'empty':''}">
+        <div class="art-title">${SLOT_CN[k]}</div>${status}
+        ${a.nas_path ? `<div class="art-path">NAS: ${a.nas_path}</div>` : ''}
+        ${a.local_path && a.error ? `<div class="art-path"><button class="btn sm" onclick="doAction('${t.id}','reupload','${k}')">重传NAS</button></div>` : ''}
+      </div>`;
+    }).join('');
+    const actions = t.status === 'failed'
+      ? `<button class="btn warn" onclick="doAction('${t.id}','retry')">重试失败阶段</button>` : '';
     return `<div class="task">
       <div class="task-head">
-        <span class="task-name">${t.name}</span>
+        <span class="task-name">${t.slug}</span>
         <span class="badge ${t.status}">${STATUS_CN[t.status]}</span>
-        <span class="pipeline-tag">${pipe ? pipe.name : t.pipeline} · ${t.created_at}</span>
+        <span class="pipeline-tag">${t.type_name} · ${t.progress} 阶段 · ${t.created_at}</span>
         <span style="flex:1"></span>${actions}
       </div>
       <div class="stages">${stages}</div>
-      ${manual}
-      ${products ? `<div class="products">${products}</div>` : ''}
-      ${details(t)}
+      <div class="artifacts">${arts}</div>
+      ${failedNote(t)}
+      <details ontoggle="loadDetail('${t.id}', this)"><summary class="hint" style="cursor:pointer">运行日志</summary><pre class="log" id="log-${t.id}">加载中...</pre></details>
     </div>`;
   }).join('');
 }
 
-function details(t) {
-  return `<details ontoggle="loadDetail('${t.id}', this)"><summary class="hint" style="cursor:pointer">运行日志</summary><pre class="log" id="log-${t.id}">加载中...</pre></details>`;
+function failedNote(t) {
+  const f = t.stages.find(s => s.status === 'failed');
+  return f && f.error ? `<div class="err">${f.label}: ${f.error}</div>` : '';
 }
+
+function fmtSize(b) { return !b ? '' : b > 1048576 ? (b/1048576).toFixed(1)+'MB' : (b/1024).toFixed(0)+'KB'; }
 
 async function loadDetail(id, el) {
   if (!el.open) return;
-  const r = await fetch('/api/tasks/' + id);
-  const d = await r.json();
+  const d = await (await fetch('/api/tasks/' + id)).json();
   const pre = document.getElementById('log-' + id);
   if (pre) pre.textContent = (d.log || []).join('\n') || '(暂无日志)';
 }
 
-async function doAction(id, action) {
-  const r = await fetch(`/api/tasks/${id}/action`, {
-    method: 'POST', headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ action })
-  });
-  const d = await r.json();
-  if (d.ok) showToast('已执行'); else showToast(d.error || '操作失败', true);
+async function doAction(id, action, slot) {
+  const d = await (await fetch(`/api/tasks/${id}/action`, {method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({action, slot})})).json();
+  d.ok ? showToast('已执行') : showToast(d.error || '失败', true);
   setTimeout(fetchTasks, 800);
 }
 
-async function selftest(full) {
+async function selftest() {
   const el = document.getElementById('selftest-result');
-  el.textContent = '自检中' + (full ? '(会弹出浏览器并发送测试消息)' : '') + '...';
-  try {
-    const r = await fetch('/api/selftest', {
-      method: 'POST', headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ full })
-    });
-    const d = await r.json();
-    const icons = [];
-    icons.push(d.auth ? '✓登录' : '✗登录');
-    icons.push(d.tts ? '✓朗读' : '✗朗读');
-    if (d.send !== null && d.send !== undefined) icons.push(d.send ? '✓发送' : '✗发送');
-    el.innerHTML = icons.join(' ') + ' <span class="hint">' + (d.detail || []).join('; ') + '</span>';
-  } catch (e) {
-    el.textContent = '自检失败: ' + e.message;
-  }
+  el.textContent = '自检中…';
+  const d = await (await fetch('/api/selftest', {method:'POST',
+    headers:{'Content-Type':'application/json'}, body:'{}'})).json();
+  el.innerHTML = ['ollama','wsl_cosyvoice','nas','ffmpeg'].map(k =>
+    `${k==='wsl_cosyvoice'?'CosyVoice':k==='ollama'?'Ollama':k==='nas'?'NAS':k} ${d[k]?'✓':'✗'}`).join(' ')
+    + '<br><span class="hint">' + d.detail.join('; ') + '</span>';
 }
 
 function showToast(msg, isError) {
@@ -240,7 +267,7 @@ function showToast(msg, isError) {
   setTimeout(() => { t.style.display = 'none'; }, 3000);
 }
 
-loadPipelines().then(fetchTasks);
+loadVoices().then(() => loadTypes()).then(fetchTasks);
 setInterval(fetchTasks, 3000);
 </script>
 </body>

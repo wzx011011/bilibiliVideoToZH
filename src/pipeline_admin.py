@@ -1,31 +1,25 @@
-"""多流水线管理后台 —— 多种视频类型的统一制作管理。
+"""统一视频汉化平台 v2 —— 类型路由工作流 + 五件套产物 + NAS 归档。
 
-产品形态统一为:封面(或指定画面)+ 中文配音音频 + 中文字幕 → MP4。
-差异在三种资源的生成方式,由维度组合决定流水线:
+核心模型:
+- 视频类型 = 字幕情况(en_vtt 有英文字幕 / none 无字幕 / zh_hard 中文硬字幕)
+  × 说话人数(1 / 2) → 自动路由到阶段序列
+- 每任务的充分必要产物(五件套):
+  source_video / en_subtitle / zh_subtitle / zh_audio / final_video
+  (zh_hard 型无英文字幕槽)
+- 每个阶段产物落槽后自动 scp 到 NAS:
+  /volume1/share/视频/<slug>/01-视频源 .. 05-成品/
 
-    源语言(zh/en) × 字幕来源(画面硬字幕OCR / 语音ASR) × 说话人(1 / 2+)
-
-内置流水线:
-  course       课程·中文·硬字幕·单人  (OCR→分块→豆包润色朗读→ASR字幕→渲染)
-  interview_en 访谈·英文·无字幕·多人 (英文ASR→说话人分离→分块翻译→多音色朗读→ASR字幕→渲染)
-  interview_zh 访谈·中文·无字幕·多人 (中文ASR→说话人分离→分块润色→多音色朗读→ASR字幕→渲染)
-
-半自动环节与现有课程流程一致:分块完成后需要用户在浏览器扩展里手动发送
-(绕豆包签名风控),本服务轮询 doubao-send.json 自动感知发送完成。
-
-服务默认绑定 0.0.0.0:8766,局域网内设备可访问(与 doubao_bridge 的
-8765 并存,互不影响)。注意:创建任务会执行本地命令,只应在可信局域网
-使用;仅本机访问时用 --host 127.0.0.1。
+配音引擎:CosyVoice2 零样本克隆(音色库复用,见 voice_lib)。
+翻译:本地 Ollama(默认 qwen3:14b)。
+v1 的豆包链已退役(代码保留于仓库,不再被本平台引用)。
 
 用法:
-  work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py            # 局域网
-  work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py --host 127.0.0.1  # 仅本机
-  Windows 双击 start-pipeline-admin.cmd
+  work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py
+  打开 http://127.0.0.1:8766 (默认 0.0.0.0,局域网可访问)
 """
 from __future__ import annotations
 
 import json
-import os
 import re
 import shutil
 import subprocess
@@ -36,196 +30,229 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-import interview_lib as ilib
+import voice_lib
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOL_DIR = ROOT / "src"
 VENV_PY = str(ROOT / "work" / ".venv-ocr" / "Scripts" / "python.exe")
+VC_DIR = ROOT / "work" / "voice-clone-demo"
+VC_PY = str(VC_DIR / ".venv" / "Scripts" / "python.exe")
 FFMPEG = ROOT / "work" / "video-tools" / "ffmpeg.exe"
-STATE_DIR = ROOT / "work" / "pipeline-admin"
-TASKS_DIR = STATE_DIR / "tasks"
+FFPROBE = ROOT / "work" / "video-tools" / "ffprobe.exe"
+STUDIO = ROOT / "work" / "studio"
+STATE_DIR = STUDIO / "tasks"
 PORT = 8766
-LOG_TAIL_LINES = 120
-
-# 默认音色(doubao_reader 模块级默认为桃桃女声;可在建任务时按说话人指定)
-DEFAULT_SPEAKERS_MAP = {"A": "", "B": ""}  # 空 = 用默认桃桃
-
+NAS_BASE = "/volume1/share/视频"
+WSL_PY = "/home/comfy/cosy-gpu-venv/bin/python"
+WSL_ENV = ("HSA_ENABLE_DXG_DETECTION=1 COSY_FP16=0 "
+           "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1")
+DEFAULT_TRANSLATE_MODEL = "qwen3:14b"
 
 # =====================================================================
-# 流水线定义(维度 → 阶段序列)
+# 五件套槽位定义
 # =====================================================================
 
-PIPELINES: dict[str, dict] = {
-    "course": {
-        "key": "course",
-        "name": "课程 · 中文硬字幕 · 单人",
-        "desc": "B站课程视频(画面自带中文字幕)。OCR 提取字幕 → 分块 → 豆包润色朗读 → ASR 字幕 → 封面渲染。",
-        "dims": {"lang": "zh", "subtitle_source": "ocr", "speakers": 1},
-        "params": [
-            {"key": "episode", "label": "集数", "type": "int", "required": True,
-             "hint": "如 22,对应 work/ep-22"},
-            {"key": "url", "label": "B站URL(可选,缺原片时下载)", "type": "str", "required": False},
+ARTIFACT_SLOTS = {
+    "source_video": {"label": "视频源", "nas_dir": "01-视频源"},
+    "en_subtitle": {"label": "英文字幕", "nas_dir": "02-英文字幕"},
+    "zh_subtitle": {"label": "中文字幕", "nas_dir": "03-中文字幕"},
+    "zh_audio": {"label": "中文音频", "nas_dir": "04-中文音频"},
+    "final_video": {"label": "成品", "nas_dir": "05-成品"},
+}
+
+# =====================================================================
+# 视频类型 → 工作流注册表
+# =====================================================================
+
+_TYPE_COMMON_PARAMS = [
+    {"key": "slug", "label": "任务代号", "type": "str", "required": True,
+     "hint": "字母数字-_,将作为 NAS 目录名"},
+    {"key": "source_path", "label": "原视频路径", "type": "str",
+     "required": True, "hint": "本地路径,如 youtube/xxx/a.mp4"},
+    {"key": "title", "label": "封面标题(cover 模式用)", "type": "str",
+     "required": False},
+    {"key": "render_mode", "label": "渲染模式", "type": "choice",
+     "choices": ["original", "cover"], "required": False},
+]
+
+VIDEO_TYPES: dict[str, dict] = {
+    "en_vtt_2": {
+        "key": "en_vtt_2", "name": "英文访谈(多人)",
+        "desc": "有英文字幕(VTT)的多人物访谈。声纹分说话人 → Ollama 翻译 → "
+                "CosyVoice 双音色克隆原声 → 时间轴对齐 → 原片保留渲染。",
+        "dims": {"subtitle": "en_vtt", "speakers": 2},
+        "default_render": "original",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "vtt_path", "label": "英文字幕 VTT 路径", "type": "str",
+             "required": True},
+            {"key": "anchors", "label": "声纹锚点 JSON", "type": "str",
+             "required": True,
+             "hint": '{"A":[起,止],"B":[起,止]} 从原片各选一段单人发言'},
+            {"key": "voice_A", "label": "说话人A音色", "type": "voice",
+             "required": False},
+            {"key": "voice_B", "label": "说话人B音色", "type": "voice",
+             "required": False},
+            {"key": "translate_model", "label": "翻译模型", "type": "str",
+             "required": False},
         ],
-        "stages": [
-            {"key": "ensure_source", "label": "准备原片", "type": "auto"},
-            {"key": "ocr_subtitle", "label": "OCR 提取字幕", "type": "auto"},
-            {"key": "chunk_prep", "label": "分块", "type": "auto"},
-            {"key": "send_chunks", "label": "豆包发送(自动)", "type": "auto"},
-            {"key": "harvest_audio", "label": "朗读配音", "type": "auto"},
-            {"key": "asr_subtitle", "label": "ASR 字幕", "type": "auto"},
-            {"key": "render", "label": "渲染视频", "type": "auto"},
-        ],
+        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
+                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
     },
-    "interview_en": {
-        "key": "interview_en",
-        "name": "访谈 · 英文 · 多人",
-        "desc": "英文访谈(YouTube 等,画面无字幕)。英文 ASR → 说话人分离 → 分角色翻译 → 多音色朗读 → ASR 字幕 → 封面渲染。",
-        "dims": {"lang": "en", "subtitle_source": "asr", "speakers": 2},
-        "params": [
-            {"key": "video_path", "label": "视频路径", "type": "str", "required": True,
-             "hint": "如 youtube/elon-musk/xxx.mp4"},
-            {"key": "slug", "label": "任务代号", "type": "str", "required": True,
-             "hint": "英文短名,如 musk-lex400"},
-            {"key": "title", "label": "封面标题", "type": "str", "required": False},
-            {"key": "speaker_A_name", "label": "说话人A(先开口,通常是主持人)", "type": "str", "required": False},
-            {"key": "speaker_B_name", "label": "说话人B(嘉宾)", "type": "str", "required": False},
-            {"key": "speaker_A_voice", "label": "A音色ID(空=默认女声)", "type": "str", "required": False},
-            {"key": "speaker_B_voice", "label": "B音色ID(空=默认女声)", "type": "str", "required": False},
+    "en_vtt_1": {
+        "key": "en_vtt_1", "name": "英文演讲/讲座(单人)",
+        "desc": "有英文字幕(VTT)的单人视频。Ollama 翻译 → CosyVoice 单音色"
+                " → 时间轴对齐 → 原片保留渲染。",
+        "dims": {"subtitle": "en_vtt", "speakers": 1},
+        "default_render": "original",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "vtt_path", "label": "英文字幕 VTT 路径", "type": "str",
+             "required": True},
+            {"key": "anchors", "label": "声纹锚点 JSON(可选)", "type": "str",
+             "required": False,
+             "hint": '{"A":[起,止]};不填则不分说话人(全部按A)'},
+            {"key": "voice_A", "label": "音色", "type": "voice",
+             "required": False},
+            {"key": "translate_model", "label": "翻译模型", "type": "str",
+             "required": False},
         ],
-        "stages": [
-            {"key": "ensure_source", "label": "检查视频", "type": "auto"},
-            {"key": "extract_audio", "label": "提取音频", "type": "auto"},
-            {"key": "asr_source", "label": "英文转写", "type": "auto"},
-            {"key": "diarize", "label": "说话人分离", "type": "auto"},
-            {"key": "chunk_by_speaker", "label": "分角色分块", "type": "auto"},
-            {"key": "send_chunks", "label": "豆包发送翻译(自动)", "type": "auto"},
-            {"key": "harvest_multi_voice", "label": "多音色朗读", "type": "auto"},
-            {"key": "asr_subtitle", "label": "ASR 字幕", "type": "auto"},
-            {"key": "render", "label": "渲染视频", "type": "auto"},
-        ],
+        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
+                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
     },
-    "interview_zh": {
-        "key": "interview_zh",
-        "name": "访谈 · 中文 · 多人",
-        "desc": "中文访谈(画面无字幕)。中文 ASR → 说话人分离 → 分角色润色 → 多音色朗读 → ASR 字幕 → 封面渲染。",
-        "dims": {"lang": "zh", "subtitle_source": "asr", "speakers": 2},
-        "params": [
-            {"key": "video_path", "label": "视频路径", "type": "str", "required": True},
-            {"key": "slug", "label": "任务代号", "type": "str", "required": True},
-            {"key": "title", "label": "封面标题", "type": "str", "required": False},
-            {"key": "speaker_A_name", "label": "说话人A名称", "type": "str", "required": False},
-            {"key": "speaker_B_name", "label": "说话人B名称", "type": "str", "required": False},
-            {"key": "speaker_A_voice", "label": "A音色ID(空=默认女声)", "type": "str", "required": False},
-            {"key": "speaker_B_voice", "label": "B音色ID(空=默认女声)", "type": "str", "required": False},
+    "none_1": {
+        "key": "none_1", "name": "无字幕单人视频",
+        "desc": "无字幕视频。whisper 英文转写成槽 → 翻译 → CosyVoice 单音色"
+                " → 原片保留渲染。",
+        "dims": {"subtitle": "none", "speakers": 1},
+        "default_render": "original",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "voice_A", "label": "音色", "type": "voice",
+             "required": False},
+            {"key": "translate_model", "label": "翻译模型", "type": "str",
+             "required": False},
         ],
-        "stages": [
-            {"key": "ensure_source", "label": "检查视频", "type": "auto"},
-            {"key": "extract_audio", "label": "提取音频", "type": "auto"},
-            {"key": "asr_source", "label": "中文转写", "type": "auto"},
-            {"key": "diarize", "label": "说话人分离", "type": "auto"},
-            {"key": "chunk_by_speaker", "label": "分角色分块", "type": "auto"},
-            {"key": "send_chunks", "label": "豆包发送润色(自动)", "type": "auto"},
-            {"key": "harvest_multi_voice", "label": "多音色朗读", "type": "auto"},
-            {"key": "asr_subtitle", "label": "ASR 字幕", "type": "auto"},
-            {"key": "render", "label": "渲染视频", "type": "auto"},
-        ],
+        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
+                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
     },
+    "none_2": {
+        "key": "none_2", "name": "无字幕多人视频",
+        "desc": "无字幕多人视频。当前按单音色整片处理(多人声纹分离需锚点,"
+                "暂不自动;可先按单人跑或后续增强)。",
+        "dims": {"subtitle": "none", "speakers": 2},
+        "default_render": "original",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "voice_A", "label": "音色", "type": "voice",
+             "required": False},
+            {"key": "translate_model", "label": "翻译模型", "type": "str",
+             "required": False},
+        ],
+        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
+                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
+    },
+    "zh_hard_1": {
+        "key": "zh_hard_1", "name": "中文硬字幕视频(课程)",
+        "desc": "画面自带中文字幕的单人视频(如 B站课程)。OCR 提取文本 → "
+                "CosyVoice 音色朗读 → ASR 字幕 → 默认封面渲染(可切原片)。",
+        "dims": {"subtitle": "zh_hard", "speakers": 1},
+        "default_render": "cover",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "voice_A", "label": "音色", "type": "voice",
+             "required": False, "hint": "默认 doubao-taotao"},
+        ],
+        "stages": ["ensure_source", "ocr_zh", "cut_items", "gen_audio",
+                   "zh_subtitle", "render"],
+    },
+}
+
+STAGE_LABELS = {
+    "ensure_source": "准备原片",
+    "extract_audio": "提取音频",
+    "en_slots": "英文字幕成槽",
+    "translate": "Ollama 翻译",
+    "ocr_zh": "OCR 中文字幕",
+    "cut_items": "文本切块",
+    "gen_audio": "CosyVoice 配音",
+    "assemble_audio": "时间轴合成",
+    "zh_subtitle": "ASR 中文字幕",
+    "render": "渲染成品",
 }
 
 
 # =====================================================================
-# 任务存储与状态机
+# 任务模型(schema 2)
 # =====================================================================
 
-STAGE_PENDING = "pending"
-STAGE_RUNNING = "running"
-STAGE_WAITING = "waiting_user"
-STAGE_DONE = "done"
-STAGE_FAILED = "failed"
-
-TASK_RUNNING = "running"        # 自动阶段执行中
-TASK_WAITING = "waiting_user"   # 等待用户(扩展发送)
-TASK_DONE = "done"
-TASK_FAILED = "failed"
-
-_lock = threading.Lock()
+S_RUNNING, S_DONE, S_FAILED = "running", "done", "failed"
+P_PENDING, P_RUNNING, P_DONE, P_FAILED = "pending", "running", "done", "failed"
 
 
 class Task:
-    def __init__(self, pipeline_key: str, name: str, params: dict):
+    SCHEMA = 2
+
+    def __init__(self, type_key: str, params: dict):
         self.id = time.strftime("%Y%m%d-") + uuid.uuid4().hex[:8]
-        self.pipeline = pipeline_key
-        self.name = name
+        self.type = type_key
         self.params = params
         self.created_at = time.strftime("%Y-%m-%d %H:%M:%S")
-        self.status = TASK_RUNNING
-        self.stages = [dict(s, status=STAGE_PENDING, started_at=None,
-                            ended_at=None, error=None, note=None)
-                       for s in PIPELINES[pipeline_key]["stages"]]
+        self.status = S_RUNNING
         self.current = 0
-        self.log_path = TASKS_DIR / f"{self.id}.log"
-        self.dir = TASKS_DIR / self.id
+        self.stages = [{"key": k, "label": STAGE_LABELS.get(k, k),
+                        "status": P_PENDING, "started_at": None,
+                        "ended_at": None, "error": None, "note": None}
+                       for k in VIDEO_TYPES[type_key]["stages"]]
+        self.artifacts = {k: {"status": P_PENDING, "local_path": None,
+                              "nas_path": None, "size": None, "error": None}
+                          for k in ARTIFACT_SLOTS}
+        self.dir = STUDIO / self.params["slug"]
+        self.log_path = STATE_DIR / f"{self.id}.log"
 
     # ---------- 持久化 ----------
 
     @property
     def json_path(self) -> Path:
-        return TASKS_DIR / f"{self.id}.json"
+        return STATE_DIR / f"{self.id}.json"
 
     def save(self) -> None:
-        TASKS_DIR.mkdir(parents=True, exist_ok=True)
-        data = {
-            "id": self.id, "pipeline": self.pipeline, "name": self.name,
+        STATE_DIR.mkdir(parents=True, exist_ok=True)
+        self.json_path.write_text(json.dumps({
+            "schema": self.SCHEMA, "id": self.id, "type": self.type,
             "params": self.params, "created_at": self.created_at,
             "status": self.status, "current": self.current,
-            "stages": self.stages,
-        }
-        self.json_path.write_text(
-            json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+            "stages": self.stages, "artifacts": self.artifacts,
+        }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     @classmethod
     def load(cls, path: Path) -> "Task":
-        data = json.loads(path.read_text(encoding="utf-8"))
+        d = json.loads(path.read_text(encoding="utf-8"))
+        if d.get("schema") != 2:
+            raise ValueError("legacy task")
         t = cls.__new__(cls)
-        t.id = data["id"]
-        t.pipeline = data["pipeline"]
-        t.name = data["name"]
-        t.params = data["params"]
-        t.created_at = data["created_at"]
-        t.status = data["status"]
-        t.current = data["current"]
-        t.stages = data["stages"]
-        t.log_path = TASKS_DIR / f"{t.id}.log"
-        t.dir = TASKS_DIR / t.id
+        t.id, t.type, t.params = d["id"], d["type"], d["params"]
+        t.created_at = d["created_at"]
+        t.status, t.current = d["status"], d["current"]
+        t.stages, t.artifacts = d["stages"], d["artifacts"]
+        t.dir = STUDIO / t.params["slug"]
+        t.log_path = STATE_DIR / f"{t.id}.log"
         return t
 
-    # ---------- 日志 ----------
+    # ---------- 日志/状态 ----------
 
     def log(self, msg: str) -> None:
         line = f"[{time.strftime('%H:%M:%S')}] {msg}"
         print(f"[{self.id}] {line}", flush=True)
-        TASKS_DIR.mkdir(parents=True, exist_ok=True)
+        STATE_DIR.mkdir(parents=True, exist_ok=True)
         with open(self.log_path, "a", encoding="utf-8") as f:
             f.write(line + "\n")
 
-    def log_tail(self, n: int = LOG_TAIL_LINES) -> list[str]:
+    def log_tail(self, n=120):
         if not self.log_path.exists():
             return []
         return self.log_path.read_text(encoding="utf-8").splitlines()[-n:]
 
-    # ---------- 状态 ----------
-
-    def stage(self, key: str) -> dict | None:
-        return next((s for s in self.stages if s["key"] == key), None)
-
-    def mark(self, key: str, status: str, error: str | None = None,
-             note: str | None = None) -> None:
-        s = self.stage(key)
-        if not s:
-            return
-        if status == STAGE_RUNNING:
+    def mark_stage(self, key, status, error=None, note=None) -> None:
+        s = next(x for x in self.stages if x["key"] == key)
+        if status == P_RUNNING:
             s["started_at"] = time.strftime("%H:%M:%S")
-        if status in (STAGE_DONE, STAGE_FAILED):
+        if status in (P_DONE, P_FAILED):
             s["ended_at"] = time.strftime("%H:%M:%S")
         s["status"] = status
         if error is not None:
@@ -234,532 +261,424 @@ class Task:
             s["note"] = note
         self.save()
 
+    # ---------- 产物槽 ----------
+
+    def set_artifact(self, slot: str, path: Path) -> str | None:
+        """产物落槽 + 自动上传 NAS(失败不阻塞,记 error 供重传)。"""
+        info = self.artifacts[slot]
+        try:
+            rel = str(path.relative_to(ROOT))
+        except ValueError:  # 跨盘/外部路径,存绝对路径
+            rel = str(path)
+        info.update(status=P_DONE, local_path=rel,
+                    size=path.stat().st_size, error=None)
+        try:
+            info["nas_path"] = self.upload_to_nas(slot, path)
+        except Exception as e:  # noqa: BLE001 — 上传永不阻塞产物落槽
+            info["nas_path"] = None
+            info["error"] = f"NAS 上传失败: {str(e)[:80]}"
+        self.save()
+        return info["nas_path"]
+
+    def upload_to_nas(self, slot: str, path: Path) -> str | None:
+        slug = self.params["slug"]
+        sub = ARTIFACT_SLOTS[slot]["nas_dir"]
+        nas_dir = f"{NAS_BASE}/{slug}/{sub}"
+        try:
+            subprocess.run(["ssh", "nas", f"mkdir -p '{nas_dir}'"],
+                           check=True, timeout=30, capture_output=True)
+            subprocess.run(["scp", str(path), f"nas:{nas_dir}/"],
+                           check=True, timeout=600, capture_output=True)
+            self.log(f"NAS ✓ {slot}: {nas_dir}/{path.name}")
+            return f"{nas_dir}/{path.name}"
+        except Exception as e:  # noqa: BLE001
+            self.artifacts[slot]["error"] = f"NAS 上传失败: {str(e)[:80]}"
+            self.log(f"NAS ✗ {slot}: {str(e)[:100]}(不阻塞,可重传)")
+            return None
+
+    # ---------- 汇总 ----------
+
     def brief(self) -> dict:
-        return {"id": self.id, "pipeline": self.pipeline, "name": self.name,
-                "status": self.status, "created_at": self.created_at,
+        t = VIDEO_TYPES[self.type]
+        done = sum(1 for s in self.stages if s["status"] == P_DONE)
+        return {"id": self.id, "type": self.type, "type_name": t["name"],
+                "slug": self.params["slug"], "status": self.status,
+                "created_at": self.created_at,
+                "progress": f"{done}/{len(self.stages)}",
                 "stages": [{"key": s["key"], "label": s["label"],
-                            "type": s["type"], "status": s["status"]}
-                           for s in self.stages],
-                "products": self.products()}
+                            "status": s["status"]} for s in self.stages],
+                "artifacts": self.artifacts}
 
     def detail(self) -> dict:
         d = self.brief()
         d["params"] = self.params
         d["log"] = self.log_tail()
-        d["products"] = self.products()
         return d
 
-    def products(self) -> dict:
-        """汇总本任务产物(存在才报)。"""
-        out: dict[str, str] = {}
-        if self.pipeline.startswith("interview"):
-            w = ROOT / "work" / "interview" / self.params.get("slug", "")
-            for key, p in [("audio", w / "audio.mp3"),
-                           ("subtitle", w / "asr.srt"),
-                           ("video", ROOT / "videos" / f"{self.params.get('slug','')}.mp4"),
-                           ("chunks_dir", w / "chunks")]:
-                if p.exists():
-                    out[key] = str(p.relative_to(ROOT))
-        else:
-            ep = int(self.params.get("episode", 0))
-            for key, p in [("audio", ROOT / "work" / f"ep-{ep:02d}" / f"episode-{ep:02d}-audio.mp3"),
-                           ("subtitle", ROOT / "work" / f"ep-{ep:02d}" / f"episode-{ep:02d}-asr.srt"),
-                           ("video", ROOT / "videos" / f"episode-{ep:02d}.mp4"),
-                           ("chunks_dir", ROOT / "work" / f"ep-{ep:02d}" / "chunks")]:
-                if p.exists():
-                    out[key] = str(p.relative_to(ROOT))
-        return out
-
 
 # =====================================================================
-# 阶段执行器
+# 子进程工具
 # =====================================================================
 
-def _run(cmd: list[str], task: Task, cwd: Path = ROOT) -> str:
-    """跑子进程,输出实时进日志,失败抛 RuntimeError。"""
+def _run(cmd: list[str], task: Task, timeout: int = 7200) -> str:
     task.log("$ " + " ".join(str(c) for c in cmd))
-    proc = subprocess.run(cmd, cwd=str(cwd), capture_output=True, text=True,
-                          encoding="utf-8", errors="replace")
+    proc = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True,
+                          encoding="utf-8", errors="replace", timeout=timeout)
     if proc.stdout:
-        task.log(proc.stdout.rstrip())
+        task.log(proc.stdout.rstrip()[-4000:])
     if proc.returncode != 0:
         err = (proc.stderr or proc.stdout or "").strip().splitlines()
         task.log("[stderr] " + "\n".join(err[-15:]))
-        raise RuntimeError("命令失败(exit %d): %s" % (proc.returncode, cmd[0]))
+        raise RuntimeError(f"命令失败(exit {proc.returncode}): "
+                           f"{Path(str(cmd[0])).name}")
     return proc.stdout
 
 
-def _mk(argv: list[str], task: Task) -> None:
-    """make_episode 系列子进程。"""
-    _run([VENV_PY, str(TOOL_DIR / "make_episode.py")] + argv, task)
+def _wsl_run(script_rel: str, args: list[str], task: Task,
+             timeout: int = 24 * 3600) -> str:
+    """WSL2 GPU 跑 CosyVoice(长任务,断点续跑在脚本侧)。"""
+    inner = (f"cd /mnt/e/ai/bilibiliVideoToZH && env {WSL_ENV} "
+             f"{WSL_PY} {script_rel} " + " ".join(f'"{a}"' for a in args))
+    cmd = ["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c", inner]
+    return _run(cmd, task, timeout=timeout)
 
 
-# ---------- course 流水线 ----------
-
-def _ep_dir(task: Task) -> Path:
-    ep = int(task.params["episode"])
-    return ROOT / "work" / f"ep-{ep:02d}"
-
-
-def ex_course_ensure_source(task: Task) -> str:
-    ep = int(task.params["episode"])
-    video = ROOT / "downloads" / f"episode-{ep:02d}.mp4"
-    if video.exists():
-        return f"原片已存在: {video.name}"
-    url = task.params.get("url")
-    if not url:
-        raise RuntimeError(f"原片不存在且未提供 URL: {video}")
-    _run([VENV_PY, str(TOOL_DIR / "download.py"), url,
-          "--episode", str(ep)], task)
-    if not video.exists():
-        raise RuntimeError("下载完成但未找到预期文件 " + video.name)
-    return "已下载原片"
+def _probe_duration(path: Path) -> float:
+    out = subprocess.run(
+        [str(FFPROBE), "-v", "error", "-show_entries", "format=duration",
+         "-of", "csv=p=0", str(path)], capture_output=True, text=True,
+        check=True).stdout.strip()
+    return float(out)
 
 
-def ex_course_ocr(task: Task) -> str:
-    ep = int(task.params["episode"])
-    final_srt = ROOT / "subtitles" / f"episode-{ep:02d}.zh-CN.srt"
-    if final_srt.exists():
-        return f"字幕已存在,跳过: {final_srt.name}"
-    video = ROOT / "downloads" / f"episode-{ep:02d}.mp4"
-    out_dir = _ep_dir(task)
+# =====================================================================
+# 阶段执行器 v2
+# =====================================================================
+
+def _src(task: Task) -> Path:
+    suffix = Path(task.params["source_path"]).suffix or ".mp4"
+    return task.dir / "01-视频源" / f"{task.params['slug']}-source{suffix}"
+
+
+def ex_ensure_source(task: Task) -> str:
+    src = Path(task.params["source_path"])
+    if not src.is_absolute():
+        src = ROOT / src
+    if not src.exists():
+        raise RuntimeError(f"原视频不存在: {src}")
+    dst = _src(task)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    if not dst.exists():
+        shutil.copy2(src, dst)
+    dur = _probe_duration(dst)
+    task.set_artifact("source_video", dst)
+    task.params["_duration"] = dur
+    task.save()
+    return f"{dst.name} ({dur/60:.1f} 分钟)"
+
+
+def ex_extract_audio(task: Task) -> str:
+    audio = task.dir / "work" / "audio16k.wav"
+    audio.parent.mkdir(parents=True, exist_ok=True)
+    _run([str(FFMPEG), "-y", "-i", str(_src(task)), "-vn",
+          "-ar", "16000", "-ac", "1", str(audio)], task)
+    return "audio16k.wav"
+
+
+def _slots_to_srt(slots: list[dict], out: Path) -> None:
+    def ts(t: float) -> str:
+        h, m, s = int(t // 3600), int(t % 3600 // 60), t % 60
+        return f"{h:02d}:{m:02d}:{s:06.3f}".replace(".", ",")
+
+    lines = []
+    for i, s in enumerate(slots, 1):
+        lines += [str(i), f"{ts(s['start'])} --> {ts(s['end'])}",
+                  f"[{s['speaker']}] {s['text']}", ""]
+    out.write_text("\n".join(lines), encoding="utf-8")
+
+
+def ex_en_slots(task: Task) -> str:
+    w = task.dir / "work"
+    slots_path = w / "slots.json"
+    dims = VIDEO_TYPES[task.type]["dims"]
+    if dims["subtitle"] == "en_vtt":
+        anchors = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
+        vtt = Path(task.params["vtt_path"])
+        if not vtt.is_absolute():
+            vtt = ROOT / vtt
+        _run([VC_PY, str(VC_DIR / "prepare_fine_slots.py"),
+              "--vtt", str(vtt),
+              "--audio", str(w / "audio16k.wav"),
+              "--anchors", anchors,
+              "--out", str(slots_path)], task, timeout=1800)
+    else:  # none → whisper
+        _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
+              str(w / "audio16k.wav"), "-o", str(slots_path)], task,
+             timeout=24 * 3600)
+    slots = json.loads(slots_path.read_text(encoding="utf-8"))
+    en_srt = task.dir / "02-英文字幕" / f"{task.params['slug']}-en.srt"
+    en_srt.parent.mkdir(parents=True, exist_ok=True)
+    _slots_to_srt(slots, en_srt)
+    shutil.copy2(slots_path, en_srt.with_suffix(".slots.json"))
+    task.set_artifact("en_subtitle", en_srt)
+    return f"{len(slots)} 槽"
+
+
+def ex_translate(task: Task) -> str:
+    w = task.dir / "work"
+    model = task.params.get("translate_model") or DEFAULT_TRANSLATE_MODEL
+    zh_path = w / "slots_zh.json"
+    _run([VC_PY, str(VC_DIR / "translate_fine_batches.py"),
+          "--slots", str(w / "slots.json"), "--out", str(zh_path),
+          "--model", model], task, timeout=24 * 3600)
+    zh = json.loads(zh_path.read_text(encoding="utf-8"))
+    slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+    if len(zh) < len(slots) * 0.9:
+        raise RuntimeError(f"翻译不完整: {len(zh)}/{len(slots)}")
+    return f"{len(zh)}/{len(slots)} 槽已译({model})"
+
+
+def _parse_srt(path: Path) -> list[tuple[float, float, str]]:
+    content = path.read_text(encoding="utf-8")
+    cues = []
+    for block in re.split(r"\n\s*\n", content.strip()):
+        lines = [l for l in block.splitlines() if l.strip()]
+        if len(lines) < 3 or "-->" not in lines[1]:
+            continue
+        m = re.match(
+            r"(\d+):(\d+):(\d+)[,.](\d+) --> (\d+):(\d+):(\d+)[,.](\d+)",
+            lines[1])
+        if not m:
+            continue
+        g = [int(x) for x in m.groups()]
+        start = g[0] * 3600 + g[1] * 60 + g[2] + g[3] / 1000
+        end = g[4] * 3600 + g[5] * 60 + g[6] + g[7] / 1000
+        cues.append((start, end, " ".join(lines[2:])))
+    return cues
+
+
+def ex_ocr_zh(task: Task) -> str:
+    w = task.dir / "work"
+    # 复用历史 OCR:源是 downloads/episode-XX.mp4 且 subtitles/ 已有成品
+    m = re.search(r"episode-(\d+)", task.params.get("source_path", ""))
+    if m:
+        hist = ROOT / "subtitles" / f"episode-{int(m.group(1)):02d}.zh-CN.srt"
+        if hist.exists():
+            w.mkdir(parents=True, exist_ok=True)
+            dst = w / f"episode-{int(m.group(1)):02d}.zh-CN-ocr.srt"
+            shutil.copy2(hist, dst)
+            n = len(_parse_srt(dst))
+            return f"复用历史 OCR {n} 条({hist.name})"
     _run([VENV_PY, str(TOOL_DIR / "subtitle_ocr.py"),
-          "--input", str(video), "--output", str(out_dir)], task)
-    ocr_srt = out_dir / f"episode-{ep:02d}.zh-CN-ocr.srt"
-    if not ocr_srt.exists():
+          "--input", str(_src(task)), "--output", str(w)], task,
+         timeout=24 * 3600)
+    ocr_srt = next(w.glob("*-ocr.srt"), None)
+    if not ocr_srt:
         raise RuntimeError("OCR 未产出 srt")
-    final_srt.parent.mkdir(exist_ok=True)
-    shutil.copy2(ocr_srt, final_srt)
-    return f"OCR 完成 → {final_srt.name}"
+    cues = _parse_srt(ocr_srt)
+    total = sum(len(c[2]) for c in cues)
+    # 源字幕归档到中文字幕槽目录(标注 source);最终槽由 ASR 产出
+    src_srt = task.dir / "03-中文字幕" / f"{task.params['slug']}-ocr-source.srt"
+    src_srt.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(ocr_srt, src_srt)
+    task.log(f"OCR 源字幕归档: {src_srt.name}(不占最终槽)")
+    return f"OCR {len(cues)} 条 / {total} 字"
 
 
-def ex_course_chunk_prep(task: Task) -> str:
-    ep = task.params["episode"]
-    _mk(["--episode", str(ep), "--step", "prep"], task)
-    return "分块完成,待扩展发送"
+def ex_cut_items(task: Task) -> str:
+    """OCR 中文字幕 → 纯文本朗读块(条数+字符双上限,无 prompt)。
+
+    冒烟参数(表单不暴露,API 创建时直接传):
+      _smoke_blocks: 只保留前 N 块;_smoke_chars: 每块字符上限临时改小
+    """
+    MAX_CHARS = int(task.params.get("_smoke_chars") or 3000)
+    MAX_CUES = 120
+    w = task.dir / "work"
+    ocr_srt = next(w.glob("*-ocr.srt"), None)
+    if not ocr_srt:
+        raise RuntimeError("work/ 下无 OCR srt")
+    cues = _parse_srt(ocr_srt)
+    items, buf, chars = [], [], 0
+    for _, _, text in cues:
+        if buf and (chars + len(text) + 1 > MAX_CHARS
+                    or len(buf) >= MAX_CUES):
+            items.append({"id": len(items), "speaker": "A",
+                          "text": " ".join(buf)})
+            buf, chars = [], 0
+        buf.append(text)
+        chars += len(text) + 1
+    if buf:
+        items.append({"id": len(items), "speaker": "A", "text": " ".join(buf)})
+    smoke = task.params.get("_smoke_blocks")
+    if smoke:
+        items = items[:int(smoke)]
+    (w / "items.json").write_text(
+        json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
+    return f"{len(items)} 块"
 
 
-def ex_course_send_chunks(task: Task) -> None:
-    pass  # manual 阶段,由 poll/manual gate 推进
+def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
+    """构造 generate_voice 的 items/refs 输入。"""
+    w = task.dir / "work"
+    dims = VIDEO_TYPES[task.type]["dims"]
+    if dims["subtitle"] == "zh_hard":
+        items = json.loads((w / "items.json").read_text(encoding="utf-8"))
+    else:
+        slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+        zh = json.loads((w / "slots_zh.json").read_text(encoding="utf-8"))
+        items = [{"id": s["id"], "speaker": s["speaker"],
+                  "text": zh[str(s["id"])]} for s in slots]
+        (w / "items.json").write_text(
+            json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    speakers = sorted({i["speaker"] for i in items})
+    voices = {}
+    for spk in speakers:
+        name = task.params.get(f"voice_{spk}") or \
+            task.params.get("voice_A") or "doubao-taotao"
+        voices[spk] = name
+    refs_path = w / "refs.json"
+    refs_path.write_text(json.dumps(voice_lib.refs_json_for(voices),
+                                    ensure_ascii=False, indent=1),
+                         encoding="utf-8")
+    task.log(f"音色分配: {voices}")
+    return w / "items.json", refs_path
 
 
-def ex_course_harvest_audio(task: Task) -> str:
-    """配音音频:优先 WS 直连(快);被风控时自动切页面朗读抓取。"""
-    ep = task.params["episode"]
-    audio_out = _ep_dir(task) / f"episode-{int(ep):02d}-audio.mp3"
+def ex_gen_audio(task: Task) -> str:
+    items_path, refs_path = _build_voice_inputs(task)
+    w = task.dir / "work"
+    concat = None
+    if VIDEO_TYPES[task.type]["dims"]["subtitle"] == "zh_hard":
+        concat = task.dir / "04-中文音频" / f"{task.params['slug']}-zh.wav"
+        concat.parent.mkdir(parents=True, exist_ok=True)
+    base_args = ["--items-json", str(items_path),
+                 "--refs-json", str(refs_path),
+                 "--out-dir", str(w / "parts")]
+    args = list(base_args) + (["--concat-out", str(concat)] if concat else [])
     try:
-        _mk(["--episode", str(ep), "--step", "audio"], task)
-        return "配音音频完成(WS 直连)"
+        _wsl_run("work/voice-clone-demo/generate_voice.py", args, task)
     except RuntimeError as e:
-        task.log(f"WS 直连失败({str(e)[:80]}),切换页面朗读抓取…")
-
-    # 页面朗读抓取(doubao_page_tts):用发送记录里的会话 URL
-    import doubao_page_tts as ptt
-    rec_path = _ep_dir(task) / "doubao-send.json"
-    if not rec_path.exists():
-        raise RuntimeError("无发送记录 doubao-send.json,无法定位会话")
-    rec = json.loads(rec_path.read_text(encoding="utf-8"))
-    conv_url = rec.get("conversation_url") or ""
-    total = rec.get("total", 0)
-    if "/chat/" not in conv_url or not total:
-        raise RuntimeError(f"发送记录缺少会话 URL 或块数: {conv_url!r} total={total}")
-    files = ptt.read_conversation(conv_url, _ep_dir(task), expect_replies=total)
-    if len(files) < total:
-        raise RuntimeError(f"页面抓取只完成 {len(files)}/{total} 条")
-    ptt.concat_to_mp3(files, audio_out, gap_ms=250)
-    size_mb = audio_out.stat().st_size // 1048576
-    return f"配音音频完成(页面朗读抓取 {len(files)} 条, {size_mb}MB)"
+        task.log(f"WSL GPU 失败({str(e)[:80]}),Windows CPU 回退(慢)")
+        _run([VC_PY, str(VC_DIR / "generate_voice.py")] + args, task,
+             timeout=48 * 3600)
+    n = len(list((w / "parts").glob("*.wav")))
+    return f"{n} 段配音" + ("(已拼接整轨)" if concat else "")
 
 
-def ex_course_asr_subtitle(task: Task) -> str:
-    ep = int(task.params["episode"])
-    try:
-        _mk(["--episode", str(ep), "--step", "subtitle"], task)
-        return "ASR 字幕完成"
-    except RuntimeError as e:
-        # 个别集缺 harvested_chunks 记录 → 绕过 gen-srt 直接 ASR-only
-        task.log(f"make_episode subtitle 失败({e}),回退直接 ASR-only")
-        audio = _ep_dir(task) / f"episode-{ep:02d}-audio.mp3"
-        out = _ep_dir(task) / f"episode-{ep:02d}-asr.srt"
-        _run([VENV_PY, str(TOOL_DIR / "align_srt_asr.py"),
-              str(audio), "-o", str(out), "--asr-only"], task)
-        return "ASR 字幕完成(回退路径)"
+def ex_assemble_audio(task: Task) -> str:
+    w = task.dir / "work"
+    slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+    total = task.params.get("_duration") or max(s["end"] for s in slots)
+    out = task.dir / "04-中文音频" / f"{task.params['slug']}-zh.wav"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    _run([VC_PY, str(VC_DIR / "assemble_fine_runs.py"),
+          "--slots", str(w / "slots.json"), "--parts-dir", str(w / "parts"),
+          "--total", str(total), "--out", str(out),
+          "--runs-out", str(w / "runs.json")], task, timeout=1800)
+    task.set_artifact("zh_audio", out)
+    dur = _probe_duration(out)
+    return f"{dur/60:.1f} 分钟音轨"
 
 
-def ex_course_render(task: Task) -> str:
-    ep = int(task.params["episode"])
-    try:
-        _mk(["--episode", str(ep), "--step", "video"], task)
-    except RuntimeError as e:
-        # gen-srt 依赖 manifest 的 harvested_chunks(WS harvest 才写;
-        # 页面抓取路径没有)→ 直接用 asr 字幕渲染
-        task.log(f"make_episode video 失败({str(e)[:60]}),直接渲染")
-        w = _ep_dir(task)
-        audio = w / f"episode-{ep:02d}-audio.mp3"
-        srt = w / f"episode-{ep:02d}-asr.srt"
-        if not (audio.exists() and srt.exists()):
-            raise RuntimeError(f"音频/字幕缺失: {audio.name}/{srt.name}")
-        cover = ROOT / "videos" / f"cover-ep{ep:02d}.jpg"
-        out = ROOT / "videos" / f"episode-{ep:02d}.mp4"
+def ex_zh_subtitle(task: Task) -> str:
+    slug = task.params["slug"]
+    audio = task.dir / "04-中文音频" / f"{slug}-zh.wav"
+    if not audio.exists():
+        raise RuntimeError(f"中文音频不存在: {audio.name}")
+    if task.artifacts["zh_audio"]["status"] != P_DONE:
+        task.set_artifact("zh_audio", audio)
+    srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
+    srt.parent.mkdir(parents=True, exist_ok=True)
+    _run([VENV_PY, str(TOOL_DIR / "align_srt_asr.py"),
+          str(audio), "-o", str(srt), "--asr-only"], task,
+         timeout=24 * 3600)
+    task.set_artifact("zh_subtitle", srt)
+    n = len(_parse_srt(srt))
+    return f"{n} 条字幕"
+
+
+def ex_render(task: Task) -> str:
+    t = VIDEO_TYPES[task.type]
+    mode = task.params.get("render_mode") or t["default_render"]
+    slug = task.params["slug"]
+    out = task.dir / "05-成品" / f"{slug}-final.mp4"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    audio = task.dir / "04-中文音频" / f"{slug}-zh.wav"
+    srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
+    if mode == "original":
+        _run([VENV_PY, str(TOOL_DIR / "render_original.py"),
+              "--video", str(_src(task)), "--audio", str(audio),
+              "--srt", str(srt), "--watermark", "wzx", "-o", str(out)],
+             task, timeout=24 * 3600)
+    else:
+        title = task.params.get("title") or slug
         part = out.with_suffix(".part.mp4")
         _run([VENV_PY, str(TOOL_DIR / "make_cover_video.py"),
-              "--cover", str(cover), "--gen-cover",
-              "--audio", str(audio), "--srt", str(srt),
-              "--title", f"哈佛积极心理学 · 第{ep}讲",
-              "--watermark", "wzx", "-o", str(part)], task)
+              "--gen-cover", "--audio", str(audio), "--srt", str(srt),
+              "--title", title, "--watermark", "wzx", "-o", str(part)],
+             task, timeout=24 * 3600)
         if part.exists():
             shutil.move(str(part), str(out))
-    # Windows Defender 偶发锁 rename:.part 已生成时手动救回
-    out = ROOT / "videos" / f"episode-{int(ep):02d}.mp4"
-    part = out.with_suffix(".part.mp4")
-    if not out.exists() and part.exists():
-        time.sleep(3)
-        shutil.move(str(part), str(out))
-        task.log("rename 被占用,已手动救回 .part.mp4")
-    if not out.exists():
-        raise RuntimeError("渲染后未找到成品 " + out.name)
-    return f"成品: {out.name}"
-
-
-# ---------- interview 流水线 ----------
-
-def _iv_dir(task: Task) -> Path:
-    return ROOT / "work" / "interview" / task.params["slug"]
-
-
-def _iv_lang(task: Task) -> str:
-    return PIPELINES[task.pipeline]["dims"]["lang"]
-
-
-def ex_iv_ensure_source(task: Task) -> str:
-    p = Path(task.params["video_path"])
-    if not p.is_absolute():
-        p = ROOT / p
-    if not p.exists():
-        raise RuntimeError(f"视频不存在: {p}")
-    task.params["_video_abs"] = str(p)
-    return f"视频就绪: {p.name} ({p.stat().st_size // 1048576}MB)"
-
-
-def ex_iv_extract_audio(task: Task) -> str:
-    w = _iv_dir(task)
-    w.mkdir(parents=True, exist_ok=True)
-    audio = w / "source-audio.mp3"
-    _run([str(FFMPEG), "-y", "-i", task.params["_video_abs"],
-          "-vn", "-q:a", "4", str(audio)], task)
-    return f"音频: {audio.name}"
-
-
-def ex_iv_asr_source(task: Task) -> str:
-    import align_srt_asr as asr
-    w = _iv_dir(task)
-    lang = _iv_lang(task)
-    cache = w / f"source-audio.mp3.{lang}.asr.json"
-    segments = asr.transcribe(w / "source-audio.mp3",
-                              language=lang, cache_path=cache)
-    (w / "source-segments.json").write_text(
-        json.dumps([{"start": s, "end": e, "text": t} for s, e, t in segments],
-                   ensure_ascii=False, indent=2), encoding="utf-8")
-    total = sum(len(t) for _, _, t in segments)
-    return f"{lang} 转写: {len(segments)} 段 / {total} 字符"
-
-
-def ex_iv_diarize(task: Task) -> str:
-    w = _iv_dir(task)
-    data = json.loads((w / "source-segments.json").read_text(encoding="utf-8"))
-    segs = [(d["start"], d["end"], d["text"]) for d in data]
-    turns = ilib.diarize_alternating(segs, speakers=2)
-    ilib.save_turns(turns, w / "turns.json")
-    n_a = sum(1 for t in turns if t["speaker"] == "A")
-    n_b = len(turns) - n_a
-    chars_a = sum(len(t["text"]) for t in turns if t["speaker"] == "A")
-    chars_b = sum(len(t["text"]) for t in turns if t["speaker"] == "B")
-    return f"turns: {len(turns)} (A:{n_a}/{chars_a}字, B:{n_b}/{chars_b}字)"
-
-
-def ex_iv_chunk_by_speaker(task: Task) -> str:
-    w = _iv_dir(task)
-    turns = ilib.load_turns(w / "turns.json")
-    chunks = ilib.build_chunks(turns)
-    cdir = w / "chunks"
-    cdir.mkdir(parents=True, exist_ok=True)
-    roles = {}
-    if task.params.get("speaker_A_name"):
-        roles["A"] = task.params["speaker_A_name"]
-    if task.params.get("speaker_B_name"):
-        roles["B"] = task.params["speaker_B_name"]
-    for c in chunks:
-        prompt = ilib.build_prompt(c["text"], c["speaker"], _iv_lang(task), roles)
-        (cdir / f"{c['chunk_index']:02d}.txt").write_text(prompt, encoding="utf-8")
-    (cdir / "manifest.json").write_text(json.dumps(
-        {"slug": task.params["slug"], "lang": _iv_lang(task),
-         "total_chunks": len(chunks),
-         "roles": roles,
-         "chunks": chunks}, ensure_ascii=False, indent=2), encoding="utf-8")
-    return f"{len(chunks)} 块 → {cdir}"
-
-
-def ex_iv_send_chunks(task: Task) -> None:
-    pass  # manual 阶段
-
-
-def _send_record_path(task: Task) -> Path:
-    if task.pipeline.startswith("interview"):
-        return _iv_dir(task) / "doubao-send.json"
-    return _ep_dir(task) / "doubao-send.json"
-
-
-def send_record_completed(task: Task) -> bool:
-    """轮询扩展发送记录:全部 done 且校验过 → True。"""
-    p = _send_record_path(task)
-    if not p.exists():
-        return False
-    try:
-        d = json.loads(p.read_text(encoding="utf-8"))
-    except Exception:
-        return False
-    items = d.get("items", [])
-    if not items:
-        return False
-    if d.get("status") == "completed" and all(i.get("status") == "done" for i in items):
-        return True
-    # 扩展逐块写 done;全部 done 也算完成(兼容无顶层 status 的情况)
-    return all(i.get("status") == "done" for i in items)
-
-
-def ex_iv_harvest_multi_voice(task: Task) -> str:
-    import doubao_reader as dr
-    w = _iv_dir(task)
-    manifest = json.loads((w / "chunks" / "manifest.json").read_text(encoding="utf-8"))
-    chunks = manifest["chunks"]
-
-    rec = _send_record_path(task)
-    if not rec.exists():
-        raise RuntimeError("未找到发送记录 doubao-send.json,请先用扩展发送")
-    record = json.loads(rec.read_text(encoding="utf-8"))
-    n = len(chunks)
-
-    # 拉取最近回复,按发送记录的顺序对齐(扩展按块顺序发送,回复按顺序返回)
-    msgs = dr.fetch_messages(limit=n + 10, per_conv=n + 5)
-    replies = [m for m in msgs if m.get("tts_content")]
-    task.log(f"消息列表拉到 {len(msgs)} 条,其中含朗读文本 {len(replies)} 条")
-    if len(replies) < n:
-        raise RuntimeError(f"回复数不足: 需要 {n},实际 {len(replies)};请确认全部发送完成")
-    # fetch_messages 返回最新在前 → 取前 n 条并反转成时间顺序
-    replies = list(reversed(replies[:n]))
-
-    speakers_map = {}
-    if task.params.get("speaker_A_voice"):
-        speakers_map["A"] = task.params["speaker_A_voice"]
-    if task.params.get("speaker_B_voice"):
-        speakers_map["B"] = task.params["speaker_B_voice"]
-
-    out_audio = w / "audio.mp3"
-    result = ilib.harvest_multi_voice(chunks, replies, w, speakers_map, out_audio)
-    return f"多音色配音: {result['clips']} 段 → {out_audio.name}"
-
-
-def ex_iv_asr_subtitle(task: Task) -> str:
-    w = _iv_dir(task)
-    _run([VENV_PY, str(TOOL_DIR / "align_srt_asr.py"),
-          str(w / "audio.mp3"), "-o", str(w / "asr.srt"), "--asr-only"], task)
-    return "ASR 字幕完成"
-
-
-def ex_iv_render(task: Task) -> str:
-    w = _iv_dir(task)
-    slug = task.params["slug"]
-    title = task.params.get("title") or slug
-    out = ROOT / "videos" / f"{slug}.mp4"
-    part = out.with_suffix(".part.mp4")
-    _run([VENV_PY, str(TOOL_DIR / "make_cover_video.py"),
-          "--gen-cover", "--audio", str(w / "audio.mp3"),
-          "--srt", str(w / "asr.srt"),
-          "--title", title, "--watermark", "wzx",
-          "-o", str(part)], task)
-    if part.exists() and not out.exists():
-        shutil.move(str(part), str(out))
-    if not out.exists():
-        raise RuntimeError("渲染未产出成品")
-    return f"成品: {out.name}"
-
-
-# =====================================================================
-# 自动发送(Playwright 驱动豆包页面,替代浏览器扩展手动发送)
-# =====================================================================
-
-def _fnv1a_fingerprint(text: str) -> str:
-    """与 captcha-extension/sender-core.js fingerprint 完全一致(FNV-1a)。"""
-    h = 2166136261
-    for ch in text:
-        h ^= ord(ch)
-        h = (h * 16777619) & 0xFFFFFFFF
-    return f"{h:08x}:{len(text)}"
-
-
-def _chunks_dir_for(task: Task) -> Path:
-    if task.pipeline.startswith("interview"):
-        return _iv_dir(task) / "chunks"
-    return _ep_dir(task) / "chunks"
-
-
-def ex_auto_send_chunks(task: Task) -> str:
-    """自动发送全部分块到豆包(Playwright),写 doubao-send.json(与扩展同格式)。
-
-    发送失败(如触发安全验证)抛异常 → 任务 failed,可在页面重试,
-    或建任务时选 send_mode=manual 回退到扩展手动发送。
-    """
-    from doubao_autosend import DoubaoAutoSender
-
-    cdir = _chunks_dir_for(task)
-    files = sorted(cdir.glob("*.txt"))
-    if not files:
-        raise RuntimeError(f"分块目录为空: {cdir}")
-    task.log(f"自动发送 {len(files)} 块(Playwright → 豆包页面)")
-
-    items = []
-    with DoubaoAutoSender(headless=False) as sender:
-        sender.open_chat()
-        for i, f in enumerate(files, 1):
-            text = f.read_text(encoding="utf-8")
-            task.log(f"[{i}/{len(files)}] 发送 {f.name}({len(text)}字)")
-            sender.send_one(text)
-            items.append({
-                "name": f.name,
-                "chunk_index": i,
-                "fingerprint": _fnv1a_fingerprint(text),
-                "status": "done",
-                "sent_at": time.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
-                "reply_at": time.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
-                "error": None,
-            })
-            sender.page.wait_for_timeout(1500)
-        conv_url = sender.page.url
-
-    record = {
-        "schema_version": 1,
-        "run_id": task.id,
-        "episode": task.params.get("episode") if not task.pipeline.startswith("interview") else None,
-        "status": "completed",
-        "conversation_url": conv_url,
-        "conversation_id": (conv_url.rstrip("/").split("/")[-1]
-                            if "/chat/" in conv_url else None),
-        "started_at": items[0]["sent_at"] if items else None,
-        "completed_at": items[-1]["reply_at"] if items else None,
-        "total": len(items),
-        "items": items,
-    }
-    rec_path = _send_record_path(task)
-    rec_path.parent.mkdir(parents=True, exist_ok=True)
-    rec_path.write_text(json.dumps(record, ensure_ascii=False, indent=2),
-                        encoding="utf-8")
-    return f"已自动发送 {len(items)} 块 → {rec_path.name}"
+    task.set_artifact("final_video", out)
+    return f"{mode} 模式 {out.stat().st_size // 1048576}MB"
 
 
 EXECUTORS = {
-    "course": {
-        "ensure_source": ex_course_ensure_source,
-        "ocr_subtitle": ex_course_ocr,
-        "chunk_prep": ex_course_chunk_prep,
-        "send_chunks": ex_auto_send_chunks,
-        "harvest_audio": ex_course_harvest_audio,
-        "asr_subtitle": ex_course_asr_subtitle,
-        "render": ex_course_render,
-    },
-    "interview": {
-        "ensure_source": ex_iv_ensure_source,
-        "extract_audio": ex_iv_extract_audio,
-        "asr_source": ex_iv_asr_source,
-        "diarize": ex_iv_diarize,
-        "chunk_by_speaker": ex_iv_chunk_by_speaker,
-        "send_chunks": ex_auto_send_chunks,
-        "harvest_multi_voice": ex_iv_harvest_multi_voice,
-        "asr_subtitle": ex_iv_asr_subtitle,
-        "render": ex_iv_render,
-    },
+    "ensure_source": ex_ensure_source,
+    "extract_audio": ex_extract_audio,
+    "en_slots": ex_en_slots,
+    "translate": ex_translate,
+    "ocr_zh": ex_ocr_zh,
+    "cut_items": ex_cut_items,
+    "gen_audio": ex_gen_audio,
+    "assemble_audio": ex_assemble_audio,
+    "zh_subtitle": ex_zh_subtitle,
+    "render": ex_render,
 }
 
 
 # =====================================================================
-# 任务运行器
+# 运行器
 # =====================================================================
 
-def executor_group(task: Task) -> dict:
-    return EXECUTORS["interview" if task.pipeline.startswith("interview") else "course"]
-
-
 def run_task(task: Task) -> None:
-    """从 current 阶段开始推进,直到 manual 等待 / 失败 / 完成。"""
-    group = executor_group(task)
     while task.current < len(task.stages):
         st = task.stages[task.current]
-        if st["status"] == STAGE_DONE:
+        if st["status"] == P_DONE:
             task.current += 1
             continue
-        # 发送环节:默认 Playwright 全自动;send_mode=manual 时回退扩展手动发送
-        manual_mode = (st["key"] == "send_chunks"
-                       and task.params.get("send_mode") == "manual")
-        if st["type"] == "manual" or manual_mode:
-            task.mark(st["key"], STAGE_WAITING,
-                      note=f"请在扩展中发送 {task.params.get('slug', task.params.get('episode', ''))} 的分块")
-            task.status = TASK_WAITING
-            task.save()
-            return
-        fn = group.get(st["key"])
-        if fn is None:
-            task.mark(st["key"], STAGE_FAILED, error="执行器缺失")
-            task.status = TASK_FAILED
-            task.save()
-            return
-        task.mark(st["key"], STAGE_RUNNING)
-        task.status = TASK_RUNNING
+        task.mark_stage(st["key"], P_RUNNING)
+        task.status = S_RUNNING
         task.save()
         try:
-            note = fn(task) or "完成"
-            task.mark(st["key"], STAGE_DONE, note=note)
+            note = EXECUTORS[st["key"]](task) or "完成"
+            task.mark_stage(st["key"], P_DONE, note=note)
             task.log(f"✓ {st['label']}: {note}")
             task.current += 1
         except Exception as e:  # noqa: BLE001
-            task.mark(st["key"], STAGE_FAILED, error=str(e))
-            task.status = TASK_FAILED
+            task.mark_stage(st["key"], P_FAILED, error=str(e)[:500])
+            task.status = S_FAILED
             task.save()
-            task.log(f"✗ {st['label']} 失败: {e}")
+            task.log(f"✗ {st['label']} 失败: {str(e)[:300]}")
             return
-    task.status = TASK_DONE
+    task.status = S_DONE
     task.save()
     task.log("任务完成")
 
 
 def start_runner(task: Task) -> None:
-    t = threading.Thread(target=run_task, args=(task,), daemon=True)
-    t.start()
-
-
-def advance_manual(task: Task, force: bool) -> bool:
-    """manual 门:发送记录完成(或用户强制确认)→ 标记完成并继续。"""
-    st = task.stages[task.current] if task.current < len(task.stages) else None
-    if not st or st["type"] != "manual" or st["status"] != STAGE_WAITING:
-        return False
-    if not force and not send_record_completed(task):
-        return False
-    task.mark(st["key"], STAGE_DONE,
-              note="发送确认完成" + ("(自动检测)" if not force else "(手动确认)"))
-    task.current += 1
-    task.save()
-    start_runner(task)
-    return True
+    threading.Thread(target=run_task, args=(task,), daemon=True).start()
 
 
 def retry_stage(task: Task) -> bool:
-    """从失败阶段重试。"""
-    if task.status != TASK_FAILED:
+    if task.status != S_FAILED:
         return False
     for i, st in enumerate(task.stages):
-        if st["status"] == STAGE_FAILED:
-            st["status"] = STAGE_PENDING
-            st["error"] = None
+        if st["status"] == P_FAILED:
+            st["status"], st["error"] = P_PENDING, None
             task.current = i
-            task.status = TASK_RUNNING  # 立即离开 failed,后台线程接手
+            task.status = S_RUNNING
             task.save()
             start_runner(task)
             return True
@@ -767,14 +686,61 @@ def retry_stage(task: Task) -> bool:
 
 
 def list_tasks() -> list[Task]:
-    TASKS_DIR.mkdir(parents=True, exist_ok=True)
-    tasks = [Task.load(p) for p in sorted(TASKS_DIR.glob("*.json"))]
-    return sorted(tasks, key=lambda t: t.created_at, reverse=True)
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    out = []
+    for p in sorted(STATE_DIR.glob("*.json"), reverse=True):
+        try:
+            out.append(Task.load(p))
+        except Exception:  # legacy schema 跳过
+            continue
+    return out
 
 
 def load_task(task_id: str) -> Task | None:
-    p = TASKS_DIR / f"{task_id}.json"
+    p = STATE_DIR / f"{task_id}.json"
     return Task.load(p) if p.exists() else None
+
+
+# =====================================================================
+# 环境自检
+# =====================================================================
+
+def env_selftest(need_model: str | None = None) -> dict:
+    res = {"ollama": False, "ollama_model": False, "wsl_cosyvoice": False,
+           "nas": False, "ffmpeg": False, "detail": []}
+    model = need_model or DEFAULT_TRANSLATE_MODEL
+    try:
+        import urllib.request
+        with urllib.request.urlopen("http://127.0.0.1:11434/api/tags",
+                                    timeout=5) as r:
+            tags = json.loads(r.read())
+        names = [m["name"] for m in tags.get("models", [])]
+        res["ollama"] = True
+        res["ollama_model"] = any(n.split(":")[0] == model.split(":")[0]
+                                  for n in names)
+        res["detail"].append(
+            f"Ollama ✓ ({model}: 已就绪)" if res["ollama_model"] else
+            f"Ollama ✓ 但 {model} 未拉取: ollama pull {model}")
+    except Exception as e:
+        res["detail"].append(f"Ollama ✗ {str(e)[:60]}(ollama serve?)")
+    try:
+        subprocess.run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c",
+                        f"test -x {WSL_PY}"], check=True, timeout=30,
+                       capture_output=True)
+        res["wsl_cosyvoice"] = True
+        res["detail"].append("WSL CosyVoice(GPU) ✓")
+    except Exception:
+        res["detail"].append("WSL CosyVoice ✗(将回退 Windows CPU,速度约 1/3)")
+    try:
+        subprocess.run(["ssh", "nas", "true"], check=True, timeout=15,
+                       capture_output=True)
+        res["nas"] = True
+        res["detail"].append(f"NAS ssh ✓ ({NAS_BASE})")
+    except Exception:
+        res["detail"].append("NAS ssh ✗(产物将只留在本地)")
+    res["ffmpeg"] = FFMPEG.exists()
+    res["detail"].append(f"ffmpeg {'✓' if res['ffmpeg'] else '✗'}")
+    return res
 
 
 # =====================================================================
@@ -782,10 +748,10 @@ def load_task(task_id: str) -> Task | None:
 # =====================================================================
 
 class Handler(BaseHTTPRequestHandler):
-    def log_message(self, fmt, *args):  # 静默访问日志
+    def log_message(self, fmt, *args):
         pass
 
-    def _json(self, obj, status: int = HTTPStatus.OK) -> None:
+    def _json(self, obj, status=HTTPStatus.OK):
         body = json.dumps(obj, ensure_ascii=False).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
@@ -797,32 +763,24 @@ class Handler(BaseHTTPRequestHandler):
         n = int(self.headers.get("Content-Length") or 0)
         return json.loads(self.rfile.read(n) or b"{}")
 
-    # ---------- GET ----------
-
-    def do_GET(self) -> None:  # noqa: N802
+    def do_GET(self):
         if self.path in ("/", "/admin", "/admin/"):
-            return self._serve_html()
-        if self.path == "/api/pipelines":
-            return self._json(PIPELINES)
+            return self._html()
+        if self.path == "/api/types":
+            return self._json(VIDEO_TYPES)
+        if self.path == "/api/voices":
+            return self._json(voice_lib.list_voices())
         if self.path == "/api/tasks":
-            # 顺带轮询 manual 门(页面每 3s 拉一次,即自动检测发送完成)
-            for t in list_tasks():
-                if t.status == TASK_WAITING:
-                    advance_manual(t, force=False)
             return self._json([t.brief() for t in list_tasks()])
         m = re.fullmatch(r"/api/tasks/([A-Za-z0-9-]+)", self.path)
         if m:
             t = load_task(m.group(1))
             if not t:
-                return self._json({"ok": False, "error": "任务不存在"},
-                                  HTTPStatus.NOT_FOUND)
-            if t.status == TASK_WAITING:
-                advance_manual(t, force=False)
+                return self._json({"ok": False, "error": "任务不存在"}, 404)
             return self._json(t.detail())
-        return self._json({"ok": False, "error": "not found"},
-                          HTTPStatus.NOT_FOUND)
+        return self._json({"ok": False, "error": "not found"}, 404)
 
-    def _serve_html(self) -> None:
+    def _html(self):
         p = TOOL_DIR / "admin.html"
         body = p.read_bytes()
         self.send_response(HTTPStatus.OK)
@@ -831,158 +789,104 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    # ---------- POST ----------
-
-    def do_POST(self) -> None:  # noqa: N802
+    def do_POST(self):
         if self.path == "/api/tasks":
-            return self._create_task()
+            return self._create()
+        if self.path == "/api/voices":
+            return self._create_voice()
         if self.path == "/api/selftest":
-            return self._selftest()
+            return self._json(env_selftest(self._body().get("model")))
         m = re.fullmatch(r"/api/tasks/([A-Za-z0-9-]+)/action", self.path)
         if m:
-            return self._task_action(m.group(1))
-        return self._json({"ok": False, "error": "not found"},
-                          HTTPStatus.NOT_FOUND)
-
-    def _create_task(self) -> None:
-        data = self._body()
-        key = data.get("pipeline", "")
-        if key not in PIPELINES:
-            return self._json({"ok": False, "error": f"未知流水线 {key}"}, 400)
-        params = data.get("params", {})
-        # 必填校验
-        for spec in PIPELINES[key]["params"]:
-            if spec["required"] and not params.get(spec["key"]):
+            t = load_task(m.group(1))
+            if not t:
+                return self._json({"ok": False, "error": "任务不存在"}, 404)
+            body = self._body()
+            action = body.get("action")
+            if action == "retry":
+                ok = retry_stage(t)
                 return self._json(
-                    {"ok": False, "error": f"缺少必填参数 {spec['label']}"}, 400)
-        if key.startswith("interview"):
-            slug = params["slug"].strip()
-            if not re.fullmatch(r"[A-Za-z0-9_-]{2,40}", slug):
-                return self._json({"ok": False, "error": "slug 仅限字母数字-_"}, 400)
-            if (ROOT / "work" / "interview" / slug / "chunks").exists():
-                return self._json({"ok": False,
-                                   "error": f"代号 {slug} 已存在"}, 400)
-        name = data.get("name") or params.get("slug") or f"第{params.get('episode')}集"
-        task = Task(key, name, params)
+                    {"ok": ok, "error": None if ok else "任务不在失败状态"})
+            if action == "reupload":
+                slot = body.get("slot")
+                info = t.artifacts.get(slot or "")
+                if info and info["local_path"]:
+                    nas = t.upload_to_nas(slot, ROOT / info["local_path"])
+                    t.save()
+                    return self._json({"ok": bool(nas), "nas_path": nas})
+                return self._json({"ok": False, "error": "槽位无产物"}, 400)
+            return self._json({"ok": False, "error": f"未知 action"}, 400)
+        return self._json({"ok": False, "error": "not found"}, 404)
+
+    def _create(self):
+        d = self._body()
+        tkey = d.get("type", "")
+        if tkey not in VIDEO_TYPES:
+            return self._json({"ok": False, "error": f"未知类型 {tkey}"}, 400)
+        spec = VIDEO_TYPES[tkey]
+        params = d.get("params", {})
+        for p in spec["params"]:
+            if p["required"] and not params.get(p["key"]):
+                return self._json(
+                    {"ok": False, "error": f"缺少必填参数 {p['label']}"}, 400)
+        slug = params.get("slug", "").strip()
+        if not re.fullmatch(r"[A-Za-z0-9_-]{2,40}", slug):
+            return self._json({"ok": False, "error": "代号仅限字母数字-_"}, 400)
+        if (STUDIO / slug).exists():
+            return self._json({"ok": False,
+                               "error": f"代号 {slug} 已存在"}, 400)
+        task = Task(tkey, params)
         task.save()
-        task.log(f"创建任务: {PIPELINES[key]['name']} / {name}")
+        task.log(f"创建: {spec['name']} / {slug}")
         start_runner(task)
         return self._json({"ok": True, "task": task.brief()})
 
-    def _task_action(self, task_id: str) -> None:
-        t = load_task(task_id)
-        if not t:
-            return self._json({"ok": False, "error": "任务不存在"}, 404)
-        action = self._body().get("action")
-        if action == "confirm_send":
-            ok = advance_manual(t, force=True)
-            return self._json({"ok": ok, "error": None if ok else "当前不在等待发送状态"})
-        if action == "retry":
-            ok = retry_stage(t)
-            return self._json({"ok": ok, "error": None if ok else "任务不在失败状态"})
-        return self._json({"ok": False, "error": f"未知 action {action}"}, 400)
-
-    # ---------- 链路自检 ----------
-
-    def _selftest(self) -> None:
-        """豆包链路健康检测:登录态/消息拉取 → TTS 朗读 →(可选)真实发送。
-
-        body: {"full": true} 额外走一次 Playwright 发送(会真发一条测试消息)。
-        自检与正式发送共用 .env 凭据(doubao_autosend.load_env)。
-        """
-        body = self._body()
-        result = {"auth": False, "tts": False, "send": None,
-                  "detail": [], "checked_at": time.strftime("%H:%M:%S")}
+    def _create_voice(self):
+        d = self._body()
         try:
-            from doubao_autosend import load_env as _le
-            for k, v in _le().items():
-                os.environ.setdefault(k, v)
+            meta = voice_lib.create(
+                d["name"], Path(d["ref_audio"]), d["ref_text"],
+                d.get("note", ""))
+            return self._json({"ok": True, "voice": meta})
         except Exception as e:  # noqa: BLE001
-            result["detail"].append(f".env 读取异常: {e}")
-            return self._json(result)
-
-        # 1) 登录态 + 消息拉取(只读)
-        try:
-            import doubao_reader as dr
-            msgs = dr.fetch_messages(limit=3, per_conv=2)
-            result["auth"] = True
-            result["detail"].append(f"登录/消息拉取 ✓(最近 {len(msgs)} 条)")
-        except Exception as e:  # noqa: BLE001
-            result["detail"].append(f"登录/消息拉取 ✗: {str(e)[:120]}")
-            return self._json(result)
-
-        # 2) TTS 朗读(读一条已有回复,不发新消息)
-        try:
-            import asyncio
-            r = next((m for m in msgs if (m.get("tts_content") or "").strip()), None)
-            if not r:
-                result["detail"].append("TTS 跳过(无历史回复)")
-            else:
-                probe = STATE_DIR / "selftest-tts.ogg"
-                n = asyncio.run(dr.read_reply(r, str(probe), verbose=False))
-                result["tts"] = n > 0
-                result["detail"].append(
-                    f"TTS 朗读 {'✓ ' + str(n // 1024) + 'KB' if n > 0 else '✗ 无音频(可能风控 3003)'}")
-                if n > 0:
-                    probe.unlink(missing_ok=True)
-        except Exception as e:  # noqa: BLE001
-            result["detail"].append(f"TTS 异常: {str(e)[:120]}")
-
-        # 3) 完整发送链路(可选)
-        if body.get("full"):
-            try:
-                from doubao_autosend import DoubaoAutoSender
-                with DoubaoAutoSender(headless=False) as s:
-                    s.open_chat()
-                    s.send_one("链路自检:请只回复:OK")
-                result["send"] = True
-                result["detail"].append("自动发送 ✓(测试消息已发出并收到回复)")
-            except Exception as e:  # noqa: BLE001
-                result["send"] = False
-                result["detail"].append(f"自动发送 ✗: {str(e)[:120]}")
-
-        self._json(result)
+            return self._json({"ok": False, "error": str(e)[:200]}, 400)
 
 
 def _lan_ips() -> list[str]:
-    """列出本机局域网 IPv4(排除回环/虚拟网卡常见网段尽力而为)。"""
     import socket
-    ips: set[str] = set()
+    ips = set()
     try:
-        host = socket.gethostname()
-        for info in socket.getaddrinfo(host, None, socket.AF_INET):
+        for info in socket.getaddrinfo(socket.gethostname(), None,
+                                       socket.AF_INET):
             ip = info[4][0]
-            if not ip.startswith(("127.", "169.254.")):
+            if not ip.startswith(("127.", "169.254.", "172.2",
+                                  "192.168.106.", "192.168.220.")):
                 ips.add(ip)
     except OSError:
         pass
-    # 排除常见虚拟网卡网段(WSL/VMware/Hyper-V)
-    return sorted(ip for ip in ips
-                  if not ip.startswith(("172.2", "192.168.106.", "192.168.220.")))
+    return sorted(ips)
 
 
-def main() -> None:
+def main():
     import argparse
-    parser = argparse.ArgumentParser(description="多流水线管理后台")
-    parser.add_argument("--host", default="0.0.0.0",
-                        help="绑定地址(默认 0.0.0.0 局域网可访问;仅本机用 127.0.0.1)")
-    parser.add_argument("--port", type=int, default=PORT)
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser(description="统一视频汉化平台 v2")
+    ap.add_argument("--host", default="0.0.0.0",
+                    help="默认 0.0.0.0 局域网可访问")
+    ap.add_argument("--port", type=int, default=PORT)
+    args = ap.parse_args()
 
-    TASKS_DIR.mkdir(parents=True, exist_ok=True)
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    voice_lib.seed_defaults()
     srv = ThreadingHTTPServer((args.host, args.port), Handler)
-    print(f"[pipeline-admin] 绑定 {args.host}:{args.port}")
-    print(f"[pipeline-admin] 本机: http://127.0.0.1:{args.port}")
+    print(f"[studio] http://127.0.0.1:{args.port}")
     for ip in _lan_ips():
-        print(f"[pipeline-admin] 局域网: http://{ip}:{args.port}")
-    print(f"[pipeline-admin] 流水线: {', '.join(PIPELINES)}")
-    if args.host == "0.0.0.0":
-        print("[pipeline-admin] 注意: 局域网内任何设备都可创建任务(会执行本地命令),"
-              "请只在可信网络使用")
+        print(f"[studio] 局域网: http://{ip}:{args.port}")
+    print(f"[studio] 类型: {', '.join(VIDEO_TYPES)}")
+    print(f"[studio] NAS: {NAS_BASE} | 翻译默认: {DEFAULT_TRANSLATE_MODEL}")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
-        print("\n[pipeline-admin] 退出")
+        print("\n[studio] 退出")
 
 
 if __name__ == "__main__":
