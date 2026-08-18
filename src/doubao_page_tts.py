@@ -164,19 +164,41 @@ def read_conversation(conv_url: str, out_dir: Path,
 
 
 def concat_to_mp3(oggs: list[Path], out_mp3: Path, gap_ms: int = 250) -> None:
-    from pydub import AudioSegment
-    # pydub 需要显式指向项目自带 ffmpeg/ffprobe(不在 PATH)
+    """ogg(流式,时间戳不单调)→ 逐条转 mp3 → concat 拼接。
+
+    不能 ogg 直拼(demuxer 遇时间戳跳变会静默丢段,ep-23 实测 6 条只出
+    1 条时长);pydub 在本机找不到 ffprobe,统一用项目自带 ffmpeg。
+    """
+    import subprocess
     tools = Path(__file__).resolve().parents[1] / "work" / "video-tools"
-    AudioSegment.converter = str(tools / "ffmpeg.exe")
-    AudioSegment.ffmpeg = str(tools / "ffmpeg.exe")
-    AudioSegment.ffprobe = str(tools / "ffprobe.exe")
-    silence = AudioSegment.silent(duration=gap_ms)
-    combined = AudioSegment.empty()
-    for i, p in enumerate(oggs):
-        seg = AudioSegment.from_file(p)  # opus/ogg
-        combined += seg if i == 0 else silence + seg
+    ffmpeg = tools / "ffmpeg.exe"
+    tmp = out_mp3.parent / "_concat_tmp"
+    tmp.mkdir(parents=True, exist_ok=True)
+    mp3s: list[Path] = []
+    for i, ogg in enumerate(oggs, 1):
+        seg = tmp / f"{i:02d}.mp3"
+        subprocess.run([str(ffmpeg), "-y", "-v", "error", "-i", str(ogg),
+                        "-c:a", "libmp3lame", "-b:a", "128k",
+                        "-fflags", "+genpts", str(seg)], check=True)
+        mp3s.append(seg)
+    lst = tmp / "list.txt"
+    lines = []
+    for i, mp3 in enumerate(mp3s):
+        lines.append(f"file '{mp3.name}'")
+        if i < len(mp3s) - 1 and gap_ms > 0:
+            lines.append(f"file 'gap.mp3'")
+    if gap_ms > 0:
+        subprocess.run([str(ffmpeg), "-y", "-v", "error", "-f", "lavfi",
+                        "-i", f"anullsrc=r=44100:cl=mono", "-t",
+                        str(gap_ms / 1000), "-c:a", "libmp3lame",
+                        str(tmp / "gap.mp3")], check=True)
+    lst.write_text(chr(10).join(lines), encoding="utf-8")
     out_mp3.parent.mkdir(parents=True, exist_ok=True)
-    combined.export(str(out_mp3), format="mp3", bitrate="128k")
+    subprocess.run([str(ffmpeg), "-y", "-v", "error", "-f", "concat",
+                    "-safe", "0", "-i", str(lst), "-c", "copy",
+                    str(out_mp3)], check=True)
+    import shutil
+    shutil.rmtree(tmp, ignore_errors=True)
 
 
 if __name__ == "__main__":

@@ -387,8 +387,28 @@ def ex_course_asr_subtitle(task: Task) -> str:
 
 
 def ex_course_render(task: Task) -> str:
-    ep = task.params["episode"]
-    _mk(["--episode", str(ep), "--step", "video"], task)
+    ep = int(task.params["episode"])
+    try:
+        _mk(["--episode", str(ep), "--step", "video"], task)
+    except RuntimeError as e:
+        # gen-srt 依赖 manifest 的 harvested_chunks(WS harvest 才写;
+        # 页面抓取路径没有)→ 直接用 asr 字幕渲染
+        task.log(f"make_episode video 失败({str(e)[:60]}),直接渲染")
+        w = _ep_dir(task)
+        audio = w / f"episode-{ep:02d}-audio.mp3"
+        srt = w / f"episode-{ep:02d}-asr.srt"
+        if not (audio.exists() and srt.exists()):
+            raise RuntimeError(f"音频/字幕缺失: {audio.name}/{srt.name}")
+        cover = ROOT / "videos" / f"cover-ep{ep:02d}.jpg"
+        out = ROOT / "videos" / f"episode-{ep:02d}.mp4"
+        part = out.with_suffix(".part.mp4")
+        _run([VENV_PY, str(TOOL_DIR / "make_cover_video.py"),
+              "--cover", str(cover), "--gen-cover",
+              "--audio", str(audio), "--srt", str(srt),
+              "--title", f"哈佛积极心理学 · 第{ep}讲",
+              "--watermark", "wzx", "-o", str(part)], task)
+        if part.exists():
+            shutil.move(str(part), str(out))
     # Windows Defender 偶发锁 rename:.part 已生成时手动救回
     out = ROOT / "videos" / f"episode-{int(ep):02d}.mp4"
     part = out.with_suffix(".part.mp4")
