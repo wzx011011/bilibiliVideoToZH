@@ -284,11 +284,23 @@ class Task:
         slug = self.params["slug"]
         sub = ARTIFACT_SLOTS[slot]["nas_dir"]
         nas_dir = f"{NAS_BASE}/{slug}/{sub}"
+        # scp 会把 Windows 盘符 E: 解析成主机名,整路径变文件名(实测),
+        # 必须用正斜杠相对路径 + cwd=ROOT 传输
+        try:
+            rel = str(path.resolve().relative_to(ROOT)).replace("\\", "/")
+        except ValueError:
+            rel = None
         try:
             subprocess.run(["ssh", "nas", f"mkdir -p '{nas_dir}'"],
                            check=True, timeout=30, capture_output=True)
-            subprocess.run(["scp", str(path), f"nas:{nas_dir}/"],
-                           check=True, timeout=600, capture_output=True)
+            if rel:
+                subprocess.run(["scp", rel, f"nas:{nas_dir}/"],
+                               cwd=str(ROOT), check=True, timeout=600,
+                               capture_output=True)
+            else:
+                subprocess.run(["scp", str(path).replace("\\", "/"),
+                                f"nas:{nas_dir}/"],
+                               check=True, timeout=600, capture_output=True)
             self.log(f"NAS ✓ {slot}: {nas_dir}/{path.name}")
             return f"{nas_dir}/{path.name}"
         except Exception as e:  # noqa: BLE001
@@ -337,8 +349,11 @@ def _run(cmd: list[str], task: Task, timeout: int = 7200) -> str:
 def _wsl_run(script_rel: str, args: list[str], task: Task,
              timeout: int = 24 * 3600) -> str:
     """WSL2 GPU 跑 CosyVoice(长任务,断点续跑在脚本侧)。"""
+    quoted = " ".join(f'"{a}"' for a in args)
+    # inner 整体作为 bash -c 的单参数;subprocess list 形式传参无需再嵌引号,
+    # 之前手工拼 " 导致 && 把命令拆断(实测:cd 变裸命令)
     inner = (f"cd /mnt/e/ai/bilibiliVideoToZH && env {WSL_ENV} "
-             f"{WSL_PY} {script_rel} " + " ".join(f'"{a}"' for a in args))
+             f"{WSL_PY} {script_rel} {quoted}")
     cmd = ["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c", inner]
     return _run(cmd, task, timeout=timeout)
 
