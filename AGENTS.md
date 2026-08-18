@@ -1,58 +1,50 @@
 # AGENTS.md — bilibiliVideoToZH 工作指南
 
-B站视频(哈佛积极心理学课)→ 豆包中文配音 + 中文字幕视频。
-流水线:`下载(yt-dlp) → OCR字幕(RapidOCR) → 分块 → 豆包配音(半自动) → ASR字幕对齐(faster-whisper) → ffmpeg渲染`
+统一视频汉化平台:英文/中文视频 → 中文配音 + 中文字幕成品。
+**v2 架构(当前)**:类型路由工作流 + 五件套产物 + NAS 归档,全 CosyVoice 配音(已脱离豆包)。
+
+## 平台(v2,当前主力)
+
+- 入口:`work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py` → `http://127.0.0.1:8766`(0.0.0.0 局域网;防火墙放行 `allow-lan-8766.cmd`)
+- **视频类型 = 字幕情况(en_vtt/none/zh_hard)× 说话人(1/2)** → 自动路由阶段序列
+- **五件套**(每任务充分必要产物):`01-视频源 / 02-英文字幕 / 03-中文字幕 / 04-中文音频 / 05-成品`,每阶段产物自动 scp 到 `nas:/volume1/share/视频/<slug>/`
+- 配音:CosyVoice2 零样本克隆(WSL2 GPU,断点续跑;音色库 `work/studio/voices/`,预置 doubao-taotao + Hinton 原声);翻译:Ollama qwen3:14b
+- 工作目录:`work/studio/<slug>/`;任务状态:`work/studio/tasks/*.json`(schema 2)
+- 冒烟参数:API 建任务时传 `_smoke_blocks`/`_smoke_chars` 快速验证
+- 豆包链(v1)已退役:`doubao_*.py`/`autosend`/`captcha-extension` 保留在仓库作历史资产,平台不再引用
 
 ## 目录
 
-- `src/` 全部代码。`make_episode.py` 是单集制作主控;`align_srt_asr.py` ASR字幕(独立轻量,不依赖 doubao_pipeline);`make_cover_video.py` 渲染(libass 烧硬字幕);`captcha-extension/` 浏览器扩展(豆包凭据抓取+分块发送);`interview_lib.py` 访谈处理(说话人分离/分角色分块/多音色拼接);`pipeline_admin.py` + `admin.html` 多流水线管理后台(`http://127.0.0.1:8766`,默认 0.0.0.0 局域网可访问);`dashboard.html` 流水线监控面板(doubao_bridge 在 http://127.0.0.1:8765/dashboard 提供)
-- `work/` 实际工作目录(每集 ep-XX,gitignore);`episodes/` 是成品归档副本
-- `subtitles/` OCR 中文字幕;`videos/` 成品 mp4;`downloads/` B站原片;`youtube/` YouTube 下载(按人物分目录,gitignore)
-- `.env` 豆包凭据(gitignore,由扩展生成)
+- `src/pipeline_admin.py + admin.html` 平台服务与前端;`voice_lib.py` 音色库;`render_original.py` 原片保留渲染;`whisper_slots.py` 无字幕 ASR 成槽;`make_cover_video.py` 封面渲染;`align_srt_asr.py` ASR 字幕(独立轻量);`make_episode.py`/`subtitle_ocr.py` 课程单集主控与 OCR(v2 仍复用)
+- `work/studio/` 平台任务目录;`work/voice-clone-demo/` CosyVoice 引擎(gitignore,含 5.3GB 模型勿删;脚本已参数化:`prepare_fine_slots / translate_fine_batches / generate_voice / assemble_fine_runs`);`work/video-tools/` ffmpeg
+- `youtube/` 下载库(按人物);`downloads/` B站原片;`subtitles/` 历史 OCR;`videos/`+`episodes/` 历史成品归档
+- `.env` 豆包凭据(历史);NAS:ssh 别名 `nas` → 192.168.100.78
 
 ## 常用命令
 
 ```bash
 PY=work/.venv-ocr/Scripts/python.exe
-
-# 单集制作(make_episode 内部自动处理 PYTHONPATH)
-$PY src/make_episode.py --episode 2 --step prep      # 分块(需浏览器扩展发送)
-$PY src/make_episode.py --episode 2 --step subtitle  # ASR字幕(有 .asr.json 缓存,秒级)
-$PY src/make_episode.py --episode 2 --step video     # 渲染(约4-7分钟/集)
-
-# ASR 字幕单独重生成(绕过 gen-srt 依赖)
-$PY src/align_srt_asr.py work/ep-02/episode-02-audio.mp3 -o work/ep-02/episode-02-asr.srt --asr-only
-
-# 测试
-$PY -m pytest tests/ -q
-node src/captcha-extension/sender-core.test.cjs
-
-# 桥接服务(仅 127.0.0.1:8765)
-$PY src/doubao_bridge.py start
-
-# 多流水线管理后台(0.0.0.0:8766,局域网可访问;--host 127.0.0.1 仅本机)
-$PY src/pipeline_admin.py
-# 首次局域网访问需放行防火墙: 右键管理员运行 allow-lan-8766.cmd
+$PY src/pipeline_admin.py            # 平台(页面建任务即全自动)
+$PY -m pytest tests/ -q              # 测试(75 个)
+# ollama pull qwen3:14b 需清代理: env -u http_proxy -u https_proxy ollama pull qwen3:14b
 ```
 
 ## 架构边界
 
-- **配音是半自动的**:prep 生成 chunks/*.txt → 用户在浏览器扩展里手动发送(绕豆包签名风控)→ 扩展回调桥接自动 build。agent 无法自动完成发送环节。
-- `--step subtitle/video` 会先跑 gen-srt,它依赖 manifest 的 `harvested_chunks`(朗读记录)。个别集(如 ep-02)缺该记录会失败——绕过:直接调 `align_srt_asr.py --asr-only` + `make_cover_video.py`。
-- `align_srt_asr.py` 保持无 doubao 依赖(轻量、可独立跑);不要让它 import doubao_pipeline。
-- 字幕切分:`MAX_SUBTITLE_CHARS = 54`(两行容量,1920/FontSize22 一行约27字)。语义优先:整句 ≤54 不切,超长才在逗号处断。libass force_style 不支持 max_lines,只能文本端控制。
+- **CosyVoice 只在 WSL2 GPU 跑**(`Ubuntu-24.04`,`/home/comfy/cosy-gpu-venv`;env `HSA_ENABLE_DXG_DETECTION=1 COSY_FP16=0 TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1`;fp16 会出乱码)。Windows CPU 可保底(约 1/3 速度)。环境重建见 skill `doubao-voice-clone`
+- 访谈声纹分离用 campplus 锚点(同人相似度 ≥0.87);锚点时间需人工从原片选
+- zh_hard 型默认封面渲染(中文音频短于原片,时间轴不对齐);访谈型原片保留(音轨经保音高慢放与原片等长)
+- 字幕切分 `MAX_SUBTITLE_CHARS=54`(两行容量);libass force_style 不支持 max_lines,文本端控制
+- ASR 缓存 `.asr.json` 存在则字幕秒级;whisper large-v3-turbo cpu/int8
 
-## Windows 坑(本项目高频踩)
+## Windows 坑
 
-1. **Defender 锁文件**:大文件 rename(如 `.part.mp4` → 正式名)偶发 `PermissionError [WinError 5]`。yt-dlp 加 `--no-part`;make_episode 的 `os.replace` 失败时,等几秒手动 `mv` `.part.mp4` 即可救回(文件是完整的)。
-2. **venv launcher**:Windows venv python 是 shim,CPU 密集脚本(subtitle_ocr/align_srt_asr)应直接用 base python + PYTHONPATH 指向 venv site-packages。`make_episode.py` 已内置此逻辑,优先走它。
-3. **文件名**:标题含全角冒号等在 Windows 非法。yt-dlp 用 `--restrict-filenames`。
-4. **代理**:环境有 `all_proxy=socks5://`,豆包 WS 不支持——跑豆包相关前 `unset all_proxy ALL_PROXY`。yt-dlp 用 `http_proxy`(127.0.0.1:7897)。
+1. **Defender 锁文件**:大文件 rename 偶发 WinError 5,等几秒手动 `mv` 即可救回;yt-dlp 加 `--no-part`
+2. **venv launcher**:CPU 密集脚本用 base python + PYTHONPATH(平台已内置处理)
+3. **文件名**:全角冒号非法,yt-dlp 用 `--restrict-filenames`
+4. **代理**:`all_proxy=socks5` 干扰 Ollama CLI(pull 需 env -u 清除);yt-dlp 用 http_proxy
 
 ## 其他
 
-- ffmpeg/ffprobe 在 `work/video-tools/`(gitignore),不在 PATH。
-- ASR 缓存:`work/ep-XX/episode-XX-audio.mp3.asr.json` 存在则字幕重生成秒级;删除即重跑 whisper(large-v3-turbo, cpu/int8)。
-- ep-04/20/21 的 ASR segment 本就 ≤28 字,从未需要重渲染;ep-22 有分块失败问题(整集塞一个 52KB chunk,豆包无音频产出,build job 卡 queued)。
-- `rerender-subtitles.sh` 批量重渲染(带 `work/ep-XX/.rerendered` 完成标记,可断点续跑)。
-- `download-youtube.sh` YouTube 批量下载(1080p;`--no-part` + `--restrict-filenames` 防 Windows 坑;重跑自动跳过已下视频)。
+- `download-youtube.sh` YouTube 批量下载;`rerender-subtitles.sh` 历史批量重渲染
+- TTS 风控史:豆包朗读 WS 曾 3003 限流>24h——v2 已脱豆包,不再受影响
