@@ -344,9 +344,31 @@ def ex_course_send_chunks(task: Task) -> None:
 
 
 def ex_course_harvest_audio(task: Task) -> str:
+    """配音音频:优先 WS 直连(快);被风控时自动切页面朗读抓取。"""
     ep = task.params["episode"]
-    _mk(["--episode", str(ep), "--step", "audio"], task)
-    return "配音音频完成"
+    audio_out = _ep_dir(task) / f"episode-{int(ep):02d}-audio.mp3"
+    try:
+        _mk(["--episode", str(ep), "--step", "audio"], task)
+        return "配音音频完成(WS 直连)"
+    except RuntimeError as e:
+        task.log(f"WS 直连失败({str(e)[:80]}),切换页面朗读抓取…")
+
+    # 页面朗读抓取(doubao_page_tts):用发送记录里的会话 URL
+    import doubao_page_tts as ptt
+    rec_path = _ep_dir(task) / "doubao-send.json"
+    if not rec_path.exists():
+        raise RuntimeError("无发送记录 doubao-send.json,无法定位会话")
+    rec = json.loads(rec_path.read_text(encoding="utf-8"))
+    conv_url = rec.get("conversation_url") or ""
+    total = rec.get("total", 0)
+    if "/chat/" not in conv_url or not total:
+        raise RuntimeError(f"发送记录缺少会话 URL 或块数: {conv_url!r} total={total}")
+    files = ptt.read_conversation(conv_url, _ep_dir(task), expect_replies=total)
+    if len(files) < total:
+        raise RuntimeError(f"页面抓取只完成 {len(files)}/{total} 条")
+    ptt.concat_to_mp3(files, audio_out, gap_ms=250)
+    size_mb = audio_out.stat().st_size // 1048576
+    return f"配音音频完成(页面朗读抓取 {len(files)} 条, {size_mb}MB)"
 
 
 def ex_course_asr_subtitle(task: Task) -> str:

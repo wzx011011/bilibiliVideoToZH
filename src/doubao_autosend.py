@@ -30,7 +30,11 @@ PROFILE_DIR = ROOT / "work" / "playwright-profile"
 DOUBAO_HOME = "https://www.doubao.com/chat/"
 
 # 与 relay.js EDITOR_SELECTORS 一致
+# 2026-08 豆包改版:输入框从 textarea 换成 ProseMirror contenteditable div
 EDITOR_SELECTORS = [
+    'div[contenteditable="true"].ProseMirror',
+    'div[contenteditable="true"].tiptap',
+    '[contenteditable="true"]',
     'textarea[placeholder="发消息或按住空格说话..."]',
     'textarea[placeholder*="发消息"]',
     "textarea.semi-input-textarea",
@@ -50,9 +54,13 @@ JS_FIND_AND_CLICK = """
     const s = getComputedStyle(el);
     return r.width > 0 && r.height > 0 && s.display !== "none" && s.visibility !== "hidden";
   };
-  const sels = ['textarea[placeholder="发消息或按住空格说话..."]',
+  const sels = ['div[contenteditable="true"].ProseMirror',
+                'div[contenteditable="true"].tiptap',
+                '[contenteditable="true"]',
+                'textarea[placeholder="发消息或按住空格说话..."]',
                 'textarea[placeholder*="发消息"]',
-                'textarea.semi-input-textarea', 'textarea:not([disabled])'];
+                'textarea.semi-input-textarea',
+                'textarea:not([disabled])'];
   let editor = null;
   for (const sel of sels) {
     const cs = [...document.querySelectorAll(sel)].filter(isVisible);
@@ -245,7 +253,12 @@ class DoubaoAutoSender:
             for sel in EDITOR_SELECTORS:
                 loc = self.page.locator(sel)
                 if loc.count() == 1 and loc.first.is_visible():
-                    return loc.first
+                    # 防加载替换窗口(旧 textarea 壳会被换成 ProseMirror):
+                    # 复查一次,元素仍在才算数
+                    self.page.wait_for_timeout(1000)
+                    if loc.count() == 1 and loc.first.is_visible():
+                        return loc.first
+                    continue
                 if loc.count() > 1:
                     # 多个候选:精确 placeholder 优先(relay.js 同策略)
                     exact = self.page.locator(EDITOR_SELECTORS[0])
@@ -254,6 +267,38 @@ class DoubaoAutoSender:
             last_err = f"输入框候选异常 ({sel})"
             self.page.wait_for_timeout(500)
         raise RuntimeError(f"未找到豆包输入框: {last_err}(可能未登录或页面改版)")
+
+    def _fill_editor(self, editor, text: str) -> None:
+        """写输入框。textarea 用原生 value setter + input 事件(relay.js 原法);
+        contenteditable(ProseMirror)用 click+全选+insert_text——fill 对
+        长文本会错位丢内容(实测 3100 字),insert_text 一次插入保真。"""
+        tag = editor.evaluate("el => el.tagName")
+        if tag == "TEXTAREA" or tag == "INPUT":
+            editor.evaluate(
+                """(el, t) => {
+                    const d = Object.getOwnPropertyDescriptor(
+                        HTMLTextAreaElement.prototype, 'value')
+                        || Object.getOwnPropertyDescriptor(
+                            HTMLInputElement.prototype, 'value');
+                    d.set.call(el, t);
+                    el.dispatchEvent(new InputEvent('input',
+                        {bubbles: true, inputType: 'insertText', data: t}));
+                    el.dispatchEvent(new Event('change', {bubbles: true}));
+                }""", text)
+        else:
+            editor.click()
+            self.page.keyboard.press("Control+a")
+            self.page.keyboard.insert_text(text)
+
+    def _editor_text(self, editor) -> str:
+        """读输入框内容:textarea 用 input_value,contenteditable 用 inner_text。"""
+        try:
+            tag = editor.evaluate("el => el.tagName")
+            if tag == "TEXTAREA" or tag == "INPUT":
+                return editor.input_value() or ""
+            return editor.inner_text() or ""
+        except Exception:
+            return ""
 
     def _check_challenge(self) -> None:
         body = self.page.locator("body").inner_text(timeout=5000)
@@ -301,10 +346,12 @@ class DoubaoAutoSender:
         self._check_challenge()
         editor = self._wait_editor()
         for attempt in range(5):
-            editor.fill(text)  # Playwright fill 走原生 value setter,React 兼容
+            self._fill_editor(editor, text)
             self.page.wait_for_timeout(600)
             try:
-                if (editor.input_value() or "").strip() == text.strip():
+                got = " ".join(self._editor_text(editor).split())
+                want = " ".join(text.split())
+                if got[:150] == want[:150]:
                     break
             except Exception:
                 editor = self._wait_editor()
