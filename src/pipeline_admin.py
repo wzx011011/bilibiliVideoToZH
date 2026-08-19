@@ -101,10 +101,14 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "anchors", "label": "声纹锚点 JSON", "type": "str",
              "required": True,
              "hint": '{"A":[起,止],"B":[起,止]} 从原片各选一段单人发言'},
+            {"key": "clone_original", "label": "自动克隆原片人声", "type": "bool",
+             "required": False,
+             "hint": "开启后忽略音色选择,自动用锚点截原片人声做参考"},
             {"key": "voice_A", "label": "说话人A音色", "type": "voice",
              "required": False},
             {"key": "voice_B", "label": "说话人B音色", "type": "voice",
-             "required": False},
+             "required": False,
+             "hint": "多人必填(或开自动克隆),否则两人同声"},
             {"key": "translate_model", "label": "翻译模型", "type": "str",
              "required": False},
         ],
@@ -123,6 +127,9 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "anchors", "label": "声纹锚点 JSON(可选)", "type": "str",
              "required": False,
              "hint": '{"A":[起,止]};不填则不分说话人(全部按A)'},
+            {"key": "clone_original", "label": "自动克隆原片人声", "type": "bool",
+             "required": False,
+             "hint": "开启后需填锚点,自动截原片人声做参考"},
             {"key": "voice_A", "label": "音色", "type": "voice",
              "required": False},
             {"key": "translate_model", "label": "翻译模型", "type": "str",
@@ -608,6 +615,34 @@ def ex_cut_items(task: Task) -> str:
     return f"{len(items)} 块"
 
 
+def _clone_original_voices(task: Task) -> dict[str, str]:
+    """自动克隆原片人声:锚点段截参考音频 + 覆盖槽的英文文本作 ref 文本,
+    注册为 orig-<slug>-A/B 音色(持久入库可复用)。返回 {spk: 音色名}。"""
+    import voice_lib as vl
+    w = task.dir / "work"
+    anchors = {k: tuple(v) for k, v in
+               json.loads(task.params["anchors"]).items()}
+    slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+    audio = w / "audio16k.wav"
+    out = {}
+    for spk, (a0, a1) in anchors.items():
+        texts = [s["text"] for s in slots
+                 if s["end"] > a0 and s["start"] < a1]
+        if not texts:
+            raise RuntimeError(f"锚点 {spk}[{a0},{a1}] 未覆盖任何字幕槽,"
+                               "请检查时间段")
+        ref_txt = " ".join(texts)[:600]
+        ref_wav = w / f"clone-ref-{spk}.wav"
+        _run([str(FFMPEG), "-y", "-i", str(audio), "-ss", str(a0),
+              "-t", str(a1 - a0), str(ref_wav)], task)
+        name = f"orig-{task.params['slug']}-{spk}".lower()[:40]
+        vl.create(name, ref_wav, ref_txt,
+                  note=f"自动克隆({task.params['slug']} 锚点)")
+        out[spk] = name
+        task.log(f"自动克隆音色 {name}(锚点 {a0}-{a1}s, ref {len(ref_txt)} 字)")
+    return out
+
+
 def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
     """构造 generate_voice 的 items/refs 输入。"""
     w = task.dir / "work"
@@ -623,11 +658,15 @@ def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
             json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
 
     speakers = sorted({i["speaker"] for i in items})
-    voices = {}
-    for spk in speakers:
-        name = task.params.get(f"voice_{spk}") or \
-            task.params.get("voice_A") or "doubao-taotao"
-        voices[spk] = name
+    if task.params.get("clone_original"):
+        voices = {spk: nm for spk, nm in
+                  _clone_original_voices(task).items() if spk in speakers}
+    else:
+        voices = {}
+        for spk in speakers:
+            name = task.params.get(f"voice_{spk}") or \
+                task.params.get("voice_A") or "doubao-taotao"
+            voices[spk] = name
     refs_path = w / "refs.json"
     refs_path.write_text(json.dumps(voice_lib.refs_json_for(voices),
                                     ensure_ascii=False, indent=1),
@@ -1090,6 +1129,15 @@ class Handler(BaseHTTPRequestHandler):
         if (STUDIO / slug).exists():
             return self._json({"ok": False,
                                "error": f"代号 {slug} 已存在"}, 400)
+        # 多人访谈:B 音色必填,或开启自动克隆原声(否则两人同声)
+        if tkey == "en_vtt_2" and not params.get("clone_original") \
+                and not params.get("voice_B"):
+            return self._json({"ok": False, "error":
+                               "多人访谈需指定 voice_B(或开启自动克隆原声),"
+                               "否则两位说话人会是同一个声音"}, 400)
+        if params.get("clone_original") and not params.get("anchors"):
+            return self._json({"ok": False, "error":
+                               "自动克隆原声需要填声纹锚点 anchors"}, 400)
         task = Task(tkey, params)
         task.save()
         task.log(f"创建: {spec['name']} / {slug}")
