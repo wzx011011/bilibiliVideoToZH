@@ -43,6 +43,9 @@ else:
 ROOT = Path(__file__).resolve().parents[1]
 # 数据目录(任务/锁/音色缓存):容器挂 /data,PC 默认 work/studio
 DATA_DIR = Path(os.environ.get("STUDIO_DATA") or (ROOT / "work" / "studio"))
+# 媒体根(NAS 容器挂载 /volume1/share/视频 → /media;PC local 模式无此功能)
+MEDIA_ROOT = Path(os.environ["STUDIO_MEDIA"]) if os.environ.get("STUDIO_MEDIA") else None
+MEDIA_SOURCE_DIR = os.environ.get("STUDIO_SOURCE_DIR", "原片库")  # 原片库子目录名
 TOOL_DIR = ROOT / "src"
 VENV_PY = str(ROOT / "work" / ".venv-ocr" / "Scripts" / "python.exe")
 VC_DIR = ROOT / "work" / "voice-clone-demo"
@@ -548,7 +551,7 @@ def _parse_srt(path: Path) -> list[tuple[float, float, str]]:
 def ex_ocr_zh(task: Task) -> str:
     w = task.dir / "work"
     # 复用历史 OCR:源是 downloads/episode-XX.mp4 且 subtitles/ 已有成品
-    m = re.search(r"episode-(\d+)", task.params.get("source_path", ""))
+    m = re.search(r"(?:episode-|第)(\d+)", task.params.get("source_path", ""))
     if m:
         hist = ROOT / "subtitles" / f"episode-{int(m.group(1)):02d}.zh-CN.srt"
         if hist.exists():
@@ -768,7 +771,8 @@ def retry_stage(task: Task) -> bool:
             task.current = i
             task.status = S_RUNNING
             task.save()
-            start_runner(task)
+            if MODE == "local":
+                start_runner(task)  # server 模式:重置后等 PC 代理领取
             return True
     return False
 
@@ -860,6 +864,10 @@ class Handler(BaseHTTPRequestHandler):
             if MODE == "local":
                 return self._json(voice_lib.list_voices())
             return self._json(_read_json(DATA_DIR / "voices.json", []))
+        if self.path.startswith("/api/library"):
+            return self._library()
+        if self.path.startswith("/api/download"):
+            return self._download()
         if self.path == "/api/status":
             act = _read_json(ACTIVE_PATH, {})
             ag = _read_json(AGENT_STATE_PATH, {})
@@ -897,11 +905,17 @@ class Handler(BaseHTTPRequestHandler):
             return self._create_voice()
         if self.path == "/api/selftest":
             if MODE == "server":
-                act = _read_json(ACTIVE_PATH, {})
-                return self._json({"detail": [
-                    f"控制面(server) ✓ mode={MODE}",
-                    f"代理: {'在线' if _read_json(AGENT_STATE_PATH, {}).get('last_seen') else '未接入'}",
-                    f"任务目录: {DATA_DIR}"]})
+                ag = _read_json(AGENT_STATE_PATH, {})
+                env = ag.get("env") or {}
+                det = [f"控制面(NAS 容器) ✓ 媒体库: {'✓' if MEDIA_ROOT and MEDIA_ROOT.exists() else '✗ 未挂载'}"]
+                det.append(f"PC 代理: {'✓ 在线' if ag.get('last_seen') else '✗ 未接入'}")
+                if env:
+                    det.append(f"代理环境: Ollama {'✓' if env.get('ollama_model') else '✗'}"
+                               f" | CosyVoice {'✓' if env.get('wsl_cosyvoice') else '✗'}"
+                               f" | NAS {'✓' if env.get('nas') else '✗'}")
+                else:
+                    det.append("(等待代理上报环境详情)")
+                return self._json({"detail": det})
             return self._json(env_selftest(self._body().get("model")))
         if self.path.startswith("/api/agent/"):
             return self._agent(self.path)
@@ -927,6 +941,68 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"ok": False, "error": f"未知 action"}, 400)
         return self._json({"ok": False, "error": "not found"}, 404)
 
+    def _library(self):
+        """浏览 NAS 媒体目录:?dir=<相对路径>(默认原片库)。
+        限制在 MEDIA_ROOT 内防目录穿越;返回文件/子目录列表。"""
+        if not MEDIA_ROOT or not MEDIA_ROOT.exists():
+            return self._json({"ok": False,
+                               "error": "未挂载媒体目录(STUDIO_MEDIA)"}, 400)
+        from urllib.parse import urlparse, parse_qs, unquote
+        q = parse_qs(urlparse(self.path).query)
+        rel = unquote((q.get("dir") or [""])[0]).replace("\\", "/").lstrip("/")
+        base = (MEDIA_ROOT / rel).resolve()
+        if not str(base).startswith(str(MEDIA_ROOT.resolve())):
+            return self._json({"ok": False, "error": "非法路径"}, 400)
+        if not base.exists():
+            return self._json({"ok": False, "error": "目录不存在"}, 404)
+        items = []
+        for p in sorted(base.iterdir()):
+            if p.name.startswith((".", "@", "#")):
+                continue
+            is_dir = p.is_dir()
+            if is_dir:
+                items.append({"name": p.name, "dir": True})
+            elif p.suffix.lower() in (".mp4", ".mkv", ".webm", ".mov", ".avi",
+                                      ".vtt", ".srt", ".mp3", ".wav", ".m4a"):
+                items.append({"name": p.name, "dir": False,
+                              "size": p.stat().st_size})
+        # NAS 绝对路径(供建任务用 nas: 前缀)
+        rel_clean = str((MEDIA_ROOT / rel).resolve().relative_to(
+            MEDIA_ROOT.resolve())) if rel else ""
+        nas_abs = ("/volume1/share/视频/" + rel_clean).rstrip("/")
+        return self._json({"ok": True, "dir": rel, "nas_abs": nas_abs,
+                           "items": items})
+
+    def _download(self):
+        """流式下载媒体文件:?path=<相对 MEDIA_ROOT 的路径>。"""
+        if not MEDIA_ROOT or not MEDIA_ROOT.exists():
+            self._json({"ok": False, "error": "未挂载媒体目录"}, 400)
+            return
+        from urllib.parse import urlparse, parse_qs, unquote
+        q = parse_qs(urlparse(self.path).query)
+        rel = unquote((q.get("path") or [""])[0]).replace("\\", "/").lstrip("/")
+        f = (MEDIA_ROOT / rel).resolve()
+        if not str(f).startswith(str(MEDIA_ROOT.resolve())) or not f.is_file():
+            self._json({"ok": False, "error": "非法路径"}, 400)
+            return
+        size = f.stat().st_size
+        self.send_response(HTTPStatus.OK)
+        self.send_header("Content-Type", "application/octet-stream")
+        self.send_header("Content-Disposition",
+                         "attachment; filename*=UTF-8''" +
+                         __import__("urllib.parse", fromlist=["quote"]).quote(f.name))
+        self.send_header("Content-Length", str(size))
+        self.end_headers()
+        with open(f, "rb") as fh:
+            while True:
+                chunk = fh.read(1024 * 1024)
+                if not chunk:
+                    break
+                try:
+                    self.wfile.write(chunk)
+                except Exception:
+                    break  # 客户端断开
+
     def _agent(self, path: str):
         """代理通道:poll 领任务 / stage / artifact / log / done / voices。
         鉴权:X-Agent-Token 与 DATA_DIR/.agent-token 一致。"""
@@ -943,9 +1019,13 @@ class Handler(BaseHTTPRequestHandler):
         act = path.rsplit("/", 1)[-1]
 
         if act == "poll":
-            _write_json(AGENT_STATE_PATH, {
+            state = _read_json(AGENT_STATE_PATH, {})
+            state.update({
                 "last_seen": __import__("datetime").datetime.now().isoformat(),
                 "agent": body.get("agent", "?")})
+            if body.get("env"):  # 代理上报的 PC 环境自检
+                state["env"] = body["env"]
+            _write_json(AGENT_STATE_PATH, state)
             t = agent_claim_task(body.get("agent", "?"))
             if t is None:
                 return self._json({"task": None})

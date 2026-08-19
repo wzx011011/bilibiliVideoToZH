@@ -23,9 +23,13 @@ echo "=== NAS 上构建镜像 ==="
 ssh nas "$DOCKER build -t studio-console /volume1/docker/studio-build"
 
 echo "=== (重)启动容器 ==="
+ssh nas "mkdir -p '/volume1/share/视频/原片库'"
 ssh nas "$DOCKER rm -f $NAME 2>/dev/null || true; \
   $DOCKER run -d --name $NAME --restart unless-stopped \
-  -p 8766:8766 -v $DATA:/data studio-console"
+  -p 8766:8766 -v $DATA:/data \
+  -v '/volume1/share/视频':/media:ro \
+  -e STUDIO_MEDIA=/media -e STUDIO_SOURCE_DIR=原片库 \
+  studio-console"
 
 sleep 3
 echo "=== 状态 ==="

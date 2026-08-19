@@ -100,6 +100,17 @@ pre.log { background: #111827; color: #d1d5db; font-size: 11px; line-height: 1.5
 </div>
 
 <div class="card">
+  <h2>原片库(NAS) <span class="hint">浏览 /volume1/share/视频 · 点文件填入建任务表单</span></h2>
+  <div id="lib-crumb" style="margin-bottom:6px;"></div>
+  <div id="lib-list" class="hint">加载中…</div>
+</div>
+
+<div class="card">
+  <h2>成品库(NAS) <span class="hint">各任务的五件套,点击下载</span></h2>
+  <div id="prod-list" class="hint">加载中…</div>
+</div>
+
+<div class="card">
   <h2>任务列表</h2>
   <div id="tasks"></div>
 </div>
@@ -153,6 +164,71 @@ function selectType(key) {
 const STAGE_CN = {ensure_source:'准备原片', extract_audio:'提取音频', en_slots:'英文字幕成槽',
   translate:'Ollama翻译', ocr_zh:'OCR字幕', cut_items:'文本切块', gen_audio:'CosyVoice配音',
   assemble_audio:'时间轴合成', zh_subtitle:'ASR中文字幕', render:'渲染成品'};
+
+let libDir = '';
+async function loadLib() {
+  const url = '/api/library' + (libDir ? '?dir=' + encodeURIComponent(libDir) : '');
+  const d = await (await fetch(url)).json();
+  const crumb = document.getElementById('lib-crumb');
+  const list = document.getElementById('lib-list');
+  if (!d.ok) { list.textContent = d.error || '不可用'; return; }
+  const parts = libDir ? libDir.split('/') : [];
+  let crumbs = `<a href="#" onclick="gotoLib('');return:false" style="margin-right:6px">📁 视频/</a>`;
+  // 面包屑写错会语法错,简单点:
+  crumb.innerHTML = '📁 ' + (libDir ? libDir.split('/').map((seg, i) =>
+    `<a href="#" onclick="gotoLib('${parts.slice(0, i+1).join('/')}')">${seg}</a>`).join(' / ') : '(根)') +
+    (libDir ? ` <a href="#" onclick="gotoLib('${parts.slice(0,-1).join('/')}')">⬆上层</a>` : '');
+  if (!d.items || !d.items.length) { list.textContent = '(空目录)'; return; }
+  list.innerHTML = d.items.map(it => it.dir
+    ? `<div style="padding:3px 0"><a href="#" onclick="gotoLib('${(libDir ? libDir + '/' : '') + it.name}')">📁 ${it.name}</a></div>`
+    : `<div style="padding:3px 0">📄 ${it.name} <span class="hint">${fmtSize(it.size)}</span>
+        ${/\.(mp4|mkv|webm|mov|avi)$/i.test(it.name) ? `<button class="btn sm" onclick="pickSource('${d.nas_abs}/${it.name}')">选作原片</button>` : ''}
+        ${/\.(vtt|srt)$/i.test(it.name) ? `<button class="btn sm" onclick="pickVtt('${d.nas_abs}/${it.name}')">选作字幕</button>` : ''}
+        <button class="btn sm" onclick="dl('${(libDir ? libDir + '/' : '') + it.name}')">下载</button></div>`).join('');
+}
+function gotoLib(d) { libDir = d; loadLib(); }
+function pickSource(nasPath) {
+  if (!selected) { showToast('先在上方选择视频类型', true); return; }
+  const el = document.getElementById('param-source_path');
+  if (!el) { showToast('请先选择类型展开表单', true); return; }
+  el.value = 'nas:' + nasPath;
+  showToast('已填入原片: ' + nasPath.split('/').pop());
+  document.getElementById('form-area').scrollIntoView({behavior:'smooth'});
+}
+function pickVtt(nasPath) {
+  const el = document.getElementById('param-vtt_path');
+  if (!el) { showToast('该类型不需要字幕文件', true); return; }
+  el.value = 'nas:' + nasPath;
+  showToast('已填入字幕: ' + nasPath.split('/').pop());
+}
+function dl(rel) { window.open('/api/download?path=' + encodeURIComponent(rel)); }
+
+async function loadProducts() {
+  const box = document.getElementById('prod-list');
+  try {
+    const d = await (await fetch('/api/library?dir=')).json();
+    if (!d.ok) { box.textContent = d.error || '不可用'; return; }
+    const tasks = d.items.filter(it => it.dir && /^\d{2}-视频源$/.test('') === false);
+    // 任务目录 = 含 01-视频源 子结构的顶层目录:逐个探测太多次请求,直接列顶层的目录并探测一次
+    const out = [];
+    for (const it of d.items.filter(x => x.dir)) {
+      const sub = await (await fetch('/api/library?dir=' + encodeURIComponent(it.name))).json();
+      if (!sub.ok || !sub.items.some(x => x.dir && x.name.startsWith('01-'))) continue;
+      const files = [];
+      for (const slotDir of sub.items.filter(x => x.dir)) {
+        const f = await (await fetch('/api/library?dir=' + encodeURIComponent(it.name + '/' + slotDir.name))).json();
+        if (f.ok) f.items.filter(x => !x.dir).forEach(x => files.push({slot: slotDir.name, name: x.name, size: x.size,
+          path: it.name + '/' + slotDir.name + '/' + x.name}));
+      }
+      out.push({name: it.name, files});
+    }
+    box.innerHTML = out.length ? out.map(t => `
+      <details style="margin-bottom:8px"><summary style="cursor:pointer"><b>${t.name}</b> <span class="hint">${t.files.length} 个产物</span></summary>
+        ${t.files.map(f => `<div style="padding:3px 0 3px 16px">📦 ${f.slot}/ <b>${f.name}</b> <span class="hint">${fmtSize(f.size)}</span>
+          <button class="btn sm" onclick="dl('${f.path}')">下载</button></div>`).join('')}
+      </details>`).join('') : '(暂无成品任务)';
+  } catch (e) { box.textContent = '加载失败: ' + e.message; }
+}
 
 async function loadVoices() {
   VOICES = await (await fetch('/api/voices')).json();
@@ -268,7 +344,9 @@ function showToast(msg, isError) {
 }
 
 loadVoices().then(() => loadTypes()).then(fetchTasks);
+loadLib(); loadProducts();
 setInterval(fetchTasks, 3000);
+setInterval(() => { loadLib(); loadProducts(); }, 60000);
 </script>
 </body>
 </html>

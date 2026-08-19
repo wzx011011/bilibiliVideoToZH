@@ -14,8 +14,11 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import subprocess
 import sys
 import time
+from pathlib import Path
 import urllib.request
 from pathlib import Path
 
@@ -83,8 +86,30 @@ class AgentReporter:
         return nas
 
 
+def materialize_source(params: dict, rep=None) -> None:
+    """source_path 为 nas:/<绝对路径> 时,把原片从 NAS 拉回 PC 本地缓存。"""
+    src = params.get("source_path", "")
+    m = re.match(r"^nas:(/.+)$", src)
+    if not m:
+        return
+    remote = m.group(1)
+    slug = params["slug"]
+    dst_dir = pa.STUDIO / slug / "nas-source"
+    dst_dir.mkdir(parents=True, exist_ok=True)
+    dst = dst_dir / Path(remote).name
+    if not dst.exists():
+        if rep:
+            rep.log(f"从 NAS 拉取原片: {remote}")
+        subprocess.run(["scp", f"nas:'{remote}'", str(dst)], check=True)
+    params["source_path"] = str(dst)
+    if rep:
+        rep.log(f"原片就绪(本地缓存): {dst.name} "
+                f"{dst.stat().st_size // 1048576}MB")
+
+
 def run_one(detail: dict) -> None:
     """执行一个领到的任务(从控制面 detail 重建本地 Task 对象)。"""
+    materialize_source(detail["params"])  # nas:// 源先拉回本地
     task = pa.Task(detail["type"], detail["params"])
     task.id = detail["id"]
     # 对齐控制面进度
@@ -153,12 +178,17 @@ def push_voices() -> None:
 def main() -> None:
     print(f"[agent] server={SERVER} name={AGENT_NAME} poll={POLL_SEC}s")
     last_voice_push = 0.0
+    last_env_push = 0.0
     while True:
         try:
+            env = None
+            if time.time() - last_env_push > 600:
+                env = pa.env_selftest()  # PC 真实干活环境,随 poll 上报
+                last_env_push = time.time()
             if time.time() - last_voice_push > 600:
                 push_voices()
                 last_voice_push = time.time()
-            r = _post("/api/agent/poll", {"agent": AGENT_NAME})
+            r = _post("/api/agent/poll", {"agent": AGENT_NAME, "env": env})
             t = r.get("task")
             if t:
                 print(f"[agent] 领到任务 {t['id']} {t.get('slug')}")
