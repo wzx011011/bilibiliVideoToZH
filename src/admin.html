@@ -75,13 +75,22 @@ pre.log { background: #111827; color: #d1d5db; font-size: 11px; line-height: 1.5
 </div>
 
 <div class="card">
-  <h2>① 选择视频类型</h2>
+  <h2>① 原片库(NAS) <span class="hint">勾选视频 → 配置类型 → 批量创建;点文件名进入目录/选择</span></h2>
+  <div id="lib-crumb" style="margin-bottom:6px;"></div>
+  <div id="lib-list" class="hint">加载中…</div>
+  <div id="picked-bar" style="margin-top:10px; padding:10px; background:#eff6ff; border-radius:6px; display:none"></div>
+</div>
+
+<div class="card" id="config-area" style="display:none">
+  <h2>② 配置任务 <span class="hint">统一设置;每个视频可在下方微调</span></h2>
   <div class="types" id="types"></div>
-  <div id="form-area" style="display:none">
-    <h2 style="margin-top:18px">② 新建任务</h2>
-    <div class="stage-preview" id="stage-preview"></div>
-    <div class="form-grid" id="form-fields"></div>
-    <button class="btn primary" onclick="createTask()">创建并开始</button>
+  <div id="stage-preview" class="stage-preview" style="margin:10px 0"></div>
+  <h3 style="font-size:13px;margin:12px 0 6px;color:#374151">按片参数(VTT 已自动同名匹配;slug 默认取文件名)</h3>
+  <div id="per-file"></div>
+  <div class="form-grid" id="form-fields"></div>
+  <div style="margin-top:8px">
+    <button class="btn primary" onclick="createTasksBatch()">批量创建并开始</button>
+    <button class="btn" onclick="addManualRow()">+ 手动添加路径</button>
   </div>
 </div>
 
@@ -97,12 +106,6 @@ pre.log { background: #111827; color: #d1d5db; font-size: 11px; line-height: 1.5
     </div>
     <button class="btn" onclick="createVoice()">注册</button>
   </details>
-</div>
-
-<div class="card">
-  <h2>原片库(NAS) <span class="hint">浏览 /volume1/share/视频 · 点文件填入建任务表单</span></h2>
-  <div id="lib-crumb" style="margin-bottom:6px;"></div>
-  <div id="lib-list" class="hint">加载中…</div>
 </div>
 
 <div class="card">
@@ -143,11 +146,13 @@ function renderTypes() {
 function selectType(key) {
   selected = key;
   renderTypes();
+  renderPerFile();
   const t = TYPES.find(x => x.key === key);
   document.getElementById('form-area').style.display = 'block';
   document.getElementById('stage-preview').textContent = '工作流: ' +
     t.stages.map(s => STAGE_CN[s] || s).join(' → ');
-  document.getElementById('form-fields').innerHTML = t.params.map(f => {
+  document.getElementById('form-fields').innerHTML = t.params.filter(f =>
+      !['slug', 'source_path', 'vtt_path', 'anchors'].includes(f.key)).map(f => {
     if (f.type === 'voice') {
       const opts = VOICES.map(v => `<option value="${v.name}">${v.name}</option>`).join('');
       return `<div class="field"><label>${f.label}</label>
@@ -166,40 +171,135 @@ const STAGE_CN = {ensure_source:'准备原片', extract_audio:'提取音频', en
   assemble_audio:'时间轴合成', zh_subtitle:'ASR中文字幕', render:'渲染成品'};
 
 let libDir = '';
+let picked = new Map();   // nasPath -> {name, dir}
+let dirItemsCache = {};   // dir -> items(供 VTT 同名匹配)
+let manualRows = [];
+
 async function loadLib() {
   const url = '/api/library' + (libDir ? '?dir=' + encodeURIComponent(libDir) : '');
   const d = await (await fetch(url)).json();
-  const crumb = document.getElementById('lib-crumb');
   const list = document.getElementById('lib-list');
+  const crumb = document.getElementById('lib-crumb');
   if (!d.ok) { list.textContent = d.error || '不可用'; return; }
+  dirItemsCache[libDir] = d.items;
   const parts = libDir ? libDir.split('/') : [];
-  let crumbs = `<a href="#" onclick="gotoLib('');return:false" style="margin-right:6px">📁 视频/</a>`;
-  // 面包屑写错会语法错,简单点:
-  crumb.innerHTML = '📁 ' + (libDir ? libDir.split('/').map((seg, i) =>
+  crumb.innerHTML = '📁 ' + (libDir ? parts.map((seg, i) =>
     `<a href="#" onclick="gotoLib('${parts.slice(0, i+1).join('/')}')">${seg}</a>`).join(' / ') : '(根)') +
-    (libDir ? ` <a href="#" onclick="gotoLib('${parts.slice(0,-1).join('/')}')">⬆上层</a>` : '');
+    (libDir ? ` <a href="#" onclick="gotoLib('${parts.slice(0,-1).join('/')}')">⬆</a>` : '');
   if (!d.items || !d.items.length) { list.textContent = '(空目录)'; return; }
-  list.innerHTML = d.items.map(it => it.dir
-    ? `<div style="padding:3px 0"><a href="#" onclick="gotoLib('${(libDir ? libDir + '/' : '') + it.name}')">📁 ${it.name}</a></div>`
-    : `<div style="padding:3px 0">📄 ${it.name} <span class="hint">${fmtSize(it.size)}</span>
-        ${/\.(mp4|mkv|webm|mov|avi)$/i.test(it.name) ? `<button class="btn sm" onclick="pickSource('${d.nas_abs}/${it.name}')">选作原片</button>` : ''}
-        ${/\.(vtt|srt)$/i.test(it.name) ? `<button class="btn sm" onclick="pickVtt('${d.nas_abs}/${it.name}')">选作字幕</button>` : ''}
-        <button class="btn sm" onclick="dl('${(libDir ? libDir + '/' : '') + it.name}')">下载</button></div>`).join('');
+  list.innerHTML = d.items.map(it => {
+    if (it.dir) return `<div style="padding:3px 0"><a href="#" onclick="gotoLib('${(libDir ? libDir + '/' : '') + it.name}')">📁 ${it.name}</a></div>`;
+    const nasPath = `${d.nas_abs}/${it.name}`;
+    const rel = (libDir ? libDir + '/' : '') + it.name;
+    const isVideo = /\.(mp4|mkv|webm|mov|avi)$/i.test(it.name);
+    const checked = picked.has(nasPath);
+    const safe = nasPath.replace(/'/g, "\\'");
+    return `<div style="padding:3px 0">
+      ${isVideo ? `<input type="checkbox" ${checked?'checked':''} onchange="togglePick('${safe}')">` : '⬜'}
+      <label style="cursor:pointer" onclick="togglePick('${safe}')">📄 ${it.name}</label>
+      <span class="hint">${fmtSize(it.size)}</span>
+      ${isVideo ? '' : `<button class="btn sm" onclick="dl('${rel}')">下载</button>`}
+    </div>`;
+  }).join('');
+  renderPicked();
 }
 function gotoLib(d) { libDir = d; loadLib(); }
-function pickSource(nasPath) {
-  if (!selected) { showToast('先在上方选择视频类型', true); return; }
-  const el = document.getElementById('param-source_path');
-  if (!el) { showToast('请先选择类型展开表单', true); return; }
-  el.value = 'nas:' + nasPath;
-  showToast('已填入原片: ' + nasPath.split('/').pop());
-  document.getElementById('form-area').scrollIntoView({behavior:'smooth'});
+function togglePick(nasPath) {
+  if (picked.has(nasPath)) picked.delete(nasPath);
+  else picked.set(nasPath, {name: nasPath.split('/').pop(), dir: libDir});
+  loadLib();
 }
-function pickVtt(nasPath) {
-  const el = document.getElementById('param-vtt_path');
-  if (!el) { showToast('该类型不需要字幕文件', true); return; }
-  el.value = 'nas:' + nasPath;
-  showToast('已填入字幕: ' + nasPath.split('/').pop());
+function renderPicked() {
+  const bar = document.getElementById('picked-bar');
+  if (!picked.size && !manualRows.length) { bar.style.display = 'none'; return; }
+  bar.style.display = 'block';
+  bar.innerHTML = `<b>已选 ${picked.size} 个视频</b>
+    ${[...picked.keys()].map(p => `<span style="font-size:11px;background:#fff;border-radius:4px;padding:2px 8px;margin:0 2px">${p.split('/').pop()}</span>`).join('')}
+    <button class="btn" onclick="picked.clear();manualRows=[];loadLib()">清空</button>
+    <button class="btn primary" onclick="openConfig()">配置任务 →</button>`;
+}
+function openConfig() {
+  if (!picked.size) { showToast('先勾选视频', true); return; }
+  const area = document.getElementById('config-area');
+  area.style.display = 'block';
+  area.scrollIntoView({behavior:'smooth'});
+  renderPerFile();
+}
+function autoSlug(name) {
+  return (name || '').replace(/\.[^.]+$/, '').replace(/[\s\\/:*?"<>|]+/g, '-').slice(0, 30) || 'task';
+}
+function autoVtt(nasPath) {
+  const info = picked.get(nasPath) || {};
+  const items = dirItemsCache[info.dir || ''] || [];
+  const base = (info.name || '').replace(/\.[^.]+$/, '');
+  for (const suffix of ['.en-orig.vtt', '.en.vtt', '.vtt']) {
+    const hit = items.find(x => !x.dir && x.name === base + suffix);
+    if (hit) return hit;
+  }
+  return null;
+}
+function renderPerFile() {
+  const box = document.getElementById('per-file');
+  if (!box) return;
+  const t = TYPES.find(x => x.key === selected);
+  const needVtt = t && t.dims.subtitle === 'en_vtt';
+  const needAnchors = selected === 'en_vtt_2';
+  const keys = [...picked.keys()];
+  box.innerHTML = keys.length ? keys.map((nasPath, i) => {
+    const info = picked.get(nasPath);
+    const vtt = autoVtt(nasPath);
+    const vttVal = vtt ? 'nas:/volume1/share/视频/' + (info.dir ? info.dir + '/' : '') + vtt.name : '';
+    const safe = nasPath.replace(/'/g, "\\'");
+    return `<div style="padding:6px 8px;border:1px solid #e5e7eb;border-radius:6px;margin-bottom:6px;background:#f9fafb">
+      <b>${info.name || '(手动)'}</b>
+      ${info.manual ? `<input id="pf-src-${i}" placeholder="原片路径(nas:... 或本地路径)" style="width:65%;margin-left:8px;padding:2px 6px">` : ''}
+      <span style="float:right"><a href="#" onclick="picked.delete('${safe}');renderPerFile();renderPicked()" style="color:#b91c1c">✕</a></span>
+      <div style="display:flex;gap:8px;margin-top:5px;flex-wrap:wrap;align-items:center">
+        <span class="hint">slug:</span><input id="pf-slug-${i}" value="${autoSlug(info.name)}" style="width:130px;border:1px solid #d1d5db;border-radius:4px;padding:2px 6px;font-size:12px">
+        ${needVtt ? `<span class="hint">VTT:</span><input id="pf-vtt-${i}" value="${vttVal}" placeholder="同名VTT未找到,必填" style="flex:1;min-width:170px;border:1px solid ${vtt ? '#d1d5db' : '#f59e0b'};border-radius:4px;padding:2px 6px;font-size:12px">` : ''}
+        ${needAnchors ? `<span class="hint">锚点:</span><input id="pf-anch-${i}" placeholder='{"A":[3.5,18.8],"B":[547.3,566.1]}' style="flex:1;min-width:170px;border:1px solid #d1d5db;border-radius:4px;padding:2px 6px;font-size:12px">` : ''}
+      </div>
+    </div>`;
+  }).join('') : '<div class="hint">(未选视频)</div>';
+}
+async function createTasksBatch() {
+  const t = TYPES.find(x => x.key === selected);
+  if (!t) { showToast('先选视频类型', true); return; }
+  const common = {};
+  for (const f of t.params) {
+    if (['slug', 'source_path', 'vtt_path', 'anchors'].includes(f.key)) continue;
+    const el = document.getElementById('param-' + f.key);
+    if (el && el.value.trim()) common[f.key] = el.value.trim();
+  }
+  const keys = [...picked.keys()];
+  const usedSlugs = new Set();
+  const results = [];
+  for (let i = 0; i < keys.length; i++) {
+    const nasPath = keys[i], info = picked.get(nasPath);
+    let slug = (document.getElementById('pf-slug-' + i)?.value || autoSlug(info.name)).trim();
+    while (usedSlugs.has(slug)) slug += '-2';
+    usedSlugs.add(slug);
+    const params = {slug, ...common};
+    params.source_path = info.manual
+      ? (document.getElementById('pf-src-' + i)?.value || '').trim()
+      : nasPath;
+    const vttEl = document.getElementById('pf-vtt-' + i);
+    if (vttEl) params.vtt_path = vttEl.value.trim();
+    const anchEl = document.getElementById('pf-anch-' + i);
+    if (anchEl && anchEl.value.trim()) params.anchors = anchEl.value.trim();
+    if (!params.source_path) { results.push(`✗ ${slug}: 缺原片路径`); continue; }
+    if (t.dims.subtitle === 'en_vtt' && !params.vtt_path) { results.push(`✗ ${slug}: 缺VTT`); continue; }
+    try {
+      const d = await (await fetch('/api/tasks', {method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({type: selected, params})})).json();
+      results.push(d.ok ? `✓ ${slug}` : `✗ ${slug}: ${d.error}`);
+    } catch (e) { results.push(`✗ ${slug}: ${e.message}`); }
+  }
+  showToast(results.join(' | '), results.some(r => r.startsWith('✗')));
+  picked.clear(); manualRows = []; renderPicked(); loadLib();
+  document.getElementById('config-area').style.display = 'none';
+  fetchTasks();
 }
 function dl(rel) { window.open('/api/download?path=' + encodeURIComponent(rel)); }
 

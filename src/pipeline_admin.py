@@ -1083,8 +1083,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json(
                     {"ok": False, "error": f"缺少必填参数 {p['label']}"}, 400)
         slug = params.get("slug", "").strip()
-        if not re.fullmatch(r"[A-Za-z0-9_-]{2,40}", slug):
-            return self._json({"ok": False, "error": "代号仅限字母数字-_"}, 400)
+        # \w 在 Python3 默认含中文;允许中文任务名(NAS 目录名友好)
+        if not re.fullmatch(r"[\w-]{2,40}", slug):
+            return self._json({"ok": False,
+                               "error": "代号仅限中文/字母/数字/-_"}, 400)
         if (STUDIO / slug).exists():
             return self._json({"ok": False,
                                "error": f"代号 {slug} 已存在"}, 400)
