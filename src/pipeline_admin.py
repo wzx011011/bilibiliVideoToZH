@@ -46,6 +46,8 @@ DATA_DIR = Path(os.environ.get("STUDIO_DATA") or (ROOT / "work" / "studio"))
 # 媒体根(NAS 容器挂载 /volume1/share/视频 → /media;PC local 模式无此功能)
 MEDIA_ROOT = Path(os.environ["STUDIO_MEDIA"]) if os.environ.get("STUDIO_MEDIA") else None
 MEDIA_SOURCE_DIR = os.environ.get("STUDIO_SOURCE_DIR", "原片库")  # 原片库子目录名
+# 媒体根在 NAS 的真实绝对路径(供 nas: 前缀建任务;本地 local 模式无)
+NAS_MEDIA_ABS = os.environ.get("STUDIO_NAS_MEDIA", "/volume1/share/视频汉化项目")
 TOOL_DIR = ROOT / "src"
 VENV_PY = str(ROOT / "work" / ".venv-ocr" / "Scripts" / "python.exe")
 VC_DIR = ROOT / "work" / "voice-clone-demo"
@@ -1008,7 +1010,7 @@ class Handler(BaseHTTPRequestHandler):
         # NAS 绝对路径(供建任务用 nas: 前缀)
         rel_clean = str((MEDIA_ROOT / rel).resolve().relative_to(
             MEDIA_ROOT.resolve())) if rel else ""
-        nas_abs = ("/volume1/share/视频/" + rel_clean).rstrip("/")
+        nas_abs = (NAS_MEDIA_ABS + "/" + rel_clean).rstrip("/")
         return self._json({"ok": True, "dir": rel, "nas_abs": nas_abs,
                            "items": items})
 
