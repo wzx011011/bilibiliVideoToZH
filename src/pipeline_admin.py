@@ -19,7 +19,12 @@ v1 的豆包链已退役(代码保留于仓库,不再被本平台引用)。
 """
 from __future__ import annotations
 
+import os
+
+MODE = os.environ.get("STUDIO_MODE", "local")
+
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -30,17 +35,22 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-import voice_lib
+if MODE == "local":
+    import voice_lib  # server 容器不带该模块(音色由代理上报)
+else:
+    voice_lib = None
 
 ROOT = Path(__file__).resolve().parents[1]
+# 数据目录(任务/锁/音色缓存):容器挂 /data,PC 默认 work/studio
+DATA_DIR = Path(os.environ.get("STUDIO_DATA") or (ROOT / "work" / "studio"))
 TOOL_DIR = ROOT / "src"
 VENV_PY = str(ROOT / "work" / ".venv-ocr" / "Scripts" / "python.exe")
 VC_DIR = ROOT / "work" / "voice-clone-demo"
 VC_PY = str(VC_DIR / ".venv" / "Scripts" / "python.exe")
 FFMPEG = ROOT / "work" / "video-tools" / "ffmpeg.exe"
 FFPROBE = ROOT / "work" / "video-tools" / "ffprobe.exe"
-STUDIO = ROOT / "work" / "studio"
-STATE_DIR = STUDIO / "tasks"
+STUDIO = DATA_DIR
+STATE_DIR = DATA_DIR / "tasks"
 PORT = 8766
 NAS_BASE = "/volume1/share/视频"
 WSL_PY = "/home/comfy/cosy-gpu-venv/bin/python"
@@ -175,6 +185,69 @@ STAGE_LABELS = {
     "zh_subtitle": "ASR 中文字幕",
     "render": "渲染成品",
 }
+
+
+# =====================================================================
+# agent 分配(server 模式):单任务锁 + 心跳回收 + 代理上报的音色缓存
+# =====================================================================
+
+ACTIVE_PATH = DATA_DIR / "active.json"
+AGENT_STATE_PATH = DATA_DIR / "agent-state.json"
+
+
+def _read_json(p: Path, default):
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return default
+
+
+def _write_json(p: Path, data) -> None:
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(data, ensure_ascii=False, indent=1),
+                 encoding="utf-8")
+
+
+def agent_claim_task(agent: str):
+    """取下一个可执行任务:无 active 锁且阶段未跑完的最老任务。
+    心跳超时(15 分钟)的锁自动回收,任务置 failed 待重试。"""
+    import datetime as _dt
+    act = _read_json(ACTIVE_PATH, None)
+    if act:
+        hb = _dt.datetime.fromisoformat(act.get("heartbeat", "2000-01-01"))
+        if _dt.datetime.now() - hb < _dt.timedelta(minutes=15):
+            return None  # 已有代理在干活
+        # 代理失联:回收
+        t = load_task(act.get("task_id") or "")
+        if t and t.status == S_RUNNING:
+            t.status = S_FAILED
+            cur = t.stages[t.current] if t.current < len(t.stages) else None
+            if cur and cur["status"] == P_RUNNING:
+                cur["status"], cur["error"] = P_FAILED, "代理失联(心跳超时)"
+            t.save()
+        _write_json(ACTIVE_PATH, {})
+    for t in list_tasks():
+        if t.status != S_RUNNING:
+            continue
+        if any(s["status"] == P_PENDING for s in t.stages):
+            _write_json(ACTIVE_PATH, {"task_id": t.id, "agent": agent,
+                                      "heartbeat": _dt.datetime.now().isoformat()})
+            return t
+    return None
+
+
+def agent_heartbeat(task_id: str) -> None:
+    act = _read_json(ACTIVE_PATH, {})
+    if act.get("task_id") == task_id:
+        import datetime as _dt
+        act["heartbeat"] = _dt.datetime.now().isoformat()
+        _write_json(ACTIVE_PATH, act)
+
+
+def agent_release(task_id: str) -> None:
+    act = _read_json(ACTIVE_PATH, {})
+    if act.get("task_id") == task_id:
+        _write_json(ACTIVE_PATH, {})
 
 
 # =====================================================================
@@ -784,7 +857,20 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/types":
             return self._json(VIDEO_TYPES)
         if self.path == "/api/voices":
-            return self._json(voice_lib.list_voices())
+            if MODE == "local":
+                return self._json(voice_lib.list_voices())
+            return self._json(_read_json(DATA_DIR / "voices.json", []))
+        if self.path == "/api/status":
+            act = _read_json(ACTIVE_PATH, {})
+            ag = _read_json(AGENT_STATE_PATH, {})
+            import datetime as _dt
+            seen = ag.get("last_seen")
+            online = bool(seen and _dt.datetime.now()
+                          - _dt.datetime.fromisoformat(seen)
+                          < _dt.timedelta(minutes=3))
+            return self._json({"mode": MODE, "agent_online": online,
+                               "agent_last_seen": seen,
+                               "active_task": act.get("task_id")})
         if self.path == "/api/tasks":
             return self._json([t.brief() for t in list_tasks()])
         m = re.fullmatch(r"/api/tasks/([A-Za-z0-9-]+)", self.path)
@@ -810,7 +896,15 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/voices":
             return self._create_voice()
         if self.path == "/api/selftest":
+            if MODE == "server":
+                act = _read_json(ACTIVE_PATH, {})
+                return self._json({"detail": [
+                    f"控制面(server) ✓ mode={MODE}",
+                    f"代理: {'在线' if _read_json(AGENT_STATE_PATH, {}).get('last_seen') else '未接入'}",
+                    f"任务目录: {DATA_DIR}"]})
             return self._json(env_selftest(self._body().get("model")))
+        if self.path.startswith("/api/agent/"):
+            return self._agent(self.path)
         m = re.fullmatch(r"/api/tasks/([A-Za-z0-9-]+)/action", self.path)
         if m:
             t = load_task(m.group(1))
@@ -833,6 +927,70 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"ok": False, "error": f"未知 action"}, 400)
         return self._json({"ok": False, "error": "not found"}, 404)
 
+    def _agent(self, path: str):
+        """代理通道:poll 领任务 / stage / artifact / log / done / voices。
+        鉴权:X-Agent-Token 与 DATA_DIR/.agent-token 一致。"""
+        tok = self.headers.get("X-Agent-Token", "")
+        want = _read_json(DATA_DIR / ".agent-token", {}).get("token")
+        if not want:
+            import secrets
+            want = secrets.token_hex(8)
+            DATA_DIR.mkdir(parents=True, exist_ok=True)
+            _write_json(DATA_DIR / ".agent-token", {"token": want})
+        if tok != want:
+            return self._json({"ok": False, "error": "bad token"}, 401)
+        body = self._body()
+        act = path.rsplit("/", 1)[-1]
+
+        if act == "poll":
+            _write_json(AGENT_STATE_PATH, {
+                "last_seen": __import__("datetime").datetime.now().isoformat(),
+                "agent": body.get("agent", "?")})
+            t = agent_claim_task(body.get("agent", "?"))
+            if t is None:
+                return self._json({"task": None})
+            return self._json({"task": t.detail()})
+
+        if act == "voices":
+            _write_json(DATA_DIR / "voices.json", body.get("voices", []))
+            return self._json({"ok": True})
+
+        task_id = body.get("task_id", "")
+        t = load_task(task_id)
+        if not t:
+            return self._json({"ok": False, "error": "任务不存在"}, 404)
+        agent_heartbeat(task_id)
+
+        if act == "stage":
+            t.mark_stage(body.get("key"), body.get("status"),
+                         error=body.get("error"), note=body.get("note"))
+            if body.get("advance"):
+                t.current += 1
+                t.save()
+            return self._json({"ok": True})
+        if act == "artifact":
+            info = t.artifacts.get(body.get("slot") or "")
+            if info is None:
+                return self._json({"ok": False, "error": "未知槽"}, 400)
+            info.update(status=P_DONE,
+                        local_path=body.get("local_path"),
+                        size=body.get("size"),
+                        nas_path=body.get("nas_path"),
+                        error=body.get("error"))
+            t.save()
+            return self._json({"ok": True})
+        if act == "log":
+            with open(t.log_path, "a", encoding="utf-8") as f:
+                for line in body.get("lines", []):
+                    f.write(line + chr(10))
+            return self._json({"ok": True})
+        if act == "done":
+            t.status = body.get("status") or S_DONE
+            t.save()
+            agent_release(task_id)
+            return self._json({"ok": True})
+        return self._json({"ok": False, "error": f"未知 agent 动作 {act}"})
+
     def _create(self):
         d = self._body()
         tkey = d.get("type", "")
@@ -853,7 +1011,10 @@ class Handler(BaseHTTPRequestHandler):
         task = Task(tkey, params)
         task.save()
         task.log(f"创建: {spec['name']} / {slug}")
-        start_runner(task)
+        if MODE == "local":
+            start_runner(task)
+        else:
+            task.log("排队等待 PC 代理领取")
         return self._json({"ok": True, "task": task.brief()})
 
     def _create_voice(self):
@@ -891,13 +1052,18 @@ def main():
     args = ap.parse_args()
 
     STATE_DIR.mkdir(parents=True, exist_ok=True)
-    voice_lib.seed_defaults()
+    if MODE == "local":
+        voice_lib.seed_defaults()
     srv = ThreadingHTTPServer((args.host, args.port), Handler)
     print(f"[studio] http://127.0.0.1:{args.port}")
     for ip in _lan_ips():
         print(f"[studio] 局域网: http://{ip}:{args.port}")
     print(f"[studio] 类型: {', '.join(VIDEO_TYPES)}")
     print(f"[studio] NAS: {NAS_BASE} | 翻译默认: {DEFAULT_TRANSLATE_MODEL}")
+    if MODE == "server":
+        tok = _read_json(DATA_DIR / ".agent-token", {}).get("token")
+        print(f"[studio] server 模式:等待 PC 代理接入(数据目录 {DATA_DIR})")
+        print(f"[studio] 代理 token: {tok}(PC 代理 STUDIO_TOKEN 环境变量)")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
