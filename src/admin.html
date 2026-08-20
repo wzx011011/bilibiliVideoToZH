@@ -246,7 +246,7 @@ pre.log { background: #10151f; color: #cbd5e1; font-size: 11px; line-height: 1.5
 <script>
 let TYPES = [], VOICES = [], selected = null;
 let tasks = [];
-let libDir = '';
+let libDir = '原片库';
 let picked = new Map();
 let dirItemsCache = {};
 
@@ -544,17 +544,17 @@ async function loadLib2() {
 async function loadProducts() {
   const box = g('prod-list');
   try {
-    const d = await (await fetch('/api/library?dir=')).json();
+    const d = await (await fetch('/api/library?dir='+encodeURIComponent('成品库'))).json();
     if (!d.ok) { box.textContent = d.error; return; }
     const out = [];
     for (const it of d.items.filter(x=>x.dir)) {
-      const sub = await (await fetch('/api/library?dir='+encodeURIComponent(it.name))).json();
+      const sub = await (await fetch('/api/library?dir='+encodeURIComponent('成品库/'+it.name))).json();
       if (!sub.ok || !sub.items.some(x=>x.dir&&x.name.startsWith('01-'))) continue;
       const files = [];
       for (const sd of sub.items.filter(x=>x.dir)) {
-        const f = await (await fetch('/api/library?dir='+encodeURIComponent(it.name+'/'+sd.name))).json();
+        const f = await (await fetch('/api/library?dir='+encodeURIComponent('成品库/'+it.name+'/'+sd.name))).json();
         if (f.ok) f.items.filter(x=>!x.dir).forEach(x=>files.push({slot:sd.name,name:x.name,size:x.size,
-          path:it.name+'/'+sd.name+'/'+x.name}));
+          path:'成品库/'+it.name+'/'+sd.name+'/'+x.name}));
       }
       out.push({name:it.name, files});
     }

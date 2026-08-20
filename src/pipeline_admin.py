@@ -57,7 +57,9 @@ FFPROBE = ROOT / "work" / "video-tools" / "ffprobe.exe"
 STUDIO = DATA_DIR
 STATE_DIR = DATA_DIR / "tasks"
 PORT = 8766
-NAS_BASE = "/volume1/share/视频"
+NAS_BASE = "/volume1/share/视频汉化项目"
+NAS_SOURCE_BASE = NAS_BASE + "/原片库"
+NAS_PRODUCT_BASE = NAS_BASE + "/成品库"
 WSL_PY = "/home/comfy/cosy-gpu-venv/bin/python"
 WSL_ENV = ("HSA_ENABLE_DXG_DETECTION=1 COSY_FP16=0 "
            "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1")
@@ -68,11 +70,11 @@ DEFAULT_TRANSLATE_MODEL = "qwen3:14b"
 # =====================================================================
 
 ARTIFACT_SLOTS = {
-    "source_video": {"label": "视频源", "nas_dir": "01-视频源"},
-    "en_subtitle": {"label": "英文字幕", "nas_dir": "02-英文字幕"},
-    "zh_subtitle": {"label": "中文字幕", "nas_dir": "03-中文字幕"},
-    "zh_audio": {"label": "中文音频", "nas_dir": "04-中文音频"},
-    "final_video": {"label": "成品", "nas_dir": "05-成品"},
+    "source_video": {"label": "视频源", "nas_dir": "视频源"},
+    "en_subtitle": {"label": "英文字幕", "nas_dir": "01-英文字幕"},
+    "zh_subtitle": {"label": "中文字幕", "nas_dir": "02-中文字幕"},
+    "zh_audio": {"label": "中文音频", "nas_dir": "03-中文音频"},
+    "final_video": {"label": "成品", "nas_dir": "04-中文视频"},
 }
 
 # =====================================================================
@@ -368,7 +370,9 @@ class Task:
     def upload_to_nas(self, slot: str, path: Path) -> str | None:
         slug = self.params["slug"]
         sub = ARTIFACT_SLOTS[slot]["nas_dir"]
-        nas_dir = f"{NAS_BASE}/{slug}/{sub}"
+        # 原片与生成资源分根:源→原片库,其余→成品库
+        root = NAS_SOURCE_BASE if slot == "source_video" else NAS_PRODUCT_BASE
+        nas_dir = f"{root}/{slug}/{sub}"
         # scp 会把 Windows 盘符 E: 解析成主机名,整路径变文件名(实测),
         # 必须用正斜杠相对路径 + cwd=ROOT 传输
         try:

@@ -7,7 +7,8 @@
 
 - 入口:`work/.venv-ocr/Scripts/python.exe src/pipeline_admin.py` → `http://127.0.0.1:8766`(0.0.0.0 局域网;防火墙放行 `allow-lan-8766.cmd`)
 - **视频类型 = 字幕情况(en_vtt/none/zh_hard)× 说话人(1/2)** → 自动路由阶段序列
-- **五件套**(每任务充分必要产物):`01-视频源 / 02-英文字幕 / 03-中文字幕 / 04-中文音频 / 05-成品`,每阶段产物自动 scp 到 `nas:/volume1/share/视频/<slug>/`
+- **NAS资源根**:`/volume1/share/视频汉化项目/`;原片统一放 `原片库/<系列>/`;生成资源统一放 `成品库/<系列>/{01-英文字幕,02-中文字幕,03-中文音频,04-中文视频}/`
+- **五件套**(每任务充分必要产物):视频源在原片库,英文字幕/中文字幕/中文音频/成品在成品库,每阶段产物自动 scp 到 NAS 对应系列目录
 - 配音:CosyVoice2 零样本克隆(WSL2 GPU,断点续跑;音色库 `work/studio/voices/`,预置 doubao-taotao + Hinton 原声);翻译:Ollama qwen3:14b
 - 工作目录:`work/studio/<slug>/`;任务状态:`work/studio/tasks/*.json`(schema 2)
 - 冒烟参数:API 建任务时传 `_smoke_blocks`/`_smoke_chars` 快速验证
