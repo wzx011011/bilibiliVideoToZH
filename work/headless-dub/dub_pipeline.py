@@ -801,6 +801,7 @@ def publish_delivery(
     tts_engine: str,
     ref_audio: Path | None,
     review_file: Path | None,
+    title: str | None = None,
 ) -> Path:
     """Atomically create a self-contained, checksummed delivery package."""
     required = (source_segment, video, chinese_wav, chinese_srt, english_srt, chinese_json)
@@ -880,7 +881,7 @@ def publish_delivery(
         episode_match = re.fullmatch(r"episode-(\d+)", artifact_stem)
         manifest = {
             "schema_version": 1,
-            "title": f"Harvard Positive Psychology - {artifact_stem}",
+            "title": title or f"Harvard Positive Psychology - {artifact_stem}",
             "episode": int(episode_match.group(1)) if episode_match else artifact_stem,
             "source_duration_seconds": _probe_duration(source_segment),
             "video": {

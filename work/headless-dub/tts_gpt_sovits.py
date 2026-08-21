@@ -10,6 +10,7 @@ GPT-SoVITS 是常驻 HTTP 服务（监听 9880），加载 ~2.7GB 模型需 30-6
 
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 import time
@@ -20,10 +21,20 @@ import requests
 # --- 路径常量 ---
 ROOT = Path(__file__).resolve().parents[2]
 # GPT-SoVITS 实际安装在 Codex 工作区（非 D:\work\wzx\work 下）。
-GPT_SOVITS_DIR = Path(r"C:\Users\QPRJ\Documents\Codex\2026-07-24\kai\work\gpt-sovits")
-GPT_SOVITS_VENV_PYTHON = GPT_SOVITS_DIR / ".venv" / "Scripts" / "python.exe"
+GPT_SOVITS_DIR = Path(os.environ.get("GPT_SOVITS_DIR", ROOT / "work" / "gpt-sovits"))
+GPT_SOVITS_VENV_PYTHON = Path(
+    os.environ.get(
+        "GPT_SOVITS_PYTHON",
+        GPT_SOVITS_DIR / ".venv" / "Scripts" / "python.exe",
+    )
+)
 GPT_SOVITS_API = GPT_SOVITS_DIR / "api_v2.py"
-GPT_SOVITS_CONFIG = GPT_SOVITS_DIR / "GPT_SoVITS" / "configs" / "tts_infer.yaml"
+GPT_SOVITS_CONFIG = Path(
+    os.environ.get(
+        "GPT_SOVITS_CONFIG",
+        GPT_SOVITS_DIR / "GPT_SoVITS" / "configs" / "tts_infer.yaml",
+    )
+)
 FFMPEG = ROOT / "work" / "video-tools" / "ffmpeg.exe"
 
 DEFAULT_HOST = "127.0.0.1"

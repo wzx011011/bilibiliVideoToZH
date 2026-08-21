@@ -1,0 +1,2942 @@
+[
+  {
+    "start": 20.91,
+    "end": 26.69,
+    "text": "Last lecture, we learned about recovery, a time away from work to really relax."
+  },
+  {
+    "start": 27.15,
+    "end": 33.67,
+    "text": "I'd like to invite you to join a traditional and time-tested recovery period, Shabbat, the Jewish Sabbath."
+  },
+  {
+    "start": 34.13,
+    "end": 43.03,
+    "text": "This Friday night, Harvard Hill and Chabad at Harvard invite you and your friends to Shabbat dinner at the MAC for Shabbat 1000."
+  },
+  {
+    "start": 43.71,
+    "end": 50.67,
+    "text": "Come for a free dinner at the Deckout MAC with all of your friends, where our very own Professor Tolvan Schalker will be speaking."
+  },
+  {
+    "start": 51.65,
+    "end": 60.81,
+    "text": "Doors open at 6.30 and dinner starts at 7. Please RSVP for this really fun event at Jabal1000.org. Everyone is invited, so please sign up."
+  },
+  {
+    "start": 69.05,
+    "end": 76.71,
+    "text": "Hi, good morning. I was also asked to announce on behalf of the women's softball team."
+  },
+  {
+    "start": 76.93,
+    "end": 82.57,
+    "text": "They would have been here and they would have announced themselves, but they are at a game that was delayed."
+  },
+  {
+    "start": 82.57,
+    "end": 90.91,
+    "text": "there's a game this Sunday and Saturday Saturday and Sunday and also for the men's"
+  },
+  {
+    "start": 90.91,
+    "end": 104.28,
+    "text": "baseball team so come out and cheer and one more announcement they can't hear"
+  },
+  {
+    "start": 104.28,
+    "end": 132.58,
+    "text": "sir yeah all right so May 21st 9 15 date for the final hope you can make it okay"
+  },
+  {
+    "start": 135.88,
+    "end": 142.22,
+    "text": "Okay, it's a Monday."
+  },
+  {
+    "start": 145.82,
+    "end": 155.89,
+    "text": "All right, so every year when I teach"
+  },
+  {
+    "start": 155.89,
+    "end": 163.91,
+    "text": "the perfectionism lecture, something happened. So the first year I remember, I actually forgot my computer at home."
+  },
+  {
+    "start": 165.01,
+    "end": 168.61,
+    "text": "Second time, the projector didn't work."
+  },
+  {
+    "start": 170.27,
+    "end": 172.25,
+    "text": "And this year I forgot my power,"
+  },
+  {
+    "start": 173.31,
+    "end": 185.01,
+    "text": "my power for the computer at home. So hopefully it will last the entire semester. If not, we'll just have to deal with an imperfect scenario, but that's okay. I think it must be something subconscious because it's too much of a coincidence"
+  },
+  {
+    "start": 185.01,
+    "end": 189.73,
+    "text": "that every time something happens, walk the talk."
+  },
+  {
+    "start": 190.99,
+    "end": 192.63,
+    "text": "So where were we last time?"
+  },
+  {
+    "start": 193.11,
+    "end": 197.89,
+    "text": "Last time we talked about how you learned how to walk."
+  },
+  {
+    "start": 198.41,
+    "end": 204.69,
+    "text": "We learned about how you learned how to draw circles, and all through failure."
+  },
+  {
+    "start": 205.43,
+    "end": 215.45,
+    "text": "As Thomas Edison said, I learned my way, I failed my way to success. And we saw it with top athletes, whether it was Babe Ruth or Michael Jordan."
+  },
+  {
+    "start": 215.73,
+    "end": 221.29,
+    "text": "We saw it with top business people, whether it was Thomas Watson, IBM,"
+  },
+  {
+    "start": 221.69,
+    "end": 226.49,
+    "text": "or Anita Roddick, founder of the body shop."
+  },
+  {
+    "start": 228.13,
+    "end": 236.97,
+    "text": "We see it with artists and scientists. The most successful ones are also the ones who failed the most. and these are the ones who understand the value and the importance of failure."
+  },
+  {
+    "start": 237.25,
+    "end": 240.27,
+    "text": "I guarantee you that none of them enjoy failing."
+  },
+  {
+    "start": 240.97,
+    "end": 242.11,
+    "text": "Failing hurts."
+  },
+  {
+    "start": 242.51,
+    "end": 244.93,
+    "text": "It's disappointing at best."
+  },
+  {
+    "start": 245.55,
+    "end": 247.63,
+    "text": "It's frustrating."
+  },
+  {
+    "start": 247.99,
+    "end": 250.09,
+    "text": "It's embarrassing often."
+  },
+  {
+    "start": 250.51,
+    "end": 256.67,
+    "text": "However, people who ultimately succeed recognize the value of failure and learning from it."
+  },
+  {
+    "start": 259.12,
+    "end": 270.2,
+    "text": "There's a wonderful book that came out recently by one of my mentors. He taught at the business school for a few years. He's a professor at the University of Southern California, Robert Warren Bennis."
+  },
+  {
+    "start": 270.76,
+    "end": 275.74,
+    "text": "And Warren Bennis wrote a book which he called Geeks and Geezers."
+  },
+  {
+    "start": 275.96,
+    "end": 283.82,
+    "text": "And in the book, he compared very successful leaders who were young, early 30s,"
+  },
+  {
+    "start": 283.94,
+    "end": 293.46,
+    "text": "and older generation leaders, people who have really made it, big-time leaders who are now in their 70s, 80s, sometimes 90s."
+  },
+  {
+    "start": 293.6,
+    "end": 298.58,
+    "text": "And he compared these two groups, the geeks, the young ones, the geezers, the older ones."
+  },
+  {
+    "start": 299.06,
+    "end": 307.62,
+    "text": "And what he found was that there were a number of very interesting and meaningful differences"
+  },
+  {
+    "start": 308.3,
+    "end": 317.64,
+    "text": "between the generations of, again, highly successful late 20s or early 30-year-olds and highly successful older individuals."
+  },
+  {
+    "start": 317.64,
+    "end": 323.42,
+    "text": "One of the most notable differences was that work-life balance,"
+  },
+  {
+    "start": 324.78,
+    "end": 335.02,
+    "text": "which was very important for the late 20s, early 30s, very important. They talked about it constantly, whereas for the 70, 80, 90-year-olds,"
+  },
+  {
+    "start": 335.04,
+    "end": 338.4,
+    "text": "it was almost a foreign concept. What does that even mean?"
+  },
+  {
+    "start": 338.98,
+    "end": 342.9,
+    "text": "Why? Because they were at work usually 24-7."
+  },
+  {
+    "start": 343.96,
+    "end": 349.58,
+    "text": "All of them in that sample were men, and the women were at home taking care of the life part."
+  },
+  {
+    "start": 350.14,
+    "end": 353.18,
+    "text": "So there was a work-life balance where they were doing the work,"
+  },
+  {
+    "start": 353.68,
+    "end": 356.08,
+    "text": "the wife was doing the life."
+  },
+  {
+    "start": 357.28,
+    "end": 365.2,
+    "text": "Whereas the younger generation, men and women, in that sample, and talking about the work-life balance and a few other differences as well."
+  },
+  {
+    "start": 365.34,
+    "end": 369.7,
+    "text": "But there was one similarity, one thing that was common to both groups,"
+  },
+  {
+    "start": 370.42,
+    "end": 377.32,
+    "text": "and that was at least one, usually more than one, significant failure."
+  },
+  {
+    "start": 378.64,
+    "end": 382.64,
+    "text": "What Warren Bennis came to call a crucible, a real crisis,"
+  },
+  {
+    "start": 383.18,
+    "end": 388.56,
+    "text": "whether it was a meaningful loss or losing a job, being fired,"
+  },
+  {
+    "start": 391.01,
+    "end": 396.82,
+    "text": "one's identity being assaulted, loss of a person,"
+  },
+  {
+    "start": 397.2,
+    "end": 400.16,
+    "text": "some real serious crucible, a failure."
+  },
+  {
+    "start": 402.56,
+    "end": 413.22,
+    "text": "That was common to both groups, and both groups saw that failure as a pivotal point, as a turning point in their lives, something that helped them become who they are today."
+  },
+  {
+    "start": 413.22,
+    "end": 419.2,
+    "text": "Again, not saying it happened for the best, but they were able to make the best of that which happened."
+  },
+  {
+    "start": 420.12,
+    "end": 431.72,
+    "text": "Now, most people experience crucibles throughout their lives, hardships, difficulties. The difference between the highly successful people, for example, the sample in Warren Bennis' book,"
+  },
+  {
+    "start": 432.46,
+    "end": 441.74,
+    "text": "and many other people is that they're able to make the best of what happens. They see it as an opportunity, a learning experience, a stepping stone,"
+  },
+  {
+    "start": 446.4,
+    "end": 450.96,
+    "text": "the importance of failure for resilience, for well-being as well."
+  },
+  {
+    "start": 452.28,
+    "end": 462.24,
+    "text": "So let me move on and define what we mean by perfectionism because there are many definitions and we throw that word around constantly. But what do I actually mean by perfectionism?"
+  },
+  {
+    "start": 462.94,
+    "end": 472.42,
+    "text": "I define it as an incapacitating fear of failure that permeates our lives, especially those areas that we care about most."
+  },
+  {
+    "start": 473.1,
+    "end": 483.38,
+    "text": "Note the word incapacitating. It is not just a fear of failure. I don't know a person who is not afraid of failure, who is not embarrassed by it or feels frustrated by it."
+  },
+  {
+    "start": 484.54,
+    "end": 488.18,
+    "text": "So that's natural, that's human, whether we like it or not."
+  },
+  {
+    "start": 488.63,
+    "end": 499.26,
+    "text": "But an incapacitating fear of failure, a fear that is debilitating, that stops us, that prevents us from coping, from trying, from putting ourselves on the line."
+  },
+  {
+    "start": 502.43,
+    "end": 508.03,
+    "text": "And the other part that I want to highlight in this definition is that especially those areas that we care about most."
+  },
+  {
+    "start": 508.73,
+    "end": 514.45,
+    "text": "Now, I'm not a perfectionist when it comes to playing Monopoly."
+  },
+  {
+    "start": 515.39,
+    "end": 519.95,
+    "text": "No, it's not that I'm competitive, but it's not that important for me if I win or lose."
+  },
+  {
+    "start": 521.11,
+    "end": 532.67,
+    "text": "But perfectionism was a central part of my life when it came to, as I mentioned earlier, squash, which was very meaningful to me, academics, which is very meaningful to me,"
+  },
+  {
+    "start": 533.55,
+    "end": 538.43,
+    "text": "and relationships, which was and is a very important part of my life."
+  },
+  {
+    "start": 539.83,
+    "end": 545.85,
+    "text": "So in these areas, that's where I experienced perfectionism, and that's where I needed to do the work, and I'm still doing the work."
+  },
+  {
+    "start": 546.37,
+    "end": 549.97,
+    "text": "It's in those areas. Let me elaborate on this definition."
+  },
+  {
+    "start": 550.59,
+    "end": 560.89,
+    "text": "It is an approach, a cognitive and emotional schema that we hold towards the journey of our lives, towards the process of getting from point A to point B."
+  },
+  {
+    "start": 561.17,
+    "end": 564.11,
+    "text": "The emphasis here is on journey."
+  },
+  {
+    "start": 564.61,
+    "end": 575.95,
+    "text": "A person committed to excellence can still be as ambitious or more ambitious than a perfectionist. The difference between the two is just their approach toward the journey. Let me illustrate."
+  },
+  {
+    "start": 578.04,
+    "end": 583.09,
+    "text": "So let's first take the perfectionist."
+  },
+  {
+    "start": 583.95,
+    "end": 590.57,
+    "text": "The perfectionist is currently at point A, wants to get to point B."
+  },
+  {
+    "start": 591.37,
+    "end": 595.75,
+    "text": "What's the perfect, most efficient path between two points?"
+  },
+  {
+    "start": 596.33,
+    "end": 597.27,
+    "text": "Straight line."
+  },
+  {
+    "start": 597.89,
+    "end": 608.75,
+    "text": "This is the path, this is the cognitive and emotional schema that the perfectionist has when he or she looks at the journey,"
+  },
+  {
+    "start": 608.75,
+    "end": 613.57,
+    "text": "how they want to get from where they are now to where they want to get to."
+  },
+  {
+    "start": 614.33,
+    "end": 624.93,
+    "text": "A person committed to excellence, as ambitious as the person, the perfectionist,"
+  },
+  {
+    "start": 624.93,
+    "end": 630.13,
+    "text": "wants to get from point A to point B. No different here. What is different?"
+  },
+  {
+    "start": 630.99,
+    "end": 642.57,
+    "text": "The cognitive schema that relates to the journey. The person committed to excellence understands that while he improves, inevitably at some point he will fail."
+  },
+  {
+    "start": 643.41,
+    "end": 656.46,
+    "text": "A perfectionist understands that sometimes she may not get the grade that she expected, but she will learn from it."
+  },
+  {
+    "start": 656.76,
+    "end": 668.52,
+    "text": "A perfectionist understands that in relationships there is no such thing as a perfect relationship and therefore he sometimes makes a mistake"
+  },
+  {
+    "start": 668.52,
+    "end": 670.52,
+    "text": "or she sometimes makes a mistake."
+  },
+  {
+    "start": 671.72,
+    "end": 680.42,
+    "text": "But they continue and they learn from it and the relationship gets stronger. And a perfectionist understands that you need to fail time"
+  },
+  {
+    "start": 680.42,
+    "end": 687.66,
+    "text": "and again, five times, ten times, sometimes ten thousand times as we saw with Edison"
+  },
+  {
+    "start": 689.98,
+    "end": 692.96,
+    "text": "until they get to point B."
+  },
+  {
+    "start": 695.06,
+    "end": 703.1,
+    "text": "as ambitious but the schema is very different you have to draw many failed circles before you get"
+  },
+  {
+    "start": 704.28,
+    "end": 715.26,
+    "text": "to that ideal circle that vincent drew last time and the question now becomes"
+  },
+  {
+    "start": 716.58,
+    "end": 724.9,
+    "text": "so which is realistic is it realistic to have that schema or is this one more realistic well"
+  },
+  {
+    "start": 724.9,
+    "end": 731.08,
+    "text": "I think it's pretty obvious. There is no straight line towards success. There is no straight line"
+  },
+  {
+    "start": 731.08,
+    "end": 738.1,
+    "text": "towards a happy relationship. There is no straight line towards inventing the light bulb or being"
+  },
+  {
+    "start": 738.1,
+    "end": 747.6,
+    "text": "good at psychology or being a good parent or a good friend. We make mistakes and nature to be"
+  },
+  {
+    "start": 747.6,
+    "end": 754.76,
+    "text": "commanded must be obeyed. Pursuing excellence is about the constrained view of nature."
+  },
+  {
+    "start": 754.9,
+    "end": 761.12,
+    "text": "Yes, I wish that I could get from point A to point B in this way. I wish it were so."
+  },
+  {
+    "start": 762.44,
+    "end": 767.96,
+    "text": "I didn't enjoy failing my generals. I didn't enjoy falling down many times and losing in squash."
+  },
+  {
+    "start": 769.02,
+    "end": 772.02,
+    "text": "I certainly don't enjoy having disagreements with my wife."
+  },
+  {
+    "start": 776.02,
+    "end": 781.1,
+    "text": "However, I also would rather not have the law of gravity and be able to fly everywhere or float everywhere."
+  },
+  {
+    "start": 783.72,
+    "end": 787.14,
+    "text": "This is. This is a fantasy."
+  },
+  {
+    "start": 787.84,
+    "end": 794.38,
+    "text": "And when we have this schema in our mind, we're putting ourselves, fighting nature."
+  },
+  {
+    "start": 794.64,
+    "end": 802.78,
+    "text": "And just like we would lead an unhappy and frustrating life if we did not accept the law of gravity, we live."
+  },
+  {
+    "start": 802.92,
+    "end": 813.62,
+    "text": "And so many people, if so many people at Harvard, not just at Harvard, everywhere, are frustrated constantly because in their minds they have this schema."
+  },
+  {
+    "start": 814.5,
+    "end": 816.92,
+    "text": "And this does not mean that we enjoy failure."
+  },
+  {
+    "start": 819.38,
+    "end": 827.86,
+    "text": "But when we have this schema, in addition to not enjoying failure, we have the frustration of not accepting reality."
+  },
+  {
+    "start": 831.39,
+    "end": 833.67,
+    "text": "Now, there are consequences to having this schema."
+  },
+  {
+    "start": 834.77,
+    "end": 842.21,
+    "text": "I want to discuss some of these consequences and some of the characteristics of a person who holds this schema."
+  },
+  {
+    "start": 842.57,
+    "end": 847.25,
+    "text": "Now, there is no perfect perfectionist, as I said, and we all exist somewhere along the continuum."
+  },
+  {
+    "start": 847.93,
+    "end": 855.17,
+    "text": "There are many people, again, many people here, who are closer to this end of the continuum."
+  },
+  {
+    "start": 859.03,
+    "end": 865.27,
+    "text": "The characteristics that I'd like to share with you are all ones that are documented in literature."
+  },
+  {
+    "start": 865.69,
+    "end": 873.55,
+    "text": "There are many people who have them. You will identify with some of the characteristics, not with others, and that's fine."
+  },
+  {
+    "start": 874.25,
+    "end": 881.61,
+    "text": "All the characteristics, in addition to being well documented in the psychological literature, are also ones that I've experienced or still experience."
+  },
+  {
+    "start": 882.69,
+    "end": 892.55,
+    "text": "So these ones are personally meaningful to me, in addition to being also quite common. The first one, defensiveness."
+  },
+  {
+    "start": 895.72,
+    "end": 907.0,
+    "text": "In arguments, in discussions, perfectionists are defensive. Why? Because the criticism is by definition a deviation from the straight line."
+  },
+  {
+    "start": 908.44,
+    "end": 910.6,
+    "text": "It's an imperfection. It's a dent."
+  },
+  {
+    "start": 911.2,
+    "end": 913.9,
+    "text": "It's something that maybe I'm not doing perfectly well."
+  },
+  {
+    "start": 914.68,
+    "end": 924.24,
+    "text": "And we don't like deviations from a schema that we have. Remember, the mind doesn't like when there is an inconsistency between what is inside and what is outside."
+  },
+  {
+    "start": 924.76,
+    "end": 928.7,
+    "text": "We want there to be a balance, congruence. We don't like dissonance."
+  },
+  {
+    "start": 929.32,
+    "end": 935.44,
+    "text": "And if what we have in mind is the perfectionist schema, then a criticism is a deviation from it."
+  },
+  {
+    "start": 935.86,
+    "end": 937.42,
+    "text": "And then we become defensive."
+  },
+  {
+    "start": 937.8,
+    "end": 942.58,
+    "text": "Again, something that I've experienced numerous times and something that I'm working on constantly."
+  },
+  {
+    "start": 943.82,
+    "end": 946.26,
+    "text": "In addition, or in contrast,"
+  },
+  {
+    "start": 947.36,
+    "end": 957.66,
+    "text": "a person committed to excellence is open, is welcoming of suggestions and of criticism at times. It doesn't mean that he or she enjoys it, but he or she understands that it's necessary,"
+  },
+  {
+    "start": 957.88,
+    "end": 961.14,
+    "text": "that it's an important part of growth, of development."
+  },
+  {
+    "start": 963.69,
+    "end": 970.09,
+    "text": "A perfectionist focuses on the half-empty part of the glass. Why? Because a perfectionist is obsessed by failure,"
+  },
+  {
+    "start": 970.97,
+    "end": 978.75,
+    "text": "Obsessed by deviations from that straight and narrow. And whatever it is that we're obsessed with by definition is what we constantly focus on."
+  },
+  {
+    "start": 979.25,
+    "end": 987.11,
+    "text": "So he or she is constantly focused on what is not working, on potential failures or actual failures."
+  },
+  {
+    "start": 989.38,
+    "end": 1001.36,
+    "text": "Person committed to excellence focuses on the half-full part of the glass. How? Because he or she enjoys getting to wherever he or she is going, but also learns to enjoy every step of the way."
+  },
+  {
+    "start": 1001.76,
+    "end": 1011.7,
+    "text": "the journey. Even failure is an opportunity. A perfectionist overgeneralizes, catastrophizes."
+  },
+  {
+    "start": 1011.96,
+    "end": 1021.16,
+    "text": "It's all or nothing. Either I'm perfect or I'm a failure. And we'll see the consequences in a minute of this all or nothing approach."
+  },
+  {
+    "start": 1021.16,
+    "end": 1032.96,
+    "text": "versus realistic again realizing what reality looks like what progress in"
+  },
+  {
+    "start": 1032.96,
+    "end": 1041.14,
+    "text": "essence looks like for a perfectionist there is no self-acceptance a person"
+  },
+  {
+    "start": 1041.14,
+    "end": 1050.5,
+    "text": "committed to excellence there is acceptance first of all of reality as comprising spirals rather than a straight line acceptance of personal"
+  },
+  {
+    "start": 1050.5,
+    "end": 1060.02,
+    "text": "failure and acceptance of the self as a whole. Perfectionist, there is one way and that's"
+  },
+  {
+    "start": 1060.02,
+    "end": 1066.56,
+    "text": "the highway. It is static. There is no improvisation. There is no deviation. There is no trial and"
+  },
+  {
+    "start": 1066.56,
+    "end": 1074.2,
+    "text": "error. There is just one way in contrast to having a much more dynamic, flexible process"
+  },
+  {
+    "start": 1074.2,
+    "end": 1081.5,
+    "text": "and journey with much more spontaneity, which manifests itself, of course, in behaviors."
+  },
+  {
+    "start": 1082.84,
+    "end": 1107.28,
+    "text": "A perfectionist is terrified of failure, terrified that failure from within, that he or she perceives themselves as failures, but also that others see him or her as a failure, keeping that facade, that image of impregnability, of perfection versus failure as feedback."
+  },
+  {
+    "start": 1107.28,
+    "end": 1114.86,
+    "text": "Again, not enjoying failure. I haven't met a person who does enjoy failing, but seeing it more as feedback as a growth opportunity."
+  },
+  {
+    "start": 1115.96,
+    "end": 1121.96,
+    "text": "A perfectionist, it's all about getting here. That's what it's about."
+  },
+  {
+    "start": 1122.46,
+    "end": 1130.82,
+    "text": "This is a means toward an end, tangential, something that is not important other than taking me from here to here."
+  },
+  {
+    "start": 1130.82,
+    "end": 1137.94,
+    "text": "Whereas for a person committed to excellence, the journey is as much part of success as the destination."
+  },
+  {
+    "start": 1141.01,
+    "end": 1150.25,
+    "text": "Now, there are numerous, numerous consequences to this distinction, to holding one schema versus the other."
+  },
+  {
+    "start": 1150.63,
+    "end": 1151.81,
+    "text": "Here are some of them."
+  },
+  {
+    "start": 1152.45,
+    "end": 1161.45,
+    "text": "The first one is that a perfectionist experiences only, at best, temporary relief."
+  },
+  {
+    "start": 1161.45,
+    "end": 1167.47,
+    "text": "So yes, there is constant pressure, but when he or she gets to point B, then they feel relieved."
+  },
+  {
+    "start": 1168.73,
+    "end": 1173.15,
+    "text": "This is essentially the consummate rat racer."
+  },
+  {
+    "start": 1175.73,
+    "end": 1179.93,
+    "text": "Let me give you an example of such a rat racer."
+  },
+  {
+    "start": 1184.98,
+    "end": 1197.46,
+    "text": "The person, let's call him X, goes to school, goes to elementary school."
+  },
+  {
+    "start": 1198.3,
+    "end": 1205.88,
+    "text": "Until that point, he really enjoyed his daycare, pre-K, kindergarten."
+  },
+  {
+    "start": 1206.72,
+    "end": 1210.5,
+    "text": "Then he goes to school and the pressure begins."
+  },
+  {
+    "start": 1211.88,
+    "end": 1223.26,
+    "text": "Because he begins to understand that he really needs to work very hard and do extremely well if he is to get into a good middle school."
+  },
+  {
+    "start": 1224.08,
+    "end": 1227.48,
+    "text": "because the middle school that his parents want him to go to"
+  },
+  {
+    "start": 1227.98,
+    "end": 1232.7,
+    "text": "is very competitive, very tough to get into. And he did get into a very good elementary school,"
+  },
+  {
+    "start": 1233.18,
+    "end": 1237.64,
+    "text": "but now he has to do the same for middle school. So the pressure mounts."
+  },
+  {
+    "start": 1239.46,
+    "end": 1241.48,
+    "text": "And he doesn't really enjoy school,"
+  },
+  {
+    "start": 1243.92,
+    "end": 1247.2,
+    "text": "but then he experiences relief when the holidays come"
+  },
+  {
+    "start": 1247.84,
+    "end": 1249.68,
+    "text": "and when they go on a family vacation"
+  },
+  {
+    "start": 1250.56,
+    "end": 1255.82,
+    "text": "or when the exams end and he can play with his friends without thinking of the next test."
+  },
+  {
+    "start": 1257.36,
+    "end": 1261.46,
+    "text": "He goes through school not really liking it, experiencing more a series of relief"
+  },
+  {
+    "start": 1262.06,
+    "end": 1266.28,
+    "text": "rather than passion and love of learning, which he did experience when he was in kindergarten,"
+  },
+  {
+    "start": 1267.04,
+    "end": 1276.1,
+    "text": "but no more. And then he gets into his dream middle school, the middle school that he was meant to go to all along. He makes it."
+  },
+  {
+    "start": 1276.5,
+    "end": 1279.24,
+    "text": "And he feels wonderful and great and terrific"
+  },
+  {
+    "start": 1279.96,
+    "end": 1285.82,
+    "text": "for two weeks because he now needs to start thinking about the high school of his dreams."
+  },
+  {
+    "start": 1286.62,
+    "end": 1293.4,
+    "text": "Why? Because that high school is a feeder school for the top colleges in the country,"
+  },
+  {
+    "start": 1293.96,
+    "end": 1296.08,
+    "text": "and he really wants to get into one of those."
+  },
+  {
+    "start": 1297.7,
+    "end": 1303.58,
+    "text": "So he really struggles and works hard in middle school, doesn't really enjoy his work,"
+  },
+  {
+    "start": 1304.62,
+    "end": 1309.52,
+    "text": "but he makes it and he gets into his dream high school, and he is ecstatic."
+  },
+  {
+    "start": 1310.28,
+    "end": 1318.82,
+    "text": "happier than he'd ever been before because here he is among the smartest kids in the country very"
+  },
+  {
+    "start": 1318.82,
+    "end": 1328.82,
+    "text": "difficult to get into the school but he makes it and there he starts to learn he's happy for about a week and then the pressure mounts because it is a very competitive school and he has to join"
+  },
+  {
+    "start": 1329.72,
+    "end": 1336.86,
+    "text": "two varsity sports and three student organizations because he has to pad to build his resume so that"
+  },
+  {
+    "start": 1336.86,
+    "end": 1345.52,
+    "text": "he gets in to his dream college he struggles and it's not fun but he says to himself this is just"
+  },
+  {
+    "start": 1345.52,
+    "end": 1351.78,
+    "text": "temporary it's only pain now because later there will be gain once i get into my top college"
+  },
+  {
+    "start": 1351.78,
+    "end": 1365.32,
+    "text": "and he applies and on april 2nd there is an envelope that arrived and the envelope is large"
+  },
+  {
+    "start": 1365.32,
+    "end": 1372.06,
+    "text": "and he opens it up and he gets in and he's ecstatic happier even than he was when he got"
+  },
+  {
+    "start": 1372.06,
+    "end": 1383.34,
+    "text": "to his dream high school and he says now finally I can let go now finally I can relax because I'm already made I mean this top college and I'm set for life"
+  },
+  {
+    "start": 1384.82,
+    "end": 1390.96,
+    "text": "and he really enjoys the rest of senior year and the holiday and then"
+  },
+  {
+    "start": 1390.96,
+    "end": 1402.96,
+    "text": "freshman week comes and he's ecstatic Mr. X but then after that week the pressure mounts again because very soon there are midterms and very soon there"
+  },
+  {
+    "start": 1402.96,
+    "end": 1411.55,
+    "text": "is competition and everyone is working as hard as he did and he has to work"
+  },
+  {
+    "start": 1411.55,
+    "end": 1419.34,
+    "text": "really hard because he wants to get his dream job and then he gets his ideal"
+  },
+  {
+    "start": 1419.34,
+    "end": 1430.84,
+    "text": "internship during freshman summer and the pressure continues there are relief there are fun periods and these are periods when the exam is just over or"
+  },
+  {
+    "start": 1430.84,
+    "end": 1441.24,
+    "text": "when break is coming up or during break, but then again, the pressure mounts. He doesn't"
+  },
+  {
+    "start": 1441.24,
+    "end": 1452.14,
+    "text": "really understand why he's not happy because this was where he really wanted to be, really, really wanted to be more than any other place. But he says, okay, once I get that job, then"
+  },
+  {
+    "start": 1452.14,
+    "end": 1458.82,
+    "text": "I'll be set. Why? Because that job will really get me into the top business school, will"
+  },
+  {
+    "start": 1458.82,
+    "end": 1464.86,
+    "text": "really differentiate me from all the other 1,600 students who will graduate with me."
+  },
+  {
+    "start": 1465.9,
+    "end": 1476.53,
+    "text": "So he works hard, still builds his resume. He's a member of three student organizations, president of two, JV in two sports and varsity"
+  },
+  {
+    "start": 1476.53,
+    "end": 1487.91,
+    "text": "in one, plus taking five and sometimes six courses a semester. Why? Because it's tough, it's competitive, and it's a survival of the fittest, and no pain,"
+  },
+  {
+    "start": 1488.05,
+    "end": 1488.73,
+    "text": "no gain."
+  },
+  {
+    "start": 1489.63,
+    "end": 1494.43,
+    "text": "Senior year finally comes, and there is pressure, but then he gets his job."
+  },
+  {
+    "start": 1495.65,
+    "end": 1500.25,
+    "text": "He's happy. This is exactly what he wanted. This is exactly what he envisioned."
+  },
+  {
+    "start": 1501.77,
+    "end": 1503.09,
+    "text": "And now he's happy."
+  },
+  {
+    "start": 1504.33,
+    "end": 1514.63,
+    "text": "And then comes August 3rd, which is the date when he starts his actual work. And he goes to work, and everyone around him, he's a graduate of top universities, top places,"
+  },
+  {
+    "start": 1514.63,
+    "end": 1524.35,
+    "text": "he feels on top of the world and he's happy for two weeks because after two"
+  },
+  {
+    "start": 1524.35,
+    "end": 1531.79,
+    "text": "weeks he realized that there is a lot of pressure here actually much more than there was in college and he can't have time for those long leisurely dinners"
+  },
+  {
+    "start": 1532.33,
+    "end": 1542.07,
+    "text": "in the dining hall he's working 80 to 90 hours a week and not really enjoying it but he'll make it he'll get there he'll do well get a good recommendation for"
+  },
+  {
+    "start": 1542.07,
+    "end": 1547.86,
+    "text": "business school and then after business school get his real dream job and then"
+  },
+  {
+    "start": 1547.86,
+    "end": 1554.62,
+    "text": "he can enjoy himself and he gets into his top business school choice and then he"
+  },
+  {
+    "start": 1554.62,
+    "end": 1561.82,
+    "text": "gets his top job and in his job as an associate he's really happy in fact he"
+  },
+  {
+    "start": 1561.82,
+    "end": 1573.64,
+    "text": "can't believe his good fortune he's making a lot of money those student debts that looked so serious and overbearing only three years ago are now"
+  },
+  {
+    "start": 1573.64,
+    "end": 1580.18,
+    "text": "paid in an instant. He feels good, he has a nice apartment and he becomes an"
+  },
+  {
+    "start": 1580.18,
+    "end": 1588.31,
+    "text": "associate and he's ecstatic, he's happy, I finally made it. But a month goes by and"
+  },
+  {
+    "start": 1588.31,
+    "end": 1600.27,
+    "text": "the knot returns. Because he's only an associate, he now really, really wants to make a partner. But once he's a partner, once he gets the so-called tenure of the"
+  },
+  {
+    "start": 1600.27,
+    "end": 1611.66,
+    "text": "business world then he'll be all set and he works hard he struggles he doesn't really enjoy his work but he says just another push a little bit more pain and"
+  },
+  {
+    "start": 1611.66,
+    "end": 1618.98,
+    "text": "then the real game and after five years of pushing hard he makes it and he"
+  },
+  {
+    "start": 1618.98,
+    "end": 1623.86,
+    "text": "becomes a partner in fact one of the youngest partners in the history of the"
+  },
+  {
+    "start": 1623.86,
+    "end": 1632.82,
+    "text": "organization and he's ecstatic and he takes a long break and comes back after"
+  },
+  {
+    "start": 1632.82,
+    "end": 1638.52,
+    "text": "the break, all motivated, because now he's an owner, part owner of this great, prestigious"
+  },
+  {
+    "start": 1638.52,
+    "end": 1645.34,
+    "text": "organization. And by now he has a family already, and he buys a huge house in one of the suburbs"
+  },
+  {
+    "start": 1646.52,
+    "end": 1654.78,
+    "text": "of the city, expensive, but he bought it easily. And he buys a luxury car. In fact, he has a"
+  },
+  {
+    "start": 1654.78,
+    "end": 1664.28,
+    "text": "driver by now and he feels on top of the world. He feels great for three months and then the"
+  },
+  {
+    "start": 1664.28,
+    "end": 1675.52,
+    "text": "pressure returns because he's only a junior partner. Can he make the senior partnership? Is it possible? Well, only if he really works hard because few people make it that high"
+  },
+  {
+    "start": 1675.52,
+    "end": 1680.18,
+    "text": "up in the pyramid. It's getting tougher, but he'll make it. So he struggles and suffers"
+  },
+  {
+    "start": 1680.18,
+    "end": 1689.91,
+    "text": "and it's not fun but he makes it no pain no gain and by this time he's just bought"
+  },
+  {
+    "start": 1690.91,
+    "end": 1696.09,
+    "text": "another house in the hamptons just for the holidays for the breaks and there is another car"
+  },
+  {
+    "start": 1696.89,
+    "end": 1706.59,
+    "text": "a bigger one a faster one and now he says i can finally finally relax and he does relax"
+  },
+  {
+    "start": 1708.53,
+    "end": 1714.23,
+    "text": "for two and a half months and then the pressure returns because he's a senior"
+  },
+  {
+    "start": 1714.23,
+    "end": 1721.45,
+    "text": "partner but there is only one managing director only one and to get that would"
+  },
+  {
+    "start": 1721.45,
+    "end": 1732.01,
+    "text": "be really tough but he's determined to do it he'd been a star until now there is no reason to stop now it's not fun for him doesn't spend that much time with"
+  },
+  {
+    "start": 1732.01,
+    "end": 1737.41,
+    "text": "people he loves because he's constantly stressed and he has to prove himself and"
+  },
+  {
+    "start": 1739.62,
+    "end": 1753.66,
+    "text": "And for seven long years, while there is material affluence, for those seven years, there is time poverty, time famine."
+  },
+  {
+    "start": 1754.0,
+    "end": 1763.19,
+    "text": "But he continues to struggle, and he makes it. The board makes an announcement. It's on the Wall Street Journal front page news."
+  },
+  {
+    "start": 1763.83,
+    "end": 1770.37,
+    "text": "Mr. X is the new managing director of this incredible organization."
+  },
+  {
+    "start": 1770.93,
+    "end": 1779.23,
+    "text": "and his friends congratulate him he feels on top of the world and he's happy but then the stress"
+  },
+  {
+    "start": 1779.23,
+    "end": 1794.43,
+    "text": "returns but then one day one day he walks into his office sits on his chair puts his legs up"
+  },
+  {
+    "start": 1794.43,
+    "end": 1805.05,
+    "text": "on the table. Here's Aserol, the boss, the man. He looks back and sees Central Park,"
+  },
+  {
+    "start": 1805.83,
+    "end": 1814.07,
+    "text": "just beautiful there. He really is, not just metaphorically speaking, he really is on top"
+  },
+  {
+    "start": 1814.07,
+    "end": 1825.48,
+    "text": "of the world. And then there is a knock on the door. He's surprised by the knock because"
+  },
+  {
+    "start": 1825.48,
+    "end": 1833.0,
+    "text": "usually his secretary announces people. They don't just knock on his door. He's after all on top of"
+  },
+  {
+    "start": 1833.0,
+    "end": 1845.18,
+    "text": "the world. So he walks down, opens the door and it's the chairman of the board. And she says hi"
+  },
+  {
+    "start": 1845.18,
+    "end": 1854.48,
+    "text": "to him. He says hi back. And she says, you know, record earnings this year. Well done. Fantastic."
+  },
+  {
+    "start": 1854.48,
+    "end": 1862.86,
+    "text": "You have done amazing, amazing work. We're all so proud of you, so glad you're in your position."
+  },
+  {
+    "start": 1865.7,
+    "end": 1879.66,
+    "text": "However, it's time to retire. You're 72 years old. This is the life of the rat racer, at best."
+  },
+  {
+    "start": 1880.8,
+    "end": 1887.96,
+    "text": "and again this is a caricature I've highlighted just certain points it's not"
+  },
+  {
+    "start": 1887.96,
+    "end": 1894.24,
+    "text": "as all or nothing however in essence this is the life of the rat racer about"
+  },
+  {
+    "start": 1894.24,
+    "end": 1905.76,
+    "text": "getting from point A to point B and then feeling relief for two weeks or a month and then getting in that point B becomes point A and again like the rat running"
+  },
+  {
+    "start": 1905.76,
+    "end": 1913.26,
+    "text": "around on and on and on and you need to ask yourself now because if not now then when you"
+  },
+  {
+    "start": 1913.26,
+    "end": 1922.86,
+    "text": "need to ask yourself now what kind of life do I want for myself I gave the example of"
+  },
+  {
+    "start": 1922.86,
+    "end": 1931.36,
+    "text": "business it applies as much to any other domain whether you are or want to become a medical"
+  },
+  {
+    "start": 1931.36,
+    "end": 1937.0,
+    "text": "doctor and going on and feeling pressure to get into the best schools into the best department"
+  },
+  {
+    "start": 1937.0,
+    "end": 1944.02,
+    "text": "the best internship the best the highest position and on and on or whether you are"
+  },
+  {
+    "start": 1944.02,
+    "end": 1953.04,
+    "text": "working for a not-for-profit organization or whether you're in academia or a lawyer it doesn't"
+  },
+  {
+    "start": 1953.04,
+    "end": 1960.3,
+    "text": "matter just fill in the blank of mr x in which area it applies to any place"
+  },
+  {
+    "start": 1961.56,
+    "end": 1971.86,
+    "text": "and the question is what kind of life do i want for myself and remember the most important thing A person committed to excellence does not give up on being ambitious."
+  },
+  {
+    "start": 1972.56,
+    "end": 1978.68,
+    "text": "However, a person committed to excellence does not also give up on the journey."
+  },
+  {
+    "start": 1981.66,
+    "end": 1989.58,
+    "text": "And as we'll talk about soon, a person who's committed to excellence not only does he or she not give up on the journey,"
+  },
+  {
+    "start": 1991.81,
+    "end": 1998.07,
+    "text": "or rather on the outcome, they actually reach higher levels of performance."
+  },
+  {
+    "start": 2000.53,
+    "end": 2002.15,
+    "text": "But we'll get to that soon."
+  },
+  {
+    "start": 2002.93,
+    "end": 2008.45,
+    "text": "A person committed to excellence is not just about temporary relief, but about lasting satisfaction."
+  },
+  {
+    "start": 2008.93,
+    "end": 2018.01,
+    "text": "Yes, she has the ups and downs like we all do. However, also able to enjoy the journey, the day-to-day, the experience of being in college,"
+  },
+  {
+    "start": 2018.17,
+    "end": 2021.15,
+    "text": "the experience of having a lovely meal with my friends,"
+  },
+  {
+    "start": 2021.55,
+    "end": 2031.74,
+    "text": "the experience of reading and being exposed to great writers, to interesting classes,"
+  },
+  {
+    "start": 2033.66,
+    "end": 2039.34,
+    "text": "to nice extracurricular activities, appreciating it, not taking it for granted,"
+  },
+  {
+    "start": 2039.8,
+    "end": 2047.1,
+    "text": "not seeing it as just incidental, just something that I need to get through in order to get to where I really want to get to."
+  },
+  {
+    "start": 2048.34,
+    "end": 2054.16,
+    "text": "Well, you may really want to get there, but where you really are is here and now, no other place."
+  },
+  {
+    "start": 2059.09,
+    "end": 2064.31,
+    "text": "Now, I haven't met, maybe you have, but I haven't met the perfect person."
+  },
+  {
+    "start": 2065.57,
+    "end": 2072.71,
+    "text": "I don't think that person exists In other words, if there is no perfect person For every person, there is inevitable failure"
+  },
+  {
+    "start": 2072.71,
+    "end": 2082.0,
+    "text": "And a perfectionist who is obsessed with failure Just focuses on that Whereas a person committed to excellence"
+  },
+  {
+    "start": 2082.0,
+    "end": 2092.98,
+    "text": "There is a possibility of success every step of the way Even in failure A perfectionist very often wastes time"
+  },
+  {
+    "start": 2092.98,
+    "end": 2098.6,
+    "text": "Has to read every word Every I has to be dotted, every T crossed"
+  },
+  {
+    "start": 2099.24,
+    "end": 2104.36,
+    "text": "It's all or nothing. Either I hand in a perfect paper or I don't hand in a paper at all."
+  },
+  {
+    "start": 2105.84,
+    "end": 2112.4,
+    "text": "Either it's a straight A or I'm a failure. All or nothing."
+  },
+  {
+    "start": 2113.4,
+    "end": 2124.72,
+    "text": "And sometimes that's appropriate and that's what a person committed to excellence does. Understand when, for example, if you're a surgeon, you want to have the perfect operation"
+  },
+  {
+    "start": 2124.72,
+    "end": 2130.52,
+    "text": "and you don't want to say, well, it's okay if I'm 80% right about where exactly to cut."
+  },
+  {
+    "start": 2131.1,
+    "end": 2133.6,
+    "text": "Yeah, there are places where you want the perfectionism."
+  },
+  {
+    "start": 2134.32,
+    "end": 2139.72,
+    "text": "But in many other areas in our lives, it's not necessary and it hurts us."
+  },
+  {
+    "start": 2142.38,
+    "end": 2151.48,
+    "text": "A perfectionist is very often prone to disorders. And I mean disorders of numerous times, including, for example, eating disorders. So let me give you a personal example."
+  },
+  {
+    "start": 2151.68,
+    "end": 2157.46,
+    "text": "So when I was playing squash, when I was playing full-time, I had to really take care of my diet."
+  },
+  {
+    "start": 2158.14,
+    "end": 2160.32,
+    "text": "Eat healthfully, eat well."
+  },
+  {
+    "start": 2160.32,
+    "end": 2177.16,
+    "text": "But there was a problem, there was a real challenge in my life, and that challenge was my mother, who is the perfect cook, and her cakes are outstanding."
+  },
+  {
+    "start": 2178.56,
+    "end": 2184.18,
+    "text": "So here is a common scenario that I encountered growing up, tough childhood."
+  },
+  {
+    "start": 2184.18,
+    "end": 2192.92,
+    "text": "I would come home after squash practice, open the fridge, starving, and there was a large piece of cake."
+  },
+  {
+    "start": 2193.26,
+    "end": 2203.3,
+    "text": "Not the whole cake, but a quarter cake, very large, so inviting, so alluring, and I know from past experiences, so delicious."
+  },
+  {
+    "start": 2204.32,
+    "end": 2211.22,
+    "text": "I look at it, and then I close the fridge because I can't have it. I'm in the middle of training for an important tournament."
+  },
+  {
+    "start": 2213.14,
+    "end": 2218.14,
+    "text": "But three minutes later, I go to the fridge again just to make sure it's still there."
+  },
+  {
+    "start": 2219.68,
+    "end": 2222.62,
+    "text": "Why? Those of you who know my brother understand why."
+  },
+  {
+    "start": 2222.98,
+    "end": 2230.96,
+    "text": "My brother is much bigger than I am, and he likes my mom's cooking no less than I do. So I was just making sure that it was still there, and it was."
+  },
+  {
+    "start": 2231.7,
+    "end": 2238.62,
+    "text": "And then ten minutes later, I had to go back because my brother had just disappeared from eyes for a few minutes, and I thought he went to the fridge."
+  },
+  {
+    "start": 2240.16,
+    "end": 2242.46,
+    "text": "So I opened the fridge again, and it was still there."
+  },
+  {
+    "start": 2243.16,
+    "end": 2254.64,
+    "text": "so I was relieved and then about five minutes later I had to go back to the fridge I opened the door and two minutes later there was no cake all or nothing"
+  },
+  {
+    "start": 2254.64,
+    "end": 2261.22,
+    "text": "either I don't touch it or I devour it this is the schema that a perfectionist"
+  },
+  {
+    "start": 2261.22,
+    "end": 2270.9,
+    "text": "has it's not okay let me have a slice of it it's nothing or all and this is the"
+  },
+  {
+    "start": 2270.9,
+    "end": 2278.48,
+    "text": "schema that perfectionists have. Either I'm a supermodel or I'm overweight. All or nothing."
+  },
+  {
+    "start": 2278.62,
+    "end": 2286.26,
+    "text": "And that's destructive and that hurts us so much on so many levels. As opposed to the healthy"
+  },
+  {
+    "start": 2286.26,
+    "end": 2292.94,
+    "text": "approach. Okay, so I'll have a slice. So I'll have a little bit. Okay, so I gained a couple of pounds."
+  },
+  {
+    "start": 2292.94,
+    "end": 2308.04,
+    "text": "big deal, I'm human, I'm not a machine, I'm not a Barbie or Ken. I caught myself there."
+  },
+  {
+    "start": 2312.79,
+    "end": 2319.83,
+    "text": "Hurt self-esteem. Why? Because Nathaniel Brandon who writes about self-esteem and we'll talk"
+  },
+  {
+    "start": 2319.83,
+    "end": 2325.01,
+    "text": "a lot about him in that lecture three weeks from now, the first pillar of self-esteem"
+  },
+  {
+    "start": 2325.01,
+    "end": 2334.09,
+    "text": "is self-acceptance. And remember a perfectionist does not accept him or herself. Second, the reason"
+  },
+  {
+    "start": 2334.09,
+    "end": 2345.39,
+    "text": "why it hurts self-esteem, remember there is constant inevitable failure for a perfectionist because there is no perfect person. And if I constantly fail or constantly perceive myself"
+  },
+  {
+    "start": 2345.39,
+    "end": 2354.96,
+    "text": "as a failure, am I going to have high self-esteem? Of course not. It also hurts self-esteem because"
+  },
+  {
+    "start": 2354.96,
+    "end": 2365.24,
+    "text": "So a perfectionist is less likely to try, less likely to put him or herself on the line. And the price that I pay for that when I don't try is lower levels of self-esteem."
+  },
+  {
+    "start": 2365.42,
+    "end": 2376.78,
+    "text": "Remember, self-perception theory versus ongoing continuous improvement. Not a straight line, but a spiral that goes up and up."
+  },
+  {
+    "start": 2379.56,
+    "end": 2381.14,
+    "text": "Perfectionism harms relationships."
+  },
+  {
+    "start": 2381.94,
+    "end": 2392.26,
+    "text": "Again, I just look back and from this perspective, it's hard for me to fathom the kind of mistakes that I have made. in relationships based on perfectionism. Why?"
+  },
+  {
+    "start": 2392.58,
+    "end": 2399.96,
+    "text": "First of all defensiveness. It is very difficult to form intimacy with someone when I'm constantly on the defensive."
+  },
+  {
+    "start": 2400.68,
+    "end": 2411.64,
+    "text": "When I can't accept or do something at the very least with criticisms. What kind of intimacy is possible there? The other reason why it harms relationships"
+  },
+  {
+    "start": 2411.64,
+    "end": 2415.5,
+    "text": "is that very often we mirror"
+  },
+  {
+    "start": 2416.04,
+    "end": 2427.88,
+    "text": "Our approach to the world mirrors our approach toward ourselves. So if I'm a perfectionist and expect perfectionism, a straight line for myself, I will expect the same from others, whether it's my partner,"
+  },
+  {
+    "start": 2428.06,
+    "end": 2435.18,
+    "text": "whether it's later on my children or friends. And now as we, I think, established before, there is no perfect person."
+  },
+  {
+    "start": 2435.78,
+    "end": 2443.02,
+    "text": "Now it may seem perfect when we first meet, and during the honeymoon phase, it is perfect. He or she is perfect."
+  },
+  {
+    "start": 2443.9,
+    "end": 2450.94,
+    "text": "But beyond that, suddenly we begin to identify flaws. Hey, that's not the person I thought I got together with initially."
+  },
+  {
+    "start": 2453.28,
+    "end": 2458.7,
+    "text": "Yes, of course it's not if what I expected is Barbie or Ken."
+  },
+  {
+    "start": 2460.45,
+    "end": 2461.55,
+    "text": "A straight line."
+  },
+  {
+    "start": 2462.79,
+    "end": 2464.21,
+    "text": "But it's a human being."
+  },
+  {
+    "start": 2464.73,
+    "end": 2469.59,
+    "text": "And if I expect perfectionism from the other, I will inevitably be disappointed."
+  },
+  {
+    "start": 2471.05,
+    "end": 2479.09,
+    "text": "And that leads to frustration, lack of acceptance towards the partner, and very often usually harms the relationship."
+  },
+  {
+    "start": 2480.67,
+    "end": 2483.79,
+    "text": "Versus ongoing growth of the relationship."
+  },
+  {
+    "start": 2484.11,
+    "end": 2493.75,
+    "text": "As we'll talk about when we talk about relationships, the ideal relationship is not a relationship that's devoid of failure, that's devoid of disagreements."
+  },
+  {
+    "start": 2493.75,
+    "end": 2504.8,
+    "text": "The ideal relationship is one where there is mostly good stuff, but there is also disagreements, disappointments, fights."
+  },
+  {
+    "start": 2505.8,
+    "end": 2507.0,
+    "text": "That's actually healthy."
+  },
+  {
+    "start": 2507.52,
+    "end": 2518.2,
+    "text": "It helps the relationship become stronger over time. The issue is of degree. How much positive versus negative do you have in the relationship? The issue is not of having only positive and no negative."
+  },
+  {
+    "start": 2518.88,
+    "end": 2525.12,
+    "text": "That's not a healthy relationship. That's a relationship where there is a lot of suppression and repression."
+  },
+  {
+    "start": 2525.12,
+    "end": 2535.6,
+    "text": "at best. Perfectionism leads to anxiety, leads to stress. There's always the fear of failure"
+  },
+  {
+    "start": 2535.6,
+    "end": 2547.1,
+    "text": "versus excitement, what Peter Senge calls creative tension. What about performance?"
+  },
+  {
+    "start": 2547.6,
+    "end": 2557.9,
+    "text": "What about the no pain, no gain mantra that's drilled into our minds constantly? I mean, we know self-evident that we need to work hard in order to succeed. So shouldn't I be"
+  },
+  {
+    "start": 2557.9,
+    "end": 2567.08,
+    "text": "a perfectionist? And one of the main reasons why people don't give up the schema is because because they think this is the fastest way, most efficient way to success."
+  },
+  {
+    "start": 2568.08,
+    "end": 2570.14,
+    "text": "But it turns out that that's not the case."
+  },
+  {
+    "start": 2571.82,
+    "end": 2582.8,
+    "text": "But actually, the person committed to excellence is more successful in the long run. And there's a lot of research that illustrates this. Let me share some of it or some of the reasons."
+  },
+  {
+    "start": 2584.06,
+    "end": 2595.28,
+    "text": "Now, let's paint more gain, first of all, in the ultimate currency, the most important currency of happiness. People committed to excellence as opposed to perfectionists are happier."
+  },
+  {
+    "start": 2595.86,
+    "end": 2605.12,
+    "text": "So that's wonderful and that's great, but it's not just in the ultimate currency. It's also in the hard currency, whether it's success at work, whether it's success for athletes,"
+  },
+  {
+    "start": 2606.12,
+    "end": 2608.48,
+    "text": "whether it's success in relationships."
+  },
+  {
+    "start": 2609.2,
+    "end": 2616.68,
+    "text": "Why? Various reasons. First of all, a person committed to excellence enjoys a much more sustainable approach to growth."
+  },
+  {
+    "start": 2617.9,
+    "end": 2623.24,
+    "text": "Remember the analogy that I used from environmentalism, sustainable growth."
+  },
+  {
+    "start": 2624.2,
+    "end": 2635.8,
+    "text": "It's not about having a sterile environment. It's not about going back to the days when we lived as hunters and gatherers in caves."
+  },
+  {
+    "start": 2636.72,
+    "end": 2644.46,
+    "text": "It is living in accordance with modern life. It is enjoying modernity and progress, but at the same time,"
+  },
+  {
+    "start": 2644.46,
+    "end": 2649.62,
+    "text": "not taking too much out of the environment so that it can sustain itself."
+  },
+  {
+    "start": 2650.48,
+    "end": 2656.2,
+    "text": "The same on the individual level. A perfectionist does not enjoy a sustainable approach to growth"
+  },
+  {
+    "start": 2656.68,
+    "end": 2660.1,
+    "text": "because there are no places for recovery, no places for deviation."
+  },
+  {
+    "start": 2660.9,
+    "end": 2667.42,
+    "text": "Everything is static like a machine. As opposed to a person committed to excellence, there"
+  },
+  {
+    "start": 2667.42,
+    "end": 2679.2,
+    "text": "are deviations, there are breaks, there are recoveries, much more sustainable versus all or nothing. I got injured. My squash career ended because it was all or nothing. Either"
+  },
+  {
+    "start": 2679.2,
+    "end": 2690.82,
+    "text": "I don't train at all or I train like John Shokan, the world champion. Also, intrinsic motivation is much higher for people committed to excellence. And when we have intrinsic"
+  },
+  {
+    "start": 2690.82,
+    "end": 2702.32,
+    "text": "motivation, we're much more likely to sustain effort over a long period of time than if all the motivation is extrinsic, comes from getting to that next stage, getting those accolades,"
+  },
+  {
+    "start": 2702.32,
+    "end": 2704.96,
+    "text": "getting that raise, and so on."
+  },
+  {
+    "start": 2708.84,
+    "end": 2712.8,
+    "text": "Winston Churchill said that perfectionism spells paralysis."
+  },
+  {
+    "start": 2713.92,
+    "end": 2723.12,
+    "text": "When we're so obsessed with failure, we're much less likely to act. One of the primary causes of procrastination is perfectionism,"
+  },
+  {
+    "start": 2723.32,
+    "end": 2726.06,
+    "text": "the incapacitating fear of failure."
+  },
+  {
+    "start": 2726.68,
+    "end": 2729.0,
+    "text": "Because if we don't act, we don't fail."
+  },
+  {
+    "start": 2733.1,
+    "end": 2737.72,
+    "text": "Self-esteem, as I mentioned earlier, much higher for a person committed to excellence."
+  },
+  {
+    "start": 2738.36,
+    "end": 2742.14,
+    "text": "And as Nathaniel Brandon said, self-concept is destiny."
+  },
+  {
+    "start": 2742.56,
+    "end": 2751.58,
+    "text": "Beliefs become self-fulfilling processes. If I believe in myself, if I think that I can succeed, if I have the track record to show that I get up after falling down,"
+  },
+  {
+    "start": 2753.18,
+    "end": 2755.76,
+    "text": "I'm much more likely to succeed over time."
+  },
+  {
+    "start": 2759.33,
+    "end": 2760.83,
+    "text": "Have I mentioned this before?"
+  },
+  {
+    "start": 2761.65,
+    "end": 2764.49,
+    "text": "Oh, okay, good. Because it is important."
+  },
+  {
+    "start": 2764.95,
+    "end": 2767.51,
+    "text": "There is no other way to succeed."
+  },
+  {
+    "start": 2770.06,
+    "end": 2771.42,
+    "text": "You're at the luck factor."
+  },
+  {
+    "start": 2772.04,
+    "end": 2777.08,
+    "text": "the fantastic work by Weizmann, UK professor."
+  },
+  {
+    "start": 2777.88,
+    "end": 2784.34,
+    "text": "And what he talks about, one of the causes of having more luck in our lives,"
+  },
+  {
+    "start": 2784.96,
+    "end": 2788.72,
+    "text": "which seems like a mystical thing, but actually can be shown scientifically,"
+  },
+  {
+    "start": 2789.24,
+    "end": 2799.2,
+    "text": "one of the ways to have more luck in our lives is to try new things, little things. Even when you walk back to your dining hall after class, take a slightly different path,"
+  },
+  {
+    "start": 2799.86,
+    "end": 2810.56,
+    "text": "as opposed to the path that has already been taken by you every single day. And he says these little changes in our lives, these slight deviations from the straight and narrow"
+  },
+  {
+    "start": 2810.56,
+    "end": 2815.46,
+    "text": "actually lead to higher levels of luck because we begin to see things that we haven't seen before."
+  },
+  {
+    "start": 2819.35,
+    "end": 2830.45,
+    "text": "Perfectionist, one way. No deviations, no improvisation, no spontaneity. This very often prevents us from being, quote-unquote, luckier."
+  },
+  {
+    "start": 2833.16,
+    "end": 2839.96,
+    "text": "Creativity Simonson, the most successful, the most creative scientists and artists throughout history, are ones who have failed the most."
+  },
+  {
+    "start": 2840.56,
+    "end": 2849.12,
+    "text": "They were not perfectionists. They were committed to excellence, extremely ambitious understanding that there is no other way to succeed."
+  },
+  {
+    "start": 2850.04,
+    "end": 2857.6,
+    "text": "John Updike, highly creative author, says, Perfectionism is the enemy of creativity."
+  },
+  {
+    "start": 2859.0,
+    "end": 2867.52,
+    "text": "And we'll talk about another author who has very good advice for us of how to overcome this perfectionism, Samuel Coleridge."
+  },
+  {
+    "start": 2868.34,
+    "end": 2875.92,
+    "text": "The 80-20 rule, this rule, understanding this rule as it applies to time management changed my Harvard experience."
+  },
+  {
+    "start": 2876.44,
+    "end": 2878.36,
+    "text": "So what is the Pareto principle?"
+  },
+  {
+    "start": 2879.3,
+    "end": 2886.86,
+    "text": "Pareto was an Italian economist about 100 years ago and he came up with this principle which"
+  },
+  {
+    "start": 2886.86,
+    "end": 2895.34,
+    "text": "she named the Pareto principle. And the principle says that in most societies, 20% of the people"
+  },
+  {
+    "start": 2895.34,
+    "end": 2902.42,
+    "text": "own about 80% of the wealth. They applied this principle to an organization as well"
+  },
+  {
+    "start": 2902.42,
+    "end": 2909.98,
+    "text": "where 20% of your clients generate 80% of your income. This has been applied to many areas"
+  },
+  {
+    "start": 2909.98,
+    "end": 2920.83,
+    "text": "in economics, and more recently to time management. For example, in 20% of our time, we can get"
+  },
+  {
+    "start": 2920.83,
+    "end": 2927.99,
+    "text": "80% of our work done. And when I understood this, it changed my approach toward my academics."
+  },
+  {
+    "start": 2928.43,
+    "end": 2934.51,
+    "text": "Why? Because I realized that, well, I didn't need to read 100% of the material. Again,"
+  },
+  {
+    "start": 2934.61,
+    "end": 2941.37,
+    "text": "don't quote me on this. I didn't need to make sure that every T is crossed and every"
+  },
+  {
+    "start": 2941.37,
+    "end": 2952.17,
+    "text": "eyes dotted when I handed in a paper. And I started to follow much more of the pleasure principle or the happiness principle. And I said, okay, this is something I really care"
+  },
+  {
+    "start": 2952.17,
+    "end": 2957.15,
+    "text": "about. For example, I don't know if the class is still offered now. It's an art C14, Heroes,"
+  },
+  {
+    "start": 2958.07,
+    "end": 2965.89,
+    "text": "still offered now. One of my favorite classes as an undergrad. And it's not a very difficult"
+  },
+  {
+    "start": 2965.89,
+    "end": 2970.31,
+    "text": "class. I could do very well in it without putting too much work in it. But I spent about"
+  },
+  {
+    "start": 2970.31,
+    "end": 2978.33,
+    "text": "50 hours on my final paper because I wrote about a topic that I really really cared about"
+  },
+  {
+    "start": 2979.95,
+    "end": 2991.23,
+    "text": "and I didn't get an A for it which didn't make sense to me but I still put in so much work in it because it was fun whereas other classes that I enjoyed less I put in what I needed in order to"
+  },
+  {
+    "start": 2991.23,
+    "end": 2998.01,
+    "text": "get what I thought was enough not all or nothing either I study and get a straight A or I don't"
+  },
+  {
+    "start": 2998.01,
+    "end": 3004.77,
+    "text": "study at all. Another class, I don't know if you still taught Lit and Arts, again, Fairy"
+  },
+  {
+    "start": 3004.77,
+    "end": 3010.65,
+    "text": "Tales with Maria Tassar. She teaches another class now. I had a crush on her when I was"
+  },
+  {
+    "start": 3010.65,
+    "end": 3026.75,
+    "text": "in undergrad. I can't believe I just said that aloud. So, yeah, she said no. No, I didn't"
+  },
+  {
+    "start": 3026.75,
+    "end": 3035.19,
+    "text": "ask her, I didn't. So also in that class, not a very difficult class, a very enjoyable"
+  },
+  {
+    "start": 3035.19,
+    "end": 3040.67,
+    "text": "class on many levels. And again, putting a lot of work into a paper there that, by the"
+  },
+  {
+    "start": 3040.67,
+    "end": 3048.19,
+    "text": "way, ultimately became the topic of my dissertation on self-esteem. So again, asking what is most"
+  },
+  {
+    "start": 3048.19,
+    "end": 3054.15,
+    "text": "important for me? What do I really care about? As opposed to saying all or nothing. Now,"
+  },
+  {
+    "start": 3054.15,
+    "end": 3060.31,
+    "text": "Now my grades actually did go down slightly as a result, but really very little because"
+  },
+  {
+    "start": 3060.31,
+    "end": 3068.81,
+    "text": "I was employing the 20-80 rule, 20% focus on what's important and got 80% of the work done."
+  },
+  {
+    "start": 3069.95,
+    "end": 3078.97,
+    "text": "And I became so much more successful in other areas of my academic career because suddenly I had more time to play squash and enjoy my squash practice."
+  },
+  {
+    "start": 3078.97,
+    "end": 3090.59,
+    "text": "The Sunday I had more time for socializing, for sitting in law house and having a two-and-a-half-hour dinner, starting at 5 p.m., just based on that."
+  },
+  {
+    "start": 3092.37,
+    "end": 3094.55,
+    "text": "Another application of the 80-20 rule."
+  },
+  {
+    "start": 3096.03,
+    "end": 3099.67,
+    "text": "All of us have different times during the day when we're most productive."
+  },
+  {
+    "start": 3099.67,
+    "end": 3108.95,
+    "text": "In fact, in 20% of the day, we get 80%, potentially 80% of our work done, depending on whether we're morning people or night people."
+  },
+  {
+    "start": 3108.97,
+    "end": 3115.43,
+    "text": "people. There are people who get up in the morning at 6, 7 a.m. and they're ready to"
+  },
+  {
+    "start": 3115.43,
+    "end": 3124.41,
+    "text": "go. That's me. I get up early, very easy for me. I just go straight to my computer to change"
+  },
+  {
+    "start": 3124.41,
+    "end": 3136.03,
+    "text": "a diaper. Very early in the morning, first thing, no problem. At night, by 9, 10 p.m., complete zombie. And there are people who are the opposite, can stay up until 2, 3, 4"
+  },
+  {
+    "start": 3136.03,
+    "end": 3138.29,
+    "text": "4 a.m. in the morning and that's when they're at their freshest."
+  },
+  {
+    "start": 3138.93,
+    "end": 3148.43,
+    "text": "By the way, it has to do with our internal biorhythms, internal circadian rhythms because"
+  },
+  {
+    "start": 3148.43,
+    "end": 3156.85,
+    "text": "there are some people for whom no one is exact or very few people are exactly 24 hours rhythms. We're usually either somewhere between 23 and 25."
+  },
+  {
+    "start": 3157.87,
+    "end": 3164.65,
+    "text": "For people whose circadian rhythm is 23 hours, they get very tired at night but then they"
+  },
+  {
+    "start": 3164.65,
+    "end": 3170.07,
+    "text": "wake up very fresh in the morning. Whereas people who are closer to 25 need that extra"
+  },
+  {
+    "start": 3170.07,
+    "end": 3176.69,
+    "text": "sleep in the morning. And it's for those people that I have this class at 11.30. I know it's"
+  },
+  {
+    "start": 3176.69,
+    "end": 3184.93,
+    "text": "early but thank you for making the effort. When I got to college, most students were studying"
+  },
+  {
+    "start": 3184.93,
+    "end": 3195.71,
+    "text": "late at night. My roommates were studying late at night. Starting at about 10 and going to midnight or 2am in the morning. And that's where they're most productive. I wasn't. And"
+  },
+  {
+    "start": 3195.71,
+    "end": 3204.19,
+    "text": "And then I would get up in the morning and I was tired, exhausted, couldn't really focus at night. And when I heard about this productive hour, I changed my day."
+  },
+  {
+    "start": 3204.91,
+    "end": 3214.43,
+    "text": "And I went to sleep early, so when my roommates started to study, I actually went to bed and got up really early when my roommates were still asleep and got my work done early in"
+  },
+  {
+    "start": 3214.43,
+    "end": 3224.83,
+    "text": "the morning and then went to my 11 a.m. class after I'd gotten my work done. And in three hours in the morning, I got much more done, more productive, more creative,"
+  },
+  {
+    "start": 3224.83,
+    "end": 3236.71,
+    "text": "much better retention than I did late at night. These two things, as I mentioned earlier, really changed my experience here. It's getting so much more in far"
+  },
+  {
+    "start": 3236.71,
+    "end": 3247.21,
+    "text": "less time. Not the perfectionist approach, the pursuing excellence approach. You read about flow, Mihaly Csikszentmihalyi, who talked about flow as being peak"
+  },
+  {
+    "start": 3247.21,
+    "end": 3253.21,
+    "text": "experience, we enjoy it the most, and peak performance. We perform it our best."
+  },
+  {
+    "start": 3253.21,
+    "end": 3262.22,
+    "text": "define the no pain, no gain formula. And when do we experience flow? Not when we experience"
+  },
+  {
+    "start": 3262.22,
+    "end": 3272.86,
+    "text": "high levels of anxiety as the perfectionist often does, not when we're bored, but when it's the optimum levels of arousal, when we're excited. A person committed to excellence"
+  },
+  {
+    "start": 3272.86,
+    "end": 3278.46,
+    "text": "is much more likely to experience flow than a person who is constantly afraid of failure,"
+  },
+  {
+    "start": 3278.62,
+    "end": 3290.3,
+    "text": "constantly obsessed with failure, constantly thinking about what if I fail. Let me talk"
+  },
+  {
+    "start": 3290.3,
+    "end": 3299.84,
+    "text": "a little bit about the sources of perfectionism because if we understand as I mentioned last time if we understand where it comes from we're much more likely to be able to get over it"
+  },
+  {
+    "start": 3300.88,
+    "end": 3312.12,
+    "text": "so some of these sources of perfectionism the first one the most important one is conditioning i mean we are not born perfectionist children as you saw in the video there as you know born"
+  },
+  {
+    "start": 3312.12,
+    "end": 3322.64,
+    "text": "actually enjoying the learning process much more than than we do when we're afraid of fading they fall they get up again. So it's through conditioning that we learn to be afraid"
+  },
+  {
+    "start": 3322.64,
+    "end": 3330.16,
+    "text": "of failure. Specifically, the schema that we internalize, that's being"
+  },
+  {
+    "start": 3330.16,
+    "end": 3340.92,
+    "text": "reinforced constantly from almost the time when we were born, that what matters is the destination. When we get to a certain destination, such as"
+  },
+  {
+    "start": 3340.92,
+    "end": 3347.48,
+    "text": "learning how to walk, well done, such as getting the A at the end of my"
+  },
+  {
+    "start": 3347.48,
+    "end": 3355.54,
+    "text": "first grade terrific gold star it's the destination that's rewarded and after a"
+  },
+  {
+    "start": 3355.54,
+    "end": 3367.44,
+    "text": "while we begin to internalize this schema and we begin to believe that we're accepted when we achieve a certain completion and it goes on throughout"
+  },
+  {
+    "start": 3367.44,
+    "end": 3374.86,
+    "text": "our lives I mean when do we get a bonus on you know April 3rd no we get it on"
+  },
+  {
+    "start": 3374.86,
+    "end": 3386.62,
+    "text": "December 31st or just before Christmas at the end of the year this was a good productive year well done when do we get the grades the pat on the back if we"
+  },
+  {
+    "start": 3386.62,
+    "end": 3392.56,
+    "text": "didn't work well at the end of the semester or after an exam when we have"
+  },
+  {
+    "start": 3392.56,
+    "end": 3400.92,
+    "text": "completed something not during the journey in other words the journey goes"
+  },
+  {
+    "start": 3400.92,
+    "end": 3407.5,
+    "text": "unrewarded and we begin to perceive it as inconsequential not important just a"
+  },
+  {
+    "start": 3407.5,
+    "end": 3418.69,
+    "text": "means toward an end very few teachers parents organizations schools reward the"
+  },
+  {
+    "start": 3418.69,
+    "end": 3425.57,
+    "text": "journey the enjoyment of the journey and of course very few reward lo and behold"
+  },
+  {
+    "start": 3425.57,
+    "end": 3433.53,
+    "text": "failure which is an inevitable part of every journey so that we learn no good"
+  },
+  {
+    "start": 3433.53,
+    "end": 3441.15,
+    "text": "this is no good we must have as much as possible a straight line a straight"
+  },
+  {
+    "start": 3441.15,
+    "end": 3450.49,
+    "text": "schema and we pay a price for it when we internalize it and this is the kind of social environment that we're born into that we're raised in and the social"
+  },
+  {
+    "start": 3450.49,
+    "end": 3461.01,
+    "text": "environment that is very difficult to change I mean I know I have little kids at home. It is so difficult to change it because very often I'm inclined to say, to focus primarily"
+  },
+  {
+    "start": 3461.01,
+    "end": 3470.55,
+    "text": "on the day, oh, Shirelle, she just learned how to walk. Well done, you know, you just walked, as opposed to rewarding the effort, as we'll talk about in a minute, and rewarding"
+  },
+  {
+    "start": 3470.55,
+    "end": 3478.01,
+    "text": "the hard work, and rewarding even the failures, the trying, the coping, the process. Very"
+  },
+  {
+    "start": 3478.01,
+    "end": 3487.62,
+    "text": "difficult and that's connected of course to the permission to be human the"
+  },
+  {
+    "start": 3487.62,
+    "end": 3498.72,
+    "text": "permission for the constraint view of human nature as opposed to the idealized disconnected detached view of what life can look like because it can't instead"
+  },
+  {
+    "start": 3498.72,
+    "end": 3510.54,
+    "text": "of permission to be human there is pressure to be perfect it's constant it's ongoing it's in the media it's in the workplace it's in our educational"
+  },
+  {
+    "start": 3510.54,
+    "end": 3518.92,
+    "text": "institutions. It's everywhere and we pay a price for it. Now let me give you some"
+  },
+  {
+    "start": 3518.92,
+    "end": 3524.62,
+    "text": "examples. Before I give this example, just a quick introduction. As you know,"
+  },
+  {
+    "start": 3525.96,
+    "end": 3537.16,
+    "text": "academics don't make that much money. When people go into academia, it's usually not for the money. So many academics, myself being no exception, have to"
+  },
+  {
+    "start": 3537.16,
+    "end": 3543.54,
+    "text": "supplement their their income so I supplement my income and I want to share"
+  },
+  {
+    "start": 3543.54,
+    "end": 3563.01,
+    "text": "with you something that I do on the side yeah my glasses it's just to to hide the"
+  },
+  {
+    "start": 3564.05,
+    "end": 3573.67,
+    "text": "the abs yeah so I mean if you real is there anyone in this room who looks like"
+  },
+  {
+    "start": 3573.67,
+    "end": 3586.78,
+    "text": "this? Yeah, I didn't mean for you to answer that question. I mean, is this real? Well,"
+  },
+  {
+    "start": 3587.22,
+    "end": 3591.0,
+    "text": "partially, a lot of it is Photoshopped, but yeah, there are some people who look like this."
+  },
+  {
+    "start": 3592.56,
+    "end": 3601.36,
+    "text": "But what do we see in the magazines? I mean, if you go to the magazine store, the magazines,"
+  },
+  {
+    "start": 3601.36,
+    "end": 3609.12,
+    "text": "And these are the kind of people who are on the cover, perfect, perfect beings, even"
+  },
+  {
+    "start": 3609.12,
+    "end": 3613.38,
+    "text": "more so, you know, so we have our tens, even more so with the Barbies."
+  },
+  {
+    "start": 3614.76,
+    "end": 3629.68,
+    "text": "This is Cosmo 1896, yeah, I never procrastinate, I just do a lot of work on Google image."
+  },
+  {
+    "start": 3631.18,
+    "end": 3642.38,
+    "text": "So, look at this. The progress of science. Some examples of recent art. Just like Cosmo today, right?"
+  },
+  {
+    "start": 3643.0,
+    "end": 3653.1,
+    "text": "Well, so look at this. Sex goddess secrets. I mean, it's not even sex human secrets."
+  },
+  {
+    "start": 3653.1,
+    "end": 3662.04,
+    "text": "That's not good enough. Look at the standards that are set for ourselves. How am I ever going to match that?"
+  },
+  {
+    "start": 3663.24,
+    "end": 3664.14,
+    "text": "Or here."
+  },
+  {
+    "start": 3665.52,
+    "end": 3666.72,
+    "text": "Oh, I didn't see that."
+  },
+  {
+    "start": 3667.08,
+    "end": 3669.52,
+    "text": "The naughty thing, 30%. I should read that."
+  },
+  {
+    "start": 3672.16,
+    "end": 3675.52,
+    "text": "But that's not what I wanted to point to. I actually wanted to point to this."
+  },
+  {
+    "start": 3676.5,
+    "end": 3678.5,
+    "text": "How to get ahead fast."
+  },
+  {
+    "start": 3679.4,
+    "end": 3682.08,
+    "text": "As fast as you can, right? There's no time."
+  },
+  {
+    "start": 3683.28,
+    "end": 3684.08,
+    "text": "Or this."
+  },
+  {
+    "start": 3685.88,
+    "end": 3689.2,
+    "text": "Never, never have a zit again. I mean, I still have a zit."
+  },
+  {
+    "start": 3689.2,
+    "end": 3707.41,
+    "text": "I'm 37. How do they do that? Again, unrealistic models. You know, in 1997, when I was living"
+  },
+  {
+    "start": 3707.41,
+    "end": 3719.23,
+    "text": "in Singapore, I wanted to bring Nathaniel Brandon to Singapore. Again, he's considered the leading person on self-esteem. His wife, Deborah Brandon, has done a lot of work in"
+  },
+  {
+    "start": 3719.23,
+    "end": 3728.43,
+    "text": "the area of self-esteem and personal growth. So I wanted to bring them both. So I brought them to consult for the organization where I was working and I was looking for other"
+  },
+  {
+    "start": 3728.43,
+    "end": 3735.65,
+    "text": "ways because it was very expensive for other ways of funding that trip and a close friend"
+  },
+  {
+    "start": 3735.65,
+    "end": 3746.55,
+    "text": "of mine Pat Lee was working at the time with the body shop and she said no this is perfect because the body shop this year Anita Rodic whom I mentioned earlier is interested in"
+  },
+  {
+    "start": 3746.55,
+    "end": 3751.97,
+    "text": "self-esteem for women so why don't we do a project with Devers Nathaniel and the body"
+  },
+  {
+    "start": 3751.97,
+    "end": 3759.53,
+    "text": "shop a joint venture and have self-esteem for women in Singapore so it was a great idea I actually"
+  },
+  {
+    "start": 3759.53,
+    "end": 3765.51,
+    "text": "met with Anita Roddick and we co-sponsored Nathaniel Brandon which was a highly successful"
+  },
+  {
+    "start": 3765.51,
+    "end": 3772.81,
+    "text": "event we had 700 seats over a thousand people came we had to have you know plasma outside"
+  },
+  {
+    "start": 3772.81,
+    "end": 3780.99,
+    "text": "and in addition it made a huge stir and really started a movement or a mini movement in Singapore"
+  },
+  {
+    "start": 3780.99,
+    "end": 3787.45,
+    "text": "or self-esteem for women. As a result of that, Nathaniel Brandon wrote a book called Self-Esteem"
+  },
+  {
+    "start": 3787.45,
+    "end": 3793.51,
+    "text": "for Women because he was blown away with the fascinating stories that were told in the"
+  },
+  {
+    "start": 3793.51,
+    "end": 3801.53,
+    "text": "seminar and so on. Anyway, but Anita Roddick has done a lot of work for women and self-esteem."
+  },
+  {
+    "start": 3802.01,
+    "end": 3806.71,
+    "text": "And one of the projects that she did then in 1997, I think most of you were too young"
+  },
+  {
+    "start": 3806.71,
+    "end": 3815.39,
+    "text": "to be aware of it, but it was an all-body shop store, was one that she based on a doll"
+  },
+  {
+    "start": 3815.39,
+    "end": 3819.53,
+    "text": "called Ruby, the alternative to Barbie."
+  },
+  {
+    "start": 3820.19,
+    "end": 3824.27,
+    "text": "And here is what the campaign looked like. Whoops, sorry."
+  },
+  {
+    "start": 3825.87,
+    "end": 3831.09,
+    "text": "There are three billion women who don't look like supermodels and only eight who do."
+  },
+  {
+    "start": 3832.03,
+    "end": 3838.21,
+    "text": "or pay media where we come from cultural and physical diversity is the norm it's"
+  },
+  {
+    "start": 3838.21,
+    "end": 3845.97,
+    "text": "called planet earth very effective campaign and so important because one of"
+  },
+  {
+    "start": 3845.97,
+    "end": 3856.81,
+    "text": "the models that we have today in our culture all or nothing I mean these pictures by the way came together it's not I didn't put them together either"
+  },
+  {
+    "start": 3856.81,
+    "end": 3869.88,
+    "text": "you binge or the alternative? Or what do we get in the movies? I mean, who possibly can"
+  },
+  {
+    "start": 3869.88,
+    "end": 3881.82,
+    "text": "live up to the standards of Top Gun? Tom Cruise and Kelly McGillis, the perfect love that"
+  },
+  {
+    "start": 3881.82,
+    "end": 3889.72,
+    "text": "they have there. But this is the model that we have, and I'll talk about it when I talk about relationships. Who possibly can sustain, even for nine and a half weeks, let alone"
+  },
+  {
+    "start": 3889.72,
+    "end": 3899.53,
+    "text": "a lifetime the passion in the movies impossible standards also self-help books think and grow rich"
+  },
+  {
+    "start": 3899.53,
+    "end": 3909.28,
+    "text": "nothing much about this no no just think and then you'll be rich tens of millions of copies sold from"
+  },
+  {
+    "start": 3909.28,
+    "end": 3921.0,
+    "text": "this book or here's another book that I found now the book the book may be great I haven't read it"
+  },
+  {
+    "start": 3921.0,
+    "end": 3929.88,
+    "text": "admit but look at it small steps to big happiness now again we can't wait it's"
+  },
+  {
+    "start": 3929.88,
+    "end": 3933.56,
+    "text": "about the destination it's not about the hard work the journey the character"
+  },
+  {
+    "start": 3933.56,
+    "end": 3944.33,
+    "text": "change that needs to take place and there is something else there's something"
+  },
+  {
+    "start": 3944.33,
+    "end": 3953.69,
+    "text": "else that leads to perfectionism and this is research that you've already read about and this is work done by great work done by Carol Dweck who's now"
+  },
+  {
+    "start": 3953.69,
+    "end": 3965.47,
+    "text": "at Stanford. Here is her study, because you see, what she illustrates is that not all praise is good. Telling a kid you're wonderful, you're terrific, you're great, no matter"
+  },
+  {
+    "start": 3965.47,
+    "end": 3970.95,
+    "text": "what, indiscriminately, you're so smart, you're so amazing, my little Einstein, that's"
+  },
+  {
+    "start": 3970.95,
+    "end": 3980.41,
+    "text": "not always good, but may be harmful in the long run. And it may create the perfectionism"
+  },
+  {
+    "start": 3980.41,
+    "end": 3992.17,
+    "text": "schema. So let me share with you one of her studies. And again, I think you've already read this. So what she did was going to a group of 10-year-olds and randomly divided them into"
+  },
+  {
+    "start": 3992.17,
+    "end": 4003.83,
+    "text": "two groups. The first group did a puzzle, which they completed successfully, each one individually. And at the end, for each one, when she completed the puzzle, she would"
+  },
+  {
+    "start": 4003.83,
+    "end": 4016.93,
+    "text": "say um wow you're so intelligent so smart and of course they felt good about it terrific the"
+  },
+  {
+    "start": 4016.93,
+    "end": 4024.75,
+    "text": "second group did the exact same puzzle succeeded did well and at the end of it said wow you put"
+  },
+  {
+    "start": 4024.75,
+    "end": 4031.93,
+    "text": "so much effort into it you worked so hard and randomly divided into these two groups one"
+  },
+  {
+    "start": 4031.93,
+    "end": 4042.41,
+    "text": "smart intelligent one effort hard work and then she had a second part to the study in that second part the participant had to choose between two"
+  },
+  {
+    "start": 4042.41,
+    "end": 4054.37,
+    "text": "puzzles one puzzle they were told was relatively easy one they could do well the other one was extremely hard but they could really learn a lot from it"
+  },
+  {
+    "start": 4057.47,
+    "end": 4063.63,
+    "text": "from the group that was told that they were smart or smart and intelligent 50"
+  },
+  {
+    "start": 4063.63,
+    "end": 4070.57,
+    "text": "50% chose the easy one, 50% chose the hard one where they could learn a lot."
+  },
+  {
+    "start": 4070.69,
+    "end": 4075.85,
+    "text": "From the group that was told that they were hardworking, that they put in a lot of effort,"
+  },
+  {
+    "start": 4076.29,
+    "end": 4080.43,
+    "text": "90% chose the hard one, the one that they could learn from."
+  },
+  {
+    "start": 4081.63,
+    "end": 4089.63,
+    "text": "So this was part two of the study. Part three, she brought them in again and this time had them take or do a puzzle which"
+  },
+  {
+    "start": 4089.63,
+    "end": 4095.91,
+    "text": "was very difficult, which was essentially unsolvable and she wanted to see the"
+  },
+  {
+    "start": 4095.91,
+    "end": 4102.31,
+    "text": "reaction of the two groups. The group that was told how smart they were, how"
+  },
+  {
+    "start": 4102.31,
+    "end": 4109.4,
+    "text": "intelligent they were, that group didn't persist much and experienced a lot of"
+  },
+  {
+    "start": 4109.4,
+    "end": 4120.74,
+    "text": "frustration and then would give up very quickly on that puzzle. In contrast the group that was told earlier that they worked hard and they put in a lot of"
+  },
+  {
+    "start": 4120.74,
+    "end": 4131.8,
+    "text": "effort persisted much more and actually enjoyed the process even though they didn't end up solving the puzzle but they enjoyed the process and they worked"
+  },
+  {
+    "start": 4131.8,
+    "end": 4138.68,
+    "text": "harder look at this slight manipulation simply one sentence oh you're so smart"
+  },
+  {
+    "start": 4138.68,
+    "end": 4147.77,
+    "text": "oh you're working so hard one sentence lead to this significant difference in"
+  },
+  {
+    "start": 4149.85,
+    "end": 4159.49,
+    "text": "her words. Emphasizing effort gives the child a variable that they can control. They come"
+  },
+  {
+    "start": 4159.49,
+    "end": 4166.07,
+    "text": "to see themselves as in control of their success. Emphasizing natural intelligence takes it"
+  },
+  {
+    "start": 4166.07,
+    "end": 4172.29,
+    "text": "out of the child control and it provides no good recipe for responding to a failure."
+  },
+  {
+    "start": 4173.11,
+    "end": 4179.99,
+    "text": "Essentially what happens when you focus only on the intelligence, on how smart you are,"
+  },
+  {
+    "start": 4179.99,
+    "end": 4186.51,
+    "text": "you're creating the perfectionist schema as opposed to a schema that focuses on the journey,"
+  },
+  {
+    "start": 4186.85,
+    "end": 4198.55,
+    "text": "effort, hard work. She continues, when you praise kids' intelligence and then they fail, they think they're not smart anymore and they lose interest in their work. In contrast,"
+  },
+  {
+    "start": 4198.87,
+    "end": 4205.63,
+    "text": "kids praised for effort show no impairment and often are energized in the face of difficulty."
+  },
+  {
+    "start": 4205.63,
+    "end": 4212.94,
+    "text": "What a difference, just based on these two approaches."
+  },
+  {
+    "start": 4213.7,
+    "end": 4217.76,
+    "text": "A person who is praised for their intelligence creates this schema."
+  },
+  {
+    "start": 4218.18,
+    "end": 4223.9,
+    "text": "Either I'm intelligent or I'm not. And I'm afraid of not being intelligent, so I'll choose the easier task."
+  },
+  {
+    "start": 4224.78,
+    "end": 4230.14,
+    "text": "And when I can't do something, it's an attack, it's an assault on my schema."
+  },
+  {
+    "start": 4231.6,
+    "end": 4243.6,
+    "text": "Right? It's a deviation from the straight and narrow. In contrast, if effort is most important, okay, let me see what's around the corner here. Hey, I'm learning a lot now. This is wonderful. This is fun."
+  },
+  {
+    "start": 4245.87,
+    "end": 4256.85,
+    "text": "Because with one, it's a fixed mindset, in Dweck's words. And the other is a malleable, changing, ongoing, developing mindset."
+  },
+  {
+    "start": 4258.01,
+    "end": 4259.53,
+    "text": "Wonder is fear of failure."
+  },
+  {
+    "start": 4260.37,
+    "end": 4263.85,
+    "text": "Because I want to be smart. It's fun being called smart and intelligent."
+  },
+  {
+    "start": 4264.91,
+    "end": 4266.69,
+    "text": "I don't want to threaten the schema."
+  },
+  {
+    "start": 4268.97,
+    "end": 4277.93,
+    "text": "Versus working hard, focusing on the process, when the excellence schema becomes the dominant modus operandi."
+  },
+  {
+    "start": 4281.85,
+    "end": 4286.43,
+    "text": "Okay, so how do we overcome perfectionism?"
+  },
+  {
+    "start": 4287.35,
+    "end": 4298.65,
+    "text": "What do we do about it, if we have it? And again, remember, there is no perfect perfectionist, there is no perfect person committed to excellence. You need to choose in your life where you're happy and where you think you can be happier."
+  },
+  {
+    "start": 4299.67,
+    "end": 4305.41,
+    "text": "This may not even speak to you. This for you may be just interesting academically or it may be deeply personal."
+  },
+  {
+    "start": 4308.05,
+    "end": 4312.67,
+    "text": "So how do we become more and more of the excellence schema?"
+  },
+  {
+    "start": 4315.45,
+    "end": 4325.51,
+    "text": "First, it is about self-awareness. It's about understanding. For me a big breakthrough was understanding, hey, I'm actually defensive and I don't want to be defensive"
+  },
+  {
+    "start": 4326.37,
+    "end": 4335.59,
+    "text": "because I know that it hurts intimacy and relationships. And that's when I started the real work on it. And that has improved and continues to improve my relationship."
+  },
+  {
+    "start": 4336.91,
+    "end": 4339.79,
+    "text": "Or, oh, look at my reaction to failure."
+  },
+  {
+    "start": 4340.19,
+    "end": 4348.27,
+    "text": "Look at how afraid I am of hearing a no. Look at how afraid I am of being rejected. Look at how afraid I am of coping and trying."
+  },
+  {
+    "start": 4348.97,
+    "end": 4355.75,
+    "text": "So being aware of it. And if you want to improve your forehand in tennis, You first need to be aware of what it is that you want to improve."
+  },
+  {
+    "start": 4356.35,
+    "end": 4360.17,
+    "text": "So that's the first step. And that's easier said than done."
+  },
+  {
+    "start": 4360.55,
+    "end": 4368.49,
+    "text": "Let me show you a quick example of someone who perhaps is not fully aware of her weaknesses."
+  },
+  {
+    "start": 4405.76,
+    "end": 4406.96,
+    "text": "Mr. Jock full of nuts?"
+  },
+  {
+    "start": 4410.32,
+    "end": 4417.78,
+    "text": "See, quick, all right. What is this, a freaking inquisition? Can a guy have a nice hot cup of coffee when he wants it? We all live in tea land, where it's the capital of crime to even say the word coffee."
+  },
+  {
+    "start": 4418.8,
+    "end": 4420.42,
+    "text": "Okay, Gitterbug, get a hold of yourself."
+  },
+  {
+    "start": 4421.48,
+    "end": 4422.82,
+    "text": "Don't tell me to get a hold of myself."
+  },
+  {
+    "start": 4423.5,
+    "end": 4423.82,
+    "text": "Fine."
+  },
+  {
+    "start": 4430.22,
+    "end": 4432.6,
+    "text": "Take a look in the mirror, because you've got a little crazy on your face."
+  },
+  {
+    "start": 4436.27,
+    "end": 4437.17,
+    "text": "Good to meet you."
+  },
+  {
+    "start": 4439.1,
+    "end": 4441.66,
+    "text": "Expert, but I think you have a little addiction problem."
+  },
+  {
+    "start": 4442.68,
+    "end": 4449.44,
+    "text": "No tears on the damask."
+  },
+  {
+    "start": 4452.0,
+    "end": 4452.32,
+    "text": "Addiction?"
+  },
+  {
+    "start": 4453.44,
+    "end": 4454.08,
+    "text": "Oh, no."
+  },
+  {
+    "start": 4454.5,
+    "end": 4456.52,
+    "text": "No, no, I don't have an addiction. Thank you very much."
+  },
+  {
+    "start": 4459.92,
+    "end": 4460.66,
+    "text": "I'm fine. I'm fine."
+  },
+  {
+    "start": 4461.12,
+    "end": 4461.4,
+    "text": "I'm fine."
+  },
+  {
+    "start": 4463.08,
+    "end": 4466.72,
+    "text": "Now, listen to me. The first thing you have to do is admit that you have a problem."
+  },
+  {
+    "start": 4477.82,
+    "end": 4479.16,
+    "text": "Now, you are really in charge."
+  },
+  {
+    "start": 4483.66,
+    "end": 4484.78,
+    "text": "Why is it so good to me?"
+  },
+  {
+    "start": 4487.26,
+    "end": 4489.66,
+    "text": "Karen, I can't do it. I'm hooked on the junk."
+  },
+  {
+    "start": 4490.06,
+    "end": 4500.53,
+    "text": "Well, hang up. I'll just have to get used to drinking my daily strength."
+  },
+  {
+    "start": 4501.27,
+    "end": 4505.34,
+    "text": "You're best to try to wake it up."
+  },
+  {
+    "start": 4507.7,
+    "end": 4513.32,
+    "text": "Okay, Karen. together we can do this. Let me just have one last cup. Half a cup. How about you drink a cup"
+  },
+  {
+    "start": 4513.32,
+    "end": 4528.39,
+    "text": "in a lecture time? Okay. When will the lambs stop screaming? So whether it's dealing with addiction"
+  },
+  {
+    "start": 4528.39,
+    "end": 4533.89,
+    "text": "or dealing with any issue in our lives, perfectionism, or whether it's improving"
+  },
+  {
+    "start": 4533.89,
+    "end": 4545.07,
+    "text": "something, first step is awareness. Second step is, there's five more minutes by the way,"
+  },
+  {
+    "start": 4545.13,
+    "end": 4549.27,
+    "text": "those of you are looking at this clock, it's five minutes fast, or four more minutes."
+  },
+  {
+    "start": 4549.59,
+    "end": 4557.77,
+    "text": "four more minutes. Focus on and reward effort. What Carol Dweck showed was that when we focus"
+  },
+  {
+    "start": 4557.77,
+    "end": 4568.95,
+    "text": "on effort, people's effort, we're able to change a schema that has been ingrained there and that has been there very often for years. So with ourselves or with other people, it's"
+  },
+  {
+    "start": 4568.95,
+    "end": 4576.39,
+    "text": "about focusing on the journey, focusing on and rewarding ourselves at times even for failure,"
+  },
+  {
+    "start": 4576.39,
+    "end": 4588.23,
+    "text": "for trying. And within a few hours, what Carol Dweck has seen, teaching people that their mind is malleable, teaching them actually about neuroplasticity, that it's not fixed,"
+  },
+  {
+    "start": 4588.55,
+    "end": 4599.38,
+    "text": "we can bring about change. Active acceptance. Karen Horney, whom I consider one of the mothers"
+  },
+  {
+    "start": 4599.38,
+    "end": 4605.32,
+    "text": "of positive psychology, has done a lot of work on neurosis. And one of the things that"
+  },
+  {
+    "start": 4605.32,
+    "end": 4613.82,
+    "text": "she found was that neurosis that we have never really goes away it's always part of us it becomes"
+  },
+  {
+    "start": 4613.82,
+    "end": 4620.4,
+    "text": "more manageable but it's always there and perfectionism at the extreme is a form of"
+  },
+  {
+    "start": 4620.4,
+    "end": 4631.6,
+    "text": "neurosis so the thing is to accept that it will always be there I always have the tendency for perfectionism and it's okay however whereas before I was here on the extreme of perfectionism"
+  },
+  {
+    "start": 4631.6,
+    "end": 4637.52,
+    "text": "now much closer to the excellence extreme and it's a lifelong it's a it's"
+  },
+  {
+    "start": 4637.52,
+    "end": 4649.52,
+    "text": "an ongoing process it's an ongoing process and the and the key here is to accept that it will always be part of one's life and then to say alright so"
+  },
+  {
+    "start": 4649.52,
+    "end": 4661.04,
+    "text": "what do I do now in other words it is about then taking action behavior so for For example, it's about coping, putting ourselves on the line."
+  },
+  {
+    "start": 4661.14,
+    "end": 4672.76,
+    "text": "What I did initially, when I first realized the perfectionism and my defensiveness, I would go out of my way and solicit criticism, and I would ask people, so give me feedback"
+  },
+  {
+    "start": 4672.76,
+    "end": 4680.34,
+    "text": "about it. And when I received negative feedback, things that were actually deviations from the straight"
+  },
+  {
+    "start": 4680.34,
+    "end": 4686.84,
+    "text": "line I literally held myself from you know about pouncing back you know the"
+  },
+  {
+    "start": 4686.84,
+    "end": 4697.94,
+    "text": "best form of defense is attack very often for perfectionists and slowly I got used to it and I became far less defensive and was able to create much"
+  },
+  {
+    "start": 4697.94,
+    "end": 4705.86,
+    "text": "higher levels of intimacy or I put myself on the line in other areas where I potentially would experience a no."
+  },
+  {
+    "start": 4706.18,
+    "end": 4710.52,
+    "text": "So let me end with a quick story."
+  },
+  {
+    "start": 4712.35,
+    "end": 4714.63,
+    "text": "Her name was Brittany."
+  },
+  {
+    "start": 4716.42,
+    "end": 4719.7,
+    "text": "She was a showgirl, at least to me she was."
+  },
+  {
+    "start": 4720.08,
+    "end": 4729.54,
+    "text": "We met freshman week and we really hit it off. We spent almost the entire freshman week out and at the end of freshman week, wanting to overcome my perfectionism,"
+  },
+  {
+    "start": 4729.76,
+    "end": 4733.54,
+    "text": "I asked her out and she said no."
+  },
+  {
+    "start": 4734.68,
+    "end": 4738.9,
+    "text": "It surprised me, it floored me, it hurt me, but she said no."
+  },
+  {
+    "start": 4739.4,
+    "end": 4748.36,
+    "text": "My sophomore year, we met again, and again I asked her out, and this time she said no."
+  },
+  {
+    "start": 4750.04,
+    "end": 4754.54,
+    "text": "Junior year, toward the end of my sophomore year, junior year, I dated someone,"
+  },
+  {
+    "start": 4755.18,
+    "end": 4766.96,
+    "text": "so Brittany was out of the equation, and then we met again my senior year. we had an amazing conversation by that time I'd already studied psychology I"
+  },
+  {
+    "start": 4767.6,
+    "end": 4772.64,
+    "text": "could also read her body language she did a lot of this with her hair and I"
+  },
+  {
+    "start": 4772.64,
+    "end": 4780.2,
+    "text": "knew that she really liked me and I asked her out and she said no and I'm still"
+  },
+  {
+    "start": 4780.2,
+    "end": 4788.04,
+    "text": "here with you and that was an important learning process learn to fail or fail to learn I'll see you next week"
+  }
+]

@@ -1,0 +1,6977 @@
+[
+  {
+    "start": 7.32,
+    "end": 10.88,
+    "text": "Welcome to Startup School 2026. Now,"
+  },
+  {
+    "start": 10.88,
+    "end": 14.72,
+    "text": "let's get started."
+  },
+  {
+    "start": 14.72,
+    "end": 17.4,
+    "text": "Please join me in welcoming to the stage"
+  },
+  {
+    "start": 17.4,
+    "end": 19.84,
+    "text": "the founder and CEO of Nvidia, Jensen"
+  },
+  {
+    "start": 19.84,
+    "end": 22.925,
+    "text": "Huang."
+  },
+  {
+    "start": 22.925,
+    "end": 34.08,
+    "text": ">> [music]"
+  },
+  {
+    "start": 34.08,
+    "end": 36.025,
+    "text": ">> Hey Jensen."
+  },
+  {
+    "start": 36.025,
+    "end": 37.2,
+    "text": ">> [music]"
+  },
+  {
+    "start": 37.2,
+    "end": 39.16,
+    "text": ">> Please."
+  },
+  {
+    "start": 39.16,
+    "end": 41.64,
+    "text": "Everybody."
+  },
+  {
+    "start": 41.64,
+    "end": 44.52,
+    "text": ">> Oh my god."
+  },
+  {
+    "start": 44.52,
+    "end": 46.4,
+    "text": "This is a surreal moment for me. Thank"
+  },
+  {
+    "start": 46.4,
+    "end": 48.0,
+    "text": "you. Thank you for being here, Jensen."
+  },
+  {
+    "start": 48.0,
+    "end": 49.56,
+    "text": ">> I'm delighted to do it. It's great to be"
+  },
+  {
+    "start": 49.56,
+    "end": 51.09,
+    "text": "here."
+  },
+  {
+    "start": 51.09,
+    "end": 53.72,
+    "text": ">> [cheering]"
+  },
+  {
+    "start": 53.72,
+    "end": 55.2,
+    "text": ">> Apparently,"
+  },
+  {
+    "start": 55.2,
+    "end": 57.52,
+    "text": "if you're here,"
+  },
+  {
+    "start": 57.52,
+    "end": 62.4,
+    "text": "you are going to make it."
+  },
+  {
+    "start": 62.4,
+    "end": 64.845,
+    "text": "So, I'm happy I'm here."
+  },
+  {
+    "start": 64.845,
+    "end": 66.88,
+    "text": ">> [laughter]"
+  },
+  {
+    "start": 66.88,
+    "end": 69.12,
+    "text": ">> Oh, Jensen. Uh"
+  },
+  {
+    "start": 69.12,
+    "end": 70.8,
+    "text": "Well, for the students who only know"
+  },
+  {
+    "start": 70.8,
+    "end": 72.88,
+    "text": "Nvidia at this as a company at the"
+  },
+  {
+    "start": 72.88,
+    "end": 74.48,
+    "text": "center of AI,"
+  },
+  {
+    "start": 74.48,
+    "end": 77.0,
+    "text": "uh what part of the early Nvidia story"
+  },
+  {
+    "start": 77.0,
+    "end": 79.08,
+    "text": "do they most need to understand?"
+  },
+  {
+    "start": 79.08,
+    "end": 81.2,
+    "text": ">> The thing that most people don't"
+  },
+  {
+    "start": 81.2,
+    "end": 83.52,
+    "text": "don't believe is that"
+  },
+  {
+    "start": 83.52,
+    "end": 84.76,
+    "text": "that um"
+  },
+  {
+    "start": 84.76,
+    "end": 87.44,
+    "text": "uh the choice of our technology that we"
+  },
+  {
+    "start": 87.44,
+    "end": 89.76,
+    "text": "started the company with was absolutely"
+  },
+  {
+    "start": 89.76,
+    "end": 91.2,
+    "text": "wrong."
+  },
+  {
+    "start": 91.2,
+    "end": 92.36,
+    "text": "And so, we had started with the idea"
+  },
+  {
+    "start": 92.36,
+    "end": 94.84,
+    "text": "that we would reinvent 3D graphics."
+  },
+  {
+    "start": 94.84,
+    "end": 96.6,
+    "text": "Well, the the company's"
+  },
+  {
+    "start": 96.6,
+    "end": 99.0,
+    "text": "philosophy and perspective"
+  },
+  {
+    "start": 99.0,
+    "end": 101.68,
+    "text": "uh was that"
+  },
+  {
+    "start": 101.68,
+    "end": 104.08,
+    "text": "the general purpose computers, the CPUs,"
+  },
+  {
+    "start": 104.08,
+    "end": 106.16,
+    "text": "were really useful, but if we could"
+  },
+  {
+    "start": 106.16,
+    "end": 109.75999999999999,
+    "text": "augment it with uh accelerators, we"
+  },
+  {
+    "start": 109.75999999999999,
+    "end": 112.08,
+    "text": "could solve problems that otherwise"
+  },
+  {
+    "start": 112.08,
+    "end": 113.56,
+    "text": "too hard to solve."
+  },
+  {
+    "start": 113.56,
+    "end": 115.2,
+    "text": "And one of the first problems we chose"
+  },
+  {
+    "start": 115.2,
+    "end": 117.0,
+    "text": "was 3D graphics."
+  },
+  {
+    "start": 117.0,
+    "end": 121.12,
+    "text": "And we And during that time 1993 the PC"
+  },
+  {
+    "start": 121.12,
+    "end": 123.36,
+    "text": "was just rumored to be coming."
+  },
+  {
+    "start": 123.36,
+    "end": 124.4,
+    "text": "And"
+  },
+  {
+    "start": 124.4,
+    "end": 126.52,
+    "text": "and our big idea was that we would turn"
+  },
+  {
+    "start": 126.52,
+    "end": 128.47899999999998,
+    "text": "every single personal computer into a"
+  },
+  {
+    "start": 128.47899999999998,
+    "end": 130.52,
+    "text": "game console because we grew up in the"
+  },
+  {
+    "start": 130.52,
+    "end": 132.2,
+    "text": "era of game consoles."
+  },
+  {
+    "start": 132.2,
+    "end": 134.0,
+    "text": "And so we thought you know what if we"
+  },
+  {
+    "start": 134.0,
+    "end": 135.36,
+    "text": "could could"
+  },
+  {
+    "start": 135.36,
+    "end": 137.72,
+    "text": "design a system that would fit into the"
+  },
+  {
+    "start": 137.72,
+    "end": 139.16,
+    "text": "personal computer"
+  },
+  {
+    "start": 139.16,
+    "end": 140.72,
+    "text": "and it would turn it into a game"
+  },
+  {
+    "start": 140.72,
+    "end": 142.44,
+    "text": "console. And so we thought we would"
+  },
+  {
+    "start": 142.44,
+    "end": 145.48,
+    "text": "reinvent the algorithm that would"
+  },
+  {
+    "start": 145.48,
+    "end": 148.28,
+    "text": "require these large supercomputers and"
+  },
+  {
+    "start": 148.28,
+    "end": 150.6,
+    "text": "we would fit it into the PC."
+  },
+  {
+    "start": 150.6,
+    "end": 152.959,
+    "text": "And we came up with some new algorithms."
+  },
+  {
+    "start": 152.959,
+    "end": 154.52,
+    "text": "And we were excited about it. We"
+  },
+  {
+    "start": 154.52,
+    "end": 157.36,
+    "text": "believed in it. It was we reasoned about"
+  },
+  {
+    "start": 157.36,
+    "end": 158.36,
+    "text": "it"
+  },
+  {
+    "start": 158.36,
+    "end": 160.4,
+    "text": "um in a thoughtful way."
+  },
+  {
+    "start": 160.4,
+    "end": 161.48,
+    "text": "And"
+  },
+  {
+    "start": 161.48,
+    "end": 163.2,
+    "text": "and we went to start the company to go"
+  },
+  {
+    "start": 163.2,
+    "end": 164.88,
+    "text": "build it. Well, it turns out the"
+  },
+  {
+    "start": 164.88,
+    "end": 167.4,
+    "text": "algorithm was exactly wrong."
+  },
+  {
+    "start": 167.4,
+    "end": 169.56,
+    "text": "And the technology that founded the"
+  },
+  {
+    "start": 169.56,
+    "end": 172.72,
+    "text": "company turns out to be exactly wrong."
+  },
+  {
+    "start": 172.72,
+    "end": 175.0,
+    "text": "And so in 1995"
+  },
+  {
+    "start": 175.0,
+    "end": 177.84,
+    "text": "uh we realized that and"
+  },
+  {
+    "start": 177.84,
+    "end": 180.08,
+    "text": "it was almost too late because by then"
+  },
+  {
+    "start": 180.08,
+    "end": 182.48,
+    "text": "there were some 35 40 other companies"
+  },
+  {
+    "start": 182.48,
+    "end": 185.12,
+    "text": "that were building 3D graphics for PCs."
+  },
+  {
+    "start": 185.12,
+    "end": 187.76,
+    "text": "And and so we realized that it didn't"
+  },
+  {
+    "start": 187.76,
+    "end": 189.76,
+    "text": "work and I went back to the company and"
+  },
+  {
+    "start": 189.76,
+    "end": 190.959,
+    "text": "we were at the company I said what are"
+  },
+  {
+    "start": 190.959,
+    "end": 192.64,
+    "text": "we going to do? It doesn't work and we"
+  },
+  {
+    "start": 192.64,
+    "end": 195.239,
+    "text": "were all talking about it and I said"
+  },
+  {
+    "start": 195.239,
+    "end": 198.239,
+    "text": "look uh we we uh"
+  },
+  {
+    "start": 198.239,
+    "end": 200.32,
+    "text": "we won't have a company if we don't"
+  },
+  {
+    "start": 200.32,
+    "end": 202.239,
+    "text": "confront the fact that this doesn't work"
+  },
+  {
+    "start": 202.239,
+    "end": 204.16,
+    "text": "and start working towards the right"
+  },
+  {
+    "start": 204.16,
+    "end": 205.4,
+    "text": "algorithm."
+  },
+  {
+    "start": 205.4,
+    "end": 207.88,
+    "text": "And and then somebody told me it turns"
+  },
+  {
+    "start": 207.88,
+    "end": 209.88,
+    "text": "out none of us knew how to do it the"
+  },
+  {
+    "start": 209.88,
+    "end": 211.07999999999998,
+    "text": "right way."
+  },
+  {
+    "start": 211.07999999999998,
+    "end": 212.92000000000002,
+    "text": "And not only did we choose the wrong"
+  },
+  {
+    "start": 212.92000000000002,
+    "end": 214.68,
+    "text": "technology we didn't know how to do it"
+  },
+  {
+    "start": 214.68,
+    "end": 216.36,
+    "text": "the right way. And so"
+  },
+  {
+    "start": 216.36,
+    "end": 218.6,
+    "text": "so that that was a big day for me. I had"
+  },
+  {
+    "start": 218.6,
+    "end": 220.92000000000002,
+    "text": "a couple of couple of $60 you know a"
+  },
+  {
+    "start": 220.92000000000002,
+    "end": 222.68,
+    "text": "couple of $100 in my pocket and so I"
+  },
+  {
+    "start": 222.68,
+    "end": 224.76,
+    "text": "went down to Fry's and I bought three"
+  },
+  {
+    "start": 224.76,
+    "end": 226.12,
+    "text": "textbooks."
+  },
+  {
+    "start": 226.12,
+    "end": 229.76,
+    "text": "And and the textbooks was about OpenGL"
+  },
+  {
+    "start": 229.76,
+    "end": 232.56,
+    "text": "and how to design uh pipelines. I"
+  },
+  {
+    "start": 232.56,
+    "end": 233.96,
+    "text": "brought it back to the company and gave"
+  },
+  {
+    "start": 233.96,
+    "end": 235.36,
+    "text": "it to the engineers,"
+  },
+  {
+    "start": 235.36,
+    "end": 237.28,
+    "text": "and here we are. Uh we reinvented"
+  },
+  {
+    "start": 237.28,
+    "end": 238.64,
+    "text": "computer graphics, we're the world"
+  },
+  {
+    "start": 238.64,
+    "end": 240.44,
+    "text": "leader in modern computer graphics, we"
+  },
+  {
+    "start": 240.44,
+    "end": 242.92,
+    "text": "invented most of the major breakthroughs"
+  },
+  {
+    "start": 242.92,
+    "end": 250.4,
+    "text": "in the last 25 years."
+  },
+  {
+    "start": 250.4,
+    "end": 252.0,
+    "text": "Everybody would have thought that Nvidia"
+  },
+  {
+    "start": 252.0,
+    "end": 252.76,
+    "text": "is"
+  },
+  {
+    "start": 252.76,
+    "end": 254.959,
+    "text": "you know started out as world leaders in"
+  },
+  {
+    "start": 254.959,
+    "end": 257.0,
+    "text": "3D graphics, and we learned it from a"
+  },
+  {
+    "start": 257.0,
+    "end": 258.079,
+    "text": "textbook."
+  },
+  {
+    "start": 258.079,
+    "end": 259.959,
+    "text": "And so we actually started the company,"
+  },
+  {
+    "start": 259.959,
+    "end": 261.4,
+    "text": "raised money,"
+  },
+  {
+    "start": 261.4,
+    "end": 263.04,
+    "text": "and bought textbooks."
+  },
+  {
+    "start": 263.04,
+    "end": 265.4,
+    "text": "When you think about it. And so the the"
+  },
+  {
+    "start": 265.4,
+    "end": 267.68,
+    "text": "the big lesson is that for me is"
+  },
+  {
+    "start": 267.68,
+    "end": 269.84,
+    "text": "technology is changing all the time,"
+  },
+  {
+    "start": 269.84,
+    "end": 270.96,
+    "text": "and"
+  },
+  {
+    "start": 270.96,
+    "end": 273.24,
+    "text": "so long as you're able to confront the"
+  },
+  {
+    "start": 273.24,
+    "end": 275.36,
+    "text": "reality, so long as you are able to"
+  },
+  {
+    "start": 275.36,
+    "end": 278.12,
+    "text": "learn, the technology itself actually"
+  },
+  {
+    "start": 278.12,
+    "end": 280.15999999999997,
+    "text": "doesn't matter."
+  },
+  {
+    "start": 280.15999999999997,
+    "end": 283.48,
+    "text": "And so uh since then Nvidia has been,"
+  },
+  {
+    "start": 283.48,
+    "end": 284.44,
+    "text": "you know,"
+  },
+  {
+    "start": 284.44,
+    "end": 286.8,
+    "text": "inventing all kinds of technology since,"
+  },
+  {
+    "start": 286.8,
+    "end": 288.36,
+    "text": "all kinds of technology we've never"
+  },
+  {
+    "start": 288.36,
+    "end": 291.52,
+    "text": "never really done before, and we"
+  },
+  {
+    "start": 291.52,
+    "end": 292.68,
+    "text": "approach everything with the same"
+  },
+  {
+    "start": 292.68,
+    "end": 294.6,
+    "text": "attitude, you know, this is uh if it's"
+  },
+  {
+    "start": 294.6,
+    "end": 295.76,
+    "text": "important to do, we're going to go learn"
+  },
+  {
+    "start": 295.76,
+    "end": 297.919,
+    "text": "it, and how hard can it be?"
+  },
+  {
+    "start": 297.919,
+    "end": 300.04,
+    "text": "And uh it always turns out to be much"
+  },
+  {
+    "start": 300.04,
+    "end": 301.36,
+    "text": "much harder than"
+  },
+  {
+    "start": 301.36,
+    "end": 304.12,
+    "text": "than uh we expect. Um but you go into it"
+  },
+  {
+    "start": 304.12,
+    "end": 306.24,
+    "text": "with the attitude, how hard can it be?"
+  },
+  {
+    "start": 306.24,
+    "end": 308.2,
+    "text": ">> I mean, backstage we were uh talking"
+  },
+  {
+    "start": 308.2,
+    "end": 310.28,
+    "text": "about how I mean, we were talking with"
+  },
+  {
+    "start": 310.28,
+    "end": 312.24,
+    "text": "some of the top YC companies, and you"
+  },
+  {
+    "start": 312.24,
+    "end": 314.68,
+    "text": "were saying that each one has an"
+  },
+  {
+    "start": 314.68,
+    "end": 317.08,
+    "text": "expertise in like a domain that you have"
+  },
+  {
+    "start": 317.08,
+    "end": 319.24,
+    "text": "an you and Nvidia have an expertise in,"
+  },
+  {
+    "start": 319.24,
+    "end": 321.16,
+    "text": "and they're all just I I forget what you"
+  },
+  {
+    "start": 321.16,
+    "end": 323.84,
+    "text": "said, it was like an algorithmic domain"
+  },
+  {
+    "start": 323.84,
+    "end": 325.76,
+    "text": "of a sort. And so it sounds like 3D"
+  },
+  {
+    "start": 325.76,
+    "end": 328.16,
+    "text": "graphics was merely the first of an"
+  },
+  {
+    "start": 328.16,
+    "end": 329.52,
+    "text": "algorithmic domain."
+  },
+  {
+    "start": 329.52,
+    "end": 330.04,
+    "text": ">> That's right."
+  },
+  {
+    "start": 330.04,
+    "end": 332.56,
+    "text": ">> came from a textbook, but then,"
+  },
+  {
+    "start": 332.56,
+    "end": 333.88,
+    "text": "you know, anyone could have read that"
+  },
+  {
+    "start": 333.88,
+    "end": 335.15999999999997,
+    "text": "textbook. You created"
+  },
+  {
+    "start": 335.15999999999997,
+    "end": 337.919,
+    "text": ">> Particle physics, fluid dynamics, yeah."
+  },
+  {
+    "start": 337.919,
+    "end": 339.64,
+    "text": ">> But you created the the thing that"
+  },
+  {
+    "start": 339.64,
+    "end": 341.84000000000003,
+    "text": "people want, like the the end product"
+  },
+  {
+    "start": 341.84000000000003,
+    "end": 343.12,
+    "text": "that people want to pay a lot of money"
+  },
+  {
+    "start": 343.12,
+    "end": 343.8,
+    "text": "for."
+  },
+  {
+    "start": 343.8,
+    "end": 345.2,
+    "text": ">> The big idea of the company that was"
+  },
+  {
+    "start": 345.2,
+    "end": 348.0,
+    "text": "spot-on is that it is possible to"
+  },
+  {
+    "start": 348.0,
+    "end": 350.8,
+    "text": "augment the CPU to solve problems that"
+  },
+  {
+    "start": 350.8,
+    "end": 352.96,
+    "text": "otherwise are too difficult to solve."
+  },
+  {
+    "start": 352.96,
+    "end": 355.56,
+    "text": "And and molecular dynamics is one of"
+  },
+  {
+    "start": 355.56,
+    "end": 357.52,
+    "text": "them, image processing is one of them,"
+  },
+  {
+    "start": 357.52,
+    "end": 359.76,
+    "text": "inverse physics is another one. And so"
+  },
+  {
+    "start": 359.76,
+    "end": 361.44,
+    "text": "all kinds of different algorithms, of"
+  },
+  {
+    "start": 361.44,
+    "end": 363.0,
+    "text": "course deep learning is one of the major"
+  },
+  {
+    "start": 363.0,
+    "end": 365.76,
+    "text": "ones. And and um"
+  },
+  {
+    "start": 365.76,
+    "end": 367.84,
+    "text": "in order to create the company that we"
+  },
+  {
+    "start": 367.84,
+    "end": 370.8,
+    "text": "have today, we realized early on"
+  },
+  {
+    "start": 370.8,
+    "end": 373.04,
+    "text": "uh that it's not about building a great"
+  },
+  {
+    "start": 373.04,
+    "end": 375.64,
+    "text": "chip, it's about accelerating an"
+  },
+  {
+    "start": 375.64,
+    "end": 377.2,
+    "text": "algorithm domain."
+  },
+  {
+    "start": 377.2,
+    "end": 378.28,
+    "text": "And so one of the things I've always"
+  },
+  {
+    "start": 378.28,
+    "end": 380.4,
+    "text": "believed believed in is what makes great"
+  },
+  {
+    "start": 380.4,
+    "end": 382.64,
+    "text": "companies is a unique perspective about"
+  },
+  {
+    "start": 382.64,
+    "end": 384.68,
+    "text": "the world that you deeply believe in."
+  },
+  {
+    "start": 384.68,
+    "end": 386.12,
+    "text": "It's not so much the technology, it's"
+  },
+  {
+    "start": 386.12,
+    "end": 389.0,
+    "text": "not so much uh the market even. Uh those"
+  },
+  {
+    "start": 389.0,
+    "end": 391.24,
+    "text": "things all matter and if you have the"
+  },
+  {
+    "start": 391.24,
+    "end": 393.4,
+    "text": "right technology for the right market at"
+  },
+  {
+    "start": 393.4,
+    "end": 395.48,
+    "text": "the right time, uh your life is going to"
+  },
+  {
+    "start": 395.48,
+    "end": 396.88,
+    "text": "be a lot easier."
+  },
+  {
+    "start": 396.88,
+    "end": 399.8,
+    "text": "A high-level vision about the future of"
+  },
+  {
+    "start": 399.8,
+    "end": 402.2,
+    "text": "some important thing, a perspective"
+  },
+  {
+    "start": 402.2,
+    "end": 404.4,
+    "text": "about it that's somehow unique,"
+  },
+  {
+    "start": 404.4,
+    "end": 407.6,
+    "text": "that you deeply believe in and ideally"
+  },
+  {
+    "start": 407.6,
+    "end": 410.4,
+    "text": "pursuing that that vision is hard to do,"
+  },
+  {
+    "start": 410.4,
+    "end": 411.44,
+    "text": "those are kind of good good"
+  },
+  {
+    "start": 411.44,
+    "end": 413.88,
+    "text": "combinations. In our case, we realized"
+  },
+  {
+    "start": 413.88,
+    "end": 415.52,
+    "text": "that accelerated computing was going to"
+  },
+  {
+    "start": 415.52,
+    "end": 417.88,
+    "text": "be important. And accelerated computing"
+  },
+  {
+    "start": 417.88,
+    "end": 420.64,
+    "text": "turns out uh to be very important and"
+  },
+  {
+    "start": 420.64,
+    "end": 422.6,
+    "text": "our realization is everything to do with"
+  },
+  {
+    "start": 422.6,
+    "end": 424.88,
+    "text": "algorithm, not the chip. Uh turns out to"
+  },
+  {
+    "start": 424.88,
+    "end": 426.44,
+    "text": "be exactly right."
+  },
+  {
+    "start": 426.44,
+    "end": 428.2,
+    "text": ">> So you've said a lot about I guess the"
+  },
+  {
+    "start": 428.2,
+    "end": 430.84,
+    "text": "hardships of a founder. Um"
+  },
+  {
+    "start": 430.84,
+    "end": 432.68,
+    "text": "are there a few stories that really jump"
+  },
+  {
+    "start": 432.68,
+    "end": 434.08,
+    "text": "out at you? I mean there the people in"
+  },
+  {
+    "start": 434.08,
+    "end": 436.72,
+    "text": "this room would love to start a company,"
+  },
+  {
+    "start": 436.72,
+    "end": 438.28,
+    "text": "but you know, are they really prepared"
+  },
+  {
+    "start": 438.28,
+    "end": 441.36,
+    "text": "for eating glass and you know, possibly"
+  },
+  {
+    "start": 441.36,
+    "end": 442.84,
+    "text": "having to shut down the company, like"
+  },
+  {
+    "start": 442.84,
+    "end": 444.8,
+    "text": "things going wrong? Like what are some"
+  },
+  {
+    "start": 444.8,
+    "end": 446.72,
+    "text": "of the pivotal moments that really jump"
+  },
+  {
+    "start": 446.72,
+    "end": 448.0,
+    "text": "out at you?"
+  },
+  {
+    "start": 448.0,
+    "end": 449.76,
+    "text": "I think you were just in Japan, right?"
+  },
+  {
+    "start": 449.76,
+    "end": 450.52,
+    "text": "And uh"
+  },
+  {
+    "start": 450.52,
+    "end": 451.32,
+    "text": ">> Yeah."
+  },
+  {
+    "start": 451.32,
+    "end": 453.919,
+    "text": ">> you were sort of um"
+  },
+  {
+    "start": 453.919,
+    "end": 456.84000000000003,
+    "text": "honoring uh Sega, was it? So I feel like"
+  },
+  {
+    "start": 456.84000000000003,
+    "end": 458.919,
+    "text": "that was a really powerful story."
+  },
+  {
+    "start": 458.919,
+    "end": 461.32,
+    "text": ">> The project that led us to realize the"
+  },
+  {
+    "start": 461.32,
+    "end": 463.4,
+    "text": "algorithm we chose was wrong was a"
+  },
+  {
+    "start": 463.4,
+    "end": 465.76,
+    "text": "partnership with Sega. Sega"
+  },
+  {
+    "start": 465.76,
+    "end": 468.15999999999997,
+    "text": "uh had contracted us"
+  },
+  {
+    "start": 468.15999999999997,
+    "end": 470.2,
+    "text": "to build the"
+  },
+  {
+    "start": 470.2,
+    "end": 473.52,
+    "text": "uh game console after Saturn"
+  },
+  {
+    "start": 473.52,
+    "end": 475.4,
+    "text": "that turned out to have been Dreamcast."
+  },
+  {
+    "start": 475.4,
+    "end": 476.6,
+    "text": "I don't know if Does anybody know what"
+  },
+  {
+    "start": 476.6,
+    "end": 478.24,
+    "text": "Dreamcast is?"
+  },
+  {
+    "start": 478.24,
+    "end": 480.48,
+    "text": "Okay."
+  },
+  {
+    "start": 480.48,
+    "end": 483.48,
+    "text": "So, we did not build Dreamcast. We were"
+  },
+  {
+    "start": 483.48,
+    "end": 486.28,
+    "text": "originally supposed to build Dreamcast."
+  },
+  {
+    "start": 486.28,
+    "end": 487.92,
+    "text": "But because our algorithm and our"
+  },
+  {
+    "start": 487.92,
+    "end": 490.48,
+    "text": "technology was fundamentally flawed, I"
+  },
+  {
+    "start": 490.48,
+    "end": 493.4,
+    "text": "went to Japan and I told Irimajiri-san,"
+  },
+  {
+    "start": 493.4,
+    "end": 496.32,
+    "text": "the CEO at the time, that that the"
+  },
+  {
+    "start": 496.32,
+    "end": 498.919,
+    "text": "contract that they gave us was a like"
+  },
+  {
+    "start": 498.919,
+    "end": 500.04,
+    "text": "$12 million"
+  },
+  {
+    "start": 500.04,
+    "end": 502.04,
+    "text": "contract, um"
+  },
+  {
+    "start": 502.04,
+    "end": 504.0,
+    "text": "we will not be able to to fulfill"
+  },
+  {
+    "start": 504.0,
+    "end": 506.4,
+    "text": "because the technology doesn't work."
+  },
+  {
+    "start": 506.4,
+    "end": 508.84,
+    "text": "And I told him the reasons why."
+  },
+  {
+    "start": 508.84,
+    "end": 511.04,
+    "text": "And then I advised that"
+  },
+  {
+    "start": 511.04,
+    "end": 512.76,
+    "text": "that uh they choose somebody else to do"
+  },
+  {
+    "start": 512.76,
+    "end": 513.64,
+    "text": "it."
+  },
+  {
+    "start": 513.64,
+    "end": 515.919,
+    "text": "Uh but then I asked them"
+  },
+  {
+    "start": 515.919,
+    "end": 518.479,
+    "text": "uh I told him that I unfortunately still"
+  },
+  {
+    "start": 518.479,
+    "end": 520.56,
+    "text": "need the money. And he he asked me,"
+  },
+  {
+    "start": 520.56,
+    "end": 521.12,
+    "text": "\"Hey,"
+  },
+  {
+    "start": 521.12,
+    "end": 522.08,
+    "text": "you know, the conver- You could just"
+  },
+  {
+    "start": 522.08,
+    "end": 523.88,
+    "text": "imagine the conversation. So, what"
+  },
+  {
+    "start": 523.88,
+    "end": 525.72,
+    "text": "you're telling me is"
+  },
+  {
+    "start": 525.72,
+    "end": 527.88,
+    "text": "what I contracted you to to do, uh you"
+  },
+  {
+    "start": 527.88,
+    "end": 530.2,
+    "text": "can't do, uh but you would like all the"
+  },
+  {
+    "start": 530.2,
+    "end": 531.36,
+    "text": "money"
+  },
+  {
+    "start": 531.36,
+    "end": 533.16,
+    "text": "on the contract.\" And I said, \"You got"
+  },
+  {
+    "start": 533.16,
+    "end": 534.486,
+    "text": "it. That's exactly right.\""
+  },
+  {
+    "start": 534.486,
+    "end": 534.8,
+    "text": ">> [laughter]"
+  },
+  {
+    "start": 534.8,
+    "end": 536.8,
+    "text": ">> But obviously I was polite. I was I was"
+  },
+  {
+    "start": 536.8,
+    "end": 537.8389999999999,
+    "text": "humble."
+  },
+  {
+    "start": 537.8389999999999,
+    "end": 540.48,
+    "text": "And he realized that that um"
+  },
+  {
+    "start": 540.48,
+    "end": 543.12,
+    "text": "I was honest and and and and uh"
+  },
+  {
+    "start": 543.12,
+    "end": 545.52,
+    "text": "everything made sense."
+  },
+  {
+    "start": 545.52,
+    "end": 547.68,
+    "text": "I And if he didn't give us the money,"
+  },
+  {
+    "start": 547.68,
+    "end": 549.4,
+    "text": "we'd be out of business."
+  },
+  {
+    "start": 549.4,
+    "end": 552.28,
+    "text": "And I think that uh this happens in this"
+  },
+  {
+    "start": 552.28,
+    "end": 554.6,
+    "text": "room. You don't invest in companies, you"
+  },
+  {
+    "start": 554.6,
+    "end": 557.6,
+    "text": "invest in people. And what Irimajiri uh"
+  },
+  {
+    "start": 557.6,
+    "end": 559.28,
+    "text": "recognized was here's, you know,"
+  },
+  {
+    "start": 559.28,
+    "end": 561.88,
+    "text": "somebody and a company that uh he"
+  },
+  {
+    "start": 561.88,
+    "end": 564.36,
+    "text": "trusted in the first place the contract"
+  },
+  {
+    "start": 564.36,
+    "end": 566.0,
+    "text": "and that he believed in"
+  },
+  {
+    "start": 566.0,
+    "end": 567.92,
+    "text": "and um that he would love to see, you"
+  },
+  {
+    "start": 567.92,
+    "end": 569.88,
+    "text": "know, uh make it make it to the next"
+  },
+  {
+    "start": 569.88,
+    "end": 572.64,
+    "text": "day. And so, that $5 million kept us"
+  },
+  {
+    "start": 572.64,
+    "end": 574.8,
+    "text": "alive and, you know, gave me enough time"
+  },
+  {
+    "start": 574.8,
+    "end": 577.2,
+    "text": "to discover what to do."
+  },
+  {
+    "start": 577.2,
+    "end": 578.56,
+    "text": ">> And then I guess if they held they sold"
+  },
+  {
+    "start": 578.56,
+    "end": 580.52,
+    "text": "it for 15 million I heard."
+  },
+  {
+    "start": 580.52,
+    "end": 582.0,
+    "text": ">> Yeah, they sold it the moment we went"
+  },
+  {
+    "start": 582.0,
+    "end": 584.8,
+    "text": "public. Uh when Nvidia went public our"
+  },
+  {
+    "start": 584.8,
+    "end": 590.8,
+    "text": "valuation was 300 million dollars."
+  },
+  {
+    "start": 590.8,
+    "end": 593.48,
+    "text": "300 million dollars in 1999. That was"
+  },
+  {
+    "start": 593.48,
+    "end": 594.72,
+    "text": "real money."
+  },
+  {
+    "start": 594.72,
+    "end": 596.24,
+    "text": ">> I think it's uh north of a trillion"
+  },
+  {
+    "start": 596.24,
+    "end": 597.36,
+    "text": "dollars now or so."
+  },
+  {
+    "start": 597.36,
+    "end": 598.4,
+    "text": ">> It's more than a trillion, yeah."
+  },
+  {
+    "start": 598.4,
+    "end": 601.36,
+    "text": ">> Yeah, that's wild."
+  },
+  {
+    "start": 601.36,
+    "end": 602.4,
+    "text": "So,"
+  },
+  {
+    "start": 602.4,
+    "end": 603.96,
+    "text": "you're sort of the core, you know, I we"
+  },
+  {
+    "start": 603.96,
+    "end": 605.8,
+    "text": "like to say that you're uh you're the"
+  },
+  {
+    "start": 605.8,
+    "end": 607.92,
+    "text": "man who controls the spice."
+  },
+  {
+    "start": 607.92,
+    "end": 609.44,
+    "text": "Um"
+  },
+  {
+    "start": 609.44,
+    "end": 611.52,
+    "text": "you know, before that, you know, I don't"
+  },
+  {
+    "start": 611.52,
+    "end": 613.6,
+    "text": "think anyone could have really predicted"
+  },
+  {
+    "start": 613.6,
+    "end": 617.72,
+    "text": "per se um how important uh GPUs and you"
+  },
+  {
+    "start": 617.72,
+    "end": 619.28,
+    "text": "know, the technology you built would be"
+  },
+  {
+    "start": 619.28,
+    "end": 621.28,
+    "text": "for this AI revolution."
+  },
+  {
+    "start": 621.28,
+    "end": 622.52,
+    "text": "Um"
+  },
+  {
+    "start": 622.52,
+    "end": 624.64,
+    "text": "you know, what did you see to I mean,"
+  },
+  {
+    "start": 624.64,
+    "end": 626.16,
+    "text": "was it the accelerator and being in the"
+  },
+  {
+    "start": 626.16,
+    "end": 628.24,
+    "text": "right place right time or surely there"
+  },
+  {
+    "start": 628.24,
+    "end": 630.56,
+    "text": "were a lot of things that led up to that"
+  },
+  {
+    "start": 630.56,
+    "end": 632.36,
+    "text": "that allowed you to sort of capture this"
+  },
+  {
+    "start": 632.36,
+    "end": 632.92,
+    "text": "position?"
+  },
+  {
+    "start": 632.92,
+    "end": 633.92,
+    "text": ">> Yeah."
+  },
+  {
+    "start": 633.92,
+    "end": 635.04,
+    "text": "Uh"
+  },
+  {
+    "start": 635.04,
+    "end": 637.48,
+    "text": "I saw AlexNet just like everybody else"
+  },
+  {
+    "start": 637.48,
+    "end": 641.44,
+    "text": "saw AlexNet. And and um"
+  },
+  {
+    "start": 641.44,
+    "end": 643.12,
+    "text": "I but remember,"
+  },
+  {
+    "start": 643.12,
+    "end": 645.28,
+    "text": "our lens of the world, my view of the"
+  },
+  {
+    "start": 645.28,
+    "end": 648.24,
+    "text": "world was always looking for algorithms."
+  },
+  {
+    "start": 648.24,
+    "end": 650.12,
+    "text": "And that algorithm"
+  },
+  {
+    "start": 650.12,
+    "end": 652.04,
+    "text": "the algorithm could be NAMDI, the"
+  },
+  {
+    "start": 652.04,
+    "end": 653.96,
+    "text": "algorithm could be VASP, the algorithm"
+  },
+  {
+    "start": 653.96,
+    "end": 655.88,
+    "text": "could be OpenGL."
+  },
+  {
+    "start": 655.88,
+    "end": 657.76,
+    "text": "You know, it could be SQL, some domain"
+  },
+  {
+    "start": 657.76,
+    "end": 660.0,
+    "text": "specific language, some algorithm."
+  },
+  {
+    "start": 660.0,
+    "end": 662.6,
+    "text": "And and so my lens of the world was"
+  },
+  {
+    "start": 662.6,
+    "end": 666.04,
+    "text": "always looking for some uh problem that"
+  },
+  {
+    "start": 666.04,
+    "end": 667.6,
+    "text": "we might be able to help solve. So, when"
+  },
+  {
+    "start": 667.6,
+    "end": 669.8,
+    "text": "AlexNet came along, the algorithm was"
+  },
+  {
+    "start": 669.8,
+    "end": 671.76,
+    "text": "deep learning. And so, the question is"
+  },
+  {
+    "start": 671.76,
+    "end": 674.36,
+    "text": "what is this algorithm and why does it"
+  },
+  {
+    "start": 674.36,
+    "end": 677.8389999999999,
+    "text": "matter? Why was it so um effective and"
+  },
+  {
+    "start": 677.8389999999999,
+    "end": 679.56,
+    "text": "what else can it do?"
+  },
+  {
+    "start": 679.56,
+    "end": 682.56,
+    "text": "And and if you were to scale algorithms"
+  },
+  {
+    "start": 682.56,
+    "end": 684.96,
+    "text": "and scale it beyond that, uh what could"
+  },
+  {
+    "start": 684.96,
+    "end": 686.8389999999999,
+    "text": "it solve that otherwise you can't solve"
+  },
+  {
+    "start": 686.8389999999999,
+    "end": 690.28,
+    "text": "today? And and the the breakthrough for"
+  },
+  {
+    "start": 690.28,
+    "end": 693.88,
+    "text": "us was realizing that AlexNet was not"
+  },
+  {
+    "start": 693.88,
+    "end": 697.88,
+    "text": "AlexNet. That AlexNet was an approach"
+  },
+  {
+    "start": 697.88,
+    "end": 700.32,
+    "text": "with deep deep learning that allows you"
+  },
+  {
+    "start": 700.32,
+    "end": 704.52,
+    "text": "to learn any function. And so, 15 years"
+  },
+  {
+    "start": 704.52,
+    "end": 706.36,
+    "text": "ago, I was telling everybody that, \"Hey,"
+  },
+  {
+    "start": 706.36,
+    "end": 707.56,
+    "text": "guess what? We just learned the"
+  },
+  {
+    "start": 707.56,
+    "end": 710.4,
+    "text": "universal function approximator.\""
+  },
+  {
+    "start": 710.4,
+    "end": 711.96,
+    "text": "We just discovered the universal"
+  },
+  {
+    "start": 711.96,
+    "end": 713.88,
+    "text": "function approximator. We can give it We"
+  },
+  {
+    "start": 713.88,
+    "end": 715.96,
+    "text": "could, you know, give it the the answer"
+  },
+  {
+    "start": 715.96,
+    "end": 718.16,
+    "text": "for almost any function and it could"
+  },
+  {
+    "start": 718.16,
+    "end": 720.32,
+    "text": "learn what the function is."
+  },
+  {
+    "start": 720.32,
+    "end": 722.56,
+    "text": "And for a lot of functions, you don't"
+  },
+  {
+    "start": 722.56,
+    "end": 724.52,
+    "text": "have to be precise. And in fact, it's"
+  },
+  {
+    "start": 724.52,
+    "end": 726.84,
+    "text": "impossible to be precise. And so, most"
+  },
+  {
+    "start": 726.84,
+    "end": 728.32,
+    "text": "of the interesting problems are"
+  },
+  {
+    "start": 728.32,
+    "end": 730.52,
+    "text": "imprecise in this way."
+  },
+  {
+    "start": 730.52,
+    "end": 732.08,
+    "text": "And so,"
+  },
+  {
+    "start": 732.08,
+    "end": 734.4,
+    "text": "um the day that we realized we have a"
+  },
+  {
+    "start": 734.4,
+    "end": 736.0,
+    "text": "universal function approximator, the"
+  },
+  {
+    "start": 736.0,
+    "end": 738.4,
+    "text": "question then is what is that what is"
+  },
+  {
+    "start": 738.4,
+    "end": 741.08,
+    "text": "that what is that uh do to the computing"
+  },
+  {
+    "start": 741.08,
+    "end": 742.8,
+    "text": "stack? What does that happen to"
+  },
+  {
+    "start": 742.8,
+    "end": 745.24,
+    "text": "software? What are the industries that"
+  },
+  {
+    "start": 745.24,
+    "end": 747.72,
+    "text": "this could impact? So on and so forth."
+  },
+  {
+    "start": 747.72,
+    "end": 749.68,
+    "text": "Um almost right away,"
+  },
+  {
+    "start": 749.68,
+    "end": 751.24,
+    "text": "we started working on computer vision."
+  },
+  {
+    "start": 751.24,
+    "end": 752.56,
+    "text": "Almost right away, we started working on"
+  },
+  {
+    "start": 752.56,
+    "end": 756.12,
+    "text": "robotics, um self-driving cars because"
+  },
+  {
+    "start": 756.12,
+    "end": 757.08,
+    "text": "I"
+  },
+  {
+    "start": 757.08,
+    "end": 759.4,
+    "text": "that fundamental capability, you could"
+  },
+  {
+    "start": 759.4,
+    "end": 761.88,
+    "text": "imagine solving some imp- important"
+  },
+  {
+    "start": 761.88,
+    "end": 763.76,
+    "text": "problems in the area of computer vision"
+  },
+  {
+    "start": 763.76,
+    "end": 766.28,
+    "text": "and robotics. And so, so I think I think"
+  },
+  {
+    "start": 766.28,
+    "end": 768.6,
+    "text": "the the big breakthrough was simply that"
+  },
+  {
+    "start": 768.6,
+    "end": 770.52,
+    "text": "this is much more foundational than"
+  },
+  {
+    "start": 770.52,
+    "end": 772.8389999999999,
+    "text": "AlexNet. This is a way of doing"
+  },
+  {
+    "start": 772.8389999999999,
+    "end": 774.16,
+    "text": "software."
+  },
+  {
+    "start": 774.16,
+    "end": 777.2,
+    "text": "And the implications to the processor,"
+  },
+  {
+    "start": 777.2,
+    "end": 779.6,
+    "text": "the middleware, the algorithms, the"
+  },
+  {
+    "start": 779.6,
+    "end": 781.56,
+    "text": "applications, you know, what I now"
+  },
+  {
+    "start": 781.56,
+    "end": 784.2,
+    "text": "describe as the five-layer cake, um that"
+  },
+  {
+    "start": 784.2,
+    "end": 787.72,
+    "text": "entire industrial stack, I imagine"
+  },
+  {
+    "start": 787.72,
+    "end": 790.4,
+    "text": "reinventing all all together about 15"
+  },
+  {
+    "start": 790.4,
+    "end": 793.04,
+    "text": "years ago. And this is simply about"
+  },
+  {
+    "start": 793.04,
+    "end": 795.56,
+    "text": "asking questions, reasoning about things"
+  },
+  {
+    "start": 795.56,
+    "end": 798.16,
+    "text": "to first principles, uh asking, you"
+  },
+  {
+    "start": 798.16,
+    "end": 799.92,
+    "text": "know, questions like, \"If this, then"
+  },
+  {
+    "start": 799.92,
+    "end": 802.76,
+    "text": "what?\" Uh if if this can get better,"
+  },
+  {
+    "start": 802.76,
+    "end": 804.68,
+    "text": "then so what? You know, asking all of"
+  },
+  {
+    "start": 804.68,
+    "end": 806.76,
+    "text": "the basic questions about about"
+  },
+  {
+    "start": 806.76,
+    "end": 809.16,
+    "text": "something that you observe uh that's"
+  },
+  {
+    "start": 809.16,
+    "end": 810.6,
+    "text": "really impactful."
+  },
+  {
+    "start": 810.6,
+    "end": 811.84,
+    "text": ">> I mean, one of the things that really"
+  },
+  {
+    "start": 811.84,
+    "end": 813.6,
+    "text": "jumps out at me is to what degree you go"
+  },
+  {
+    "start": 813.6,
+    "end": 815.4,
+    "text": "all the way into the weeds. You read"
+  },
+  {
+    "start": 815.4,
+    "end": 818.0,
+    "text": "papers, you you know, talk directly to"
+  },
+  {
+    "start": 818.0,
+    "end": 820.6,
+    "text": "the principal scientists who are sort of"
+  },
+  {
+    "start": 820.6,
+    "end": 822.88,
+    "text": "coming up with these things. Do you have"
+  },
+  {
+    "start": 822.88,
+    "end": 824.72,
+    "text": "any advice for people in the audience? I"
+  },
+  {
+    "start": 824.72,
+    "end": 827.36,
+    "text": "mean, that's like true founder mode. And"
+  },
+  {
+    "start": 827.36,
+    "end": 829.56,
+    "text": "then at the same time, you probably you"
+  },
+  {
+    "start": 829.56,
+    "end": 831.16,
+    "text": "have an organization and you have"
+  },
+  {
+    "start": 831.16,
+    "end": 833.12,
+    "text": "executives and you have people who say"
+  },
+  {
+    "start": 833.12,
+    "end": 835.12,
+    "text": "like, here's the graph, we want to stay"
+  },
+  {
+    "start": 835.12,
+    "end": 837.2,
+    "text": "on this graph. You know, sometimes it"
+  },
+  {
+    "start": 837.2,
+    "end": 838.68,
+    "text": "ruffles feathers. Like, do you have any"
+  },
+  {
+    "start": 838.68,
+    "end": 841.24,
+    "text": "advice for people about an organization"
+  },
+  {
+    "start": 841.24,
+    "end": 842.68,
+    "text": "and how you"
+  },
+  {
+    "start": 842.68,
+    "end": 844.28,
+    "text": "navigate that really? Like, how do you"
+  },
+  {
+    "start": 844.28,
+    "end": 846.56,
+    "text": "build an org that allows you to think in"
+  },
+  {
+    "start": 846.56,
+    "end": 849.2,
+    "text": "first principles? Cuz if the Fortune 500"
+  },
+  {
+    "start": 849.2,
+    "end": 851.16,
+    "text": "did that, like, the Fortune 500 will"
+  },
+  {
+    "start": 851.16,
+    "end": 852.96,
+    "text": "probably look a lot more like Nvidia"
+  },
+  {
+    "start": 852.96,
+    "end": 854.88,
+    "text": "than not. And it doesn't. Like, you you"
+  },
+  {
+    "start": 854.88,
+    "end": 858.36,
+    "text": "have built a very unique company."
+  },
+  {
+    "start": 858.36,
+    "end": 861.08,
+    "text": ">> My state of mind when I'm my state of"
+  },
+  {
+    "start": 861.08,
+    "end": 862.92,
+    "text": "mind is always"
+  },
+  {
+    "start": 862.92,
+    "end": 865.0,
+    "text": "starts with curiosity."
+  },
+  {
+    "start": 865.0,
+    "end": 866.04,
+    "text": "I have a whole bunch of questions"
+  },
+  {
+    "start": 866.04,
+    "end": 867.68,
+    "text": "myself."
+  },
+  {
+    "start": 867.68,
+    "end": 869.6,
+    "text": "And and"
+  },
+  {
+    "start": 869.6,
+    "end": 870.76,
+    "text": "of course"
+  },
+  {
+    "start": 870.76,
+    "end": 872.4,
+    "text": "like anybody else, I'll seek the"
+  },
+  {
+    "start": 872.4,
+    "end": 874.4,
+    "text": "shortest path to the answer."
+  },
+  {
+    "start": 874.4,
+    "end": 876.52,
+    "text": "But often times"
+  },
+  {
+    "start": 876.52,
+    "end": 878.4,
+    "text": "the answers from the people that are"
+  },
+  {
+    "start": 878.4,
+    "end": 880.92,
+    "text": "near me might not be satisfying and and"
+  },
+  {
+    "start": 880.92,
+    "end": 882.52,
+    "text": "I might have other questions and and"
+  },
+  {
+    "start": 882.52,
+    "end": 883.8,
+    "text": "maybe they're they're busy doing"
+  },
+  {
+    "start": 883.8,
+    "end": 884.8,
+    "text": "something and they're pursuing"
+  },
+  {
+    "start": 884.8,
+    "end": 885.8,
+    "text": "something."
+  },
+  {
+    "start": 885.8,
+    "end": 888.04,
+    "text": "And so my first my first"
+  },
+  {
+    "start": 888.04,
+    "end": 890.08,
+    "text": "inclination is to go discover the"
+  },
+  {
+    "start": 890.08,
+    "end": 892.28,
+    "text": "answers to my own curiosity."
+  },
+  {
+    "start": 892.28,
+    "end": 894.48,
+    "text": "My second is if I find that the"
+  },
+  {
+    "start": 894.48,
+    "end": 897.36,
+    "text": "information is in that the domain of"
+  },
+  {
+    "start": 897.36,
+    "end": 899.64,
+    "text": "information or you know, particular"
+  },
+  {
+    "start": 899.64,
+    "end": 900.8,
+    "text": "field"
+  },
+  {
+    "start": 900.8,
+    "end": 902.56,
+    "text": "could be really important to somebody"
+  },
+  {
+    "start": 902.56,
+    "end": 904.68,
+    "text": "and could be important to our company,"
+  },
+  {
+    "start": 904.68,
+    "end": 906.92,
+    "text": "then my next inclination is how can I"
+  },
+  {
+    "start": 906.92,
+    "end": 908.96,
+    "text": "learn as much as possible so that I"
+  },
+  {
+    "start": 908.96,
+    "end": 911.08,
+    "text": "could be of service to the company and"
+  },
+  {
+    "start": 911.08,
+    "end": 913.16,
+    "text": "share with the everybody else."
+  },
+  {
+    "start": 913.16,
+    "end": 914.64,
+    "text": "You know, this is no different than than"
+  },
+  {
+    "start": 914.64,
+    "end": 916.16,
+    "text": "you when you're you're sharing"
+  },
+  {
+    "start": 916.16,
+    "end": 917.96,
+    "text": "knowledge. I mean, I watch your podcasts"
+  },
+  {
+    "start": 917.96,
+    "end": 919.48,
+    "text": "and I watch your your videos and I"
+  },
+  {
+    "start": 919.48,
+    "end": 921.32,
+    "text": "really enjoy them. You're sharing ideas"
+  },
+  {
+    "start": 921.32,
+    "end": 922.64,
+    "text": "with everybody else. You know, in a lot"
+  },
+  {
+    "start": 922.64,
+    "end": 924.52,
+    "text": "of ways I think a"
+  },
+  {
+    "start": 924.52,
+    "end": 927.2,
+    "text": "a CEO is in service of the company, in"
+  },
+  {
+    "start": 927.2,
+    "end": 928.76,
+    "text": "service of all the people that are"
+  },
+  {
+    "start": 928.76,
+    "end": 931.08,
+    "text": "working there. And you want to empower"
+  },
+  {
+    "start": 931.08,
+    "end": 934.4,
+    "text": "them with some insight."
+  },
+  {
+    "start": 934.4,
+    "end": 935.8,
+    "text": "And so that's really where it's coming"
+  },
+  {
+    "start": 935.8,
+    "end": 937.32,
+    "text": "from. It's not so much a management"
+  },
+  {
+    "start": 937.32,
+    "end": 939.52,
+    "text": "technique, but a personality technique."
+  },
+  {
+    "start": 939.52,
+    "end": 942.16,
+    "text": "You know, I I want to empower you and"
+  },
+  {
+    "start": 942.16,
+    "end": 943.52,
+    "text": "this is something really important that"
+  },
+  {
+    "start": 943.52,
+    "end": 945.16,
+    "text": "I just observed. Let me tell you why"
+  },
+  {
+    "start": 945.16,
+    "end": 946.6,
+    "text": "it's so important."
+  },
+  {
+    "start": 946.6,
+    "end": 949.48,
+    "text": "Now part of part of having to to be near"
+  },
+  {
+    "start": 949.48,
+    "end": 951.72,
+    "text": "the ground and be in the weeds if you"
+  },
+  {
+    "start": 951.72,
+    "end": 952.6,
+    "text": "will,"
+  },
+  {
+    "start": 952.6,
+    "end": 955.28,
+    "text": "is because often times the technology is"
+  },
+  {
+    "start": 955.28,
+    "end": 956.96,
+    "text": "complicated or it's changing really"
+  },
+  {
+    "start": 956.96,
+    "end": 958.28,
+    "text": "fast."
+  },
+  {
+    "start": 958.28,
+    "end": 960.0,
+    "text": "And especially when it's changing fast"
+  },
+  {
+    "start": 960.0,
+    "end": 963.32,
+    "text": "like like our world, um unless you have"
+  },
+  {
+    "start": 963.32,
+    "end": 965.36,
+    "text": "a tactile"
+  },
+  {
+    "start": 965.36,
+    "end": 968.64,
+    "text": "sensation of what is actually happening,"
+  },
+  {
+    "start": 968.64,
+    "end": 970.8,
+    "text": "it could either to you feel like it's"
+  },
+  {
+    "start": 970.8,
+    "end": 973.52,
+    "text": "just moving way too fast to understand."
+  },
+  {
+    "start": 973.52,
+    "end": 974.64,
+    "text": "But if you understand the first"
+  },
+  {
+    "start": 974.64,
+    "end": 976.64,
+    "text": "principles of it over time, then"
+  },
+  {
+    "start": 976.64,
+    "end": 978.6,
+    "text": "everything kind of makes sense."
+  },
+  {
+    "start": 978.6,
+    "end": 979.76,
+    "text": "You know, it's kind of like surfing I"
+  },
+  {
+    "start": 979.76,
+    "end": 981.52,
+    "text": "would imagine. I don't know how to surf,"
+  },
+  {
+    "start": 981.52,
+    "end": 982.76,
+    "text": "but I can imagine it's kind of like"
+  },
+  {
+    "start": 982.76,
+    "end": 984.88,
+    "text": "surfing. You get out on the wave. To me"
+  },
+  {
+    "start": 984.88,
+    "end": 987.72,
+    "text": "it looks like chaos, but to a surfer,"
+  },
+  {
+    "start": 987.72,
+    "end": 989.48,
+    "text": "you know, somehow they get right? They"
+  },
+  {
+    "start": 989.48,
+    "end": 991.6,
+    "text": "can read the waves and and uh they know"
+  },
+  {
+    "start": 991.6,
+    "end": 993.96,
+    "text": "how to stay on top of it. And so I think"
+  },
+  {
+    "start": 993.96,
+    "end": 996.48,
+    "text": "being CEO is very similar to that. You"
+  },
+  {
+    "start": 996.48,
+    "end": 998.36,
+    "text": "know, you have to learn how to surf and"
+  },
+  {
+    "start": 998.36,
+    "end": 999.52,
+    "text": "order to learn how to surf you have to"
+  },
+  {
+    "start": 999.52,
+    "end": 1001.2,
+    "text": "understand the waves. You have to be"
+  },
+  {
+    "start": 1001.2,
+    "end": 1003.12,
+    "text": "able to read the wind and you have to"
+  },
+  {
+    "start": 1003.12,
+    "end": 1005.16,
+    "text": "have good timing and you can't have any"
+  },
+  {
+    "start": 1005.16,
+    "end": 1006.68,
+    "text": "of that unless you try unless you"
+  },
+  {
+    "start": 1006.68,
+    "end": 1010.12,
+    "text": "actually do it. And so so partly is is"
+  },
+  {
+    "start": 1010.12,
+    "end": 1013.08,
+    "text": "to inform myself, partly is to uh try to"
+  },
+  {
+    "start": 1013.08,
+    "end": 1015.6,
+    "text": "figure out, you know, what is try to"
+  },
+  {
+    "start": 1015.6,
+    "end": 1017.56,
+    "text": "break down the problem so that the"
+  },
+  {
+    "start": 1017.56,
+    "end": 1020.0,
+    "text": "company can learn it in a way that they"
+  },
+  {
+    "start": 1020.0,
+    "end": 1022.0,
+    "text": "can do something about. Uh part of it is"
+  },
+  {
+    "start": 1022.0,
+    "end": 1023.96,
+    "text": "about inspiring other people."
+  },
+  {
+    "start": 1023.96,
+    "end": 1025.68,
+    "text": "And um"
+  },
+  {
+    "start": 1025.68,
+    "end": 1027.079,
+    "text": "you know, it's it's all those those uh"
+  },
+  {
+    "start": 1027.079,
+    "end": 1028.6,
+    "text": "basic traits of all the people in this"
+  },
+  {
+    "start": 1028.6,
+    "end": 1030.48,
+    "text": "room. You don't have to change your"
+  },
+  {
+    "start": 1030.48,
+    "end": 1032.959,
+    "text": "personality or your behavior"
+  },
+  {
+    "start": 1032.959,
+    "end": 1035.199,
+    "text": "uh when you become CEO. It is possible"
+  },
+  {
+    "start": 1035.199,
+    "end": 1037.68,
+    "text": "for you to continue to be yourself."
+  },
+  {
+    "start": 1037.68,
+    "end": 1040.24,
+    "text": "And one of the things that I that I I"
+  },
+  {
+    "start": 1040.24,
+    "end": 1042.04,
+    "text": "learned a long time ago"
+  },
+  {
+    "start": 1042.04,
+    "end": 1043.0,
+    "text": "um"
+  },
+  {
+    "start": 1043.0,
+    "end": 1045.24,
+    "text": "and and I I have no idea where I saw"
+  },
+  {
+    "start": 1045.24,
+    "end": 1046.24,
+    "text": "this."
+  },
+  {
+    "start": 1046.24,
+    "end": 1047.0,
+    "text": "Uh"
+  },
+  {
+    "start": 1047.0,
+    "end": 1047.959,
+    "text": "but"
+  },
+  {
+    "start": 1047.959,
+    "end": 1050.2,
+    "text": "but um"
+  },
+  {
+    "start": 1050.2,
+    "end": 1052.84,
+    "text": "you know, the CEO or the founders"
+  },
+  {
+    "start": 1052.84,
+    "end": 1056.16,
+    "text": "you are the you you're building a car"
+  },
+  {
+    "start": 1056.16,
+    "end": 1058.24,
+    "text": "that you are going to race."
+  },
+  {
+    "start": 1058.24,
+    "end": 1059.84,
+    "text": "You're going to build an F1 racer, but"
+  },
+  {
+    "start": 1059.84,
+    "end": 1061.4,
+    "text": "you're going to build it in a way that"
+  },
+  {
+    "start": 1061.4,
+    "end": 1062.84,
+    "text": "you can drive."
+  },
+  {
+    "start": 1062.84,
+    "end": 1066.0,
+    "text": "You should adapt the car to you."
+  },
+  {
+    "start": 1066.0,
+    "end": 1068.0,
+    "text": "You know, somebody I think had asked me"
+  },
+  {
+    "start": 1068.0,
+    "end": 1070.72,
+    "text": "uh you know, Jenson, if you"
+  },
+  {
+    "start": 1070.72,
+    "end": 1072.6,
+    "text": "if you don't use"
+  },
+  {
+    "start": 1072.6,
+    "end": 1075.2,
+    "text": "conventional management techniques and"
+  },
+  {
+    "start": 1075.2,
+    "end": 1077.04,
+    "text": "organizational techniques"
+  },
+  {
+    "start": 1077.04,
+    "end": 1078.04,
+    "text": "you know, what's going to happen when"
+  },
+  {
+    "start": 1078.04,
+    "end": 1079.8,
+    "text": "you leave the company?"
+  },
+  {
+    "start": 1079.8,
+    "end": 1082.2,
+    "text": "Well, you know, when I die on the job"
+  },
+  {
+    "start": 1082.2,
+    "end": 1082.8,
+    "text": "um"
+  },
+  {
+    "start": 1082.8,
+    "end": 1084.08,
+    "text": "someday"
+  },
+  {
+    "start": 1084.08,
+    "end": 1084.88,
+    "text": "uh"
+  },
+  {
+    "start": 1084.88,
+    "end": 1086.2,
+    "text": "you know, I told them they'll just have"
+  },
+  {
+    "start": 1086.2,
+    "end": 1089.04,
+    "text": "to reshape the company for the next CEO."
+  },
+  {
+    "start": 1089.04,
+    "end": 1091.72,
+    "text": "And the reason that's wisdom is because"
+  },
+  {
+    "start": 1091.72,
+    "end": 1093.6,
+    "text": "we're the F1 drivers."
+  },
+  {
+    "start": 1093.6,
+    "end": 1095.24,
+    "text": "You know, we're the racers."
+  },
+  {
+    "start": 1095.24,
+    "end": 1097.72,
+    "text": "And the world is really competitive and"
+  },
+  {
+    "start": 1097.72,
+    "end": 1099.52,
+    "text": "we've got to stay we've got to you know,"
+  },
+  {
+    "start": 1099.52,
+    "end": 1100.8,
+    "text": "we've got to win."
+  },
+  {
+    "start": 1100.8,
+    "end": 1102.2,
+    "text": "And we've got to achieve our mission."
+  },
+  {
+    "start": 1102.2,
+    "end": 1104.6,
+    "text": "And so whatever it takes to fit the car"
+  },
+  {
+    "start": 1104.6,
+    "end": 1105.72,
+    "text": "to you"
+  },
+  {
+    "start": 1105.72,
+    "end": 1106.72,
+    "text": "whatever it takes to fit the"
+  },
+  {
+    "start": 1106.72,
+    "end": 1108.48,
+    "text": "organization to you, that's what you got"
+  },
+  {
+    "start": 1108.48,
+    "end": 1110.28,
+    "text": "to do. And the next CEO, whatever the"
+  },
+  {
+    "start": 1110.28,
+    "end": 1112.52,
+    "text": "personality is, they can figure it out."
+  },
+  {
+    "start": 1112.52,
+    "end": 1114.92,
+    "text": ">> Amazing. I mean, that it does seem like"
+  },
+  {
+    "start": 1114.92,
+    "end": 1115.68,
+    "text": "um"
+  },
+  {
+    "start": 1115.68,
+    "end": 1117.84,
+    "text": "any change you make to the car will just"
+  },
+  {
+    "start": 1117.84,
+    "end": 1120.52,
+    "text": "slow you down and lose you races that"
+  },
+  {
+    "start": 1120.52,
+    "end": 1122.08,
+    "text": "you know, isn't fit to you."
+  },
+  {
+    "start": 1122.08,
+    "end": 1124.24,
+    "text": ">> Yeah, or we're constantly tweaking the"
+  },
+  {
+    "start": 1124.24,
+    "end": 1127.16,
+    "text": "car to our needs. And I'm that's really"
+  },
+  {
+    "start": 1127.16,
+    "end": 1128.6,
+    "text": "what I'm doing all the time. I'm"
+  },
+  {
+    "start": 1128.6,
+    "end": 1130.4,
+    "text": "constantly tweaking the company,"
+  },
+  {
+    "start": 1130.4,
+    "end": 1132.6,
+    "text": "constantly reshaping business processes"
+  },
+  {
+    "start": 1132.6,
+    "end": 1134.96,
+    "text": "and the way things work so that I can"
+  },
+  {
+    "start": 1134.96,
+    "end": 1136.8,
+    "text": "you know, be more effective for the"
+  },
+  {
+    "start": 1136.8,
+    "end": 1137.76,
+    "text": "company."
+  },
+  {
+    "start": 1137.76,
+    "end": 1138.8,
+    "text": ">> True founder mode."
+  },
+  {
+    "start": 1138.8,
+    "end": 1140.76,
+    "text": ">> Yeah, founder mode. Founder mode could"
+  },
+  {
+    "start": 1140.76,
+    "end": 1142.6,
+    "text": "scale for 34 years."
+  },
+  {
+    "start": 1142.6,
+    "end": 1143.2,
+    "text": ">> That's right."
+  },
+  {
+    "start": 1143.2,
+    "end": 1145.44,
+    "text": ">> From zero to 5 trillion."
+  },
+  {
+    "start": 1145.44,
+    "end": 1149.538,
+    "text": "No evidence. No"
+  },
+  {
+    "start": 1149.538,
+    "end": 1152.2,
+    "text": ">> [applause]"
+  },
+  {
+    "start": 1152.2,
+    "end": 1154.16,
+    "text": ">> I'd love to switch gears to like what"
+  },
+  {
+    "start": 1154.16,
+    "end": 1155.28,
+    "text": "you know, what are the what are the"
+  },
+  {
+    "start": 1155.28,
+    "end": 1157.24,
+    "text": "frontier algorithms that you're most"
+  },
+  {
+    "start": 1157.24,
+    "end": 1160.52,
+    "text": "interested in now? I mean Um, I love"
+  },
+  {
+    "start": 1160.52,
+    "end": 1162.08,
+    "text": "that you're all the way down into the"
+  },
+  {
+    "start": 1162.08,
+    "end": 1163.92,
+    "text": "material science, all the way up into"
+  },
+  {
+    "start": 1163.92,
+    "end": 1165.52,
+    "text": "the app level."
+  },
+  {
+    "start": 1165.52,
+    "end": 1167.44,
+    "text": "Uh, you know, you're the first to speak"
+  },
+  {
+    "start": 1167.44,
+    "end": 1170.6,
+    "text": "on stage about Open Claw and now Hermes"
+  },
+  {
+    "start": 1170.6,
+    "end": 1172.48,
+    "text": "agent. Um,"
+  },
+  {
+    "start": 1172.48,
+    "end": 1175.04,
+    "text": "I wonder if you can sort of like walk us"
+  },
+  {
+    "start": 1175.04,
+    "end": 1177.0,
+    "text": "through a day in the life of like how"
+  },
+  {
+    "start": 1177.0,
+    "end": 1178.68,
+    "text": "you think about the different stages. I"
+  },
+  {
+    "start": 1178.68,
+    "end": 1182.8,
+    "text": "mean, going from materials to chips to"
+  },
+  {
+    "start": 1182.8,
+    "end": 1185.2,
+    "text": "data centers to even like the app level,"
+  },
+  {
+    "start": 1185.2,
+    "end": 1186.96,
+    "text": "like how people are going to work. Like"
+  },
+  {
+    "start": 1186.96,
+    "end": 1188.36,
+    "text": "there's sort of this idea of a full"
+  },
+  {
+    "start": 1188.36,
+    "end": 1190.32,
+    "text": "stack AI factory."
+  },
+  {
+    "start": 1190.32,
+    "end": 1191.36,
+    "text": ">> Well,"
+  },
+  {
+    "start": 1191.36,
+    "end": 1193.24,
+    "text": "this is one of the things that that is"
+  },
+  {
+    "start": 1193.24,
+    "end": 1194.96,
+    "text": "probably going to be the most useful"
+  },
+  {
+    "start": 1194.96,
+    "end": 1198.48,
+    "text": "skill in the future. And in fact, just"
+  },
+  {
+    "start": 1198.48,
+    "end": 1200.2,
+    "text": "in listening to you talk about about"
+  },
+  {
+    "start": 1200.2,
+    "end": 1202.64,
+    "text": "technology and and you your use of it,"
+  },
+  {
+    "start": 1202.64,
+    "end": 1203.64,
+    "text": "you know, one of the most important"
+  },
+  {
+    "start": 1203.64,
+    "end": 1206.32,
+    "text": "things is systems understanding."
+  },
+  {
+    "start": 1206.32,
+    "end": 1210.2,
+    "text": "Systems awareness, system design, system"
+  },
+  {
+    "start": 1210.2,
+    "end": 1211.92,
+    "text": "organization."
+  },
+  {
+    "start": 1211.92,
+    "end": 1212.68,
+    "text": "Um,"
+  },
+  {
+    "start": 1212.68,
+    "end": 1214.4,
+    "text": "but systems thinking."
+  },
+  {
+    "start": 1214.4,
+    "end": 1216.92,
+    "text": "And the reason for that is because"
+  },
+  {
+    "start": 1216.92,
+    "end": 1219.56,
+    "text": "most of the low-level things that that"
+  },
+  {
+    "start": 1219.56,
+    "end": 1220.8,
+    "text": "has to be done are going to be done"
+  },
+  {
+    "start": 1220.8,
+    "end": 1222.36,
+    "text": "agentically anyways. They're going to be"
+  },
+  {
+    "start": 1222.36,
+    "end": 1225.6,
+    "text": "automated anyhow. And so, whether it's,"
+  },
+  {
+    "start": 1225.6,
+    "end": 1227.68,
+    "text": "you know, in my generation it's about"
+  },
+  {
+    "start": 1227.68,
+    "end": 1229.76,
+    "text": "compiling chips and synthesizing"
+  },
+  {
+    "start": 1229.76,
+    "end": 1231.64,
+    "text": "transistors and gates and functional"
+  },
+  {
+    "start": 1231.64,
+    "end": 1232.88,
+    "text": "blocks and"
+  },
+  {
+    "start": 1232.88,
+    "end": 1235.2,
+    "text": "and all of that is now synthesized. And"
+  },
+  {
+    "start": 1235.2,
+    "end": 1237.16,
+    "text": "so, most of our designers are systems"
+  },
+  {
+    "start": 1237.16,
+    "end": 1238.4,
+    "text": "designers."
+  },
+  {
+    "start": 1238.4,
+    "end": 1240.16,
+    "text": "In the case of software,"
+  },
+  {
+    "start": 1240.16,
+    "end": 1242.08,
+    "text": "uh, most software is going to be done"
+  },
+  {
+    "start": 1242.08,
+    "end": 1243.56,
+    "text": "agentically anyhow. So, you have to be"
+  },
+  {
+    "start": 1243.56,
+    "end": 1244.68,
+    "text": "much more"
+  },
+  {
+    "start": 1244.68,
+    "end": 1247.64,
+    "text": "able to think abstractly about systems."
+  },
+  {
+    "start": 1247.64,
+    "end": 1250.12,
+    "text": "What are the what are the the problems"
+  },
+  {
+    "start": 1250.12,
+    "end": 1251.04,
+    "text": "you're trying to solve? What are the"
+  },
+  {
+    "start": 1251.04,
+    "end": 1253.12,
+    "text": "constraints? Where, you know, where's"
+  },
+  {
+    "start": 1253.12,
+    "end": 1254.72,
+    "text": "where's the input? Where's the output?"
+  },
+  {
+    "start": 1254.72,
+    "end": 1256.76,
+    "text": "You know, where information coming from?"
+  },
+  {
+    "start": 1256.76,
+    "end": 1259.0,
+    "text": "Um, what is the rate of of uh,"
+  },
+  {
+    "start": 1259.0,
+    "end": 1260.92,
+    "text": "information flowing in and out of the"
+  },
+  {
+    "start": 1260.92,
+    "end": 1263.24,
+    "text": "system? Uh, what are the constraints?"
+  },
+  {
+    "start": 1263.24,
+    "end": 1265.44,
+    "text": "Um, you know, and so"
+  },
+  {
+    "start": 1265.44,
+    "end": 1267.12,
+    "text": "is it processor? Is it memory? Is it"
+  },
+  {
+    "start": 1267.12,
+    "end": 1268.96,
+    "text": "networking? Uh,"
+  },
+  {
+    "start": 1268.96,
+    "end": 1271.4,
+    "text": "you know, and so under"
+  },
+  {
+    "start": 1271.4,
+    "end": 1272.52,
+    "text": "these"
+  },
+  {
+    "start": 1272.52,
+    "end": 1275.56,
+    "text": "uh systems problems at a sufficiently"
+  },
+  {
+    "start": 1275.56,
+    "end": 1277.4,
+    "text": "technical level is going to be very"
+  },
+  {
+    "start": 1277.4,
+    "end": 1279.04,
+    "text": "helpful to all of the people in this"
+  },
+  {
+    "start": 1279.04,
+    "end": 1282.0,
+    "text": "room. And I don't think that that that"
+  },
+  {
+    "start": 1282.0,
+    "end": 1285.08,
+    "text": "way of that fundamental knowledge is"
+  },
+  {
+    "start": 1285.08,
+    "end": 1287.16,
+    "text": "ever going to be useless. I think it's"
+  },
+  {
+    "start": 1287.16,
+    "end": 1289.12,
+    "text": "going to be more and more useful. And so"
+  },
+  {
+    "start": 1289.12,
+    "end": 1289.68,
+    "text": "I"
+  },
+  {
+    "start": 1289.68,
+    "end": 1292.16,
+    "text": "I try to understand systems um"
+  },
+  {
+    "start": 1292.16,
+    "end": 1293.08,
+    "text": "I"
+  },
+  {
+    "start": 1293.08,
+    "end": 1295.08,
+    "text": "the best I can. One of the things"
+  },
+  {
+    "start": 1295.08,
+    "end": 1296.16,
+    "text": "One of the things that speaking of"
+  },
+  {
+    "start": 1296.16,
+    "end": 1297.32,
+    "text": "agent,"
+  },
+  {
+    "start": 1297.32,
+    "end": 1298.8,
+    "text": "the fact of the matter is we we kind of"
+  },
+  {
+    "start": 1298.8,
+    "end": 1300.68,
+    "text": "have coarse level"
+  },
+  {
+    "start": 1300.68,
+    "end": 1304.04,
+    "text": "uh recursive self-improvement already."
+  },
+  {
+    "start": 1304.04,
+    "end": 1306.56,
+    "text": "And the fact that every time you use it,"
+  },
+  {
+    "start": 1306.56,
+    "end": 1308.76,
+    "text": "it improves the markdown files. Uh every"
+  },
+  {
+    "start": 1308.76,
+    "end": 1311.56,
+    "text": "time you use it, it updates its"
+  },
+  {
+    "start": 1311.56,
+    "end": 1313.12,
+    "text": "uh long-term memory. And the long-term"
+  },
+  {
+    "start": 1313.12,
+    "end": 1315.8,
+    "text": "memory is being processed either either"
+  },
+  {
+    "start": 1315.8,
+    "end": 1317.32,
+    "text": "compacted or turned into knowledge"
+  },
+  {
+    "start": 1317.32,
+    "end": 1319.64,
+    "text": "graphs or, you know, so on and so forth."
+  },
+  {
+    "start": 1319.64,
+    "end": 1321.84,
+    "text": "Uh it's being improved all the time."
+  },
+  {
+    "start": 1321.84,
+    "end": 1322.44,
+    "text": "Uh"
+  },
+  {
+    "start": 1322.44,
+    "end": 1325.72,
+    "text": "you know, asynchronously. And so"
+  },
+  {
+    "start": 1325.72,
+    "end": 1327.24,
+    "text": "the agent's getting smarter smarter"
+  },
+  {
+    "start": 1327.24,
+    "end": 1329.6,
+    "text": "every time. Still, the problem is and"
+  },
+  {
+    "start": 1329.6,
+    "end": 1331.04,
+    "text": "this is one of the one of the problems"
+  },
+  {
+    "start": 1331.04,
+    "end": 1332.12,
+    "text": "that I think it'd be helpful for"
+  },
+  {
+    "start": 1332.12,
+    "end": 1334.76,
+    "text": "everybody to solve is how can we have"
+  },
+  {
+    "start": 1334.76,
+    "end": 1338.88,
+    "text": "very very specific fine-grained control?"
+  },
+  {
+    "start": 1338.88,
+    "end": 1341.36,
+    "text": "You know, if not for rags, if not for"
+  },
+  {
+    "start": 1341.36,
+    "end": 1344.0,
+    "text": "conditional inputs, if not for our all"
+  },
+  {
+    "start": 1344.0,
+    "end": 1345.68,
+    "text": "of our prompts"
+  },
+  {
+    "start": 1345.68,
+    "end": 1348.84,
+    "text": "um directly into output was was too"
+  },
+  {
+    "start": 1348.84,
+    "end": 1350.16,
+    "text": "coarse."
+  },
+  {
+    "start": 1350.16,
+    "end": 1351.76,
+    "text": "And so the fact that we can condition,"
+  },
+  {
+    "start": 1351.76,
+    "end": 1354.2,
+    "text": "the fact that we can control the agents"
+  },
+  {
+    "start": 1354.2,
+    "end": 1356.68,
+    "text": "um all the way down to eventually uh"
+  },
+  {
+    "start": 1356.68,
+    "end": 1358.68,
+    "text": "when it comes up with a plan, I change"
+  },
+  {
+    "start": 1358.68,
+    "end": 1362.16,
+    "text": "one word in a plan file, and that one"
+  },
+  {
+    "start": 1362.16,
+    "end": 1363.64,
+    "text": "word makes"
+  },
+  {
+    "start": 1363.64,
+    "end": 1365.36,
+    "text": "a delta difference."
+  },
+  {
+    "start": 1365.36,
+    "end": 1368.2,
+    "text": "Not complete difference, but specific"
+  },
+  {
+    "start": 1368.2,
+    "end": 1370.44,
+    "text": "difference. Um maybe it's one pixel,"
+  },
+  {
+    "start": 1370.44,
+    "end": 1372.44,
+    "text": "maybe it's one triangle, maybe it's one"
+  },
+  {
+    "start": 1372.44,
+    "end": 1374.84,
+    "text": "component in a CAD file, maybe one"
+  },
+  {
+    "start": 1374.84,
+    "end": 1377.72,
+    "text": "layer, one via, one connection."
+  },
+  {
+    "start": 1377.72,
+    "end": 1380.04,
+    "text": "And then it regenerates everything else."
+  },
+  {
+    "start": 1380.04,
+    "end": 1382.12,
+    "text": "I think that that level of control and"
+  },
+  {
+    "start": 1382.12,
+    "end": 1383.8,
+    "text": "that level of collaboration with agents"
+  },
+  {
+    "start": 1383.8,
+    "end": 1386.12,
+    "text": "will be game changing. We don't need the"
+  },
+  {
+    "start": 1386.12,
+    "end": 1389.84,
+    "text": "the agents to be 100% accurate, 100%"
+  },
+  {
+    "start": 1389.84,
+    "end": 1391.96,
+    "text": "high quality in order for us to use it."
+  },
+  {
+    "start": 1391.96,
+    "end": 1395.04,
+    "text": "It could, you know, literally be 80% and"
+  },
+  {
+    "start": 1395.04,
+    "end": 1396.88,
+    "text": "then we help it the rest of the way, or"
+  },
+  {
+    "start": 1396.88,
+    "end": 1398.64,
+    "text": "it could be 99% we help it the rest of"
+  },
+  {
+    "start": 1398.64,
+    "end": 1399.92,
+    "text": "the way. And so I I think"
+  },
+  {
+    "start": 1399.92,
+    "end": 1401.92,
+    "text": "controllability is probably the single"
+  },
+  {
+    "start": 1401.92,
+    "end": 1403.72,
+    "text": "biggest breakthrough"
+  },
+  {
+    "start": 1403.72,
+    "end": 1405.64,
+    "text": "that we need for agents at every single"
+  },
+  {
+    "start": 1405.64,
+    "end": 1406.12,
+    "text": "level."
+  },
+  {
+    "start": 1406.12,
+    "end": 1408.28,
+    "text": ">> Do you think people will like I mean,"
+  },
+  {
+    "start": 1408.28,
+    "end": 1412.16,
+    "text": "with Hermes or Open Claw, it feels like"
+  },
+  {
+    "start": 1412.16,
+    "end": 1413.28,
+    "text": "that might actually be somewhat"
+  },
+  {
+    "start": 1413.28,
+    "end": 1415.88,
+    "text": "existential. Like people should control"
+  },
+  {
+    "start": 1415.88,
+    "end": 1418.64,
+    "text": "their own personal AGI. Like they"
+  },
+  {
+    "start": 1418.64,
+    "end": 1420.88,
+    "text": "shouldn't outsource that app and, you"
+  },
+  {
+    "start": 1420.88,
+    "end": 1422.96,
+    "text": "know, have it be just in the cloud and"
+  },
+  {
+    "start": 1422.96,
+    "end": 1425.12,
+    "text": "someone else's agent that like kind of"
+  },
+  {
+    "start": 1425.12,
+    "end": 1426.48,
+    "text": "tells you what to do. Like you kind of"
+  },
+  {
+    "start": 1426.48,
+    "end": 1427.56,
+    "text": "want it to be your own."
+  },
+  {
+    "start": 1427.56,
+    "end": 1429.52,
+    "text": ">> Yeah. Is that part of the thrust behind"
+  },
+  {
+    "start": 1429.52,
+    "end": 1431.44,
+    "text": "Nvidia being so involved in"
+  },
+  {
+    "start": 1431.44,
+    "end": 1433.24,
+    "text": ">> I think well, first of all, I I need to"
+  },
+  {
+    "start": 1433.24,
+    "end": 1435.48,
+    "text": "understand agents because agents is the"
+  },
+  {
+    "start": 1435.48,
+    "end": 1437.84,
+    "text": "new software. And how is this new"
+  },
+  {
+    "start": 1437.84,
+    "end": 1440.12,
+    "text": "software processed matters a lot"
+  },
+  {
+    "start": 1440.12,
+    "end": 1441.72,
+    "text": ">> to computer architecture."
+  },
+  {
+    "start": 1441.72,
+    "end": 1445.68,
+    "text": ">> And the the more intimate we are about"
+  },
+  {
+    "start": 1445.68,
+    "end": 1448.16,
+    "text": "um the nature of agents and how it's"
+  },
+  {
+    "start": 1448.16,
+    "end": 1450.68,
+    "text": "different than than um"
+  },
+  {
+    "start": 1450.68,
+    "end": 1453.44,
+    "text": "uh chatbots, which is how different than"
+  },
+  {
+    "start": 1453.44,
+    "end": 1455.84,
+    "text": "than um maybe inference in the very"
+  },
+  {
+    "start": 1455.84,
+    "end": 1458.04,
+    "text": "beginning. However, we think about these"
+  },
+  {
+    "start": 1458.04,
+    "end": 1460.24,
+    "text": "processing layers, the more intimate we"
+  },
+  {
+    "start": 1460.24,
+    "end": 1462.76,
+    "text": "are about the nature of the processing,"
+  },
+  {
+    "start": 1462.76,
+    "end": 1464.72,
+    "text": "the better we can design systems."
+  },
+  {
+    "start": 1464.72,
+    "end": 1468.04,
+    "text": "We we kind of have to live in the future"
+  },
+  {
+    "start": 1468.04,
+    "end": 1470.72,
+    "text": "5 to 10 years because it takes three or"
+  },
+  {
+    "start": 1470.72,
+    "end": 1473.24,
+    "text": "so years just to build a system, takes a"
+  },
+  {
+    "start": 1473.24,
+    "end": 1475.68,
+    "text": "couple years to ramp it up, and you're"
+  },
+  {
+    "start": 1475.68,
+    "end": 1477.04,
+    "text": "dealing and you would like them to be"
+  },
+  {
+    "start": 1477.04,
+    "end": 1478.8,
+    "text": "able to use the computer for 10 years"
+  },
+  {
+    "start": 1478.8,
+    "end": 1480.6,
+    "text": "after. And so you kind of have to live"
+  },
+  {
+    "start": 1480.6,
+    "end": 1483.12,
+    "text": "in the future for a while. And so"
+  },
+  {
+    "start": 1483.12,
+    "end": 1485.24,
+    "text": "agentic systems for us at the first"
+  },
+  {
+    "start": 1485.24,
+    "end": 1487.12,
+    "text": "principles is just what is the workload,"
+  },
+  {
+    "start": 1487.12,
+    "end": 1488.96,
+    "text": "what's the algorithm, how is it going to"
+  },
+  {
+    "start": 1488.96,
+    "end": 1491.2,
+    "text": "evolve, where are the bottlenecks, you"
+  },
+  {
+    "start": 1491.2,
+    "end": 1492.52,
+    "text": "know, where are the Amdahl's law's"
+  },
+  {
+    "start": 1492.52,
+    "end": 1494.8,
+    "text": "problems, and um"
+  },
+  {
+    "start": 1494.8,
+    "end": 1497.32,
+    "text": "how How it scale, uh what happens to"
+  },
+  {
+    "start": 1497.32,
+    "end": 1499.56,
+    "text": "concurrency? How do you deal with"
+  },
+  {
+    "start": 1499.56,
+    "end": 1501.08,
+    "text": "sandboxes?"
+  },
+  {
+    "start": 1501.08,
+    "end": 1503.16,
+    "text": "How do you deal with MCP? How do you"
+  },
+  {
+    "start": 1503.16,
+    "end": 1504.16,
+    "text": "deal with"
+  },
+  {
+    "start": 1504.16,
+    "end": 1505.64,
+    "text": "you know, working memory, long-term"
+  },
+  {
+    "start": 1505.64,
+    "end": 1507.68,
+    "text": "memory? How do you have all these"
+  },
+  {
+    "start": 1507.68,
+    "end": 1509.6,
+    "text": "autonomous systems, asynchronous systems"
+  },
+  {
+    "start": 1509.6,
+    "end": 1511.0,
+    "text": "working all the time?"
+  },
+  {
+    "start": 1511.0,
+    "end": 1513.24,
+    "text": "And so, what kind of design architecture"
+  },
+  {
+    "start": 1513.24,
+    "end": 1514.72,
+    "text": "makes perfect sense for that? And so, we"
+  },
+  {
+    "start": 1514.72,
+    "end": 1517.56,
+    "text": "have to go and go discover that."
+  },
+  {
+    "start": 1517.56,
+    "end": 1519.52,
+    "text": "And then, of course, the second thing is"
+  },
+  {
+    "start": 1519.52,
+    "end": 1520.96,
+    "text": "I want to use agents ourselves to make"
+  },
+  {
+    "start": 1520.96,
+    "end": 1524.0,
+    "text": "NVIDIA go faster. And so, we have, you"
+  },
+  {
+    "start": 1524.0,
+    "end": 1525.88,
+    "text": "know, voices in the back"
+  },
+  {
+    "start": 1525.88,
+    "end": 1527.72,
+    "text": "and we've got cloud code autonomously"
+  },
+  {
+    "start": 1527.72,
+    "end": 1530.0,
+    "text": "running in sandboxes all over NVIDIA,"
+  },
+  {
+    "start": 1530.0,
+    "end": 1531.8,
+    "text": "and that's really fantastic."
+  },
+  {
+    "start": 1531.8,
+    "end": 1533.84,
+    "text": "And some people use code codex, some"
+  },
+  {
+    "start": 1533.84,
+    "end": 1535.44,
+    "text": "people use cloud code, some people use"
+  },
+  {
+    "start": 1535.44,
+    "end": 1538.84,
+    "text": "cursor, some people use cognition. And"
+  },
+  {
+    "start": 1538.84,
+    "end": 1540.84,
+    "text": "and we we let kind of a a thousand"
+  },
+  {
+    "start": 1540.84,
+    "end": 1542.4,
+    "text": "flowers bloom, let people select the"
+  },
+  {
+    "start": 1542.4,
+    "end": 1544.0,
+    "text": "tools they want to use, and then we"
+  },
+  {
+    "start": 1544.0,
+    "end": 1546.04,
+    "text": "learn from from all of that. And so, the"
+  },
+  {
+    "start": 1546.04,
+    "end": 1548.0,
+    "text": "second part is just helping the company"
+  },
+  {
+    "start": 1548.0,
+    "end": 1549.44,
+    "text": "move faster."
+  },
+  {
+    "start": 1549.44,
+    "end": 1551.72,
+    "text": "Use the tools, and the more they use it,"
+  },
+  {
+    "start": 1551.72,
+    "end": 1553.48,
+    "text": "the more you're going to learn about"
+  },
+  {
+    "start": 1553.48,
+    "end": 1555.44,
+    "text": "how to make it work better in the"
+  },
+  {
+    "start": 1555.44,
+    "end": 1557.72,
+    "text": "future. And then the last part is is"
+  },
+  {
+    "start": 1557.72,
+    "end": 1561.4,
+    "text": "discovering the future of of um"
+  },
+  {
+    "start": 1561.4,
+    "end": 1563.72,
+    "text": "solutions technology for the future. And"
+  },
+  {
+    "start": 1563.72,
+    "end": 1567.68,
+    "text": "maybe you know, when we when we saw"
+  },
+  {
+    "start": 1567.68,
+    "end": 1570.04,
+    "text": "when we saw the early versions of of"
+  },
+  {
+    "start": 1570.04,
+    "end": 1571.4,
+    "text": "chain of thought come out of Stanford,"
+  },
+  {
+    "start": 1571.4,
+    "end": 1573.08,
+    "text": "it was probably a decade ago at this"
+  },
+  {
+    "start": 1573.08,
+    "end": 1574.76,
+    "text": "point, maybe eight years ago."
+  },
+  {
+    "start": 1574.76,
+    "end": 1576.12,
+    "text": "You know, the question is"
+  },
+  {
+    "start": 1576.12,
+    "end": 1577.04,
+    "text": "is"
+  },
+  {
+    "start": 1577.04,
+    "end": 1579.84,
+    "text": "how how effective is that going to be in"
+  },
+  {
+    "start": 1579.84,
+    "end": 1581.76,
+    "text": "reasoning, and how scalable is going to"
+  },
+  {
+    "start": 1581.76,
+    "end": 1582.84,
+    "text": "be?"
+  },
+  {
+    "start": 1582.84,
+    "end": 1584.44,
+    "text": "And what is the implication, for"
+  },
+  {
+    "start": 1584.44,
+    "end": 1587.16,
+    "text": "example, in computer vision,"
+  },
+  {
+    "start": 1587.16,
+    "end": 1589.76,
+    "text": "if we can reason"
+  },
+  {
+    "start": 1589.76,
+    "end": 1591.72,
+    "text": "from prior knowledge."
+  },
+  {
+    "start": 1591.72,
+    "end": 1594.44,
+    "text": "And and then the big breakthrough, of"
+  },
+  {
+    "start": 1594.44,
+    "end": 1596.08,
+    "text": "course, is just in in thinking through"
+  },
+  {
+    "start": 1596.08,
+    "end": 1598.72,
+    "text": "that small little domain, you come to"
+  },
+  {
+    "start": 1598.72,
+    "end": 1601.0,
+    "text": "realize that maybe we don't need as much"
+  },
+  {
+    "start": 1601.0,
+    "end": 1603.08,
+    "text": "data for cars to train a self-driving"
+  },
+  {
+    "start": 1603.08,
+    "end": 1604.2,
+    "text": "car."
+  },
+  {
+    "start": 1604.2,
+    "end": 1606.52,
+    "text": "Which led us to creating Alpaca My which"
+  },
+  {
+    "start": 1606.52,
+    "end": 1608.44,
+    "text": "is the world's first thinking"
+  },
+  {
+    "start": 1608.44,
+    "end": 1610.12,
+    "text": "self-driving car."
+  },
+  {
+    "start": 1610.12,
+    "end": 1613.16,
+    "text": "And with just a million miles or so, a"
+  },
+  {
+    "start": 1613.16,
+    "end": 1615.56,
+    "text": "couple million miles, it's an incredibly"
+  },
+  {
+    "start": 1615.56,
+    "end": 1617.64,
+    "text": "great self-driving car. And the reason"
+  },
+  {
+    "start": 1617.64,
+    "end": 1620.08,
+    "text": "for that is it's kind of like us, right?"
+  },
+  {
+    "start": 1620.08,
+    "end": 1622.32,
+    "text": "We don't need that many miles before"
+  },
+  {
+    "start": 1622.32,
+    "end": 1624.96,
+    "text": "uh we could drive fairly well most of"
+  },
+  {
+    "start": 1624.96,
+    "end": 1626.84,
+    "text": "our lives. And the reason for that is"
+  },
+  {
+    "start": 1626.84,
+    "end": 1628.76,
+    "text": "because we have prior knowledge from our"
+  },
+  {
+    "start": 1628.76,
+    "end": 1632.2,
+    "text": "language model, and we can decompose um"
+  },
+  {
+    "start": 1632.2,
+    "end": 1634.72,
+    "text": "a situation we've never seen before, uh"
+  },
+  {
+    "start": 1634.72,
+    "end": 1638.08,
+    "text": "and um I and build it up uh out of"
+  },
+  {
+    "start": 1638.08,
+    "end": 1639.76,
+    "text": "things that we understood and know very"
+  },
+  {
+    "start": 1639.76,
+    "end": 1642.2,
+    "text": "well. And so So, that that's an example"
+  },
+  {
+    "start": 1642.2,
+    "end": 1644.72,
+    "text": "of seeing something and then realizing"
+  },
+  {
+    "start": 1644.72,
+    "end": 1647.4,
+    "text": "the impacts on sometime later. Uh when"
+  },
+  {
+    "start": 1647.4,
+    "end": 1650.24,
+    "text": "the agentic systems came along, uh it's"
+  },
+  {
+    "start": 1650.24,
+    "end": 1652.0,
+    "text": "very very clear"
+  },
+  {
+    "start": 1652.0,
+    "end": 1654.84,
+    "text": "that obviously a large language models"
+  },
+  {
+    "start": 1654.84,
+    "end": 1656.76,
+    "text": "uh needs memory, it needs prior"
+  },
+  {
+    "start": 1656.76,
+    "end": 1660.08,
+    "text": "knowledge, it needs tools, it needs ways"
+  },
+  {
+    "start": 1660.08,
+    "end": 1662.96,
+    "text": "to network with other agents. And so,"
+  },
+  {
+    "start": 1662.96,
+    "end": 1665.6,
+    "text": "that kind of, you know, that once you"
+  },
+  {
+    "start": 1665.6,
+    "end": 1668.28,
+    "text": "see some early indicators, uh and you're"
+  },
+  {
+    "start": 1668.28,
+    "end": 1670.32,
+    "text": "able to reason about the future, uh"
+  },
+  {
+    "start": 1670.32,
+    "end": 1672.48,
+    "text": "helps you get a leap, you know, into"
+  },
+  {
+    "start": 1672.48,
+    "end": 1674.2,
+    "text": "into the future."
+  },
+  {
+    "start": 1674.2,
+    "end": 1675.8,
+    "text": ">> I I I feel like there's this pattern"
+  },
+  {
+    "start": 1675.8,
+    "end": 1678.44,
+    "text": "that I'm starting to see around Nvidia."
+  },
+  {
+    "start": 1678.44,
+    "end": 1680.08,
+    "text": "It's like you see a problem, there's a"
+  },
+  {
+    "start": 1680.08,
+    "end": 1682.12,
+    "text": "new algorithm, there's some new thing"
+  },
+  {
+    "start": 1682.12,
+    "end": 1683.84,
+    "text": "happening, and then actually you're"
+  },
+  {
+    "start": 1683.84,
+    "end": 1685.48,
+    "text": "right there with open source. I mean, I"
+  },
+  {
+    "start": 1685.48,
+    "end": 1687.2,
+    "text": "remember when OpenCL came out and people"
+  },
+  {
+    "start": 1687.2,
+    "end": 1689.52,
+    "text": "said it was unsafe, but you guys came"
+  },
+  {
+    "start": 1689.52,
+    "end": 1692.48,
+    "text": "out with uh sandboxing sort of uh"
+  },
+  {
+    "start": 1692.48,
+    "end": 1694.92,
+    "text": "toolkit that like surrounds any harness"
+  },
+  {
+    "start": 1694.92,
+    "end": 1696.24,
+    "text": "and makes it safe. And so,"
+  },
+  {
+    "start": 1696.24,
+    "end": 1698.56,
+    "text": ">> When I saw OpenCL, my first thought was"
+  },
+  {
+    "start": 1698.56,
+    "end": 1700.12,
+    "text": "Well, first of all, I I I learned about"
+  },
+  {
+    "start": 1700.12,
+    "end": 1703.04,
+    "text": "it. And then and then um"
+  },
+  {
+    "start": 1703.04,
+    "end": 1705.44,
+    "text": "you know, without without much"
+  },
+  {
+    "start": 1705.44,
+    "end": 1708.0,
+    "text": "imagination, you just realized we just"
+  },
+  {
+    "start": 1708.0,
+    "end": 1710.2,
+    "text": "designed the modern computer. This is"
+  },
+  {
+    "start": 1710.2,
+    "end": 1711.6,
+    "text": "the operating system that's going to"
+  },
+  {
+    "start": 1711.6,
+    "end": 1713.48,
+    "text": "hold a large language model."
+  },
+  {
+    "start": 1713.48,
+    "end": 1715.52,
+    "text": "And and um"
+  },
+  {
+    "start": 1715.52,
+    "end": 1717.56,
+    "text": "uh in a lot of ways, OpenCL to me was"
+  },
+  {
+    "start": 1717.56,
+    "end": 1719.2,
+    "text": "very Linux moment to me."
+  },
+  {
+    "start": 1719.2,
+    "end": 1719.84,
+    "text": ">> Yeah."
+  },
+  {
+    "start": 1719.84,
+    "end": 1722.0,
+    "text": ">> And now everybody can build their own"
+  },
+  {
+    "start": 1722.0,
+    "end": 1724.6,
+    "text": "AI. And I was so excited about that. And"
+  },
+  {
+    "start": 1724.6,
+    "end": 1727.08,
+    "text": "we contacted Peter, and um we said,"
+  },
+  {
+    "start": 1727.08,
+    "end": 1728.8,
+    "text": "\"Hey, you know, all of Nvidia's"
+  },
+  {
+    "start": 1728.8,
+    "end": 1731.12,
+    "text": "engineers are your engineers."
+  },
+  {
+    "start": 1731.12,
+    "end": 1732.6,
+    "text": "That's what I told Peter."
+  },
+  {
+    "start": 1732.6,
+    "end": 1734.24,
+    "text": "You got this battleship outside your"
+  },
+  {
+    "start": 1734.24,
+    "end": 1736.44,
+    "text": "house. You you"
+  },
+  {
+    "start": 1736.44,
+    "end": 1737.76,
+    "text": "you know, break down the problem as you"
+  },
+  {
+    "start": 1737.76,
+    "end": 1739.96,
+    "text": "desire and we'll contribute as as you"
+  },
+  {
+    "start": 1739.96,
+    "end": 1740.88,
+    "text": "wish."
+  },
+  {
+    "start": 1740.88,
+    "end": 1743.76,
+    "text": "Same thing with the the the Hermes team."
+  },
+  {
+    "start": 1743.76,
+    "end": 1745.32,
+    "text": "You know, and I'm so excited about the"
+  },
+  {
+    "start": 1745.32,
+    "end": 1747.04,
+    "text": "work that they're doing."
+  },
+  {
+    "start": 1747.04,
+    "end": 1749.6,
+    "text": "I do think that the world needs"
+  },
+  {
+    "start": 1749.6,
+    "end": 1751.96,
+    "text": "the ability for everybody to build their"
+  },
+  {
+    "start": 1751.96,
+    "end": 1753.56,
+    "text": "own AI."
+  },
+  {
+    "start": 1753.56,
+    "end": 1755.52,
+    "text": "And you could you could of course"
+  },
+  {
+    "start": 1755.52,
+    "end": 1758.16,
+    "text": "and I encourage everybody to to use"
+  },
+  {
+    "start": 1758.16,
+    "end": 1759.8,
+    "text": "cloud services as much as possible."
+  },
+  {
+    "start": 1759.8,
+    "end": 1762.84,
+    "text": "Everybody should use chat GPT and Claude"
+  },
+  {
+    "start": 1762.84,
+    "end": 1764.96,
+    "text": "and right, everybody should use that."
+  },
+  {
+    "start": 1764.96,
+    "end": 1767.48,
+    "text": "And but if you if you need to build your"
+  },
+  {
+    "start": 1767.48,
+    "end": 1770.52,
+    "text": "own AI because you're a company and and"
+  },
+  {
+    "start": 1770.52,
+    "end": 1771.76,
+    "text": "you need to build your own domain"
+  },
+  {
+    "start": 1771.76,
+    "end": 1774.56,
+    "text": "specific AIs. Now you have Hermes and"
+  },
+  {
+    "start": 1774.56,
+    "end": 1776.28,
+    "text": "you have open Claude, you've got all"
+  },
+  {
+    "start": 1776.28,
+    "end": 1778.68,
+    "text": "kinds of you got LangChain, deep agent,"
+  },
+  {
+    "start": 1778.68,
+    "end": 1780.16,
+    "text": "you got all these different ways, right?"
+  },
+  {
+    "start": 1780.16,
+    "end": 1782.6,
+    "text": "To build your own AI. And it's it's"
+  },
+  {
+    "start": 1782.6,
+    "end": 1785.32,
+    "text": "quite frankly relatively easy because"
+  },
+  {
+    "start": 1785.32,
+    "end": 1787.0,
+    "text": "the software is smart."
+  },
+  {
+    "start": 1787.0,
+    "end": 1789.36,
+    "text": "You know, and so AI smart and therefore"
+  },
+  {
+    "start": 1789.36,
+    "end": 1791.64,
+    "text": "AI must be so smart you could adapt it"
+  },
+  {
+    "start": 1791.64,
+    "end": 1794.4,
+    "text": "easily. And so I I think that that we"
+  },
+  {
+    "start": 1794.4,
+    "end": 1795.96,
+    "text": "want we want to encourage everybody and"
+  },
+  {
+    "start": 1795.96,
+    "end": 1798.08,
+    "text": "every company to build their own AIs."
+  },
+  {
+    "start": 1798.08,
+    "end": 1800.72,
+    "text": "And and and who knows what innovation"
+  },
+  {
+    "start": 1800.72,
+    "end": 1802.12,
+    "text": "will come from the fact that it's open"
+  },
+  {
+    "start": 1802.12,
+    "end": 1803.24,
+    "text": "source."
+  },
+  {
+    "start": 1803.24,
+    "end": 1805.24,
+    "text": ">> I feel like all the alpha is in building"
+  },
+  {
+    "start": 1805.24,
+    "end": 1807.44,
+    "text": "your own AI. I mean, if someone else is"
+  },
+  {
+    "start": 1807.44,
+    "end": 1810.52,
+    "text": "using whatever is off the shelf, but"
+  },
+  {
+    "start": 1810.52,
+    "end": 1812.48,
+    "text": "you're you have a thing that can"
+  },
+  {
+    "start": 1812.48,
+    "end": 1814.52,
+    "text": "recursively self-improve and it is, you"
+  },
+  {
+    "start": 1814.52,
+    "end": 1816.36,
+    "text": "know, I mean, the mech people are very"
+  },
+  {
+    "start": 1816.36,
+    "end": 1818.28,
+    "text": "flippant about market markdown files."
+  },
+  {
+    "start": 1818.28,
+    "end": 1820.28,
+    "text": "They say like, oh haha, it's just text,"
+  },
+  {
+    "start": 1820.28,
+    "end": 1822.8,
+    "text": "but like text is intelligence."
+  },
+  {
+    "start": 1822.8,
+    "end": 1823.88,
+    "text": "And we're in a different"
+  },
+  {
+    "start": 1823.88,
+    "end": 1824.88,
+    "text": ">> Words are thoughts."
+  },
+  {
+    "start": 1824.88,
+    "end": 1825.72,
+    "text": ">> Yeah."
+  },
+  {
+    "start": 1825.72,
+    "end": 1826.6,
+    "text": ">> Yeah, words are thoughts."
+  },
+  {
+    "start": 1826.6,
+    "end": 1827.8,
+    "text": ">> Yeah, and it turns out you can"
+  },
+  {
+    "start": 1827.8,
+    "end": 1829.48,
+    "text": ">> Try to try to think without words."
+  },
+  {
+    "start": 1829.48,
+    "end": 1830.746,
+    "text": ">> Yeah, that's right."
+  },
+  {
+    "start": 1830.746,
+    "end": 1831.72,
+    "text": ">> [laughter]"
+  },
+  {
+    "start": 1831.72,
+    "end": 1833.6,
+    "text": ">> So switching gears again, I mean, a lot"
+  },
+  {
+    "start": 1833.6,
+    "end": 1834.8,
+    "text": "of people are"
+  },
+  {
+    "start": 1834.8,
+    "end": 1836.48,
+    "text": "anytime you move the cheese, people get"
+  },
+  {
+    "start": 1836.48,
+    "end": 1838.36,
+    "text": "a little worried."
+  },
+  {
+    "start": 1838.36,
+    "end": 1841.0,
+    "text": "Intelligence is going to be on tap,"
+  },
+  {
+    "start": 1841.0,
+    "end": 1842.56,
+    "text": "which is really awesome. I think it"
+  },
+  {
+    "start": 1842.56,
+    "end": 1844.88,
+    "text": "bodes well for everyone in this room."
+  },
+  {
+    "start": 1844.88,
+    "end": 1845.56,
+    "text": "Um,"
+  },
+  {
+    "start": 1845.56,
+    "end": 1846.88,
+    "text": "what do you think changes about the"
+  },
+  {
+    "start": 1846.88,
+    "end": 1848.72,
+    "text": "economy? What do you think, you know,"
+  },
+  {
+    "start": 1848.72,
+    "end": 1851.24,
+    "text": "happens in sort of a broader sense?"
+  },
+  {
+    "start": 1851.24,
+    "end": 1853.52,
+    "text": ">> Uh, obviously, what I'm going to say is"
+  },
+  {
+    "start": 1853.52,
+    "end": 1857.0,
+    "text": "uneven. Uh, there are some uh, you know,"
+  },
+  {
+    "start": 1857.0,
+    "end": 1858.88,
+    "text": "we're going to automate tasks."
+  },
+  {
+    "start": 1858.88,
+    "end": 1861.28,
+    "text": "We're going to automate cognitive tasks."
+  },
+  {
+    "start": 1861.28,
+    "end": 1863.72,
+    "text": "If that task is uh, somebody makes a"
+  },
+  {
+    "start": 1863.72,
+    "end": 1866.44,
+    "text": "phone call and and sends a bunch of"
+  },
+  {
+    "start": 1866.44,
+    "end": 1867.64,
+    "text": "words,"
+  },
+  {
+    "start": 1867.64,
+    "end": 1869.84,
+    "text": "you know, across the phone to you and"
+  },
+  {
+    "start": 1869.84,
+    "end": 1872.92,
+    "text": "your job is to provide a response. And"
+  },
+  {
+    "start": 1872.92,
+    "end": 1875.16,
+    "text": "and um, if all the information is at"
+  },
+  {
+    "start": 1875.16,
+    "end": 1877.2,
+    "text": "your fingertip because you you have all"
+  },
+  {
+    "start": 1877.2,
+    "end": 1879.32,
+    "text": "the database here and you should be able"
+  },
+  {
+    "start": 1879.32,
+    "end": 1882.04,
+    "text": "to to answer that question completely."
+  },
+  {
+    "start": 1882.04,
+    "end": 1884.64,
+    "text": "Uh, in that case, that task will be"
+  },
+  {
+    "start": 1884.64,
+    "end": 1887.16,
+    "text": "automated away. Okay? Ignoring that for"
+  },
+  {
+    "start": 1887.16,
+    "end": 1889.6,
+    "text": "a second. Not that Not that you Not that"
+  },
+  {
+    "start": 1889.6,
+    "end": 1891.84,
+    "text": "we we ignore this, but my my point is"
+  },
+  {
+    "start": 1891.84,
+    "end": 1894.04,
+    "text": "I'm going to answer the question about"
+  },
+  {
+    "start": 1894.04,
+    "end": 1896.08,
+    "text": "about really the great opportunity. And"
+  },
+  {
+    "start": 1896.08,
+    "end": 1898.16,
+    "text": "so, um, many tasks will be automated"
+  },
+  {
+    "start": 1898.16,
+    "end": 1900.76,
+    "text": "away. Um, many jobs Every single job"
+  },
+  {
+    "start": 1900.76,
+    "end": 1902.08,
+    "text": "will be will change and there'll be a"
+  },
+  {
+    "start": 1902.08,
+    "end": 1903.48,
+    "text": "whole bunch of new jobs and that that"
+  },
+  {
+    "start": 1903.48,
+    "end": 1905.36,
+    "text": "that I think we know. Um, the bottom"
+  },
+  {
+    "start": 1905.36,
+    "end": 1906.96,
+    "text": "line is this."
+  },
+  {
+    "start": 1906.96,
+    "end": 1910.32,
+    "text": "The evidence would show that and it"
+  },
+  {
+    "start": 1910.32,
+    "end": 1912.4,
+    "text": "makes perfect sense that AI and"
+  },
+  {
+    "start": 1912.4,
+    "end": 1915.52,
+    "text": "automation is creating jobs everywhere."
+  },
+  {
+    "start": 1915.52,
+    "end": 1917.88,
+    "text": "The narrative about AI destroying jobs"
+  },
+  {
+    "start": 1917.88,
+    "end": 1921.76,
+    "text": "is exactly backwards. AI eliminate"
+  },
+  {
+    "start": 1921.76,
+    "end": 1923.96,
+    "text": "tasks."
+  },
+  {
+    "start": 1923.96,
+    "end": 1927.24,
+    "text": "AI automates tasks away."
+  },
+  {
+    "start": 1927.24,
+    "end": 1929.6,
+    "text": "But it doesn't necessary"
+  },
+  {
+    "start": 1929.6,
+    "end": 1932.04,
+    "text": "doesn't necessarily eliminate jobs. And"
+  },
+  {
+    "start": 1932.04,
+    "end": 1933.56,
+    "text": "the reason for that is because the the"
+  },
+  {
+    "start": 1933.56,
+    "end": 1936.68,
+    "text": "job of a person has a purpose and that"
+  },
+  {
+    "start": 1936.68,
+    "end": 1939.32,
+    "text": "purpose has many tasks. Some of those"
+  },
+  {
+    "start": 1939.32,
+    "end": 1941.32,
+    "text": "tasks could be automated away. Many of"
+  },
+  {
+    "start": 1941.32,
+    "end": 1943.16,
+    "text": "those tasks cannot be."
+  },
+  {
+    "start": 1943.16,
+    "end": 1945.44,
+    "text": "And so, the evidence suggests that here"
+  },
+  {
+    "start": 1945.44,
+    "end": 1947.4,
+    "text": "we are, we've automated coding, which is"
+  },
+  {
+    "start": 1947.4,
+    "end": 1948.6,
+    "text": "a task,"
+  },
+  {
+    "start": 1948.6,
+    "end": 1950.84,
+    "text": "but the job of a software engineer"
+  },
+  {
+    "start": 1950.84,
+    "end": 1953.16,
+    "text": "appears to be growing, right? The number"
+  },
+  {
+    "start": 1953.16,
+    "end": 1955.44,
+    "text": "of software engineer jobs year over year"
+  },
+  {
+    "start": 1955.44,
+    "end": 1957.48,
+    "text": "has increased 10%."
+  },
+  {
+    "start": 1957.48,
+    "end": 1961.12,
+    "text": "The task of reading radiology scans"
+  },
+  {
+    "start": 1961.12,
+    "end": 1964.68,
+    "text": "has been automated, but the number of"
+  },
+  {
+    "start": 1964.68,
+    "end": 1968.12,
+    "text": "radiology jobs has increased some 20% in"
+  },
+  {
+    "start": 1968.12,
+    "end": 1969.6,
+    "text": "the last several years,"
+  },
+  {
+    "start": 1969.6,
+    "end": 1971.08,
+    "text": "even though AI's taken over the whole"
+  },
+  {
+    "start": 1971.08,
+    "end": 1973.36,
+    "text": "field. And the reason for that"
+  },
+  {
+    "start": 1973.36,
+    "end": 1976.84,
+    "text": "is because the backlog of patients"
+  },
+  {
+    "start": 1976.84,
+    "end": 1979.16,
+    "text": "is incredibly high. Now doctors and"
+  },
+  {
+    "start": 1979.16,
+    "end": 1981.08,
+    "text": "hospitals could admit a lot more"
+  },
+  {
+    "start": 1981.08,
+    "end": 1982.76,
+    "text": "patients. In order to admit a lot more"
+  },
+  {
+    "start": 1982.76,
+    "end": 1984.32,
+    "text": "patients, you need more nurses, more"
+  },
+  {
+    "start": 1984.32,
+    "end": 1985.68,
+    "text": "radiologists."
+  },
+  {
+    "start": 1985.68,
+    "end": 1987.96,
+    "text": "And so, the same thing with software. We"
+  },
+  {
+    "start": 1987.96,
+    "end": 1990.64,
+    "text": "hit the backlog of ideas, the backlog of"
+  },
+  {
+    "start": 1990.64,
+    "end": 1993.36,
+    "text": "ambition and aspiration"
+  },
+  {
+    "start": 1993.36,
+    "end": 1996.84,
+    "text": "is so high that if we can automate away"
+  },
+  {
+    "start": 1996.84,
+    "end": 1999.68,
+    "text": "the task of programming, we could hire"
+  },
+  {
+    "start": 1999.68,
+    "end": 2001.6,
+    "text": "more software engineers to do more"
+  },
+  {
+    "start": 2001.6,
+    "end": 2003.96,
+    "text": "things. We could be more ambitious."
+  },
+  {
+    "start": 2003.96,
+    "end": 2005.68,
+    "text": "Same thing all you know, just across the"
+  },
+  {
+    "start": 2005.68,
+    "end": 2006.64,
+    "text": "board."
+  },
+  {
+    "start": 2006.64,
+    "end": 2008.92,
+    "text": "Uh they said Harvey is going to"
+  },
+  {
+    "start": 2008.92,
+    "end": 2011.72,
+    "text": "eliminate all of the paralegal jobs, and"
+  },
+  {
+    "start": 2011.72,
+    "end": 2013.44,
+    "text": "the number of lawyers will be"
+  },
+  {
+    "start": 2013.44,
+    "end": 2015.64,
+    "text": "reduced. Turns out paralegals are"
+  },
+  {
+    "start": 2015.64,
+    "end": 2017.6,
+    "text": "growing like crazy. And the reason for"
+  },
+  {
+    "start": 2017.6,
+    "end": 2019.76,
+    "text": "that is because the backlog of lawsuits"
+  },
+  {
+    "start": 2019.76,
+    "end": 2022.36,
+    "text": "is really high, and now these law firms"
+  },
+  {
+    "start": 2022.36,
+    "end": 2024.48,
+    "text": "could get a lot more cases through."
+  },
+  {
+    "start": 2024.48,
+    "end": 2025.96,
+    "text": "And in order to do so, you got to hire"
+  },
+  {
+    "start": 2025.96,
+    "end": 2028.76,
+    "text": "more people. And so, this is a classic"
+  },
+  {
+    "start": 2028.76,
+    "end": 2031.68,
+    "text": "classic example of productivity"
+  },
+  {
+    "start": 2031.68,
+    "end": 2033.92,
+    "text": "increasing growth. Increasing growth"
+  },
+  {
+    "start": 2033.92,
+    "end": 2035.96,
+    "text": "drives more employment. This is the"
+  },
+  {
+    "start": 2035.96,
+    "end": 2038.48,
+    "text": "reason why there's more employment today"
+  },
+  {
+    "start": 2038.48,
+    "end": 2040.24,
+    "text": "than there was when I first came out of"
+  },
+  {
+    "start": 2040.24,
+    "end": 2040.76,
+    "text": "school."
+  },
+  {
+    "start": 2040.76,
+    "end": 2042.4,
+    "text": ">> So, we've been talking a lot about"
+  },
+  {
+    "start": 2042.4,
+    "end": 2045.0,
+    "text": "software and agents. Um"
+  },
+  {
+    "start": 2045.0,
+    "end": 2046.68,
+    "text": "another really exciting thing that"
+  },
+  {
+    "start": 2046.68,
+    "end": 2048.32,
+    "text": "Nvidia is all the way out on the edge on"
+  },
+  {
+    "start": 2048.32,
+    "end": 2051.52,
+    "text": "is actually physical robots. Um"
+  },
+  {
+    "start": 2051.52,
+    "end": 2053.399,
+    "text": "you know, how far out? I think in the"
+  },
+  {
+    "start": 2053.399,
+    "end": 2055.6,
+    "text": "past you might have even said um"
+  },
+  {
+    "start": 2055.6,
+    "end": 2057.84,
+    "text": "this as soon as this year. What's the"
+  },
+  {
+    "start": 2057.84,
+    "end": 2059.6,
+    "text": "latest thinking on, you know, when can"
+  },
+  {
+    "start": 2059.6,
+    "end": 2061.6,
+    "text": "we expect practical robotics?"
+  },
+  {
+    "start": 2061.6,
+    "end": 2063.56,
+    "text": ">> Yeah, the moment that I saw as"
+  },
+  {
+    "start": 2063.56,
+    "end": 2066.159,
+    "text": "generating video,"
+  },
+  {
+    "start": 2066.159,
+    "end": 2067.72,
+    "text": "that was"
+  },
+  {
+    "start": 2067.72,
+    "end": 2069.2,
+    "text": "that was a great moment for me. The"
+  },
+  {
+    "start": 2069.2,
+    "end": 2071.04,
+    "text": "moment that I and I start I saw as"
+  },
+  {
+    "start": 2071.04,
+    "end": 2072.76,
+    "text": "generating video, I mean, we did the"
+  },
+  {
+    "start": 2072.76,
+    "end": 2074.56,
+    "text": "original work on"
+  },
+  {
+    "start": 2074.56,
+    "end": 2076.0,
+    "text": "um auto"
+  },
+  {
+    "start": 2076.0,
+    "end": 2078.159,
+    "text": "uh progressive GANs, okay? And we did"
+  },
+  {
+    "start": 2078.159,
+    "end": 2080.679,
+    "text": "the original work on uh conditional"
+  },
+  {
+    "start": 2080.679,
+    "end": 2084.36,
+    "text": "GANs. Um long before the first videos"
+  },
+  {
+    "start": 2084.36,
+    "end": 2087.399,
+    "text": "were generated outside that people saw,"
+  },
+  {
+    "start": 2087.399,
+    "end": 2089.44,
+    "text": "um a couple of years earlier inside our"
+  },
+  {
+    "start": 2089.44,
+    "end": 2093.08,
+    "text": "labs, we were driving a a uh simulator"
+  },
+  {
+    "start": 2093.08,
+    "end": 2095.6,
+    "text": "completely generated by video. And"
+  },
+  {
+    "start": 2095.6,
+    "end": 2097.24,
+    "text": "computer completely generated by neural"
+  },
+  {
+    "start": 2097.24,
+    "end": 2100.08,
+    "text": "networks. And so, the moment I saw"
+  },
+  {
+    "start": 2100.08,
+    "end": 2103.44,
+    "text": "us generating articulation,"
+  },
+  {
+    "start": 2103.44,
+    "end": 2106.04,
+    "text": "if I can generate video of a finger"
+  },
+  {
+    "start": 2106.04,
+    "end": 2107.76,
+    "text": "moving, if I could generate video of a"
+  },
+  {
+    "start": 2107.76,
+    "end": 2110.24,
+    "text": "hand picking up a glass, why can't I"
+  },
+  {
+    "start": 2110.24,
+    "end": 2113.04,
+    "text": "cause a robot to do the same?"
+  },
+  {
+    "start": 2113.04,
+    "end": 2115.64,
+    "text": "And so, the moment I saw that generative"
+  },
+  {
+    "start": 2115.64,
+    "end": 2118.16,
+    "text": "AI happening, I realized that robotics"
+  },
+  {
+    "start": 2118.16,
+    "end": 2120.6,
+    "text": "articulation was around the corner."
+  },
+  {
+    "start": 2120.6,
+    "end": 2122.36,
+    "text": "And so, now the question is, you know,"
+  },
+  {
+    "start": 2122.36,
+    "end": 2124.68,
+    "text": "how's the robot going to understand"
+  },
+  {
+    "start": 2124.68,
+    "end": 2125.36,
+    "text": "uh"
+  },
+  {
+    "start": 2125.36,
+    "end": 2126.16,
+    "text": "uh"
+  },
+  {
+    "start": 2126.16,
+    "end": 2128.2,
+    "text": "to generate motions that obey the laws"
+  },
+  {
+    "start": 2128.2,
+    "end": 2129.92,
+    "text": "of physics? How's it How does it"
+  },
+  {
+    "start": 2129.92,
+    "end": 2132.84,
+    "text": "understand causality? Um how does it"
+  },
+  {
+    "start": 2132.84,
+    "end": 2135.88,
+    "text": "understand, you know, friction, tension?"
+  },
+  {
+    "start": 2135.88,
+    "end": 2137.0,
+    "text": "How does it understand the laws of"
+  },
+  {
+    "start": 2137.0,
+    "end": 2139.08,
+    "text": "physics? And so, it started us down the"
+  },
+  {
+    "start": 2139.08,
+    "end": 2140.96,
+    "text": "journey of creating what we call"
+  },
+  {
+    "start": 2140.96,
+    "end": 2142.6,
+    "text": "physical AI now. And everybody calls it"
+  },
+  {
+    "start": 2142.6,
+    "end": 2145.32,
+    "text": "physical AI. And physical AI, uh we"
+  },
+  {
+    "start": 2145.32,
+    "end": 2146.96,
+    "text": "started working on world foundation"
+  },
+  {
+    "start": 2146.96,
+    "end": 2147.92,
+    "text": "model,"
+  },
+  {
+    "start": 2147.92,
+    "end": 2149.52,
+    "text": "um an AI that understands the laws of"
+  },
+  {
+    "start": 2149.52,
+    "end": 2151.92,
+    "text": "physics and the how the world works. And"
+  },
+  {
+    "start": 2151.92,
+    "end": 2154.2,
+    "text": "um uh we started down the the journey of"
+  },
+  {
+    "start": 2154.2,
+    "end": 2156.84,
+    "text": "of uh working on robotics. I would say"
+  },
+  {
+    "start": 2156.84,
+    "end": 2159.48,
+    "text": "the chat GPT moment of robots happened a"
+  },
+  {
+    "start": 2159.48,
+    "end": 2161.0,
+    "text": "couple of years ago already."
+  },
+  {
+    "start": 2161.0,
+    "end": 2161.76,
+    "text": ">> Wow."
+  },
+  {
+    "start": 2161.76,
+    "end": 2163.84,
+    "text": ">> And and the reason for that is remember"
+  },
+  {
+    "start": 2163.84,
+    "end": 2167.36,
+    "text": "when chat GPT first came out,"
+  },
+  {
+    "start": 2167.36,
+    "end": 2169.96,
+    "text": "it didn't do anything productive."
+  },
+  {
+    "start": 2169.96,
+    "end": 2172.04,
+    "text": "It didn't do anything useful, but it"
+  },
+  {
+    "start": 2172.04,
+    "end": 2173.68,
+    "text": "opened our imagination about what's"
+  },
+  {
+    "start": 2173.68,
+    "end": 2176.8,
+    "text": "possible. And I would say a couple of"
+  },
+  {
+    "start": 2176.8,
+    "end": 2178.56,
+    "text": "years ago, you know, robots walking"
+  },
+  {
+    "start": 2178.56,
+    "end": 2180.48,
+    "text": "around that we could do reinforcement"
+  },
+  {
+    "start": 2180.48,
+    "end": 2182.64,
+    "text": "learning, fine-tune it for and ground it"
+  },
+  {
+    "start": 2182.64,
+    "end": 2185.36,
+    "text": "in physics, uh really happened a couple"
+  },
+  {
+    "start": 2185.36,
+    "end": 2186.48,
+    "text": "of years ago."
+  },
+  {
+    "start": 2186.48,
+    "end": 2188.0,
+    "text": "So, now what what do we need to do? We"
+  },
+  {
+    "start": 2188.0,
+    "end": 2189.16,
+    "text": "need to do all the same things that"
+  },
+  {
+    "start": 2189.16,
+    "end": 2192.2,
+    "text": "we're doing now for agentic systems."
+  },
+  {
+    "start": 2192.2,
+    "end": 2193.6,
+    "text": "We have to create environments for them"
+  },
+  {
+    "start": 2193.6,
+    "end": 2196.36,
+    "text": "to learn in, to eval in, eval against."
+  },
+  {
+    "start": 2196.36,
+    "end": 2199.04,
+    "text": "And so, we have to do real to sim to"
+  },
+  {
+    "start": 2199.04,
+    "end": 2201.04,
+    "text": "create environments."
+  },
+  {
+    "start": 2201.04,
+    "end": 2202.8,
+    "text": "Uh we have to do uh"
+  },
+  {
+    "start": 2202.8,
+    "end": 2204.28,
+    "text": "uh we have to generate simulators that"
+  },
+  {
+    "start": 2204.28,
+    "end": 2206.16,
+    "text": "are based on simulation, grounded"
+  },
+  {
+    "start": 2206.16,
+    "end": 2208.0,
+    "text": "physics simulation, as well as"
+  },
+  {
+    "start": 2208.0,
+    "end": 2210.64,
+    "text": "generative uh physics simulations. And"
+  },
+  {
+    "start": 2210.64,
+    "end": 2213.8,
+    "text": "so, uh Isaac Sim, uh Cosmos, and all the"
+  },
+  {
+    "start": 2213.8,
+    "end": 2215.52,
+    "text": "work that we do in that area is related"
+  },
+  {
+    "start": 2215.52,
+    "end": 2218.16,
+    "text": "to simulation. And then the last part is"
+  },
+  {
+    "start": 2218.16,
+    "end": 2221.92,
+    "text": "sim to real. And so, uh that part is has"
+  },
+  {
+    "start": 2221.92,
+    "end": 2223.04,
+    "text": "something to do with reinforcement"
+  },
+  {
+    "start": 2223.04,
+    "end": 2226.04,
+    "text": "learning, um uh grounding it on physics,"
+  },
+  {
+    "start": 2226.04,
+    "end": 2227.6,
+    "text": "uh grounding it on grounding it on all"
+  },
+  {
+    "start": 2227.6,
+    "end": 2230.16,
+    "text": "on um all the electromechanical"
+  },
+  {
+    "start": 2230.16,
+    "end": 2232.6,
+    "text": "uh systems that that robots require. And"
+  },
+  {
+    "start": 2232.6,
+    "end": 2234.72,
+    "text": "so, but these three basic system, I I"
+  },
+  {
+    "start": 2234.72,
+    "end": 2237.6,
+    "text": "think builds up uh the eval, if you"
+  },
+  {
+    "start": 2237.6,
+    "end": 2240.92,
+    "text": "will, the the the the post-training of"
+  },
+  {
+    "start": 2240.92,
+    "end": 2242.76,
+    "text": "um of robotics. And I I think we're"
+  },
+  {
+    "start": 2242.76,
+    "end": 2243.64,
+    "text": "we're going to see it right around the"
+  },
+  {
+    "start": 2243.64,
+    "end": 2244.36,
+    "text": "corner."
+  },
+  {
+    "start": 2244.36,
+    "end": 2246.44,
+    "text": ">> Amazing. Where does physical AI show up"
+  },
+  {
+    "start": 2246.44,
+    "end": 2247.88,
+    "text": "first in a way that's really"
+  },
+  {
+    "start": 2247.88,
+    "end": 2249.6,
+    "text": "economically real? Are you seeing that"
+  },
+  {
+    "start": 2249.6,
+    "end": 2250.28,
+    "text": "already?"
+  },
+  {
+    "start": 2250.28,
+    "end": 2253.44,
+    "text": ">> We conjectured that uh"
+  },
+  {
+    "start": 2253.44,
+    "end": 2255.48,
+    "text": "that robotics was going to come along"
+  },
+  {
+    "start": 2255.48,
+    "end": 2258.0,
+    "text": "and decided that the first application"
+  },
+  {
+    "start": 2258.0,
+    "end": 2260.64,
+    "text": "of robotics that has both a large enough"
+  },
+  {
+    "start": 2260.64,
+    "end": 2262.24,
+    "text": "market,"
+  },
+  {
+    "start": 2262.24,
+    "end": 2265.04,
+    "text": "um relatively standardized"
+  },
+  {
+    "start": 2265.04,
+    "end": 2267.52,
+    "text": "technology so that we could scale and"
+  },
+  {
+    "start": 2267.52,
+    "end": 2269.4,
+    "text": "get the flywheel going,"
+  },
+  {
+    "start": 2269.4,
+    "end": 2272.44,
+    "text": "um and has real economic value was uh"
+  },
+  {
+    "start": 2272.44,
+    "end": 2275.56,
+    "text": "self-driving cars. And so, uh inside"
+  },
+  {
+    "start": 2275.56,
+    "end": 2279.48,
+    "text": "Waymo, uh our chips from Nvidia. Uh at"
+  },
+  {
+    "start": 2279.48,
+    "end": 2281.68,
+    "text": "at Tesla, we were in the car. Uh now"
+  },
+  {
+    "start": 2281.68,
+    "end": 2283.96,
+    "text": "we're in the data center. Um uh"
+  },
+  {
+    "start": 2283.96,
+    "end": 2285.48,
+    "text": "Mercedes, we're in the data center,"
+  },
+  {
+    "start": 2285.48,
+    "end": 2287.68,
+    "text": "we're in the car with a software stack."
+  },
+  {
+    "start": 2287.68,
+    "end": 2290.2,
+    "text": "Uh we uh uh worked on Alpaca Myo, and we"
+  },
+  {
+    "start": 2290.2,
+    "end": 2291.56,
+    "text": "open-sourced it. And the reason why we"
+  },
+  {
+    "start": 2291.56,
+    "end": 2293.76,
+    "text": "open-sourced the self-driving car stack"
+  },
+  {
+    "start": 2293.76,
+    "end": 2295.48,
+    "text": "is because you need it for agriculture,"
+  },
+  {
+    "start": 2295.48,
+    "end": 2297.4,
+    "text": "you need it for mail delivery, you need"
+  },
+  {
+    "start": 2297.4,
+    "end": 2300.04,
+    "text": "it for warehouse AMRs. There's so many"
+  },
+  {
+    "start": 2300.04,
+    "end": 2302.68,
+    "text": "different ways that you could apply um,"
+  },
+  {
+    "start": 2302.68,
+    "end": 2304.32,
+    "text": "uh, autonomous"
+  },
+  {
+    "start": 2304.32,
+    "end": 2305.72,
+    "text": "navigation"
+  },
+  {
+    "start": 2305.72,
+    "end": 2308.04,
+    "text": "uh, and none of those markets are big"
+  },
+  {
+    "start": 2308.04,
+    "end": 2309.72,
+    "text": "enough to be a self-driving car market"
+  },
+  {
+    "start": 2309.72,
+    "end": 2311.12,
+    "text": "and we thought it was"
+  },
+  {
+    "start": 2311.12,
+    "end": 2313.04,
+    "text": "sufficiently diverse that we would"
+  },
+  {
+    "start": 2313.04,
+    "end": 2314.84,
+    "text": "create the whole stack for it. And so"
+  },
+  {
+    "start": 2314.84,
+    "end": 2316.28,
+    "text": "we're working with autonomous vehicles"
+  },
+  {
+    "start": 2316.28,
+    "end": 2318.52,
+    "text": "in all kinds of different places."
+  },
+  {
+    "start": 2318.52,
+    "end": 2321.04,
+    "text": "Our robotics business, autonomous"
+  },
+  {
+    "start": 2321.04,
+    "end": 2322.96,
+    "text": "vehicle business, basically physical AI"
+  },
+  {
+    "start": 2322.96,
+    "end": 2324.92,
+    "text": "business is probably almost like $10"
+  },
+  {
+    "start": 2324.92,
+    "end": 2326.88,
+    "text": "billion. So it's really, really big"
+  },
+  {
+    "start": 2326.88,
+    "end": 2327.88,
+    "text": "already."
+  },
+  {
+    "start": 2327.88,
+    "end": 2329.84,
+    "text": "Um, likely this will be one of the"
+  },
+  {
+    "start": 2329.84,
+    "end": 2332.6,
+    "text": "largest industries in the world and um,"
+  },
+  {
+    "start": 2332.6,
+    "end": 2334.0,
+    "text": "uh, it'll take longer than a couple two,"
+  },
+  {
+    "start": 2334.0,
+    "end": 2336.16,
+    "text": "three years. It'll take less than 10."
+  },
+  {
+    "start": 2336.16,
+    "end": 2338.0,
+    "text": "And so this will this will be our next"
+  },
+  {
+    "start": 2338.0,
+    "end": 2339.12,
+    "text": "$100 billion business."
+  },
+  {
+    "start": 2339.12,
+    "end": 2340.32,
+    "text": ">> Amazing."
+  },
+  {
+    "start": 2340.32,
+    "end": 2342.84,
+    "text": "Um, I want to take a moment. Uh, I think"
+  },
+  {
+    "start": 2342.84,
+    "end": 2345.72,
+    "text": "this is the exact right crowd to uh,"
+  },
+  {
+    "start": 2345.72,
+    "end": 2347.8,
+    "text": "you know, maybe as a arena we can"
+  },
+  {
+    "start": 2347.8,
+    "end": 2350.2,
+    "text": "welcome Jensen to X."
+  },
+  {
+    "start": 2350.2,
+    "end": 2351.68,
+    "text": "Welcome to X. I mean, you made your"
+  },
+  {
+    "start": 2351.68,
+    "end": 2353.92,
+    "text": "first post uh, and thank you for your"
+  },
+  {
+    "start": 2353.92,
+    "end": 2356.062,
+    "text": "leadership."
+  },
+  {
+    "start": 2356.062,
+    "end": 2358.76,
+    "text": ">> [applause]"
+  },
+  {
+    "start": 2358.76,
+    "end": 2360.88,
+    "text": ">> You know, that's that just that shows"
+  },
+  {
+    "start": 2360.88,
+    "end": 2364.16,
+    "text": "you how introverted I am."
+  },
+  {
+    "start": 2364.16,
+    "end": 2367.56,
+    "text": "It took me until 2026 to have the first"
+  },
+  {
+    "start": 2367.56,
+    "end": 2369.24,
+    "text": "post on X."
+  },
+  {
+    "start": 2369.24,
+    "end": 2371.12,
+    "text": "You know, it's I'm probably the last"
+  },
+  {
+    "start": 2371.12,
+    "end": 2373.72,
+    "text": "human on Earth that that did it."
+  },
+  {
+    "start": 2373.72,
+    "end": 2375.44,
+    "text": "Uh, but but uh, what I posted was too"
+  },
+  {
+    "start": 2375.44,
+    "end": 2377.64,
+    "text": "important to me and too important to the"
+  },
+  {
+    "start": 2377.64,
+    "end": 2379.04,
+    "text": "to the industry and too important to the"
+  },
+  {
+    "start": 2379.04,
+    "end": 2383.76,
+    "text": "world. And so so uh, I I over overcame"
+  },
+  {
+    "start": 2383.76,
+    "end": 2386.92,
+    "text": "my um, my shyness and and put my first"
+  },
+  {
+    "start": 2386.92,
+    "end": 2387.92,
+    "text": "thing out on X."
+  },
+  {
+    "start": 2387.92,
+    "end": 2389.16,
+    "text": ">> No, thank you for your leadership. I"
+  },
+  {
+    "start": 2389.16,
+    "end": 2391.2,
+    "text": "mean, open source, open weights, open"
+  },
+  {
+    "start": 2391.2,
+    "end": 2393.12,
+    "text": "source models are incredibly important"
+  },
+  {
+    "start": 2393.12,
+    "end": 2394.28,
+    "text": "for"
+  },
+  {
+    "start": 2394.28,
+    "end": 2396.28,
+    "text": "I mean, what all of us in this room want"
+  },
+  {
+    "start": 2396.28,
+    "end": 2398.72,
+    "text": "to do. Like we want to create products."
+  },
+  {
+    "start": 2398.72,
+    "end": 2401.2,
+    "text": ">> If not for open source, the mobile cloud"
+  },
+  {
+    "start": 2401.2,
+    "end": 2403.24,
+    "text": "industry would have never happened."
+  },
+  {
+    "start": 2403.24,
+    "end": 2405.24,
+    "text": "If not for open, if not for Linux, if"
+  },
+  {
+    "start": 2405.24,
+    "end": 2407.44,
+    "text": "not for Kubernetes, if not for all of"
+  },
+  {
+    "start": 2407.44,
+    "end": 2409.64,
+    "text": "these, you know, platform, if not for"
+  },
+  {
+    "start": 2409.64,
+    "end": 2411.96,
+    "text": "uh, TensorFlow or more important, uh,"
+  },
+  {
+    "start": 2411.96,
+    "end": 2413.4,
+    "text": "PyTorch,"
+  },
+  {
+    "start": 2413.4,
+    "end": 2415.56,
+    "text": "right? The and the early versions of a"
+  },
+  {
+    "start": 2415.56,
+    "end": 2418.92,
+    "text": "cafe, right? Torch. I mean, all of the"
+  },
+  {
+    "start": 2418.92,
+    "end": 2421.0,
+    "text": "Theano. Remember the early versions of"
+  },
+  {
+    "start": 2421.0,
+    "end": 2423.44,
+    "text": "all Those were all open source. If not"
+  },
+  {
+    "start": 2423.44,
+    "end": 2425.36,
+    "text": "for all of that, how would we have"
+  },
+  {
+    "start": 2425.36,
+    "end": 2426.72,
+    "text": "modern AI?"
+  },
+  {
+    "start": 2426.72,
+    "end": 2428.24,
+    "text": ">> Well, thank you for your leadership and"
+  },
+  {
+    "start": 2428.24,
+    "end": 2430.28,
+    "text": "your voice is incredibly important here."
+  },
+  {
+    "start": 2430.28,
+    "end": 2432.043,
+    "text": "Thank you."
+  },
+  {
+    "start": 2432.043,
+    "end": 2437.96,
+    "text": ">> [applause]"
+  },
+  {
+    "start": 2437.96,
+    "end": 2440.56,
+    "text": ">> Before we go, I feel like we I just"
+  },
+  {
+    "start": 2440.56,
+    "end": 2442.56,
+    "text": "really resonate with your story. I think"
+  },
+  {
+    "start": 2442.56,
+    "end": 2444.8,
+    "text": "that everyone here, but I mean, would"
+  },
+  {
+    "start": 2444.8,
+    "end": 2446.76,
+    "text": "love the wisdom of,"
+  },
+  {
+    "start": 2446.76,
+    "end": 2448.44,
+    "text": "you know, your journey coming here. I"
+  },
+  {
+    "start": 2448.44,
+    "end": 2450.48,
+    "text": "mean, what should a young person learn"
+  },
+  {
+    "start": 2450.48,
+    "end": 2451.96,
+    "text": "now, given all the things that you're"
+  },
+  {
+    "start": 2451.96,
+    "end": 2453.88,
+    "text": "seeing, all the algorithms that are"
+  },
+  {
+    "start": 2453.88,
+    "end": 2457.04,
+    "text": "going to take hold in society? Um"
+  },
+  {
+    "start": 2457.04,
+    "end": 2458.32,
+    "text": "what should a young person learn now"
+  },
+  {
+    "start": 2458.32,
+    "end": 2460.4,
+    "text": "that will still matter, based on what"
+  },
+  {
+    "start": 2460.4,
+    "end": 2461.52,
+    "text": "you're seeing?"
+  },
+  {
+    "start": 2461.52,
+    "end": 2462.56,
+    "text": ">> Well, some of the things that I saw"
+  },
+  {
+    "start": 2462.56,
+    "end": 2463.68,
+    "text": "today"
+  },
+  {
+    "start": 2463.68,
+    "end": 2465.84,
+    "text": "and some of the starters I met today was"
+  },
+  {
+    "start": 2465.84,
+    "end": 2468.56,
+    "text": "really really quite quite encouraging"
+  },
+  {
+    "start": 2468.56,
+    "end": 2469.36,
+    "text": "and"
+  },
+  {
+    "start": 2469.36,
+    "end": 2472.52,
+    "text": "and and the thing that that um"
+  },
+  {
+    "start": 2472.52,
+    "end": 2474.76,
+    "text": "the big takeaway is, of course,"
+  },
+  {
+    "start": 2474.76,
+    "end": 2476.24,
+    "text": "the simple stuff is going to get"
+  },
+  {
+    "start": 2476.24,
+    "end": 2478.0,
+    "text": "automated away."
+  },
+  {
+    "start": 2478.0,
+    "end": 2480.08,
+    "text": "And when I say simple stuff, I mean,"
+  },
+  {
+    "start": 2480.08,
+    "end": 2482.16,
+    "text": "software, you know, coding."
+  },
+  {
+    "start": 2482.16,
+    "end": 2482.88,
+    "text": "Uh"
+  },
+  {
+    "start": 2482.88,
+    "end": 2485.12,
+    "text": "the idea that you would you would do a"
+  },
+  {
+    "start": 2485.12,
+    "end": 2487.04,
+    "text": "you would solve a problem by sitting in"
+  },
+  {
+    "start": 2487.04,
+    "end": 2489.16,
+    "text": "front of a computer and you're you're"
+  },
+  {
+    "start": 2489.16,
+    "end": 2491.6,
+    "text": "actually writing, you know, writing"
+  },
+  {
+    "start": 2491.6,
+    "end": 2494.08,
+    "text": "code, that concept is obviously going to"
+  },
+  {
+    "start": 2494.08,
+    "end": 2495.64,
+    "text": "get automated away."
+  },
+  {
+    "start": 2495.64,
+    "end": 2497.12,
+    "text": "Um you know,"
+  },
+  {
+    "start": 2497.12,
+    "end": 2499.28,
+    "text": "in my generation, when I was when I was"
+  },
+  {
+    "start": 2499.28,
+    "end": 2501.32,
+    "text": "growing up, we had to do long division."
+  },
+  {
+    "start": 2501.32,
+    "end": 2503.2,
+    "text": "I mean, for God's sakes, who has to"
+  },
+  {
+    "start": 2503.2,
+    "end": 2505.28,
+    "text": "learn long division, you know? And so,"
+  },
+  {
+    "start": 2505.28,
+    "end": 2507.12,
+    "text": "that got coded away, that got automated"
+  },
+  {
+    "start": 2507.12,
+    "end": 2509.6,
+    "text": "away. And so, I think the simple stuff"
+  },
+  {
+    "start": 2509.6,
+    "end": 2511.08,
+    "text": "is going to get automated away, but the"
+  },
+  {
+    "start": 2511.08,
+    "end": 2514.4,
+    "text": "hard problems, the hard sciences, um"
+  },
+  {
+    "start": 2514.4,
+    "end": 2517.0,
+    "text": "physics, chemistry, biology, uh you"
+  },
+  {
+    "start": 2517.0,
+    "end": 2519.52,
+    "text": "know, computer science, uh computer"
+  },
+  {
+    "start": 2519.52,
+    "end": 2521.72,
+    "text": "engineering, systems thinking,"
+  },
+  {
+    "start": 2521.72,
+    "end": 2523.92,
+    "text": "uh you know, all and and particularly"
+  },
+  {
+    "start": 2523.92,
+    "end": 2526.2,
+    "text": "the domains that are intersecting,"
+  },
+  {
+    "start": 2526.2,
+    "end": 2528.0,
+    "text": "uh those hard problems will never go"
+  },
+  {
+    "start": 2528.0,
+    "end": 2531.16,
+    "text": "away. And so, AI is just an incredible"
+  },
+  {
+    "start": 2531.16,
+    "end": 2533.32,
+    "text": "tool that helps us become even more"
+  },
+  {
+    "start": 2533.32,
+    "end": 2534.56,
+    "text": "ambitious."
+  },
+  {
+    "start": 2534.56,
+    "end": 2538.24,
+    "text": "Even more um impatient about solving"
+  },
+  {
+    "start": 2538.24,
+    "end": 2540.32,
+    "text": "these extraordinarily large and"
+  },
+  {
+    "start": 2540.32,
+    "end": 2542.2,
+    "text": "incredibly hard problems"
+  },
+  {
+    "start": 2542.2,
+    "end": 2544.52,
+    "text": "uh than before. And so, you know, if you"
+  },
+  {
+    "start": 2544.52,
+    "end": 2546.72,
+    "text": "if you look at my generation,"
+  },
+  {
+    "start": 2546.72,
+    "end": 2549.52,
+    "text": "when I first graduated,"
+  },
+  {
+    "start": 2549.52,
+    "end": 2551.56,
+    "text": "a chip designer would design a chip with"
+  },
+  {
+    "start": 2551.56,
+    "end": 2553.2,
+    "text": "maybe a thousand transistors, and that"
+  },
+  {
+    "start": 2553.2,
+    "end": 2555.4,
+    "text": "would be a very large chip."
+  },
+  {
+    "start": 2555.4,
+    "end": 2556.96,
+    "text": "You know, now"
+  },
+  {
+    "start": 2556.96,
+    "end": 2559.2,
+    "text": "designing a trillion transistor chips is"
+  },
+  {
+    "start": 2559.2,
+    "end": 2560.88,
+    "text": "not even, you know, if somebody would"
+  },
+  {
+    "start": 2560.88,
+    "end": 2562.16,
+    "text": "have told me, \"Jensen, our next chip is"
+  },
+  {
+    "start": 2562.16,
+    "end": 2563.96,
+    "text": "a trillion transistor.\" I said, \"Okay.\""
+  },
+  {
+    "start": 2563.96,
+    "end": 2565.92,
+    "text": "You know, it's not a thing."
+  },
+  {
+    "start": 2565.92,
+    "end": 2567.16,
+    "text": "And the reason for that is because we"
+  },
+  {
+    "start": 2567.16,
+    "end": 2569.16,
+    "text": "are so ambitious now,"
+  },
+  {
+    "start": 2569.16,
+    "end": 2570.04,
+    "text": "the"
+  },
+  {
+    "start": 2570.04,
+    "end": 2570.88,
+    "text": "the"
+  },
+  {
+    "start": 2570.88,
+    "end": 2572.84,
+    "text": "the scale of the problem, the scale of"
+  },
+  {
+    "start": 2572.84,
+    "end": 2575.52,
+    "text": "the task is no longer a matter."
+  },
+  {
+    "start": 2575.52,
+    "end": 2577.44,
+    "text": "And so, you don't have to worry about"
+  },
+  {
+    "start": 2577.44,
+    "end": 2579.84,
+    "text": "about, you know,"
+  },
+  {
+    "start": 2579.84,
+    "end": 2582.4,
+    "text": "how much coding, how many engineers. You"
+  },
+  {
+    "start": 2582.4,
+    "end": 2583.44,
+    "text": "don't have to You don't have to think"
+  },
+  {
+    "start": 2583.44,
+    "end": 2584.56,
+    "text": "about those things anymore. You just"
+  },
+  {
+    "start": 2584.56,
+    "end": 2586.0,
+    "text": "have to think about what is the what is"
+  },
+  {
+    "start": 2586.0,
+    "end": 2587.72,
+    "text": "the problem you have to solve. And so, I"
+  },
+  {
+    "start": 2587.72,
+    "end": 2589.8,
+    "text": "think that the deep deep tech stuff, the"
+  },
+  {
+    "start": 2589.8,
+    "end": 2592.28,
+    "text": "deep science stuff, uh understanding"
+  },
+  {
+    "start": 2592.28,
+    "end": 2593.84,
+    "text": "understanding the intersection between"
+  },
+  {
+    "start": 2593.84,
+    "end": 2596.84,
+    "text": "technology and social issues, um"
+  },
+  {
+    "start": 2596.84,
+    "end": 2599.4,
+    "text": "understanding market market gaps and and"
+  },
+  {
+    "start": 2599.4,
+    "end": 2601.68,
+    "text": "holes, uh opportunities, I think all of"
+  },
+  {
+    "start": 2601.68,
+    "end": 2603.2,
+    "text": "that still exists."
+  },
+  {
+    "start": 2603.2,
+    "end": 2605.84,
+    "text": "Um and and the better you are at systems"
+  },
+  {
+    "start": 2605.84,
+    "end": 2608.68,
+    "text": "thinking so that you could orchestrate"
+  },
+  {
+    "start": 2608.68,
+    "end": 2611.92,
+    "text": "millions of agents solving problems"
+  },
+  {
+    "start": 2611.92,
+    "end": 2614.16,
+    "text": "autonomously, the better off you are."
+  },
+  {
+    "start": 2614.16,
+    "end": 2616.12,
+    "text": "And so, that's why system thinking is"
+  },
+  {
+    "start": 2616.12,
+    "end": 2618.36,
+    "text": "going to be so important. But uh"
+  },
+  {
+    "start": 2618.36,
+    "end": 2620.28,
+    "text": "otherwise, I think the world's going to"
+  },
+  {
+    "start": 2620.28,
+    "end": 2621.84,
+    "text": "continue to have a lot of great"
+  },
+  {
+    "start": 2621.84,
+    "end": 2624.0,
+    "text": "challenges for us to solve. Go to school"
+  },
+  {
+    "start": 2624.0,
+    "end": 2625.84,
+    "text": "the same old way."
+  },
+  {
+    "start": 2625.84,
+    "end": 2627.44,
+    "text": "You know, stay in school."
+  },
+  {
+    "start": 2627.44,
+    "end": 2630.51,
+    "text": ">> Stay in school."
+  },
+  {
+    "start": 2630.51,
+    "end": 2631.8,
+    "text": ">> [applause]"
+  },
+  {
+    "start": 2631.8,
+    "end": 2635.0,
+    "text": ">> I guess um I usually like to end with um"
+  },
+  {
+    "start": 2635.0,
+    "end": 2636.68,
+    "text": "you're looking out on the crowd. There"
+  },
+  {
+    "start": 2636.68,
+    "end": 2638.44,
+    "text": "are a lot of people who"
+  },
+  {
+    "start": 2638.44,
+    "end": 2639.6,
+    "text": "uh I mean,"
+  },
+  {
+    "start": 2639.6,
+    "end": 2642.36,
+    "text": "I started this uh the opener with like I"
+  },
+  {
+    "start": 2642.36,
+    "end": 2643.88,
+    "text": "honestly look in the crowd and I see"
+  },
+  {
+    "start": 2643.88,
+    "end": 2646.48,
+    "text": "people who are not different than us per"
+  },
+  {
+    "start": 2646.48,
+    "end": 2649.16,
+    "text": "se, You know, we actually just"
+  },
+  {
+    "start": 2649.16,
+    "end": 2652.52,
+    "text": "are technical and like love systems."
+  },
+  {
+    "start": 2652.52,
+    "end": 2653.2,
+    "text": "How you know"
+  },
+  {
+    "start": 2653.2,
+    "end": 2655.16,
+    "text": ">> Thank you. Thank you."
+  },
+  {
+    "start": 2655.16,
+    "end": 2658.4,
+    "text": ">> What advice would you give to this room"
+  },
+  {
+    "start": 2658.4,
+    "end": 2660.36,
+    "text": "of, you know,"
+  },
+  {
+    "start": 2660.36,
+    "end": 2662.72,
+    "text": "And you you see yourself in this in this"
+  },
+  {
+    "start": 2662.72,
+    "end": 2664.52,
+    "text": "room and like I'm curious what you would"
+  },
+  {
+    "start": 2664.52,
+    "end": 2666.8,
+    "text": "say. If you could send a"
+  },
+  {
+    "start": 2666.8,
+    "end": 2669.36,
+    "text": "telegram, a message to the 18 to"
+  },
+  {
+    "start": 2669.36,
+    "end": 2671.24,
+    "text": "22-year-old version of yourself, what"
+  },
+  {
+    "start": 2671.24,
+    "end": 2672.6,
+    "text": "would that be?"
+  },
+  {
+    "start": 2672.6,
+    "end": 2674.76,
+    "text": ">> I could tell you exactly how I felt when"
+  },
+  {
+    "start": 2674.76,
+    "end": 2678.4,
+    "text": "I first when Nvidia founded and and the"
+  },
+  {
+    "start": 2678.4,
+    "end": 2681.16,
+    "text": "three of us started. Um"
+  },
+  {
+    "start": 2681.16,
+    "end": 2684.24,
+    "text": "The the thing I felt at the time is"
+  },
+  {
+    "start": 2684.24,
+    "end": 2686.16,
+    "text": "there was so much for me to know and so"
+  },
+  {
+    "start": 2686.16,
+    "end": 2688.16,
+    "text": "much for me to learn."
+  },
+  {
+    "start": 2688.16,
+    "end": 2690.12,
+    "text": "And I didn't know it. And I was telling"
+  },
+  {
+    "start": 2690.12,
+    "end": 2692.32,
+    "text": "you earlier there at the time there was"
+  },
+  {
+    "start": 2692.32,
+    "end": 2694.16,
+    "text": "there were no YouTube, there's you know,"
+  },
+  {
+    "start": 2694.16,
+    "end": 2696.48,
+    "text": "no YC, nobody's teaching you how to"
+  },
+  {
+    "start": 2696.48,
+    "end": 2698.36,
+    "text": "start a company. And so I went to the"
+  },
+  {
+    "start": 2698.36,
+    "end": 2699.96,
+    "text": "bookstore and I bought a book and the"
+  },
+  {
+    "start": 2699.96,
+    "end": 2702.48,
+    "text": "book said, \"How to start a company?\""
+  },
+  {
+    "start": 2702.48,
+    "end": 2704.32,
+    "text": "Uh unfortunately, the book was like 500"
+  },
+  {
+    "start": 2704.32,
+    "end": 2706.04,
+    "text": "pages long."
+  },
+  {
+    "start": 2706.04,
+    "end": 2708.36,
+    "text": "And and so I you know, I figured by the"
+  },
+  {
+    "start": 2708.36,
+    "end": 2709.92,
+    "text": "time I read it, you know, I'd be out of"
+  },
+  {
+    "start": 2709.92,
+    "end": 2712.56,
+    "text": "business. And Lor- Lori and I be out of"
+  },
+  {
+    "start": 2712.56,
+    "end": 2714.56,
+    "text": "money. And so there's no sense reading"
+  },
+  {
+    "start": 2714.56,
+    "end": 2717.28,
+    "text": "it. Um but the thing that the thing I"
+  },
+  {
+    "start": 2717.28,
+    "end": 2721.04,
+    "text": "remember very very vividly is that how"
+  },
+  {
+    "start": 2721.04,
+    "end": 2725.44,
+    "text": "scared I was uh to go raise money"
+  },
+  {
+    "start": 2725.44,
+    "end": 2727.56,
+    "text": "because I felt that I was about to talk"
+  },
+  {
+    "start": 2727.56,
+    "end": 2729.4,
+    "text": "to a bunch of people and I didn't know"
+  },
+  {
+    "start": 2729.4,
+    "end": 2732.56,
+    "text": "how to answer their questions. And um"
+  },
+  {
+    "start": 2732.56,
+    "end": 2734.12,
+    "text": "and it's true. And I barely know how to"
+  },
+  {
+    "start": 2734.12,
+    "end": 2736.6,
+    "text": "answer their questions even today. Uh"
+  },
+  {
+    "start": 2736.6,
+    "end": 2739.4,
+    "text": "but the thing that I learned is"
+  },
+  {
+    "start": 2739.4,
+    "end": 2741.68,
+    "text": "um none of that stuff matters."
+  },
+  {
+    "start": 2741.68,
+    "end": 2743.24,
+    "text": "As it turns out."
+  },
+  {
+    "start": 2743.24,
+    "end": 2746.04,
+    "text": "And and you're always going to have"
+  },
+  {
+    "start": 2746.04,
+    "end": 2748.16,
+    "text": "things that you don't know."
+  },
+  {
+    "start": 2748.16,
+    "end": 2750.0,
+    "text": "And every single day the world's"
+  },
+  {
+    "start": 2750.0,
+    "end": 2751.52,
+    "text": "changing, technology changing."
+  },
+  {
+    "start": 2751.52,
+    "end": 2754.16,
+    "text": "Obviously, this is the greatest time in"
+  },
+  {
+    "start": 2754.16,
+    "end": 2757.76,
+    "text": "the last 60 years to start a company."
+  },
+  {
+    "start": 2757.76,
+    "end": 2759.88,
+    "text": "The whole industry has changed. It's a"
+  },
+  {
+    "start": 2759.88,
+    "end": 2762.0,
+    "text": "complete reset from a technology"
+  },
+  {
+    "start": 2762.0,
+    "end": 2763.76,
+    "text": "perspective. The single most important"
+  },
+  {
+    "start": 2763.76,
+    "end": 2765.56,
+    "text": "technology in human history, the"
+  },
+  {
+    "start": 2765.56,
+    "end": 2768.16,
+    "text": "computer, has been completely reset. And"
+  },
+  {
+    "start": 2768.16,
+    "end": 2770.48,
+    "text": "so, this is absolutely the single"
+  },
+  {
+    "start": 2770.48,
+    "end": 2771.92,
+    "text": "greatest time to start a company. And"
+  },
+  {
+    "start": 2771.92,
+    "end": 2774.36,
+    "text": "I'm I'm I'm jealous of all of you."
+  },
+  {
+    "start": 2774.36,
+    "end": 2776.28,
+    "text": "I and and"
+  },
+  {
+    "start": 2776.28,
+    "end": 2777.64,
+    "text": "and the opportunities you have ahead. I"
+  },
+  {
+    "start": 2777.64,
+    "end": 2779.2,
+    "text": "mean, it's going to be incredible. So,"
+  },
+  {
+    "start": 2779.2,
+    "end": 2781.28,
+    "text": "it's the perfect time on the one hand."
+  },
+  {
+    "start": 2781.28,
+    "end": 2782.52,
+    "text": "On the other hand, the technology is"
+  },
+  {
+    "start": 2782.52,
+    "end": 2784.12,
+    "text": "changing so fast."
+  },
+  {
+    "start": 2784.12,
+    "end": 2785.6,
+    "text": "And so, the question is, what's the"
+  },
+  {
+    "start": 2785.6,
+    "end": 2788.24,
+    "text": "right feeling for you? And eventually,"
+  },
+  {
+    "start": 2788.24,
+    "end": 2790.52,
+    "text": "and I told you the story of us of me"
+  },
+  {
+    "start": 2790.52,
+    "end": 2793.0,
+    "text": "buying the other book, the textbook."
+  },
+  {
+    "start": 2793.0,
+    "end": 2793.88,
+    "text": "I think"
+  },
+  {
+    "start": 2793.88,
+    "end": 2795.92,
+    "text": "the psychology and the feeling that I"
+  },
+  {
+    "start": 2795.92,
+    "end": 2797.68,
+    "text": "have today"
+  },
+  {
+    "start": 2797.68,
+    "end": 2799.92,
+    "text": "on all of the new experiences and the"
+  },
+  {
+    "start": 2799.92,
+    "end": 2802.08,
+    "text": "new technology and new markets and new"
+  },
+  {
+    "start": 2802.08,
+    "end": 2803.84,
+    "text": "dynamics,"
+  },
+  {
+    "start": 2803.84,
+    "end": 2805.04,
+    "text": "I look at it and I say, this is"
+  },
+  {
+    "start": 2805.04,
+    "end": 2807.32,
+    "text": "important. I've got to go learn it."
+  },
+  {
+    "start": 2807.32,
+    "end": 2808.52,
+    "text": "And I've got to go do something about"
+  },
+  {
+    "start": 2808.52,
+    "end": 2810.56,
+    "text": "it. And I better get to it as fast as I"
+  },
+  {
+    "start": 2810.56,
+    "end": 2811.76,
+    "text": "can."
+  },
+  {
+    "start": 2811.76,
+    "end": 2814.44,
+    "text": "And how hard can it be?"
+  },
+  {
+    "start": 2814.44,
+    "end": 2816.32,
+    "text": "I always had this feeling, how hard can"
+  },
+  {
+    "start": 2816.32,
+    "end": 2818.0,
+    "text": "it be?"
+  },
+  {
+    "start": 2818.0,
+    "end": 2819.72,
+    "text": "And"
+  },
+  {
+    "start": 2819.72,
+    "end": 2822.8,
+    "text": "truth be told,"
+  },
+  {
+    "start": 2822.8,
+    "end": 2826.16,
+    "text": "it is way harder than you think."
+  },
+  {
+    "start": 2826.16,
+    "end": 2828.52,
+    "text": "And but you you don't want your mind to"
+  },
+  {
+    "start": 2828.52,
+    "end": 2830.8,
+    "text": "be to be there. You want your mind to"
+  },
+  {
+    "start": 2830.8,
+    "end": 2832.76,
+    "text": "be, how hard can it be?"
+  },
+  {
+    "start": 2832.76,
+    "end": 2836.12,
+    "text": "And let the suffering come to you"
+  },
+  {
+    "start": 2836.12,
+    "end": 2838.24,
+    "text": "a little bit at a time."
+  },
+  {
+    "start": 2838.24,
+    "end": 2839.72,
+    "text": "You know, don't"
+  },
+  {
+    "start": 2839.72,
+    "end": 2842.04,
+    "text": "don't imagine how hard it's going to be"
+  },
+  {
+    "start": 2842.04,
+    "end": 2844.52,
+    "text": "and let all of that turn into anxiety"
+  },
+  {
+    "start": 2844.52,
+    "end": 2847.08,
+    "text": "and not doing something about it."
+  },
+  {
+    "start": 2847.08,
+    "end": 2848.96,
+    "text": "You want to imagine your head, how hard"
+  },
+  {
+    "start": 2848.96,
+    "end": 2850.24,
+    "text": "can it be? You know, I've got a whole"
+  },
+  {
+    "start": 2850.24,
+    "end": 2852.16,
+    "text": "bunch of I've got a bunch of AI agents"
+  },
+  {
+    "start": 2852.16,
+    "end": 2853.6,
+    "text": "helping me anyways."
+  },
+  {
+    "start": 2853.6,
+    "end": 2855.68,
+    "text": "And so, how hard can it be? And then you"
+  },
+  {
+    "start": 2855.68,
+    "end": 2858.04,
+    "text": "get going on working on it. And so,"
+  },
+  {
+    "start": 2858.04,
+    "end": 2860.48,
+    "text": "that's probably the the attitude of an"
+  },
+  {
+    "start": 2860.48,
+    "end": 2862.28,
+    "text": "entrepreneur. You you know you have to"
+  },
+  {
+    "start": 2862.28,
+    "end": 2864.0,
+    "text": "learn a bunch of stuff along the way."
+  },
+  {
+    "start": 2864.0,
+    "end": 2866.72,
+    "text": "You believe in your ability to learn."
+  },
+  {
+    "start": 2866.72,
+    "end": 2868.08,
+    "text": "Which is, you know, learning is the"
+  },
+  {
+    "start": 2868.08,
+    "end": 2870.92,
+    "text": "single greatest superpower. And if you"
+  },
+  {
+    "start": 2870.92,
+    "end": 2872.92,
+    "text": "go into it with the attitude, how hard"
+  },
+  {
+    "start": 2872.92,
+    "end": 2874.88,
+    "text": "can it be? If anybody can do it, I can"
+  },
+  {
+    "start": 2874.88,
+    "end": 2877.96,
+    "text": "do it. And just realize that it will be"
+  },
+  {
+    "start": 2877.96,
+    "end": 2879.76,
+    "text": "hard and you just have to have the"
+  },
+  {
+    "start": 2879.76,
+    "end": 2881.84,
+    "text": "resilience to overcome it every single"
+  },
+  {
+    "start": 2881.84,
+    "end": 2884.8,
+    "text": "day. You don't have to overcome life in"
+  },
+  {
+    "start": 2884.8,
+    "end": 2886.8,
+    "text": "one day. You just have to overcome that"
+  },
+  {
+    "start": 2886.8,
+    "end": 2888.56,
+    "text": "morning. That morning, you know, you"
+  },
+  {
+    "start": 2888.56,
+    "end": 2890.72,
+    "text": "have to overcome today today. And so"
+  },
+  {
+    "start": 2890.72,
+    "end": 2892.36,
+    "text": "it's not a big deal. Just get through"
+  },
+  {
+    "start": 2892.36,
+    "end": 2894.48,
+    "text": "today. Wait till right? Work towards"
+  },
+  {
+    "start": 2894.48,
+    "end": 2897.48,
+    "text": "tomorrow. Keep following your dreams."
+  },
+  {
+    "start": 2897.48,
+    "end": 2899.24,
+    "text": "And the rest of everything if you stick"
+  },
+  {
+    "start": 2899.24,
+    "end": 2901.96,
+    "text": "if you stick with it long enough,"
+  },
+  {
+    "start": 2901.96,
+    "end": 2904.28,
+    "text": "uh you know, Nvidia happens."
+  },
+  {
+    "start": 2904.28,
+    "end": 2906.0,
+    "text": "And so, you know, I think that the"
+  },
+  {
+    "start": 2906.0,
+    "end": 2907.16,
+    "text": "wisdom"
+  },
+  {
+    "start": 2907.16,
+    "end": 2908.28,
+    "text": "that I can"
+  },
+  {
+    "start": 2908.28,
+    "end": 2910.64,
+    "text": "if it there's anything is resilience is"
+  },
+  {
+    "start": 2910.64,
+    "end": 2913.16,
+    "text": "probably the single most important"
+  },
+  {
+    "start": 2913.16,
+    "end": 2914.24,
+    "text": "thing."
+  },
+  {
+    "start": 2914.24,
+    "end": 2916.04,
+    "text": "And if you believe in something, just"
+  },
+  {
+    "start": 2916.04,
+    "end": 2919.56,
+    "text": "get going on it and get your mind"
+  },
+  {
+    "start": 2919.56,
+    "end": 2921.72,
+    "text": "you know, out of out of keeping your"
+  },
+  {
+    "start": 2921.72,
+    "end": 2923.84,
+    "text": "yourself from pursuing it"
+  },
+  {
+    "start": 2923.84,
+    "end": 2926.2,
+    "text": "because of you know, fear or anxiety or"
+  },
+  {
+    "start": 2926.2,
+    "end": 2928.04,
+    "text": "lack of confidence or whatever it is."
+  },
+  {
+    "start": 2928.04,
+    "end": 2929.0,
+    "text": "And then you're just going to tell"
+  },
+  {
+    "start": 2929.0,
+    "end": 2930.2,
+    "text": "yourself I'm going to learn my way"
+  },
+  {
+    "start": 2930.2,
+    "end": 2930.96,
+    "text": "there."
+  },
+  {
+    "start": 2930.96,
+    "end": 2934.68,
+    "text": ">> Jensen Huang everybody."
+  },
+  {
+    "start": 2934.68,
+    "end": 2935.96,
+    "text": ">> All right, guys. Thank you."
+  },
+  {
+    "start": 2935.96,
+    "end": 2937.84,
+    "text": ">> Thank you so much. Yes, it was"
+  },
+  {
+    "start": 2937.84,
+    "end": 2940.56,
+    "text": ">> Thank you guys."
+  }
+]

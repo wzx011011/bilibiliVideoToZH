@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "format": {
+    "container": "mp4",
+    "video": "h264/high/yuv420p",
+    "audio": "aac/192k/stereo",
+    "audio_track": "Mandarin dub",
+    "resolution": "preserved from delivery source"
+  },
+  "episodes": [
+    {
+      "episode": 2,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-02.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 3,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-03.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 4,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-04.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 5,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-05.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 6,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-06.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 7,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-07.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 8,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-08.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 9,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-09.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 10,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-10.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 11,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-11.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 12,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-12.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 13,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-13.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 14,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-14.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 15,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-15.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 16,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-16.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 17,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-17.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 18,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-18.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 19,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-19.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 20,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-20.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 21,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-21.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 22,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-22.bilibili-h264-aac.mp4"
+    },
+    {
+      "episode": 23,
+      "status": "completed",
+      "video": "E:\\wzx\\bilibiliVideoToZH\\outputs\\harvard-positive-psychology\\bilibili-upload-h264-aac\\video\\episode-23.bilibili-h264-aac.mp4"
+    }
+  ]
+}

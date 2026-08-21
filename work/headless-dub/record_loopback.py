@@ -19,6 +19,17 @@ DEFAULT_SAMPLE_RATE = 48_000
 CHUNK_SECONDS = 0.25
 
 
+if int(np.__version__.split(".", 1)[0]) >= 2:
+    _numpy_fromstring = np.fromstring
+
+    def _fromstring_compat(data, dtype=float, count=-1, sep=""):
+        if sep == "":
+            return np.frombuffer(data, dtype=dtype, count=count)
+        return _numpy_fromstring(data, dtype=dtype, count=count, sep=sep)
+
+    np.fromstring = _fromstring_compat
+
+
 def _soundcard():
     try:
         import soundcard as sc

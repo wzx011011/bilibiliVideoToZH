@@ -26,6 +26,15 @@ env/
 *.ogg
 *.opus
 
+# ============ Local downloads and run logs ============
+downloads/
+*.part
+*.log
+*.stderr.log
+*.stdout.log
+*.log.stderr
+*.log.stdout
+
 # ============ Transformer video project artifacts ============
 work/transformer-video-series/node_modules/
 work/transformer-video-series/out/

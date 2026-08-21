@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "subtitle_source": "youtube-auto-zh-Hans",
+  "ocr_model": null,
+  "tts_engine": "gpt-sovits",
+  "reference_audio": "cn-pro-ref.wav",
+  "speech_tempo": 0.98,
+  "max_tempo": 1.05
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "title": "Jensen Huang: The Mindset That Built NVIDIA",
+  "episode": "jensen-huang-mindset",
+  "source_duration_seconds": 2939.762358,
+  "video": {
+    "path": "video/jensen-huang-mindset.dual-audio.bilingual-subtitles.mp4",
+    "video_codec": "h264",
+    "audio_tracks": [
+      {
+        "language": "zho",
+        "title": "Mandarin dub",
+        "default": true
+      },
+      {
+        "language": "eng",
+        "title": "Original English",
+        "default": false
+      }
+    ],
+    "subtitle_tracks": [
+      {
+        "language": "zho",
+        "title": "Chinese subtitles",
+        "default": true
+      },
+      {
+        "language": "eng",
+        "title": "English subtitles",
+        "default": false
+      }
+    ]
+  },
+  "audio": [
+    "audio/jensen-huang-mindset.zh-CN.dub.m4a",
+    "audio/jensen-huang-mindset.en.original.m4a"
+  ],
+  "subtitles": [
+    "subtitles/jensen-huang-mindset.zh-CN.srt",
+    "subtitles/jensen-huang-mindset.en.srt"
+  ],
+  "revision": {
+    "subtitle_source": "youtube-auto-zh-Hans",
+    "ocr_model": null,
+    "tts_engine": "gpt-sovits",
+    "reference_audio": "cn-pro-ref.wav",
+    "speech_tempo": 0.98,
+    "max_tempo": 1.05,
+    "chinese_subtitle_cues": 1279,
+    "review_overlay": null
+  }
+}

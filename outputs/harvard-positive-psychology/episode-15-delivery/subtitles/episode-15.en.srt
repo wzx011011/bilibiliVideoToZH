@@ -1,0 +1,2351 @@
+1
+00:00:20,910 --> 00:00:26,690
+Last lecture, we learned about recovery, a time away from work to really relax.
+
+2
+00:00:27,150 --> 00:00:33,670
+I'd like to invite you to join a traditional and time-tested recovery period, Shabbat, the Jewish Sabbath.
+
+3
+00:00:34,130 --> 00:00:43,030
+This Friday night, Harvard Hill and Chabad at Harvard invite you and your friends to Shabbat dinner at the MAC for Shabbat 1000.
+
+4
+00:00:43,710 --> 00:00:50,670
+Come for a free dinner at the Deckout MAC with all of your friends, where our very own Professor Tolvan Schalker will be speaking.
+
+5
+00:00:51,650 --> 00:01:00,810
+Doors open at 6.30 and dinner starts at 7. Please RSVP for this really fun event at Jabal1000.org. Everyone is invited, so please sign up.
+
+6
+00:01:09,050 --> 00:01:16,710
+Hi, good morning. I was also asked to announce on behalf of the women's softball team.
+
+7
+00:01:16,930 --> 00:01:22,570
+They would have been here and they would have announced themselves, but they are at a game that was delayed.
+
+8
+00:01:22,570 --> 00:01:30,910
+there's a game this Sunday and Saturday Saturday and Sunday and also for the men's
+
+9
+00:01:30,910 --> 00:01:44,280
+baseball team so come out and cheer and one more announcement they can't hear
+
+10
+00:01:44,280 --> 00:02:12,580
+sir yeah all right so May 21st 9 15 date for the final hope you can make it okay
+
+11
+00:02:15,880 --> 00:02:22,220
+Okay, it's a Monday.
+
+12
+00:02:25,820 --> 00:02:35,890
+All right, so every year when I teach
+
+13
+00:02:35,890 --> 00:02:43,910
+the perfectionism lecture, something happened. So the first year I remember, I actually forgot my computer at home.
+
+14
+00:02:45,010 --> 00:02:48,610
+Second time, the projector didn't work.
+
+15
+00:02:50,270 --> 00:02:52,250
+And this year I forgot my power,
+
+16
+00:02:53,310 --> 00:03:05,010
+my power for the computer at home. So hopefully it will last the entire semester. If not, we'll just have to deal with an imperfect scenario, but that's okay. I think it must be something subconscious because it's too much of a coincidence
+
+17
+00:03:05,010 --> 00:03:09,730
+that every time something happens, walk the talk.
+
+18
+00:03:10,990 --> 00:03:12,630
+So where were we last time?
+
+19
+00:03:13,110 --> 00:03:17,890
+Last time we talked about how you learned how to walk.
+
+20
+00:03:18,410 --> 00:03:24,690
+We learned about how you learned how to draw circles, and all through failure.
+
+21
+00:03:25,430 --> 00:03:35,450
+As Thomas Edison said, I learned my way, I failed my way to success. And we saw it with top athletes, whether it was Babe Ruth or Michael Jordan.
+
+22
+00:03:35,730 --> 00:03:41,290
+We saw it with top business people, whether it was Thomas Watson, IBM,
+
+23
+00:03:41,690 --> 00:03:46,490
+or Anita Roddick, founder of the body shop.
+
+24
+00:03:48,130 --> 00:03:56,970
+We see it with artists and scientists. The most successful ones are also the ones who failed the most. and these are the ones who understand the value and the importance of failure.
+
+25
+00:03:57,250 --> 00:04:00,270
+I guarantee you that none of them enjoy failing.
+
+26
+00:04:00,970 --> 00:04:02,110
+Failing hurts.
+
+27
+00:04:02,510 --> 00:04:04,930
+It's disappointing at best.
+
+28
+00:04:05,550 --> 00:04:07,630
+It's frustrating.
+
+29
+00:04:07,990 --> 00:04:10,090
+It's embarrassing often.
+
+30
+00:04:10,510 --> 00:04:16,670
+However, people who ultimately succeed recognize the value of failure and learning from it.
+
+31
+00:04:19,120 --> 00:04:30,200
+There's a wonderful book that came out recently by one of my mentors. He taught at the business school for a few years. He's a professor at the University of Southern California, Robert Warren Bennis.
+
+32
+00:04:30,760 --> 00:04:35,740
+And Warren Bennis wrote a book which he called Geeks and Geezers.
+
+33
+00:04:35,960 --> 00:04:43,820
+And in the book, he compared very successful leaders who were young, early 30s,
+
+34
+00:04:43,940 --> 00:04:53,460
+and older generation leaders, people who have really made it, big-time leaders who are now in their 70s, 80s, sometimes 90s.
+
+35
+00:04:53,600 --> 00:04:58,580
+And he compared these two groups, the geeks, the young ones, the geezers, the older ones.
+
+36
+00:04:59,060 --> 00:05:07,620
+And what he found was that there were a number of very interesting and meaningful differences
+
+37
+00:05:08,300 --> 00:05:17,640
+between the generations of, again, highly successful late 20s or early 30-year-olds and highly successful older individuals.
+
+38
+00:05:17,640 --> 00:05:23,420
+One of the most notable differences was that work-life balance,
+
+39
+00:05:24,780 --> 00:05:35,020
+which was very important for the late 20s, early 30s, very important. They talked about it constantly, whereas for the 70, 80, 90-year-olds,
+
+40
+00:05:35,040 --> 00:05:38,400
+it was almost a foreign concept. What does that even mean?
+
+41
+00:05:38,980 --> 00:05:42,900
+Why? Because they were at work usually 24-7.
+
+42
+00:05:43,960 --> 00:05:49,580
+All of them in that sample were men, and the women were at home taking care of the life part.
+
+43
+00:05:50,140 --> 00:05:53,180
+So there was a work-life balance where they were doing the work,
+
+44
+00:05:53,680 --> 00:05:56,080
+the wife was doing the life.
+
+45
+00:05:57,280 --> 00:06:05,200
+Whereas the younger generation, men and women, in that sample, and talking about the work-life balance and a few other differences as well.
+
+46
+00:06:05,340 --> 00:06:09,700
+But there was one similarity, one thing that was common to both groups,
+
+47
+00:06:10,420 --> 00:06:17,320
+and that was at least one, usually more than one, significant failure.
+
+48
+00:06:18,640 --> 00:06:22,640
+What Warren Bennis came to call a crucible, a real crisis,
+
+49
+00:06:23,180 --> 00:06:28,560
+whether it was a meaningful loss or losing a job, being fired,
+
+50
+00:06:31,010 --> 00:06:36,820
+one's identity being assaulted, loss of a person,
+
+51
+00:06:37,200 --> 00:06:40,160
+some real serious crucible, a failure.
+
+52
+00:06:42,560 --> 00:06:53,220
+That was common to both groups, and both groups saw that failure as a pivotal point, as a turning point in their lives, something that helped them become who they are today.
+
+53
+00:06:53,220 --> 00:06:59,200
+Again, not saying it happened for the best, but they were able to make the best of that which happened.
+
+54
+00:07:00,120 --> 00:07:11,720
+Now, most people experience crucibles throughout their lives, hardships, difficulties. The difference between the highly successful people, for example, the sample in Warren Bennis' book,
+
+55
+00:07:12,460 --> 00:07:21,740
+and many other people is that they're able to make the best of what happens. They see it as an opportunity, a learning experience, a stepping stone,
+
+56
+00:07:26,400 --> 00:07:30,960
+the importance of failure for resilience, for well-being as well.
+
+57
+00:07:32,280 --> 00:07:42,240
+So let me move on and define what we mean by perfectionism because there are many definitions and we throw that word around constantly. But what do I actually mean by perfectionism?
+
+58
+00:07:42,940 --> 00:07:52,420
+I define it as an incapacitating fear of failure that permeates our lives, especially those areas that we care about most.
+
+59
+00:07:53,100 --> 00:08:03,380
+Note the word incapacitating. It is not just a fear of failure. I don't know a person who is not afraid of failure, who is not embarrassed by it or feels frustrated by it.
+
+60
+00:08:04,540 --> 00:08:08,180
+So that's natural, that's human, whether we like it or not.
+
+61
+00:08:08,630 --> 00:08:19,260
+But an incapacitating fear of failure, a fear that is debilitating, that stops us, that prevents us from coping, from trying, from putting ourselves on the line.
+
+62
+00:08:22,430 --> 00:08:28,030
+And the other part that I want to highlight in this definition is that especially those areas that we care about most.
+
+63
+00:08:28,730 --> 00:08:34,450
+Now, I'm not a perfectionist when it comes to playing Monopoly.
+
+64
+00:08:35,390 --> 00:08:39,950
+No, it's not that I'm competitive, but it's not that important for me if I win or lose.
+
+65
+00:08:41,110 --> 00:08:52,670
+But perfectionism was a central part of my life when it came to, as I mentioned earlier, squash, which was very meaningful to me, academics, which is very meaningful to me,
+
+66
+00:08:53,550 --> 00:08:58,430
+and relationships, which was and is a very important part of my life.
+
+67
+00:08:59,830 --> 00:09:05,850
+So in these areas, that's where I experienced perfectionism, and that's where I needed to do the work, and I'm still doing the work.
+
+68
+00:09:06,370 --> 00:09:09,970
+It's in those areas. Let me elaborate on this definition.
+
+69
+00:09:10,590 --> 00:09:20,890
+It is an approach, a cognitive and emotional schema that we hold towards the journey of our lives, towards the process of getting from point A to point B.
+
+70
+00:09:21,170 --> 00:09:24,110
+The emphasis here is on journey.
+
+71
+00:09:24,610 --> 00:09:35,950
+A person committed to excellence can still be as ambitious or more ambitious than a perfectionist. The difference between the two is just their approach toward the journey. Let me illustrate.
+
+72
+00:09:38,040 --> 00:09:43,090
+So let's first take the perfectionist.
+
+73
+00:09:43,950 --> 00:09:50,570
+The perfectionist is currently at point A, wants to get to point B.
+
+74
+00:09:51,370 --> 00:09:55,750
+What's the perfect, most efficient path between two points?
+
+75
+00:09:56,330 --> 00:09:57,270
+Straight line.
+
+76
+00:09:57,890 --> 00:10:08,750
+This is the path, this is the cognitive and emotional schema that the perfectionist has when he or she looks at the journey,
+
+77
+00:10:08,750 --> 00:10:13,570
+how they want to get from where they are now to where they want to get to.
+
+78
+00:10:14,330 --> 00:10:24,930
+A person committed to excellence, as ambitious as the person, the perfectionist,
+
+79
+00:10:24,930 --> 00:10:30,130
+wants to get from point A to point B. No different here. What is different?
+
+80
+00:10:30,990 --> 00:10:42,570
+The cognitive schema that relates to the journey. The person committed to excellence understands that while he improves, inevitably at some point he will fail.
+
+81
+00:10:43,410 --> 00:10:56,460
+A perfectionist understands that sometimes she may not get the grade that she expected, but she will learn from it.
+
+82
+00:10:56,760 --> 00:11:08,520
+A perfectionist understands that in relationships there is no such thing as a perfect relationship and therefore he sometimes makes a mistake
+
+83
+00:11:08,520 --> 00:11:10,520
+or she sometimes makes a mistake.
+
+84
+00:11:11,720 --> 00:11:20,420
+But they continue and they learn from it and the relationship gets stronger. And a perfectionist understands that you need to fail time
+
+85
+00:11:20,420 --> 00:11:27,660
+and again, five times, ten times, sometimes ten thousand times as we saw with Edison
+
+86
+00:11:29,980 --> 00:11:32,960
+until they get to point B.
+
+87
+00:11:35,060 --> 00:11:43,100
+as ambitious but the schema is very different you have to draw many failed circles before you get
+
+88
+00:11:44,280 --> 00:11:55,260
+to that ideal circle that vincent drew last time and the question now becomes
+
+89
+00:11:56,580 --> 00:12:04,900
+so which is realistic is it realistic to have that schema or is this one more realistic well
+
+90
+00:12:04,900 --> 00:12:11,080
+I think it's pretty obvious. There is no straight line towards success. There is no straight line
+
+91
+00:12:11,080 --> 00:12:18,100
+towards a happy relationship. There is no straight line towards inventing the light bulb or being
+
+92
+00:12:18,100 --> 00:12:27,600
+good at psychology or being a good parent or a good friend. We make mistakes and nature to be
+
+93
+00:12:27,600 --> 00:12:34,760
+commanded must be obeyed. Pursuing excellence is about the constrained view of nature.
+
+94
+00:12:34,900 --> 00:12:41,120
+Yes, I wish that I could get from point A to point B in this way. I wish it were so.
+
+95
+00:12:42,440 --> 00:12:47,960
+I didn't enjoy failing my generals. I didn't enjoy falling down many times and losing in squash.
+
+96
+00:12:49,020 --> 00:12:52,020
+I certainly don't enjoy having disagreements with my wife.
+
+97
+00:12:56,020 --> 00:13:01,100
+However, I also would rather not have the law of gravity and be able to fly everywhere or float everywhere.
+
+98
+00:13:03,720 --> 00:13:07,140
+This is. This is a fantasy.
+
+99
+00:13:07,840 --> 00:13:14,380
+And when we have this schema in our mind, we're putting ourselves, fighting nature.
+
+100
+00:13:14,640 --> 00:13:22,780
+And just like we would lead an unhappy and frustrating life if we did not accept the law of gravity, we live.
+
+101
+00:13:22,920 --> 00:13:33,620
+And so many people, if so many people at Harvard, not just at Harvard, everywhere, are frustrated constantly because in their minds they have this schema.
+
+102
+00:13:34,500 --> 00:13:36,920
+And this does not mean that we enjoy failure.
+
+103
+00:13:39,380 --> 00:13:47,860
+But when we have this schema, in addition to not enjoying failure, we have the frustration of not accepting reality.
+
+104
+00:13:51,390 --> 00:13:53,670
+Now, there are consequences to having this schema.
+
+105
+00:13:54,770 --> 00:14:02,210
+I want to discuss some of these consequences and some of the characteristics of a person who holds this schema.
+
+106
+00:14:02,570 --> 00:14:07,250
+Now, there is no perfect perfectionist, as I said, and we all exist somewhere along the continuum.
+
+107
+00:14:07,930 --> 00:14:15,170
+There are many people, again, many people here, who are closer to this end of the continuum.
+
+108
+00:14:19,030 --> 00:14:25,270
+The characteristics that I'd like to share with you are all ones that are documented in literature.
+
+109
+00:14:25,690 --> 00:14:33,550
+There are many people who have them. You will identify with some of the characteristics, not with others, and that's fine.
+
+110
+00:14:34,250 --> 00:14:41,610
+All the characteristics, in addition to being well documented in the psychological literature, are also ones that I've experienced or still experience.
+
+111
+00:14:42,690 --> 00:14:52,550
+So these ones are personally meaningful to me, in addition to being also quite common. The first one, defensiveness.
+
+112
+00:14:55,720 --> 00:15:07,000
+In arguments, in discussions, perfectionists are defensive. Why? Because the criticism is by definition a deviation from the straight line.
+
+113
+00:15:08,440 --> 00:15:10,600
+It's an imperfection. It's a dent.
+
+114
+00:15:11,200 --> 00:15:13,900
+It's something that maybe I'm not doing perfectly well.
+
+115
+00:15:14,680 --> 00:15:24,240
+And we don't like deviations from a schema that we have. Remember, the mind doesn't like when there is an inconsistency between what is inside and what is outside.
+
+116
+00:15:24,760 --> 00:15:28,700
+We want there to be a balance, congruence. We don't like dissonance.
+
+117
+00:15:29,320 --> 00:15:35,440
+And if what we have in mind is the perfectionist schema, then a criticism is a deviation from it.
+
+118
+00:15:35,860 --> 00:15:37,420
+And then we become defensive.
+
+119
+00:15:37,800 --> 00:15:42,580
+Again, something that I've experienced numerous times and something that I'm working on constantly.
+
+120
+00:15:43,820 --> 00:15:46,260
+In addition, or in contrast,
+
+121
+00:15:47,360 --> 00:15:57,660
+a person committed to excellence is open, is welcoming of suggestions and of criticism at times. It doesn't mean that he or she enjoys it, but he or she understands that it's necessary,
+
+122
+00:15:57,880 --> 00:16:01,140
+that it's an important part of growth, of development.
+
+123
+00:16:03,690 --> 00:16:10,090
+A perfectionist focuses on the half-empty part of the glass. Why? Because a perfectionist is obsessed by failure,
+
+124
+00:16:10,970 --> 00:16:18,750
+Obsessed by deviations from that straight and narrow. And whatever it is that we're obsessed with by definition is what we constantly focus on.
+
+125
+00:16:19,250 --> 00:16:27,110
+So he or she is constantly focused on what is not working, on potential failures or actual failures.
+
+126
+00:16:29,380 --> 00:16:41,360
+Person committed to excellence focuses on the half-full part of the glass. How? Because he or she enjoys getting to wherever he or she is going, but also learns to enjoy every step of the way.
+
+127
+00:16:41,760 --> 00:16:51,700
+the journey. Even failure is an opportunity. A perfectionist overgeneralizes, catastrophizes.
+
+128
+00:16:51,960 --> 00:17:01,160
+It's all or nothing. Either I'm perfect or I'm a failure. And we'll see the consequences in a minute of this all or nothing approach.
+
+129
+00:17:01,160 --> 00:17:12,960
+versus realistic again realizing what reality looks like what progress in
+
+130
+00:17:12,960 --> 00:17:21,140
+essence looks like for a perfectionist there is no self-acceptance a person
+
+131
+00:17:21,140 --> 00:17:30,500
+committed to excellence there is acceptance first of all of reality as comprising spirals rather than a straight line acceptance of personal
+
+132
+00:17:30,500 --> 00:17:40,020
+failure and acceptance of the self as a whole. Perfectionist, there is one way and that's
+
+133
+00:17:40,020 --> 00:17:46,560
+the highway. It is static. There is no improvisation. There is no deviation. There is no trial and
+
+134
+00:17:46,560 --> 00:17:54,200
+error. There is just one way in contrast to having a much more dynamic, flexible process
+
+135
+00:17:54,200 --> 00:18:01,500
+and journey with much more spontaneity, which manifests itself, of course, in behaviors.
+
+136
+00:18:02,840 --> 00:18:27,280
+A perfectionist is terrified of failure, terrified that failure from within, that he or she perceives themselves as failures, but also that others see him or her as a failure, keeping that facade, that image of impregnability, of perfection versus failure as feedback.
+
+137
+00:18:27,280 --> 00:18:34,860
+Again, not enjoying failure. I haven't met a person who does enjoy failing, but seeing it more as feedback as a growth opportunity.
+
+138
+00:18:35,960 --> 00:18:41,960
+A perfectionist, it's all about getting here. That's what it's about.
+
+139
+00:18:42,460 --> 00:18:50,820
+This is a means toward an end, tangential, something that is not important other than taking me from here to here.
+
+140
+00:18:50,820 --> 00:18:57,940
+Whereas for a person committed to excellence, the journey is as much part of success as the destination.
+
+141
+00:19:01,010 --> 00:19:10,250
+Now, there are numerous, numerous consequences to this distinction, to holding one schema versus the other.
+
+142
+00:19:10,630 --> 00:19:11,810
+Here are some of them.
+
+143
+00:19:12,450 --> 00:19:21,450
+The first one is that a perfectionist experiences only, at best, temporary relief.
+
+144
+00:19:21,450 --> 00:19:27,470
+So yes, there is constant pressure, but when he or she gets to point B, then they feel relieved.
+
+145
+00:19:28,730 --> 00:19:33,150
+This is essentially the consummate rat racer.
+
+146
+00:19:35,730 --> 00:19:39,930
+Let me give you an example of such a rat racer.
+
+147
+00:19:44,980 --> 00:19:57,460
+The person, let's call him X, goes to school, goes to elementary school.
+
+148
+00:19:58,300 --> 00:20:05,880
+Until that point, he really enjoyed his daycare, pre-K, kindergarten.
+
+149
+00:20:06,720 --> 00:20:10,500
+Then he goes to school and the pressure begins.
+
+150
+00:20:11,880 --> 00:20:23,260
+Because he begins to understand that he really needs to work very hard and do extremely well if he is to get into a good middle school.
+
+151
+00:20:24,080 --> 00:20:27,480
+because the middle school that his parents want him to go to
+
+152
+00:20:27,980 --> 00:20:32,700
+is very competitive, very tough to get into. And he did get into a very good elementary school,
+
+153
+00:20:33,180 --> 00:20:37,640
+but now he has to do the same for middle school. So the pressure mounts.
+
+154
+00:20:39,460 --> 00:20:41,480
+And he doesn't really enjoy school,
+
+155
+00:20:43,920 --> 00:20:47,200
+but then he experiences relief when the holidays come
+
+156
+00:20:47,840 --> 00:20:49,680
+and when they go on a family vacation
+
+157
+00:20:50,560 --> 00:20:55,820
+or when the exams end and he can play with his friends without thinking of the next test.
+
+158
+00:20:57,360 --> 00:21:01,460
+He goes through school not really liking it, experiencing more a series of relief
+
+159
+00:21:02,060 --> 00:21:06,280
+rather than passion and love of learning, which he did experience when he was in kindergarten,
+
+160
+00:21:07,040 --> 00:21:16,100
+but no more. And then he gets into his dream middle school, the middle school that he was meant to go to all along. He makes it.
+
+161
+00:21:16,500 --> 00:21:19,240
+And he feels wonderful and great and terrific
+
+162
+00:21:19,960 --> 00:21:25,820
+for two weeks because he now needs to start thinking about the high school of his dreams.
+
+163
+00:21:26,620 --> 00:21:33,400
+Why? Because that high school is a feeder school for the top colleges in the country,
+
+164
+00:21:33,960 --> 00:21:36,080
+and he really wants to get into one of those.
+
+165
+00:21:37,700 --> 00:21:43,580
+So he really struggles and works hard in middle school, doesn't really enjoy his work,
+
+166
+00:21:44,620 --> 00:21:49,520
+but he makes it and he gets into his dream high school, and he is ecstatic.
+
+167
+00:21:50,280 --> 00:21:58,820
+happier than he'd ever been before because here he is among the smartest kids in the country very
+
+168
+00:21:58,820 --> 00:22:08,820
+difficult to get into the school but he makes it and there he starts to learn he's happy for about a week and then the pressure mounts because it is a very competitive school and he has to join
+
+169
+00:22:09,720 --> 00:22:16,860
+two varsity sports and three student organizations because he has to pad to build his resume so that
+
+170
+00:22:16,860 --> 00:22:25,520
+he gets in to his dream college he struggles and it's not fun but he says to himself this is just
+
+171
+00:22:25,520 --> 00:22:31,780
+temporary it's only pain now because later there will be gain once i get into my top college
+
+172
+00:22:31,780 --> 00:22:45,320
+and he applies and on april 2nd there is an envelope that arrived and the envelope is large
+
+173
+00:22:45,320 --> 00:22:52,060
+and he opens it up and he gets in and he's ecstatic happier even than he was when he got
+
+174
+00:22:52,060 --> 00:23:03,340
+to his dream high school and he says now finally I can let go now finally I can relax because I'm already made I mean this top college and I'm set for life
+
+175
+00:23:04,820 --> 00:23:10,960
+and he really enjoys the rest of senior year and the holiday and then
+
+176
+00:23:10,960 --> 00:23:22,960
+freshman week comes and he's ecstatic Mr. X but then after that week the pressure mounts again because very soon there are midterms and very soon there
+
+177
+00:23:22,960 --> 00:23:31,550
+is competition and everyone is working as hard as he did and he has to work
+
+178
+00:23:31,550 --> 00:23:39,340
+really hard because he wants to get his dream job and then he gets his ideal
+
+179
+00:23:39,340 --> 00:23:50,840
+internship during freshman summer and the pressure continues there are relief there are fun periods and these are periods when the exam is just over or
+
+180
+00:23:50,840 --> 00:24:01,240
+when break is coming up or during break, but then again, the pressure mounts. He doesn't
+
+181
+00:24:01,240 --> 00:24:12,140
+really understand why he's not happy because this was where he really wanted to be, really, really wanted to be more than any other place. But he says, okay, once I get that job, then
+
+182
+00:24:12,140 --> 00:24:18,820
+I'll be set. Why? Because that job will really get me into the top business school, will
+
+183
+00:24:18,820 --> 00:24:24,860
+really differentiate me from all the other 1,600 students who will graduate with me.
+
+184
+00:24:25,900 --> 00:24:36,530
+So he works hard, still builds his resume. He's a member of three student organizations, president of two, JV in two sports and varsity
+
+185
+00:24:36,530 --> 00:24:47,910
+in one, plus taking five and sometimes six courses a semester. Why? Because it's tough, it's competitive, and it's a survival of the fittest, and no pain,
+
+186
+00:24:48,050 --> 00:24:48,730
+no gain.
+
+187
+00:24:49,630 --> 00:24:54,430
+Senior year finally comes, and there is pressure, but then he gets his job.
+
+188
+00:24:55,650 --> 00:25:00,250
+He's happy. This is exactly what he wanted. This is exactly what he envisioned.
+
+189
+00:25:01,770 --> 00:25:03,090
+And now he's happy.
+
+190
+00:25:04,330 --> 00:25:14,630
+And then comes August 3rd, which is the date when he starts his actual work. And he goes to work, and everyone around him, he's a graduate of top universities, top places,
+
+191
+00:25:14,630 --> 00:25:24,350
+he feels on top of the world and he's happy for two weeks because after two
+
+192
+00:25:24,350 --> 00:25:31,790
+weeks he realized that there is a lot of pressure here actually much more than there was in college and he can't have time for those long leisurely dinners
+
+193
+00:25:32,330 --> 00:25:42,070
+in the dining hall he's working 80 to 90 hours a week and not really enjoying it but he'll make it he'll get there he'll do well get a good recommendation for
+
+194
+00:25:42,070 --> 00:25:47,860
+business school and then after business school get his real dream job and then
+
+195
+00:25:47,860 --> 00:25:54,620
+he can enjoy himself and he gets into his top business school choice and then he
+
+196
+00:25:54,620 --> 00:26:01,820
+gets his top job and in his job as an associate he's really happy in fact he
+
+197
+00:26:01,820 --> 00:26:13,640
+can't believe his good fortune he's making a lot of money those student debts that looked so serious and overbearing only three years ago are now
+
+198
+00:26:13,640 --> 00:26:20,180
+paid in an instant. He feels good, he has a nice apartment and he becomes an
+
+199
+00:26:20,180 --> 00:26:28,310
+associate and he's ecstatic, he's happy, I finally made it. But a month goes by and
+
+200
+00:26:28,310 --> 00:26:40,270
+the knot returns. Because he's only an associate, he now really, really wants to make a partner. But once he's a partner, once he gets the so-called tenure of the
+
+201
+00:26:40,270 --> 00:26:51,660
+business world then he'll be all set and he works hard he struggles he doesn't really enjoy his work but he says just another push a little bit more pain and
+
+202
+00:26:51,660 --> 00:26:58,980
+then the real game and after five years of pushing hard he makes it and he
+
+203
+00:26:58,980 --> 00:27:03,860
+becomes a partner in fact one of the youngest partners in the history of the
+
+204
+00:27:03,860 --> 00:27:12,820
+organization and he's ecstatic and he takes a long break and comes back after
+
+205
+00:27:12,820 --> 00:27:18,520
+the break, all motivated, because now he's an owner, part owner of this great, prestigious
+
+206
+00:27:18,520 --> 00:27:25,340
+organization. And by now he has a family already, and he buys a huge house in one of the suburbs
+
+207
+00:27:26,520 --> 00:27:34,780
+of the city, expensive, but he bought it easily. And he buys a luxury car. In fact, he has a
+
+208
+00:27:34,780 --> 00:27:44,280
+driver by now and he feels on top of the world. He feels great for three months and then the
+
+209
+00:27:44,280 --> 00:27:55,520
+pressure returns because he's only a junior partner. Can he make the senior partnership? Is it possible? Well, only if he really works hard because few people make it that high
+
+210
+00:27:55,520 --> 00:28:00,180
+up in the pyramid. It's getting tougher, but he'll make it. So he struggles and suffers
+
+211
+00:28:00,180 --> 00:28:09,910
+and it's not fun but he makes it no pain no gain and by this time he's just bought
+
+212
+00:28:10,910 --> 00:28:16,090
+another house in the hamptons just for the holidays for the breaks and there is another car
+
+213
+00:28:16,890 --> 00:28:26,590
+a bigger one a faster one and now he says i can finally finally relax and he does relax
+
+214
+00:28:28,530 --> 00:28:34,230
+for two and a half months and then the pressure returns because he's a senior
+
+215
+00:28:34,230 --> 00:28:41,450
+partner but there is only one managing director only one and to get that would
+
+216
+00:28:41,450 --> 00:28:52,010
+be really tough but he's determined to do it he'd been a star until now there is no reason to stop now it's not fun for him doesn't spend that much time with
+
+217
+00:28:52,010 --> 00:28:57,410
+people he loves because he's constantly stressed and he has to prove himself and
+
+218
+00:28:59,620 --> 00:29:13,660
+And for seven long years, while there is material affluence, for those seven years, there is time poverty, time famine.
+
+219
+00:29:14,000 --> 00:29:23,190
+But he continues to struggle, and he makes it. The board makes an announcement. It's on the Wall Street Journal front page news.
+
+220
+00:29:23,830 --> 00:29:30,370
+Mr. X is the new managing director of this incredible organization.
+
+221
+00:29:30,930 --> 00:29:39,230
+and his friends congratulate him he feels on top of the world and he's happy but then the stress
+
+222
+00:29:39,230 --> 00:29:54,430
+returns but then one day one day he walks into his office sits on his chair puts his legs up
+
+223
+00:29:54,430 --> 00:30:05,050
+on the table. Here's Aserol, the boss, the man. He looks back and sees Central Park,
+
+224
+00:30:05,830 --> 00:30:14,070
+just beautiful there. He really is, not just metaphorically speaking, he really is on top
+
+225
+00:30:14,070 --> 00:30:25,480
+of the world. And then there is a knock on the door. He's surprised by the knock because
+
+226
+00:30:25,480 --> 00:30:33,000
+usually his secretary announces people. They don't just knock on his door. He's after all on top of
+
+227
+00:30:33,000 --> 00:30:45,180
+the world. So he walks down, opens the door and it's the chairman of the board. And she says hi
+
+228
+00:30:45,180 --> 00:30:54,480
+to him. He says hi back. And she says, you know, record earnings this year. Well done. Fantastic.
+
+229
+00:30:54,480 --> 00:31:02,860
+You have done amazing, amazing work. We're all so proud of you, so glad you're in your position.
+
+230
+00:31:05,700 --> 00:31:19,660
+However, it's time to retire. You're 72 years old. This is the life of the rat racer, at best.
+
+231
+00:31:20,800 --> 00:31:27,960
+and again this is a caricature I've highlighted just certain points it's not
+
+232
+00:31:27,960 --> 00:31:34,240
+as all or nothing however in essence this is the life of the rat racer about
+
+233
+00:31:34,240 --> 00:31:45,760
+getting from point A to point B and then feeling relief for two weeks or a month and then getting in that point B becomes point A and again like the rat running
+
+234
+00:31:45,760 --> 00:31:53,260
+around on and on and on and you need to ask yourself now because if not now then when you
+
+235
+00:31:53,260 --> 00:32:02,860
+need to ask yourself now what kind of life do I want for myself I gave the example of
+
+236
+00:32:02,860 --> 00:32:11,360
+business it applies as much to any other domain whether you are or want to become a medical
+
+237
+00:32:11,360 --> 00:32:17,000
+doctor and going on and feeling pressure to get into the best schools into the best department
+
+238
+00:32:17,000 --> 00:32:24,020
+the best internship the best the highest position and on and on or whether you are
+
+239
+00:32:24,020 --> 00:32:33,040
+working for a not-for-profit organization or whether you're in academia or a lawyer it doesn't
+
+240
+00:32:33,040 --> 00:32:40,300
+matter just fill in the blank of mr x in which area it applies to any place
+
+241
+00:32:41,560 --> 00:32:51,860
+and the question is what kind of life do i want for myself and remember the most important thing A person committed to excellence does not give up on being ambitious.
+
+242
+00:32:52,560 --> 00:32:58,680
+However, a person committed to excellence does not also give up on the journey.
+
+243
+00:33:01,660 --> 00:33:09,580
+And as we'll talk about soon, a person who's committed to excellence not only does he or she not give up on the journey,
+
+244
+00:33:11,810 --> 00:33:18,070
+or rather on the outcome, they actually reach higher levels of performance.
+
+245
+00:33:20,530 --> 00:33:22,150
+But we'll get to that soon.
+
+246
+00:33:22,930 --> 00:33:28,450
+A person committed to excellence is not just about temporary relief, but about lasting satisfaction.
+
+247
+00:33:28,930 --> 00:33:38,010
+Yes, she has the ups and downs like we all do. However, also able to enjoy the journey, the day-to-day, the experience of being in college,
+
+248
+00:33:38,170 --> 00:33:41,150
+the experience of having a lovely meal with my friends,
+
+249
+00:33:41,550 --> 00:33:51,740
+the experience of reading and being exposed to great writers, to interesting classes,
+
+250
+00:33:53,660 --> 00:33:59,340
+to nice extracurricular activities, appreciating it, not taking it for granted,
+
+251
+00:33:59,800 --> 00:34:07,100
+not seeing it as just incidental, just something that I need to get through in order to get to where I really want to get to.
+
+252
+00:34:08,340 --> 00:34:14,160
+Well, you may really want to get there, but where you really are is here and now, no other place.
+
+253
+00:34:19,090 --> 00:34:24,310
+Now, I haven't met, maybe you have, but I haven't met the perfect person.
+
+254
+00:34:25,570 --> 00:34:32,710
+I don't think that person exists In other words, if there is no perfect person For every person, there is inevitable failure
+
+255
+00:34:32,710 --> 00:34:42,000
+And a perfectionist who is obsessed with failure Just focuses on that Whereas a person committed to excellence
+
+256
+00:34:42,000 --> 00:34:52,980
+There is a possibility of success every step of the way Even in failure A perfectionist very often wastes time
+
+257
+00:34:52,980 --> 00:34:58,600
+Has to read every word Every I has to be dotted, every T crossed
+
+258
+00:34:59,240 --> 00:35:04,360
+It's all or nothing. Either I hand in a perfect paper or I don't hand in a paper at all.
+
+259
+00:35:05,840 --> 00:35:12,400
+Either it's a straight A or I'm a failure. All or nothing.
+
+260
+00:35:13,400 --> 00:35:24,720
+And sometimes that's appropriate and that's what a person committed to excellence does. Understand when, for example, if you're a surgeon, you want to have the perfect operation
+
+261
+00:35:24,720 --> 00:35:30,520
+and you don't want to say, well, it's okay if I'm 80% right about where exactly to cut.
+
+262
+00:35:31,100 --> 00:35:33,600
+Yeah, there are places where you want the perfectionism.
+
+263
+00:35:34,320 --> 00:35:39,720
+But in many other areas in our lives, it's not necessary and it hurts us.
+
+264
+00:35:42,380 --> 00:35:51,480
+A perfectionist is very often prone to disorders. And I mean disorders of numerous times, including, for example, eating disorders. So let me give you a personal example.
+
+265
+00:35:51,680 --> 00:35:57,460
+So when I was playing squash, when I was playing full-time, I had to really take care of my diet.
+
+266
+00:35:58,140 --> 00:36:00,320
+Eat healthfully, eat well.
+
+267
+00:36:00,320 --> 00:36:17,160
+But there was a problem, there was a real challenge in my life, and that challenge was my mother, who is the perfect cook, and her cakes are outstanding.
+
+268
+00:36:18,560 --> 00:36:24,180
+So here is a common scenario that I encountered growing up, tough childhood.
+
+269
+00:36:24,180 --> 00:36:32,920
+I would come home after squash practice, open the fridge, starving, and there was a large piece of cake.
+
+270
+00:36:33,260 --> 00:36:43,300
+Not the whole cake, but a quarter cake, very large, so inviting, so alluring, and I know from past experiences, so delicious.
+
+271
+00:36:44,320 --> 00:36:51,220
+I look at it, and then I close the fridge because I can't have it. I'm in the middle of training for an important tournament.
+
+272
+00:36:53,140 --> 00:36:58,140
+But three minutes later, I go to the fridge again just to make sure it's still there.
+
+273
+00:36:59,680 --> 00:37:02,620
+Why? Those of you who know my brother understand why.
+
+274
+00:37:02,980 --> 00:37:10,960
+My brother is much bigger than I am, and he likes my mom's cooking no less than I do. So I was just making sure that it was still there, and it was.
+
+275
+00:37:11,700 --> 00:37:18,620
+And then ten minutes later, I had to go back because my brother had just disappeared from eyes for a few minutes, and I thought he went to the fridge.
+
+276
+00:37:20,160 --> 00:37:22,460
+So I opened the fridge again, and it was still there.
+
+277
+00:37:23,160 --> 00:37:34,640
+so I was relieved and then about five minutes later I had to go back to the fridge I opened the door and two minutes later there was no cake all or nothing
+
+278
+00:37:34,640 --> 00:37:41,220
+either I don't touch it or I devour it this is the schema that a perfectionist
+
+279
+00:37:41,220 --> 00:37:50,900
+has it's not okay let me have a slice of it it's nothing or all and this is the
+
+280
+00:37:50,900 --> 00:37:58,480
+schema that perfectionists have. Either I'm a supermodel or I'm overweight. All or nothing.
+
+281
+00:37:58,620 --> 00:38:06,260
+And that's destructive and that hurts us so much on so many levels. As opposed to the healthy
+
+282
+00:38:06,260 --> 00:38:12,940
+approach. Okay, so I'll have a slice. So I'll have a little bit. Okay, so I gained a couple of pounds.
+
+283
+00:38:12,940 --> 00:38:28,040
+big deal, I'm human, I'm not a machine, I'm not a Barbie or Ken. I caught myself there.
+
+284
+00:38:32,790 --> 00:38:39,830
+Hurt self-esteem. Why? Because Nathaniel Brandon who writes about self-esteem and we'll talk
+
+285
+00:38:39,830 --> 00:38:45,010
+a lot about him in that lecture three weeks from now, the first pillar of self-esteem
+
+286
+00:38:45,010 --> 00:38:54,090
+is self-acceptance. And remember a perfectionist does not accept him or herself. Second, the reason
+
+287
+00:38:54,090 --> 00:39:05,390
+why it hurts self-esteem, remember there is constant inevitable failure for a perfectionist because there is no perfect person. And if I constantly fail or constantly perceive myself
+
+288
+00:39:05,390 --> 00:39:14,960
+as a failure, am I going to have high self-esteem? Of course not. It also hurts self-esteem because
+
+289
+00:39:14,960 --> 00:39:25,240
+So a perfectionist is less likely to try, less likely to put him or herself on the line. And the price that I pay for that when I don't try is lower levels of self-esteem.
+
+290
+00:39:25,420 --> 00:39:36,780
+Remember, self-perception theory versus ongoing continuous improvement. Not a straight line, but a spiral that goes up and up.
+
+291
+00:39:39,560 --> 00:39:41,140
+Perfectionism harms relationships.
+
+292
+00:39:41,940 --> 00:39:52,260
+Again, I just look back and from this perspective, it's hard for me to fathom the kind of mistakes that I have made. in relationships based on perfectionism. Why?
+
+293
+00:39:52,580 --> 00:39:59,960
+First of all defensiveness. It is very difficult to form intimacy with someone when I'm constantly on the defensive.
+
+294
+00:40:00,680 --> 00:40:11,640
+When I can't accept or do something at the very least with criticisms. What kind of intimacy is possible there? The other reason why it harms relationships
+
+295
+00:40:11,640 --> 00:40:15,500
+is that very often we mirror
+
+296
+00:40:16,040 --> 00:40:27,880
+Our approach to the world mirrors our approach toward ourselves. So if I'm a perfectionist and expect perfectionism, a straight line for myself, I will expect the same from others, whether it's my partner,
+
+297
+00:40:28,060 --> 00:40:35,180
+whether it's later on my children or friends. And now as we, I think, established before, there is no perfect person.
+
+298
+00:40:35,780 --> 00:40:43,020
+Now it may seem perfect when we first meet, and during the honeymoon phase, it is perfect. He or she is perfect.
+
+299
+00:40:43,900 --> 00:40:50,940
+But beyond that, suddenly we begin to identify flaws. Hey, that's not the person I thought I got together with initially.
+
+300
+00:40:53,280 --> 00:40:58,700
+Yes, of course it's not if what I expected is Barbie or Ken.
+
+301
+00:41:00,450 --> 00:41:01,550
+A straight line.
+
+302
+00:41:02,790 --> 00:41:04,210
+But it's a human being.
+
+303
+00:41:04,730 --> 00:41:09,590
+And if I expect perfectionism from the other, I will inevitably be disappointed.
+
+304
+00:41:11,050 --> 00:41:19,090
+And that leads to frustration, lack of acceptance towards the partner, and very often usually harms the relationship.
+
+305
+00:41:20,670 --> 00:41:23,790
+Versus ongoing growth of the relationship.
+
+306
+00:41:24,110 --> 00:41:33,750
+As we'll talk about when we talk about relationships, the ideal relationship is not a relationship that's devoid of failure, that's devoid of disagreements.
+
+307
+00:41:33,750 --> 00:41:44,800
+The ideal relationship is one where there is mostly good stuff, but there is also disagreements, disappointments, fights.
+
+308
+00:41:45,800 --> 00:41:47,000
+That's actually healthy.
+
+309
+00:41:47,520 --> 00:41:58,200
+It helps the relationship become stronger over time. The issue is of degree. How much positive versus negative do you have in the relationship? The issue is not of having only positive and no negative.
+
+310
+00:41:58,880 --> 00:42:05,120
+That's not a healthy relationship. That's a relationship where there is a lot of suppression and repression.
+
+311
+00:42:05,120 --> 00:42:15,600
+at best. Perfectionism leads to anxiety, leads to stress. There's always the fear of failure
+
+312
+00:42:15,600 --> 00:42:27,100
+versus excitement, what Peter Senge calls creative tension. What about performance?
+
+313
+00:42:27,600 --> 00:42:37,900
+What about the no pain, no gain mantra that's drilled into our minds constantly? I mean, we know self-evident that we need to work hard in order to succeed. So shouldn't I be
+
+314
+00:42:37,900 --> 00:42:47,080
+a perfectionist? And one of the main reasons why people don't give up the schema is because because they think this is the fastest way, most efficient way to success.
+
+315
+00:42:48,080 --> 00:42:50,140
+But it turns out that that's not the case.
+
+316
+00:42:51,820 --> 00:43:02,800
+But actually, the person committed to excellence is more successful in the long run. And there's a lot of research that illustrates this. Let me share some of it or some of the reasons.
+
+317
+00:43:04,060 --> 00:43:15,280
+Now, let's paint more gain, first of all, in the ultimate currency, the most important currency of happiness. People committed to excellence as opposed to perfectionists are happier.
+
+318
+00:43:15,860 --> 00:43:25,120
+So that's wonderful and that's great, but it's not just in the ultimate currency. It's also in the hard currency, whether it's success at work, whether it's success for athletes,
+
+319
+00:43:26,120 --> 00:43:28,480
+whether it's success in relationships.
+
+320
+00:43:29,200 --> 00:43:36,680
+Why? Various reasons. First of all, a person committed to excellence enjoys a much more sustainable approach to growth.
+
+321
+00:43:37,900 --> 00:43:43,240
+Remember the analogy that I used from environmentalism, sustainable growth.
+
+322
+00:43:44,200 --> 00:43:55,800
+It's not about having a sterile environment. It's not about going back to the days when we lived as hunters and gatherers in caves.
+
+323
+00:43:56,720 --> 00:44:04,460
+It is living in accordance with modern life. It is enjoying modernity and progress, but at the same time,
+
+324
+00:44:04,460 --> 00:44:09,620
+not taking too much out of the environment so that it can sustain itself.
+
+325
+00:44:10,480 --> 00:44:16,200
+The same on the individual level. A perfectionist does not enjoy a sustainable approach to growth
+
+326
+00:44:16,680 --> 00:44:20,100
+because there are no places for recovery, no places for deviation.
+
+327
+00:44:20,900 --> 00:44:27,420
+Everything is static like a machine. As opposed to a person committed to excellence, there
+
+328
+00:44:27,420 --> 00:44:39,200
+are deviations, there are breaks, there are recoveries, much more sustainable versus all or nothing. I got injured. My squash career ended because it was all or nothing. Either
+
+329
+00:44:39,200 --> 00:44:50,820
+I don't train at all or I train like John Shokan, the world champion. Also, intrinsic motivation is much higher for people committed to excellence. And when we have intrinsic
+
+330
+00:44:50,820 --> 00:45:02,320
+motivation, we're much more likely to sustain effort over a long period of time than if all the motivation is extrinsic, comes from getting to that next stage, getting those accolades,
+
+331
+00:45:02,320 --> 00:45:04,960
+getting that raise, and so on.
+
+332
+00:45:08,840 --> 00:45:12,800
+Winston Churchill said that perfectionism spells paralysis.
+
+333
+00:45:13,920 --> 00:45:23,120
+When we're so obsessed with failure, we're much less likely to act. One of the primary causes of procrastination is perfectionism,
+
+334
+00:45:23,320 --> 00:45:26,060
+the incapacitating fear of failure.
+
+335
+00:45:26,680 --> 00:45:29,000
+Because if we don't act, we don't fail.
+
+336
+00:45:33,100 --> 00:45:37,720
+Self-esteem, as I mentioned earlier, much higher for a person committed to excellence.
+
+337
+00:45:38,360 --> 00:45:42,140
+And as Nathaniel Brandon said, self-concept is destiny.
+
+338
+00:45:42,560 --> 00:45:51,580
+Beliefs become self-fulfilling processes. If I believe in myself, if I think that I can succeed, if I have the track record to show that I get up after falling down,
+
+339
+00:45:53,180 --> 00:45:55,760
+I'm much more likely to succeed over time.
+
+340
+00:45:59,330 --> 00:46:00,830
+Have I mentioned this before?
+
+341
+00:46:01,650 --> 00:46:04,490
+Oh, okay, good. Because it is important.
+
+342
+00:46:04,950 --> 00:46:07,510
+There is no other way to succeed.
+
+343
+00:46:10,060 --> 00:46:11,420
+You're at the luck factor.
+
+344
+00:46:12,040 --> 00:46:17,080
+the fantastic work by Weizmann, UK professor.
+
+345
+00:46:17,880 --> 00:46:24,340
+And what he talks about, one of the causes of having more luck in our lives,
+
+346
+00:46:24,960 --> 00:46:28,720
+which seems like a mystical thing, but actually can be shown scientifically,
+
+347
+00:46:29,240 --> 00:46:39,200
+one of the ways to have more luck in our lives is to try new things, little things. Even when you walk back to your dining hall after class, take a slightly different path,
+
+348
+00:46:39,860 --> 00:46:50,560
+as opposed to the path that has already been taken by you every single day. And he says these little changes in our lives, these slight deviations from the straight and narrow
+
+349
+00:46:50,560 --> 00:46:55,460
+actually lead to higher levels of luck because we begin to see things that we haven't seen before.
+
+350
+00:46:59,350 --> 00:47:10,450
+Perfectionist, one way. No deviations, no improvisation, no spontaneity. This very often prevents us from being, quote-unquote, luckier.
+
+351
+00:47:13,160 --> 00:47:19,960
+Creativity Simonson, the most successful, the most creative scientists and artists throughout history, are ones who have failed the most.
+
+352
+00:47:20,560 --> 00:47:29,120
+They were not perfectionists. They were committed to excellence, extremely ambitious understanding that there is no other way to succeed.
+
+353
+00:47:30,040 --> 00:47:37,600
+John Updike, highly creative author, says, Perfectionism is the enemy of creativity.
+
+354
+00:47:39,000 --> 00:47:47,520
+And we'll talk about another author who has very good advice for us of how to overcome this perfectionism, Samuel Coleridge.
+
+355
+00:47:48,340 --> 00:47:55,920
+The 80-20 rule, this rule, understanding this rule as it applies to time management changed my Harvard experience.
+
+356
+00:47:56,440 --> 00:47:58,360
+So what is the Pareto principle?
+
+357
+00:47:59,300 --> 00:48:06,860
+Pareto was an Italian economist about 100 years ago and he came up with this principle which
+
+358
+00:48:06,860 --> 00:48:15,340
+she named the Pareto principle. And the principle says that in most societies, 20% of the people
+
+359
+00:48:15,340 --> 00:48:22,420
+own about 80% of the wealth. They applied this principle to an organization as well
+
+360
+00:48:22,420 --> 00:48:29,980
+where 20% of your clients generate 80% of your income. This has been applied to many areas
+
+361
+00:48:29,980 --> 00:48:40,830
+in economics, and more recently to time management. For example, in 20% of our time, we can get
+
+362
+00:48:40,830 --> 00:48:47,990
+80% of our work done. And when I understood this, it changed my approach toward my academics.
+
+363
+00:48:48,430 --> 00:48:54,510
+Why? Because I realized that, well, I didn't need to read 100% of the material. Again,
+
+364
+00:48:54,610 --> 00:49:01,370
+don't quote me on this. I didn't need to make sure that every T is crossed and every
+
+365
+00:49:01,370 --> 00:49:12,170
+eyes dotted when I handed in a paper. And I started to follow much more of the pleasure principle or the happiness principle. And I said, okay, this is something I really care
+
+366
+00:49:12,170 --> 00:49:17,150
+about. For example, I don't know if the class is still offered now. It's an art C14, Heroes,
+
+367
+00:49:18,070 --> 00:49:25,890
+still offered now. One of my favorite classes as an undergrad. And it's not a very difficult
+
+368
+00:49:25,890 --> 00:49:30,310
+class. I could do very well in it without putting too much work in it. But I spent about
+
+369
+00:49:30,310 --> 00:49:38,330
+50 hours on my final paper because I wrote about a topic that I really really cared about
+
+370
+00:49:39,950 --> 00:49:51,230
+and I didn't get an A for it which didn't make sense to me but I still put in so much work in it because it was fun whereas other classes that I enjoyed less I put in what I needed in order to
+
+371
+00:49:51,230 --> 00:49:58,010
+get what I thought was enough not all or nothing either I study and get a straight A or I don't
+
+372
+00:49:58,010 --> 00:50:04,770
+study at all. Another class, I don't know if you still taught Lit and Arts, again, Fairy
+
+373
+00:50:04,770 --> 00:50:10,650
+Tales with Maria Tassar. She teaches another class now. I had a crush on her when I was
+
+374
+00:50:10,650 --> 00:50:26,750
+in undergrad. I can't believe I just said that aloud. So, yeah, she said no. No, I didn't
+
+375
+00:50:26,750 --> 00:50:35,190
+ask her, I didn't. So also in that class, not a very difficult class, a very enjoyable
+
+376
+00:50:35,190 --> 00:50:40,670
+class on many levels. And again, putting a lot of work into a paper there that, by the
+
+377
+00:50:40,670 --> 00:50:48,190
+way, ultimately became the topic of my dissertation on self-esteem. So again, asking what is most
+
+378
+00:50:48,190 --> 00:50:54,150
+important for me? What do I really care about? As opposed to saying all or nothing. Now,
+
+379
+00:50:54,150 --> 00:51:00,310
+Now my grades actually did go down slightly as a result, but really very little because
+
+380
+00:51:00,310 --> 00:51:08,810
+I was employing the 20-80 rule, 20% focus on what's important and got 80% of the work done.
+
+381
+00:51:09,950 --> 00:51:18,970
+And I became so much more successful in other areas of my academic career because suddenly I had more time to play squash and enjoy my squash practice.
+
+382
+00:51:18,970 --> 00:51:30,590
+The Sunday I had more time for socializing, for sitting in law house and having a two-and-a-half-hour dinner, starting at 5 p.m., just based on that.
+
+383
+00:51:32,370 --> 00:51:34,550
+Another application of the 80-20 rule.
+
+384
+00:51:36,030 --> 00:51:39,670
+All of us have different times during the day when we're most productive.
+
+385
+00:51:39,670 --> 00:51:48,950
+In fact, in 20% of the day, we get 80%, potentially 80% of our work done, depending on whether we're morning people or night people.
+
+386
+00:51:48,970 --> 00:51:55,430
+people. There are people who get up in the morning at 6, 7 a.m. and they're ready to
+
+387
+00:51:55,430 --> 00:52:04,410
+go. That's me. I get up early, very easy for me. I just go straight to my computer to change
+
+388
+00:52:04,410 --> 00:52:16,030
+a diaper. Very early in the morning, first thing, no problem. At night, by 9, 10 p.m., complete zombie. And there are people who are the opposite, can stay up until 2, 3, 4
+
+389
+00:52:16,030 --> 00:52:18,290
+4 a.m. in the morning and that's when they're at their freshest.
+
+390
+00:52:18,930 --> 00:52:28,430
+By the way, it has to do with our internal biorhythms, internal circadian rhythms because
+
+391
+00:52:28,430 --> 00:52:36,850
+there are some people for whom no one is exact or very few people are exactly 24 hours rhythms. We're usually either somewhere between 23 and 25.
+
+392
+00:52:37,870 --> 00:52:44,650
+For people whose circadian rhythm is 23 hours, they get very tired at night but then they
+
+393
+00:52:44,650 --> 00:52:50,070
+wake up very fresh in the morning. Whereas people who are closer to 25 need that extra
+
+394
+00:52:50,070 --> 00:52:56,690
+sleep in the morning. And it's for those people that I have this class at 11.30. I know it's
+
+395
+00:52:56,690 --> 00:53:04,930
+early but thank you for making the effort. When I got to college, most students were studying
+
+396
+00:53:04,930 --> 00:53:15,710
+late at night. My roommates were studying late at night. Starting at about 10 and going to midnight or 2am in the morning. And that's where they're most productive. I wasn't. And
+
+397
+00:53:15,710 --> 00:53:24,190
+And then I would get up in the morning and I was tired, exhausted, couldn't really focus at night. And when I heard about this productive hour, I changed my day.
+
+398
+00:53:24,910 --> 00:53:34,430
+And I went to sleep early, so when my roommates started to study, I actually went to bed and got up really early when my roommates were still asleep and got my work done early in
+
+399
+00:53:34,430 --> 00:53:44,830
+the morning and then went to my 11 a.m. class after I'd gotten my work done. And in three hours in the morning, I got much more done, more productive, more creative,
+
+400
+00:53:44,830 --> 00:53:56,710
+much better retention than I did late at night. These two things, as I mentioned earlier, really changed my experience here. It's getting so much more in far
+
+401
+00:53:56,710 --> 00:54:07,210
+less time. Not the perfectionist approach, the pursuing excellence approach. You read about flow, Mihaly Csikszentmihalyi, who talked about flow as being peak
+
+402
+00:54:07,210 --> 00:54:13,210
+experience, we enjoy it the most, and peak performance. We perform it our best.
+
+403
+00:54:13,210 --> 00:54:22,220
+define the no pain, no gain formula. And when do we experience flow? Not when we experience
+
+404
+00:54:22,220 --> 00:54:32,860
+high levels of anxiety as the perfectionist often does, not when we're bored, but when it's the optimum levels of arousal, when we're excited. A person committed to excellence
+
+405
+00:54:32,860 --> 00:54:38,460
+is much more likely to experience flow than a person who is constantly afraid of failure,
+
+406
+00:54:38,620 --> 00:54:50,300
+constantly obsessed with failure, constantly thinking about what if I fail. Let me talk
+
+407
+00:54:50,300 --> 00:54:59,840
+a little bit about the sources of perfectionism because if we understand as I mentioned last time if we understand where it comes from we're much more likely to be able to get over it
+
+408
+00:55:00,880 --> 00:55:12,120
+so some of these sources of perfectionism the first one the most important one is conditioning i mean we are not born perfectionist children as you saw in the video there as you know born
+
+409
+00:55:12,120 --> 00:55:22,640
+actually enjoying the learning process much more than than we do when we're afraid of fading they fall they get up again. So it's through conditioning that we learn to be afraid
+
+410
+00:55:22,640 --> 00:55:30,160
+of failure. Specifically, the schema that we internalize, that's being
+
+411
+00:55:30,160 --> 00:55:40,920
+reinforced constantly from almost the time when we were born, that what matters is the destination. When we get to a certain destination, such as
+
+412
+00:55:40,920 --> 00:55:47,480
+learning how to walk, well done, such as getting the A at the end of my
+
+413
+00:55:47,480 --> 00:55:55,540
+first grade terrific gold star it's the destination that's rewarded and after a
+
+414
+00:55:55,540 --> 00:56:07,440
+while we begin to internalize this schema and we begin to believe that we're accepted when we achieve a certain completion and it goes on throughout
+
+415
+00:56:07,440 --> 00:56:14,860
+our lives I mean when do we get a bonus on you know April 3rd no we get it on
+
+416
+00:56:14,860 --> 00:56:26,620
+December 31st or just before Christmas at the end of the year this was a good productive year well done when do we get the grades the pat on the back if we
+
+417
+00:56:26,620 --> 00:56:32,560
+didn't work well at the end of the semester or after an exam when we have
+
+418
+00:56:32,560 --> 00:56:40,920
+completed something not during the journey in other words the journey goes
+
+419
+00:56:40,920 --> 00:56:47,500
+unrewarded and we begin to perceive it as inconsequential not important just a
+
+420
+00:56:47,500 --> 00:56:58,690
+means toward an end very few teachers parents organizations schools reward the
+
+421
+00:56:58,690 --> 00:57:05,570
+journey the enjoyment of the journey and of course very few reward lo and behold
+
+422
+00:57:05,570 --> 00:57:13,530
+failure which is an inevitable part of every journey so that we learn no good
+
+423
+00:57:13,530 --> 00:57:21,150
+this is no good we must have as much as possible a straight line a straight
+
+424
+00:57:21,150 --> 00:57:30,490
+schema and we pay a price for it when we internalize it and this is the kind of social environment that we're born into that we're raised in and the social
+
+425
+00:57:30,490 --> 00:57:41,010
+environment that is very difficult to change I mean I know I have little kids at home. It is so difficult to change it because very often I'm inclined to say, to focus primarily
+
+426
+00:57:41,010 --> 00:57:50,550
+on the day, oh, Shirelle, she just learned how to walk. Well done, you know, you just walked, as opposed to rewarding the effort, as we'll talk about in a minute, and rewarding
+
+427
+00:57:50,550 --> 00:57:58,010
+the hard work, and rewarding even the failures, the trying, the coping, the process. Very
+
+428
+00:57:58,010 --> 00:58:07,620
+difficult and that's connected of course to the permission to be human the
+
+429
+00:58:07,620 --> 00:58:18,720
+permission for the constraint view of human nature as opposed to the idealized disconnected detached view of what life can look like because it can't instead
+
+430
+00:58:18,720 --> 00:58:30,540
+of permission to be human there is pressure to be perfect it's constant it's ongoing it's in the media it's in the workplace it's in our educational
+
+431
+00:58:30,540 --> 00:58:38,920
+institutions. It's everywhere and we pay a price for it. Now let me give you some
+
+432
+00:58:38,920 --> 00:58:44,620
+examples. Before I give this example, just a quick introduction. As you know,
+
+433
+00:58:45,960 --> 00:58:57,160
+academics don't make that much money. When people go into academia, it's usually not for the money. So many academics, myself being no exception, have to
+
+434
+00:58:57,160 --> 00:59:03,540
+supplement their their income so I supplement my income and I want to share
+
+435
+00:59:03,540 --> 00:59:23,010
+with you something that I do on the side yeah my glasses it's just to to hide the
+
+436
+00:59:24,050 --> 00:59:33,670
+the abs yeah so I mean if you real is there anyone in this room who looks like
+
+437
+00:59:33,670 --> 00:59:46,780
+this? Yeah, I didn't mean for you to answer that question. I mean, is this real? Well,
+
+438
+00:59:47,220 --> 00:59:51,000
+partially, a lot of it is Photoshopped, but yeah, there are some people who look like this.
+
+439
+00:59:52,560 --> 01:00:01,360
+But what do we see in the magazines? I mean, if you go to the magazine store, the magazines,
+
+440
+01:00:01,360 --> 01:00:09,120
+And these are the kind of people who are on the cover, perfect, perfect beings, even
+
+441
+01:00:09,120 --> 01:00:13,380
+more so, you know, so we have our tens, even more so with the Barbies.
+
+442
+01:00:14,760 --> 01:00:29,680
+This is Cosmo 1896, yeah, I never procrastinate, I just do a lot of work on Google image.
+
+443
+01:00:31,180 --> 01:00:42,380
+So, look at this. The progress of science. Some examples of recent art. Just like Cosmo today, right?
+
+444
+01:00:43,000 --> 01:00:53,100
+Well, so look at this. Sex goddess secrets. I mean, it's not even sex human secrets.
+
+445
+01:00:53,100 --> 01:01:02,040
+That's not good enough. Look at the standards that are set for ourselves. How am I ever going to match that?
+
+446
+01:01:03,240 --> 01:01:04,140
+Or here.
+
+447
+01:01:05,520 --> 01:01:06,720
+Oh, I didn't see that.
+
+448
+01:01:07,080 --> 01:01:09,520
+The naughty thing, 30%. I should read that.
+
+449
+01:01:12,160 --> 01:01:15,520
+But that's not what I wanted to point to. I actually wanted to point to this.
+
+450
+01:01:16,500 --> 01:01:18,500
+How to get ahead fast.
+
+451
+01:01:19,400 --> 01:01:22,080
+As fast as you can, right? There's no time.
+
+452
+01:01:23,280 --> 01:01:24,080
+Or this.
+
+453
+01:01:25,880 --> 01:01:29,200
+Never, never have a zit again. I mean, I still have a zit.
+
+454
+01:01:29,200 --> 01:01:47,410
+I'm 37. How do they do that? Again, unrealistic models. You know, in 1997, when I was living
+
+455
+01:01:47,410 --> 01:01:59,230
+in Singapore, I wanted to bring Nathaniel Brandon to Singapore. Again, he's considered the leading person on self-esteem. His wife, Deborah Brandon, has done a lot of work in
+
+456
+01:01:59,230 --> 01:02:08,430
+the area of self-esteem and personal growth. So I wanted to bring them both. So I brought them to consult for the organization where I was working and I was looking for other
+
+457
+01:02:08,430 --> 01:02:15,650
+ways because it was very expensive for other ways of funding that trip and a close friend
+
+458
+01:02:15,650 --> 01:02:26,550
+of mine Pat Lee was working at the time with the body shop and she said no this is perfect because the body shop this year Anita Rodic whom I mentioned earlier is interested in
+
+459
+01:02:26,550 --> 01:02:31,970
+self-esteem for women so why don't we do a project with Devers Nathaniel and the body
+
+460
+01:02:31,970 --> 01:02:39,530
+shop a joint venture and have self-esteem for women in Singapore so it was a great idea I actually
+
+461
+01:02:39,530 --> 01:02:45,510
+met with Anita Roddick and we co-sponsored Nathaniel Brandon which was a highly successful
+
+462
+01:02:45,510 --> 01:02:52,810
+event we had 700 seats over a thousand people came we had to have you know plasma outside
+
+463
+01:02:52,810 --> 01:03:00,990
+and in addition it made a huge stir and really started a movement or a mini movement in Singapore
+
+464
+01:03:00,990 --> 01:03:07,450
+or self-esteem for women. As a result of that, Nathaniel Brandon wrote a book called Self-Esteem
+
+465
+01:03:07,450 --> 01:03:13,510
+for Women because he was blown away with the fascinating stories that were told in the
+
+466
+01:03:13,510 --> 01:03:21,530
+seminar and so on. Anyway, but Anita Roddick has done a lot of work for women and self-esteem.
+
+467
+01:03:22,010 --> 01:03:26,710
+And one of the projects that she did then in 1997, I think most of you were too young
+
+468
+01:03:26,710 --> 01:03:35,390
+to be aware of it, but it was an all-body shop store, was one that she based on a doll
+
+469
+01:03:35,390 --> 01:03:39,530
+called Ruby, the alternative to Barbie.
+
+470
+01:03:40,190 --> 01:03:44,270
+And here is what the campaign looked like. Whoops, sorry.
+
+471
+01:03:45,870 --> 01:03:51,090
+There are three billion women who don't look like supermodels and only eight who do.
+
+472
+01:03:52,030 --> 01:03:58,210
+or pay media where we come from cultural and physical diversity is the norm it's
+
+473
+01:03:58,210 --> 01:04:05,970
+called planet earth very effective campaign and so important because one of
+
+474
+01:04:05,970 --> 01:04:16,810
+the models that we have today in our culture all or nothing I mean these pictures by the way came together it's not I didn't put them together either
+
+475
+01:04:16,810 --> 01:04:29,880
+you binge or the alternative? Or what do we get in the movies? I mean, who possibly can
+
+476
+01:04:29,880 --> 01:04:41,820
+live up to the standards of Top Gun? Tom Cruise and Kelly McGillis, the perfect love that
+
+477
+01:04:41,820 --> 01:04:49,720
+they have there. But this is the model that we have, and I'll talk about it when I talk about relationships. Who possibly can sustain, even for nine and a half weeks, let alone
+
+478
+01:04:49,720 --> 01:04:59,530
+a lifetime the passion in the movies impossible standards also self-help books think and grow rich
+
+479
+01:04:59,530 --> 01:05:09,280
+nothing much about this no no just think and then you'll be rich tens of millions of copies sold from
+
+480
+01:05:09,280 --> 01:05:21,000
+this book or here's another book that I found now the book the book may be great I haven't read it
+
+481
+01:05:21,000 --> 01:05:29,880
+admit but look at it small steps to big happiness now again we can't wait it's
+
+482
+01:05:29,880 --> 01:05:33,560
+about the destination it's not about the hard work the journey the character
+
+483
+01:05:33,560 --> 01:05:44,330
+change that needs to take place and there is something else there's something
+
+484
+01:05:44,330 --> 01:05:53,690
+else that leads to perfectionism and this is research that you've already read about and this is work done by great work done by Carol Dweck who's now
+
+485
+01:05:53,690 --> 01:06:05,470
+at Stanford. Here is her study, because you see, what she illustrates is that not all praise is good. Telling a kid you're wonderful, you're terrific, you're great, no matter
+
+486
+01:06:05,470 --> 01:06:10,950
+what, indiscriminately, you're so smart, you're so amazing, my little Einstein, that's
+
+487
+01:06:10,950 --> 01:06:20,410
+not always good, but may be harmful in the long run. And it may create the perfectionism
+
+488
+01:06:20,410 --> 01:06:32,170
+schema. So let me share with you one of her studies. And again, I think you've already read this. So what she did was going to a group of 10-year-olds and randomly divided them into
+
+489
+01:06:32,170 --> 01:06:43,830
+two groups. The first group did a puzzle, which they completed successfully, each one individually. And at the end, for each one, when she completed the puzzle, she would
+
+490
+01:06:43,830 --> 01:06:56,930
+say um wow you're so intelligent so smart and of course they felt good about it terrific the
+
+491
+01:06:56,930 --> 01:07:04,750
+second group did the exact same puzzle succeeded did well and at the end of it said wow you put
+
+492
+01:07:04,750 --> 01:07:11,930
+so much effort into it you worked so hard and randomly divided into these two groups one
+
+493
+01:07:11,930 --> 01:07:22,410
+smart intelligent one effort hard work and then she had a second part to the study in that second part the participant had to choose between two
+
+494
+01:07:22,410 --> 01:07:34,370
+puzzles one puzzle they were told was relatively easy one they could do well the other one was extremely hard but they could really learn a lot from it
+
+495
+01:07:37,470 --> 01:07:43,630
+from the group that was told that they were smart or smart and intelligent 50
+
+496
+01:07:43,630 --> 01:07:50,570
+50% chose the easy one, 50% chose the hard one where they could learn a lot.
+
+497
+01:07:50,690 --> 01:07:55,850
+From the group that was told that they were hardworking, that they put in a lot of effort,
+
+498
+01:07:56,290 --> 01:08:00,430
+90% chose the hard one, the one that they could learn from.
+
+499
+01:08:01,630 --> 01:08:09,630
+So this was part two of the study. Part three, she brought them in again and this time had them take or do a puzzle which
+
+500
+01:08:09,630 --> 01:08:15,910
+was very difficult, which was essentially unsolvable and she wanted to see the
+
+501
+01:08:15,910 --> 01:08:22,310
+reaction of the two groups. The group that was told how smart they were, how
+
+502
+01:08:22,310 --> 01:08:29,400
+intelligent they were, that group didn't persist much and experienced a lot of
+
+503
+01:08:29,400 --> 01:08:40,740
+frustration and then would give up very quickly on that puzzle. In contrast the group that was told earlier that they worked hard and they put in a lot of
+
+504
+01:08:40,740 --> 01:08:51,800
+effort persisted much more and actually enjoyed the process even though they didn't end up solving the puzzle but they enjoyed the process and they worked
+
+505
+01:08:51,800 --> 01:08:58,680
+harder look at this slight manipulation simply one sentence oh you're so smart
+
+506
+01:08:58,680 --> 01:09:07,770
+oh you're working so hard one sentence lead to this significant difference in
+
+507
+01:09:09,850 --> 01:09:19,490
+her words. Emphasizing effort gives the child a variable that they can control. They come
+
+508
+01:09:19,490 --> 01:09:26,070
+to see themselves as in control of their success. Emphasizing natural intelligence takes it
+
+509
+01:09:26,070 --> 01:09:32,290
+out of the child control and it provides no good recipe for responding to a failure.
+
+510
+01:09:33,110 --> 01:09:39,990
+Essentially what happens when you focus only on the intelligence, on how smart you are,
+
+511
+01:09:39,990 --> 01:09:46,510
+you're creating the perfectionist schema as opposed to a schema that focuses on the journey,
+
+512
+01:09:46,850 --> 01:09:58,550
+effort, hard work. She continues, when you praise kids' intelligence and then they fail, they think they're not smart anymore and they lose interest in their work. In contrast,
+
+513
+01:09:58,870 --> 01:10:05,630
+kids praised for effort show no impairment and often are energized in the face of difficulty.
+
+514
+01:10:05,630 --> 01:10:12,940
+What a difference, just based on these two approaches.
+
+515
+01:10:13,700 --> 01:10:17,760
+A person who is praised for their intelligence creates this schema.
+
+516
+01:10:18,180 --> 01:10:23,900
+Either I'm intelligent or I'm not. And I'm afraid of not being intelligent, so I'll choose the easier task.
+
+517
+01:10:24,780 --> 01:10:30,140
+And when I can't do something, it's an attack, it's an assault on my schema.
+
+518
+01:10:31,600 --> 01:10:43,600
+Right? It's a deviation from the straight and narrow. In contrast, if effort is most important, okay, let me see what's around the corner here. Hey, I'm learning a lot now. This is wonderful. This is fun.
+
+519
+01:10:45,870 --> 01:10:56,850
+Because with one, it's a fixed mindset, in Dweck's words. And the other is a malleable, changing, ongoing, developing mindset.
+
+520
+01:10:58,010 --> 01:10:59,530
+Wonder is fear of failure.
+
+521
+01:11:00,370 --> 01:11:03,850
+Because I want to be smart. It's fun being called smart and intelligent.
+
+522
+01:11:04,910 --> 01:11:06,690
+I don't want to threaten the schema.
+
+523
+01:11:08,970 --> 01:11:17,930
+Versus working hard, focusing on the process, when the excellence schema becomes the dominant modus operandi.
+
+524
+01:11:21,850 --> 01:11:26,430
+Okay, so how do we overcome perfectionism?
+
+525
+01:11:27,350 --> 01:11:38,650
+What do we do about it, if we have it? And again, remember, there is no perfect perfectionist, there is no perfect person committed to excellence. You need to choose in your life where you're happy and where you think you can be happier.
+
+526
+01:11:39,670 --> 01:11:45,410
+This may not even speak to you. This for you may be just interesting academically or it may be deeply personal.
+
+527
+01:11:48,050 --> 01:11:52,670
+So how do we become more and more of the excellence schema?
+
+528
+01:11:55,450 --> 01:12:05,510
+First, it is about self-awareness. It's about understanding. For me a big breakthrough was understanding, hey, I'm actually defensive and I don't want to be defensive
+
+529
+01:12:06,370 --> 01:12:15,590
+because I know that it hurts intimacy and relationships. And that's when I started the real work on it. And that has improved and continues to improve my relationship.
+
+530
+01:12:16,910 --> 01:12:19,790
+Or, oh, look at my reaction to failure.
+
+531
+01:12:20,190 --> 01:12:28,270
+Look at how afraid I am of hearing a no. Look at how afraid I am of being rejected. Look at how afraid I am of coping and trying.
+
+532
+01:12:28,970 --> 01:12:35,750
+So being aware of it. And if you want to improve your forehand in tennis, You first need to be aware of what it is that you want to improve.
+
+533
+01:12:36,350 --> 01:12:40,170
+So that's the first step. And that's easier said than done.
+
+534
+01:12:40,550 --> 01:12:48,490
+Let me show you a quick example of someone who perhaps is not fully aware of her weaknesses.
+
+535
+01:13:25,760 --> 01:13:26,960
+Mr. Jock full of nuts?
+
+536
+01:13:30,320 --> 01:13:37,780
+See, quick, all right. What is this, a freaking inquisition? Can a guy have a nice hot cup of coffee when he wants it? We all live in tea land, where it's the capital of crime to even say the word coffee.
+
+537
+01:13:38,800 --> 01:13:40,420
+Okay, Gitterbug, get a hold of yourself.
+
+538
+01:13:41,480 --> 01:13:42,820
+Don't tell me to get a hold of myself.
+
+539
+01:13:43,500 --> 01:13:43,820
+Fine.
+
+540
+01:13:50,220 --> 01:13:52,600
+Take a look in the mirror, because you've got a little crazy on your face.
+
+541
+01:13:56,270 --> 01:13:57,170
+Good to meet you.
+
+542
+01:13:59,100 --> 01:14:01,660
+Expert, but I think you have a little addiction problem.
+
+543
+01:14:02,680 --> 01:14:09,440
+No tears on the damask.
+
+544
+01:14:12,000 --> 01:14:12,320
+Addiction?
+
+545
+01:14:13,440 --> 01:14:14,080
+Oh, no.
+
+546
+01:14:14,500 --> 01:14:16,520
+No, no, I don't have an addiction. Thank you very much.
+
+547
+01:14:19,920 --> 01:14:20,660
+I'm fine. I'm fine.
+
+548
+01:14:21,120 --> 01:14:21,400
+I'm fine.
+
+549
+01:14:23,080 --> 01:14:26,720
+Now, listen to me. The first thing you have to do is admit that you have a problem.
+
+550
+01:14:37,820 --> 01:14:39,160
+Now, you are really in charge.
+
+551
+01:14:43,660 --> 01:14:44,780
+Why is it so good to me?
+
+552
+01:14:47,260 --> 01:14:49,660
+Karen, I can't do it. I'm hooked on the junk.
+
+553
+01:14:50,060 --> 01:15:00,530
+Well, hang up. I'll just have to get used to drinking my daily strength.
+
+554
+01:15:01,270 --> 01:15:05,340
+You're best to try to wake it up.
+
+555
+01:15:07,700 --> 01:15:13,320
+Okay, Karen. together we can do this. Let me just have one last cup. Half a cup. How about you drink a cup
+
+556
+01:15:13,320 --> 01:15:28,390
+in a lecture time? Okay. When will the lambs stop screaming? So whether it's dealing with addiction
+
+557
+01:15:28,390 --> 01:15:33,890
+or dealing with any issue in our lives, perfectionism, or whether it's improving
+
+558
+01:15:33,890 --> 01:15:45,070
+something, first step is awareness. Second step is, there's five more minutes by the way,
+
+559
+01:15:45,130 --> 01:15:49,270
+those of you are looking at this clock, it's five minutes fast, or four more minutes.
+
+560
+01:15:49,590 --> 01:15:57,770
+four more minutes. Focus on and reward effort. What Carol Dweck showed was that when we focus
+
+561
+01:15:57,770 --> 01:16:08,950
+on effort, people's effort, we're able to change a schema that has been ingrained there and that has been there very often for years. So with ourselves or with other people, it's
+
+562
+01:16:08,950 --> 01:16:16,390
+about focusing on the journey, focusing on and rewarding ourselves at times even for failure,
+
+563
+01:16:16,390 --> 01:16:28,230
+for trying. And within a few hours, what Carol Dweck has seen, teaching people that their mind is malleable, teaching them actually about neuroplasticity, that it's not fixed,
+
+564
+01:16:28,550 --> 01:16:39,380
+we can bring about change. Active acceptance. Karen Horney, whom I consider one of the mothers
+
+565
+01:16:39,380 --> 01:16:45,320
+of positive psychology, has done a lot of work on neurosis. And one of the things that
+
+566
+01:16:45,320 --> 01:16:53,820
+she found was that neurosis that we have never really goes away it's always part of us it becomes
+
+567
+01:16:53,820 --> 01:17:00,400
+more manageable but it's always there and perfectionism at the extreme is a form of
+
+568
+01:17:00,400 --> 01:17:11,600
+neurosis so the thing is to accept that it will always be there I always have the tendency for perfectionism and it's okay however whereas before I was here on the extreme of perfectionism
+
+569
+01:17:11,600 --> 01:17:17,520
+now much closer to the excellence extreme and it's a lifelong it's a it's
+
+570
+01:17:17,520 --> 01:17:29,520
+an ongoing process it's an ongoing process and the and the key here is to accept that it will always be part of one's life and then to say alright so
+
+571
+01:17:29,520 --> 01:17:41,040
+what do I do now in other words it is about then taking action behavior so for For example, it's about coping, putting ourselves on the line.
+
+572
+01:17:41,140 --> 01:17:52,760
+What I did initially, when I first realized the perfectionism and my defensiveness, I would go out of my way and solicit criticism, and I would ask people, so give me feedback
+
+573
+01:17:52,760 --> 01:18:00,340
+about it. And when I received negative feedback, things that were actually deviations from the straight
+
+574
+01:18:00,340 --> 01:18:06,840
+line I literally held myself from you know about pouncing back you know the
+
+575
+01:18:06,840 --> 01:18:17,940
+best form of defense is attack very often for perfectionists and slowly I got used to it and I became far less defensive and was able to create much
+
+576
+01:18:17,940 --> 01:18:25,860
+higher levels of intimacy or I put myself on the line in other areas where I potentially would experience a no.
+
+577
+01:18:26,180 --> 01:18:30,520
+So let me end with a quick story.
+
+578
+01:18:32,350 --> 01:18:34,630
+Her name was Brittany.
+
+579
+01:18:36,420 --> 01:18:39,700
+She was a showgirl, at least to me she was.
+
+580
+01:18:40,080 --> 01:18:49,540
+We met freshman week and we really hit it off. We spent almost the entire freshman week out and at the end of freshman week, wanting to overcome my perfectionism,
+
+581
+01:18:49,760 --> 01:18:53,540
+I asked her out and she said no.
+
+582
+01:18:54,680 --> 01:18:58,900
+It surprised me, it floored me, it hurt me, but she said no.
+
+583
+01:18:59,400 --> 01:19:08,360
+My sophomore year, we met again, and again I asked her out, and this time she said no.
+
+584
+01:19:10,040 --> 01:19:14,540
+Junior year, toward the end of my sophomore year, junior year, I dated someone,
+
+585
+01:19:15,180 --> 01:19:26,960
+so Brittany was out of the equation, and then we met again my senior year. we had an amazing conversation by that time I'd already studied psychology I
+
+586
+01:19:27,600 --> 01:19:32,640
+could also read her body language she did a lot of this with her hair and I
+
+587
+01:19:32,640 --> 01:19:40,200
+knew that she really liked me and I asked her out and she said no and I'm still
+
+588
+01:19:40,200 --> 01:19:48,040
+here with you and that was an important learning process learn to fail or fail to learn I'll see you next week

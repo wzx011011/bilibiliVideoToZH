@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "title": "Harvard Positive Psychology - episode-18",
+  "episode": 18,
+  "source_duration_seconds": 4669.2905,
+  "video": {
+    "path": "video/episode-18.dual-audio.bilingual-subtitles.mp4",
+    "video_codec": "av1",
+    "audio_tracks": [
+      {
+        "language": "zho",
+        "title": "Mandarin dub",
+        "default": true
+      },
+      {
+        "language": "eng",
+        "title": "Original English",
+        "default": false
+      }
+    ],
+    "subtitle_tracks": [
+      {
+        "language": "zho",
+        "title": "Chinese subtitles",
+        "default": true
+      },
+      {
+        "language": "eng",
+        "title": "English subtitles",
+        "default": false
+      }
+    ]
+  },
+  "audio": [
+    "audio/episode-18.zh-CN.dub.m4a",
+    "audio/episode-18.en.original.m4a"
+  ],
+  "subtitles": [
+    "subtitles/episode-18.zh-CN.srt",
+    "subtitles/episode-18.en.srt"
+  ],
+  "revision": {
+    "subtitle_source": "ocr",
+    "ocr_model": "rapidocr",
+    "tts_engine": "gpt-sovits",
+    "reference_audio": "cn-pro-ref.wav",
+    "speech_tempo": 0.98,
+    "max_tempo": 1.05,
+    "chinese_subtitle_cues": 540,
+    "review_overlay": null
+  }
+}
