@@ -318,9 +318,10 @@ function selectType(key) {
         ${f.label}<span class="hint" style="margin-left:4px">${f.hint||''}</span></label>`;
     }
     if (f.type === 'choice') {
+      const labels = {original:'原片时间轴', narration:'中文旁白', podcast:'中文播客', subtitle_only:'原声+中文字幕', cover:'封面图'};
       return `<div class="field"><label>${f.label}</label><select id="param-${f.key}">
-        <option value="">默认(${t.default_render})</option>
-        ${(f.choices||[]).map(c=>`<option>${c}</option>`).join('')}</select></div>`;
+        <option value="">默认(${labels[t.default_render]||t.default_render})</option>
+        ${(f.choices||[]).filter(c=>c!==t.default_render).map(c=>`<option value="${c}">${labels[c]||c}</option>`).join('')}</select></div>`;
     }
     return `<div class="field"><label>${f.label}${f.required?' <span class="req">*</span>':''}</label>
       <input id="param-${f.key}" placeholder="${f.hint||''}"></div>`;

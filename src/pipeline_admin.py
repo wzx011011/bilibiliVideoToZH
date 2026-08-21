@@ -88,8 +88,10 @@ _TYPE_COMMON_PARAMS = [
      "required": True, "hint": "本地路径,如 youtube/xxx/a.mp4"},
     {"key": "title", "label": "封面标题(cover 模式用)", "type": "str",
      "required": False},
-    {"key": "render_mode", "label": "渲染模式", "type": "choice",
-     "choices": ["original", "cover"], "required": False},
+    {"key": "render_mode", "label": "成片模式", "type": "choice",
+     "choices": ["original", "narration", "podcast", "subtitle_only"],
+     "required": False,
+     "hint": "original=原片时间轴 narration=中文旁白 podcast=中文播客 subtitle_only=原声+中文字幕"},
 ]
 
 VIDEO_TYPES: dict[str, dict] = {
@@ -803,7 +805,18 @@ def ex_render(task: Task) -> str:
     out.parent.mkdir(parents=True, exist_ok=True)
     audio = Path(task.params.get("_audio_path") or (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
     srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
-    if mode == "original":
+    if mode == "subtitle_only":
+        # 原声保留 + 中文字幕烧录(不替换音轨)
+        srt_escaped = str(srt.resolve()).replace("\\", "/").replace(":", "\:")
+        vf = (f"subtitles='{srt_escaped}':force_style='Fontname=Microsoft YaHei,"
+              f"FontSize=22,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,"
+              f"BorderStyle=3,Outline=2,Alignment=2,MarginV=30'")
+        cmd = [str(FFMPEG), "-y", "-i", str(_src(task)),
+               "-vf", vf, "-c:v", "libx264", "-crf", "20", "-preset", "medium",
+               "-c:a", "copy", str(out)]
+        task.log(f"$ subtitle_only 渲染: {out.name}")
+        subprocess.run(cmd, check=True, timeout=24*3600)
+    elif mode == "original":
         _run([VENV_PY, str(TOOL_DIR / "render_original.py"),
               "--video", str(_src(task)), "--audio", str(audio),
               "--srt", str(srt), "--watermark", "wzx", "-o", str(out)],
