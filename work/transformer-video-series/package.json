@@ -1,0 +1,26 @@
+{
+  "name": "transformer-video-series",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "check": "tsc --noEmit",
+    "timing:validate": "python scripts/validate-timing.py public/audio/transformer-beginner-10min-v3.neural.timing.json",
+    "pipeline:terms": "powershell -ExecutionPolicy Bypass -File scripts/render-pipeline.ps1 -Profile terms",
+    "pipeline:semantic": "powershell -ExecutionPolicy Bypass -File scripts/render-pipeline.ps1 -Profile semantic"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.507",
+    "@remotion/media-utils": "4.0.507",
+    "lucide-react": "^0.468.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.507"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.2"
+  }
+}

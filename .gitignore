@@ -26,6 +26,12 @@ env/
 *.ogg
 *.opus
 
+# ============ Transformer video project artifacts ============
+work/transformer-video-series/node_modules/
+work/transformer-video-series/out/
+work/transformer-video-series/preview/
+work/transformer-video-series/audio-capture/
+
 # ============ Models & weight caches ============
 model-cache/
 **/models--*/
@@ -38,6 +44,7 @@ model-cache/
 
 # ============ Bundled binaries (use system tools instead) ============
 work/video-tools/
+work/gpt-sovits/
 *.exe
 *.dll
 

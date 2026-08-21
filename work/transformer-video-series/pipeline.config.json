@@ -1,0 +1,20 @@
+{
+  "project": "transformer-video-series",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "profiles": {
+    "semantic": {
+      "composition": "Transformer-01-Beginner-10min-V2",
+      "audio": "public/audio/transformer-beginner-10min-v2.neural.mp3",
+      "timing": "public/audio/transformer-beginner-10min-v2.neural.timing.json",
+      "output": "out/transformer-beginner-10min-v3-semantic-focus.mp4"
+    },
+    "terms": {
+      "composition": "Transformer-01-Beginner-Terms-V3",
+      "audio": "public/audio/transformer-beginner-10min-v3.neural.mp3",
+      "timing": "public/audio/transformer-beginner-10min-v3.neural.timing.json",
+      "output": "out/transformer-beginner-terms-v3.mp4"
+    }
+  }
+}
