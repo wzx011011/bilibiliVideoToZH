@@ -119,6 +119,26 @@ VIDEO_TYPES: dict[str, dict] = {
         "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
                    "gen_audio", "assemble_audio", "zh_subtitle", "render"],
     },
+    "en_vtt_2_narration": {
+        "key": "en_vtt_2_narration", "name": "英文访谈·多人·中文旁白",
+        "desc": "按语义合并成30~90秒段落,中文主音轨+英文原声低混,原片画面保留。",
+        "dims": {"subtitle": "en_vtt", "speakers": 2, "mode": "narration"},
+        "default_render": "original",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "vtt_path", "label": "英文字幕 VTT 路径", "type": "str", "required": True},
+            {"key": "anchors", "label": "声纹锚点 JSON", "type": "str", "required": True,
+             "hint": '{"A":[起,止],"B":[起,止]}'},
+            {"key": "clone_original", "label": "自动克隆原片人声", "type": "bool", "required": False,
+             "hint": "开启后自动用锚点截原片人声"},
+            {"key": "voice_A", "label": "说话人A音色", "type": "voice", "required": False},
+            {"key": "voice_B", "label": "说话人B音色", "type": "voice", "required": False},
+            {"key": "translate_model", "label": "翻译模型", "type": "str", "required": False},
+            {"key": "original_db", "label": "英文原声音量(dB)", "type": "str", "required": False,
+             "hint": "默认 -22"},
+        ],
+        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
+                   "narration_runs", "gen_audio", "assemble_narration", "zh_subtitle", "render"],
+    },
     "en_vtt_1": {
         "key": "en_vtt_1", "name": "英文演讲/讲座(单人)",
         "desc": "有英文字幕(VTT)的单人视频。Ollama 翻译 → CosyVoice 单音色"
@@ -195,6 +215,8 @@ STAGE_LABELS = {
     "ocr_zh": "OCR 中文字幕",
     "cut_items": "文本切块",
     "gen_audio": "CosyVoice 配音",
+    "narration_runs": "语义段落合并",
+    "assemble_narration": "旁白+原声混音",
     "assemble_audio": "时间轴合成",
     "zh_subtitle": "ASR 中文字幕",
     "render": "渲染成品",
@@ -649,11 +671,30 @@ def _clone_original_voices(task: Task) -> dict[str, str]:
     return out
 
 
+def ex_narration_runs(task: Task) -> str:
+    """细槽译文合并成30~75秒自然旁白段。"""
+    from narration import build_runs, save_runs
+    w = task.dir / "work"
+    slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+    zh = json.loads((w / "slots_zh.json").read_text(encoding="utf-8"))
+    runs = build_runs(slots, zh, max_duration=75.0, max_gap=5.0)
+    nd = w / "narration"
+    nd.mkdir(parents=True, exist_ok=True)
+    save_runs(runs, nd / "runs.json")
+    items = [{"id": r["id"], "speaker": r["speaker"], "text": r["text"]} for r in runs]
+    (nd / "items.json").write_text(json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
+    task.params["_narration"] = True
+    task.save()
+    return f"{len(slots)} 槽 → {len(runs)} 个语义段"
+
+
 def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
     """构造 generate_voice 的 items/refs 输入。"""
     w = task.dir / "work"
     dims = VIDEO_TYPES[task.type]["dims"]
-    if dims["subtitle"] == "zh_hard":
+    if task.params.get("_narration"):
+        items = json.loads((w / "narration" / "items.json").read_text(encoding="utf-8"))
+    elif dims["subtitle"] == "zh_hard":
         items = json.loads((w / "items.json").read_text(encoding="utf-8"))
     else:
         slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
@@ -688,9 +729,10 @@ def ex_gen_audio(task: Task) -> str:
     if VIDEO_TYPES[task.type]["dims"]["subtitle"] == "zh_hard":
         concat = task.dir / "04-中文音频" / f"{task.params['slug']}-zh.wav"
         concat.parent.mkdir(parents=True, exist_ok=True)
+    parts_dir = w / ("narration/parts" if task.params.get("_narration") else "parts")
     base_args = ["--items-json", str(items_path),
                  "--refs-json", str(refs_path),
-                 "--out-dir", str(w / "parts")]
+                 "--out-dir", str(parts_dir)]
     args = list(base_args) + (["--concat-out", str(concat)] if concat else [])
     try:
         _wsl_run("work/voice-clone-demo/generate_voice.py", args, task)
@@ -700,6 +742,25 @@ def ex_gen_audio(task: Task) -> str:
              timeout=48 * 3600)
     n = len(list((w / "parts").glob("*.wav")))
     return f"{n} 段配音" + ("(已拼接整轨)" if concat else "")
+
+
+def ex_assemble_narration(task: Task) -> str:
+    w = task.dir / "work"
+    outdir = task.dir / "04-中文音频"
+    outdir.mkdir(parents=True, exist_ok=True)
+    narration = outdir / f"{task.params['slug']}-旁白.wav"
+    mixed = outdir / f"{task.params['slug']}-旁白-原声低混.wav"
+    _run([VENV_PY, str(TOOL_DIR / "assemble_narration.py"),
+          "--runs", str(w / "narration" / "runs.json"),
+          "--parts-dir", str(w / "narration" / "parts"),
+          "--video", str(_src(task)),
+          "--narration-out", str(narration), "--mixed-out", str(mixed),
+          "--original-db", str(task.params.get("original_db") or "-22")], task,
+         timeout=3600)
+    task.params["_audio_path"] = str(mixed)
+    task.set_artifact("zh_audio", mixed)
+    task.save()
+    return f"旁白主轨+原声低混 {mixed.stat().st_size // 1048576}MB"
 
 
 def ex_assemble_audio(task: Task) -> str:
@@ -719,7 +780,7 @@ def ex_assemble_audio(task: Task) -> str:
 
 def ex_zh_subtitle(task: Task) -> str:
     slug = task.params["slug"]
-    audio = task.dir / "04-中文音频" / f"{slug}-zh.wav"
+    audio = Path(task.params.get("_audio_path") or (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
     if not audio.exists():
         raise RuntimeError(f"中文音频不存在: {audio.name}")
     if task.artifacts["zh_audio"]["status"] != P_DONE:
@@ -740,7 +801,7 @@ def ex_render(task: Task) -> str:
     slug = task.params["slug"]
     out = task.dir / "05-成品" / f"{slug}-final.mp4"
     out.parent.mkdir(parents=True, exist_ok=True)
-    audio = task.dir / "04-中文音频" / f"{slug}-zh.wav"
+    audio = Path(task.params.get("_audio_path") or (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
     srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
     if mode == "original":
         _run([VENV_PY, str(TOOL_DIR / "render_original.py"),
@@ -768,6 +829,8 @@ EXECUTORS = {
     "ocr_zh": ex_ocr_zh,
     "cut_items": ex_cut_items,
     "gen_audio": ex_gen_audio,
+    "narration_runs": ex_narration_runs,
+    "assemble_narration": ex_assemble_narration,
     "assemble_audio": ex_assemble_audio,
     "zh_subtitle": ex_zh_subtitle,
     "render": ex_render,
