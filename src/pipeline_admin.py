@@ -181,13 +181,21 @@ VIDEO_TYPES: dict[str, dict] = {
     },
     "none_2": {
         "key": "none_2", "name": "无字幕多人视频",
-        "desc": "无字幕多人视频。当前按单音色整片处理(多人声纹分离需锚点,"
-                "暂不自动;可先按单人跑或后续增强)。",
+        "desc": "无字幕多人视频。whisper 英文转写 → campplus 声纹分离(需锚点)"
+                " → 翻译 → 双音色配音 → 原片保留渲染。",
         "dims": {"subtitle": "none", "speakers": 2},
         "default_render": "original",
         "params": _TYPE_COMMON_PARAMS + [
-            {"key": "voice_A", "label": "音色", "type": "voice",
+            {"key": "anchors", "label": "声纹锚点 JSON", "type": "str",
+             "required": True,
+             "hint": '{"A":[起,止],"B":[起,止]} 从原片各选一段单人发言'},
+            {"key": "clone_original", "label": "自动克隆原片人声", "type": "bool",
              "required": False},
+            {"key": "voice_A", "label": "说话人A音色", "type": "voice",
+             "required": False},
+            {"key": "voice_B", "label": "说话人B音色", "type": "voice",
+             "required": False,
+             "hint": "多人必填(或开自动克隆)"},
             {"key": "translate_model", "label": "翻译模型", "type": "str",
              "required": False},
         ],
@@ -539,7 +547,18 @@ def ex_en_slots(task: Task) -> str:
               "--audio", str(w / "audio16k.wav"),
               "--anchors", anchors,
               "--out", str(slots_path)], task, timeout=1800)
-    else:  # none → whisper
+    elif dims["subtitle"] == "none" and dims["speakers"] >= 2:
+        # 无字幕多人:whisper 成槽 → campplus 声纹标注
+        _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
+              str(w / "audio16k.wav"), "-o", str(slots_path)], task,
+             timeout=24 * 3600)
+        anchors_json = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
+        _run([VC_PY, str(VC_DIR / "interview_diarize.py"),
+              "--audio", str(w / "audio16k.wav"),
+              "--slots", str(slots_path),
+              "--anchors", anchors_json,
+              "--out", str(slots_path)], task, timeout=1800)
+    else:  # none 单人 → whisper
         _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
               str(w / "audio16k.wav"), "-o", str(slots_path)], task,
              timeout=24 * 3600)
@@ -797,6 +816,28 @@ def ex_zh_subtitle(task: Task) -> str:
     return f"{n} 条字幕"
 
 
+def ex_render_podcast(task: Task) -> str:
+    """中文播客版:章节画面 + 双音色音频 + 中文字幕。"""
+    from render_podcast import prepare_chapters, render_podcast as rp
+    slug = task.params["slug"]
+    w = task.dir / "work"
+    runs = json.loads((w / "narration" / "runs.json").read_text(encoding="utf-8"))
+    voices = {}
+    for spk in sorted({r["speaker"] for r in runs}):
+        name = task.params.get(f"voice_{spk}") or task.params.get("voice_A") or "doubao-taotao"
+        voices[spk] = name
+    title = task.params.get("title") or slug
+    chapters = prepare_chapters(runs, voices, w / "chapters", title)
+    audio = Path(task.params.get("_audio_path") or
+                 (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
+    srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
+    out = task.dir / "05-成品" / f"{slug}-podcast.mp4"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    rp(chapters, audio, srt, out, task.params.get("watermark") or "wzx")
+    task.set_artifact("final_video", out)
+    return f"播客版 {out.stat().st_size // 1048576}MB"
+
+
 def ex_render(task: Task) -> str:
     t = VIDEO_TYPES[task.type]
     mode = task.params.get("render_mode") or t["default_render"]
@@ -805,6 +846,8 @@ def ex_render(task: Task) -> str:
     out.parent.mkdir(parents=True, exist_ok=True)
     audio = Path(task.params.get("_audio_path") or (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
     srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
+    if mode == "podcast":
+        return ex_render_podcast(task)
     if mode == "subtitle_only":
         # 原声保留 + 中文字幕烧录(不替换音轨)
         srt_escaped = str(srt.resolve()).replace("\\", "/").replace(":", "\:")
@@ -847,6 +890,7 @@ EXECUTORS = {
     "assemble_audio": ex_assemble_audio,
     "zh_subtitle": ex_zh_subtitle,
     "render": ex_render,
+    "render_podcast": ex_render_podcast,
 }
 
 
