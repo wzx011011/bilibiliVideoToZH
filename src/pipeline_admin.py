@@ -118,8 +118,16 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "translate_model", "label": "翻译模型", "type": "str",
              "required": False},
         ],
-        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
-                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
+        "stages": ["ensure_source",
+                   "extract_audio",
+                   "en_slots",
+                   "align_speakers",
+                   "translate",
+                   "audit_translation",
+                   "gen_audio",
+                   "assemble_audio",
+                   "zh_subtitle",
+                   "render",],
     },
     "en_vtt_2_narration": {
         "key": "en_vtt_2_narration", "name": "英文访谈·多人·中文旁白",
@@ -138,8 +146,17 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "original_db", "label": "英文原声音量(dB)", "type": "str", "required": False,
              "hint": "默认 -22"},
         ],
-        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
-                   "narration_runs", "gen_audio", "assemble_narration", "zh_subtitle", "render"],
+        "stages": ["ensure_source",
+                   "extract_audio",
+                   "en_slots",
+                   "align_speakers",
+                   "translate",
+                   "audit_translation",
+                   "narration_runs",
+                   "gen_audio",
+                   "assemble_narration",
+                   "zh_subtitle",
+                   "render",],
     },
     "en_vtt_1": {
         "key": "en_vtt_1", "name": "英文演讲/讲座(单人)",
@@ -161,8 +178,15 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "translate_model", "label": "翻译模型", "type": "str",
              "required": False},
         ],
-        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
-                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
+        "stages": ["ensure_source",
+                   "extract_audio",
+                   "en_slots",
+                   "translate",
+                   "audit_translation",
+                   "gen_audio",
+                   "assemble_audio",
+                   "zh_subtitle",
+                   "render",],
     },
     "none_1": {
         "key": "none_1", "name": "无字幕单人视频",
@@ -176,8 +200,15 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "translate_model", "label": "翻译模型", "type": "str",
              "required": False},
         ],
-        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
-                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
+        "stages": ["ensure_source",
+                   "extract_audio",
+                   "en_slots",
+                   "translate",
+                   "audit_translation",
+                   "gen_audio",
+                   "assemble_audio",
+                   "zh_subtitle",
+                   "render",],
     },
     "none_2": {
         "key": "none_2", "name": "无字幕多人视频",
@@ -199,8 +230,15 @@ VIDEO_TYPES: dict[str, dict] = {
             {"key": "translate_model", "label": "翻译模型", "type": "str",
              "required": False},
         ],
-        "stages": ["ensure_source", "extract_audio", "en_slots", "translate",
-                   "gen_audio", "assemble_audio", "zh_subtitle", "render"],
+        "stages": ["ensure_source",
+                   "extract_audio",
+                   "en_slots",
+                   "translate",
+                   "audit_translation",
+                   "gen_audio",
+                   "assemble_audio",
+                   "zh_subtitle",
+                   "render",],
     },
     "zh_hard_1": {
         "key": "zh_hard_1", "name": "中文硬字幕视频(课程)",
@@ -221,7 +259,9 @@ STAGE_LABELS = {
     "ensure_source": "准备原片",
     "extract_audio": "提取音频",
     "en_slots": "英文字幕成槽",
+    "align_speakers": "词级对齐校声",
     "translate": "Ollama 翻译",
+    "audit_translation": "译文审查",
     "ocr_zh": "OCR 中文字幕",
     "cut_items": "文本切块",
     "gen_audio": "CosyVoice 配音",
@@ -585,6 +625,72 @@ def ex_translate(task: Task) -> str:
     return f"{len(zh)}/{len(slots)} 槽已译({model})"
 
 
+def ex_align_speakers(task: Task) -> str:
+    """词级对齐(ForcedAligner,WSL CPU) + 停顿切 utterance 的 campplus 重标注。
+
+    修复固定窗口声纹标注的边界归属错误;未安装对齐器时优雅跳过。
+    """
+    w = task.dir / "work"
+    vtt = Path(task.params["vtt_path"])
+    if not vtt.is_absolute():
+        vtt = ROOT / vtt
+    chk = _run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c",
+                "test -x ~/qwen-aligner-venv/bin/python && echo ok || echo missing"],
+               task, timeout=60)
+    if "missing" in chk:
+        return "跳过(WSL 未装 qwen-aligner-venv,沿用 campplus 标注)"
+
+    def wsl(p: Path) -> str:
+        s = str(p).replace("\\", "/")
+        m = re.match(r"^([A-Za-z]):/(.*)", s)
+        return f"/mnt/{m.group(1).lower()}/{m.group(2)}" if m else s
+
+    quoted = " ".join(f'"{a}"' for a in [
+        "/mnt/e/ai/bilibiliVideoToZH/src/align_worker.py",
+        "--audio", wsl(w / "audio16k.wav"),
+        "--vtt", wsl(vtt),
+        "--out", wsl(w / "words_align.json"),
+    ])
+    inner = (f"cd /mnt/e/ai/bilibiliVideoToZH && env HF_HUB_OFFLINE=1 "
+             f"~/qwen-aligner-venv/bin/python {quoted}")
+    _run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c", inner], task, timeout=4 * 3600)
+    anchors = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
+    _run([VC_PY, str(TOOL_DIR / "label_speakers.py"),
+          "--words", str(w / "words_align.json"),
+          "--audio", str(w / "audio16k.wav"),
+          "--slots", str(w / "slots.json"),
+          "--anchors", anchors,
+          "--out", str(w / "slots.json")], task, timeout=1800)
+    slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+    relabeled = sum(1 for s in slots if s.get("relabel_evidence"))
+    return f"{len(slots)} 槽(词级证据修正归属 {relabeled} 个)"
+
+
+def ex_audit_translation(task: Task) -> str:
+    """qwen3 逐槽对照英文源审查译文;系统性串位(MISMATCH 达阈值)则置失败。"""
+    w = task.dir / "work"
+    audit = w / "audit_translation.json"
+    audit.unlink(missing_ok=True)  # 每次重译后全量重审
+    try:
+        _run([VENV_PY, str(TOOL_DIR / "audit_translation.py"),
+              "--slots", str(w / "slots.json"),
+              "--zh", str(w / "slots_zh.json"),
+              "--out", str(audit)], task, timeout=6 * 3600)
+    except RuntimeError:
+        pass  # 退出码 2 = 审查不过;报告已落盘,下面读取后给出明确失败
+    if not audit.exists():
+        raise RuntimeError("译文审查未产出报告(检查 Ollama/qwen3 是否可用)")
+    result = json.loads(audit.read_text(encoding="utf-8"))
+    from collections import Counter
+    c = Counter(v.get("verdict") for v in result.values())
+    mm = c.get("MISMATCH", 0)
+    if mm >= 5:
+        raise RuntimeError(f"译文审查未通过: MISMATCH {mm} 项(疑似批量串位),"
+                           f"报告见 work/audit_translation.json")
+    return (f"{len(result)} 槽: MATCH {c.get('MATCH', 0)} / "
+            f"PARTIAL {c.get('PARTIAL', 0)} / MISMATCH {mm}")
+
+
 def _parse_srt(path: Path) -> list[tuple[float, float, str]]:
     content = path.read_text(encoding="utf-8")
     cues = []
@@ -881,7 +987,9 @@ EXECUTORS = {
     "ensure_source": ex_ensure_source,
     "extract_audio": ex_extract_audio,
     "en_slots": ex_en_slots,
+    "align_speakers": ex_align_speakers,
     "translate": ex_translate,
+    "audit_translation": ex_audit_translation,
     "ocr_zh": ex_ocr_zh,
     "cut_items": ex_cut_items,
     "gen_audio": ex_gen_audio,
@@ -988,6 +1096,16 @@ def env_selftest(need_model: str | None = None) -> dict:
         res["detail"].append("WSL CosyVoice(GPU) ✓")
     except Exception:
         res["detail"].append("WSL CosyVoice ✗(将回退 Windows CPU,速度约 1/3)")
+    try:
+        subprocess.run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c",
+                        "test -x ~/qwen-aligner-venv/bin/python"],
+                       check=True, timeout=30, capture_output=True)
+        res["force_aligner"] = True
+        res["detail"].append("ForcedAligner 词级对齐 ✓(align_speakers 阶段可用)")
+    except Exception:
+        res["detail"].append("ForcedAligner ✗(align_speakers 阶段将自动跳过;"
+                             "安装: WSL python3.12 -m venv ~/qwen-aligner-venv"
+                             " && pip install qwen-asr)")
     try:
         subprocess.run(["ssh", "nas", "true"], check=True, timeout=15,
                        capture_output=True)

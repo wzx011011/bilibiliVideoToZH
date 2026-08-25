@@ -138,8 +138,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "4012e80f-234c-4697-91a9-1ad13ad6ca3e",
       "reply_create_time": 1786330576,
-      "audio_bytes": 3280900,
-      "audio_duration": 619.073083,
+      "audio_bytes": 3288427,
+      "audio_duration": 621.049958,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -275,8 +275,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "d7b4be19-2984-4610-ad3e-e1a96096369a",
       "reply_create_time": 1786330648,
-      "audio_bytes": 2672943,
-      "audio_duration": 504.555458,
+      "audio_bytes": 2688810,
+      "audio_duration": 507.45525,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -412,8 +412,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "be9dd688-9557-44b7-b3a2-e9339cc9ebd2",
       "reply_create_time": 1786330694,
-      "audio_bytes": 2099076,
-      "audio_duration": 396.19275,
+      "audio_bytes": 2095915,
+      "audio_duration": 395.66825,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -549,8 +549,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "d994621e-cd47-4709-907a-a93a5261981d",
       "reply_create_time": 1786330732,
-      "audio_bytes": 2466773,
-      "audio_duration": 464.803833,
+      "audio_bytes": 2476090,
+      "audio_duration": 467.135708,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -686,8 +686,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "1ff397ac-29fe-4fe7-9b67-45bcca950df5",
       "reply_create_time": 1786330777,
-      "audio_bytes": 1883396,
-      "audio_duration": 355.833917,
+      "audio_bytes": 1903820,
+      "audio_duration": 360.108917,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -823,8 +823,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "da23cce2-963c-4a7a-9dd6-a793e724fa1a",
       "reply_create_time": 1786330814,
-      "audio_bytes": 2305066,
-      "audio_duration": 433.874458,
+      "audio_bytes": 2282794,
+      "audio_duration": 429.735625,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -960,8 +960,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "cb000458-e7b5-4ddd-9ab2-248ea8b4c318",
       "reply_create_time": 1786330859,
-      "audio_bytes": 2141111,
-      "audio_duration": 403.924292,
+      "audio_bytes": 2157545,
+      "audio_duration": 407.536125,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     },
     {
@@ -1001,8 +1001,8 @@
       "conversation_id": "38436939698567682",
       "reply_unique_key": "22055e07-579d-4424-8cde-b7f2b90a8b6b",
       "reply_create_time": 1786330900,
-      "audio_bytes": 650950,
-      "audio_duration": 122.852125,
+      "audio_bytes": 648948,
+      "audio_duration": 122.652917,
       "send_run_id": "351c5579-ff1f-41ed-ad21-15390f7aa6ea"
     }
   ],

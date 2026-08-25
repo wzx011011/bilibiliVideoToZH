@@ -73,3 +73,6 @@ Thumbs.db
 .idea/
 .vscode/
 .zcode/
+
+# ============ 演示产物（本地保存）============
+kinetic_demo/
