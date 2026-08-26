@@ -670,9 +670,13 @@ def ex_translate(task: Task) -> str:
     w = task.dir / "work"
     model = task.params.get("translate_model") or DEFAULT_TRANSLATE_MODEL
     zh_path = w / "slots_zh.json"
-    _run([VC_PY, str(VC_DIR / "translate_fine_batches.py"),
-          "--slots", str(w / "slots.json"), "--out", str(zh_path),
-          "--model", model], task, timeout=24 * 3600)
+    args = [VC_PY, str(VC_DIR / "translate_fine_batches.py"),
+            "--slots", str(w / "slots.json"), "--out", str(zh_path),
+            "--model", model]
+    # 播客链字数是软约束(自然语速),大批次换取更长语境
+    if VIDEO_TYPES[task.type]["dims"].get("mode") == "podcast":
+        args += ["--batch", "12"]
+    _run(args, task, timeout=24 * 3600)
     zh = json.loads(zh_path.read_text(encoding="utf-8"))
     slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
     if len(zh) < len(slots) * 0.9:
