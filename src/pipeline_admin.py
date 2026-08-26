@@ -633,7 +633,7 @@ def ex_en_slots(task: Task) -> str:
               str(w / "audio16k.wav"), "-o", str(slots_path)], task,
              timeout=24 * 3600)
         anchors_json = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
-        _run([VC_PY, str(VC_DIR / "interview_diarize.py"),
+        _run([VC_PY, str(TOOL_DIR / "diarize_slots.py"),
               "--audio", str(w / "audio16k.wav"),
               "--slots", str(slots_path),
               "--anchors", anchors_json,
