@@ -637,6 +637,8 @@ def ex_en_slots(task: Task) -> str:
     w = task.dir / "work"
     slots_path = w / "slots.json"
     dims = VIDEO_TYPES[task.type]["dims"]
+    # 片头 teaser/片头曲不含正片对话,成片不保留(声纹在快剪段极不稳)
+    skip_head = float(task.params.get("_skip_head") or 10.0)
     if dims["subtitle"] == "en_vtt" or task.params.get("vtt_path"):
         # 官方字幕成槽(YouTube auto captions 优于本地 whisper)
         anchors = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
@@ -664,6 +666,15 @@ def ex_en_slots(task: Task) -> str:
               str(w / "audio16k.wav"), "-o", str(slots_path)], task,
              timeout=24 * 3600)
     slots = json.loads(slots_path.read_text(encoding="utf-8"))
+    # 丢弃 skip_head 之前的槽(重排 id 保持连续)
+    dropped = [s for s in slots if s["end"] <= skip_head]
+    kept = [s for s in slots if s["end"] > skip_head]
+    if dropped:
+        for i, s in enumerate(kept):
+            s["id"] = i
+        slots_path.write_text(json.dumps(kept, ensure_ascii=False, indent=1),
+                              encoding="utf-8")
+        task.log(f"丢弃片头 {len(dropped)} 槽(teaser/片头曲, <{skip_head}s)")
     en_srt = task.dir / "02-英文字幕" / f"{task.params['slug']}-en.srt"
     en_srt.parent.mkdir(parents=True, exist_ok=True)
     _slots_to_srt(slots, en_srt)
@@ -1390,9 +1401,15 @@ def env_selftest(need_model: str | None = None) -> dict:
 # HTTP 服务
 # =====================================================================
 
+class _BodyRejected(Exception):
+    """_body() 已向客户端发送 400 后抛出,外层只吞掉不再响应。"""
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
         pass
+
+    MAX_BODY_BYTES = 2 * 1024 * 1024  # 2MB:标题/Cookie/批量任务足够
 
     def _json(self, obj, status=HTTPStatus.OK):
         body = json.dumps(obj, ensure_ascii=False).encode("utf-8")
@@ -1403,8 +1420,23 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def _body(self) -> dict:
-        n = int(self.headers.get("Content-Length") or 0)
-        return json.loads(self.rfile.read(n) or b"{}")
+        """读 JSON body;长度非法/超限/非 JSON 直接回 400 并抛 _BodyRejected。"""
+        raw = (self.headers.get("Content-Length") or "0").strip()
+        try:
+            n = int(raw)
+        except ValueError:
+            n = -1
+        if n < 0 or n > self.MAX_BODY_BYTES:
+            # 拒收超限请求:不读 body,避免 ThreadingHTTPServer 内存被吃满
+            self._json({"ok": False,
+                        "error": "请求体缺失、非法或超过大小限制"}, 400)
+            raise _BodyRejected()
+        data = self.rfile.read(n) if n else b""
+        try:
+            return json.loads(data or b"{}")
+        except Exception:
+            self._json({"ok": False, "error": "请求体不是合法 JSON"}, 400)
+            raise _BodyRejected()
 
     def do_GET(self):
         if self.path in ("/", "/admin", "/admin/"):
@@ -1469,6 +1501,8 @@ class Handler(BaseHTTPRequestHandler):
         try:
             import publish_module as _pub
             handled = _pub.dispatch(self)
+        except _BodyRejected:
+            return  # _body 已回 400
         except Exception as e:
             import traceback
             traceback.print_exc()
@@ -1480,6 +1514,12 @@ class Handler(BaseHTTPRequestHandler):
                 return
         if handled:
             return
+        try:
+            return self._do_post_impl()
+        except _BodyRejected:
+            return
+
+    def _do_post_impl(self):
         if self.path == "/api/tasks":
             return self._create()
         if self.path == "/api/voices":

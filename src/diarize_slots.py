@@ -74,8 +74,10 @@ def main() -> None:
     if cur:
         windows.append(cur)
 
-    # 2) 窗口分类(低置信沿用前窗,保持轮次连续性)
+    # 2) 窗口分类(低置信沿用前窗,保持轮次连续性;首窗无前值,
+    #    低置信则并入次窗而不是留错误起点——片头 teaser 快剪在此污染)
     prev = None
+    carry = []  # 低置信且无前窗可沿用的窗,等下一窗定label后一起写回
     stats = {k: 0.0 for k in anchors}
     for w in windows:
         s, e = w[0]["start"], w[-1]["end"]
@@ -86,12 +88,17 @@ def main() -> None:
             spk = max(sims, key=sims.get)
             margin = max(sims.values()) - sorted(sims.values())[-2] \
                 if len(sims) > 1 else 1.0
-        if margin < LOW_MARGIN and prev is not None:
-            spk = prev
+        if margin < LOW_MARGIN:
+            if prev is not None:
+                spk = prev
+            else:
+                carry.append(w)
+                continue
         prev = spk
-        for slot in w:
+        for slot in list(carry) + w:
             slot["speaker"] = spk
             slot["relabel_evidence"] = "campplus-window"
+        carry = []
         stats[spk] = stats.get(spk, 0.0) + (e - s)
 
     args.out.write_text(json.dumps(slots, ensure_ascii=False, indent=1),
