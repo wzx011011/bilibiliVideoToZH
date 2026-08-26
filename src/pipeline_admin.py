@@ -455,7 +455,14 @@ class Task:
         return self.log_path.read_text(encoding="utf-8").splitlines()[-n:]
 
     def mark_stage(self, key, status, error=None, note=None) -> None:
-        s = next(x for x in self.stages if x["key"] == key)
+        s = next((x for x in self.stages if x["key"] == key), None)
+        if s is None:
+            # 任务建于旧 stages 定义(代码升级新增阶段):动态追加,避免
+            # 代理上报未知 key 时 StopIteration 把任务打成 failed
+            s = {"key": key, "label": STAGE_LABELS.get(key, key),
+                 "status": P_PENDING, "started_at": None, "ended_at": None,
+                 "error": None, "note": None}
+            self.stages.append(s)
         if status == P_RUNNING:
             s["started_at"] = time.strftime("%H:%M:%S")
         if status in (P_DONE, P_FAILED):
