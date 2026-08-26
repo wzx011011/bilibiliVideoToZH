@@ -40,18 +40,26 @@ def main():
                     default=ROOT / "work/podcast-studio/public/audio_polished")
     ap.add_argument("--speed", type=float, default=1.0,
                     help="1.0=原速;英文参考克隆时代用 0.93 放慢")
+    ap.add_argument("--jobs", type=int, default=4,
+                    help="并行 ffmpeg 进程数(默认 4)")
     args = ap.parse_args()
-    parts_dir, out = args.parts_dir, args.out_dir
+    parts_dir, out = args.parts_dir, args.out
     speed = args.speed
     OUT = out
     OUT.mkdir(parents=True, exist_ok=True)
     parts = sorted(parts_dir.glob("item_*.wav"))
-    for p in parts:
+
+    def one(p: Path):
         dst = OUT / p.name.replace("item_", "")
         cmd = [str(FFMPEG), "-y", "-hide_banner", "-loglevel", "error",
                "-i", str(p), "-af", build_filter(speed), "-ar", "24000", "-ac", "1", str(dst)]
         subprocess.run(cmd, check=True)
-        print(f"  {dst.name}", flush=True)
+        return dst.name
+
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=args.jobs) as ex:
+        for name in ex.map(one, parts):
+            print(f"  {name}", flush=True)
     print(f"[✓] 精修 {len(parts)} 段 -> {OUT}")
 
 

@@ -66,11 +66,21 @@ def ref_wav(name: str) -> Path:
 
 
 def ref_spec(name: str) -> dict:
-    """生成 generate_fine_audio 兼容的 refs 条目(ref_wav 为绝对路径)。"""
+    """生成 generate_fine_audio 兼容的 refs 条目(ref_wav 为绝对路径)。
+
+    豆包批量收割的音色 meta.json 不带 ref_text(文本在 ref.txt),回退读取。
+    """
     meta = get(name)
     if not meta:
         raise KeyError(f"音色不存在: {name}")
-    return {"ref_wav": str(ref_wav(name)), "ref_text_en": meta["ref_text"]}
+    text = meta.get("ref_text")
+    if not text:
+        txt = voices_root() / name / "ref.txt"
+        if txt.exists():
+            text = txt.read_text(encoding="utf-8").strip()
+    if not text:
+        raise KeyError(f"音色 {name} 无参考文本(meta.ref_text/ref.txt 均缺)")
+    return {"ref_wav": str(ref_wav(name)), "ref_text_en": text}
 
 
 def refs_json_for(voices: dict[str, str]) -> dict:

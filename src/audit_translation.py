@@ -54,30 +54,57 @@ def main():
     ap.add_argument("--model", default="qwen3:14b")
     ap.add_argument("--fail-over", type=int, default=5,
                     help="MISMATCH 数达到该值则退出码 2(默认 5)")
+    ap.add_argument("--jobs", type=int, default=3,
+                    help="并发审查请求数(默认 3)")
+    ap.add_argument("--sample", type=int, default=0,
+                    help="抽样审查:每隔 N 槽审 1 个;发现 MISMATCH 自动全量(默认 0=全量)")
     args = ap.parse_args()
+
+    from concurrent.futures import ThreadPoolExecutor
 
     slots = json.loads(args.slots.read_text(encoding="utf-8"))
     zh_map = json.loads(args.zh.read_text(encoding="utf-8"))
     result = json.loads(args.out.read_text(encoding="utf-8")) if args.out.exists() else {}
 
-    for i, s in enumerate(slots):
-        key = str(i)
-        if key in result:
-            continue
-        zh = zh_map.get(key) or zh_map.get(str(s.get("id", i))) or ""
-        if not zh:
-            result[key] = {"verdict": "SKIP", "reason": "无译文"}
-            continue
-        try:
-            v = ask(args.model, s["text"], zh)
-        except Exception as e:
-            v = {"verdict": "ERROR", "reason": str(e)[:120]}
-        result[key] = {"verdict": v.get("verdict"), "reason": str(v.get("reason", ""))[:200],
-                       "speaker": s.get("speaker", "")}
+    def audit_batch(idx_list):
+        """并发审查一组槽(跳过已有结果/无译文)。"""
+        todo = []
+        for i in idx_list:
+            key = str(i)
+            if key in result:
+                continue
+            zh = zh_map.get(key) or zh_map.get(str(slots[i].get("id", i))) or ""
+            if not zh:
+                result[key] = {"verdict": "SKIP", "reason": "无译文"}
+                continue
+            todo.append((i, key, zh))
+        with ThreadPoolExecutor(max_workers=args.jobs) as ex:
+            futs = {ex.submit(ask, args.model, slots[i]["text"], zh): (i, key, zh)
+                    for i, key, zh in todo}
+            for f, (i, key, zh) in futs.items():
+                try:
+                    v = f.result()
+                except Exception as e:  # noqa: BLE001
+                    v = {"verdict": "ERROR", "reason": str(e)[:120]}
+                result[key] = {
+                    "verdict": v.get("verdict"),
+                    "reason": str(v.get("reason", ""))[:200],
+                    "speaker": slots[i].get("speaker", "")}
+                print(f"[{time.strftime('%H:%M:%S')}] {i:3d} {v.get('verdict'):8s} "
+                      f"{str(v.get('reason',''))[:60]}", flush=True)
         args.out.parent.mkdir(parents=True, exist_ok=True)
-        args.out.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"[{time.strftime('%H:%M:%S')}] {i:3d} {v.get('verdict'):8s} "
-              f"{str(v.get('reason',''))[:60]}", flush=True)
+        args.out.write_text(json.dumps(result, ensure_ascii=False, indent=1),
+                            encoding="utf-8")
+
+    all_idx = list(range(len(slots)))
+    if args.sample > 1:
+        audit_batch(all_idx[::args.sample])
+        mm = sum(1 for v in result.values() if v.get("verdict") == "MISMATCH")
+        if mm:
+            print(f"抽样发现 {mm} 个 MISMATCH,自动转入全量审查", flush=True)
+            audit_batch(all_idx)
+    else:
+        audit_batch(all_idx)
 
     from collections import Counter
     c = Counter(v["verdict"] for v in result.values())
