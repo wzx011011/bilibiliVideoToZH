@@ -388,6 +388,7 @@ def agent_release(task_id: str) -> None:
 # =====================================================================
 
 S_RUNNING, S_DONE, S_FAILED = "running", "done", "failed"
+S_CANCELED = "canceled"
 P_PENDING, P_RUNNING, P_DONE, P_FAILED = "pending", "running", "done", "failed"
 
 
@@ -410,6 +411,7 @@ class Task:
                           for k in ARTIFACT_SLOTS}
         self.dir = STUDIO / self.params["slug"]
         self.log_path = STATE_DIR / f"{self.id}.log"
+        self.cancel_requested = False
 
     # ---------- 持久化 ----------
 
@@ -438,6 +440,7 @@ class Task:
         t.stages, t.artifacts = d["stages"], d["artifacts"]
         t.dir = STUDIO / t.params["slug"]
         t.log_path = STATE_DIR / f"{t.id}.log"
+        t.cancel_requested = False
         return t
 
     # ---------- 日志/状态 ----------
@@ -533,7 +536,10 @@ class Task:
                 "created_at": self.created_at,
                 "progress": f"{done}/{len(self.stages)}",
                 "stages": [{"key": s["key"], "label": s["label"],
-                            "status": s["status"]} for s in self.stages],
+                            "status": s["status"],
+                            "started_at": s.get("started_at"),
+                            "ended_at": s.get("ended_at"),
+                            "error": s.get("error")} for s in self.stages],
                 "artifacts": self.artifacts}
 
     def detail(self) -> dict:
@@ -905,6 +911,18 @@ def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
             name = task.params.get(f"voice_{spk}") or \
                 task.params.get("voice_A") or "doubao-taotao"
             voices[spk] = name
+    # 人物选型档案:voice 缺省且 name_{A,B} 有人物名时,回填历史定案
+    try:
+        import voice_casting
+        for spk in speakers:
+            person = task.params.get(f"name_{spk}")
+            rec = voice_casting.get(person) if person else None
+            if rec and not task.params.get(f"voice_{spk}"):
+                voices[spk] = rec["voice"]
+                task.log(f"音色档案复用: {person} -> {rec['voice']}"
+                         f"({rec.get('picked_at', '')} 定案)")
+    except Exception as e:  # 档案失败不阻塞配音
+        task.log(f"音色档案查询失败(忽略): {str(e)[:60]}")
     refs_path = w / "refs.json"
     refs_path.write_text(json.dumps(voice_lib.refs_json_for(voices),
                                     ensure_ascii=False, indent=1),
@@ -1231,6 +1249,11 @@ EXECUTORS = {
 
 def run_task(task: Task) -> None:
     while task.current < len(task.stages):
+        if task.cancel_requested:
+            task.status = S_CANCELED
+            task.save()
+            task.log("⏹ 用户取消:当前阶段完成后停止")
+            return
         st = task.stages[task.current]
         if st["status"] == P_DONE:
             task.current += 1
@@ -1271,6 +1294,23 @@ def retry_stage(task: Task) -> bool:
                 start_runner(task)  # server 模式:重置后等 PC 代理领取
             return True
     return False
+
+
+def resume_task(task: Task) -> bool:
+    """从取消/失败状态继续:已完成的阶段跳过,从 current 位置接着跑。"""
+    if task.status not in (S_CANCELED, S_FAILED):
+        return False
+    for i, st in enumerate(task.stages):
+        if st["status"] == P_FAILED:
+            st["status"], st["error"] = P_PENDING, None
+            task.current = i
+            break
+    task.status = S_RUNNING
+    task.cancel_requested = False
+    task.save()
+    if MODE == "local":
+        start_runner(task)  # server 模式:重置后等 PC 代理领取
+    return True
 
 
 def list_tasks(newest_first: bool = True) -> list[Task]:
@@ -1436,6 +1476,17 @@ class Handler(BaseHTTPRequestHandler):
                 ok = retry_stage(t)
                 return self._json(
                     {"ok": ok, "error": None if ok else "任务不在失败状态"})
+            if action == "cancel":
+                if t.status != S_RUNNING:
+                    return self._json({"ok": False, "error": "任务不在执行中"})
+                t.cancel_requested = True
+                t.save()
+                return self._json({"ok": True,
+                                   "msg": "已请求取消,当前阶段完成后停止"})
+            if action == "resume":
+                ok = resume_task(t)
+                return self._json(
+                    {"ok": ok, "error": None if ok else "任务不在可恢复状态"})
             if action == "reupload":
                 slot = body.get("slot")
                 info = t.artifacts.get(slot or "")
