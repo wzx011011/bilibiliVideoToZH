@@ -1235,7 +1235,17 @@ async function pubSetup() {
   const r = await fetch('/api/pub/setup', {method:'POST',
     headers:{'Content-Type':'application/json'}, body: JSON.stringify({token})});
   const j = await r.json();
-  if (!j.ok && !(j.error||'').includes('已设置')) return showToast(j.error, true);
+  if (!j.ok) {
+    // 服务端已有口令:绝不覆盖本地存储,提示走重置流程
+    showToast(j.error || '设置失败', true);
+    if ((j.error||'').includes('已设置')) {
+      g('pub-setup').innerHTML =
+        '<h2>口令已存在</h2><div class="hint">本浏览器保存的口令与服务端不一致。'
+        +'请在服务器上删除 <code>/volume1/docker/studio-data/publish/config.json</code> 后刷新此页重新设置。</div>';
+      g('pub-setup').style.display=''; g('pub-main').style.display='none';
+    }
+    return;
+  }
   localStorage.setItem('pub-token', token);
   showToast('口令已保存'); fetchPubState();
 }
