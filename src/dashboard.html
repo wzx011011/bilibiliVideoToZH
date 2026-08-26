@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>豆包配音流水线管理</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", sans-serif; font-size: 14px; color: #1f2937; margin: 0; padding: 20px; background: #f3f4f6; }
+h1 { font-size: 22px; margin: 0 0 5px; }
+.hint { color: #6b7280; font-size: 13px; }
+.card { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.summary-bar { display: flex; align-items: center; gap: 16px; margin-top: 10px; }
+progress { flex: 1; height: 20px; border-radius: 10px; }
+.summary-text { font-weight: 600; font-size: 15px; white-space: nowrap; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: center; padding: 8px 6px; border-bottom: 2px solid #e5e7eb; font-size: 13px; color: #4b5563; }
+th.ep-col { text-align: left; width: 50px; }
+th.action-col { width: 200px; }
+td { padding: 8px 6px; border-bottom: 1px solid #eee; text-align: center; font-size: 13px; }
+td.ep-num { font-weight: 700; text-align: left; }
+.stage { font-size: 16px; font-weight: 700; }
+.stage.done { color: #047857; }
+.stage.pending { color: #d97706; animation: pulse 1.5s infinite; }
+.stage.missing { color: #d1d5db; }
+.stage-size { font-size: 11px; color: #9ca3af; font-weight: 400; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+.btn { padding: 5px 10px; border: 0; border-radius: 4px; cursor: pointer; font-size: 12px; background: #e5e7eb; color: #1f2937; margin: 0 2px; }
+.btn:hover { background: #d1d5db; }
+.btn.primary { background: #2563eb; color: #fff; }
+.btn.primary:hover { background: #1d4ed8; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.batch-bar { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.toast { position: fixed; top: 20px; right: 20px; background: #047857; color: #fff; padding: 10px 18px; border-radius: 6px; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,.15); display: none; z-index: 999; }
+.toast.error { background: #b91c1c; }
+.refresh-indicator { font-size: 12px; color: #9ca3af; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>豆包配音流水线管理</h1>
+  <span class="hint">下载 → 字幕提取 → 豆包配音 → ASR 字幕 → 视频生成</span>
+  <span class="refresh-indicator" id="refresh-time"></span>
+  <div class="summary-bar">
+    <progress id="progress" max="23" value="0"></progress>
+    <span class="summary-text" id="summary-text">加载中...</span>
+  </div>
+  <div class="batch-bar">
+    <button class="btn primary" id="batch-video" onclick="batchRun('video')">批量渲染所有就绪视频</button>
+    <button class="btn primary" id="batch-subtitle" onclick="batchRun('subtitle')">批量ASR所有音频</button>
+  </div>
+</div>
+
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th class="ep-col">集</th>
+        <th>字幕源</th>
+        <th>分块</th>
+        <th>已发送</th>
+        <th>音频</th>
+        <th>ASR字幕</th>
+        <th>视频</th>
+        <th class="action-col">操作</th>
+      </tr>
+    </thead>
+    <tbody id="episodes-body"></tbody>
+  </table>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = '';
+let lastData = null;
+
+async function fetchStatus() {
+  try {
+    const r = await fetch(API + '/api/status');
+    const data = await r.json();
+    lastData = data;
+    render(data);
+  } catch (e) {
+    document.getElementById('summary-text').textContent = '连接失败：' + e.message;
+  }
+}
+
+function render(data) {
+  // Summary
+  const done = data.summary.video_done;
+  const total = data.summary.total;
+  document.getElementById('progress').max = total;
+  document.getElementById('progress').value = done;
+  document.getElementById('summary-text').textContent =
+    `${done}/${total} 集视频完成 · ${data.summary.audio_done} 集音频就绪 · ${data.summary.subtitle_done} 集字幕就绪`;
+  document.getElementById('refresh-time').textContent =
+    '更新于 ' + new Date().toLocaleTimeString();
+
+  // Batch buttons
+  const readyVideo = data.episodes.filter(e => e.stages.subtitle && !e.stages.video).length;
+  const readyASR = data.episodes.filter(e => e.stages.audio && !e.stages.subtitle).length;
+  document.getElementById('batch-video').textContent = `批量渲染 (${readyVideo}集就绪)`;
+  document.getElementById('batch-subtitle').textContent = `批量ASR (${readyASR}集就绪)`;
+
+  // Table
+  const tbody = document.getElementById('episodes-body');
+  tbody.innerHTML = data.episodes.map(ep => {
+    const s = ep.stages;
+    const stageIcon = (done, pending) =>
+      done ? '<span class="stage done">✓</span>'
+      : pending ? '<span class="stage pending">⏳</span>'
+      : '<span class="stage missing">·</span>';
+
+    const sizeStr = (mb) => mb > 0 ? `<div class="stage-size">${mb}MB</div>` : '';
+
+    // Actions
+    let actions = '';
+    if (s.audio && !s.subtitle) {
+      actions += `<button class="btn" onclick="runStep(${ep.episode},'subtitle')">ASR字幕</button>`;
+    }
+    if (s.subtitle && !s.video) {
+      actions += `<button class="btn primary" onclick="runStep(${ep.episode},'video')">渲染视频</button>`;
+    }
+    if (!s.audio && s.subtitle_source && !s.prep) {
+      actions += `<span class="hint">需先 prep</span>`;
+    }
+    if (!s.subtitle_source) {
+      actions += `<span class="hint">无字幕</span>`;
+    }
+
+    const isRunning = data.running.some(j => j.episode === ep.episode);
+    if (isRunning) actions = `<span class="stage pending">⏳ 运行中</span>`;
+
+    return `<tr>
+      <td class="ep-num">EP${String(ep.episode).padStart(2,'0')}</td>
+      <td>${stageIcon(s.subtitle_source)}</td>
+      <td>${stageIcon(s.prep)}${s.prep ? `<div class="stage-size">${ep.chunks.total}块</div>` : ''}</td>
+      <td>${stageIcon(s.sent)}</td>
+      <td>${stageIcon(s.audio)}${sizeStr(ep.sizes.audio_mb)}</td>
+      <td>${stageIcon(s.subtitle)}${sizeStr(ep.sizes.subtitle_mb)}</td>
+      <td>${stageIcon(s.video)}${sizeStr(ep.sizes.video_mb)}</td>
+      <td>${actions || '<span class="hint">-</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function runStep(episode, step) {
+  showToast(`正在触发 EP${episode} ${step}...`);
+  try {
+    const r = await fetch(API + '/api/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ episode, step })
+    });
+    const data = await r.json();
+    if (data.ok) {
+      showToast(`EP${episode} ${step} 已启动`);
+    } else {
+      showToast(data.error || '启动失败', true);
+    }
+  } catch (e) {
+    showToast('请求失败：' + e.message, true);
+  }
+  setTimeout(fetchStatus, 1000);
+}
+
+async function batchRun(step) {
+  const ready = lastData.episodes.filter(e => {
+    if (step === 'video') return e.stages.subtitle && !e.stages.video;
+    if (step === 'subtitle') return e.stages.audio && !e.stages.subtitle;
+    return false;
+  }).map(e => e.episode);
+  if (ready.length === 0) { showToast('没有就绪的集', true); return; }
+  showToast(`批量${step === 'video' ? '渲染' : 'ASR'} ${ready.length} 集：EP${ready.join(',')}（串行）`);
+  try {
+    const r = await fetch(API + '/api/batch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ step, episodes: ready })
+    });
+    const data = await r.json();
+    if (data.ok) showToast('批量任务已启动'); else showToast(data.error, true);
+  } catch (e) { showToast('请求失败：' + e.message, true); }
+  setTimeout(fetchStatus, 1000);
+}
+
+function showToast(msg, isError) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast' + (isError ? ' error' : '');
+  t.style.display = 'block';
+  setTimeout(() => { t.style.display = 'none'; }, 3000);
+}
+
+fetchStatus();
+setInterval(fetchStatus, 3000);
+</script>
+</body>
+</html>

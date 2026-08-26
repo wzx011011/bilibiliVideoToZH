@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "豆包课程配音助手",
+  "version": "2.1.0",
+  "description": "自动发送课程字幕分块，并触发本地豆包朗读和视频构建",
+  "permissions": ["activeTab", "cookies", "webRequest", "storage"],
+  "host_permissions": [
+    "*://*.doubao.com/*",
+    "http://127.0.0.1/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["*://*.doubao.com/*"],
+    "js": ["sender-core.js", "relay.js"],
+    "run_at": "document_start",
+    "all_frames": false
+  }],
+  "web_accessible_resources": [{
+    "resources": ["inject.js"],
+    "matches": ["*://*.doubao.com/*"]
+  }],
+  "action": {
+    "default_title": "豆包课程配音助手",
+    "default_popup": "popup.html"
+  }
+}

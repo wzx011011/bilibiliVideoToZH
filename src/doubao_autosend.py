@@ -1,0 +1,441 @@
+"""豆包自动发送(路径 A:Playwright 驱动真实页面)。
+
+把 captcha-extension/relay.js 里实战验证过的 DOM 操作移植到 Playwright:
+找输入框 → 原生路径填入 → 点发送按钮。签名(a_bogus/msToken)由豆包页面
+自己的前端 JS 在真实提交时生成,零逆向。
+
+关键设计:
+- 用系统真 Chrome(channel="chrome"),指纹接近正常用户,降低自动化检测风险;
+- 持久化用户数据目录(work/playwright-profile),登录态跨次保留;
+- Cookie 从项目 .env 的 DOUBAO_COOKIE 注入(与扩展/reader 同源);
+- 发送按钮定位与 relay.js 相同:先语义匹配(发送/send/submit),再退回
+  输入框右侧小方按钮(最右优先);
+- 回复等待:等"朗读"按钮数量增加且稳定(页面出现新回复)。
+
+用法(PoC):
+  work/.venv-ocr/Scripts/python.exe src/doubao_autosend.py "你好"
+集成用法(供 pipeline_admin 调用):
+  from doubao_autosend import DoubaoAutoSender
+  sender = DoubaoAutoSender(); sender.send_chunks(files)
+"""
+from __future__ import annotations
+
+import os
+import sys
+import time
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+PROFILE_DIR = ROOT / "work" / "playwright-profile"
+DOUBAO_HOME = "https://www.doubao.com/chat/"
+
+# 与 relay.js EDITOR_SELECTORS 一致
+# 2026-08 豆包改版:输入框从 textarea 换成 ProseMirror contenteditable div
+EDITOR_SELECTORS = [
+    'div[contenteditable="true"].ProseMirror',
+    'div[contenteditable="true"].tiptap',
+    '[contenteditable="true"]',
+    'textarea[placeholder="发消息或按住空格说话..."]',
+    'textarea[placeholder*="发消息"]',
+    "textarea.semi-input-textarea",
+    "textarea:not([disabled])",
+]
+
+RESPONSE_TIMEOUT_S = 300   # 单条回复最长等待
+RESPONSE_STABLE_S = 3      # 回复内容静默判定
+
+# 找发送按钮并点击 —— 移植 relay.js 的 findSubmitAction,整段在页面 JS 里
+# 原子执行。不能拆成 Python 多轮遍历:fill 会触发 React 重渲染,Python↔浏览器
+# 往返期间元素句柄失效(stale),索引漂移导致按钮丢失(实测踩坑)。
+JS_FIND_AND_CLICK = """
+() => {
+  const isVisible = (el) => {
+    const r = el.getBoundingClientRect();
+    const s = getComputedStyle(el);
+    return r.width > 0 && r.height > 0 && s.display !== "none" && s.visibility !== "hidden";
+  };
+  const sels = ['div[contenteditable="true"].ProseMirror',
+                'div[contenteditable="true"].tiptap',
+                '[contenteditable="true"]',
+                'textarea[placeholder="发消息或按住空格说话..."]',
+                'textarea[placeholder*="发消息"]',
+                'textarea.semi-input-textarea',
+                'textarea:not([disabled])'];
+  let editor = null;
+  for (const sel of sels) {
+    const cs = [...document.querySelectorAll(sel)].filter(isVisible);
+    if (cs.length === 1) { editor = cs[0]; break; }
+    if (cs.length > 1) {
+      const e = cs.filter((c) => c.getAttribute("placeholder") === "发消息或按住空格说话...");
+      if (e.length === 1) { editor = e[0]; break; }
+    }
+  }
+  if (!editor) return { ok: false, error: "editor not found" };
+  const er = editor.getBoundingClientRect();
+  const all = [...document.querySelectorAll('button,[role="button"],[class*="cursor-pointer"]')]
+    .filter(isVisible);
+  const semantic = all.filter((item) => {
+    const label = [item.getAttribute("aria-label"), item.getAttribute("title"),
+                   item.getAttribute("data-testid"), item.textContent]
+      .filter(Boolean).join(" ");
+    return /发送|send|submit/i.test(label) && !/停止|stop|pause/i.test(label) &&
+      item.getAttribute("aria-disabled") !== "true" && !item.disabled;
+  });
+  // 生成中:发送按钮切换为"停止"(同一位置)。此时点击=停止生成,必须等待。
+  // label 是 aria-label/title/textContent 拼接串,按词拆开判断,避免
+  // "停止 停止"这类拼接后 ^$ 锚点失效。
+  const generating = all.some((item) => {
+    const label = [item.getAttribute("aria-label"), item.getAttribute("title"),
+                   item.textContent].filter(Boolean).join(" ").trim();
+    if (/停止生成|停止回答/.test(label)) return true;
+    return label.split(/\\s+/).some(
+      (w) => /^(停止|stop|pause)$/i.test(w));
+  });
+  if (generating && !semantic.length) {
+    return { ok: false, error: "generating" };
+  }
+  let btn = null;
+  if (semantic.length) {
+    btn = semantic[0];
+  } else {
+    const geo = all.filter((item) => {
+      const r = item.getBoundingClientRect();
+      return r.width >= 24 && r.width <= 72 && r.height >= 24 && r.height <= 72 &&
+        r.x >= er.right - 120 && r.y >= er.top &&
+        item.getAttribute("aria-haspopup") == null &&
+        item.getAttribute("aria-disabled") !== "true" && !item.disabled &&
+        String(item.textContent || "").trim().length <= 4;
+    });
+    if (geo.length) {
+      geo.sort((a, b) =>
+        b.getBoundingClientRect().right - a.getBoundingClientRect().right);
+      btn = geo[0];
+    }
+  }
+  if (!btn) return { ok: false, error: "submit button not found" };
+  btn.click();
+  return { ok: true };
+}
+"""
+
+# 只查询是否在生成中(不点击)——回复完成的判定信号:
+# 豆包生成期间按钮组里出现"停止"按钮,回复完成即消失。
+JS_IS_GENERATING = """
+() => {
+  const isVisible = (el) => {
+    const r = el.getBoundingClientRect();
+    const s = getComputedStyle(el);
+    return r.width > 0 && r.height > 0 && s.display !== "none" && s.visibility !== "hidden";
+  };
+  const all = [...document.querySelectorAll('button,[role="button"]')].filter(isVisible);
+  return all.some((item) => {
+    const label = [item.getAttribute("aria-label"), item.getAttribute("title"),
+                   item.textContent].filter(Boolean).join(" ").trim();
+    if (/停止生成|停止回答/.test(label)) return true;
+    return label.split(/\\s+/).some((w) => /^(停止|stop|pause)$/i.test(w));
+  });
+}
+"""
+
+
+# 回复形态校验:豆包新版对润色/翻译请求容易走偏(实测形态):
+#   <canvas_command>…(画布命令)、<p id="1">…(HTML 文档)、
+#   "需要我帮你…吗?"(反问)、短摘要、承诺式开头。
+# 这些形态一旦漏进 harvest,朗读出来的就是 XML/反问句。
+BAD_HEAD_PREFIXES = ("<canvas", "<p", "<div", "<!DOCTYPE")
+BAD_HEAD_MARKS = ("需要我", "帮你", "我接下来", "已为你生成", "已生成", "以下是")
+MIN_RATIO = 0.35  # 合格回复长度 ≥ 输入正文的比例(润色后长度应接近原文)
+
+
+def reply_shape_ok(tts: str, sent_text: str) -> tuple[bool, str]:
+    """校验豆包回复是否为可朗读形态。返回 (合格, 原因)。"""
+    if not tts or not tts.strip():
+        return False, "回复为空"
+    head = tts.lstrip()[:150]
+    if head.startswith(BAD_HEAD_PREFIXES):
+        return False, f"文档/画布形态(开头 {head[:20]!r})"
+    if any(m in tts[:80] for m in BAD_HEAD_MARKS) and len(tts) < 500:
+        return False, "反问/承诺式开头且过短"
+    threshold = max(120, int(len(sent_text) * MIN_RATIO))
+    if len(tts) < threshold:
+        return False, f"回复过短({len(tts)}字 < 阈值{threshold},疑似摘要/反问)"
+    return True, ""
+
+
+def load_env() -> dict[str, str]:
+    """读项目 .env(不覆盖已有环境变量)。"""
+    env = {}
+    p = ROOT / ".env"
+    if p.exists():
+        for line in p.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, _, v = line.partition("=")
+                env[k.strip()] = v.strip()
+    return env
+
+
+def cookie_string_to_playwright(cookie_str: str) -> list[dict]:
+    """'a=1; b=2' → playwright add_cookies 格式(豆包域)。"""
+    out = []
+    for part in cookie_str.split(";"):
+        part = part.strip()
+        if "=" not in part:
+            continue
+        name, _, value = part.partition("=")
+        out.append({"name": name.strip(), "value": value.strip(),
+                    "domain": ".doubao.com", "path": "/"})
+    return out
+
+
+class DoubaoAutoSender:
+    """Playwright 驱动豆包页面自动发送。上下文管理器保持浏览器复用。"""
+
+    def __init__(self, headless: bool = False, cookie: str | None = None):
+        from playwright.sync_api import sync_playwright
+        self._pw = sync_playwright().start()
+        env = load_env()
+        self.context = self._pw.chromium.launch_persistent_context(
+            str(PROFILE_DIR),
+            channel="chrome",           # 系统 Chrome,指纹最真
+            headless=headless,
+            viewport={"width": 1440, "height": 900},
+            args=["--disable-blink-features=AutomationControlled"],
+        )
+        cookies = cookie_string_to_playwright(
+            cookie or env.get("DOUBAO_COOKIE", ""))
+        if cookies:
+            self.context.add_cookies(cookies)
+        # 关键:让页面使用与 .env 朗读凭据一致的 web_id。
+        # 豆包消息归属创建它的页面 web_id;若 Playwright profile 自动生成
+        # 了新 web_id,朗读 WS(用 .env 的 WEB_ID)会因身份不匹配拿不到音频
+        # (实测:消息能发能拉,但 TTS 静默无返回)。
+        web_id = env.get("DOUBAO_WEB_ID", "").strip('"')
+        if web_id:
+            self.context.add_init_script(
+                "try{var W='%s';var c=localStorage.getItem("
+                "'samantha_web_web_id');var w=c?JSON.parse(c).tt_wid||'':'';"
+                "if(!c||(JSON.parse(c).web_id||'')!==W){"
+                "localStorage.setItem('samantha_web_web_id',"
+                "JSON.stringify({web_id:W,tt_wid:w}));}}catch(e){}" % web_id)
+        # 注入环境变量供后续 fetch_messages 复用(读者进程同 .env)
+        for k in ("DOUBAO_COOKIE", "DOUBAO_DEVICE_ID", "DOUBAO_WEB_ID",
+                  "DOUBAO_TEA_UUID", "DOUBAO_WEB_TAB_ID",
+                  "DOUBAO_API_APP_KEY", "DOUBAO_UID"):
+            if k in env:
+                os.environ.setdefault(k, env[k])
+        self.page = self.context.pages[0] if self.context.pages \
+            else self.context.new_page()
+
+    def close(self) -> None:
+        try:
+            self.context.close()
+        finally:
+            self._pw.stop()
+
+    def __enter__(self) -> "DoubaoAutoSender":
+        return self
+
+    def __exit__(self, *exc) -> None:
+        self.close()
+
+    # ---------- 页面操作(relay.js 移植) ----------
+
+    def open_chat(self) -> None:
+        self.page.goto(DOUBAO_HOME, wait_until="domcontentloaded")
+        self._wait_editor(timeout_s=30)
+
+    def _wait_editor(self, timeout_s: float = 15):
+        deadline = time.time() + timeout_s
+        last_err = "未找到输入框"
+        while time.time() < deadline:
+            self._check_challenge()
+            for sel in EDITOR_SELECTORS:
+                loc = self.page.locator(sel)
+                if loc.count() == 1 and loc.first.is_visible():
+                    # 防加载替换窗口(旧 textarea 壳会被换成 ProseMirror):
+                    # 复查一次,元素仍在才算数
+                    self.page.wait_for_timeout(1000)
+                    if loc.count() == 1 and loc.first.is_visible():
+                        return loc.first
+                    continue
+                if loc.count() > 1:
+                    # 多个候选:精确 placeholder 优先(relay.js 同策略)
+                    exact = self.page.locator(EDITOR_SELECTORS[0])
+                    if exact.count() == 1 and exact.first.is_visible():
+                        return exact.first
+            last_err = f"输入框候选异常 ({sel})"
+            self.page.wait_for_timeout(500)
+        raise RuntimeError(f"未找到豆包输入框: {last_err}(可能未登录或页面改版)")
+
+    def _fill_editor(self, editor, text: str) -> None:
+        """写输入框。textarea 用原生 value setter + input 事件(relay.js 原法);
+        contenteditable(ProseMirror)用 click+全选+insert_text——fill 对
+        长文本会错位丢内容(实测 3100 字),insert_text 一次插入保真。"""
+        tag = editor.evaluate("el => el.tagName")
+        if tag == "TEXTAREA" or tag == "INPUT":
+            editor.evaluate(
+                """(el, t) => {
+                    const d = Object.getOwnPropertyDescriptor(
+                        HTMLTextAreaElement.prototype, 'value')
+                        || Object.getOwnPropertyDescriptor(
+                            HTMLInputElement.prototype, 'value');
+                    d.set.call(el, t);
+                    el.dispatchEvent(new InputEvent('input',
+                        {bubbles: true, inputType: 'insertText', data: t}));
+                    el.dispatchEvent(new Event('change', {bubbles: true}));
+                }""", text)
+        else:
+            editor.click()
+            self.page.keyboard.press("Control+a")
+            self.page.keyboard.insert_text(text)
+
+    def _editor_text(self, editor) -> str:
+        """读输入框内容:textarea 用 input_value,contenteditable 用 inner_text。"""
+        try:
+            tag = editor.evaluate("el => el.tagName")
+            if tag == "TEXTAREA" or tag == "INPUT":
+                return editor.input_value() or ""
+            return editor.inner_text() or ""
+        except Exception:
+            return ""
+
+    def _check_challenge(self) -> None:
+        body = self.page.locator("body").inner_text(timeout=5000)
+        if any(k in body for k in ("请完成验证", "安全验证", "滑块验证", "验证码")):
+            raise RuntimeError("检测到豆包安全验证,需要人工在浏览器里完成验证后重试")
+
+    def _reply_count(self) -> int:
+        """页面上"朗读"按钮数量 ≈ 回复条数(仅在鼠标悬停回复时渲染,只作辅助)。"""
+        return self.page.locator('button[aria-label="朗读"]').count()
+
+    def _click_send_when_ready(self, timeout_s: float) -> None:
+        """点击发送;豆包生成中(按钮=停止态)时先等生成结束;按钮未就绪时轮询。
+
+        实测踩坑:
+        - 生成期间发送按钮切换为"停止",点击=终止生成而非发消息;
+        - 干净 profile 首次初始化时 React 组件慢,fill 后按钮仍是麦克风态,
+          需要轮询等输入真正进入 React state、按钮切换为发送。
+        """
+        deadline = time.time() + timeout_s
+        last_err = "未知"
+        while True:
+            result = self.page.evaluate(JS_FIND_AND_CLICK)
+            if result and result.get("ok"):
+                return  # 已点击
+            last_err = result.get("error", "未知") if result else "无返回"
+            transient = last_err in ("generating", "submit button not found",
+                                     "editor not found")
+            if not transient or time.time() > deadline:
+                raise RuntimeError(f"发送失败: {last_err}")
+            self.page.wait_for_timeout(2000)
+
+    def send_one(self, text: str, timeout_s: float = RESPONSE_TIMEOUT_S) -> None:
+        """发送一条消息,以「服务端落库新回复」为完成判据。
+
+        实测结论(ep-22 踩坑链):
+        - completion 只是提交接口(秒回),回复内容走 WS/拉取通道,
+          网络事件不能判定"回复完成";
+        - "停止按钮"图标无 aria-label/text,DOM 检测不到;
+        - 浏览器在 local_ 态关闭会丢整段会话。
+        所以直接轮询 fetch_messages:出现新的 message_id = 回复已生成
+        且落库,此时关浏览器也安全。
+        """
+        import doubao_reader as dr
+
+        self._check_challenge()
+        editor = self._wait_editor()
+        for attempt in range(5):
+            self._fill_editor(editor, text)
+            self.page.wait_for_timeout(600)
+            try:
+                got = " ".join(self._editor_text(editor).split())
+                want = " ".join(text.split())
+                if got[:150] == want[:150]:
+                    break
+            except Exception:
+                editor = self._wait_editor()
+            if attempt == 4:
+                raise RuntimeError("输入内容未能进入豆包输入框(React state 未接收)")
+
+        # 发送前基线:服务端已有回复的 message_id 集合
+        baseline: set[str] = set()
+        try:
+            baseline = {m["message_id"]
+                        for m in dr.fetch_messages(limit=15, per_conv=5)}
+        except Exception:
+            pass  # 拉取失败不阻塞发送,完成判定仍靠后续轮询
+
+        # 点击并确认发出:输入框清空
+        send_deadline = time.time() + 60
+        while time.time() < send_deadline:
+            self._click_send_when_ready(timeout_s)
+            self.page.wait_for_timeout(1500)
+            try:
+                if not (editor.input_value() or "").strip():
+                    break  # 已发出
+            except Exception:
+                break  # 元素重建=界面翻转
+        else:
+            raise RuntimeError("多次点击后输入框仍未清空,消息未发出")
+
+        # 等服务端出现新回复(message_id 不在基线里),并校验其形态可朗读
+        gen_deadline = time.time() + timeout_s
+        while time.time() < gen_deadline:
+            try:
+                msgs = dr.fetch_messages(limit=15, per_conv=5)
+                fresh = [m for m in msgs if m["message_id"] not in baseline]
+                if fresh:
+                    tts = fresh[0].get("tts_content") or ""
+                    ok, why = reply_shape_ok(tts, text)
+                    if ok:
+                        return  # 新回复已落库且形态合格
+                    raise RuntimeError(f"回复形态异常: {why}(开头: {tts[:40]!r})。"
+                                       "豆包可能走了文档/画布/反问路线,请重试该块")
+            except RuntimeError:
+                raise
+            except Exception:
+                pass  # 网络抖动,继续轮询
+            self.page.wait_for_timeout(3000)
+        raise RuntimeError(f"等待服务端新回复超时({timeout_s}s)")
+
+    def send_chunks(self, chunk_files: list[Path], pause_s: float = 2.0) -> int:
+        """依次发送一组分块文件,返回成功数。"""
+        self.open_chat()
+        ok = 0
+        for i, f in enumerate(chunk_files, 1):
+            text = f.read_text(encoding="utf-8")
+            print(f"[{i}/{len(chunk_files)}] 发送 {f.name} ({len(text)}字)...")
+            try:
+                self.send_one(text)
+                ok += 1
+                print(f"    ✓ 回复完成")
+            except Exception as e:  # noqa: BLE001
+                print(f"    ✗ 失败: {e}")
+                raise
+            self.page.wait_for_timeout(int(pause_s * 1000))
+        return ok
+
+
+def main() -> None:
+    if len(sys.argv) < 2:
+        print("用法: python doubao_autosend.py <文本或@文件路径>")
+        sys.exit(1)
+    arg = sys.argv[1]
+    if arg.startswith("@"):
+        text = Path(arg[1:]).read_text(encoding="utf-8")
+    else:
+        text = arg
+    with DoubaoAutoSender(headless=False) as sender:
+        sender.open_chat()
+        print("页面就绪,发送:", text[:50], "...")
+        sender.send_one(text)
+        print("✓ 发送并收到回复")
+        # 截图留证
+        shot = ROOT / "work" / "autosend-proof.png"
+        sender.page.screenshot(path=str(shot))
+        print("截图:", shot)
+
+
+if __name__ == "__main__":
+    main()

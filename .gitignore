@@ -1,4 +1,4 @@
-# ============ Build / runtime artifacts ============
+# Python and local environments
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -9,8 +9,7 @@ env/
 .mypy_cache/
 .ruff_cache/
 
-# ============ Binary media (too large for git; excluded by design) ============
-# Source videos, deliveries, dub audio, voice references, etc.
+# Binary media and generated deliveries
 *.mp4
 *.m4v
 *.mkv
@@ -25,9 +24,11 @@ env/
 *.flac
 *.ogg
 *.opus
+videos/*.mp4
 
-# ============ Local downloads and run logs ============
+# Download caches, partial transfers, and logs
 downloads/
+youtube/
 *.part
 *.log
 *.stderr.log
@@ -35,13 +36,7 @@ downloads/
 *.log.stderr
 *.log.stdout
 
-# ============ Transformer video project artifacts ============
-work/transformer-video-series/node_modules/
-work/transformer-video-series/out/
-work/transformer-video-series/preview/
-work/transformer-video-series/audio-capture/
-
-# ============ Models & weight caches ============
+# Models and bundled binaries
 model-cache/
 **/models--*/
 *.bin
@@ -50,28 +45,31 @@ model-cache/
 *.pth
 *.ckpt
 *.safetensors
-
-# ============ Bundled binaries (use system tools instead) ============
 work/video-tools/
 work/gpt-sovits/
 *.exe
 *.dll
 
-# ============ Scratch / sample images ============
+# Transformer renderer artifacts
+work/transformer-video-series/node_modules/
+work/transformer-video-series/out/
+work/transformer-video-series/preview/
+work/transformer-video-series/audio-capture/
+
+# Scratch images
 *.png
 *.jpg
 *.jpeg
 *.bmp
 *.gif
 
-# ============ Secrets / local env ============
+# Secrets and editor files
 .env
 *.env
 !*.env.example
-
-# ============ OS / editor ============
 .DS_Store
 Thumbs.db
 *.swp
 .idea/
 .vscode/
+.zcode/

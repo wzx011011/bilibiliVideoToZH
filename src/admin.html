@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>视频汉化工作台</title>
+<style>
+:root {
+  --bg: #f4f6fa; --card: #fff; --line: #e5e9f2;
+  --pri: #3b5bfd; --pri-d: #2c46c9; --pri-bg: #eef1ff;
+  --ok: #0f9d58; --ok-bg: #e8f5ee; --err: #d93025; --err-bg: #fdecea;
+  --warn: #b45309; --txt: #1f2733; --sub: #64748b; --radius: 10px;
+}
+* { box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 14px;
+  color: var(--txt); margin: 0; background: var(--bg); }
+
+/* ===== 布局:侧边导航 + 主区 ===== */
+.app { display: flex; min-height: 100vh; }
+.side { width: 208px; background: #1c2333; color: #cbd5e1; padding: 14px 10px;
+  flex-shrink: 0; position: sticky; top: 0; height: 100vh; }
+.side .logo { font-weight: 700; font-size: 15px; color: #fff; padding: 6px 12px 16px; }
+.side nav a { display: flex; gap: 8px; align-items: center; padding: 9px 12px;
+  border-radius: 8px; color: #cbd5e1; text-decoration: none; margin-bottom: 2px; font-size: 13.5px; }
+.side nav a:hover { background: #2a3348; }
+.side nav a.on { background: var(--pri); color: #fff; }
+.side .agent-box { position: absolute; bottom: 14px; left: 10px; right: 10px;
+  font-size: 11.5px; background: #2a3348; border-radius: 8px; padding: 8px 10px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+.dot.on { background: #34d399; box-shadow: 0 0 6px #34d399; }
+.dot.off { background: #f87171; }
+.main { flex: 1; padding: 22px 26px; max-width: 1180px; }
+.page { display: none; } .page.on { display: block; }
+h1 { font-size: 20px; margin: 0 0 4px; }
+h2 { font-size: 15px; margin: 0 0 12px; }
+.sub-t { color: var(--sub); font-size: 12.5px; margin-bottom: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px; margin-bottom: 14px; }
+
+/* ===== 按钮/表单 ===== */
+.btn { padding: 7px 16px; border: 0; border-radius: 7px; cursor: pointer; font-size: 13px;
+  background: #eef1f6; color: var(--txt); }
+.btn:hover { background: #e2e7f0; }
+.btn.pri { background: var(--pri); color: #fff; } .btn.pri:hover { background: var(--pri-d); }
+.btn.warn { background: var(--err); color: #fff; }
+.btn.sm { padding: 3px 10px; font-size: 11.5px; border-radius: 5px; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.field { margin-bottom: 10px; }
+.field label { display: block; font-size: 12px; color: var(--sub); margin-bottom: 4px; font-weight: 600; }
+.field input, .field select { width: 100%; padding: 8px 10px; border: 1px solid var(--line);
+  border-radius: 7px; font-size: 13px; }
+.field .req { color: var(--err); }
+.chk { display: flex; gap: 8px; align-items: center; padding: 9px 12px; background: var(--pri-bg);
+  border-radius: 7px; margin-bottom: 10px; font-size: 13px; cursor: pointer; }
+.chk input { width: 16px; height: 16px; }
+
+/* ===== 向导 Stepper ===== */
+.steps { display: flex; gap: 0; margin-bottom: 20px; }
+.step { flex: 1; text-align: center; position: relative; color: var(--sub); font-size: 12.5px; }
+.step .n { width: 30px; height: 30px; border-radius: 50%; background: #e2e7f0; color: var(--sub);
+  display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 4px; }
+.step:not(:last-child)::after { content: ''; position: absolute; top: 15px; left: 50%;
+  width: 100%; height: 2px; background: #e2e7f0; z-index: 0; }
+.step.on { color: var(--pri); } .step.on .n { background: var(--pri); color: #fff; }
+.step.done { color: var(--ok); } .step.done .n { background: var(--ok); color: #fff; }
+.step.done:not(:last-child)::after { background: var(--ok); }
+
+/* ===== 类型选择 ===== */
+.types { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+.type { border: 2px solid var(--line); border-radius: 9px; padding: 12px; cursor: pointer; transition: .15s; }
+.type:hover { border-color: #a5b4fc; }
+.type.on { border-color: var(--pri); background: var(--pri-bg); }
+.type-n { font-weight: 700; font-size: 13.5px; margin-bottom: 4px; }
+.type-d { font-size: 11px; color: var(--sub); line-height: 1.5; }
+
+/* ===== 文件列表(库/成品) ===== */
+.frow { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 7px;
+  border: 1px solid transparent; }
+.frow:hover { background: #f6f8fc; border-color: var(--line); }
+.frow.picked { background: var(--pri-bg); border-color: #c3cdfd; }
+.frow .nm { flex: 1; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.crumb { font-size: 12.5px; margin-bottom: 8px; }
+.crumb a { color: var(--pri); text-decoration: none; }
+
+/* ===== 任务卡 + 阶段 Stepper ===== */
+.task { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px;
+  margin-bottom: 12px; background: var(--card); }
+.task-h { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.badge { font-size: 11px; padding: 2px 10px; border-radius: 10px; color: #fff; font-weight: 600; }
+.badge.running { background: var(--pri); animation: pulse 1.6s infinite; }
+.badge.done { background: var(--ok); } .badge.failed { background: var(--err); }
+.pipeline { display: flex; margin: 14px 0 10px; overflow-x: auto; }
+.pstage { flex: 1; min-width: 68px; text-align: center; position: relative;
+  font-size: 10.5px; color: var(--sub); padding-top: 2px; }
+.pstage .b { width: 22px; height: 22px; border-radius: 50%; background: #e2e7f0;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 11px;
+  margin-bottom: 3px; position: relative; z-index: 1; border: 2px solid var(--card); }
+.pstage:not(:last-child)::after { content: ''; position: absolute; top: 13px; left: 50%;
+  width: 100%; height: 2px; background: #e2e7f0; }
+.pstage.done .b { background: var(--ok); color: #fff; }
+.pstage.done:not(:last-child)::after { background: var(--ok); }
+.pstage.running .b { background: var(--pri); color: #fff; animation: pulse 1.6s infinite; }
+.pstage.failed .b { background: var(--err); color: #fff; }
+.arts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+.art { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px;
+  font-size: 12px; background: #fafbfd; }
+.art.empty { opacity: .4; }
+.err-line { color: var(--err); font-size: 12px; margin-top: 8px; white-space: pre-wrap; }
+pre.log { background: #10151f; color: #cbd5e1; font-size: 11px; line-height: 1.55; padding: 10px;
+  border-radius: 8px; max-height: 280px; overflow: auto; white-space: pre-wrap; word-break: break-all; }
+
+/* ===== 杂项 ===== */
+.toast { position: fixed; top: 18px; right: 18px; background: var(--ok); color: #fff;
+  padding: 10px 18px; border-radius: 8px; font-size: 13.5px; box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  display: none; z-index: 999; max-width: 76vw; }
+.toast.error { background: var(--err); }
+.empty { color: var(--sub); text-align: center; padding: 34px; }
+.hint { color: var(--sub); font-size: 12px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+@media (max-width: 880px) {
+  .app { flex-direction: column; }
+  .side { width: 100%; height: auto; position: static; display: flex; align-items: center;
+    padding: 8px 10px; gap: 4px; overflow-x: auto; }
+  .side .logo { padding: 0 10px 0 4px; font-size: 14px; white-space: nowrap; }
+  .side nav { display: flex; gap: 2px; }
+  .side nav a { white-space: nowrap; padding: 7px 10px; }
+  .side .agent-box { display: none; }
+  .main { padding: 14px; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="logo">🎬 汉化工作台</div>
+    <nav>
+      <a data-page="create">➕ 新建任务</a>
+      <a data-page="tasks">📋 任务列表</a>
+      <a data-page="library">📁 原片库</a>
+      <a data-page="products">🎁 成品库</a>
+      <a data-page="voices">🎙 音色库</a>
+      <a data-page="env">⚙️ 环境</a>
+    </nav>
+    <div class="agent-box" id="agent-box"><span class="dot off"></span>PC 代理</div>
+  </aside>
+  <main class="main">
+
+    <!-- ============ 新建任务(三步向导) ============ -->
+    <section class="page" id="page-create">
+      <h1>新建任务</h1>
+      <div class="sub-t">从 NAS 原片库勾选视频 → 选择类型与音色 → 批量创建</div>
+      <div class="steps">
+        <div class="step" data-s="1"><div class="n">1</div>选择视频</div>
+        <div class="step" data-s="2"><div class="n">2</div>配置类型</div>
+        <div class="step" data-s="3"><div class="n">3</div>确认创建</div>
+      </div>
+
+      <div class="card" id="wiz-1">
+        <h2>① 勾选原片(可多选)</h2>
+        <div class="crumb" id="lib-crumb"></div>
+        <div id="lib-list" class="hint">加载中…</div>
+        <div id="picked-bar" style="margin-top:10px;padding:10px;background:var(--pri-bg);
+          border-radius:8px;display:none"></div>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button class="btn pri" onclick="wizNext()">下一步:配置类型 →</button>
+          <button class="btn" onclick="addManual()">+ 手动路径</button>
+        </div>
+      </div>
+
+      <div class="card" id="wiz-2" style="display:none">
+        <h2>② 视频类型与统一参数</h2>
+        <div class="types" id="types"></div>
+        <div id="form-fields" class="grid2" style="margin-top:12px"></div>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <button class="btn" onclick="wizShow(1)">← 上一步</button>
+          <button class="btn pri" onclick="wizNext()">下一步:确认 →</button>
+        </div>
+      </div>
+
+      <div class="card" id="wiz-3" style="display:none">
+        <h2>③ 按片确认</h2>
+        <div id="per-file"></div>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button class="btn" onclick="wizShow(2)">← 上一步</button>
+          <button class="btn pri" onclick="createTasksBatch()">🚀 批量创建</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 任务列表 ============ -->
+    <section class="page" id="page-tasks">
+      <h1>任务列表</h1>
+      <div class="sub-t">阶段进度与五件套产物,失败可重试</div>
+      <div id="tasks"></div>
+    </section>
+
+    <!-- ============ 原片库(独立浏览) ============ -->
+    <section class="page" id="page-library">
+      <h1>原片库</h1>
+      <div class="sub-t">浏览 NAS 视频目录,下载任意文件</div>
+      <div class="card">
+        <div class="crumb" id="lib-crumb2"></div>
+        <div id="lib-list2" class="hint">加载中…</div>
+      </div>
+    </section>
+
+    <!-- ============ 成品库 ============ -->
+    <section class="page" id="page-products">
+      <h1>成品库</h1>
+      <div class="sub-t">每个任务的五件套,点击下载</div>
+      <div class="card"><div id="prod-list" class="hint">加载中…</div></div>
+    </section>
+
+    <!-- ============ 音色库 ============ -->
+    <section class="page" id="page-voices">
+      <h1>音色库</h1>
+      <div class="sub-t">CosyVoice 克隆参考(几秒干净人声 + 逐字文本),任务中复用</div>
+      <div class="card"><div id="voices" class="hint">加载中…</div>
+        <details style="margin-top:10px">
+          <summary class="hint" style="cursor:pointer">注册新音色</summary>
+          <div class="grid2" style="margin-top:10px">
+            <div class="field"><label>音色名 <span class="req">*</span></label><input id="v-name" placeholder="如 orig-musk"></div>
+            <div class="field"><label>参考音频路径 <span class="req">*</span></label><input id="v-audio" placeholder="本地 wav 路径(5-15秒单人)"></div>
+            <div class="field"><label>参考文本(音频里说的原话) <span class="req">*</span></label><input id="v-text"></div>
+          </div>
+          <button class="btn" onclick="createVoice()">注册</button>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ 环境 ============ -->
+    <section class="page" id="page-env">
+      <h1>环境</h1>
+      <div class="sub-t">控制面(NAS)与 PC 代理的执行环境</div>
+      <div class="card">
+        <button class="btn pri" onclick="selftest()">运行自检</button>
+        <div id="selftest-result" style="margin-top:12px" class="hint">点击上方按钮检测</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+let TYPES = [], VOICES = [], selected = null;
+let tasks = [];
+let libDir = '原片库';
+let picked = new Map();
+let dirItemsCache = {};
+
+/* ============ 路由 ============ */
+document.querySelectorAll('.side nav a').forEach(a => {
+  a.onclick = () => goPage(a.dataset.page);
+});
+function goPage(p) {
+  document.querySelectorAll('.page').forEach(x => x.classList.remove('on'));
+  g('page-' + p).classList.add('on');
+  document.querySelectorAll('.side nav a').forEach(x =>
+    x.classList.toggle('on', x.dataset.page === p));
+  location.hash = p;
+  if (p === 'tasks') fetchTasks();
+  if (p === 'products') loadProducts();
+  if (p === 'voices') loadVoices();
+  if (p === 'library') loadLib2();
+  if (p === 'create') loadLib();
+}
+
+/* ============ 向导 ============ */
+function wizShow(n) {
+  [1,2,3].forEach(i => g('wiz-'+i).style.display = i===n ? '' : 'none');
+  document.querySelectorAll('.step').forEach(s => {
+    const k = +s.dataset.s;
+    s.classList.toggle('on', k === n);
+    s.classList.toggle('done', k < n);
+    s.querySelector('.n').textContent = k < n ? '✓' : k;
+  });
+}
+function wizNext() {
+  if (g('wiz-1').style.display !== 'none') {
+    if (!picked.size) { showToast('先勾选至少一个视频', true); return; }
+    renderTypesIfEmpty(); wizShow(2); return;
+  }
+  if (g('wiz-2').style.display !== 'none') {
+    if (!selected) { showToast('先选择视频类型', true); return; }
+    renderPerFile(); wizShow(3); return;
+  }
+}
+
+/* ============ 类型 ============ */
+async function loadTypes() {
+  TYPES = Object.values(await (await fetch('/api/types')).json());
+}
+function renderTypesIfEmpty() {
+  if (g('types').innerHTML) return;
+  g('types').innerHTML = TYPES.map(t => `
+    <div class="type" data-key="${t.key}" onclick="selectType('${t.key}')">
+      <div class="type-n">${t.name}</div>
+      <div class="type-d">${t.desc}</div>
+    </div>`).join('');
+}
+function selectType(key) {
+  selected = key;
+  renderTypesIfEmpty();
+  document.querySelectorAll('.type').forEach(x =>
+    x.classList.toggle('on', x.dataset.key === key));
+  const t = TYPES.find(x => x.key === key);
+  g('form-fields').innerHTML = t.params.filter(f =>
+      !['slug','source_path','vtt_path','anchors'].includes(f.key)).map(f => {
+    if (f.type === 'voice') {
+      const opts = VOICES.map(v => `<option value="${v.name}">${v.name}</option>`).join('');
+      return `<div class="field"><label>${f.label}${f.required?' <span class="req">*</span>':''}</label>
+        <select id="param-${f.key}"><option value="">${f.hint || '默认 doubao-taotao'}</option>${opts}</select></div>`;
+    }
+    if (f.type === 'bool') {
+      return `<label class="chk"><input type="checkbox" id="param-${f.key}">
+        ${f.label}<span class="hint" style="margin-left:4px">${f.hint||''}</span></label>`;
+    }
+    if (f.type === 'choice') {
+      const labels = {original:'原片时间轴', narration:'中文旁白', podcast:'中文播客', subtitle_only:'原声+中文字幕', cover:'封面图'};
+      return `<div class="field"><label>${f.label}</label><select id="param-${f.key}">
+        <option value="">默认(${labels[t.default_render]||t.default_render})</option>
+        ${(f.choices||[]).filter(c=>c!==t.default_render).map(c=>`<option value="${c}">${labels[c]||c}</option>`).join('')}</select></div>`;
+    }
+    return `<div class="field"><label>${f.label}${f.required?' <span class="req">*</span>':''}</label>
+      <input id="param-${f.key}" placeholder="${f.hint||''}"></div>`;
+  }).join('');
+}
+
+/* ============ 原片库(向导内) ============ */
+async function loadLib() {
+  const url = '/api/library' + (libDir ? '?dir=' + encodeURIComponent(libDir) : '');
+  const d = await (await fetch(url)).json();
+  const list = g('lib-list'), crumb = g('lib-crumb');
+  if (!d.ok) { list.textContent = d.error; return; }
+  dirItemsCache[libDir] = d.items;
+  const parts = libDir ? libDir.split('/') : [];
+  crumb.innerHTML = '📁 ' + (libDir ? parts.map((seg,i)=>
+    `<a href="#" onclick="gotoLib('${parts.slice(0,i+1).join('/')}')">${seg}</a>`).join(' / ')
+    : '(视频根目录)') + (libDir ? ` <a href="#" onclick="gotoLib('${parts.slice(0,-1).join('/')}')">⬆</a>` : '');
+  list.innerHTML = (d.items||[]).map(it => {
+    if (it.dir) return `<div class="frow"><span>📁</span>
+      <a class="nm" href="#" onclick="gotoLib('${(libDir?libDir+'/':'')+it.name}')">${it.name}</a></div>`;
+    const nasPath = `${d.nas_abs}/${it.name}`;
+    const rel = (libDir?libDir+'/':'')+it.name;
+    const isVideo = /\.(mp4|mkv|webm|mov|avi)$/i.test(it.name);
+    const safe = nasPath.replace(/'/g,"\\'");
+    return `<div class="frow ${picked.has(nasPath)?'picked':''}">
+      ${isVideo ? `<input type="checkbox" ${picked.has(nasPath)?'checked':''}
+        onchange="togglePick('${safe}')">` : '<span>⬜</span>'}
+      <span class="nm" onclick="togglePick('${safe}')">📄 ${it.name}</span>
+      <span class="hint">${fmtSize(it.size)}</span>
+      ${isVideo?'':`<button class="btn sm" onclick="dl('${rel}')">下载</button>`}
+    </div>`;
+  }).join('') || '<div class="empty">(空目录)</div>';
+  renderPicked();
+}
+function gotoLib(d) { libDir = d; loadLib(); if (g('page-library').classList.contains('on')) loadLib2(); }
+function togglePick(nasPath) {
+  if (picked.has(nasPath)) picked.delete(nasPath);
+  else picked.set(nasPath, {name: nasPath.split('/').pop(), dir: libDir});
+  loadLib();
+}
+function renderPicked() {
+  const bar = g('picked-bar');
+  if (!picked.size) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  bar.innerHTML = `<b>已选 ${picked.size} 个</b> ` +
+    [...picked.keys()].map(p=>`<span class="hint" style="background:#fff;border-radius:4px;
+      padding:2px 8px;margin:0 2px">${p.split('/').pop()}</span>`).join('') +
+    ` <button class="btn sm" onclick="picked.clear();loadLib()">清空</button>`;
+}
+function addManual() {
+  if (!picked.size) {
+    picked.set('manual:' + Date.now(), {name:'(手动路径)', dir:'', manual:true});
+  } else {
+    picked.set('manual:' + Date.now(), {name:'(手动路径)', dir:'', manual:true});
+  }
+  showToast('已添加手动行;如未进入下一步请点「下一步」');
+  renderPicked();
+}
+
+/* ============ 第三步:per-file ============ */
+function autoSlug(name) {
+  return (name||'').replace(/\.[^.]+$/,'').replace(/[\s\\/:*?"<>|]+/g,'-').slice(0,30) || 'task';
+}
+function autoVtt(nasPath) {
+  const info = picked.get(nasPath)||{};
+  const items = dirItemsCache[info.dir||'']||[];
+  const base = (info.name||'').replace(/\.[^.]+$/,'');
+  for (const suf of ['.en-orig.vtt','.en.vtt','.vtt']) {
+    const hit = items.find(x=>!x.dir && x.name===base+suf);
+    if (hit) return hit;
+  }
+  return null;
+}
+function renderPerFile() {
+  const t = TYPES.find(x=>x.key===selected);
+  const needVtt = t && t.dims.subtitle==='en_vtt';
+  const needAnchors = selected==='en_vtt_2' ||
+    (g('param-clone_original') && g('param-clone_original').checked);
+  g('per-file').innerHTML = [...picked.keys()].map((nasPath,i)=>{
+    const info = picked.get(nasPath);
+    const vtt = autoVtt(nasPath);
+    const vttVal = vtt ? 'nas:/volume1/share/视频/'+(info.dir?info.dir+'/':'')+vtt.name : '';
+    const safe = nasPath.replace(/'/g,"\\'");
+    return `<div style="padding:10px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px;background:#fafbfd">
+      <b>${info.name||'(手动路径)'}</b>
+      <span style="float:right"><a href="#" onclick="picked.delete('${safe}');renderPerFile();renderPicked()" style="color:var(--err)">✕移除</a></span>
+      ${info.manual?`<div class="field" style="margin-top:6px"><label>原片路径(nas:... 或 PC 本地)</label>
+        <input id="pf-src-${i}" placeholder="nas:/volume1/share/视频/原片库/x.mp4"></div>`:''}
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px">
+        <span class="hint">slug</span><input id="pf-slug-${i}" value="${autoSlug(info.name)}"
+          style="width:140px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px">
+        ${needVtt?`<span class="hint">VTT</span><input id="pf-vtt-${i}" value="${vttVal}"
+          placeholder="未匹配到同名VTT(必填)" style="flex:1;min-width:170px;border:1px solid ${vtt?'var(--line)':'#f59e0b'};border-radius:6px;padding:4px 8px;font-size:12px">`:''}
+        ${needAnchors?`<span class="hint">锚点</span><input id="pf-anch-${i}"
+          placeholder='{"A":[3.5,18.8],"B":[547.3,566.1]}'
+          style="flex:1;min-width:170px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px">`:''}
+      </div>
+    </div>`;
+  }).join('') || '<div class="empty">(空)</div>';
+}
+
+/* ============ 批量创建 ============ */
+async function createTasksBatch() {
+  const t = TYPES.find(x=>x.key===selected);
+  if (!t) { showToast('未选类型', true); return; }
+  const common = {};
+  for (const f of t.params) {
+    if (['slug','source_path','vtt_path','anchors'].includes(f.key)) continue;
+    const el = g('param-'+f.key);
+    if (!el) continue;
+    if (el.type==='checkbox') { if (el.checked) common[f.key]='true'; }
+    else if (el.value.trim()) common[f.key]=el.value.trim();
+  }
+  const keys = [...picked.keys()];
+  const used = new Set(); const results = [];
+  for (let i=0;i<keys.length;i++) {
+    const info = picked.get(keys[i]);
+    let slug = (g('pf-slug-'+i)?.value || autoSlug(info.name)).trim();
+    while (used.has(slug)) slug += '-2'; used.add(slug);
+    const params = {slug, ...common};
+    params.source_path = info.manual ? (g('pf-src-'+i)?.value||'').trim() : keys[i];
+    const vttEl = g('pf-vtt-'+i); if (vttEl) params.vtt_path = vttEl.value.trim();
+    const achEl = g('pf-anch-'+i); if (achEl && achEl.value.trim()) params.anchors = achEl.value.trim();
+    if (!params.source_path) { results.push(`✗ ${slug}:缺路径`); continue; }
+    if (t.dims.subtitle==='en_vtt' && !params.vtt_path) { results.push(`✗ ${slug}:缺VTT`); continue; }
+    try {
+      const d = await (await fetch('/api/tasks',{method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({type:selected,params})})).json();
+      results.push(d.ok?`✓ ${slug}`:`✗ ${slug}:${d.error}`);
+    } catch(e) { results.push(`✗ ${slug}:${e.message}`); }
+  }
+  showToast(results.join(' | '), results.some(r=>r.startsWith('✗')));
+  if (results.some(r=>r.startsWith('✓'))) {
+    picked.clear(); renderPicked(); selected=null;
+    g('types').innerHTML=''; g('form-fields').innerHTML='';
+    wizShow(1); loadLib(); goPage('tasks');
+  }
+}
+
+/* ============ 任务列表 ============ */
+async function fetchTasks() {
+  try {
+    tasks = await (await fetch('/api/tasks')).json();
+    renderTasks();
+    fetchStatus();
+  } catch(e) { g('tasks').innerHTML = `<div class="empty">连接失败: ${e.message}</div>`; }
+}
+const STATUS_CN = {running:'执行中',done:'完成',failed:'失败'};
+const SLOT_CN = {source_video:'🎬 视频源',en_subtitle:'🌐 英文字幕',zh_subtitle:'🇨🇳 中文字幕',
+  zh_audio:'🎵 中文音频',final_video:'🎁 成品'};
+function renderTasks() {
+  const box = g('tasks');
+  if (!tasks.length) { box.innerHTML = '<div class="empty">没有任务,去「新建任务」创建</div>'; return; }
+  box.innerHTML = tasks.map(t=>{
+    const stages = t.stages.map(s=>`<div class="pstage ${s.status}" title="${s.label}${s.error?': '+s.error:''}">
+      <div class="b">${s.status==='done'?'✓':s.status==='failed'?'✗':s.status==='running'?'⏳':''}</div>
+      ${s.label}</div>`).join('');
+    const arts = Object.entries(t.artifacts).map(([k,a])=>{
+      const has = !!a.local_path;
+      return `<div class="art ${has?'':'empty'}"><b>${SLOT_CN[k]||k}</b><br>
+        ${has ? `${fmtSize(a.size)} ${a.nas_path?'<span style="color:var(--ok)">NAS✓</span>':'⚠仅本地'}
+          <button class="btn sm" onclick="dlByLocal('${(a.local_path||'').replace(/'/g,"\\'")}')">下载</button>`
+        : '<span class="hint">—</span>'}</div>`;
+    }).join('');
+    const failed = t.stages.find(s=>s.status==='failed');
+    return `<div class="task">
+      <div class="task-h"><b style="font-size:15px">${t.slug}</b>
+        <span class="badge ${t.status}">${STATUS_CN[t.status]||t.status}</span>
+        <span class="hint">${t.type_name} · ${t.progress} · ${t.created_at}</span>
+        <span style="flex:1"></span>
+        ${t.status==='failed'?`<button class="btn warn sm" onclick="doAction('${t.id}','retry')">重试失败阶段</button>`:''}
+      </div>
+      <div class="pipeline">${stages}</div>
+      <div class="arts">${arts}</div>
+      ${failed&&failed.error?`<div class="err-line">${failed.label}: ${failed.error}</div>`:''}
+      <details ontoggle="loadDetail('${t.id}',this)"><summary class="hint" style="cursor:pointer">运行日志</summary>
+        <pre class="log" id="log-${t.id}">加载中…</pre></details>
+    </div>`;
+  }).join('');
+}
+async function loadDetail(id, el) {
+  if (!el.open) return;
+  const d = await (await fetch('/api/tasks/'+id)).json();
+  const pre = g('log-'+id);
+  if (pre) pre.textContent = (d.log||[]).join('\n') || '(暂无)';
+}
+async function doAction(id, action) {
+  const d = await (await fetch(`/api/tasks/${id}/action`,{method:'POST',
+    headers:{'Content-Type':'application/json'},body:JSON.stringify({action})})).json();
+  d.ok ? showToast('已执行') : showToast(d.error||'失败', true);
+  setTimeout(fetchTasks, 800);
+}
+/* 下载:由本地相对路径反推 NAS 相对路径(work/studio/<slug>/NN-xx/f → <slug>/NN-xx/f) */
+function dlByLocal(localPath) {
+  const m = localPath.replace(/\\/g,'/').match(/studio\/(.+)$/);
+  if (m) dl(decodeURIComponent(m[1]));
+}
+
+/* ============ 原片库(独立页) ============ */
+async function loadLib2() {
+  const d = await (await fetch('/api/library' + (libDir?'?dir='+encodeURIComponent(libDir):''))).json();
+  const list = g('lib-list2'), crumb = g('lib-crumb2');
+  if (!d.ok) { list.textContent = d.error; return; }
+  dirItemsCache[libDir] = d.items;
+  const parts = libDir ? libDir.split('/') : [];
+  crumb.innerHTML = '📁 ' + (libDir ? parts.map((seg,i)=>
+    `<a href="#" onclick="gotoLib('${parts.slice(0,i+1).join('/')}')">${seg}</a>`).join(' / ') : '(根)')
+    + (libDir?` <a href="#" onclick="gotoLib('${parts.slice(0,-1).join('/')}')">⬆</a>`:'');
+  list.innerHTML = (d.items||[]).map(it=>{
+    const rel = (libDir?libDir+'/':'')+it.name;
+    if (it.dir) return `<div class="frow"><span>📁</span><a class="nm" href="#"
+      onclick="gotoLib('${rel}')">${it.name}</a></div>`;
+    return `<div class="frow"><span>📄</span><span class="nm" style="cursor:default">${it.name}</span>
+      <span class="hint">${fmtSize(it.size)}</span>
+      <button class="btn sm" onclick="dl('${rel}')">下载</button></div>`;
+  }).join('') || '<div class="empty">(空)</div>';
+}
+
+/* ============ 成品库 ============ */
+async function loadProducts() {
+  const box = g('prod-list');
+  try {
+    const d = await (await fetch('/api/library?dir='+encodeURIComponent('成品库'))).json();
+    if (!d.ok) { box.textContent = d.error; return; }
+    const out = [];
+    for (const it of d.items.filter(x=>x.dir)) {
+      const sub = await (await fetch('/api/library?dir='+encodeURIComponent('成品库/'+it.name))).json();
+      if (!sub.ok || !sub.items.some(x=>x.dir&&x.name.startsWith('01-'))) continue;
+      const files = [];
+      for (const sd of sub.items.filter(x=>x.dir)) {
+        const f = await (await fetch('/api/library?dir='+encodeURIComponent('成品库/'+it.name+'/'+sd.name))).json();
+        if (f.ok) f.items.filter(x=>!x.dir).forEach(x=>files.push({slot:sd.name,name:x.name,size:x.size,
+          path:'成品库/'+it.name+'/'+sd.name+'/'+x.name}));
+      }
+      out.push({name:it.name, files});
+    }
+    box.innerHTML = out.length ? out.map(t=>`
+      <details style="margin-bottom:8px"><summary style="cursor:pointer"><b>${t.name}</b>
+        <span class="hint">${t.files.length} 个产物</span></summary>
+        ${t.files.map(f=>`<div class="frow"><span>📦</span><span class="nm" style="cursor:default">${f.slot}/ <b>${f.name}</b></span>
+          <span class="hint">${fmtSize(f.size)}</span>
+          <button class="btn sm" onclick="dl('${f.path}')">下载</button></div>`).join('')}
+      </details>`).join('') : '<div class="empty">暂无成品任务</div>';
+  } catch(e) { box.textContent = '加载失败: '+e.message; }
+}
+function dl(rel) { window.open('/api/download?path='+encodeURIComponent(rel)); }
+
+/* ============ 音色库 ============ */
+async function loadVoices() {
+  VOICES = await (await fetch('/api/voices')).json();
+  g('voices').textContent = VOICES.length
+    ? VOICES.map(v=>`🎙 ${v.name}${v.note?' — '+v.note:''}`).join('   |   ') : '(空)';
+}
+async function createVoice() {
+  const body = {name:g('v-name').value.trim(), ref_audio:g('v-audio').value.trim(),
+    ref_text:g('v-text').value.trim()};
+  const d = await (await fetch('/api/voices',{method:'POST',
+    headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})).json();
+  d.ok ? (showToast('已注册'), loadVoices()) : showToast(d.error, true);
+}
+
+/* ============ 环境/状态 ============ */
+async function selftest() {
+  g('selftest-result').innerHTML = '检测中…';
+  const d = await (await fetch('/api/selftest',{method:'POST',
+    headers:{'Content-Type':'application/json'},body:'{}'})).json();
+  g('selftest-result').innerHTML = d.detail.map(x=>'· '+x).join('<br>');
+}
+async function fetchStatus() {
+  try {
+    const s = await (await fetch('/api/status')).json();
+    g('agent-box').innerHTML = `<span class="dot ${s.agent_online?'on':'off'}"></span>PC 代理
+      ${s.agent_online?'在线':'离线'}`;
+  } catch(e) {}
+}
+
+/* ============ 工具 ============ */
+const g = id => document.getElementById(id);
+function fmtSize(b){ return !b?'':b>1048576?(b/1048576).toFixed(1)+'MB':(b/1024).toFixed(0)+'KB'; }
+function showToast(msg, isError) {
+  const t = g('toast');
+  t.textContent = msg; t.className = 'toast'+(isError?' error':'');
+  t.style.display='block';
+  setTimeout(()=>{ t.style.display='none'; }, 4000);
+}
+
+/* ============ 启动 ============ */
+loadVoices().then(loadTypes);
+goPage(location.hash.slice(1) || 'create');
+setInterval(() => { if (g('page-tasks').classList.contains('on')) fetchTasks(); }, 3000);
+fetchStatus(); setInterval(fetchStatus, 15000);
+loadLib();
+</script>
+</body>
+</html>
