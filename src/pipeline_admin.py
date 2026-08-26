@@ -909,8 +909,17 @@ def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
     refs_path.write_text(json.dumps(voice_lib.refs_json_for(voices),
                                     ensure_ascii=False, indent=1),
                          encoding="utf-8")
+    # 朗读副本:GPT-5→GPT5 等(字幕/props 用原文,仅 TTS 读正则版)
+    from tts_normalize import normalize_tts
+    tts_items = [{**i, "text": normalize_tts(i["text"])} for i in items]
+    tts_path = w / "items_tts.json"
+    tts_path.write_text(
+        json.dumps(tts_items, ensure_ascii=False, indent=1), encoding="utf-8")
+    changed = sum(1 for a, b in zip(items, tts_items) if a["text"] != b["text"])
+    if changed:
+        task.log(f"朗读正则化 {changed} 段(GPT-5→GPT5 类)")
     task.log(f"音色分配: {voices}")
-    return w / "items.json", refs_path
+    return tts_path, refs_path
 
 
 def ex_gen_audio(task: Task) -> str:
