@@ -357,7 +357,7 @@ def agent_claim_task(agent: str):
                 cur["status"], cur["error"] = P_FAILED, "代理失联(心跳超时)"
             t.save()
         _write_json(ACTIVE_PATH, {})
-    for t in list_tasks():
+    for t in list_tasks(newest_first=False):  # 领取=创建顺序(最老优先)
         if t.status != S_RUNNING:
             continue
         if any(s["status"] == P_PENDING for s in t.stages):
@@ -848,12 +848,14 @@ def _clone_original_voices(task: Task) -> dict[str, str]:
 
 
 def ex_narration_runs(task: Task) -> str:
-    """细槽译文合并成30~75秒自然旁白段。"""
+    """细槽译文合并成语义段。播客版用更短段(45s)保证听感节奏。"""
     from narration import build_runs, save_runs
     w = task.dir / "work"
     slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
     zh = json.loads((w / "slots_zh.json").read_text(encoding="utf-8"))
-    runs = build_runs(slots, zh, max_duration=75.0, max_gap=5.0)
+    max_dur = 45.0 if VIDEO_TYPES[task.type]["dims"].get("mode") == "podcast" \
+        else 75.0
+    runs = build_runs(slots, zh, max_duration=max_dur, max_gap=5.0)
     nd = w / "narration"
     nd.mkdir(parents=True, exist_ok=True)
     save_runs(runs, nd / "runs.json")
@@ -1249,10 +1251,10 @@ def retry_stage(task: Task) -> bool:
     return False
 
 
-def list_tasks() -> list[Task]:
+def list_tasks(newest_first: bool = True) -> list[Task]:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     out = []
-    for p in sorted(STATE_DIR.glob("*.json"), reverse=True):
+    for p in sorted(STATE_DIR.glob("*.json"), reverse=newest_first):
         try:
             out.append(Task.load(p))
         except Exception:  # legacy schema 跳过
