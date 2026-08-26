@@ -357,7 +357,9 @@ def agent_claim_task(agent: str):
                 cur["status"], cur["error"] = P_FAILED, "代理失联(心跳超时)"
             t.save()
         _write_json(ACTIVE_PATH, {})
-    for t in list_tasks(newest_first=False):  # 领取=创建顺序(最老优先)
+    # 领取=创建时间顺序(ID 随机后缀,文件名排序不等于创建顺序)
+    for t in sorted(list_tasks(newest_first=False),
+                    key=lambda t: t.created_at):
         if t.status != S_RUNNING:
             continue
         if any(s["status"] == P_PENDING for s in t.stages):
