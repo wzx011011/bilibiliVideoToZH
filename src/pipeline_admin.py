@@ -245,12 +245,16 @@ VIDEO_TYPES: dict[str, dict] = {
     },
     "none_2_podcast": {
         "key": "none_2_podcast", "name": "无字幕多人·播客版",
-        "desc": "无字幕多人访谈的 Remotion 真人头像播客版。whisper 转写 → "
-                "声纹分离 → 翻译审查 → 语义段合并 → 双音色配音精修 → "
+        "desc": "无字幕多人访谈的 Remotion 真人头像播客版。官方字幕/whisper "
+                "转写 → 声纹分离 → 翻译审查 → 语义段合并 → 双音色配音精修 → "
                 "播客画面(双头像+波形+滚动字幕)渲染。",
         "dims": {"subtitle": "none", "speakers": 2, "mode": "podcast"},
         "default_render": "podcast_remotion",
         "params": _TYPE_COMMON_PARAMS + [
+            {"key": "vtt_path", "label": "英文字幕 VTT(可选)", "type": "str",
+             "required": False,
+             "hint": "YouTube 自动字幕;有则官方字幕成槽(优于本地 whisper)"
+                     "并启用词级校声,无则 whisper 转写"},
             {"key": "anchors", "label": "声纹锚点 JSON", "type": "str",
              "required": True,
              "hint": "JSON如 {\"A\":[60,80],\"B\":[300,320]} 从原片各选一段"
@@ -269,6 +273,7 @@ VIDEO_TYPES: dict[str, dict] = {
         "stages": ["ensure_source",
                    "extract_audio",
                    "en_slots",
+                   "align_speakers",
                    "translate",
                    "audit_translation",
                    "narration_runs",
@@ -617,7 +622,8 @@ def ex_en_slots(task: Task) -> str:
     w = task.dir / "work"
     slots_path = w / "slots.json"
     dims = VIDEO_TYPES[task.type]["dims"]
-    if dims["subtitle"] == "en_vtt":
+    if dims["subtitle"] == "en_vtt" or task.params.get("vtt_path"):
+        # 官方字幕成槽(YouTube auto captions 优于本地 whisper)
         anchors = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
         vtt = Path(task.params["vtt_path"])
         if not vtt.is_absolute():
@@ -668,12 +674,14 @@ def ex_translate(task: Task) -> str:
 def ex_align_speakers(task: Task) -> str:
     """词级对齐(ForcedAligner,WSL CPU) + 停顿切 utterance 的 campplus 重标注。
 
-    修复固定窗口声纹标注的边界归属错误;未安装对齐器时优雅跳过。
+    修复固定窗口声纹标注的边界归属错误;无 vtt 字幕源或未装对齐器时优雅跳过。
     """
     w = task.dir / "work"
-    vtt = Path(task.params["vtt_path"])
-    if not vtt.is_absolute():
+    vtt = Path(task.params["vtt_path"]) if task.params.get("vtt_path") else None
+    if vtt and not vtt.is_absolute():
         vtt = ROOT / vtt
+    if not vtt:
+        return "跳过(无 vtt 字幕源,沿用窗口声纹标注)"
     chk = _run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c",
                 "test -x ~/qwen-aligner-venv/bin/python && echo ok || echo missing"],
                task, timeout=60)
