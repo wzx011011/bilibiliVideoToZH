@@ -13,8 +13,9 @@ from __future__ import annotations
 
 import re
 
-# 大写字母缩写 + 连字符 + 数字(可带小写字母后缀)
-_DASH_NUM = re.compile(r"\b([A-Z]{2,})-(\d+[a-z]?)")
+# 大写字母缩写 + 连字符 + 数字(可带小写字母后缀);
+# 不用 \b——中文也属 \w,"和GPT-5" 处无词边界会漏匹配
+_DASH_NUM = re.compile(r"(?<![A-Za-z])([A-Z]{2,})-(\d+[a-z]?)")
 
 
 def normalize_tts(text: str) -> str:
