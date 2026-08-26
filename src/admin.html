@@ -158,6 +158,57 @@ pre.log { background: #0f1420; color: #c3cbdc; font-size: 11px; line-height: 1.6
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 details > summary::before { content: '▸ '; color: var(--sub); }
+
+/* ===== 任务列表 v2:工具栏 + 紧凑行 + tab 详情 ===== */
+.toolbar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+.chipbtn { border:1px solid var(--line); background:var(--card); border-radius:999px;
+  padding:5px 14px; font-size:12.5px; font-weight:700; color:var(--sub);
+  cursor:pointer; transition:.15s; }
+.chipbtn:hover { border-color:var(--pri); color:var(--pri); }
+.chipbtn.on { background:var(--pri); border-color:var(--pri); color:#fff; }
+.chipbtn b { margin-left:4px; font-weight:800; }
+.tsearch { flex:1; min-width:150px; max-width:260px; border:1px solid var(--line);
+  border-radius:999px; padding:6px 14px; font-size:13px; background:var(--card); outline:none; }
+.tsearch:focus { border-color:var(--pri); }
+.tsort { border:1px solid var(--line); border-radius:8px; padding:6px 8px;
+  font-size:12px; background:var(--card); color:var(--sub); }
+.taskitem { border:1px solid var(--line); border-radius:var(--radius); margin-bottom:10px;
+  background:var(--card); box-shadow:var(--shadow); transition:border-color .15s; }
+.taskitem.open { border-color:#c9d4f5; }
+.trow { display:flex; align-items:center; gap:10px; padding:11px 16px; cursor:pointer;
+  flex-wrap:wrap; }
+.taskitem.open .trow { border-bottom:1px dashed var(--line-2); }
+.tdot { width:9px; height:9px; border-radius:50%; flex:none; }
+.tdot.running { background:var(--pri); animation:pulse 1.6s infinite; }
+.tdot.done { background:var(--ok); } .tdot.failed { background:var(--err); }
+.tdot.canceled { background:#9aa3b5; }
+.trow .slug { font-weight:800; font-size:14px; letter-spacing:.2px; }
+.trow .pg { font-variant-numeric:tabular-nums; font-size:12px; color:var(--sub); }
+.trow .rel { font-size:11.5px; color:var(--sub); cursor:default; }
+.trow .sp { flex:1; }
+.chev { color:var(--sub); transition:transform .15s; display:inline-block; }
+.taskitem.open .chev { transform:rotate(90deg); }
+.mini { display:flex; gap:3px; align-items:center; }
+.mini i { width:7px; height:7px; border-radius:50%; background:var(--line); flex:none; }
+.mini i.done { background:var(--ok); } .mini i.running { background:var(--pri); }
+.mini i.failed { background:var(--err); } .mini i.canceled { background:#9aa3b5; }
+.tdetail { padding:2px 16px 16px; }
+.tabs { display:flex; gap:2px; margin:10px 0 14px; border-bottom:1px solid var(--line-2); }
+.tabs a { padding:7px 14px; font-size:13px; font-weight:700; color:var(--sub);
+  cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-1px; user-select:none; }
+.tabs a:hover { color:var(--pri); }
+.tabs a.on { color:var(--pri); border-bottom-color:var(--pri); }
+.pdur { font-size:10px; color:var(--warn); margin-top:3px; white-space:nowrap; }
+.arttable { width:100%; border-collapse:collapse; font-size:12.5px; }
+.arttable td { padding:8px 10px; border-top:1px solid var(--line-2); vertical-align:middle; }
+.arttable tr:first-child td { border-top:none; }
+.arttable tr.empty { opacity:.45; }
+.logbar { display:flex; gap:10px; align-items:center; margin-bottom:8px;
+  font-size:12px; color:var(--sub); }
+.skeleton { height:64px; border-radius:var(--radius); margin-bottom:10px;
+  background:linear-gradient(90deg,#eef0f6 25%,#f7f8fc 45%,#eef0f6 65%);
+  background-size:200% 100%; animation:shimmer 1.2s infinite; }
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 details[open] > summary::before { content: '▾ '; }
 
 /* ===== 杂项 ===== */
@@ -185,7 +236,9 @@ details[open] > summary::before { content: '▾ '; }
 .perfile .pf-h .rm:hover { text-decoration: underline; }
 .perfile .pf-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
 .voices-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
-.voice-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: #fbfcfe; }
+.voice-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: #fbfcfe;
+  display: flex; flex-direction: column; gap: 6px; }
+.voice-card .v-play { margin-top: auto; align-self: flex-start; min-width: 86px; }
 .voice-card .v-n { font-weight: 700; font-size: 13.5px; margin-bottom: 4px; }
 .env-item { padding: 7px 0; border-bottom: 1px dashed var(--line-2); font-size: 13px;
   font-family: Consolas, monospace; }
@@ -212,6 +265,7 @@ details[open] > summary::before { content: '▾ '; }
       <a data-page="tasks">📋 任务列表</a>
       <a data-page="library">📁 原片库</a>
       <a data-page="products">🎁 成品库</a>
+      <a data-page="publish">🚀 发布</a>
       <a data-page="voices">🎙 音色库</a>
       <a data-page="env">⚙️ 环境</a>
     </nav>
@@ -266,20 +320,40 @@ details[open] > summary::before { content: '▾ '; }
     <section class="page" id="page-tasks">
       <div class="page-h">
         <h1>任务列表</h1>
-        <div class="sub-t">阶段进度与五件套产物,失败可重试 · 每 3 秒自动刷新</div>
+        <div class="sub-t">阶段进度与五件套产物 · 每 3 秒增量刷新,只更新有变化的部分</div>
       </div>
-      <div id="tasks"></div>
+      <div class="toolbar">
+        <button class="chipbtn on" data-f="all" onclick="setFilter('all')">全部<b id="cnt-all"></b></button>
+        <button class="chipbtn" data-f="running" onclick="setFilter('running')">▶ 执行中<b id="cnt-running"></b></button>
+        <button class="chipbtn" data-f="failed" onclick="setFilter('failed')">✗ 失败<b id="cnt-failed"></b></button>
+        <button class="chipbtn" data-f="canceled" onclick="setFilter('canceled')">⏹ 已取消<b id="cnt-canceled"></b></button>
+        <button class="chipbtn" data-f="done" onclick="setFilter('done')">✓ 完成<b id="cnt-done"></b></button>
+        <input class="tsearch" id="tsearch" placeholder="搜索 slug…(按 / 聚焦)"
+               oninput="ui.q=this.value.trim().toLowerCase();renderTasks()">
+        <select class="tsort" onchange="ui.sort=this.value;renderTasks()">
+          <option value="active">活跃优先</option>
+          <option value="created">最近创建</option>
+        </select>
+      </div>
+      <div id="tasks">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
     </section>
 
     <!-- ============ 原片库(独立浏览) ============ -->
     <section class="page" id="page-library">
       <div class="page-h">
         <h1>原片库</h1>
-        <div class="sub-t">浏览 NAS 视频目录,下载任意文件</div>
+        <div class="sub-t">浏览 NAS 视频目录,下载任意文件 · 文件夹置前,支持文件名过滤</div>
       </div>
       <div class="card">
-        <div class="crumb" id="lib-crumb2"></div>
-        <div id="lib-list2" class="hint">加载中…</div>
+        <div class="toolbar">
+          <div class="crumb" id="lib-crumb2" style="flex:1;margin:0"></div>
+          <span class="hint" id="lib-count2"></span>
+          <input class="tsearch" id="lib-search" placeholder="搜索文件名…"
+                 oninput="libQ=this.value.trim().toLowerCase();renderLibList()">
+        </div>
+        <div id="lib-list2"><div class="skeleton"></div><div class="skeleton"></div></div>
       </div>
     </section>
 
@@ -287,9 +361,14 @@ details[open] > summary::before { content: '▾ '; }
     <section class="page" id="page-products">
       <div class="page-h">
         <h1>成品库</h1>
-        <div class="sub-t">每个任务的五件套,点击下载</div>
+        <div class="sub-t">每个任务的五件套产物,点击任务展开逐个下载</div>
       </div>
-      <div class="card"><div id="prod-list" class="hint">加载中…</div></div>
+      <div class="toolbar">
+        <input class="tsearch" id="prod-search" placeholder="搜索任务名…"
+               oninput="renderProducts()">
+        <span class="hint" id="prod-count"></span>
+      </div>
+      <div id="prod-list"><div class="skeleton"></div><div class="skeleton"></div></div>
     </section>
 
     <!-- ============ 音色库 ============ -->
@@ -299,7 +378,12 @@ details[open] > summary::before { content: '▾ '; }
         <div class="sub-t">CosyVoice 克隆参考(几秒干净人声 + 逐字文本),任务中复用</div>
       </div>
       <div class="card">
-        <div id="voices" class="hint">加载中…</div>
+        <div class="toolbar">
+          <input class="tsearch" id="v-search" placeholder="搜索音色名/备注…"
+                 oninput="vq=this.value.trim().toLowerCase();renderVoices()">
+          <span class="hint" id="v-count"></span>
+        </div>
+        <div id="voices"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
         <details style="margin-top:14px">
           <summary class="hint" style="cursor:pointer;font-weight:600">＋ 注册新音色</summary>
           <div class="grid2" style="margin-top:12px">
@@ -309,6 +393,106 @@ details[open] > summary::before { content: '▾ '; }
           </div>
           <button class="btn pri" onclick="createVoice()">注册</button>
         </details>
+      </div>
+    </section>
+
+    <!-- ============ 发布 ============ -->
+    <section class="page" id="page-publish">
+      <div class="page-h">
+        <h1>发布</h1>
+        <div class="sub-t">成品一键发布:B站(视频) · 喜马拉雅(音频) · RSS播客托管(小宇宙)</div>
+      </div>
+
+      <!-- 首次设置口令 -->
+      <div class="card" id="pub-setup" style="display:none">
+        <h2>首次使用:设置发布口令</h2>
+        <div class="hint">发布页将通过公网域名访问,必须设置口令保护。口令保存在服务器本地,浏览器会记住。</div>
+        <input type="password" id="pub-token-new" placeholder="至少6位"
+               style="margin:10px 0;padding:8px;width:240px">
+        <button class="btn pri" onclick="pubSetup()">保存口令</button>
+      </div>
+
+      <div id="pub-main" style="display:none">
+      <!-- 平台账号 -->
+      <div class="card">
+        <h2>平台账号</h2>
+        <table style="width:100%">
+          <tr>
+            <td style="width:110px;font-weight:600">B站</td>
+            <td id="pub-bili-status">检测中…</td>
+            <td style="text-align:right">
+              <button class="btn" onclick="biliStartQR()">扫码登录</button>
+              <button class="btn" onclick="biliLogout()">退出</button>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight:600">喜马拉雅</td>
+            <td id="pub-xml-status">检测中…</td>
+            <td style="text-align:right">
+              <button class="btn" onclick="xmlShowInput()">粘贴Cookie</button>
+            </td>
+          </tr>
+          <tr><td colspan="3"><div id="pub-xml-input" style="display:none;margin-top:8px">
+            <textarea id="pub-xml-cookie" rows="3"
+              placeholder="登录 ximalaya.com 后,F12→Network 复制任意请求的 Cookie 整串粘贴到这里"
+              style="width:100%"></textarea>
+            <button class="btn pri" style="margin-top:6px" onclick="xmlSaveCookies()">保存Cookie</button>
+          </div></td></tr>
+          <tr>
+            <td style="font-weight:600">RSS 播客</td>
+            <td id="pub-rss-status">未配置</td>
+            <td style="text-align:right">
+              <button class="btn" onclick="rssShowConfig()">配置公网地址</button>
+            </td>
+          </tr>
+          <tr><td colspan="3"><div id="pub-rss-config" style="display:none;margin-top:8px">
+            <input id="pub-rss-base" placeholder="https://你的域名/podcast (NAS nginx 对外地址)"
+                   style="padding:8px;width:340px">
+            <input id="pub-rss-author" placeholder="作者名(默认系列名)" style="padding:8px;width:160px">
+            <button class="btn pri" style="margin-top:6px" onclick="rssSaveConfig()">保存</button>
+            <div class="hint" style="margin-top:6px">保存后点下方"同步RSS到NAS",再把 feed 地址提交给小宇宙一次即可。</div>
+          </div></td></tr>
+        </table>
+      </div>
+
+      <!-- 扫码弹层 -->
+      <div class="card" id="pub-qr-card" style="display:none;text-align:center">
+        <h2>B站扫码登录</h2>
+        <div id="pub-qr-img" style="min-height:200px;display:flex;align-items:center;justify-content:center">生成中…</div>
+        <div id="pub-qr-tip" class="hint">打开B站APP → 扫一扫 → 确认登录</div>
+        <button class="btn" onclick="g('pub-qr-card').style.display='none'">关闭</button>
+      </div>
+
+      <!-- 集列表 -->
+      <div class="card">
+        <h2>选择要发布的集</h2>
+        <div class="hint" style="margin-bottom:8px">标题/简介已按模板预填,可直接改。B站发视频,喜马拉雅/RSS 发音频。</div>
+        <div style="display:flex;gap:10px;margin-bottom:8px;flex-wrap:wrap">
+          <label><input type="checkbox" id="pf-bilibili" checked> B站</label>
+          <label><input type="checkbox" id="pf-ximalaya"> 喜马拉雅</label>
+          <label><input type="checkbox" id="pf-rss"> RSS同步</label>
+          <span style="flex:1"></span>
+          专辑ID(喜马): <input id="pub-xml-album" type="number" value="0" style="width:90px;padding:4px">
+          分区tid(B站): <input id="pub-tid" type="number" value="231" style="width:70px;padding:4px">
+        </div>
+        <table style="width:100%">
+          <thead><tr>
+            <th style="width:50px">集</th><th style="width:60px">视频</th><th style="width:60px">音频</th>
+            <th>标题</th><th style="width:70px">发布</th>
+          </tr></thead>
+          <tbody id="pub-episodes"></tbody>
+        </table>
+        <div style="margin-top:12px">
+          <button class="btn pri" onclick="pubSubmitSelected()">🚀 发布勾选的集</button>
+          <button class="btn" onclick="rssShipNow()">同步RSS到NAS</button>
+        </div>
+      </div>
+
+      <!-- 历史 -->
+      <div class="card">
+        <h2>发布记录</h2>
+        <div id="pub-jobs" class="hint">暂无</div>
+      </div>
       </div>
     </section>
 
@@ -334,6 +518,8 @@ let tasks = [];
 let libDir = '原片库';
 let picked = new Map();
 let dirItemsCache = {};   // dir -> {items, nas_abs}
+let libQ = '', vq = '', prodData = [], prodOpen = {};
+const aq = s => String(s).replace(/'/g, "\\'");
 
 /* ============ 路由 ============ */
 document.querySelectorAll('.side nav a').forEach(a => {
@@ -350,6 +536,7 @@ function goPage(p) {
   if (p === 'voices') loadVoices();
   if (p === 'library') loadLib2();
   if (p === 'create') loadLib();
+  if (p === 'publish') fetchPubState();
 }
 
 /* ============ 向导 ============ */
@@ -434,7 +621,7 @@ async function loadLib() {
     return `<div class="frow ${picked.has(nasPath)?'picked':''}">
       ${isVideo ? `<input type="checkbox" ${picked.has(nasPath)?'checked':''}
         onchange="togglePick('${safe}')">` : '<span>⬜</span>'}
-      <span class="nm" onclick="togglePick('${safe}')">📄 ${it.name}</span>
+      <span class="nm" onclick="togglePick('${safe}')">${isVideo?'🎬':'📄'} ${escapeHTML(it.name)}</span>
       <span class="sz">${fmtSize(it.size)}</span>
       ${isVideo?'':`<button class="btn sm" onclick="dl('${rel}')">下载</button>`}
     </div>`;
@@ -550,67 +737,269 @@ async function createTasksBatch() {
   }
 }
 
-/* ============ 任务列表 ============ */
+/* ============ 任务列表 v2:工具栏筛选 + 紧凑行 + 指纹增量刷新 ============ */
+const STATUS_CN = {running:'执行中',done:'完成',failed:'失败',canceled:'已取消'};
+const SLOT_CN = {source_video:'🎬 视频源',en_subtitle:'🌐 英文字幕',zh_subtitle:'🇨🇳 中文字幕',
+  zh_audio:'🎵 中文音频',final_video:'🎁 成品'};
+const STATUS_ORDER = {running:0, failed:1, canceled:2, done:3};
+const ui = { expanded:{}, tab:{}, filter:'all', q:'', sort:'active' };
+let taskNodes = {}, taskFPs = {}, logCache = {};
+
 async function fetchTasks() {
   try {
     tasks = await (await fetch('/api/tasks')).json();
     renderTasks();
     fetchStatus();
-  } catch(e) { g('tasks').innerHTML = `<div class="empty"><span class="big">⚠</span>连接失败: ${e.message}</div>`; }
-}
-const STATUS_CN = {running:'执行中',done:'完成',failed:'失败'};
-const SLOT_CN = {source_video:'🎬 视频源',en_subtitle:'🌐 英文字幕',zh_subtitle:'🇨🇳 中文字幕',
-  zh_audio:'🎵 中文音频',final_video:'🎁 成品'};
-function renderTasks() {
-  const box = g('tasks');
-  if (!tasks.length) {
-    box.innerHTML = '<div class="card"><div class="empty"><span class="big">🗂</span>没有任务,去「新建任务」创建</div></div>';
-    return;
+  } catch(e) {
+    if (!Object.keys(taskNodes).length)
+      g('tasks').innerHTML = `<div class="empty"><span class="big">⚠</span>连接失败: ${e.message}</div>`;
   }
-  box.innerHTML = tasks.map(t=>{
-    const stages = t.stages.map(s=>`<div class="pstage ${s.status}" title="${s.label}${s.error?': '+s.error:''}">
+}
+
+function relTime(s) {
+  if (!s) return '';
+  const d = new Date(s.replace(' ', 'T'));
+  const diff = (Date.now() - d.getTime()) / 1000;
+  if (isNaN(diff) || diff < 0) return s;
+  if (diff < 60) return '刚刚';
+  if (diff < 3600) return Math.floor(diff/60) + ' 分钟前';
+  if (diff < 86400) return Math.floor(diff/3600) + ' 小时前';
+  return Math.floor(diff/86400) + ' 天前';
+}
+
+function fmtDur(sec) {
+  sec = Math.max(0, Math.round(sec));
+  const m = Math.floor(sec/60);
+  return m ? `${m}分${String(sec%60).padStart(2,'0')}秒` : `${sec}秒`;
+}
+
+function escapeHTML(s) {
+  return String(s).replace(/[&<>"]/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+function pct(t) {
+  const m = (t.progress||'').match(/(\d+)\s*\/\s*(\d+)/);
+  return m ? Math.round(m[1]/m[2]*100) : 0;
+}
+
+function isActive(t) { return t.status === 'running'; }
+function isOpen(t) { return ui.expanded[t.id] !== undefined ? ui.expanded[t.id] : isActive(t); }
+
+function visibleTasks() {
+  return tasks.filter(t =>
+      (ui.filter === 'all' || t.status === ui.filter) &&
+      (!ui.q || t.slug.toLowerCase().includes(ui.q)))
+    .sort((a,b) => ui.sort === 'created'
+      ? b.created_at.localeCompare(a.created_at)
+      : ((STATUS_ORDER[a.status] ?? 9) - (STATUS_ORDER[b.status] ?? 9)) ||
+        b.created_at.localeCompare(a.created_at));
+}
+
+function taskFP(t) {
+  return JSON.stringify([t.status, t.progress,
+    t.stages.map(s => s.status + (s.started_at||'') + (s.ended_at||'')),
+    Object.values(t.artifacts).map(a =>
+      (a.local_path?'L':'') + (a.nas_path?'N':'') + (a.size||'')),
+    isOpen(t), ui.tab[t.id] || 'pipeline',
+    isActive(t) ? Math.floor(Date.now()/30000) : 0]);
+}
+
+// started_at/ended_at 为当天 HH:MM:SS;跨午夜粗略按 +24h 修正
+function stageDur(st) {
+  if (!st.started_at) return null;
+  const d = new Date().toISOString().slice(0,10);
+  const a = new Date(d + 'T' + st.started_at);
+  const b = st.ended_at ? new Date(d + 'T' + st.ended_at) : new Date();
+  let diff = (b - a) / 1000;
+  if (isNaN(diff)) return null;
+  if (diff < 0) diff += 86400;
+  return diff;
+}
+
+function setFilter(f) {
+  ui.filter = f;
+  document.querySelectorAll('.chipbtn[data-f]').forEach(x =>
+    x.classList.toggle('on', x.dataset.f === f));
+  renderTasks();
+}
+
+function toggleTask(id) {
+  const node = taskNodes[id]; if (!node) return;
+  const det = node.querySelector('.tdetail');
+  const open = det.style.display === 'none';
+  det.style.display = open ? '' : 'none';
+  node.classList.toggle('open', open);
+  ui.expanded[id] = open;
+  if (open && (ui.tab[id] || 'pipeline') === 'log') loadLog(id);
+}
+
+function setTab(id, tab) {
+  ui.tab[id] = tab;
+  rerenderTask(id);
+  if (tab === 'log') loadLog(id);
+}
+
+function rowHTML(t) {
+  const mini = t.stages.map(s =>
+    `<i class="${s.status}" title="${s.label}${s.error ? ': '+s.error : ''}"></i>`).join('');
+  const act = t.status === 'running'
+    ? `<button class="btn sm warn" title="当前阶段完成后停止" onclick="event.stopPropagation();doAction('${t.id}','cancel')">取消</button>`
+    : t.status === 'failed'
+    ? `<button class="btn sm warn" onclick="event.stopPropagation();doAction('${t.id}','retry')">重试失败阶段</button>`
+    : t.status === 'canceled'
+    ? `<button class="btn sm" onclick="event.stopPropagation();doAction('${t.id}','resume')">继续执行</button>`
+    : '';
+  return `<div class="trow" onclick="toggleTask('${t.id}')">
+    <span class="tdot ${t.status}" title="${STATUS_CN[t.status]||t.status}"></span>
+    <span class="slug">${t.slug}</span>
+    <span class="hint">${t.type_name}</span>
+    <span class="mini">${mini}</span>
+    <span class="pg">${t.progress}</span>
+    <span class="rel" title="${t.created_at}">${relTime(t.created_at)}</span>
+    <span class="sp"></span>${act}
+    <span class="chev">▸</span></div>`;
+}
+
+function pipelineHTML(t) {
+  return t.stages.map(s => {
+    const dur = stageDur(s);
+    const tip = `${s.label}` +
+      (s.started_at ? ` · 开始 ${s.started_at}` : '') +
+      (dur != null ? ` · 用时 ${fmtDur(dur)}` : '') +
+      (s.error ? ` · 错误: ${s.error}` : '');
+    return `<div class="pstage ${s.status}" title="${tip}">
       <div class="b">${s.status==='done'?'✓':s.status==='failed'?'✗':s.status==='running'?'⏳':''}</div>
-      ${s.label}</div>`).join('');
-    const arts = Object.entries(t.artifacts).map(([k,a])=>{
-      const has = !!a.local_path;
-      return `<div class="art ${has?'':'empty'}"><div class="a-h"><b>${SLOT_CN[k]||k}</b>
-          ${has ? (a.nas_path?'<span class="chip ok">NAS ✓</span>':'<span class="chip loc">仅本地</span>') : ''}</div>
-        <div class="a-f">${has ? `<span class="sz">${fmtSize(a.size)}</span>
-          <button class="btn sm" onclick="dlByLocal('${(a.local_path||'').replace(/'/g,"\\'")}')">下载</button>`
-        : '<span class="hint">—</span>'}</div></div>`;
-    }).join('');
-    const failed = t.stages.find(s=>s.status==='failed');
-    const pm = (t.progress||'').match(/(\d+)\s*\/\s*(\d+)/);
-    const pbar = pm ? `<div class="pbar"><div style="width:${Math.round(pm[1]/pm[2]*100)}%"></div></div>` : '';
-    return `<div class="task">
-      <div class="task-h"><span class="slug">${t.slug}</span>
-        <span class="badge ${t.status}">${STATUS_CN[t.status]||t.status}</span>
-        <span class="hint">${t.type_name} · ${t.progress} · ${t.created_at}</span>
-        <span style="flex:1"></span>
-        ${t.status==='failed'?`<button class="btn warn sm" onclick="doAction('${t.id}','retry')">重试失败阶段</button>`:''}
-      </div>
-      ${pbar}
-      <div class="pipeline">${stages}</div>
-      <div class="arts">${arts}</div>
-      ${failed&&failed.error?`<div class="err-line">${failed.label}: ${failed.error}</div>`:''}
-      <details ontoggle="loadDetail('${t.id}',this)" style="margin-top:10px">
-        <summary class="hint" style="cursor:pointer;font-weight:600">运行日志</summary>
-        <pre class="log" id="log-${t.id}">加载中…</pre></details>
-    </div>`;
+      ${s.label}${s.status==='running'&&dur!=null?`<div class="pdur">⏱ ${fmtDur(dur)}</div>`:''}</div>`;
   }).join('');
 }
-async function loadDetail(id, el) {
-  if (!el.open) return;
-  const d = await (await fetch('/api/tasks/'+id)).json();
-  const pre = g('log-'+id);
-  if (pre) pre.textContent = (d.log||[]).join('\n') || '(暂无)';
+
+function artsHTML(t) {
+  const rows = Object.entries(t.artifacts).map(([k,a]) => {
+    const has = !!a.local_path;
+    return `<tr class="${has?'':'empty'}"><td><b>${SLOT_CN[k]||k}</b></td>
+      <td>${has?(a.nas_path?'<span class="chip ok">NAS ✓</span>':'<span class="chip loc">仅本地</span>'):'—'}</td>
+      <td>${has?fmtSize(a.size):''}</td>
+      <td>${has?`<button class="btn sm" onclick="dlByLocal('${(a.local_path||'').replace(/'/g,"\\'")}')">下载</button>`:''}</td></tr>`;
+  }).join('');
+  return `<table class="arttable"><tbody>${rows}</tbody></table>`;
 }
+
+function tabBody(t) {
+  const tab = ui.tab[t.id] || 'pipeline';
+  if (tab === 'pipeline')
+    return `<div class="pbar"><div style="width:${pct(t)}%"></div></div>
+      <div class="pipeline">${pipelineHTML(t)}</div>`;
+  if (tab === 'arts') return artsHTML(t);
+  return `<div class="logbar">
+      <label style="cursor:pointer;display:flex;gap:4px;align-items:center">
+        <input type="checkbox" id="follow-${t.id}" checked> 跟随滚动</label>
+      <a href="#" onclick="loadLog('${t.id}');return false" style="color:var(--pri)">刷新</a>
+      <a href="#" onclick="copyLog('${t.id}');return false" style="color:var(--pri)">复制</a>
+      <a href="#" onclick="downloadLog('${t.id}');return false" style="color:var(--pri)">下载 .log</a></div>
+    <pre class="log logview">${escapeHTML(logCache[t.id] || '加载中…')}</pre>`;
+}
+
+function detailHTML(t) {
+  const tab = ui.tab[t.id] || 'pipeline';
+  const fs = t.stages.find(s => s.status === 'failed');
+  const names = {pipeline:'阶段管线', arts:'五件套', log:'运行日志'};
+  return `<div class="tabs">${['pipeline','arts','log'].map(k =>
+      `<a class="${tab===k?'on':''}" onclick="setTab('${t.id}','${k}')">${names[k]}</a>`).join('')}
+    </div><div class="tabbody">${tabBody(t)}</div>
+    ${fs&&fs.error?`<div class="err-line">${fs.label}: ${fs.error}</div>`:''}`;
+}
+
+function buildNode(t) {
+  const el = document.createElement('div');
+  el.className = 'taskitem' + (isOpen(t)?' open':'');
+  el.id = 'task-' + t.id;
+  el.innerHTML = rowHTML(t) +
+    `<div class="tdetail"${isOpen(t)?'':' style="display:none"'}>${detailHTML(t)}</div>`;
+  return el;
+}
+
+function rerenderTask(id) {
+  const t = tasks.find(x => x.id === id);
+  const node = taskNodes[id];
+  if (!t || !node) return;
+  const nn = buildNode(t);
+  node.replaceWith(nn);
+  taskNodes[id] = nn;
+}
+
+function renderTasks() {
+  const box = g('tasks');
+  const c = {all:tasks.length, running:0, failed:0, canceled:0, done:0};
+  tasks.forEach(t => { c[t.status] = (c[t.status]||0) + 1; });
+  for (const k of ['all','running','failed','canceled','done']) {
+    const e = g('cnt-'+k); if (e) e.textContent = c[k] ?? 0;
+  }
+  if (!tasks.length) {
+    box.innerHTML = '<div class="card"><div class="empty"><span class="big">🗂</span>没有任务,去「新建任务」创建</div></div>';
+    taskNodes = {}; taskFPs = {};
+    return;
+  }
+  const list = visibleTasks();
+  const frag = document.createDocumentFragment();
+  const seen = new Set();
+  list.forEach(t => {
+    seen.add(t.id);
+    const fp = taskFP(t);
+    if (taskNodes[t.id] && taskFPs[t.id] === fp) {
+      frag.appendChild(taskNodes[t.id]);   // 无变化:复用节点,保留展开/日志/滚动
+      return;
+    }
+    const wasLogOpen = (ui.tab[t.id]||'pipeline')==='log' && !!logCache[t.id];
+    taskNodes[t.id] = buildNode(t);
+    taskFPs[t.id] = fp;
+    frag.appendChild(taskNodes[t.id]);
+    if (wasLogOpen && isActive(t)) loadLog(t.id);
+  });
+  Object.keys(taskNodes).forEach(id => {
+    if (!seen.has(id)) { delete taskNodes[id]; delete taskFPs[id]; }
+  });
+  box.innerHTML = '';
+  box.appendChild(frag);
+}
+
+async function loadLog(id) {
+  try {
+    const d = await (await fetch('/api/tasks/'+id)).json();
+    logCache[id] = (d.log||[]).join('\n') || '(暂无)';
+  } catch(e) { logCache[id] = '(加载失败) ' + e.message; }
+  const box = document.getElementById('task-'+id);
+  if (!box) return;
+  const pre = box.querySelector('.logview');
+  if (!pre) return;
+  pre.textContent = logCache[id];
+  const follow = box.querySelector('#follow-'+id);
+  if (!follow || follow.checked) pre.scrollTop = pre.scrollHeight;
+}
+
+function copyLog(id) {
+  navigator.clipboard.writeText(logCache[id]||'')
+    .then(() => showToast('已复制'), () => showToast('复制失败', true));
+}
+
+function downloadLog(id) {
+  const t = tasks.find(x => x.id === id);
+  const blob = new Blob([logCache[id]||''], {type:'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = (t ? t.slug : id) + '.log';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
 async function doAction(id, action) {
+  const msgs = {cancel:'已请求取消,当前阶段完成后停止'};
   const d = await (await fetch(`/api/tasks/${id}/action`,{method:'POST',
     headers:{'Content-Type':'application/json'},body:JSON.stringify({action})})).json();
-  d.ok ? showToast('已执行') : showToast(d.error||'失败', true);
+  d.ok ? showToast(msgs[action]||'已执行') : showToast(d.error||'失败', true);
   setTimeout(fetchTasks, 800);
 }
+
 /* 下载:由本地相对路径反推 NAS 相对路径(work/studio/<slug>/NN-xx/f → <slug>/NN-xx/f) */
 function dlByLocal(localPath) {
   const m = localPath.replace(/\\/g,'/').match(/studio\/(.+)$/);
@@ -620,59 +1009,119 @@ function dlByLocal(localPath) {
 /* ============ 原片库(独立页) ============ */
 async function loadLib2() {
   const d = await (await fetch('/api/library' + (libDir?'?dir='+encodeURIComponent(libDir):''))).json();
-  const list = g('lib-list2'), crumb = g('lib-crumb2');
-  if (!d.ok) { list.textContent = d.error; return; }
+  if (!d.ok) { g('lib-list2').textContent = d.error; return; }
   dirItemsCache[libDir] = {items: d.items || [], nas_abs: d.nas_abs || ''};
-  renderCrumb(crumb, libDir, 'gotoLib');
-  list.innerHTML = (d.items||[]).map(it=>{
+  renderCrumb(g('lib-crumb2'), libDir, 'gotoLib');
+  renderLibList(d.items || []);
+}
+function renderLibList(items) {
+  const list = g('lib-list2');
+  if (items === undefined) items = (dirItemsCache[libDir]||{}).items || [];
+  const cnt = g('lib-count2');
+  if (cnt) cnt.textContent = `${items.filter(it=>!libQ||it.name.toLowerCase().includes(libQ)).length}/${items.length} 项`;
+  const sorted = items
+    .filter(it => !libQ || it.name.toLowerCase().includes(libQ))
+    .sort((a,b) => (b.dir?1:0)-(a.dir?1:0) || a.name.localeCompare(b.name));
+  list.innerHTML = sorted.map(it=>{
     const rel = (libDir?libDir+'/':'')+it.name;
-    if (it.dir) return `<div class="frow"><span>📁</span><a class="nm" href="#"
-      onclick="gotoLib('${rel}')">${it.name}</a></div>`;
-    return `<div class="frow"><span>📄</span><span class="nm" style="cursor:default">${it.name}</span>
+    const isVideo = /\.(mp4|mkv|webm|mov|avi|ts|flv)$/i.test(it.name);
+    const icon = it.dir ? '📁' : isVideo ? '🎬' : '📄';
+    if (it.dir) return `<div class="frow"><span>${icon}</span>
+      <a class="nm" href="#" onclick="gotoLib('${aq(rel)}')">${escapeHTML(it.name)}</a>
+      <span class="sz">文件夹</span></div>`;
+    return `<div class="frow"><span>${icon}</span>
+      <span class="nm" style="cursor:default">${escapeHTML(it.name)}</span>
       <span class="sz">${fmtSize(it.size)}</span>
-      <button class="btn sm" onclick="dl('${rel}')">下载</button></div>`;
-  }).join('') || '<div class="empty"><span class="big">📂</span>(空目录)</div>';
+      <button class="btn sm" onclick="dl('${aq(rel)}')">下载</button></div>`;
+  }).join('') || '<div class="empty"><span class="big">📂</span>没有匹配的文件</div>';
 }
 
 /* ============ 成品库 ============ */
 async function loadProducts() {
   const box = g('prod-list');
+  box.innerHTML = '<div class="skeleton"></div><div class="skeleton"></div>';
   try {
     const d = await (await fetch('/api/library?dir='+encodeURIComponent('成品库'))).json();
     if (!d.ok) { box.textContent = d.error; return; }
-    const out = [];
-    for (const it of d.items.filter(x=>x.dir)) {
+    const dirs = d.items.filter(x=>x.dir);
+    prodData = (await Promise.all(dirs.map(async it => {
       const sub = await (await fetch('/api/library?dir='+encodeURIComponent('成品库/'+it.name))).json();
-      if (!sub.ok || !sub.items.some(x=>x.dir&&x.name.startsWith('01-'))) continue;
-      const files = [];
-      for (const sd of sub.items.filter(x=>x.dir)) {
+      if (!sub.ok || !sub.items.some(x=>x.dir&&x.name.startsWith('01-'))) return null;
+      const lists = await Promise.all(sub.items.filter(x=>x.dir).map(async sd => {
         const f = await (await fetch('/api/library?dir='+encodeURIComponent('成品库/'+it.name+'/'+sd.name))).json();
-        if (f.ok) f.items.filter(x=>!x.dir).forEach(x=>files.push({slot:sd.name,name:x.name,size:x.size,
-          path:'成品库/'+it.name+'/'+sd.name+'/'+x.name}));
-      }
-      out.push({name:it.name, files});
-    }
-    box.innerHTML = out.length ? out.map(t=>`
-      <details style="margin-bottom:10px"><summary style="cursor:pointer;padding:6px 0">
-        <b>${t.name}</b> <span class="hint">${t.files.length} 个产物</span></summary>
-        ${t.files.map(f=>`<div class="frow"><span>📦</span>
-          <span class="nm" style="cursor:default">${f.slot}/ <b>${f.name}</b></span>
-          <span class="sz">${fmtSize(f.size)}</span>
-          <button class="btn sm" onclick="dl('${f.path}')">下载</button></div>`).join('')}
-      </details>`).join('')
-      : '<div class="empty"><span class="big">🎁</span>暂无成品任务</div>';
+        return f.ok ? f.items.filter(x=>!x.dir).map(x=>({slot:sd.name,name:x.name,size:x.size,
+          path:'成品库/'+it.name+'/'+sd.name+'/'+x.name})) : [];
+      }));
+      const files = lists.flat();
+      return files.length ? {name:it.name, files} : null;
+    }))).filter(Boolean);
+    renderProducts();
   } catch(e) { box.textContent = '加载失败: '+e.message; }
 }
+function renderProducts() {
+  const box = g('prod-list');
+  const q = (g('prod-search').value||'').trim().toLowerCase();
+  const list = prodData.filter(t => !q || t.name.toLowerCase().includes(q));
+  g('prod-count').textContent = `${list.length}/${prodData.length} 个任务`;
+  box.innerHTML = list.map(t=>{
+    const open = !!prodOpen[t.name];
+    const total = t.files.reduce((s,f)=>s+(f.size||0),0);
+    return `<div class="taskitem${open?' open':''}">
+      <div class="trow" onclick="toggleProd('${aq(t.name)}')">
+        <span>🎁</span><span class="slug">${escapeHTML(t.name)}</span>
+        <span class="hint">${t.files.length} 个产物 · 共 ${fmtSize(total)}</span>
+        <span class="sp"></span><span class="chev">▸</span></div>
+      <div class="tdetail"${open?'':' style="display:none"'}>
+        <table class="arttable"><tbody>${t.files.map(f=>
+          `<tr><td style="white-space:nowrap"><b>${escapeHTML(f.slot)}</b></td>
+           <td>${escapeHTML(f.name)}</td>
+           <td style="white-space:nowrap">${fmtSize(f.size)}</td>
+           <td><button class="btn sm" onclick="dl('${aq(f.path)}')">下载</button></td></tr>`).join('')}
+        </tbody></table></div></div>`;
+  }).join('') || '<div class="card"><div class="empty"><span class="big">🎁</span>暂无成品任务</div></div>';
+}
+function toggleProd(n) { prodOpen[n] = !prodOpen[n]; renderProducts(); }
 function dl(rel) { window.open('/api/download?path='+encodeURIComponent(rel)); }
 
 /* ============ 音色库 ============ */
 async function loadVoices() {
   VOICES = await (await fetch('/api/voices')).json();
-  g('voices').innerHTML = VOICES.length
-    ? `<div class="voices-grid">${VOICES.map(v=>`
-        <div class="voice-card"><div class="v-n">🎙 ${v.name}</div>
-          <div class="hint">${v.note||''}</div></div>`).join('')}</div>`
-    : '<div class="empty"><span class="big">🎙</span>(空,可在下方注册)</div>';
+  renderVoices();
+}
+let curAudio = null, curBtn = null;
+function stopVoice() {
+  if (curAudio) { try { curAudio.pause(); } catch(e) {} curAudio = null; }
+  if (curBtn) { curBtn.textContent = '▶ 试听'; curBtn = null; }
+}
+function playVoice(name, btn) {
+  if (curBtn === btn) {                       // 同一按钮:切换播放/暂停
+    if (curAudio && !curAudio.paused) {
+      curAudio.pause(); btn.textContent = '▶ 试听';
+    } else if (curAudio) {
+      curAudio.play().catch(()=>{}); btn.textContent = '⏸ 播放中';
+    }
+    return;
+  }
+  stopVoice();
+  curBtn = btn; btn.textContent = '⏳ 加载中';
+  curAudio = new Audio('/api/voice_audio?name=' + encodeURIComponent(name));
+  curAudio.onplay = () => { if (curBtn === btn) btn.textContent = '⏸ 播放中'; };
+  curAudio.onpause = () => { if (curBtn === btn) btn.textContent = '▶ 试听'; };
+  curAudio.onended = () => { btn.textContent = '▶ 试听'; };
+  curAudio.onerror = () => { btn.textContent = '▶ 试听';
+    showToast('试听音频不可用(未同步到服务器)', true); };
+  curAudio.play().catch(()=>{});
+}
+function renderVoices() {
+  const list = VOICES.filter(v =>
+    !vq || (v.name+' '+(v.note||'')).toLowerCase().includes(vq));
+  g('v-count').textContent = `共 ${VOICES.length} 个音色`;
+  g('voices').innerHTML = list.length
+    ? `<div class="voices-grid">${list.map(v=>`
+        <div class="voice-card"><div class="v-n">🎙 ${escapeHTML(v.name)}</div>
+          <div class="hint">${escapeHTML(v.note||'')}</div>
+          <button class="btn sm v-play" onclick="playVoice('${aq(v.name)}',this)">▶ 试听</button></div>`).join('')}</div>`
+    : '<div class="empty"><span class="big">🎙</span>没有匹配的音色</div>';
 }
 async function createVoice() {
   const body = {name:g('v-name').value.trim(), ref_audio:g('v-audio').value.trim(),
@@ -709,11 +1158,181 @@ function showToast(msg, isError) {
   toastTimer = setTimeout(()=>{ t.style.display='none'; }, 4000);
 }
 
+/* ============ 发布 ============ */
+const pubToken = () => localStorage.getItem('pub-token') || '';
+const pubHeaders = () => ({'Content-Type':'application/json','X-Publish-Token':pubToken()});
+let pubEps = [];
+
+async function pubApi(path, body, method) {
+  const opt = {method: method||'GET', headers: pubHeaders()};
+  if (body !== undefined) opt.body = JSON.stringify(body);
+  const r = await fetch(path, opt);
+  let j; try { j = await r.json(); } catch(e) { j = {ok:false,error:'HTTP '+r.status}; }
+  return j;
+}
+
+async function fetchPubState() {
+  // 首次:探测是否已设口令
+  const probe = await fetch('/api/pub/state', {headers:pubHeaders()});
+  if (probe.status === 401) {
+    try {
+      const j = await probe.clone().json();
+      if ((j.error||'').includes('尚未设置')) { g('pub-setup').style.display=''; g('pub-main').style.display='none'; return; }
+    } catch(e){}
+    g('pub-setup').style.display='none';
+    g('pub-main').style.display='';
+    showToast('口令错误:localStorage 里没有或不对,刷新后重新输入');
+    renderPubLocked();
+    return;
+  }
+  g('pub-setup').style.display='none';
+  g('pub-main').style.display='';
+  const j = await probe.json();
+  if (!j.ok) return;
+  renderPubState(j);
+}
+
+function renderPubState(j) {
+  const b = j.accounts.bilibili;
+  g('pub-bili-status').innerHTML = b.logged ? `<span style="color:#047857;font-weight:600">✓ ${escapeHTML(b.name)}</span>` : '<span class="hint">未登录</span>';
+  const x = j.accounts.ximalaya;
+  g('pub-xml-status').innerHTML = x.saved ? (x.info==='Cookie 已失效' ? '<span style="color:#b91c1c">✗ Cookie 已失效</span>' : `<span style="color:#047857">✓ Cookie 已保存 (${escapeHTML(x.info)})</span>`) : '<span class="hint">未配置</span>';
+  const r = j.accounts.rss;
+  window.__pubRss = r;
+  g('pub-rss-status').innerHTML = r.base_url ? `<span style="color:#047857">✓ ${escapeHTML(r.base_url)}</span>` : '<span class="hint">未配置公网地址</span>';
+
+  pubEps = j.episodes;
+  g('pub-episodes').innerHTML = j.episodes.map((e,i) => {
+    const vid = e.video ? '<span style="color:#047857">✓</span>' : '·';
+    const aud = e.audio ? '<span style="color:#047857">✓</span>' : '·';
+    return `<tr>
+      <td><input type="checkbox" class="pub-pick" data-i="${i}" ${e.video?'':'disabled'}></td>
+      <td><b>EP${String(e.ep).padStart(2,'0')}</b></td>
+      <td>${vid}</td><td>${aud}</td>
+      <td><input class="pub-title" data-i="${i}" value="${escapeHTML(e.title)}" style="width:95%;padding:4px 6px"></td>
+    </tr>`;
+  }).join('');
+
+  g('pub-jobs').innerHTML = !j.jobs.length ? '暂无'
+    : j.jobs.map(x => {
+      const st = x.status==='done' ? '<span style="color:#047857">完成</span>'
+        : x.status==='running' ? '<span style="color:#d97706">进行中</span>'
+        : x.status==='queued' ? '排队中' : '<span style="color:#b91c1c">失败</span>';
+      return `<div style="padding:5px 0;border-bottom:1px solid #eee">
+        ${st} · ${x.job_id} · 平台 ${(x.platforms||[]).join('/')} · ${x.items_count} 集
+        ${(x.sub_bad?` · <span style="color:#b91c1c">${x.sub_bad} 个子任务失败</span>`:'')}
+        <button class="btn" style="margin-left:8px" onclick="pubJobLog('${x.job_id}')">日志</button>
+        ${x.error?`<div class="hint" style="color:#b91c1c">${escapeHTML(x.error)}</div>`:''}
+      </div>`;
+    }).join('');
+}
+
+function renderPubLocked() {}
+
+async function pubSetup() {
+  const token = g('pub-token-new').value.trim();
+  if (token.length < 6) return showToast('口令至少6位', true);
+  const r = await fetch('/api/pub/setup', {method:'POST',
+    headers:{'Content-Type':'application/json'}, body: JSON.stringify({token})});
+  const j = await r.json();
+  if (!j.ok && !(j.error||'').includes('已设置')) return showToast(j.error, true);
+  localStorage.setItem('pub-token', token);
+  showToast('口令已保存'); fetchPubState();
+}
+
+async function biliStartQR() {
+  const j = await pubApi('/api/pub/bilibili/qr', {});
+  if (!j.ok) return showToast(j.qr_error || j.error || '生成失败', true);
+  g('pub-qr-card').style.display='';
+  g('pub-qr-img').innerHTML = j.qr_svg || '无法渲染';
+  pollQR(j.key);
+}
+let qrTimer = null;
+async function pollQR(key) {
+  clearTimeout(qrTimer);
+  const j = await pubApi('/api/pub/bilibili/qr/poll?key='+key);
+  if (j.code === 0) {
+    g('pub-qr-tip').textContent = '✓ 登录成功' + (j.uname ? ':'+j.uname : '');
+    setTimeout(()=>{ g('pub-qr-card').style.display='none'; fetchPubState(); }, 1200);
+    return;
+  }
+  if (j.code === 86038) { g('pub-qr-tip').textContent = '二维码已过期,请重新点击扫码登录'; return; }
+  if (j.code === 86090) g('pub-qr-tip').textContent = '已扫码,请在手机上确认…';
+  else if (j.code === 86101 || j.code === 180) g('pub-qr-tip').textContent = '等待扫码…';
+  qrTimer = setTimeout(()=>pollQR(key), 1500);
+}
+
+async function biliLogout() {
+  if (!confirm('确定退出B站账号?')) return;
+  await pubApi('/api/pub/bilibili/logout', {}, 'POST');
+  showToast('已退出'); fetchPubState();
+}
+
+function xmlShowInput(){ const d=g('pub-xml-input'); d.style.display = d.style.display==='none'?'':'none'; }
+async function xmlSaveCookies() {
+  const v = g('pub-xml-cookie').value.trim();
+  if (!v) return showToast('先粘贴 Cookie', true);
+  const j = await pubApi('/api/pub/ximalaya/cookies', {cookie_string:v}, 'POST');
+  showToast(j.ok ? (j.verified ? 'Cookie 有效 ✓' : '已保存(未能在线验证)') : j.error, !j.ok || !j.verified);
+  if (j.ok) { g('pub-xml-input').style.display='none'; fetchPubState(); }
+}
+
+function rssShowConfig(){
+  const d=g('pub-rss-config'); 
+  if (d.style.display==='none') {
+    d.style.display=''; 
+    if (pubEps && window.__pubRss) { g('pub-rss-base').value=window.__pubRss.base_url||''; g('pub-rss-author').value=window.__pubRss.author||''; }
+  } else d.style.display='none';
+}
+async function rssSaveConfig() {
+  const j = await pubApi('/api/pub/rss/config', {rss_base_url:g('pub-rss-base').value.trim(), rss_author:g('pub-rss-author').value.trim()}, 'POST');
+  showToast(j.ok?'已保存':j.error, !j.ok); if (j.ok) { g('pub-rss-config').style.display='none'; fetchPubState(); }
+}
+
+async function rssShipNow() {
+  showToast('正在生成并同步 RSS 到 NAS…');
+  const items = pubEps.filter(e=>e.audio).map(e=>({ep:e.ep}));
+  const platforms = ['rss'];
+  const j = await pubApi('/api/pub/jobs', {items, platforms}, 'POST');
+  showToast(j.ok?'RSS 同步任务已启动':'失败:'+j.error, !j.ok);
+  setTimeout(fetchPubState, 1000);
+}
+
+async function pubSubmitSelected() {
+  const picks = [...document.querySelectorAll('.pub-pick:checked')].map(x=>+x.dataset.i);
+  if (!picks.length) return showToast('先勾选要发布的集', true);
+  const platforms = ['bilibili','ximalaya','rss'].filter(p => g('pf-'+p).checked);
+  if (!platforms.length) return showToast('至少勾选一个平台', true);
+  const items = picks.map(i => ({
+    ep: pubEps[i].ep,
+    title: document.querySelector(`.pub-title[data-i="${i}"]`).value.trim(),
+    tid: +g('pub-tid').value || undefined,
+  }));
+  if (!confirm(`将发布 ${items.length} 集到 ${platforms.join('/')},确认?`)) return;
+  const j = await pubApi('/api/pub/jobs', {items, platforms}, 'POST');
+  showToast(j.ok ? '发布任务已启动' : ('失败:'+j.error), !j.ok);
+  setTimeout(fetchPubState, 1000);
+}
+
+async function pubJobLog(id) {
+  const j = await pubApi('/api/pub/jobs/'+id);
+  if (!j.ok) return showToast(j.error, true);
+  alert(j.job.log_tail || '(空日志)');
+}
+
 /* ============ 启动 ============ */
 loadVoices().then(loadTypes);
 goPage(location.hash.slice(1) || 'create');
 setInterval(() => { if (g('page-tasks').classList.contains('on')) fetchTasks(); }, 3000);
+setInterval(() => { if (g('page-publish').classList.contains('on')) fetchPubState(); }, 5000);
 fetchStatus(); setInterval(fetchStatus, 15000);
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)
+      && g('page-tasks').classList.contains('on')) {
+    e.preventDefault();
+    g('tsearch').focus();
+  }
+});
 </script>
 </body>
 </html>

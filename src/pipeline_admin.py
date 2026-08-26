@@ -1404,12 +1404,28 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path in ("/", "/admin", "/admin/"):
             return self._html()
+        try:
+            import publish_module as _pub
+            handled = _pub.dispatch(self)
+        except Exception as e:  # 发布模块异常不应影响主服务
+            import traceback
+            traceback.print_exc()
+            handled, err = True, str(e)
+            try:
+                return self._json({"ok": False,
+                                   "error": f"publish 异常: {err}"}, 500)
+            except Exception:
+                return
+        if handled:
+            return
         if self.path == "/api/types":
             return self._json(VIDEO_TYPES)
         if self.path == "/api/voices":
             if MODE == "local":
                 return self._json(voice_lib.list_voices())
             return self._json(_read_json(DATA_DIR / "voices.json", []))
+        if self.path.startswith("/api/voice_audio"):
+            return self._voice_audio()
         if self.path.startswith("/api/library"):
             return self._library()
         if self.path.startswith("/api/download"):
@@ -1445,6 +1461,20 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_POST(self):
+        try:
+            import publish_module as _pub
+            handled = _pub.dispatch(self)
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            handled, err = True, str(e)
+            try:
+                return self._json({"ok": False,
+                                   "error": f"publish 异常: {err}"}, 500)
+            except Exception:
+                return
+        if handled:
+            return
         if self.path == "/api/tasks":
             return self._create()
         if self.path == "/api/voices":
@@ -1529,6 +1559,39 @@ class Handler(BaseHTTPRequestHandler):
         nas_abs = (NAS_MEDIA_ABS + "/" + rel_clean).rstrip("/")
         return self._json({"ok": True, "dir": rel, "nas_abs": nas_abs,
                            "items": items})
+
+    def _voice_audio(self):
+        """试听音色参考音频:?name=<音色名>。
+        local 模式读音色库 ref.wav;server 模式读 DATA_DIR/voice-audio/<name>.wav。"""
+        from urllib.parse import urlparse, parse_qs, unquote
+        q = parse_qs(urlparse(self.path).query)
+        name = unquote((q.get("name") or [""])[0])
+        # 允许中文音色名,但拒绝路径穿越
+        if (not name or "/" in name or "\\" in name or ".." in name
+                or name.startswith(".")):
+            return self._json({"ok": False, "error": "非法音色名"}, 400)
+        if MODE == "local":
+            wav = voice_lib.voices_root() / name / "ref.wav"
+        else:
+            wav = DATA_DIR / "voice-audio" / f"{name}.wav"
+        if not wav.is_file():
+            return self._json({"ok": False,
+                               "error": "试听音频不存在(尚未同步到服务器)"}, 404)
+        size = wav.stat().st_size
+        self.send_response(HTTPStatus.OK)
+        self.send_header("Content-Type", "audio/wav")
+        self.send_header("Content-Length", str(size))
+        self.send_header("Cache-Control", "max-age=86400")
+        self.end_headers()
+        with open(wav, "rb") as fh:
+            while True:
+                chunk = fh.read(256 * 1024)
+                if not chunk:
+                    break
+                try:
+                    self.wfile.write(chunk)
+                except Exception:  # 客户端中断播放
+                    break
 
     def _download(self):
         """流式下载媒体文件:?path=<相对 MEDIA_ROOT 的路径>。"""
