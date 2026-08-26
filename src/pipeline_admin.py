@@ -1068,9 +1068,10 @@ def ex_render_remotion_podcast(task: Task) -> str:
         return [npx, "remotion", "render", "Podcast",
                 str((out_dir / f"chunk-{i:03d}.mp4").resolve()),
                 f"--props={cp.resolve()}", f"--frames={a}-{b}",
-                "--timeout-in-milliseconds=300000"]
+                "--timeout=300000"]
 
-    # 双路并行渲染(每路独立 Remotion 进程,互不依赖;再高会争内存)
+    # 单路顺序渲染:本机渲染与 GPU 配音/ollama 共存,双路 Chrome 会把
+    # 帧耗时拉高 20 倍导致 seek 超时(mini 版实测单路即快)
     pending = [(i, edges[i], edges[i + 1] - 1)
                for i in range(len(edges) - 1)
                if not ((out_dir / f"chunk-{i:03d}.mp4").exists()
@@ -1079,19 +1080,14 @@ def ex_render_remotion_podcast(task: Task) -> str:
     for k in pending:
         task.log(f"待渲染块 {k[0]+1}/{len(chunks)} "
                  f"(frames {k[1]}-{k[2]}, {((k[2]-k[1])/30/60):.0f} 分钟画面)")
-    for j in range(0, len(pending), 2):
-        wave = pending[j:j + 2]
-        procs = [(k, subprocess.Popen(render_cmd(*k), cwd=str(PODCAST_STUDIO),
-                                      stdout=subprocess.PIPE,
-                                      stderr=subprocess.STDOUT, text=True,
-                                      encoding="utf-8", errors="replace"))
-                 for k in wave]
-        for k, p in procs:
-            out_txt = (p.communicate() or ("",))[0] or ""
-            if p.returncode != 0:
-                task.log(f"[render 块{k[0]}] " + out_txt[-1500:])
-                raise RuntimeError(f"Remotion 渲染块 {k[0]} 失败(exit {p.returncode})")
-            task.log(f"块 chunk-{k[0]:03d}.mp4 完成")
+    for k in pending:
+        p = subprocess.run(render_cmd(*k), cwd=str(PODCAST_STUDIO),
+                           capture_output=True, text=True,
+                           encoding="utf-8", errors="replace")
+        if p.returncode != 0:
+            task.log(f"[render 块{k[0]}] " + (p.stdout or p.stderr or "")[-1500:])
+            raise RuntimeError(f"Remotion 渲染块 {k[0]} 失败(exit {p.returncode})")
+        task.log(f"块 chunk-{k[0]:03d}.mp4 完成")
     out = task.dir / "05-成品" / f"{slug}-podcast.mp4"
     out.parent.mkdir(parents=True, exist_ok=True)
     lst = out_dir / "concat.txt"
