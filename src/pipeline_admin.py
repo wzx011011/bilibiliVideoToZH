@@ -54,6 +54,7 @@ VC_DIR = ROOT / "work" / "voice-clone-demo"
 VC_PY = str(VC_DIR / ".venv" / "Scripts" / "python.exe")
 FFMPEG = ROOT / "work" / "video-tools" / "ffmpeg.exe"
 FFPROBE = ROOT / "work" / "video-tools" / "ffprobe.exe"
+PODCAST_STUDIO = ROOT / "work" / "podcast-studio"
 STUDIO = DATA_DIR
 STATE_DIR = DATA_DIR / "tasks"
 PORT = 8766
@@ -89,9 +90,11 @@ _TYPE_COMMON_PARAMS = [
     {"key": "title", "label": "封面标题(cover 模式用)", "type": "str",
      "required": False},
     {"key": "render_mode", "label": "成片模式", "type": "choice",
-     "choices": ["original", "narration", "podcast", "subtitle_only"],
+     "choices": ["original", "narration", "podcast", "podcast_remotion",
+                 "subtitle_only"],
      "required": False,
-     "hint": "original=原片时间轴 narration=中文旁白 podcast=中文播客 subtitle_only=原声+中文字幕"},
+     "hint": "original=原片时间轴 narration=中文旁白 podcast=章节图播客 "
+             "podcast_remotion=Remotion真人头像播客 subtitle_only=原声+中文字幕"},
 ]
 
 VIDEO_TYPES: dict[str, dict] = {
@@ -240,6 +243,41 @@ VIDEO_TYPES: dict[str, dict] = {
                    "zh_subtitle",
                    "render",],
     },
+    "none_2_podcast": {
+        "key": "none_2_podcast", "name": "无字幕多人·播客版",
+        "desc": "无字幕多人访谈的 Remotion 真人头像播客版。whisper 转写 → "
+                "声纹分离 → 翻译审查 → 语义段合并 → 双音色配音精修 → "
+                "播客画面(双头像+波形+滚动字幕)渲染。",
+        "dims": {"subtitle": "none", "speakers": 2, "mode": "podcast"},
+        "default_render": "podcast_remotion",
+        "params": _TYPE_COMMON_PARAMS + [
+            {"key": "anchors", "label": "声纹锚点 JSON", "type": "str",
+             "required": True,
+             "hint": "JSON如 {\"A\":[60,80],\"B\":[300,320]} 从原片各选一段"
+                     "单人发言;A=主持人,B=嘉宾(头像/音色按此对应)"},
+            {"key": "voice_A", "label": "主持人音色", "type": "voice",
+             "required": False, "hint": "默认 doubao-yuanboxiaoshu"},
+            {"key": "voice_B", "label": "嘉宾音色", "type": "voice",
+             "required": False, "hint": "默认 doubao-shenyeboker"},
+            {"key": "name_A", "label": "主持人显示名", "type": "str",
+             "required": False},
+            {"key": "name_B", "label": "嘉宾显示名", "type": "str",
+             "required": False},
+            {"key": "translate_model", "label": "翻译模型", "type": "str",
+             "required": False},
+        ],
+        "stages": ["ensure_source",
+                   "extract_audio",
+                   "en_slots",
+                   "translate",
+                   "audit_translation",
+                   "narration_runs",
+                   "gen_audio",
+                   "polish_audio",
+                   "podcast_props",
+                   "zh_subtitle",
+                   "render",],
+    },
     "zh_hard_1": {
         "key": "zh_hard_1", "name": "中文硬字幕视频(课程)",
         "desc": "画面自带中文字幕的单人视频(如 B站课程)。OCR 提取文本 → "
@@ -266,6 +304,8 @@ STAGE_LABELS = {
     "cut_items": "文本切块",
     "gen_audio": "CosyVoice 配音",
     "narration_runs": "语义段落合并",
+    "polish_audio": "音频精修",
+    "podcast_props": "播客素材构建",
     "assemble_narration": "旁白+原声混音",
     "assemble_audio": "时间轴合成",
     "zh_subtitle": "ASR 中文字幕",
@@ -867,8 +907,127 @@ def ex_gen_audio(task: Task) -> str:
         task.log(f"WSL GPU 失败({str(e)[:80]}),Windows CPU 回退(慢)")
         _run([VC_PY, str(VC_DIR / "generate_voice.py")] + args, task,
              timeout=48 * 3600)
-    n = len(list((w / "parts").glob("*.wav")))
+    n = len(list(parts_dir.glob("*.wav")))
     return f"{n} 段配音" + ("(已拼接整轨)" if concat else "")
+
+
+def ex_polish_audio(task: Task) -> str:
+    """播客音频精修:高通+静音切除+loudnorm+淡入淡出,输出到 Remotion public 目录。"""
+    w = task.dir / "work"
+    slug = task.params["slug"]
+    audio_rel = f"audio-{slug}"
+    out_dir = PODCAST_STUDIO / "public" / audio_rel
+    speed = task.params.get("_polish_speed") or "1.0"
+    _run([VENV_PY, str(TOOL_DIR / "polish_parts.py"),
+          "--parts-dir", str(w / "narration" / "parts"),
+          "--out-dir", str(out_dir), "--speed", speed], task,
+         timeout=12 * 3600)
+    n = len(list(out_dir.glob("*.wav")))
+    if not n:
+        raise RuntimeError("精修未产出音频段")
+    return f"{n} 段({out_dir.name}/)"
+
+
+def _concat_podcast_audio(chapters: list[dict], audio_dir: Path,
+                          out: Path, task: Task) -> None:
+    """按 props 时间轴拼接完整中文音轨(parts + 停顿静音)。"""
+    import tempfile
+    sr = "24000"  # 与 polish_parts 输出一致
+    with tempfile.TemporaryDirectory() as td:
+        td = Path(td)
+        listf = td / "list.txt"
+        lines = []
+        for i, ch in enumerate(chapters):
+            part = audio_dir / f"{int(ch['id']):04d}.wav"
+            lines.append(f"file '{part.as_posix()}'")
+            if i < len(chapters) - 1:
+                gap = round(chapters[i + 1]["start"] - ch["end"], 3)
+                if gap > 0.01:
+                    g = td / f"gap_{i:04d}.wav"
+                    _run([str(FFMPEG), "-y", "-hide_banner", "-loglevel",
+                          "error", "-f", "lavfi", "-i",
+                          f"anullsrc=r={sr}:cl=mono", "-t", str(gap),
+                          str(g)], task)
+                    lines.append(f"file '{g.as_posix()}'")
+        listf.write_text("\n".join(lines), encoding="utf-8")
+        _run([str(FFMPEG), "-y", "-hide_banner", "-loglevel", "error",
+              "-f", "concat", "-safe", "0", "-i", str(listf),
+              "-c:a", "pcm_s16le", str(out)], task, timeout=3600)
+
+
+def ex_podcast_props(task: Task) -> str:
+    """播客素材:锚点截头像 + props(章节时间轴) + 完整中文音轨。"""
+    w = task.dir / "work"
+    slug = task.params["slug"]
+    audio_rel = f"audio-{slug}"
+    audio_dir = PODCAST_STUDIO / "public" / audio_rel
+    # 1) 头像(存在则跳过,人工替换后重跑 render 即可)
+    _run([VENV_PY, str(TOOL_DIR / "extract_avatars.py"),
+          "--video", str(_src(task)),
+          "--anchors", task.params["anchors"],
+          "--out-dir", str(PODCAST_STUDIO / "public" / "avatars" / slug)],
+         task)
+    # 2) props(换人 0.7s/同人 0.45s 顺序排布)
+    props = PODCAST_STUDIO / f"props-{slug}.json"
+    _run([VENV_PY, str(TOOL_DIR / "build_podcast_props.py"),
+          "--runs", str(w / "narration" / "runs.json"),
+          "--items", str(w / "narration" / "items.json"),
+          "--audio-dir", str(audio_dir), "--audio-rel", audio_rel,
+          "--avatar-rel", f"avatars/{slug}",
+          "--name-a", task.params.get("name_A") or "主持人",
+          "--name-b", task.params.get("name_B") or "嘉宾",
+          "--title", task.params.get("title") or f"{slug} · 中文播客",
+          "-o", str(props)], task, timeout=1800)
+    # 3) 完整中文音轨(五件套 zh_audio 槽)
+    chapters = json.loads(props.read_text(encoding="utf-8"))["chapters"]
+    audio_out = task.dir / "04-中文音频" / f"{slug}-播客.wav"
+    audio_out.parent.mkdir(parents=True, exist_ok=True)
+    _concat_podcast_audio(chapters, audio_dir, audio_out, task)
+    task.set_artifact("zh_audio", audio_out)
+    total = chapters[-1]["end"]
+    return (f"{len(chapters)} 章 / {total/60:.1f} 分钟 "
+            f"(音轨 {audio_out.stat().st_size // 1048576}MB)")
+
+
+def ex_render_remotion_podcast(task: Task) -> str:
+    """Remotion 播客成片:分块渲染(--frames)防 OOM,再 ffmpeg concat。"""
+    slug = task.params["slug"]
+    props = PODCAST_STUDIO / f"props-{slug}.json"
+    if not props.exists():
+        raise RuntimeError(f"props 不存在: {props.name}(先跑 podcast_props)")
+    chapters = json.loads(props.read_text(encoding="utf-8"))["chapters"]
+    total = chapters[-1]["end"]
+    out_dir = PODCAST_STUDIO / "out" / slug
+    out_dir.mkdir(parents=True, exist_ok=True)
+    from build_podcast_props import chunk_bounds
+    edges = chunk_bounds(chapters, total)
+    npx = shutil.which("npx") or shutil.which("npx.cmd")
+    if not npx:
+        raise RuntimeError("npx 不在 PATH(node 环境异常)")
+    chunks = []
+    for i in range(len(edges) - 1):
+        a, b = edges[i], edges[i + 1] - 1
+        part = out_dir / f"chunk-{i:03d}.mp4"
+        chunks.append(part)
+        if part.exists() and part.stat().st_size > 1024:
+            task.log(f"跳过已渲染块 {part.name}")
+            continue
+        task.log(f"Remotion 渲染块 {i+1}/{len(edges)-1} "
+                 f"(frames {a}-{b}, {((b-a)/30/60):.0f} 分钟画面)")
+        _run([npx, "remotion", "render", "Podcast", str(part.resolve()),
+              f"--props={props.resolve()}", f"--frames={a}-{b}"],
+             task, timeout=48 * 3600)
+    out = task.dir / "05-成品" / f"{slug}-podcast.mp4"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    lst = out_dir / "concat.txt"
+    lst.write_text("\n".join(f"file '{p.as_posix()}'" for p in chunks),
+                   encoding="utf-8")
+    _run([str(FFMPEG), "-y", "-hide_banner", "-loglevel", "error",
+          "-f", "concat", "-safe", "0", "-i", str(lst),
+          "-c", "copy", str(out)], task, timeout=3600)
+    task.set_artifact("final_video", out)
+    return (f"播客版 {len(chapters)} 章 / {total/60:.1f} 分钟 "
+            f"{out.stat().st_size // 1048576}MB")
 
 
 def ex_assemble_narration(task: Task) -> str:
@@ -907,6 +1066,18 @@ def ex_assemble_audio(task: Task) -> str:
 
 def ex_zh_subtitle(task: Task) -> str:
     slug = task.params["slug"]
+    srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
+    srt.parent.mkdir(parents=True, exist_ok=True)
+    if VIDEO_TYPES[task.type]["dims"].get("mode") == "podcast":
+        # 播客版:从 props 生成,时间轴与画面字幕严格一致(不跑 ASR)
+        props = PODCAST_STUDIO / f"props-{slug}.json"
+        if not props.exists():
+            raise RuntimeError(f"props 不存在: {props.name}")
+        _run([VENV_PY, str(TOOL_DIR / "podcast_srt.py"),
+              "--props", str(props), "-o", str(srt)], task, timeout=600)
+        task.set_artifact("zh_subtitle", srt)
+        n = len(_parse_srt(srt))
+        return f"{n} 条字幕(props 对齐)"
     audio = Path(task.params.get("_audio_path") or (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
     if not audio.exists():
         raise RuntimeError(f"中文音频不存在: {audio.name}")
@@ -952,6 +1123,8 @@ def ex_render(task: Task) -> str:
     out.parent.mkdir(parents=True, exist_ok=True)
     audio = Path(task.params.get("_audio_path") or (task.dir / "04-中文音频" / f"{slug}-zh.wav"))
     srt = task.dir / "03-中文字幕" / f"{slug}-zh.srt"
+    if mode == "podcast_remotion":
+        return ex_render_remotion_podcast(task)
     if mode == "podcast":
         return ex_render_podcast(task)
     if mode == "subtitle_only":
@@ -994,6 +1167,8 @@ EXECUTORS = {
     "cut_items": ex_cut_items,
     "gen_audio": ex_gen_audio,
     "narration_runs": ex_narration_runs,
+    "polish_audio": ex_polish_audio,
+    "podcast_props": ex_podcast_props,
     "assemble_narration": ex_assemble_narration,
     "assemble_audio": ex_assemble_audio,
     "zh_subtitle": ex_zh_subtitle,
@@ -1373,11 +1548,12 @@ class Handler(BaseHTTPRequestHandler):
         if (STUDIO / slug).exists():
             return self._json({"ok": False,
                                "error": f"代号 {slug} 已存在"}, 400)
-        # 多人访谈:B 音色必填,或开启自动克隆原声(否则两人同声)
-        if tkey == "en_vtt_2" and not params.get("clone_original") \
+        # 多人类型:B 音色必填,或开启自动克隆原声(否则两人同声)
+        if VIDEO_TYPES[tkey]["dims"].get("speakers") == 2 \
+                and not params.get("clone_original") \
                 and not params.get("voice_B"):
             return self._json({"ok": False, "error":
-                               "多人访谈需指定 voice_B(或开启自动克隆原声),"
+                               "多人视频需指定 voice_B(或开启自动克隆原声),"
                                "否则两位说话人会是同一个声音"}, 400)
         if params.get("clone_original") and not params.get("anchors"):
             return self._json({"ok": False, "error":

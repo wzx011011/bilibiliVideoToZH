@@ -38,6 +38,19 @@ def test_type_matrix_covers_declared_dimensions():
                       ("none", 2), ("zh_hard", 1)}
 
 
+def test_none_2_podcast_workflow():
+    """无字幕多人播客版:语义段+精修+props 在渲染前,Remotion 渲染默认。"""
+    t = pa.VIDEO_TYPES["none_2_podcast"]
+    s = t["stages"]
+    assert s.index("narration_runs") < s.index("gen_audio") < \
+        s.index("polish_audio") < s.index("podcast_props") < s.index("render")
+    assert "assemble_audio" not in s and "assemble_narration" not in s
+    assert t["dims"] == {"subtitle": "none", "speakers": 2, "mode": "podcast"}
+    assert t["default_render"] == "podcast_remotion"
+    anchors = next(f for f in t["params"] if f["key"] == "anchors")
+    assert anchors["required"]
+
+
 def test_zh_hard_workflow_skips_translation_and_audio_extract():
     t = pa.VIDEO_TYPES["zh_hard_1"]
     assert "translate" not in t["stages"]

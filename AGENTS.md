@@ -23,10 +23,19 @@
 |------|----------|------|------|------|
 | 时间轴版(默认) | en_vtt×任意 | 中文逐槽对齐原时间轴 | 原片/封面 | ✅ 已验证(ep-22/23, Hinton) |
 | **旁白版** | en_vtt_2_narration | 中文语义段自然语速 + 英文原声 -22dB 低混 | 原片保留 | ✅ 已验证(Hinton) |
+| **播客版(Remotion)** | none_2_podcast | 语义段精修(polish)+ 停顿顺序排布 | 双真人头像+波形+滚动字幕 | ✅ 平台化(Hinton 手动链固化) |
+| 章节图播客 | render_mode=podcast | 同上 | PIL 章节图(旧版) | 保留 |
 
 旁白版核心:细槽按语义合并为 30~75s 段(`narration.py build_runs`),自然语速生成不拉伸,
 按原片起点放置、碰撞自动后移,`assemble_narration.py` 合成旁白+原声低混音轨。
 双语字幕可选(`compose_bilingual.py`,中上英下,英文去填充词)——默认纯中文。
+
+播客版(none_2_podcast,平台标准链):whisper 成槽 → diarize → 翻译审查 → 语义段 →
+配音 → `polish_audio` 精修(输出 `podcast-studio/public/audio-<slug>/`)→
+`podcast_props`(锚点截头像 `extract_avatars.py` + props `build_podcast_props.py` +
+完整音轨拼接)→ `zh_subtitle`(`podcast_srt.py`,与画面字幕严格一致)→
+Remotion 分块渲染。props/音频/头像按 slug 隔离在 podcast-studio 下,互不覆盖;
+渲染块断点续跑(已存在 chunk 跳过)。
 
 ## 质检阶段(2026-08 新增,已入平台流水线)
 
@@ -70,7 +79,7 @@
 
 ## 目录
 
-- `src/pipeline_admin.py + admin.html` 平台服务与前端;`voice_lib.py` 音色库;`render_original.py` 原片保留渲染;`render_podcast.py` 播客渲染;`whisper_slots.py` 无字幕 ASR 成槽;`narration.py` 语义段落合并;`assemble_narration.py` 旁白+低混音轨;`narration_srt.py` 旁白字幕;`polish_parts.py` 配音精修;`build_podcast_props.py` 播客 props;`doubao_harvest_all.py`+`doubao_gen_refs.py` 豆包音色收割;`compose_bilingual.py` 双语字幕;`make_cover_video.py` 封面渲染;`align_srt_asr.py` ASR 字幕(独立轻量);`align_worker.py`+`label_speakers.py`+`audit_translation.py` 质检三件套;`make_episode.py`/`subtitle_ocr.py` 课程单集主控与 OCR(v2 仍复用)
+- `src/pipeline_admin.py + admin.html` 平台服务与前端;`voice_lib.py` 音色库;`render_original.py` 原片保留渲染;`render_podcast.py` 播客渲染;`whisper_slots.py` 无字幕 ASR 成槽;`narration.py` 语义段落合并;`assemble_narration.py` 旁白+低混音轨;`narration_srt.py` 旁白字幕;`polish_parts.py` 配音精修;`build_podcast_props.py` 播客 props;`podcast_srt.py` 播客字幕;`extract_avatars.py` 播客头像;`doubao_harvest_all.py`+`doubao_gen_refs.py` 豆包音色收割;`compose_bilingual.py` 双语字幕;`make_cover_video.py` 封面渲染;`align_srt_asr.py` ASR 字幕(独立轻量);`align_worker.py`+`label_speakers.py`+`audit_translation.py` 质检三件套;`make_episode.py`/`subtitle_ocr.py` 课程单集主控与 OCR(v2 仍复用)
 - `work/studio/` 平台任务目录;`work/voice-clone-demo/` CosyVoice 引擎(gitignore,含 5.3GB 模型勿删;脚本已参数化);`work/video-tools/` ffmpeg
 - `youtube/` 下载库(按人物);`downloads/` B站原片;`subtitles/` 历史 OCR;`videos/`+`episodes/` 历史成品归档
 - NAS 部署:`deploy-nas-studio.sh`(控制面容器)+ `start-studio-agent.cmd`(PC 代理开机自启)

@@ -484,7 +484,8 @@ function autoVtt(nasPath) {
 function renderPerFile() {
   const t = TYPES.find(x=>x.key===selected);
   const needVtt = t && t.dims.subtitle==='en_vtt';
-  const needAnchors = selected==='en_vtt_2' ||
+  const anchorsReq = t && (t.params||[]).some(f=>f.key==='anchors' && f.required);
+  const needAnchors = anchorsReq ||
     (g('param-clone_original') && g('param-clone_original').checked);
   g('per-file').innerHTML = [...picked.keys()].map((nasPath,i)=>{
     const info = picked.get(nasPath);
@@ -532,6 +533,8 @@ async function createTasksBatch() {
     const achEl = g('pf-anch-'+i); if (achEl && achEl.value.trim()) params.anchors = achEl.value.trim();
     if (!params.source_path) { results.push(`✗ ${slug}:缺路径`); continue; }
     if (t.dims.subtitle==='en_vtt' && !params.vtt_path) { results.push(`✗ ${slug}:缺VTT`); continue; }
+    const anchorsRequired = (t.params||[]).some(f=>f.key==='anchors' && f.required);
+    if (anchorsRequired && !params.anchors) { results.push(`✗ ${slug}:缺锚点`); continue; }
     try {
       const d = await (await fetch('/api/tasks',{method:'POST',
         headers:{'Content-Type':'application/json'},
