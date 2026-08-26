@@ -12,7 +12,14 @@ DATA=/volume1/docker/studio-data
 ssh nas "mkdir -p $DATA /volume1/docker/studio-build"
 
 echo "=== 上传控制面文件 ==="
-scp src/pipeline_admin.py src/admin.html src/Dockerfile nas:/volume1/docker/studio-build/
+scp src/pipeline_admin.py src/publish_module.py src/admin.html src/Dockerfile nas:/volume1/docker/studio-build/
+
+echo "=== 同步音色试听音频 ==="
+if [ -d "work/studio/voices" ]; then
+  ssh nas "mkdir -p $DATA/voice-audio"
+  (cd work/studio/voices && tar -cf - --transform 's|^\([^/]*\)/ref\.wav$|\1.wav|' */ref.wav) \
+    | ssh nas "tar -xf - -C $DATA/voice-audio"
+fi
 
 if [ "${1:-build}" = "token" ]; then
   ssh nas "[ -f $DATA/.agent-token ] && cat $DATA/.agent-token || echo 'token 尚未生成(容器首次启动后生成)'"

@@ -442,15 +442,16 @@ details[open] > summary::before { content: '▾ '; }
             <td style="font-weight:600">RSS 播客</td>
             <td id="pub-rss-status">未配置</td>
             <td style="text-align:right">
-              <button class="btn" onclick="rssShowConfig()">配置公网地址</button>
+              <button class="btn" onclick="rssShowConfig()">配置作者/地址</button>
+              <button class="btn" onclick="window.open('/podcast/feed.xml','_blank')">预览Feed</button>
             </td>
           </tr>
           <tr><td colspan="3"><div id="pub-rss-config" style="display:none;margin-top:8px">
-            <input id="pub-rss-base" placeholder="https://你的域名/podcast (NAS nginx 对外地址)"
+            <input id="pub-rss-base" placeholder="feed 对外基础地址(默认 https://studio.5945.top/podcast)"
                    style="padding:8px;width:340px">
             <input id="pub-rss-author" placeholder="作者名(默认系列名)" style="padding:8px;width:160px">
             <button class="btn pri" style="margin-top:6px" onclick="rssSaveConfig()">保存</button>
-            <div class="hint" style="margin-top:6px">保存后点下方"同步RSS到NAS",再把 feed 地址提交给小宇宙一次即可。</div>
+            <div class="hint" style="margin-top:6px">feed 由本服务实时生成,把 <b>/podcast/feed.xml 的完整地址</b> 提交给小宇宙一次,之后新集自动出现。</div>
           </div></td></tr>
         </table>
       </div>
@@ -484,7 +485,6 @@ details[open] > summary::before { content: '▾ '; }
         </table>
         <div style="margin-top:12px">
           <button class="btn pri" onclick="pubSubmitSelected()">🚀 发布勾选的集</button>
-          <button class="btn" onclick="rssShipNow()">同步RSS到NAS</button>
         </div>
       </div>
 
@@ -1289,14 +1289,7 @@ async function rssSaveConfig() {
   showToast(j.ok?'已保存':j.error, !j.ok); if (j.ok) { g('pub-rss-config').style.display='none'; fetchPubState(); }
 }
 
-async function rssShipNow() {
-  showToast('正在生成并同步 RSS 到 NAS…');
-  const items = pubEps.filter(e=>e.audio).map(e=>({ep:e.ep}));
-  const platforms = ['rss'];
-  const j = await pubApi('/api/pub/jobs', {items, platforms}, 'POST');
-  showToast(j.ok?'RSS 同步任务已启动':'失败:'+j.error, !j.ok);
-  setTimeout(fetchPubState, 1000);
-}
+async function rssShipNow() { /* 已由 /podcast/feed.xml 动态提供,保留空实现防旧引用 */ }
 
 async function pubSubmitSelected() {
   const picks = [...document.querySelectorAll('.pub-pick:checked')].map(x=>+x.dataset.i);

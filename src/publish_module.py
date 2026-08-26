@@ -28,7 +28,6 @@ import hashlib
 import html as _html
 import json
 import re
-import shutil
 import subprocess
 import threading
 import time
@@ -43,10 +42,16 @@ ROOT = Path(__file__).resolve().parents[1]
 TOOL_DIR = Path(__file__).resolve().parent
 
 try:  # pipeline_admin 定义了这些名字;独立测试时给出兜底
-    from pipeline_admin import DATA_DIR, NAS_PRODUCT_BASE  # type: ignore
+    from pipeline_admin import DATA_DIR, MEDIA_ROOT, MODE  # type: ignore
 except Exception:  # pragma: no cover - 直接运行本文件做语法检查时
     DATA_DIR = ROOT / "work" / "studio"
-    NAS_PRODUCT_BASE = "/volume1/share/视频汉化项目"
+    MEDIA_ROOT = None
+    MODE = "local"
+
+# 哈佛幸福课在 NAS 成品库的相对位置(server 模式数据源)
+NAS_SERIES_DIR = "成品库/积极心理学"
+NAS_VIDEO_SUB = "04-中文视频"
+NAS_AUDIO_SUB = "03-中文音频"
 
 PUB_DIR = DATA_DIR / "publish"
 AUTH_DIR = PUB_DIR / "auth"
@@ -130,21 +135,33 @@ def default_desc(ep: int) -> str:
 
 
 # =====================================================================
-# 集数扫描
+# 集数扫描(server 模式读 NAS 挂载,local 模式读 PC 目录)
 # =====================================================================
 
+def _nas_series_root() -> Path | None:
+    if MEDIA_ROOT and (MEDIA_ROOT / NAS_SERIES_DIR).is_dir():
+        return MEDIA_ROOT / NAS_SERIES_DIR
+    return None
+
+
 def scan_episodes() -> list[dict]:
+    nas = _nas_series_root()
     eps = []
     for ep in range(1, TOTAL_EPISODES + 1):
         nn = f"{ep:02d}"
-        video = ROOT / "videos" / f"episode-{nn}.mp4"
-        audio = ROOT / "episodes" / f"ep-{nn}" / f"episode-{nn}-audio.mp3"
-        cover = ROOT / "videos" / f"cover-ep{nn}.jpg"
+        if nas is not None:
+            video = nas / NAS_VIDEO_SUB / f"第{nn}讲-成品.mp4"
+            audio = nas / NAS_AUDIO_SUB / f"第{nn}讲-中文音频.mp3"
+            cover = None
+        else:
+            video = ROOT / "videos" / f"episode-{nn}.mp4"
+            audio = ROOT / "episodes" / f"ep-{nn}" / f"episode-{nn}-audio.mp3"
+            cover = ROOT / "videos" / f"cover-ep{nn}.jpg"
         item = {
             "ep": ep,
             "video": str(video) if video.is_file() else "",
             "audio": str(audio) if audio.is_file() else "",
-            "cover": str(cover) if cover.is_file() else "",
+            "cover": str(cover) if cover and cover.is_file() else "",
             "video_mb": round(video.stat().st_size / 1048576, 1) if video.is_file() else 0,
             "audio_mb": round(audio.stat().st_size / 1048576, 1) if audio.is_file() else 0,
             "title": default_title(ep),
@@ -462,46 +479,39 @@ def ximalaya_publish(audio: Path, album_id: int, title: str, desc: str,
 
 
 # =====================================================================
-# RSS 播客托管(小宇宙入口)
+# RSS 播客托管(小宇宙入口)—— feed 动态生成,音频流式读源,零拷贝
 # =====================================================================
 
-PODCAST_SITE = ROOT / "work" / "podcast-site"
-RSS_AUDIO_DIR = PODCAST_SITE / "audio"
+def rss_default_base() -> str:
+    return "https://studio.5945.top/podcast"
 
 
-def rss_ship(config: dict, log) -> dict:
-    """生成 feed.xml + 拷贝音频 → scp 到 NAS 成品库/播客RSS/。"""
-    base = (config.get("rss_base_url") or "").rstrip("/")
+def build_feed(config: dict) -> tuple[str, int]:
+    """实时构建 iTunes 兼容 feed。返回 (xml文本, 收录集数)。"""
+    base = (config.get("rss_base_url") or rss_default_base()).rstrip("/")
     author = config.get("rss_author") or SERIES_TITLE
-    if not base:
-        raise RuntimeError("请先配置 RSS 公网基础 URL(NAS nginx 对外地址)")
-
-    RSS_AUDIO_DIR.mkdir(parents=True, exist_ok=True)
     items_xml = []
-    copied = 0
+    count = 0
     for ep_item in scan_episodes():
-        ep, audio = ep_item["ep"], ep_item["audio"]
+        audio = ep_item["audio"]
         if not audio:
             continue
         src = Path(audio)
-        dest = RSS_AUDIO_DIR / f"ep-{ep:02d}.mp3"
-        shutil.copy2(src, dest)
-        copied += 1
+        ep = ep_item["ep"]
         mtime = datetime.fromtimestamp(src.stat().st_mtime)
         dur_s = _mp3_duration_seconds(src)
         h, m, sec = dur_s // 3600, dur_s % 3600 // 60, dur_s % 60
         duration = f"{h}:{m:02d}:{sec:02d}" if h else f"{m}:{sec:02d}"
-        title = _esc(default_title(ep))
-        desc = _esc(default_desc(ep))
         url = f"{base}/audio/ep-{ep:02d}.mp3"
         items_xml.append(f"""    <item>
-      <title>{title}</title>
-      <description>{desc}</description>
-      <guid isPermaLink="false">happiness-course-ep-{ep:02d}-{int(src.stat().st_mtime)}</guid>
+      <title>{_esc(ep_item['title'])}</title>
+      <description>{_esc(ep_item['desc'])}</description>
+      <guid isPermaLink="false">happiness-ep-{ep:02d}-{int(src.stat().st_mtime)}</guid>
       <pubDate>{mtime.strftime('%a, %d %b %Y %H:%M:%S +0800')}</pubDate>
       <enclosure url="{_esc(url)}" length="{src.stat().st_size}" type="audio/mpeg"/>
       <itunes:duration>{duration}</itunes:duration>
     </item>""")
+        count += 1
 
     now = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -519,24 +529,14 @@ def rss_ship(config: dict, log) -> dict:
   </channel>
 </rss>
 """
-    feed_path = PODCAST_SITE / "feed.xml"
-    feed_path.write_text(feed, encoding="utf-8")
+    return feed, count
 
-    # scp 到 NAS
-    rel = "work/podcast-site/feed.xml"
-    subprocess.run(["ssh", "nas", "mkdir -p "
-                    f"'{NAS_PRODUCT_BASE}/播客RSS/audio'"], check=True, timeout=30)
-    for f in [feed_path] + sorted(RSS_AUDIO_DIR.glob("*.mp3")):
-        subprocess.run(["scp", f.as_posix(),
-                        f"nas:{NAS_PRODUCT_BASE}/播客RSS/"
-                        + ("feed.xml" if f.name == "feed.xml"
-                           else "audio/" + f.name)],
-                       check=True, timeout=600,
-                       stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
-        log(f"    已同步 {f.name}")
 
-    return {"feed_local": str(feed_path), "feed_public": f"{base}/feed.xml",
-            "episodes": copied}
+def find_audio_for_episode(ep: int) -> Path | None:
+    for e in scan_episodes():
+        if e["ep"] == ep and e["audio"]:
+            return Path(e["audio"])
+    return None
 
 
 def _mp3_duration_seconds(path: Path) -> int:
@@ -548,7 +548,11 @@ def _mp3_duration_seconds(path: Path) -> int:
                            capture_output=True, text=True, timeout=30)
         return int(float(r.stdout.strip()))
     except Exception:
-        return 3600
+        # 容器无 ffprobe:按 192kbps CBR 估算(本系列音频均为该码率)
+        try:
+            return max(1, int(path.stat().st_size * 8 / 192000))
+        except OSError:
+            return 3600
 
 
 def _esc(s: str) -> str:
@@ -604,11 +608,13 @@ def _run_job(job: dict) -> None:
     try:
         platforms = job["platforms"]
         if "rss" in platforms:
-            log("[RSS] 生成 feed 并同步 NAS...")
-            res = rss_ship(cfg, lambda l: log("  " + l))
+            # feed 是动态的:这里只做校验并回填 feed 地址
+            base = (cfg.get("rss_base_url") or rss_default_base()).rstrip("/")
+            _, count = build_feed(cfg)
             for it in job["items"]:
-                it["results"]["rss"] = {"ok": True, "info": res["feed_public"]}
-            log(f"[RSS] 完成:{res['episodes']} 集已入 feed({res['feed_public']})")
+                it["results"]["rss"] = {"ok": True,
+                                        "info": f"{base}/feed.xml ({count}集)"}
+            log(f"[RSS] feed 就绪:{count} 集,地址 {base}/feed.xml")
             platforms = [p for p in platforms if p != "rss"]
 
         for it in job["items"]:
@@ -724,10 +730,12 @@ def pub_state() -> dict:
         xm_info = info if ok else "Cookie 已失效"
     return {
         "configured": bool(cfg.get("token")),
+        "mode": MODE,
         "accounts": {
             "bilibili": {"logged": bili_ok, "name": bili_name},
             "ximalaya": {"saved": xm_saved, "info": xm_info},
-            "rss": {"base_url": cfg.get("rss_base_url") or "",
+            "rss": {"base_url": (cfg.get("rss_base_url")
+                                 or rss_default_base()).rstrip("/"),
                     "author": cfg.get("rss_author") or ""},
         },
         "episodes": scan_episodes(),
@@ -740,29 +748,55 @@ def dispatch_get(handler) -> bool:
     if not path.startswith("/api/pub/") and not path.startswith("/podcast/"):
         return False
 
-    # 公开静态:本地预览 feed/音频(正式对外走 NAS nginx)
+    # 公开:播客 feed(动态生成)与音频流(读源文件,支持 Range)
     if path == "/podcast/feed.xml":
-        p = PODCAST_SITE / "feed.xml"
-        if not p.is_file():
-            return handler._json({"ok": False, "error": "feed 未生成"}, 404)
-        body = p.read_bytes()
+        feed, count = build_feed(load_config())
+        body = feed.encode("utf-8")
         handler.send_response(HTTPStatus.OK)
         handler.send_header("Content-Type", "application/rss+xml; charset=utf-8")
         handler.send_header("Content-Length", str(len(body)))
         handler.end_headers()
         handler.wfile.write(body)
         return True
-    m = re.fullmatch(r"/podcast/audio/(ep-\d+\.mp3)", path)
+    m = re.fullmatch(r"/podcast/audio/ep-(\d+)\.mp3", path)
     if m:
-        p = RSS_AUDIO_DIR / m.group(1)
-        if not p.is_file():
+        src = find_audio_for_episode(int(m.group(1)))
+        if not src or not src.is_file():
             return handler._json({"ok": False, "error": "not found"}, 404)
-        handler.send_response(HTTPStatus.OK)
+        size = src.stat().st_size
+        rng = handler.headers.get("Range", "")
+        start, end = 0, size - 1
+        rm = re.fullmatch(r"bytes=(\d*)-(\d*)", rng.strip())
+        if rm and (rm.group(1) or rm.group(2)):
+            if rm.group(1):
+                start = int(rm.group(1))
+                if rm.group(2):
+                    end = min(int(rm.group(2)), size - 1)
+            else:  # bytes=-N 后缀
+                start = max(0, size - int(rm.group(2)))
+        if start > end or start >= size:
+            handler.send_response(HTTPStatus.REQUESTED_RANGE_NOT_SATISFIABLE)
+            handler.send_header("Content-Range", f"bytes */{size}")
+            handler.send_header("Content-Length", "0")
+            handler.end_headers()
+            return True
+        length = end - start + 1
+        handler.send_response(HTTPStatus.PARTIAL_CONTENT if (rm and rng) else HTTPStatus.OK)
+        if rm and rng:
+            handler.send_header("Content-Range", f"bytes {start}-{end}/{size}")
         handler.send_header("Content-Type", "audio/mpeg")
-        handler.send_header("Content-Length", str(p.stat().st_size))
+        handler.send_header("Accept-Ranges", "bytes")
+        handler.send_header("Content-Length", str(length))
         handler.end_headers()
-        with p.open("rb") as f:
-            shutil.copyfileobj(f, handler.wfile)
+        with src.open("rb") as f:
+            f.seek(start)
+            remaining = length
+            while remaining > 0:
+                chunk_data = f.read(min(256 * 1024, remaining))
+                if not chunk_data:
+                    break
+                handler.wfile.write(chunk_data)
+                remaining -= len(chunk_data)
         return True
 
     if not _check_token(handler):
