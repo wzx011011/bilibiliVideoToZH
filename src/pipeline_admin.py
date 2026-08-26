@@ -1056,10 +1056,19 @@ def ex_render_remotion_podcast(task: Task) -> str:
     if not npx:
         raise RuntimeError("npx 不在 PATH(node 环境异常)")
 
+    props_data = json.loads(props.read_text(encoding="utf-8"))
+
     def render_cmd(i: int, a: int, b: int) -> list[str]:
+        # 每块独立 props:附 renderWindow,组件只挂载窗口附近音频序列
+        # (136 章全量挂载会初始渲染超时)
+        cp = out_dir / f"props-c{i:03d}.json"
+        cp.write_text(json.dumps(
+            {**props_data, "renderWindow": {"from": a, "to": b}},
+            ensure_ascii=False), encoding="utf-8")
         return [npx, "remotion", "render", "Podcast",
                 str((out_dir / f"chunk-{i:03d}.mp4").resolve()),
-                f"--props={props.resolve()}", f"--frames={a}-{b}"]
+                f"--props={cp.resolve()}", f"--frames={a}-{b}",
+                "--timeout-in-milliseconds=300000"]
 
     # 双路并行渲染(每路独立 Remotion 进程,互不依赖;再高会争内存)
     pending = [(i, edges[i], edges[i + 1] - 1)
