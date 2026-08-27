@@ -433,6 +433,7 @@ def bilibili_publish(video: Path, cover: Path | None, title: str, desc: str,
         "cover": cover_url, "desc": desc,
         "tid": int(tid), "tag": tags, "title": title[:80],
         "filename": filename,
+        "videos": [{"filename": filename, "title": "", "desc": ""}],
         "dtime": 0, "act_reserve_create": 0, "no_reprint": 1,
         "csrf": csrf,
     }
