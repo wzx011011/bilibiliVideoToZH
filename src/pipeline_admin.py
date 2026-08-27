@@ -690,9 +690,22 @@ def ex_translate(task: Task) -> str:
     args = [VC_PY, str(VC_DIR / "translate_fine_batches.py"),
             "--slots", str(w / "slots.json"), "--out", str(zh_path),
             "--model", model]
-    # 播客链字数是软约束(自然语速),大批次换取更长语境
+    # 大批次(12)只在窄域安全:槽多且多短槽时 qwen3 长上下文易串位
+    # (elon 片 1304 槽 349 MISMATCH 实测),回退 6 并对短槽密度自适应
+    slots_n = len(json.loads((w / "slots.json").read_text(encoding="utf-8")))
+    short_ratio = None
+    if slots_n:
+        try:
+            sl = json.loads((w / "slots.json").read_text(encoding="utf-8"))
+            short_ratio = sum(1 for s in sl
+                              if s.get("duration", 9) < 6.5) / slots_n
+        except Exception:
+            pass
     if VIDEO_TYPES[task.type]["dims"].get("mode") == "podcast":
-        args += ["--batch", "12"]
+        batch = 6 if (short_ratio or 0) > 0.45 else 12
+        task.log(f"翻译批次={batch}(槽数 {slots_n},短槽占比 "
+                 f"{short_ratio and round(short_ratio*100)}%)")
+        args += ["--batch", str(batch)]
     _run(args, task, timeout=24 * 3600)
     zh = json.loads(zh_path.read_text(encoding="utf-8"))
     slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
