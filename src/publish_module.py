@@ -373,27 +373,30 @@ def _bili_upos_upload(s: requests.Session, pre: dict, sessdata: str,
     with filepath.open("rb") as f:
         for idx in range(parts_total):
             data = f.read(chunk)
+            # upos PUT 参数与 biliup 对齐(驼峰 uploadId + 全量分块上下文)
             pr = s.put(base, params={
-                "partNumber": idx + 1, "upload_id": upload_id,
-                "output": "json",
+                "uploadId": upload_id, "chunks": parts_total,
+                "total": size, "chunk": idx, "size": chunk,
+                "partNumber": idx + 1,
+                "start": idx * chunk,
+                "end": min((idx + 1) * chunk, size),
             }, data=data, timeout=600, headers=auth_header)
             if pr.status_code >= 400:
                 raise RuntimeError(
                     f"分块{idx+1}/{parts_total} 上传失败 HTTP {pr.status_code}: {pr.text[:200]}")
             log(f"    分块 {idx+1}/{parts_total}")
 
-    parts = [{"part": i + 1, "oname": f"part{i+1}"} for i in range(parts_total)]
-    fr = s.put(base, params={
-        "output": "json", "name": filepath.name,
-        "profile": "ugcupos/bup", "submit": "false",
-        "filesize": str(size), "biz_id": str(pre.get("biz_id", "")),
+    parts = [{"partNumber": i + 1, "eTag": "etag"} for i in range(parts_total)]
+    fr = s.post(base, params={
+        "name": filepath.name, "uploadId": upload_id,
+        "biz_id": str(pre.get("biz_id", "")), "output": "json",
+        "profile": "ugcupos/bup",
     }, json={"parts": parts}, headers=auth_header, timeout=60)
-    if fr.status_code >= 400 or '"ok":0' not in fr.text and '"ok": 0' not in fr.text \
-            and '"ok":4' not in fr.text and '"ok": 4' not in fr.text:
-        # upos 合并成功时 ok 可能为 0(幂等已存在)或 4;其余视为失败
+    if fr.status_code >= 400 or '"OK":1' not in fr.text and '"OK": 1' not in fr.text:
+        # upos 合并成功返回 {"OK":1,...};其余视为失败
         try:
             j = fr.json()
-            if int(j.get("ok", -1)) not in (0, 4):
+            if int(j.get("OK", -1)) != 1:
                 raise RuntimeError(f"upos 合并失败: {fr.text[:200]}")
         except ValueError:
             raise RuntimeError(f"upos 合并响应异常: {fr.text[:200]}")
@@ -424,7 +427,10 @@ def bilibili_publish(video: Path, cover: Path | None, title: str, desc: str,
     log(f"  分片合并完成: {filename}")
 
     payload = {
-        "copyright": 2, "source": "", "cover": cover_url, "desc": desc,
+        "copyright": 2,
+        # 转载类型(2)必须带来源;默认填 B 站原视频归属说明
+        "source": "哈佛大学 Tal Ben-Shahar《积极心理学》公开课中文配音",
+        "cover": cover_url, "desc": desc,
         "tid": int(tid), "tag": tags, "title": title[:80],
         "filename": filename,
         "dtime": 0, "act_reserve_create": 0, "no_reprint": 1,
