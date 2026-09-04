@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1920px; height:1080px; overflow:hidden; background:#05070f;
+              font-family:"Microsoft YaHei","PingFang SC",sans-serif; }
+  canvas#sky { position:absolute; inset:0; }
+  .scene { position:absolute; inset:110px 120px 250px; display:none;
+           align-items:center; justify-content:center; }
+  .num { font-family:Consolas,"Courier New",monospace; font-weight:700; }
+  .chip { display:inline-block; padding:10px 26px; border-radius:999px;
+          font-size:26px; letter-spacing:2px; border:2px solid var(--acc);
+          color:#dbe4ff; background:rgba(255,255,255,.04); }
+
+  /* 标题 */
+  #sc-title .mark { font-size:150px; font-weight:800; text-align:center;
+    background:linear-gradient(100deg,#f4f7ff 35%,var(--acc));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    letter-spacing:3px; opacity:0; }
+  #sc-title .sub { margin-top:38px; text-align:center; opacity:0; }
+  #sc-title .chip { margin:0 14px; }
+
+  /* 规模 */
+  #sc-scale .wrap { display:flex; gap:100px; align-items:center; }
+  #sc-scale .stats { width:560px; }
+  .stat { margin-bottom:56px; }
+  .stat .k { font-size:30px; color:rgba(255,255,255,.5); letter-spacing:3px; }
+  .stat .v { font-size:104px; color:#fff; }
+  .stat .v em { font-style:normal; font-size:42px; color:rgba(255,255,255,.55);
+                margin-left:10px; }
+  #starGrid { display:grid; grid-template-columns:repeat(30,22px);
+              grid-auto-rows:22px; gap:7px; }
+  #starGrid i { border-radius:50%; background:rgba(255,255,255,.06); }
+  #starGrid i.on { background:#fff; box-shadow:0 0 10px var(--acc); }
+
+  /* 进化 */
+  #sc-evolve .box { width:1380px; }
+  .cmp { margin-bottom:64px; }
+  .cmp .head { display:flex; justify-content:space-between; font-size:32px;
+               color:rgba(255,255,255,.7); margin-bottom:16px; }
+  .barRow { position:relative; height:52px; border-radius:14px;
+            background:rgba(255,255,255,.06); overflow:hidden; }
+  .barPrev { position:absolute; inset:0 auto 0 0; width:100%;
+             background:rgba(255,255,255,.12); border-radius:14px; }
+  .barCur { position:absolute; inset:0 auto 0 0; width:0; border-radius:14px;
+            background:linear-gradient(90deg,var(--acc),
+                      color-mix(in srgb,var(--acc) 55%,#fff)); }
+  .delta { position:absolute; right:26px; top:50%; transform:translateY(-50%);
+           font-size:34px; color:#fff; opacity:0; }
+  .cmpNote { font-size:28px; color:rgba(255,255,255,.45); text-align:right;
+             opacity:0; margin-top:10px; }
+
+  /* 编程终端 */
+  #term { width:1360px; height:560px; border-radius:16px; opacity:0;
+          background:#0b0f1c; border:1px solid rgba(140,160,255,.25);
+          box-shadow:0 30px 90px rgba(0,0,0,.6), 0 0 60px rgba(99,102,241,.12);
+          overflow:hidden; }
+  #tBar { height:52px; display:flex; align-items:center; padding:0 22px; gap:8px;
+          background:rgba(255,255,255,.04); }
+  #tBar b { width:15px; height:15px; border-radius:50%; }
+  #tTitle { margin-left:16px; font-family:Consolas,monospace; font-size:20px;
+            color:rgba(255,255,255,.4); }
+  #tBody { padding:30px 36px; font-family:Consolas,monospace; font-size:26px;
+           line-height:2.05; color:rgba(226,232,255,.85); }
+  #tBody div { white-space:pre; opacity:.2; }
+  #tBody div.done { opacity:1; }
+  #tBody .ok { color:#7ee787; } #tBody .hl { color:var(--acc); }
+  #rank { margin-top:26px; text-align:center; font-size:40px; color:#fff;
+          opacity:0; letter-spacing:2px; }
+  #rank b { color:var(--acc); font-size:52px; }
+
+  /* Infra 三件套 */
+  #sc-infra .row { display:flex; gap:56px; }
+  .icard { width:440px; padding:52px 42px; border-radius:24px;
+           background:rgba(255,255,255,.04); border:1px solid rgba(140,160,255,.18);
+           transform:translateY(50px); opacity:0; }
+  .icard .glyph { font-size:54px; }
+  .icard h3 { font-size:34px; color:#fff; margin-top:22px; }
+  .icard p { font-size:24px; color:rgba(255,255,255,.5); margin-top:16px;
+             line-height:1.6; }
+
+  /* API 长卷 */
+  #sc-api .box { width:1420px; }
+  .apiRow { display:flex; gap:34px; margin-bottom:44px; }
+  .apiCell { flex:1; padding:40px 34px; border-radius:20px; text-align:center;
+             background:rgba(255,255,255,.045);
+             border:1px solid color-mix(in srgb,var(--acc) 35%,transparent);
+             opacity:0; transform:scale(.9); }
+  .apiCell .g { font-size:46px; }
+  .apiCell .t { font-size:30px; color:#fff; margin-top:16px; letter-spacing:2px; }
+  #apiLine { margin-top:30px; text-align:center; font-size:34px; color:#fff;
+             opacity:0; letter-spacing:3px; }
+  #apiLine b { color:var(--acc); }
+
+  /* 开源三透明 */
+  #sc-open .row { display:flex; gap:80px; align-items:center;
+                  justify-content:center; }
+  .oring { width:300px; height:300px; border-radius:50%; display:flex;
+           flex-direction:column; align-items:center; justify-content:center;
+           border:3px solid var(--acc); background:rgba(255,255,255,.03);
+           opacity:0; transform:scale(.7); }
+  .oring .g { font-size:60px; }
+  .oring .t { font-size:30px; color:#fff; margin-top:14px; letter-spacing:3px; }
+  #openAll { margin-top:56px; text-align:center; width:100%; font-size:38px;
+             color:#fff; opacity:0; letter-spacing:4px; }
+  #openAll b { color:var(--acc); }
+
+  /* 小结 */
+  #sc-summary .row { display:flex; gap:56px; }
+  .scard { width:440px; padding:50px 42px; border-radius:24px;
+           background:rgba(255,255,255,.04);
+           border:1px solid rgba(140,160,255,.18);
+           transform:translateY(46px); opacity:0; }
+  .scard h3 { font-size:30px; color:rgba(255,255,255,.55); font-weight:400;
+              letter-spacing:2px; }
+  .scard .big { font-size:58px; color:#fff; margin-top:22px; line-height:1.3; }
+  .scard .big b { color:var(--acc); }
+
+  /* 体感:剧本长卷 */
+  #sc-sense .wrap { display:flex; align-items:center; gap:70px;
+                    justify-content:center; width:100%; }
+  .scripts { display:flex; gap:14px; transform:rotate(-3deg); opacity:0; }
+  .script { width:64px; border-radius:6px 9px 9px 6px; position:relative;
+            background:#1b2340; border:1px solid rgba(160,180,255,.3); }
+  .script::after { content:attr(data-label); position:absolute; left:50%; top:16px;
+                   writing-mode:vertical-rl; transform:translateX(-50%);
+                   color:rgba(255,255,255,.8); font-size:18px; letter-spacing:3px; }
+  .moonJar { width:400px; height:370px; border:5px solid rgba(200,214,255,.28);
+             border-radius:26px 26px 34px 34px; position:relative; }
+  .jarFill { position:absolute; left:0; right:0; bottom:0; height:0;
+             border-radius:21px 21px 29px 29px;
+             background:linear-gradient(180deg,#fff,var(--acc)); }
+  .jarTag { position:absolute; left:0; right:0; bottom:16px; text-align:center;
+            font-size:28px; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,.7); }
+  #senseNote { margin-top:44px; text-align:center; font-size:32px;
+               color:rgba(255,255,255,.65); opacity:0; }
+
+  /* 钱包 */
+  #sc-wallet .box { width:1340px; }
+  .quota { display:flex; align-items:center; gap:30px; margin-bottom:52px; }
+  .quota .who { width:360px; font-size:31px; color:rgba(255,255,255,.72);
+                text-align:right; }
+  .cells { display:flex; gap:14px; }
+  .cells i { width:168px; height:56px; border-radius:12px;
+             background:rgba(255,255,255,.07); }
+  .cells i.f { background:linear-gradient(180deg,#fff,var(--acc));
+               box-shadow:0 0 16px color-mix(in srgb,var(--acc) 55%,transparent); }
+  .wchips { display:flex; gap:26px; justify-content:center; margin-top:14px; }
+  .wchips span { opacity:0; padding:14px 30px; border-radius:14px; font-size:29px;
+                 background:rgba(255,255,255,.05);
+                 border:1px solid color-mix(in srgb,var(--acc) 55%,transparent);
+                 color:#fff; }
+  #relief { margin-top:54px; text-align:center; font-size:42px; color:#fff;
+            opacity:0; }
+  #relief em { font-style:normal; color:var(--acc); font-weight:800; }
+
+  /* 幕后 */
+  #sc-meta .list { font-size:44px; line-height:2.2; text-align:left; }
+  #sc-meta .li { opacity:0; letter-spacing:1px; }
+  #sc-meta .li b { color:var(--acc); font-weight:800; margin-left:18px; }
+
+  #subwrap { position:absolute; z-index:9; left:0; top:895px; width:1920px;
+             height:120px; text-align:center; }
+  .cue { display:none; font-size:40px; font-weight:600; color:rgba(240,244,255,.93);
+         letter-spacing:1px; text-shadow:0 2px 16px rgba(0,0,0,.85); }
+  #brand { position:absolute; z-index:9; top:44px; left:64px; font-size:25px;
+           letter-spacing:3px; color:rgba(255,255,255,.35); }
+  #part { position:absolute; z-index:9; top:44px; right:64px; font-size:25px;
+          letter-spacing:3px; color:rgba(255,255,255,.35); }
+  #pbar { position:absolute; z-index:9; top:0; left:0; width:1920px; height:5px;
+          background:rgba(255,255,255,.07); }
+  #pfill { height:100%; width:0; background:linear-gradient(90deg,#c7d2fe,#818cf8,#67e8f9); }
+</style>
+</head>
+<body>
+<canvas id="sky" width="1920" height="1080"></canvas>
+<div id="pbar"><div id="pfill"></div></div>
+<div id="brand">KIMI K3 · 月之暗面 · 一口气看懂</div>
+<div id="part"></div>
+
+<div class="scene" id="sc-title">
+  <div style="width:100%">
+    <div class="mark">Kimi K3</div>
+    <div class="sub" id="titleChips"></div>
+  </div>
+</div>
+<div class="scene" id="sc-scale"><div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="k">总参数量</div>
+      <div class="v num"><span id="sV1">0</span><em>2.8T</em></div></div>
+    <div class="stat"><div class="k">上下文窗口</div>
+      <div class="v num"><span id="sV2">0</span><em>M TOKENS</em></div></div>
+  </div>
+  <div id="starGrid"></div>
+</div></div>
+<div class="scene" id="sc-evolve"><div class="box" id="evolveBox"></div></div>
+<div class="scene" id="sc-coding">
+  <div style="width:100%">
+    <div id="term">
+      <div id="tBar"><b style="background:#ff5f57"></b><b style="background:#febc2e"></b><b style="background:#28c840"></b>
+        <span id="tTitle">k3 --bench swe-global</span></div>
+      <div id="tBody"></div>
+    </div>
+    <div id="rank">全球编程排名 <b>NO.1</b></div>
+  </div>
+</div>
+<div class="scene" id="sc-infra"><div class="row" id="infraRow"></div></div>
+<div class="scene" id="sc-api"><div class="box">
+  <div class="apiRow" id="apiRow"></div>
+  <div id="apiLine">一个 API · <b>1M 上下文</b> · 多模态 · Tool Calling</div>
+</div></div>
+<div class="scene" id="sc-open">
+  <div style="width:100%">
+    <div class="row" id="openRow"></div>
+    <div id="openAll">权重 + 技术报告 + Infra — <b>全部公开</b></div>
+  </div>
+</div>
+<div class="scene" id="sc-summary"><div class="row" id="summaryRow"></div></div>
+<div class="scene" id="sc-sense">
+  <div style="width:100%">
+    <div class="wrap">
+      <div class="scripts" id="scriptsBox"></div>
+      <div class="arrowL" style="font-size:70px;color:var(--acc);opacity:0" id="sArrow">➜</div>
+      <div class="moonJar"><div class="jarFill" id="jarFill"></div>
+        <div class="jarTag" id="jarTag"></div></div>
+    </div>
+    <div id="senseNote"></div>
+  </div>
+</div>
+<div class="scene" id="sc-wallet"><div class="box" id="walletBox"></div></div>
+<div class="scene" id="sc-meta"><div class="list" id="metaList"></div></div>
+
+<div id="subwrap"></div>
+
+<script>window.__DATA__=__DATA_JSON__;window.__CONTENT__=__CONTENT_JSON__;</script>
+<script>
+const DATA=window.__DATA__, C=window.__CONTENT__, SEGS=DATA.segments, DUR=DATA.duration;
+const $=id=>document.getElementById(id);
+const clamp01=v=>Math.max(0,Math.min(1,v));
+const lerp=(a,b,k)=>a+(b-a)*k;
+const easeOut=k=>1-Math.pow(1-k,3);
+function hash(n){const s=Math.sin(n*127.1)*43758.5453;return s-Math.floor(s);}
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* 内容填充 */
+$('brand').textContent=C.brand;
+document.querySelector('#sc-title .mark').textContent=C.title.mark;
+$('titleChips').innerHTML=C.title.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join('');
+$('sV1').textContent='0'; $('sV2').textContent='0';
+$('evolveBox').innerHTML=C.evolve.rows.map((r,i)=>`
+  <div class="cmp">
+    <div class="head"><span>${esc(r.label)}</span><span>${esc(r.range)}</span></div>
+    <div class="barRow"><div class="barPrev"></div><div class="barCur" id="evBar${i}"></div>
+      <div class="delta num" id="evDelta${i}"></div></div>
+  </div>`).join('')+`<div class="cmpNote" id="evNote">${esc(C.evolve.note||'')}</div>`;
+const CODE=C.coding.lines;
+const tBody=$('tBody');
+CODE.forEach(l=>{const d=document.createElement('div');d.innerHTML=l;tBody.appendChild(d);});
+const tlines=[...tBody.children];
+$('infraRow').innerHTML=C.infra.map(c=>`
+  <div class="icard"><div class="glyph">${c.glyph}</div><h3>${esc(c.h3)}</h3>
+    <p>${esc(c.p)}</p></div>`).join('');
+$('apiRow').innerHTML=C.api.cells.map(c=>`
+  <div class="apiCell"><div class="g">${c.g}</div><div class="t">${esc(c.t)}</div></div>`).join('');
+$('openRow').innerHTML=C.open.map(o=>`
+  <div class="oring"><div class="g">${o.g}</div><div class="t">${esc(o.t)}</div></div>`).join('');
+$('summaryRow').innerHTML=C.summary.map(s=>`
+  <div class="scard"><h3>${esc(s.h3)}</h3><div class="big">${s.big}</div></div>`).join('');
+$('scriptsBox').innerHTML=[250,234,218].map((h,i)=>
+  `<div class="script" style="height:${h}px;margin-top:${i?8:0}px" data-label="${esc(C.sense.script_label)}"></div>`).join('');
+$('senseNote').textContent=C.sense.note;
+$('walletBox').innerHTML=`
+  <div class="quota"><div class="who">${esc(C.wallet.who1)}</div>
+    <div class="cells"><i></i></div></div>
+  <div class="quota"><div class="who">${esc(C.wallet.who2)}</div>
+    <div class="cells" id="qNew">${'<i></i>'.repeat(C.wallet.new_cells)}</div></div>
+  <div class="wchips">${C.wallet.chips.map(c=>`<span>${esc(c)}</span>`).join('')}</div>
+  <div id="relief">${C.wallet.relief}</div>`;
+$('metaList').innerHTML=C.meta.map(m=>`<div class="li">${esc(m.k)} <b>${esc(m.v)}</b></div>`).join('');
+
+/* 星空 + 月相背景 */
+const sky=$('sky').getContext('2d');
+const STARS=[]; for(let i=0;i<210;i++) STARS.push({x:hash(i*3.3)*1920,y:hash(i*7.1)*1080,r:hash(i*11.7)*1.6+.4,tw:hash(i*5.3)*6.28});
+function drawSky(t,prog,acc){
+  sky.fillStyle='#05070f'; sky.fillRect(0,0,1920,1080);
+  for(const s of STARS){
+    const a=.35+.55*Math.abs(Math.sin(t*.7+s.tw));
+    sky.globalAlpha=a; sky.fillStyle='#dfe7ff';
+    sky.beginPath(); sky.arc(s.x,s.y,s.r,0,7); sky.fill();
+  }
+  sky.globalAlpha=1;
+  /* 月:右上,月相由 prog 决定(新月→满月) */
+  const mx=1560,my=230,mr=190;
+  const glow=sky.createRadialGradient(mx,my,mr*.6,mx,my,mr*2.6);
+  glow.addColorStop(0,acc+'55'); glow.addColorStop(1,'rgba(0,0,0,0)');
+  sky.fillStyle=glow; sky.fillRect(mx-mr*2.6,my-mr*2.6,mr*5.2,mr*5.2);
+  sky.fillStyle='#e8edff'; sky.beginPath(); sky.arc(mx,my,mr,0,7); sky.fill();
+  /* 阴影:phase 0→1 */
+  const ph=Math.min(.999,Math.max(.001,prog));
+  const off=(1-ph*2)*mr*2;
+  sky.fillStyle='#05070f';
+  sky.beginPath(); sky.arc(mx+off,my,mr+2,0,7); sky.fill();
+  /* 月坑 */
+  sky.globalAlpha=.10; sky.fillStyle='#5b6b9e';
+  [[-60,-40,34],[50,30,26],[-20,80,20],[90,-70,18]].forEach(c=>{
+    sky.beginPath(); sky.arc(mx+c[0],my+c[1],c[2],0,7); sky.fill();});
+  sky.globalAlpha=1;
+}
+
+/* 字幕 */
+const subwrap=$('subwrap'); const cues=[];
+for(const seg of SEGS) for(const c of seg.cues){
+  const div=document.createElement('div'); div.className='cue'; div.textContent=c.text;
+  subwrap.appendChild(div); cues.push({div,start:c.start,end:c.end});
+}
+let activeCue=null;
+function drawSub(t){
+  let hit=null;
+  for(const c of cues) if(t>=c.start&&t<=c.end){hit=c;break;}
+  if(hit!==activeCue){
+    if(activeCue) activeCue.div.style.display='none';
+    if(hit) hit.div.style.display='block';
+    activeCue=hit;
+  }
+}
+
+const scenes={}; document.querySelectorAll('.scene').forEach(e=>scenes[e.id.slice(3)]=e);
+const gcells=(()=>{const g=$('starGrid');for(let i=0;i<240;i++)g.appendChild(document.createElement('i'));return [...g.children];})();
+const tcells=tlines;
+const qNewCells=[...$('qNew').children];
+const wchips=[...document.querySelectorAll('.wchips span')], relief=$('relief');
+const metas=[...document.querySelectorAll('#sc-meta .li')];
+const fracs=null;
+const books=$('scriptsBox'),arrow=$('sArrow'),jarFill=$('jarFill'),jarTag=$('jarTag');
+
+function sceneProg(t,seg){return clamp01((t-seg.start)/(seg.end-seg.start));}
+const EV=C.evolve.rows;
+
+const PAINT={
+ title(seg,p){
+   const mark=document.querySelector('#sc-title .mark'),sub=$('titleChips');
+   mark.style.opacity=easeOut(clamp01(p*2.4)).toFixed(3);
+   mark.style.transform=`translateY(${(1-easeOut(clamp01(p*2.4)))*34}px)`;
+   sub.style.opacity=clamp01((p-0.22)*3.2).toFixed(3);
+ },
+ scale(seg,p){
+   $('sV1').textContent=Math.round(C.scale.v1*easeOut(clamp01(p*1.6)));
+   $('sV2').textContent=Math.round(C.scale.v2*easeOut(clamp01(p*2.2)));
+   const step=Math.floor(p*240*1.7);
+   for(let i=0;i<240;i++){
+     const on=hash(i*3.7+step*0.618)<C.scale.ratio && i/240<p*2.4;
+     gcells[i].className=on?'on':'';
+   }
+ },
+ evolve(seg,p){
+   EV.forEach((r,i)=>{
+     const k=easeOut(clamp01(p*1.5-i*0.22));
+     const cur=$('evBar'+i),dl=$('evDelta'+i);
+     if(!cur)return;
+     cur.style.width=(lerp(1,r.ratio,k)*100).toFixed(1)+'%';
+     dl.style.opacity=clamp01((p-0.45-i*0.2)*4).toFixed(3);
+     dl.textContent=r.delta;
+   });
+   const note=$('evNote'); if(note)note.style.opacity=clamp01((p-0.7)*4).toFixed(3);
+ },
+ coding(seg,p){
+   const term=$('term'); term.style.opacity=clamp01(p*4).toFixed(3);
+   const nDone=Math.floor(clamp01(p*0.92)*tlines.length);
+   tlines.forEach((l,i)=>l.className=i<nDone?'done':'');
+   const rk=$('rank'); rk.style.opacity=clamp01((p-0.72)*5).toFixed(3);
+ },
+ infra(seg,p){
+   const cards=[...$('infraRow').children];
+   cards.forEach((c,i)=>{
+     const k=clamp01((p-i*0.2)*2.3);
+     c.style.opacity=k.toFixed(3);
+     c.style.transform=`translateY(${(1-easeOut(k))*50}px)`;
+   });
+ },
+ api(seg,p){
+   const cells=[...$('apiRow').children];
+   cells.forEach((c,i)=>{
+     const k=clamp01((p-i*0.16)*2.4);
+     c.style.opacity=k.toFixed(3);
+     c.style.transform=`scale(${(0.9+0.1*easeOut(k)).toFixed(3)})`;
+   });
+   $('apiLine').style.opacity=clamp01((p-0.55)*4).toFixed(3);
+ },
+ open(seg,p){
+   const rings=[...$('openRow').children];
+   rings.forEach((r,i)=>{
+     const k=clamp01((p-i*0.18)*2.2);
+     r.style.opacity=k.toFixed(3);
+     r.style.transform=`scale(${(0.7+0.3*easeOut(k)).toFixed(3)})`;
+   });
+   $('openAll').style.opacity=clamp01((p-0.6)*4).toFixed(3);
+ },
+ summary(seg,p){
+   const cards=[...$('summaryRow').children];
+   cards.forEach((c,i)=>{
+     const k=easeOut(clamp01((p-0.08-i*0.22)*2.4));
+     c.style.opacity=k.toFixed(3);
+     c.style.transform=`translateY(${(1-k)*46}px)`;
+   });
+ },
+ sense(seg,p){
+   books.style.opacity=clamp01(p*3).toFixed(3);
+   arrow.style.opacity=clamp01((p-0.18)*4).toFixed(3);
+   jarFill.style.height=(easeOut(clamp01((p-0.35)/0.5))*86).toFixed(1)+'%';
+   jarTag.textContent=p>0.5?C.sense.jar_tag:C.sense.jar_start;
+   $('senseNote').style.opacity=clamp01((p-0.72)*4).toFixed(3);
+ },
+ wallet(seg,p){
+   qNewCells.forEach((c,i)=>c.classList.toggle('f',p>0.16+i*0.13));
+   wchips.forEach((s,i)=>s.style.opacity=clamp01((p-0.45-i*0.14)*4).toFixed(3));
+   relief.style.opacity=clamp01((p-0.72)*4).toFixed(3);
+ },
+ meta(seg,p){
+   metas.forEach((l,i)=>{
+     const k=clamp01((p-0.1-i*0.17)*3.4);
+     l.style.opacity=k.toFixed(3);
+     l.style.transform=`translateX(${(1-easeOut(k))*30}px)`;
+   });
+ },
+};
+
+let shown=null;
+function pickSeg(t){for(const s of SEGS)if(t>=s.start-0.2&&t<=s.end+0.45)return s;return null;}
+window.renderFrame=function(t){
+  const seg=pickSeg(t); const key=seg?seg.scene:null;
+  if(key!==shown){
+    Object.entries(scenes).forEach(([k,e])=>e.style.display=(k===key)?'flex':'none');
+    shown=key;
+  }
+  const prog=t/DUR; /* 月相:整片进度 */
+  if(seg){
+    document.documentElement.style.setProperty('--acc',seg.color);
+    $('part').textContent=`PART ${seg.pos+1}/${SEGS.length} · ${seg.label}`;
+    drawSky(t,prog,seg.color);
+    PAINT[seg.scene](seg,sceneProg(t,seg));
+  } else drawSky(t,prog,'#818cf8');
+  drawSub(t);
+  $('pfill').style.width=(t/DUR*100).toFixed(2)+'%';
+};
+document.fonts.ready.then(()=>{window.__READY__=true;});
+renderFrame(0);
+</script>
+</body>
+</html>

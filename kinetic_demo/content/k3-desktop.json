@@ -1,0 +1,25 @@
+{
+ "brand": "KIMI K3 · 编程实测 · 桌面试验片",
+ "voice": "doubao-东方浩然",
+ "stage": "k3_desktop_stage.html",
+ "content": {
+  "brand": "KIMI K3 · 编程实测 · 桌面试验片"
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "这是 Kimi K3 的编程实测现场。二点八万亿参数,全球最大的开源模型,跑完 SWE-bench 全部两千两百九十四项测试。编程能力排名,全球第一。注意,不是开源第一,是包括所有闭源模型在内的,全球第一。"
+  }
+ ],
+ "order": [
+  0
+ ],
+ "scenes": [
+  {
+   "scene": "desktop",
+   "color": "#818cf8",
+   "label": "编程实测"
+  }
+ ],
+ "_tail": 9.5
+}

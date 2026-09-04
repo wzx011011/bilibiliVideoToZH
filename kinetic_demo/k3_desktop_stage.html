@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1920px; height:1080px; overflow:hidden; background:#000;
+              font-family:"Microsoft YaHei","PingFang SC",sans-serif; }
+  canvas#wall { position:absolute; inset:0; }
+  .num { font-family:Consolas,"Courier New",monospace; }
+
+  /* 菜单栏 */
+  #menubar { position:absolute; z-index:20; top:0; left:0; right:0; height:38px;
+             background:rgba(10,14,26,.72); display:flex; align-items:center;
+             padding:0 26px; font-size:19px; color:rgba(255,255,255,.85);
+             backdrop-filter:blur(8px); }
+  #menubar .logo { font-size:22px; margin-right:34px; }
+  #menubar .m { margin-right:34px; opacity:.85; }
+  #menubar .app { font-weight:700; color:#fff; }
+  #menubar .right { margin-left:auto; display:flex; gap:30px; opacity:.9; }
+
+  /* Dock */
+  #dock { position:absolute; z-index:20; bottom:14px; left:50%; transform:translateX(-50%);
+          height:132px; padding:0 22px; border-radius:26px;
+          background:rgba(220,228,255,.14); border:1px solid rgba(255,255,255,.18);
+          display:flex; align-items:center; gap:26px;
+          box-shadow:0 18px 50px rgba(0,0,0,.45); backdrop-filter:blur(6px); }
+  .dicon { width:96px; height:96px; border-radius:22px; display:flex;
+           align-items:center; justify-content:center; font-size:44px;
+           color:#fff; font-weight:800; position:relative;
+           box-shadow:0 8px 22px rgba(0,0,0,.35); }
+  .dicon .dot { position:absolute; bottom:-13px; left:50%; transform:translateX(-50%);
+                width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.85);
+                opacity:0; }
+  .dicon.active .dot { opacity:1; }
+
+  /* 终端窗口 */
+  #term { position:absolute; z-index:12; left:250px; top:120px; width:1180px;
+          height:640px; border-radius:14px; background:rgba(11,15,28,.97);
+          border:1px solid rgba(150,165,220,.25); overflow:hidden;
+          box-shadow:0 40px 110px rgba(0,0,0,.65); opacity:0;
+          transform:scale(.94); transform-origin:bottom left; }
+  #tBar { height:52px; display:flex; align-items:center; gap:9px; padding:0 20px;
+          background:rgba(255,255,255,.05); }
+  #tBar b { width:16px; height:16px; border-radius:50%; }
+  #tBar .ti { margin-left:16px; font-family:Consolas,monospace; font-size:20px;
+              color:rgba(255,255,255,.45); }
+  #tBody { padding:26px 32px; font-family:Consolas,"Courier New",monospace;
+           font-size:25px; line-height:1.92; color:rgba(226,232,255,.88);
+           white-space:pre; }
+  #tBody .pr { color:#8b9bb8; }
+  #tBody .cmd { color:#e8edff; }
+  #tBody .dim { color:rgba(200,212,240,.55); }
+  #tBody .ok { color:#7ee787; }
+  #tBody .gold { color:#ffd76a; font-weight:700; }
+  #tBody .bar { color:#818cf8; letter-spacing:-1px; }
+
+  /* 通知横幅 */
+  #notif { position:absolute; z-index:22; top:58px; right:26px; width:520px;
+           border-radius:18px; background:rgba(28,34,58,.92);
+           border:1px solid rgba(150,165,220,.3); padding:22px 26px;
+           display:flex; gap:20px; align-items:center;
+           box-shadow:0 24px 60px rgba(0,0,0,.55);
+           transform:translateX(600px); backdrop-filter:blur(8px); }
+  #notif .ic { width:58px; height:58px; border-radius:14px; flex:none;
+               background:linear-gradient(135deg,#818cf8,#4f46e5);
+               display:flex; align-items:center; justify-content:center;
+               font-size:30px; font-weight:800; color:#fff; }
+  #notif .t1 { font-size:24px; color:rgba(255,255,255,.6); }
+  #notif .t2 { font-size:28px; color:#fff; margin-top:6px; }
+  #notif .t2 b { color:#a5b4fc; }
+
+  /* 光标 */
+  #cursor { position:absolute; z-index:30; left:0; top:0; will-change:transform;
+            filter:drop-shadow(0 3px 6px rgba(0,0,0,.5)); }
+  #click { position:absolute; z-index:29; width:70px; height:70px;
+           border:4px solid rgba(255,255,255,.85); border-radius:50%;
+           transform:translate(-50%,-50%) scale(0); opacity:0; }
+</style>
+</head>
+<body>
+<canvas id="wall" width="1920" height="1080"></canvas>
+
+<div id="menubar">
+  <span class="logo">◑</span><span class="app">终端</span>
+  <span class="m">文件</span><span class="m">编辑</span><span class="m">显示</span>
+  <span class="m">窗口</span><span class="m">帮助</span>
+  <div class="right"><span>♡</span><span>⌥</span><span>◔◔</span><span class="num">9:41</span></div>
+</div>
+
+<div id="term">
+  <div id="tBar"><b style="background:#ff5f57"></b><b style="background:#febc2e"></b><b style="background:#28c840"></b>
+    <span class="ti">kimi — -zsh — 100×30</span></div>
+  <div id="tBody"></div>
+</div>
+
+<div id="notif">
+  <div class="ic">K3</div>
+  <div><div class="t1">SWE-bench · 官方榜单</div>
+    <div class="t2">Kimi K3 编程排名 <b>全球 NO.1</b></div></div>
+</div>
+
+<div id="dock"></div>
+<div id="cursor">
+  <svg width="34" height="42" viewBox="0 0 34 42">
+    <path d="M4 2 L4 34 L12 27 L18 40 L24 37 L18 25 L29 24 Z"
+          fill="#fff" stroke="#1a1f2e" stroke-width="2.4"/>
+  </svg>
+</div>
+<div id="click"></div>
+
+<script>window.__DATA__=__DATA_JSON__;window.__CONTENT__=__CONTENT_JSON__;</script>
+<script>
+const DATA=window.__DATA__, C=window.__CONTENT__, DUR=DATA.duration;
+const $=id=>document.getElementById(id);
+const clamp01=v=>Math.max(0,Math.min(1,v));
+const lerp=(a,b,k)=>a+(b-a)*k;
+const easeOut=k=>1-Math.pow(1-k,3);
+const easeInOut=k=>k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+function hash(n){const s=Math.sin(n*127.1)*43758.5453;return s-Math.floor(s);}
+
+/* ── 壁纸:K3 星野 + 偏月(与 K3 视觉同源,压暗衬托窗口) ── */
+const wall=$('wall').getContext('2d');
+const STARS=[]; for(let i=0;i<240;i++)STARS.push({x:hash(i*3.3)*1920,y:hash(i*7.1)*1080,r:hash(i*11.7)*1.5+.4,tw:hash(i*5.3)*6.28});
+function drawWall(t){
+  wall.fillStyle='#05070f'; wall.fillRect(0,0,1920,1080);
+  for(const s of STARS){
+    wall.globalAlpha=.3+.5*Math.abs(Math.sin(t*.6+s.tw));
+    wall.fillStyle='#dfe7ff';
+    wall.beginPath(); wall.arc(s.x,s.y,s.r,0,7); wall.fill();
+  }
+  wall.globalAlpha=1;
+  const mx=1560,my=210,mr=150;
+  const g=wall.createRadialGradient(mx,my,mr*.6,mx,my,mr*2.4);
+  g.addColorStop(0,'rgba(129,140,248,.38)'); g.addColorStop(1,'rgba(0,0,0,0)');
+  wall.fillStyle=g; wall.fillRect(mx-mr*2.4,my-mr*2.4,mr*4.8,mr*4.8);
+  wall.fillStyle='#dfe5ff'; wall.beginPath(); wall.arc(mx,my,mr,0,7); wall.fill();
+  const ph=Math.min(.999,Math.max(.001,t/DUR));
+  const off=(1-ph*2)*mr*2;
+  wall.fillStyle='#05070f'; wall.beginPath(); wall.arc(mx+off,my,mr+2,0,7); wall.fill();
+}
+
+/* ── Dock ── */
+const DOCK=[
+ {g:'◐',bg:'linear-gradient(135deg,#3b82f6,#1d4ed8)'},
+ {g:'✦',bg:'linear-gradient(135deg,#38bdf8,#0369a1)'},
+ {g:'>_',bg:'linear-gradient(135deg,#334155,#0f172a)',term:true},
+ {g:'{}',bg:'linear-gradient(135deg,#f59e0b,#b45309)'},
+ {g:'♪',bg:'linear-gradient(135deg,#f472b6,#be185d)'},
+ {g:'✱',bg:'linear-gradient(135deg,#94a3b8,#475569)'},
+];
+$('dock').innerHTML=DOCK.map(d=>
+ `<div class="dicon ${d.term?'active':''}" style="background:${d.bg}">${d.g}<span class="dot"></span></div>`).join('');
+const dockIcons=[...document.querySelectorAll('.dicon')];
+const TERM_ICON_C=[dockIcons[2].offsetLeft+48, 1080-14-132/2];
+
+/* ── 终端行 ── */
+const tBody=$('tBody');
+const TLINES=[
+ {t:8.0, html:`<span class="pr">kimi@moon ~ % </span><span class="cmd" id="typed"></span><span class="pr" id="caret">▁</span>`},
+ {t:13.0, html:`<span class="dim">[k3] SWE-bench verified · 2294 tasks · temp 0</span>`},
+ {t:14.0, html:`<span class="dim">[k3] workers ×32 · container: python-3.12</span>`,},
+ {t:14.6, html:`<span class="bar" id="pbar">░░░░░░░░░░░░░░░░░░░░  0%</span>`},
+ {t:20.0, html:`<span class="ok">✔ 2294 / 2294 resolved · 18m12s</span>`},
+ {t:20.9, html:`<span class="dim">score</span> <span class="gold num">0.809</span> <span class="dim">(previous SOTA 0.742 · closed-source)</span>`},
+ {t:21.8, html:`<span class="ok" style="font-weight:700">global rank: #1  ·  open-weights: #1</span>`},
+];
+for(const l of TLINES){const d=document.createElement('div'); d.innerHTML=l.html; tBody.appendChild(d);}
+const lineEls=[...tBody.children];
+const typed=$('typed'), caret=$('caret'), pbarEl=$('pbar');
+const CMD='k3 --bench swe-global';
+
+/* ── 时间轴常量 ── */
+const T_MOVE0=3.2, T_MOVE1=5.6, T_CLICK=5.9, T_OPEN=6.2,
+      T_TYPE0=8.0, T_TYPE1=12.4,
+      T_PROG0=14.8, T_PROG1=19.6,
+      T_NOTIF0=22.2, T_NOTIF1=23.0, T_NOTIF2=27.6, T_NOTIF3=28.4;
+const CURSOR_HOME=[1280,560];
+const CURSOR_CLICK=[TERM_ICON_C[0]+14, TERM_ICON_C[1]-6];
+
+function setCaret(v){ if(caret) caret.style.opacity=v?'1':'0'; }
+
+window.renderFrame=function(t){
+  drawWall(t);
+  /* 终端开窗 */
+  const open=easeOut(clamp01((t-T_OPEN)/0.8));
+  const term=$('term');
+  term.style.opacity=open.toFixed(3);
+  term.style.transform=`scale(${(0.94+0.06*open).toFixed(3)})`;
+  if(open<=0){ return; }
+
+  /* 行出现 */
+  lineEls.forEach((el,i)=>{ el.style.visibility = t>=TLINES[i].t?'visible':'hidden'; });
+
+  /* 逐字输入 */
+  const typedEl=$('typed');
+  if(typedEl){
+    if(t<T_TYPE0){ typedEl.textContent=''; setCaret(t>=T_OPEN+0.5); }
+    else if(t<T_TYPE1){
+      const n=Math.floor(clamp01((t-T_TYPE0)/(T_TYPE1-T_TYPE0))*CMD.length
+        + hash(Math.floor(t*7))*0.9);
+      typedEl.textContent=CMD.slice(0,Math.min(n,CMD.length));
+      setCaret(Math.sin(t*9)>-0.2);
+    } else { typedEl.textContent=CMD; setCaret(false); }
+  }
+
+  /* 进度条 */
+  if(pbarEl){
+    if(t<T_PROG0){ pbarEl.textContent='░░░░░░░░░░░░░░░░░░░░  0%'; }
+    else if(t<T_PROG1){
+      const k=clamp01((t-T_PROG0)/(T_PROG1-T_PROG0));
+      const pct=Math.floor(k*100);
+      const fill=Math.round(k*20);
+      const jitter=hash(Math.floor(t*5))<0.06;
+      const shown=Math.max(0,pct-(jitter?2:0));
+      pbarEl.textContent='█'.repeat(Math.round(shown/5))+'░'.repeat(20-Math.round(shown/5))
+        +`  ${shown}%`+(jitter?' · retry 1':'');
+    } else pbarEl.textContent='████████████████████  100%';
+  }
+
+  /* 通知横幅 */
+  const n=$('notif');
+  let nx=600;
+  if(t>=T_NOTIF0&&t<T_NOTIF1) nx=(1-easeOut(clamp01((t-T_NOTIF0)/(T_NOTIF1-T_NOTIF0))))*600;
+  else if(t>=T_NOTIF1&&t<T_NOTIF2) nx=0;
+  else if(t>=T_NOTIF2) nx=easeOut(clamp01((t-T_NOTIF2)/(T_NOTIF3-T_NOTIF2)))*600;
+  n.style.transform=`translateX(${nx.toFixed(1)}px)`;
+
+  /* 光标 */
+  const cur=$('cursor');
+  let cx=CURSOR_HOME[0], cy=CURSOR_HOME[1];
+  if(t>=T_MOVE0&&t<T_MOVE1){
+    const k=easeInOut(clamp01((t-T_MOVE0)/(T_MOVE1-T_MOVE0)));
+    cx=lerp(CURSOR_HOME[0],CURSOR_CLICK[0],k);
+    cy=lerp(CURSOR_HOME[1],CURSOR_CLICK[1],k)+Math.sin(k*Math.PI)*-26;
+  } else if(t>=T_MOVE1&&t<T_CLICK+0.4){
+    cx=CURSOR_CLICK[0]; cy=CURSOR_CLICK[1];
+  } else if(t>=T_CLICK+0.4&&t<9.5){
+    const k=easeInOut(clamp01((t-T_CLICK-0.4)/1.4));
+    cx=lerp(CURSOR_CLICK[0],1520,k); cy=lerp(CURSOR_CLICK[1],420,k);
+  } else if(t>=9.5){ cx=1520; cy=420; }
+  cur.style.transform=`translate(${cx.toFixed(1)}px,${cy.toFixed(1)}px)`;
+
+  /* 点击涟漪 */
+  const ck=$('click');
+  if(t>=T_CLICK&&t<T_CLICK+0.45){
+    const k=clamp01((t-T_CLICK)/0.45);
+    ck.style.left=CURSOR_CLICK[0]+'px'; ck.style.top=CURSOR_CLICK[1]+'px';
+    ck.style.opacity=(1-k).toFixed(2);
+    ck.style.transform=`translate(-50%,-50%) scale(${(0.3+k*1.4).toFixed(2)})`;
+  } else ck.style.opacity=0;
+
+};
+/* Dock 定位依赖布局,首帧前强制布局完成 */
+renderFrame(0);
+document.fonts.ready.then(()=>{
+  /* 字体就绪后重算终端图标坐标 */
+  TERM_ICON_C[0]=dockIcons[2].offsetLeft+48; TERM_ICON_C[1]=1080-14-132/2;
+  window.__READY__=true;
+});
+</script>
+</body>
+</html>

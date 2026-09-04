@@ -30,6 +30,11 @@
 按原片起点放置、碰撞自动后移,`assemble_narration.py` 合成旁白+原声低混音轨。
 双语字幕可选(`compose_bilingual.py`,中上英下,英文去填充词)——默认纯中文。
 
+⚠️ **正脸访谈慎用时间轴版**(2026-08 Tibo 试验版实证):中文整段贴轨后句内节奏必然
+偏离口型,观众感知"音画不同步",属范式极限而非 bug。此类素材一律走**旁白版或播客版**。
+自动声纹锚点无需人工听选:YouTube 字幕 `>>` 换人标记切边界 + 3s 窗口 campplus 聚类
+即可产出 A/B 锚点(实现见 `work/voice-clone-demo/tibo_pipeline.py` 的 stage_prep)。
+
 播客版(none_2_podcast,平台标准链):whisper 成槽 → diarize → 翻译审查 → 语义段 →
 配音 → `polish_audio` 精修(输出 `podcast-studio/public/audio-<slug>/`)→
 `podcast_props`(锚点截头像 `extract_avatars.py` + props `build_podcast_props.py` +
@@ -90,11 +95,47 @@ Remotion 分块渲染。props/音频/头像按 slug 隔离在 podcast-studio 下
 ```bash
 PY=work/.venv-ocr/Scripts/python.exe
 $PY src/pipeline_admin.py            # 平台(页面建任务即全自动)
-$PY -m pytest tests/ -q              # 测试(75 个)
+$PY -m pytest tests/ -q              # 测试(140 个)
 # ollama pull qwen3:14b 需清代理: env -u http_proxy -u https_proxy ollama pull qwen3:14b
 # NAS 控制面更新: bash deploy-nas-studio.sh
-# PC 代理启动: start-studio-agent.cmd(或 shell:startup 放快捷方式)
+# PC 代理启动: agent-forever.cmd(看门狗,console 输出落 work/studio/agent-console.log)
 ```
+
+## 任务生命周期与可靠性(2026-08-31 大修,tests/test_recovery.py)
+
+- **租约协议**:代理 claim 时服务端发 lease token(存 `active.json`),之后每次
+  stage/artifact/log/progress/done 上报必须携带;token 不符回 409,代理收到
+  409 抛 `LeaseLost` 立即放弃本地执行。claim/heartbeat/release 全程持
+  `ACTIVE_LOCK` 串行化 + 原子写,双代理并发领取不可能。
+- **心跳失联自动续跑**:60 分钟无心跳 → 服务端回收租约,被中断阶段复位
+  pending,任务保持 running 由下个代理无缝接手(不再打成 failed 等人重试)。
+- **代理生命周期**:run_one 全程 try/except/finally,任何退出路径必停心跳 +
+  终态上报(done 带 5 次退避重试);poll 的 lease 在 `r["lease"]`,必须显式
+  传给 run_one(漏传=全部上报 409 静默空转,2026-09-01 实测坑)。
+- **阶段内取消**:cancel 动作 → 代理 `pa.CANCEL_PROBE`(10s 粒度)→ `_run`
+  杀子进程 → `StageCanceled` → 阶段复位 pending + 状态 canceled,产物检查点
+  (翻译断点/审查报告)全部保留,恢复即续跑。
+- **恢复语义**:`_normalize_for_run` 统一处理残留 running/failed;本地 runner
+  注册表防同任务并行;API 动作:`retry`(重试失败阶段)/`resume`(取消续跑)/
+  `reclaim`(强收卡死 running,租约新鲜时拒绝)/`retranslate`(审查串位后作废
+  译文从翻译重跑)。
+- **翻译可靠性**:批次响应必须精确覆盖本批 ID(缺/多/空译文整批重试 4 次,
+  否则断点退出),杜绝部分批次静默写盘;`slots_zh.meta.json` 存 slots 指纹+
+  模型,指纹变化自动作废旧译文;平台侧逐槽校验覆盖(缺槽/残留/空译文)。
+- **审查可靠性**:逐槽完成即原子落盘(as_completed,单慢请求不堵检查点);
+  报告带 `_summary{complete,mode,指纹}`:部分报告 complete=False 不能当结论;
+  全量审查必须覆盖全部槽;zh 指纹不符自动作废重审;Ollama 连挂立即失败保
+  检查点(不再产出整篇 ERROR 或 6h 无输出超时)。
+- **en_slots 续跑**:`slots.json` 已存在则跳过 whisper 重转写,只重跑声纹。
+- **诊断**:任务 JSON 的 stage.error 现在带 stderr 尾部(不再只有
+  `python.exe exit 1`);子进程统一 `PYTHONIOENCODING=utf-8`(GBK 管道打 ✓
+  曾毁掉整个 en_slots);PC 代理 console 落 `work/studio/agent-console.log`。
+- **控制面容器被杀恢复**:`--restart unless-stopped` 兜底;若被外部强杀
+  (exit 137 非 OOM,DSM 侧动过),`ssh nas "docker start studio-console"`
+  一条命令拉起。NAS 无免密 sudo,root crontab 看门狗未装。
+- **PC 访问控制面走 Clash**:沙盒/本机对 `192.168.100.78:8766` 直连被拒,
+  一切查询走系统代理;容器重启窗口代理回 502,脚本必须无限重试兜底
+  (work/watch_*.py 两例)。
 
 ## 架构边界
 
@@ -105,7 +146,20 @@ $PY -m pytest tests/ -q              # 测试(75 个)
 - ASR 缓存 `.asr.json` 存在则字幕秒级;whisper large-v3-turbo cpu/int8
 - 旁白模式:段碰撞自动后移(不硬对齐原时间轴),原声 -22dB 低混,双语字幕可选但默认纯中文
 
-## Windows 坑
+### 科普视频管线(kinetic_demo)
+
+- 管线:`kinetic_demo/make_model_video.py`——content/<slug>.json(文案+场景数据)→
+  CosyVoice 配音(东方浩然说书音色)→ build 时间轴/字幕 → Playwright 逐帧 → ffmpeg 成片
+- 舞台选择:content 的 `stage` 字段 > `<slug>_stage.html` > `model_stage.html`(通用模板);
+  每个系列应有专属视觉(月夜/黎明/水墨/新闻站…),禁止跨系列复用同一舞台(同质化教训)
+- 已有舞台:glm_stage(GLM 原版)/ kimi-k3_stage(月夜星野+月相)/ qwen3.8_stage(黎明绸缎)/
+  news_stage(AI 快讯栏目)/ k3_desktop_stage(拟真桌面)/ xyj_stage(西游记水墨)
+- 人物音色档案:`src/voice_casting.py` + work/studio/voice-castings.json,同一人物跨片复用
+- **不做幕后彩蛋环节**(2026-09 用户定):解说词来源/制作方式自曝段永久移除
+- 西游记系列:水墨剪影风,说书文案("上回说到/且听下回分解"),xyj_stage.html 十幕结构可复用
+- 坑:改文案后必须清 <slug>_video/parts* 再跑(配音断点续跑会跳过旧缓存);stage 文件名必须等于 slug
+
+# Windows 坑
 
 1. **Defender 锁文件**:大文件 rename 偶发 WinError 5,等几秒手动 `mv` 即可救回;yt-dlp 加 `--no-part`
 2. **venv launcher**:CPU 密集脚本用 base python + PYTHONPATH(平台已内置处理)

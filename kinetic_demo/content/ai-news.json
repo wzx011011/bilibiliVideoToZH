@@ -1,0 +1,178 @@
+{
+ "brand": "AI 快讯 · 一周模型发布",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 一周模型发布",
+  "nav": [
+   "Intro",
+   "要闻",
+   "开发生态",
+   "模型发布",
+   "产品应用",
+   "技术与洞察",
+   "行业动态",
+   "前瞻与传闻"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "MAI-Transcribe-2",
+    "accent": "#c2410c",
+    "title": "Microsoft 发布 <span class='num'>MAI-Transcribe-2</span> 语音转文字模型",
+    "cards": [
+     {
+      "g": "✓",
+      "t": "MAI-Transcribe-2 发布",
+      "d": "Microsoft 发布语音转文字模型 <span class='kw'>MAI-Transcribe-2</span>,已在 <span class='kw'>OpenRouter</span>、<span class='kw'>Microsoft Foundry</span> 与 <span class='kw'>MAI Playground</span> 上线。"
+     },
+     {
+      "g": "№",
+      "t": "FLEURS 排名第一",
+      "d": "官方称该模型覆盖 <b>60 种语言</b>,以平均 <b>5.2%</b> 的词错误率位居 <span class='kw'>FLEURS</span> 基准第一,在 <span class='kw'>Artificial Analysis</span> 榜单排名第二。"
+     },
+     {
+      "g": "¥",
+      "t": "限时定价 0.1 美元",
+      "d": "上线期间每小时音频定价 <b>0.10 美元</b>,属限时优惠,官方称将持续到今年年底,并称这是市场上最具竞争力的价格。"
+     },
+     {
+      "g": "✦",
+      "t": "丰富转写功能",
+      "d": "支持说话人分离、词级时间戳、关键词偏置、<span class='kw'>verbatim/clean</span> 转写风格、语码转换与自动语言识别,适用于临床、法律、字幕等场景。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "Kimi K3",
+    "accent": "#0f766e",
+    "title": "月之暗面发布 <span class='num'>Kimi K3</span>:全球首个 3T 级开源模型",
+    "cards": [
+     {
+      "g": "✓",
+      "t": "2.8 万亿参数开源",
+      "d": "7 月 16 日 WAIC 前夕直接发布,总参数 <span class='kw'>2.8T</span>,是上一代 K2 的近三倍,全球参数规模最大的开源模型。"
+     },
+     {
+      "g": "№",
+      "t": "编程能力全球第一",
+      "d": "编程能力<b>登顶全球第一</b>,综合智能逼近国际最顶尖的闭源模型——开源阵营第一次在这个维度拿下世界第一。"
+     },
+     {
+      "g": "✦",
+      "t": "开放三件套",
+      "d": "7 月 28 日开放日公开<b>模型权重、技术报告</b>,以及 <span class='kw'>MoonEP</span>、<span class='kw'>FlashKDA</span>、<span class='kw'>AgentEnv</span> 三大基础设施。"
+     },
+     {
+      "g": "⟳",
+      "t": "API 已就位",
+      "d": "Kimi API 支持 <b>1M token</b> 上下文窗口、多模态理解与 <span class='kw'>Tool Calling</span>,按 token 计费,无需自建集群。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "Qwen3.8",
+    "accent": "#b45309",
+    "title": "阿里开源 <span class='num'>Qwen3.8</span>:榜单仅次于 Claude",
+    "cards": [
+     {
+      "g": "✓",
+      "t": "2.4 万亿参数",
+      "d": "8 月 3 日发布并面向全球开源,总参数 <span class='kw'>2.4T</span>,单 token 激活 <b>95B</b>(约 4%),稀疏 MoE 加混合注意力联合优化。"
+     },
+     {
+      "g": "№",
+      "t": "榜单仅次于 Claude",
+      "d": "第三方榜单排名<b>仅次于 Claude</b>,开源阵营第一次摸到王座边上;推理效率较上代全面提升。"
+     },
+     {
+      "g": "✦",
+      "t": "三模态推理",
+      "d": "原生支持<b>百万级上下文</b>,文本、图像、视频三模态一网推理,代码与办公场景表现突出。"
+     },
+     {
+      "g": "¥",
+      "t": "双开源 + 地板价",
+      "d": "Qwen3.8-Max 输入 <b>12 元</b>、输出 <b>36 元</b>每百万 token,缓存命中仅 <b>1.5 元</b>;<span class='kw'>27B</span> 小杯同步开源。"
+     }
+    ]
+   },
+   {
+    "tag": "开发生态",
+    "short": "GLM-5.3-Flash",
+    "accent": "#7c2d12",
+    "title": "智谱开源 <span class='num'>GLM-5.3-Flash</span>:性价比最高的前沿模型",
+    "cards": [
+     {
+      "g": "✓",
+      "t": "稀疏 + 线性注意力",
+      "d": "总参数 <span class='kw'>320B</span>,单 token 激活 <b>18B</b>(约 6%)。业界第一个把稀疏注意力和线性注意力混搭的开源前沿模型。"
+     },
+     {
+      "g": "№",
+      "t": "性能追平旗舰",
+      "d": "全面超越参数量翻倍的上一代 GLM-5.2,性能追平 <span class='kw'>Claude Opus 4.8</span>,成本只有它的四十分之一。"
+     },
+     {
+      "g": "✦",
+      "t": "原生视觉闭环",
+      "d": "写代码时主动查看渲染界面,发现问题自己再改一轮,形成<span class='kw'>智能体反馈闭环</span>;上下文支持 <b>1M token</b>。"
+     },
+     {
+      "g": "¥",
+      "t": "价格砍半再砍半",
+      "d": "API 单价仅为上代的<b>十分之一</b>,长上下文推理成本降至旗舰的三分之一,缓存命中再打折。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "本周第一条,Microsoft 发布语音转文字模型 MAI-Transcribe-2。覆盖六十种语言,平均词错误率百分之五点二,在 FLEURS 基准排名第一。上线期间每小时音频只要零点一美元,还支持说话人分离、词级时间戳和关键词偏置,临床、法律、字幕场景全都覆盖。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,月之暗面的 Kimi K3。二点八万亿参数,全球首个三 T 级开源模型,编程能力直接登顶全球第一。权重、技术报告,连三大基础设施全部公开。API 支持一百万 token 上下文和工具调用,想用,一个接口就够了。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,阿里 Qwen3.8,发布即开源。总参数二点四万亿,每次只激活百分之四。第三方榜单仅次于 Claude,开源阵营第一次摸到王座边上。文本图像视频三模态一张网,输入十二元一百万 token,缓存命中一块五,还有二十七 B 的小杯随便下载。"
+  },
+  {
+   "id": 3,
+   "text": "最后一条,智谱 GLM-5.3-Flash。三百二十亿激活参数,业界第一个稀疏加线性注意力混搭的开源前沿模型。性能追平国际旗舰,成本只有四十分之一,价格再砍到十分之一,还自带视觉反馈闭环。一句话,开源性价比的天花板,被它自己又抬高了一次。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#c2410c",
+   "label": "MAI-Transcribe-2"
+  },
+  {
+   "scene": "story",
+   "color": "#0f766e",
+   "label": "Kimi K3"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "Qwen3.8"
+  },
+  {
+   "scene": "story",
+   "color": "#7c2d12",
+   "label": "GLM-5.3-Flash"
+  }
+ ],
+ "stage": "news_stage.html"
+}
