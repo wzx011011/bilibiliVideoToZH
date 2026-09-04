@@ -153,10 +153,9 @@ $PY -m pytest tests/ -q              # 测试(140 个)
 - 舞台选择:content 的 `stage` 字段 > `<slug>_stage.html` > `model_stage.html`(通用模板);
   每个系列应有专属视觉(月夜/黎明/水墨/新闻站…),禁止跨系列复用同一舞台(同质化教训)
 - 已有舞台:glm_stage(GLM 原版)/ kimi-k3_stage(月夜星野+月相)/ qwen3.8_stage(黎明绸缎)/
-  news_stage(AI 快讯栏目)/ k3_desktop_stage(拟真桌面)/ xyj_stage(西游记水墨)
+  news_stage(AI 快讯栏目)/ k3_desktop_stage(拟真桌面)
 - 人物音色档案:`src/voice_casting.py` + work/studio/voice-castings.json,同一人物跨片复用
 - **不做幕后彩蛋环节**(2026-09 用户定):解说词来源/制作方式自曝段永久移除
-- 西游记系列:水墨剪影风,说书文案("上回说到/且听下回分解"),xyj_stage.html 十幕结构可复用
 - 坑:改文案后必须清 <slug>_video/parts* 再跑(配音断点续跑会跳过旧缓存);stage 文件名必须等于 slug
 
 # Windows 坑
