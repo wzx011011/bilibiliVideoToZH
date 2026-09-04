@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 import subprocess
 import sys
 import wave as _wave
@@ -194,10 +195,16 @@ def render(slug: str, cfg: dict, data_path: Path, audio: Path,
     from playwright.sync_api import sync_playwright
     data = json.loads(data_path.read_text(encoding="utf-8"))
     n = 6 if smoke else int(data["duration"] * FPS) + 1
-    # 舞台选择:content.stage 指定 > <slug>_stage.html > 通用模板
-    stage = HERE / cfg.get("stage", f"{slug}_stage.html")
+    # 舞台选择:content.stage 指定 > <slug>_stage.html > 通用模板;
+    # 指定的舞台缺失直接报错(静默回退会让 JS 在运行时才崩,kimi-k3 实测)
+    stage_name = cfg.get("stage") or f"{slug}_stage.html"
+    stage = HERE / stage_name
     if not stage.exists():
+        if cfg.get("stage"):
+            raise SystemExit(f"[stage] 指定的舞台不存在: {stage}")
         stage = HERE / "model_stage.html"
+        if not stage.exists():
+            raise SystemExit(f"[stage] 通用模板缺失: {stage}")
     html = stage.read_text(encoding="utf-8")
     html = html.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))
     html = html.replace("__CONTENT_JSON__",
@@ -248,13 +255,25 @@ def main():
     work = HERE / f"{slug}_video"
     work.mkdir(exist_ok=True)
 
+    import hashlib
+    fp_path = work / "tts_fingerprint.json"
+    fp = hashlib.sha256(json.dumps(
+        [[it["id"], it["text"]] for it in cfg["items"]],
+        ensure_ascii=False).encode("utf-8")).hexdigest()
     have_parts = all((work / "parts16" / f"item_{sid:04d}.wav").exists()
                      for sid in cfg["order"])
-    if not have_parts:
+    fp_match = fp_path.exists() and fp_path.read_text(
+        encoding="utf-8").strip() == fp
+    if have_parts and fp_match:
+        print("[tts] 指纹一致,跳过配音")
+    else:
+        if have_parts and not fp_match:
+            print("[tts] 文案已变更,清缓存重录")
+            for d in ("parts", "parts16"):
+                shutil.rmtree(work / d, ignore_errors=True)
         print(f"[tts] {slug} ...")
         run_tts(slug, cfg, work)
-    else:
-        print("[tts] 已有配音,跳过")
+        fp_path.write_text(fp, encoding="utf-8")
     data_path, audio = build(slug, cfg, work)
     render(slug, cfg, data_path, audio, smoke=smoke)
 

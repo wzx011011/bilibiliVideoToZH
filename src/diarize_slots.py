@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -22,15 +23,20 @@ import torch
 import torchaudio
 import torchaudio.compliance.kaldi as kaldi
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from diarize_core import LOW_MARGIN, build_windows, label_windows  # noqa: E402
+
 CAMPPLUS = Path(__file__).resolve().parents[1] / \
     "work/voice-clone-demo/models/CosyVoice2-0.5B/campplus.onnx"
-WIN_TARGET = 6.0
-WIN_MAX = 12.0
-GAP = 2.0     # 槽间停顿超过此值切窗
-LOW_MARGIN = 0.04
 
 
 def main() -> None:
+    # Windows 控制台默认 GBK,打印非 ASCII 会 UnicodeEncodeError 杀掉整个
+    # 进程(ian-silber-openai 实测:槽已写完,毁在一行 ✓ 上)
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--audio", required=True, type=Path)
     ap.add_argument("--slots", required=True, type=Path)
@@ -41,7 +47,7 @@ def main() -> None:
     slots = json.loads(args.slots.read_text(encoding="utf-8"))
     anchors = json.loads(args.anchors)
     if len(anchors) < 2:
-        print("[跳过] 单锚点无法区分说话人,槽位保持默认")
+        print("[skip] 单锚点无法区分说话人,槽位保持默认")
         return
 
     full, sr = torchaudio.load(str(args.audio))
@@ -60,52 +66,27 @@ def main() -> None:
     anchor_vecs = {k: emb(float(v[0]), float(v[1]))
                    for k, v in anchors.items()}
 
-    # 1) 槽聚合窗口
-    windows, cur = [], []
-    for s in slots:
-        if cur and (s["start"] - cur[-1]["end"] > GAP
-                    or s["end"] - cur[0]["start"] > WIN_MAX):
-            windows.append(cur)
-            cur = []
-        cur.append(s)
-        if s["end"] - cur[0]["start"] > WIN_MAX:
-            windows.append(cur)
-            cur = []
-    if cur:
-        windows.append(cur)
-
-    # 2) 窗口分类(低置信沿用前窗,保持轮次连续性;首窗无前值,
-    #    低置信则并入次窗而不是留错误起点——片头 teaser 快剪在此污染)
-    prev = None
-    carry = []  # 低置信且无前窗可沿用的窗,等下一窗定label后一起写回
-    stats = {k: 0.0 for k in anchors}
-    for w in windows:
+    def classify(w: list[dict]) -> tuple[str, float]:
+        # 短窗(<2.5s)声纹不稳:返回低置信,交给 label_windows 沿用/进 carry
         s, e = w[0]["start"], w[-1]["end"]
-        spk, margin = prev, LOW_MARGIN
-        if e - s >= 2.5:
-            v = emb(s, e)
-            sims = {k: float(v @ a) for k, a in anchor_vecs.items()}
-            spk = max(sims, key=sims.get)
-            margin = max(sims.values()) - sorted(sims.values())[-2] \
-                if len(sims) > 1 else 1.0
-        if margin < LOW_MARGIN:
-            if prev is not None:
-                spk = prev
-            else:
-                carry.append(w)
-                continue
-        prev = spk
-        for slot in list(carry) + w:
-            slot["speaker"] = spk
-            slot["relabel_evidence"] = "campplus-window"
-        carry = []
-        stats[spk] = stats.get(spk, 0.0) + (e - s)
+        if e - s < 2.5:
+            return "", 0.0
+        v = emb(s, e)
+        sims = {k: float(v @ a) for k, a in anchor_vecs.items()}
+        spk = max(sims, key=sims.get)
+        margin = max(sims.values()) - sorted(sims.values())[-2] \
+            if len(sims) > 1 else 1.0
+        return spk, margin
+
+    windows = build_windows(slots)
+    stats = label_windows(windows, classify, LOW_MARGIN,
+                          default_speaker=next(iter(anchors), "A"))
 
     args.out.write_text(json.dumps(slots, ensure_ascii=False, indent=1),
                         encoding="utf-8")
     total = sum(stats.values()) or 1.0
     dist = " ".join(f"{k}={v/60:.0f}min({v/total*100:.0f}%)" for k, v in stats.items())
-    print(f"[✓] {len(slots)} 槽 / {len(windows)} 窗 -> {args.out.name}  {dist}")
+    print(f"[OK] {len(slots)} 槽 / {len(windows)} 窗 -> {args.out.name}  {dist}")
     # 轮次样例(同说话人连续窗口合并)
     runs = []
     for s in slots:

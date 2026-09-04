@@ -95,6 +95,9 @@ _TYPE_COMMON_PARAMS = [
      "required": False,
      "hint": "original=原片时间轴 narration=中文旁白 podcast=章节图播客 "
              "podcast_remotion=Remotion真人头像播客 subtitle_only=原声+中文字幕"},
+    {"key": "voice_profile", "label": "选角 Profile", "type": "str",
+     "required": False,
+     "hint": "已人工试听定案的栏目音色方案;指定后覆盖 voice_A/B"},
 ]
 
 VIDEO_TYPES: dict[str, dict] = {
@@ -319,11 +322,13 @@ STAGE_LABELS = {
 
 
 # =====================================================================
-# agent 分配(server 模式):单任务锁 + 心跳回收 + 代理上报的音色缓存
+# agent 分配(server 模式):租约锁 + 心跳回收 + 代理上报的音色缓存
 # =====================================================================
 
 ACTIVE_PATH = DATA_DIR / "active.json"
 AGENT_STATE_PATH = DATA_DIR / "agent-state.json"
+LEASE_TTL_MIN = 60  # 心跳超时即回收(代理 45s 一跳,正常永远到不了)
+ACTIVE_LOCK = threading.Lock()  # ThreadingHTTPServer 并发 poll 必须串行化
 
 
 def _read_json(p: Path, default):
@@ -333,54 +338,104 @@ def _read_json(p: Path, default):
         return default
 
 
+def _file_sha(p: Path) -> str:
+    import hashlib
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
 def _write_json(p: Path, data) -> None:
+    """原子写:唯一临时文件 + replace,并发线程互不覆盖、读者不见半截 JSON。"""
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=1),
-                 encoding="utf-8")
+    tmp = p.with_name(f"{p.name}.{uuid.uuid4().hex[:8]}.tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1),
+                   encoding="utf-8")
+    os.replace(tmp, p)
+
+
+def _read_active() -> dict:
+    act = _read_json(ACTIVE_PATH, None)
+    return act if isinstance(act, dict) else {}
+
+
+def _lease_fresh(act: dict) -> bool:
+    """心跳可解析且未过期;坏 JSON/坏时间戳一律视为过期(可回收)。"""
+    import datetime as _dt
+    try:
+        hb = _dt.datetime.fromisoformat(act.get("heartbeat") or "")
+        return _dt.datetime.now() - hb < _dt.timedelta(minutes=LEASE_TTL_MIN)
+    except Exception:
+        return False
 
 
 def agent_claim_task(agent: str):
-    """取下一个可执行任务:无 active 锁且阶段未跑完的最老任务。
-    心跳超时(15 分钟)的锁自动回收,任务置 failed 待重试。"""
+    """串行化领取:读改写全程持锁。返回 (task, lease_token) 或 (None, None)。
+
+    心跳超时的锁自动回收:被中断阶段复位 pending,任务保持排队由下一个
+    代理无缝接手(代理重启/失联不该让任务死掉等人点重试)。
+    带取消标记的排队任务直接收口为 canceled;无阶段可跑的残留 running
+    任务自愈为 done/failed。
+    """
     import datetime as _dt
-    act = _read_json(ACTIVE_PATH, None)
-    if act:
-        hb = _dt.datetime.fromisoformat(act.get("heartbeat", "2000-01-01"))
-        if _dt.datetime.now() - hb < _dt.timedelta(minutes=15):
-            return None  # 已有代理在干活
-        # 代理失联:回收
-        t = load_task(act.get("task_id") or "")
-        if t and t.status == S_RUNNING:
-            t.status = S_FAILED
-            cur = t.stages[t.current] if t.current < len(t.stages) else None
-            if cur and cur["status"] == P_RUNNING:
-                cur["status"], cur["error"] = P_FAILED, "代理失联(心跳超时)"
-            t.save()
-        _write_json(ACTIVE_PATH, {})
-    # 领取=创建时间顺序(ID 随机后缀,文件名排序不等于创建顺序)
-    for t in sorted(list_tasks(newest_first=False),
-                    key=lambda t: t.created_at):
-        if t.status != S_RUNNING:
-            continue
-        if any(s["status"] == P_PENDING for s in t.stages):
-            _write_json(ACTIVE_PATH, {"task_id": t.id, "agent": agent,
-                                      "heartbeat": _dt.datetime.now().isoformat()})
-            return t
-    return None
+    with ACTIVE_LOCK:
+        act = _read_active()
+        if act.get("task_id") and _lease_fresh(act):
+            return None, None  # 已有代理在干活
+        if act.get("task_id"):
+            # 代理失联:回收并重新排队(被中断阶段回 pending)
+            t = load_task(act["task_id"])
+            if t and t.status == S_RUNNING:
+                _normalize_for_run(t)
+                t.log("♻ 前代理心跳超时,任务已回收重新排队")
+                t.save()
+            _write_json(ACTIVE_PATH, {})
+        token = uuid.uuid4().hex
+        # 领取=创建时间顺序(ID 随机后缀,文件名排序不等于创建顺序)
+        for t in sorted(list_tasks(newest_first=False),
+                        key=lambda t: t.created_at):
+            if t.status != S_RUNNING:
+                continue
+            if t.cancel_requested:
+                t.status = S_CANCELED
+                t.save()
+                continue
+            if not any(s["status"] == P_PENDING for s in t.stages):
+                if all(s["status"] == P_DONE for s in t.stages):
+                    t.status = S_DONE
+                else:  # 无 pending 也非全 done(全部失败/异常态):收口待重试
+                    t.status = S_FAILED
+                t.save()
+                continue
+            _write_json(ACTIVE_PATH, {
+                "task_id": t.id, "agent": agent, "token": token,
+                "heartbeat": _dt.datetime.now().isoformat()})
+            return t, token
+        return None, None
 
 
-def agent_heartbeat(task_id: str) -> None:
-    act = _read_json(ACTIVE_PATH, {})
-    if act.get("task_id") == task_id:
+def _lease_ok(task_id: str, token) -> bool:
+    """租约校验:task_id 与 token 都匹配才算当前代理。"""
+    with ACTIVE_LOCK:
+        act = _read_active()
+        return (act.get("task_id") == task_id
+                and bool(token) and act.get("token") == token)
+
+
+def agent_heartbeat(task_id: str, token) -> bool:
+    with ACTIVE_LOCK:
+        act = _read_active()
+        if act.get("task_id") != task_id or act.get("token") != token:
+            return False
         import datetime as _dt
         act["heartbeat"] = _dt.datetime.now().isoformat()
         _write_json(ACTIVE_PATH, act)
+        return True
 
 
-def agent_release(task_id: str) -> None:
-    act = _read_json(ACTIVE_PATH, {})
-    if act.get("task_id") == task_id:
-        _write_json(ACTIVE_PATH, {})
+def agent_release(task_id: str, token) -> None:
+    with ACTIVE_LOCK:
+        act = _read_active()
+        if act.get("task_id") == task_id and act.get("token") == token:
+            _write_json(ACTIVE_PATH, {})
 
 
 # =====================================================================
@@ -421,12 +476,17 @@ class Task:
 
     def save(self) -> None:
         STATE_DIR.mkdir(parents=True, exist_ok=True)
-        self.json_path.write_text(json.dumps({
+        data = json.dumps({
             "schema": self.SCHEMA, "id": self.id, "type": self.type,
             "params": self.params, "created_at": self.created_at,
             "status": self.status, "current": self.current,
             "stages": self.stages, "artifacts": self.artifacts,
-        }, ensure_ascii=False, indent=2), encoding="utf-8")
+            "cancel_requested": bool(getattr(self, "cancel_requested", False)),
+        }, ensure_ascii=False, indent=2)
+        tmp = self.json_path.with_name(
+            f"{self.json_path.name}.{uuid.uuid4().hex[:8]}.tmp")
+        tmp.write_text(data, encoding="utf-8")
+        os.replace(tmp, self.json_path)
 
     @classmethod
     def load(cls, path: Path) -> "Task":
@@ -440,7 +500,7 @@ class Task:
         t.stages, t.artifacts = d["stages"], d["artifacts"]
         t.dir = STUDIO / t.params["slug"]
         t.log_path = STATE_DIR / f"{t.id}.log"
-        t.cancel_requested = False
+        t.cancel_requested = bool(d.get("cancel_requested", False))
         return t
 
     # ---------- 日志/状态 ----------
@@ -533,6 +593,7 @@ class Task:
         done = sum(1 for s in self.stages if s["status"] == P_DONE)
         return {"id": self.id, "type": self.type, "type_name": t["name"],
                 "slug": self.params["slug"], "status": self.status,
+                "cancel_requested": bool(getattr(self, "cancel_requested", False)),
                 "created_at": self.created_at,
                 "progress": f"{done}/{len(self.stages)}",
                 "stages": [{"key": s["key"], "label": s["label"],
@@ -553,18 +614,81 @@ class Task:
 # 子进程工具
 # =====================================================================
 
+class StageCanceled(RuntimeError):
+    """用户在阶段执行中请求取消,子进程已被中断。"""
+
+
+# 代理注入的阶段内取消探针(server 模式的取消标记在控制面,本地 JSON 看不到)
+CANCEL_PROBE = None
+
+
+def _poll_cancel(task: Task) -> bool:
+    """阶段内取消检查:local 单机从任务 JSON 重读 cancel_requested
+    (HTTP cancel 动作改的是磁盘上的另一份 Task 对象);代理模式走探针
+    查控制面。10s 粒度调用,注意保持轻量。"""
+    if getattr(task, "cancel_requested", False):
+        return True
+    if MODE == "local":
+        try:
+            d = _read_json(task.json_path, None)
+            if isinstance(d, dict) and d.get("cancel_requested"):
+                task.cancel_requested = True
+                return True
+        except Exception:
+            pass
+        if CANCEL_PROBE is not None:
+            try:
+                if CANCEL_PROBE(task.id):
+                    task.cancel_requested = True
+                    return True
+            except Exception:
+                pass
+    return False
+
+
 def _run(cmd: list[str], task: Task, timeout: int = 7200) -> str:
+    """跑子进程:10s 粒度轮询取消/超时并杀进程;stderr 尾部进异常消息。
+
+    子进程统一 PYTHONIOENCODING=utf-8:Windows 管道默认 GBK,脚本打印
+    ✓/中文会 UnicodeEncodeError(ian-silber-openai 的 en_slots 实测)。
+    """
     task.log("$ " + " ".join(str(c) for c in cmd))
-    proc = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True,
-                          encoding="utf-8", errors="replace", timeout=timeout)
-    if proc.stdout:
-        task.log(proc.stdout.rstrip()[-4000:])
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"}
+    proc = subprocess.Popen(cmd, cwd=str(ROOT), stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE, text=True,
+                            encoding="utf-8", errors="replace", env=env)
+    t0 = time.time()
+    out = ""
+    while True:
+        try:
+            out, err = proc.communicate(timeout=10)
+            break
+        except subprocess.TimeoutExpired:
+            if _poll_cancel(task):
+                proc.kill()
+                try:
+                    proc.communicate(timeout=15)
+                except Exception:  # noqa: BLE001
+                    pass
+                raise StageCanceled(
+                    f"用户取消:中断 {Path(str(cmd[0])).name}")
+            if time.time() - t0 > timeout:
+                proc.kill()
+                try:
+                    proc.communicate(timeout=15)
+                except Exception:  # noqa: BLE001
+                    pass
+                raise RuntimeError(
+                    f"命令超时({timeout}s,已终止): {Path(str(cmd[0])).name}")
+    if out:
+        task.log(out.rstrip()[-4000:])
     if proc.returncode != 0:
-        err = (proc.stderr or proc.stdout or "").strip().splitlines()
-        task.log("[stderr] " + "\n".join(err[-15:]))
+        lines = (err or out or "").strip().splitlines()
+        task.log("[stderr] " + "\n".join(lines[-15:]))
+        tail = " | ".join(lines[-3:])[-300:]
         raise RuntimeError(f"命令失败(exit {proc.returncode}): "
-                           f"{Path(str(cmd[0])).name}")
-    return proc.stdout
+                           f"{Path(str(cmd[0])).name}: {tail}")
+    return out
 
 
 def _wsl_run(script_rel: str, args: list[str], task: Task,
@@ -652,9 +776,12 @@ def ex_en_slots(task: Task) -> str:
               "--out", str(slots_path)], task, timeout=1800)
     elif dims["subtitle"] == "none" and dims["speakers"] >= 2:
         # 无字幕多人:whisper 成槽 → campplus 声纹标注
-        _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
-              str(w / "audio16k.wav"), "-o", str(slots_path)], task,
-             timeout=24 * 3600)
+        if slots_path.exists():
+            task.log("slots.json 已存在,跳过 ASR 重转写(续跑,只重跑声纹)")
+        else:
+            _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
+                  str(w / "audio16k.wav"), "-o", str(slots_path)], task,
+                 timeout=24 * 3600)
         anchors_json = task.params.get("anchors") or '{"A": [3.5, 18.8]}'
         _run([VC_PY, str(TOOL_DIR / "diarize_slots.py"),
               "--audio", str(w / "audio16k.wav"),
@@ -662,9 +789,12 @@ def ex_en_slots(task: Task) -> str:
               "--anchors", anchors_json,
               "--out", str(slots_path)], task, timeout=1800)
     else:  # none 单人 → whisper
-        _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
-              str(w / "audio16k.wav"), "-o", str(slots_path)], task,
-             timeout=24 * 3600)
+        if not slots_path.exists():
+            _run([VENV_PY, str(TOOL_DIR / "whisper_slots.py"),
+                  str(w / "audio16k.wav"), "-o", str(slots_path)], task,
+                 timeout=24 * 3600)
+        else:
+            task.log("slots.json 已存在,跳过 ASR 重转写(续跑)")
     slots = json.loads(slots_path.read_text(encoding="utf-8"))
     # 丢弃 skip_head 之前的槽(重排 id 保持连续)
     dropped = [s for s in slots if s["end"] <= skip_head]
@@ -683,34 +813,61 @@ def ex_en_slots(task: Task) -> str:
     return f"{len(slots)} 槽"
 
 
+def _validate_zh_coverage(zh: dict, slots: list[dict]) -> str:
+    """译文表必须与槽位一一对应(缺槽/残留旧槽都算不合格)。返回错误或空串。"""
+    want = {str(s["id"]) for s in slots}
+    missing = sorted(want - set(zh), key=lambda x: int(x) if x.isdigit() else 0)
+    if missing:
+        return f"缺 {len(missing)} 槽: {missing[:5]}"
+    extra = sorted(set(zh) - want)[:5]
+    if extra:
+        return f"残留非本片槽 id: {extra}"
+    empty = [k for k, v in zh.items()
+             if not isinstance(v, str) or not v.strip()]
+    if empty:
+        return f"空译文 id={sorted(empty)[:5]}"
+    return ""
+
+
 def ex_translate(task: Task) -> str:
     w = task.dir / "work"
     model = task.params.get("translate_model") or DEFAULT_TRANSLATE_MODEL
+    slots_path = w / "slots.json"
     zh_path = w / "slots_zh.json"
+    meta_path = w / "slots_zh.meta.json"
+    slots_sha = _file_sha(slots_path)
+    # 译文指纹:slots.json 变过(重切/重校声)或换模型 → 旧译文整体作废;
+    # 指纹一致 → 保留断点续译。meta 缺失 = 来历不明,同样作废。
+    meta = _read_json(meta_path, {}) if zh_path.exists() else {}
+    if zh_path.exists() and (meta.get("slots_sha") != slots_sha
+                             or meta.get("model") != model):
+        task.log("槽位/模型已变化,丢弃旧译文整体重译")
+        zh_path.unlink(missing_ok=True)
+        meta_path.unlink(missing_ok=True)
+    if not zh_path.exists():
+        meta_path.unlink(missing_ok=True)
+        _write_json(meta_path, {"slots_sha": slots_sha, "model": model,
+                                "complete": False})
+    slots = json.loads(slots_path.read_text(encoding="utf-8"))
     args = [VC_PY, str(VC_DIR / "translate_fine_batches.py"),
-            "--slots", str(w / "slots.json"), "--out", str(zh_path),
+            "--slots", str(slots_path), "--out", str(zh_path),
             "--model", model]
     # 大批次(12)只在窄域安全:槽多且多短槽时 qwen3 长上下文易串位
     # (elon 片 1304 槽 349 MISMATCH 实测),回退 6 并对短槽密度自适应
-    slots_n = len(json.loads((w / "slots.json").read_text(encoding="utf-8")))
-    short_ratio = None
-    if slots_n:
-        try:
-            sl = json.loads((w / "slots.json").read_text(encoding="utf-8"))
-            short_ratio = sum(1 for s in sl
-                              if s.get("duration", 9) < 6.5) / slots_n
-        except Exception:
-            pass
+    short_ratio = sum(1 for s in slots if s.get("duration", 9) < 6.5) / max(len(slots), 1)
     if VIDEO_TYPES[task.type]["dims"].get("mode") == "podcast":
-        batch = 6 if (short_ratio or 0) > 0.45 else 12
-        task.log(f"翻译批次={batch}(槽数 {slots_n},短槽占比 "
-                 f"{short_ratio and round(short_ratio*100)}%)")
+        batch = 6 if short_ratio > 0.45 else 12
+        task.log(f"翻译批次={batch}(槽数 {len(slots)},短槽占比 "
+                 f"{round(short_ratio*100)}%)")
         args += ["--batch", str(batch)]
     _run(args, task, timeout=24 * 3600)
     zh = json.loads(zh_path.read_text(encoding="utf-8"))
-    slots = json.loads((w / "slots.json").read_text(encoding="utf-8"))
-    if len(zh) < len(slots) * 0.9:
-        raise RuntimeError(f"翻译不完整: {len(zh)}/{len(slots)}")
+    err = _validate_zh_coverage(zh, slots)
+    if err:
+        raise RuntimeError(f"翻译不完整({len(zh)}/{len(slots)}): {err};"
+                           f"重试将从断点续译")
+    _write_json(meta_path, {"slots_sha": slots_sha, "model": model,
+                            "complete": True})
     return f"{len(zh)}/{len(slots)} 槽已译({model})"
 
 
@@ -758,29 +915,62 @@ def ex_align_speakers(task: Task) -> str:
 
 
 def ex_audit_translation(task: Task) -> str:
-    """qwen3 逐槽对照英文源审查译文;系统性串位(MISMATCH 达阈值)则置失败。"""
+    """qwen3 逐槽对照英文源审查译文;系统性串位(MISMATCH 达阈值)则置失败。
+
+    报告断点续跑:slots/zh 指纹未变时保留已完成槽位(超时重试不从头来);
+    指纹变了(重译过)才整份作废。_summary.complete=False 的部分报告
+    (超时/中断残留)不允许当结论,直接失败等待续跑。
+    """
     w = task.dir / "work"
     audit = w / "audit_translation.json"
-    audit.unlink(missing_ok=True)  # 每次重译后全量重审
+    slots_path, zh_path = w / "slots.json", w / "slots_zh.json"
+    slots = json.loads(slots_path.read_text(encoding="utf-8"))
+    zh = _read_json(zh_path, None)
+    if not isinstance(zh, dict) or _validate_zh_coverage(zh, slots):
+        raise RuntimeError("译文缺失或不完整,先完成翻译阶段再审查")
+    prev = _read_json(audit, None)
+    if isinstance(prev, dict):
+        s = prev.get("_summary") or {}
+        if (s.get("slots_sha") != _file_sha(slots_path)
+                or s.get("zh_sha") != _file_sha(zh_path)):
+            task.log("审查报告与当前译文指纹不符(重译过),作废重审")
+            audit.unlink(missing_ok=True)
     try:
+        # 阈值按比例:逐槽严格校验+指纹已在结构上杜绝批次错位,审查现承担
+        # 质量信号——零星噪声(<10%)放行并如实上报,系统性问题(≥20%)必拦
+        fail_over = max(20, round(len(slots) * 0.1))
         _run([VENV_PY, str(TOOL_DIR / "audit_translation.py"),
-              "--slots", str(w / "slots.json"),
-              "--zh", str(w / "slots_zh.json"),
+              "--slots", str(slots_path),
+              "--zh", str(zh_path),
               "--out", str(audit),
-              "--jobs", "3", "--sample", "4"], task, timeout=6 * 3600)
-    except RuntimeError:
-        pass  # 退出码 2 = 审查不过;报告已落盘,下面读取后给出明确失败
-    if not audit.exists():
+              "--jobs", "3", "--sample", "4",
+              "--fail-over", str(fail_over)], task, timeout=6 * 3600)
+    except StageCanceled:
+        raise
+    except RuntimeError as e:
+        task.log(f"审查进程退出(报告已保留断点): {str(e)[:160]}")
+    result = _read_json(audit, None)
+    if not isinstance(result, dict):
         raise RuntimeError("译文审查未产出报告(检查 Ollama/qwen3 是否可用)")
-    result = json.loads(audit.read_text(encoding="utf-8"))
+    summary = result.pop("_summary", None)
+    covered = sum(1 for k in result if k != "_summary")
+    # mode=partial 是中间检查点(可能只覆盖抽样集),不能当最终结论
+    if (not summary or summary.get("mode") == "partial"
+            or not summary.get("complete")):
+        raise RuntimeError(
+            f"审查未完成({covered}/{len(slots)} 槽):Ollama 中断或超时;"
+            f"重试将从断点续审")
     from collections import Counter
-    c = Counter(v.get("verdict") for v in result.values())
+    c = Counter(v.get("verdict") for v in result.values()
+                if isinstance(v, dict))
     mm = c.get("MISMATCH", 0)
-    if mm >= 5:
-        raise RuntimeError(f"译文审查未通过: MISMATCH {mm} 项(疑似批量串位),"
-                           f"报告见 work/audit_translation.json")
-    return (f"{len(result)} 槽: MATCH {c.get('MATCH', 0)} / "
-            f"PARTIAL {c.get('PARTIAL', 0)} / MISMATCH {mm}")
+    if mm >= fail_over:  # 与脚本同一阈值:脚本按它放行,包装层不得更严
+        raise RuntimeError(f"译文审查未通过: MISMATCH {mm}/{len(slots)} 项"
+                           f"(超过阈值 {fail_over},疑似系统性串位),"
+                           f"报告见 {audit}")
+    return (f"{len(result)} 槽[{summary.get('mode')}]: "
+            f"MATCH {c.get('MATCH', 0)} / PARTIAL {c.get('PARTIAL', 0)} / "
+            f"MISMATCH {mm} / ERROR {c.get('ERROR', 0)}")
 
 
 def _parse_srt(path: Path) -> list[tuple[float, float, str]]:
@@ -926,15 +1116,24 @@ def _build_voice_inputs(task: Task) -> tuple[Path, Path]:
             json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
 
     speakers = sorted({i["speaker"] for i in items})
-    if task.params.get("clone_original"):
+    profile_voices = None
+    if task.params.get("voice_profile"):
+        import voice_profiles
+        profile_voices = voice_profiles.apply_to_params(task.params, speakers)
+        task.log(f"选角 Profile: {task.params['voice_profile']} -> {profile_voices}")
+        task.save()
+    if profile_voices:
+        voices = profile_voices
+    elif task.params.get("clone_original"):
         voices = {spk: nm for spk, nm in
                   _clone_original_voices(task).items() if spk in speakers}
     else:
         voices = {}
         for spk in speakers:
             name = task.params.get(f"voice_{spk}") or \
-                task.params.get("voice_A") or "doubao-taotao"
+                   task.params.get("voice_A") or "doubao-taotao"
             voices[spk] = name
+
     # 人物选型档案:voice 缺省且 name_{A,B} 有人物名时,回填历史定案
     try:
         import voice_casting
@@ -978,6 +1177,8 @@ def ex_gen_audio(task: Task) -> str:
     args = list(base_args) + (["--concat-out", str(concat)] if concat else [])
     try:
         _wsl_run("work/voice-clone-demo/generate_voice.py", args, task)
+    except StageCanceled:
+        raise  # 取消不能触发 CPU 回退(那会再挂 48 小时)
     except RuntimeError as e:
         task.log(f"WSL GPU 失败({str(e)[:80]}),Windows CPU 回退(慢)")
         _run([VC_PY, str(VC_DIR / "generate_voice.py")] + args, task,
@@ -1105,6 +1306,8 @@ def ex_render_remotion_podcast(task: Task) -> str:
         task.log(f"待渲染块 {k[0]+1}/{len(chunks)} "
                  f"(frames {k[1]}-{k[2]}, {((k[2]-k[1])/30/60):.0f} 分钟画面)")
     for k in pending:
+        if _poll_cancel(task):
+            raise StageCanceled("用户取消:中断渲染(已完成块保留,续跑跳过)")
         p = subprocess.run(render_cmd(*k), cwd=str(PODCAST_STUDIO),
                            capture_output=True, text=True,
                            encoding="utf-8", errors="replace")
@@ -1276,12 +1479,31 @@ EXECUTORS = {
 # 运行器
 # =====================================================================
 
+_RUNNERS: dict[str, threading.Thread] = {}
+_RUNNERS_LOCK = threading.Lock()
+
+
+def _normalize_for_run(task: Task) -> int:
+    """恢复前规范化:中断残留的 running 阶段复位 pending,首个 failed
+    复位 pending;返回首个可执行阶段下标(无可跑返回 len)。"""
+    for st in task.stages:
+        if st["status"] == P_RUNNING:
+            st.update(status=P_PENDING, error=None, started_at=None)
+    fi = next((i for i, st in enumerate(task.stages)
+               if st["status"] == P_FAILED), None)
+    if fi is not None:
+        task.stages[fi].update(status=P_PENDING, error=None, ended_at=None)
+    return next((i for i, st in enumerate(task.stages)
+                 if st["status"] == P_PENDING), len(task.stages))
+
+
 def run_task(task: Task) -> None:
     while task.current < len(task.stages):
-        if task.cancel_requested:
+        if _poll_cancel(task):
+            _normalize_for_run(task)
             task.status = S_CANCELED
             task.save()
-            task.log("⏹ 用户取消:当前阶段完成后停止")
+            task.log("⏹ 用户取消:已中断,可随时恢复续跑")
             return
         st = task.stages[task.current]
         if st["status"] == P_DONE:
@@ -1295,6 +1517,13 @@ def run_task(task: Task) -> None:
             task.mark_stage(st["key"], P_DONE, note=note)
             task.log(f"✓ {st['label']}: {note}")
             task.current += 1
+        except StageCanceled:
+            st.update(status=P_PENDING, error=None, started_at=None)
+            _normalize_for_run(task)
+            task.status = S_CANCELED
+            task.save()
+            task.log(f"⏹ 用户取消于 {st['label']},阶段已复位待续跑")
+            return
         except Exception as e:  # noqa: BLE001
             task.mark_stage(st["key"], P_FAILED, error=str(e)[:500])
             task.status = S_FAILED
@@ -1306,39 +1535,107 @@ def run_task(task: Task) -> None:
     task.log("任务完成")
 
 
-def start_runner(task: Task) -> None:
-    threading.Thread(target=run_task, args=(task,), daemon=True).start()
+def start_runner(task: Task) -> bool:
+    """单任务执行注册表:同一任务绝不并行两个本地 runner。"""
+    with _RUNNERS_LOCK:
+        th = _RUNNERS.get(task.id)
+        if th and th.is_alive():
+            return False
+        th = threading.Thread(target=_runner_body, args=(task,), daemon=True)
+        _RUNNERS[task.id] = th
+        th.start()
+        return True
 
 
-def retry_stage(task: Task) -> bool:
-    if task.status != S_FAILED:
-        return False
-    for i, st in enumerate(task.stages):
-        if st["status"] == P_FAILED:
-            st["status"], st["error"] = P_PENDING, None
-            task.current = i
-            task.status = S_RUNNING
-            task.save()
-            if MODE == "local":
-                start_runner(task)  # server 模式:重置后等 PC 代理领取
-            return True
-    return False
+def _runner_body(task: Task) -> None:
+    try:
+        run_task(task)
+    finally:
+        with _RUNNERS_LOCK:
+            _RUNNERS.pop(task.id, None)
 
 
-def resume_task(task: Task) -> bool:
-    """从取消/失败状态继续:已完成的阶段跳过,从 current 位置接着跑。"""
-    if task.status not in (S_CANCELED, S_FAILED):
-        return False
-    for i, st in enumerate(task.stages):
-        if st["status"] == P_FAILED:
-            st["status"], st["error"] = P_PENDING, None
-            task.current = i
-            break
+def _requeue(task: Task, idx: int) -> None:
+    task.current = idx
     task.status = S_RUNNING
     task.cancel_requested = False
     task.save()
     if MODE == "local":
         start_runner(task)  # server 模式:重置后等 PC 代理领取
+
+
+def retry_stage(task: Task) -> bool:
+    if task.status != S_FAILED:
+        return False
+    idx = _normalize_for_run(task)
+    if idx >= len(task.stages):
+        # 无阶段可跑却被标失败(异常残留):按阶段事实收口
+        task.status = S_DONE if all(s["status"] == P_DONE
+                                    for s in task.stages) else S_FAILED
+        task.save()
+        return task.status == S_DONE
+    _requeue(task, idx)
+    return True
+
+
+def resume_task(task: Task) -> bool:
+    """从取消/失败状态继续:已完成阶段跳过,残留 running 复位后续跑。"""
+    if task.status not in (S_CANCELED, S_FAILED):
+        return False
+    idx = _normalize_for_run(task)
+    if idx >= len(task.stages):
+        if all(s["status"] == P_DONE for s in task.stages):
+            task.status = S_DONE
+            task.save()
+            return True
+        return False
+    _requeue(task, idx)
+    return True
+
+
+def reclaim_task(task: Task) -> bool:
+    """回收卡死的 running 任务(代理失联/状态残留),复位重新排队。
+
+    租约仍新鲜(代理可能真在跑)时拒绝;local 模式看 runner 注册表。
+    """
+    if task.status != S_RUNNING:
+        return False
+    th = _RUNNERS.get(task.id)
+    if th and th.is_alive():
+        return False
+    import datetime as _dt
+    with ACTIVE_LOCK:
+        act = _read_active()
+        if act.get("task_id") == task.id and _lease_fresh(act):
+            return False
+        if act.get("task_id") == task.id:
+            _write_json(ACTIVE_PATH, {})
+    _normalize_for_run(task)
+    _requeue(task, next((i for i, s in enumerate(task.stages)
+                         if s["status"] == P_PENDING), len(task.stages)))
+    task.log("♻ 人工回收:任务重新排队")
+    return True
+
+
+def retranslate_task(task: Task) -> bool:
+    """审查判译文串位后的正规修复路径:作废译文+审查报告,重置到翻译阶段
+    整体重译重审。只重跑审查没有意义(串位译文不会自己变对)。"""
+    if task.status not in (S_FAILED, S_CANCELED):
+        return False
+    failed = next((s for s in task.stages if s["status"] == P_FAILED), None)
+    if not failed or failed["key"] != "audit_translation":
+        return False
+    w = task.dir / "work"
+    for name in ("slots_zh.json", "slots_zh.meta.json",
+                 "audit_translation.json"):
+        (w / name).unlink(missing_ok=True)
+    task.log("♻ 重译:作废译文与审查报告,从翻译阶段重新开始")
+    ti = next(i for i, s in enumerate(task.stages)
+              if s["key"] == "translate")
+    for st in task.stages[ti:]:  # 翻译起全部重跑(含审查及后续)
+        st.update(status=P_PENDING, error=None, note=None,
+                  started_at=None, ended_at=None)
+    _requeue(task, ti)
     return True
 
 
@@ -1474,7 +1771,13 @@ class Handler(BaseHTTPRequestHandler):
             if MODE == "local":
                 return self._json(voice_lib.list_voices())
             return self._json(_read_json(DATA_DIR / "voices.json", []))
-        if self.path.startswith("/api/voice_audio"):
+        if self.path == "/api/voice_profiles":
+            try:
+                import voice_profiles
+                return self._json(voice_profiles.list_profiles())
+            except Exception as e:
+                return self._json({"ok": False, "error": str(e)[:200]}, 500)
+        if self.path.startswith("/api/voice_audio"): 
             return self._voice_audio()
         if self.path.startswith("/api/library"):
             return self._library()
@@ -1564,13 +1867,36 @@ class Handler(BaseHTTPRequestHandler):
                 ok = retry_stage(t)
                 return self._json(
                     {"ok": ok, "error": None if ok else "任务不在失败状态"})
+            if action == "reclaim":
+                ok = reclaim_task(t)
+                return self._json(
+                    {"ok": ok,
+                     "error": None if ok else
+                     "无法回收:任务不在运行态,或租约仍新鲜(代理可能真在跑)"})
+            if action == "retranslate":
+                ok = retranslate_task(t)
+                return self._json(
+                    {"ok": ok,
+                     "error": None if ok else
+                     "仅失败于译文审查的任务可重译(先作废译文再从翻译重跑)"})
             if action == "cancel":
                 if t.status != S_RUNNING:
                     return self._json({"ok": False, "error": "任务不在执行中"})
+                if MODE == "local":
+                    th = _RUNNERS.get(t.id)
+                    is_active = bool(th and th.is_alive())
+                else:
+                    with ACTIVE_LOCK:
+                        is_active = _read_active().get("task_id") == t.id
                 t.cancel_requested = True
+                msg = "已请求取消,数秒内中断当前阶段"
+                if not is_active:
+                    # 排队中/代理失联残留:没有人在跑,直接终态
+                    _normalize_for_run(t)
+                    t.status = S_CANCELED
+                    msg = "任务未在执行,已直接置为已取消"
                 t.save()
-                return self._json({"ok": True,
-                                   "msg": "已请求取消,当前阶段完成后停止"})
+                return self._json({"ok": True, "msg": msg})
             if action == "resume":
                 ok = resume_task(t)
                 return self._json(
@@ -1682,8 +2008,10 @@ class Handler(BaseHTTPRequestHandler):
                     break  # 客户端断开
 
     def _agent(self, path: str):
-        """代理通道:poll 领任务 / stage / artifact / log / done / voices。
-        鉴权:X-Agent-Token 与 DATA_DIR/.agent-token 一致。"""
+        """代理通道:poll 领任务 / stage / artifact / log / progress / done / voices。
+        鉴权:X-Agent-Token 与 DATA_DIR/.agent-token 一致;租约:claim 发放的
+        token 必须随每次上报携带,过期/易主代理的迟到上报一律 409 拒绝,
+        且不再续租、不能释放新代理的锁。"""
         tok = self.headers.get("X-Agent-Token", "")
         want = _read_json(DATA_DIR / ".agent-token", {}).get("token")
         if not want:
@@ -1704,27 +2032,51 @@ class Handler(BaseHTTPRequestHandler):
             if body.get("env"):  # 代理上报的 PC 环境自检
                 state["env"] = body["env"]
             _write_json(AGENT_STATE_PATH, state)
-            t = agent_claim_task(body.get("agent", "?"))
+            t, lease = agent_claim_task(body.get("agent", "?"))
             if t is None:
                 return self._json({"task": None})
-            return self._json({"task": t.detail()})
+            return self._json({"task": t.detail(), "lease": lease})
 
         if act == "voices":
             _write_json(DATA_DIR / "voices.json", body.get("voices", []))
             return self._json({"ok": True})
 
         task_id = body.get("task_id", "")
+        lease = body.get("lease") or ""
+        if not _lease_ok(task_id, lease):
+            return self._json(
+                {"ok": False,
+                 "error": "租约失效(任务已被回收或转给其他代理)"}, 409)
         t = load_task(task_id)
         if not t:
             return self._json({"ok": False, "error": "任务不存在"}, 404)
-        agent_heartbeat(task_id)
+        agent_heartbeat(task_id, lease)
 
+        if act == "progress":
+            # 心跳同时刷新 last_seen:执行长任务期间代理不 poll,
+            # /api/status 的 agent_online 才不会误报离线
+            state = _read_json(AGENT_STATE_PATH, {})
+            state["last_seen"] = \
+                __import__("datetime").datetime.now().isoformat()
+            state["agent"] = state.get("agent") or body.get("agent") or "?"
+            _write_json(AGENT_STATE_PATH, state)
+            return self._json({"ok": True})
         if act == "stage":
-            t.mark_stage(body.get("key"), body.get("status"),
-                         error=body.get("error"), note=body.get("note"))
-            if body.get("advance"):
-                t.current += 1
-                t.save()
+            key, status = body.get("key"), body.get("status")
+            if status not in (P_PENDING, P_RUNNING, P_DONE, P_FAILED):
+                return self._json(
+                    {"ok": False, "error": f"非法阶段状态 {status}"}, 400)
+            known = {s["key"] for s in t.stages} | \
+                set(VIDEO_TYPES[t.type]["stages"])
+            if key not in known:
+                return self._json({"ok": False, "error": f"未知阶段 {key}"}, 400)
+            t.mark_stage(key, status, error=body.get("error"),
+                         note=body.get("note"))
+            # current 由服务端按阶段事实推导,不信任客户端 advance
+            t.current = next(
+                (i for i, s in enumerate(t.stages)
+                 if s["status"] in (P_PENDING, P_RUNNING)), len(t.stages))
+            t.save()
             return self._json({"ok": True})
         if act == "artifact":
             info = t.artifacts.get(body.get("slot") or "")
@@ -1743,9 +2095,17 @@ class Handler(BaseHTTPRequestHandler):
                     f.write(line + chr(10))
             return self._json({"ok": True})
         if act == "done":
-            t.status = body.get("status") or S_DONE
+            status = body.get("status") or S_DONE
+            if status not in (S_DONE, S_FAILED, S_CANCELED):
+                return self._json({"ok": False, "error": f"非法终态 {status}"},
+                                  400)
+            t.status = status
+            # 终态时按阶段事实收敛 current,防客户端漂移
+            t.current = next(
+                (i for i, s in enumerate(t.stages)
+                 if s["status"] in (P_PENDING, P_RUNNING)), len(t.stages))
             t.save()
-            agent_release(task_id)
+            agent_release(task_id, lease)
             return self._json({"ok": True})
         return self._json({"ok": False, "error": f"未知 agent 动作 {act}"})
 
@@ -1778,6 +2138,20 @@ class Handler(BaseHTTPRequestHandler):
         if params.get("clone_original") and not params.get("anchors"):
             return self._json({"ok": False, "error":
                                "自动克隆原声需要填声纹锚点 anchors"}, 400)
+        if params.get("voice_profile"):
+            try:
+                import voice_profiles
+                profile = voice_profiles.get(params["voice_profile"])
+                if profile is None:
+                    raise ValueError(f"音色 Profile 不存在: {params['voice_profile']}")
+                if profile.get("status") != "approved":
+                    raise ValueError(f"音色 Profile 未批准: {params['voice_profile']}")
+                speakers = ["A"]
+                if VIDEO_TYPES[tkey]["dims"].get("speakers") == 2:
+                    speakers.append("B")
+                voice_profiles.resolve(params["voice_profile"], speakers)
+            except (KeyError, ValueError) as e:
+                return self._json({"ok": False, "error": str(e)}, 400)
         task = Task(tkey, params)
         task.save()
         task.log(f"创建: {spec['name']} / {slug}")

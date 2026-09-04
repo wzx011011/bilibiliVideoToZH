@@ -43,7 +43,7 @@ def main():
     ap.add_argument("--jobs", type=int, default=4,
                     help="并行 ffmpeg 进程数(默认 4)")
     args = ap.parse_args()
-    parts_dir, out = args.parts_dir, args.out
+    parts_dir, out = args.parts_dir, args.out_dir
     speed = args.speed
     OUT = out
     OUT.mkdir(parents=True, exist_ok=True)

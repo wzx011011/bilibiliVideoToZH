@@ -491,6 +491,7 @@ details[open] > summary::before { content: '▾ '; }
       <!-- 历史 -->
       <div class="card">
         <h2>发布记录</h2>
+        <div id="pub-cur-job" style="display:none;margin-bottom:10px;padding:8px 10px;border:1px solid #e5e7eb;border-radius:8px"></div>
         <div id="pub-jobs" class="hint">暂无</div>
       </div>
       </div>
@@ -844,9 +845,13 @@ function rowHTML(t) {
   const mini = t.stages.map(s =>
     `<i class="${s.status}" title="${s.label}${s.error ? ': '+s.error : ''}"></i>`).join('');
   const act = t.status === 'running'
-    ? `<button class="btn sm warn" title="当前阶段完成后停止" onclick="event.stopPropagation();doAction('${t.id}','cancel')">取消</button>`
+    ? `<button class="btn sm warn" title="数秒内中断当前阶段" onclick="event.stopPropagation();doAction('${t.id}','cancel')">取消</button>` +
+      `<button class="btn sm" title="代理失联/状态卡死时强制回收重新排队(租约新鲜时会被拒绝)" onclick="event.stopPropagation();doAction('${t.id}','reclaim')">回收</button>`
     : t.status === 'failed'
-    ? `<button class="btn sm warn" onclick="event.stopPropagation();doAction('${t.id}','retry')">重试失败阶段</button>`
+    ? `<button class="btn sm warn" onclick="event.stopPropagation();doAction('${t.id}','retry')">重试失败阶段</button>` +
+      (t.stages.some(s => s.status==='failed' && s.key==='audit_translation')
+        ? `<button class="btn sm warn" title="审查判定译文串位时使用:作废译文,从翻译阶段整体重译重审" onclick="event.stopPropagation();doAction('${t.id}','retranslate')">重译重审</button>`
+        : '')
     : t.status === 'canceled'
     ? `<button class="btn sm" onclick="event.stopPropagation();doAction('${t.id}','resume')">继续执行</button>`
     : '';
@@ -993,7 +998,8 @@ function downloadLog(id) {
 }
 
 async function doAction(id, action) {
-  const msgs = {cancel:'已请求取消,当前阶段完成后停止'};
+  const msgs = {cancel:'已请求取消,数秒内中断当前阶段',
+    reclaim:'已回收重新排队', retranslate:'已作废译文,从翻译阶段重跑'};
   const d = await (await fetch(`/api/tasks/${id}/action`,{method:'POST',
     headers:{'Content-Type':'application/json'},body:JSON.stringify({action})})).json();
   d.ok ? showToast(msgs[action]||'已执行') : showToast(d.error||'失败', true);
@@ -1166,22 +1172,34 @@ let pubEps = [];
 async function pubApi(path, body, method) {
   const opt = {method: method||'GET', headers: pubHeaders()};
   if (body !== undefined) opt.body = JSON.stringify(body);
-  const r = await fetch(path, opt);
-  let j; try { j = await r.json(); } catch(e) { j = {ok:false,error:'HTTP '+r.status}; }
+  let r;
+  try {
+    r = await fetch(path, opt);
+  } catch(e) {
+    return {ok:false, error:'网络错误,请检查连接后重试', status:0};
+  }
+  let j; try { j = await r.json(); } catch(e) { j = {}; }
+  if (!r.ok) {
+    j = {ok:false, error:j.error||('HTTP '+r.status), status:r.status};
+  } else if (j.ok === undefined) {
+    // 部分成功响应(如 qr/poll)不带 ok 字段,保持原样但补状态码
+    j.__status = r.status;
+  }
   return j;
 }
 
 async function fetchPubState() {
   // 首次:探测是否已设口令
   const probe = await fetch('/api/pub/state', {headers:pubHeaders()});
-  if (probe.status === 401) {
-    try {
-      const j = await probe.clone().json();
-      if ((j.error||'').includes('尚未设置')) { g('pub-setup').style.display=''; g('pub-main').style.display='none'; return; }
-    } catch(e){}
+  if (!probe.ok) {
+    let err = '';
+    try { err = (await probe.clone().json()).error || ''; } catch(e) {}
+    if ((err||'').includes('尚未设置')) {
+      g('pub-setup').style.display=''; g('pub-main').style.display='none'; return;
+    }
     g('pub-setup').style.display='none';
     g('pub-main').style.display='';
-    showToast('口令错误:localStorage 里没有或不对,刷新后重新输入');
+    showToast(err || `口令错误(HTTP ${probe.status}):刷新后重新输入`, true);
     renderPubLocked();
     return;
   }
@@ -1205,8 +1223,11 @@ function renderPubState(j) {
   g('pub-episodes').innerHTML = j.episodes.map((e,i) => {
     const vid = e.video ? '<span style="color:#047857">✓</span>' : '·';
     const aud = e.audio ? '<span style="color:#047857">✓</span>' : '·';
+    // 视频音频都有缺失时:只要还有任一资源就允许勾选(纯音频可发喜马/RSS)
+    const dis = (e.video || e.audio) ? '' : 'disabled';
+    const tip = (!e.video && e.audio) ? ' title="无视频,仅可发喜马拉雅/RSS"' : '';
     return `<tr>
-      <td><input type="checkbox" class="pub-pick" data-i="${i}" ${e.video?'':'disabled'}></td>
+      <td><input type="checkbox" class="pub-pick" data-i="${i}" ${dis}${tip}></td>
       <td><b>EP${String(e.ep).padStart(2,'0')}</b></td>
       <td>${vid}</td><td>${aud}</td>
       <td><input class="pub-title" data-i="${i}" value="${escapeHTML(e.title)}" style="width:95%;padding:4px 6px"></td>
@@ -1251,22 +1272,29 @@ async function pubSetup() {
 }
 
 async function biliStartQR() {
-  const j = await pubApi('/api/pub/bilibili/qr', {});
+  const j = await pubApi('/api/pub/bilibili/qr', {}, 'POST');
   if (!j.ok) return showToast(j.qr_error || j.error || '生成失败', true);
   g('pub-qr-card').style.display='';
   g('pub-qr-img').innerHTML = j.qr_svg || '无法渲染';
+  g('pub-qr-tip').textContent = '打开B站APP → 扫一扫 → 确认登录';
   pollQR(j.key);
 }
 let qrTimer = null;
 async function pollQR(key) {
   clearTimeout(qrTimer);
-  const j = await pubApi('/api/pub/bilibili/qr/poll?key='+key);
+  const j = await pubApi('/api/pub/bilibili/qr/poll?key='+encodeURIComponent(key));
+  if (!j.ok) {  // 网络错误/口令失效/服务异常:停止轮询,给出提示
+    g('pub-qr-tip').textContent = '✗ ' + (j.error || '轮询失败');
+    showToast(j.error || '二维码轮询失败', true);
+    return;
+  }
   if (j.code === 0) {
     g('pub-qr-tip').textContent = '✓ 登录成功' + (j.uname ? ':'+j.uname : '');
     setTimeout(()=>{ g('pub-qr-card').style.display='none'; fetchPubState(); }, 1200);
     return;
   }
   if (j.code === 86038) { g('pub-qr-tip').textContent = '二维码已过期,请重新点击扫码登录'; return; }
+  if (j.error) { g('pub-qr-tip').textContent = '✗ ' + j.error; return; }
   if (j.code === 86090) g('pub-qr-tip').textContent = '已扫码,请在手机上确认…';
   else if (j.code === 86101 || j.code === 180) g('pub-qr-tip').textContent = '等待扫码…';
   qrTimer = setTimeout(()=>pollQR(key), 1500);
@@ -1301,20 +1329,76 @@ async function rssSaveConfig() {
 
 async function rssShipNow() { /* 已由 /podcast/feed.xml 动态提供,保留空实现防旧引用 */ }
 
+const PLATFORM_NEED = {bilibili:'video', ximalaya:'audio', rss:'audio'};
+let pubJobTimer = null;
+
 async function pubSubmitSelected() {
   const picks = [...document.querySelectorAll('.pub-pick:checked')].map(x=>+x.dataset.i);
   if (!picks.length) return showToast('先勾选要发布的集', true);
   const platforms = ['bilibili','ximalaya','rss'].filter(p => g('pf-'+p).checked);
   if (!platforms.length) return showToast('至少勾选一个平台', true);
-  const items = picks.map(i => ({
+
+  // 按所选平台过滤缺资源的集,并明确告知
+  const skipped = [];
+  const usable = [];
+  for (const i of picks) {
+    const e = pubEps[i];
+    const okPlats = platforms.filter(p => e[PLATFORM_NEED[p]]);
+    if (okPlats.length) usable.push({i, plats: okPlats});
+    else skipped.push(`EP${String(e.ep).padStart(2,'0')}`);
+  }
+  if (skipped.length)
+    showToast(`跳过缺资源集: ${skipped.join(' ')}`, true);
+  if (!usable.length) return showToast('勾选的集都不满足所选平台的资源要求', true);
+
+  // 只对可用子集取每集支持的平台交集——直接提交全平台,由后端逐平台校验
+  const items = usable.map(({i}) => ({
     ep: pubEps[i].ep,
     title: document.querySelector(`.pub-title[data-i="${i}"]`).value.trim(),
     tid: +g('pub-tid').value || undefined,
   }));
-  if (!confirm(`将发布 ${items.length} 集到 ${platforms.join('/')},确认?`)) return;
-  const j = await pubApi('/api/pub/jobs', {items, platforms}, 'POST');
-  showToast(j.ok ? '发布任务已启动' : ('失败:'+j.error), !j.ok);
-  setTimeout(fetchPubState, 1000);
+  const albumId = +g('pub-xml-album').value || 0;
+  let note = `将发布 ${items.length} 集到 ${platforms.join('/')}`;
+  if (albumId > 0) note += `(喜马专辑 ${albumId})`;
+  else if (platforms.includes('ximalaya'))
+    note += '(⚠ 未填喜马专辑ID,该平台将失败)';
+  note += ',确认?';
+  if (!confirm(note)) return;
+  const body = {items, platforms};
+  if (albumId > 0) body.xmly_album_id = albumId;
+  const j = await pubApi('/api/pub/jobs', body, 'POST');
+  if (!j.ok) return showToast('失败:' + (j.error || '未知错误'), true);
+  showToast('发布任务已启动');
+  pollPubJob(j.job_id);
+}
+
+/* 当前任务进度轮询:直到 done/failed */
+function pollPubJob(id) {
+  clearTimeout(pubJobTimer);
+  const box = g('pub-cur-job');
+  box.style.display = '';
+  box.innerHTML = `<b>任务 ${id}</b> · 进行中…`;
+  const tick = async () => {
+    const j = await pubApi('/api/pub/jobs/'+id);
+    if (!j.ok) { box.innerHTML = `<b>任务 ${id}</b> · <span style="color:#b91c1c">状态查询失败:${j.error||''}</span>`; return; }
+    const job = j.job;
+    const bad = (job.items||[]).reduce((n,it)=> n + Object.values(it.results||{})
+      .filter(r=>r && r.ok===false).length, 0);
+    if (job.status === 'done' || job.status === 'failed') {
+      const color = job.status==='done' ? '#047857' : '#b91c1c';
+      const label = job.status==='done'
+        ? '完成 ✓'
+        : `失败 ✗${bad ? `(${bad} 个子任务)` : ''}`;
+      box.innerHTML = `<b>任务 ${id}</b> · <span style="color:${color};font-weight:600">${label}</span>`
+        + `${job.error?` <span class="hint">${escapeHTML(job.error)}</span>`:''}`
+        + ` <button class="btn" onclick="pubJobLog('${id}')">日志</button>`;
+      fetchPubState();
+      return;
+    }
+    box.innerHTML = `<b>任务 ${id}</b> · 进行中…${bad?` (${bad} 个子项已失败)`:''}`;
+    pubJobTimer = setTimeout(tick, 2000);
+  };
+  tick();
 }
 
 async function pubJobLog(id) {

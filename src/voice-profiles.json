@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "profiles": {
+    "tech_explainer_calm": {
+      "status": "approved",
+      "voice": "doubao-温柔桃子（升级版）",
+      "voices": {},
+      "language": "zh-CN",
+      "tone": ["gentle", "clear", "knowledgeable"],
+      "pace": 1.0,
+      "energy": "medium_low",
+      "suitable_for": ["tech_explainer", "documentary", "knowledge"],
+      "avoid_for": ["epic_trailer", "breaking_news"],
+      "approved_at": "2026-08-27",
+      "approved_by": "人工试听",
+      "approved_sample": "GLM-5.3-Flash 技术讲解成片"
+    }
+  }
+}
