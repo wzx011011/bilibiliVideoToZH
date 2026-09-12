@@ -1,0 +1,67 @@
+{
+ "title": "大明演义 15 · 万历三大征（上）：跨过鸭绿江",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义15-万历三大征上.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "宁夏惊变",
+   "narration": "1592年三月，宁夏出大事了：退休副总兵哱拜勾结儿子承恩和河套蒙古，据城反叛，西北震动。朝廷调集大军围城，几个月啃不动。九月，李如松赶到，挖开黄河大堤水淹宁夏城，城墙泡塌，叛军崩溃，哱拜自缢。万历三大征的第一征，是靠水打赢的。",
+   "tts_narration": "1592年三月，宁夏出大事了：退休副总兵波拜勾结儿子承恩和河套蒙古，据城反叛，西北震动。朝廷调集大军围城，几个月啃不动。九月，李如松赶到，挖开黄河大堤水淹宁夏城，城墙泡塌，叛军崩溃，波拜自缢。万历三大征的第一征，是靠水打赢的。",
+   "broll": [
+    {"prompt": "Rebel garrison raising banners atop a walled frontier fortress city at dusk, mutiny flags, ominous revolt", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Imperial army camps ringing a walled city on a flood plain by a great river, tens of thousands of tents, siege panorama", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Breach in a flooded city wall with river water pouring through, a young general in bright armor directing from high ground at the center", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·李如松"]}],
+   "bg": "flooded walled city under storm sky with broken dykes, torrent slate wash"},
+  {"kind": "s2", "title": "海对岸的野心",
+   "narration": "同一年，海对岸也出事了。丰臣秀吉刚统一日本，野心爆棚，放话要借道朝鲜，打到北京去。1592年四月，十四万日军登陆釜山。朝鲜承平两百年，兵不识将，二十天丢了汉城，国王一路逃到鸭绿江边的义州，向大明紧急求援。万历的决定很干脆：出兵——倭寇要是站稳朝鲜，下一个遭殃的就是辽东。",
+   "broll": [
+    {"prompt": "An ambitious Japanese warlord in ornate lacquered armor standing at the center on a cliff overlooking his fleet, grand ambition", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·丰臣秀吉"]},
+    {"prompt": "Massive invasion fleet landing on korean beaches, thousands of soldiers wading ashore with banners, overwhelming force", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A king's fleeing procession with ox carts on a snowy road toward a frozen river border, desperate exile", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "invasion fleet crossing a strait at dawn, hundreds of sails, ominous mass wash"},
+  {"kind": "s3", "title": "平壤大捷",
+   "narration": "第一支援朝军轻敌冒进，在平壤吃了败仗。1593年正月，李如松带着四万东征军再扑平壤：大炮轰城，士兵背草填壕，一天之内三面登城，斩首一千六百多级，日军守将弃城北逃。明军乘势收复开城，兵锋直指汉城。这一仗打出了明军的威风，也是万历朝对外作战最高光的一天。",
+   "broll": [
+    {"prompt": "Ming cavalry column marching through snow toward korea, banners crossing a frozen river, resolute advance", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ming soldiers with cannon and scaling ladders storming a fortress wall under dawn fire, epic assault", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ming banners planted on a captured fortress wall, defeated enemies fleeing through the gates, victory scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "fortress walls under cannon fire at dawn, banners on snow, triumphant red-gold wash"},
+  {"kind": "s4", "title": "碧蹄馆与和谈骗局",
+   "narration": "半个月后，李如松带轻骑侦察汉城，在碧蹄馆撞上日军主力，血战突围，双方都损失不小。明军后勤跟不上，粮仓又被烧，只好转入谈判。谁知这场和谈从头骗到尾：明朝使者谎报日本乞降，日本使团伪造降表，万历糊里糊涂册封秀吉为日本国王。宣读国书那天，秀吉当场翻脸，把册封书摔在地上——打，接着打！",
+   "broll": [
+    {"prompt": "Cavalry melee in a muddy village field at dusk, surrounded riders cutting through a ring of foot soldiers, desperate battle", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Envoy boats meeting between two fleets at sea, secret documents exchanged under truce flags, deception at dusk", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An angry warlord in ornate armor hurling an imperial patent scroll to the floor of a golden audience hall, broken ceremony", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "snowy skirmish field at dusk with scattered banners, muddied crimson wash"},
+  {"kind": "s5", "title": "战火重燃",
+   "narration": "1597年，十四万日军再度登陆，朝鲜之役进入下半场。这回明军有了准备，老将麻贵稳住汉城防线，双方在朝鲜南部反复拉锯。最提气的一仗在海上：朝鲜名将李舜臣带着被打散的残余战船，在鸣梁海峡以少胜多，硬生生堵住了日军水路。陆上僵持，海上死顶，战争拖进了第三年。",
+   "broll": [
+    {"prompt": "Japanese troops landing again on korean coast for a second campaign, fresh banners, war fatigue mood", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A tiny fleet of korean turtle-backed warships charging a swarm of enemy ships in a narrow strait, heroic last stand", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ming field army entrenching before fortresses in korean hills, stalemate warfare, camps and watchtowers", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "narrow strait with a handful of warships against many, defiant teal wash"},
+  {"kind": "s6", "title": "露梁海战",
+   "narration": "1598年八月，丰臣秀吉病死，遗令撤军。十一月，日军残部从海上撤退，明朝水师提督陈璘与老将邓子龙，会同李舜臣，在露梁海面拦住去路。火攻夜战，日舰烧沉大半。七十岁的邓子龙身先士卒战死，李舜臣中弹阵亡，两位将军都没能看到胜利的捷报。此战之后，日本两百年不敢再窥大陆。",
+   "tts_narration": "1598年八月，丰臣秀吉病死，遗令撤军。十一月，日军残部从海上撤退，明朝水师提督陈林与老将邓子龙，会同李舜臣，在露梁海面拦住去路。火攻夜战，日舰烧沉大半。七十岁的邓子龙身先士卒战死，李舜臣中弹阵亡，两位将军都没能看到胜利的捷报。此战之后，日本两百年不敢再窥大陆。",
+   "broll": [
+    {"prompt": "Night naval battle on blazing water, fire arrows streaking into ships, epic sea of flames", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two elderly admirals in different armors directing fire from flagship decks amid a burning fleet, one in chinese ming armor at the left one in korean armor at the right", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·邓子龙", "右·李舜臣"]},
+    {"prompt": "Retreating enemy ships fleeing into darkness, shattered masts and smoke, sea after the storm", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "night strait on fire with burning fleets, tragic crimson-black wash"},
+  {"kind": "s7", "title": "惨胜的账单",
+   "narration": "七年抗倭，账单摊开吓人：军费累计上千万两，川浙辽东的精锐轮番填进去，伤亡数以万计。三大征打完，张居正攒下的家底见了底。有人说万历三大征全胜，没错——可帝国的钱包也空了。更可惜的是辽东：最能打的那批边军，大半长眠在了朝鲜战场上，东北的防务，从此一年比一年薄。",
+   "broll": [
+    {"prompt": "Endless supply carts and troop columns stretching down a long road to war, strain of empire", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Treasury vaults nearly empty with a few remaining silver ingots, account books piling up, exhaustion", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Sparse border garrison on the northeastern frontier at dusk, thin defenses, vulnerable horizon", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "empty treasury vaults with drifting account pages, drained grey-gold wash"},
+  {"kind": "s8", "title": "渔翁在长大",
+   "narration": "而在辽东的东北角，一支力量正趁着帝国无暇北顾悄悄长大：努尔哈赤统一建州女真，当年还主动请缨要带兵援朝，被朝廷婉拒。等到大明回过神来，隔壁已经站起了一个对手。三大征的最后一征在哪儿？下集：播州之役，与帝国的裂缝。你觉得三大征值不值？评论区聊聊。",
+   "broll": [
+    {"prompt": "Weary returning troops entering city gates to a quiet welcome, bittersweet homecoming at dusk", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A determined frontier lord in armor at the center reviewing tribal warriors in a northern forest valley, rising power", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·努尔哈赤"]},
+    {"prompt": "A grand map of the empire with a dark shadow growing in its northeast corner, omen of coming storm", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "northern forest valley at dawn with gathered warriors, rising cold-teal wash"}
+ ]
+}

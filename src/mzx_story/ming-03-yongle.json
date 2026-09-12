@@ -1,0 +1,219 @@
+{
+ "title": "大明演义 03 · 朱棣：抢来的皇位坐得稳吗",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义03-朱棣永乐.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, early Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {
+   "kind": "s1",
+   "title": "骂名",
+   "narration": "上集结尾，朱棣赢了靖难，坐上了皇位。可这把龙椅是从侄子手里抢的——怎么让天下人服气，成了他的第一道难题。这一集，看朱棣怎么用四件大事，把骂名洗成了功业。",
+   "tts_narration": "上集结尾，朱棣赢了静难，坐上了皇位。可这把龙椅是从侄子手里抢的——怎么让天下人服气，成了他的第一道难题。这一集，看朱棣怎么用四件大事，把骂名洗成了功业。",
+   "bg": "dark throne hall with faint candle glow, long shadows of pillars",
+   "broll": [
+    {
+     "prompt": "A victorious general seated on a captured throne, uneasy expression, officials whispering in shadows",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Court officials whispering and pointing, murmuring crowds in palace corridors",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Grand montage mood: ancient books, sailing ships, a rising palace and northern campaign banners",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s2",
+   "title": "正名",
+   "narration": "他先搞舆论：不承认建文年号，把那四年改回洪武三十五年接着数；重修《太祖实录》，把自己写成马皇后嫡子。对建文旧臣则举起了屠刀——方孝孺拒绝起草诏书，被诛十族，株连八百多人。",
+   "broll": [
+    {
+     "prompt": "Imperial historians rewriting old records by candlelight, piles of scrolls being replaced",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A scholar-official in white refusing to bow before the emperor, guards closing in, tragic tension",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Snow falling on an empty execution ground, mourners hiding incense in the distance",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "scattered imperial documents and a brush on dark table, cold ink wash"
+  },
+  {
+   "kind": "s3",
+   "title": "大典",
+   "narration": "刀子用完，开始立碑。1406年，朱棣下令编修《永乐大典》，解缙、姚广孝主持，前后近三千人参与，成书两万两千多卷——中国历史上最大的百科全书，没有之一。",
+   "tts_narration": "刀子用完，开始立碑。1406年，朱棣下令编修《永乐大典》，谢缙、姚广孝主持，前后近三千人参与，成书两万两千多卷——中国历史上最大的百科全书，没有之一。",
+   "bg": "stacks of bound scrolls in a dim library hall, warm paper tones",
+   "broll": [
+    {
+     "prompt": "A grand library hall with hundreds of scholars unrolling and cataloguing scrolls",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Giant bound volumes stacked from floor to ceiling, golden paper tones",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The emperor inspecting the completed encyclopedia with pride, scholars bowing",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s4",
+   "title": "宝船",
+   "narration": "1405年，郑和率领两百多艘宝船、两万七千人的船队首下西洋，最远抵达非洲东海岸。此后二十年间六下西洋，宣扬国威、打通海路——顺便，也有人说，是去海外寻找建文帝的下落。",
+   "broll": [
+    {
+     "prompt": "Massive dry docks building nine-masted treasure ships, thousands of workers at dawn",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The treasure fleet sailing through a southern strait, foreign ships and coastline passing",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An exotic harbor reception: a tribute giraffe led ashore, foreign envoys kneeling, ming banners",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "vast sea horizon with faint treasure-ship silhouettes in mist, pale blue-gold wash"
+  },
+  {
+   "kind": "s5",
+   "title": "迁都",
+   "narration": "1421年，朱棣干了他一生最大的工程：迁都北京。紫禁城营建十三年，动用工匠民夫上百万。从此天子守国门，皇帝亲自坐镇北方边防线——这份底气，不是每个皇帝都有的。",
+   "broll": [
+    {
+     "prompt": "Grand canal barges carrying giant timber north through river locks, misty morning",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A forbidden city rising: vermilion walls, golden roofs, scaffolding and workers everywhere",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The emperor on a city gate reviewing his new capital at dawn, epic skyline",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "rising silhouette of a grand palace under construction scaffolding at dawn, dusty gold light"
+  },
+  {
+   "kind": "s6",
+   "title": "北征",
+   "narration": "对蒙古人，他更是亲自上。1410到1424年间五次亲征漠北，把鞑靼、瓦剌打回草原深处，又在东北设奴儿干都司。大明的版图与威望，在这一刻达到了顶点。",
+   "broll": [
+    {
+     "prompt": "Imperial banners crossing the Gobi at dawn, an endless column of cavalry and supply carts",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Night camp of the imperial army on the open steppe, campfires and sentries under stars",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Mongol riders retreating into distant mountains, dust clouds on the horizon",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "endless steppe under heavy clouds, faint cavalry dust on the horizon, cold steel-blue wash"
+  },
+  {
+   "kind": "s7",
+   "title": "代价",
+   "narration": "但每一件功业都是烧钱巨兽：下西洋、修北京、连年北征，国库日渐吃紧，民力疲惫，山东还爆发了唐赛儿起义。1424年，六十五岁的朱棣在第五次北征回师途中，病逝于榆木川。",
+   "broll": [
+    {
+     "prompt": "Empty treasury vaults with scattered ledgers, dim cold light",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Peasant women and children fleeing a burning village at dusk, rebellion and chaos",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An aging emperor coughing inside his campaign tent, maps and a dying candle, wind",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "weary camp of imperial caravan tents in dusk wind, dim lantern glow, tired amber wash"
+  },
+  {
+   "kind": "s8",
+   "title": "落幕",
+   "narration": "怎么评价朱棣？修大典、下西洋、迁都、五征漠北，功业远迈汉唐；可诛十族、抢皇位的骂名，也永远钉在了身上。他留下一个繁荣却疲惫的帝国，交给了腿脚不便的胖儿子。你觉得他是明君还是暴君？评论区聊聊。",
+   "bg": "split light over a palace roofline: dawn gold on one side, storm blue on the other",
+   "broll": [
+    {
+     "prompt": "A grand funeral procession crossing the steppe, white banners and carriages in wind",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A plump prince receiving news in his palace hall, mixed relief and worry on his face",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A throne hall split in mood: golden achievements on one side, dark shadows gathering on the other",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  }
+ ],
+ "broll_backend": "icu"
+}

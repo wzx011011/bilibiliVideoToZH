@@ -1,0 +1,67 @@
+{
+ "title": "大明演义 20 · 己巳之变：皇太极兵临北京",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义20-己巳之变.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "长城被掏了个洞",
+   "narration": "1629年十月，皇太极率十万大军做了一个大胆到疯狂的决定：不打山海关，绕道蒙古喀拉沁部，从大安口、龙井关破长城而入。关宁防线修得再硬，架不住人家不从这儿走——蓟镇防线年久失修，守军一触即溃，长城防线被硬生生掏开了一个大洞。",
+   "tts_narration": "1629年十月，皇太极率十万大军做了一个大胆到疯狂的决定：不打山海关，绕道蒙古喀拉沁部，从大安口、龙井关破长城而入。关宁防线修得再硬，架不住人家不从这儿走——冀镇防线年久失修，守军一触即溃，长城防线被硬生生掏开了一个大洞。",
+   "broll": [
+    {"prompt": "Mongol and manchu cavalry columns winding through a mountain pass at dawn, vast invading horde", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Crumbled great wall section with invaders pouring through a breached gate, broken ramparts", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Burning beacon towers along a mountain ridge at night, warning fires in a chain, alarm spreading", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "mountain pass with endless riders under dawn mist, ominous grey-red wash"},
+  {"kind": "s2", "title": "京师震动",
+   "narration": "遵化陷落，巡抚自尽，后金军烧杀抢掠一路向东，前锋直逼通州，离北京只剩几十里。消息进京，满朝炸锅：说好的五年平辽，敌人怎么打到首都门口了？崇祯下诏天下勤王，山西、宣大各路兵马陆续北上，可大多是战斗力存疑的杂牌，进城抢粮的比打仗的还积极。",
+   "broll": [
+    {"prompt": "Refugees flooding a road toward a distant capital with smoke rising behind, panicked exodus", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Emergency court assembly with officials shouting and gesturing at a map, chaos in the capital", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ragged reinforcement troops looting a village on the march, disorderly levy", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "capital skyline under smoke on the horizon, alarm ochre-grey wash"},
+  {"kind": "s3", "title": "驰援",
+   "narration": "袁崇焕得到消息，做了个争议至今的选择：不堵关口，亲率九千关宁铁骑轻装入关，直追后金主力。赵率教先行驰援，全军覆没在半路。皇太极绕过蓟州防线直扑通州，袁崇焕索性抢在他前头赶回北京城外——他要背城而战。可这个举动，在京城眼里怎么看怎么像带兵逼宫。",
+   "tts_narration": "袁崇焕得到消息，做了个争议至今的选择：不堵关口，亲率九千关宁铁骑轻装入关，直追后金主力。赵率教先行驰援，全军覆没在半路。皇太极绕过蓟州防线直扑通州，袁崇焕索性抢在他前头赶回北京城外——他要背城而战。可这个举动，在京城眼里怎么看怎么像带兵逼宫。",
+   "broll": [
+    {"prompt": "Elite border cavalry in black armor galloping through a mountain pass, banners streaming, desperate ride east", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·袁崇焕"]},
+    {"prompt": "A small surrounded relief column making a doomed last stand at a mountain fort, heroic sacrifice", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Cavalry arriving under city walls at dusk as defenders peer down with suspicious lanterns, uneasy homecoming", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "cavalry column racing through pass at dusk, urgent indigo wash"},
+  {"kind": "s4", "title": "广渠门血战",
+   "narration": "十一月末，广渠门外，九千关宁军对上数倍的后金主力。袁崇焕披甲上阵，身中数箭仍在前线督战，关宁军硬是把后金军顶了回去。城头上的京营将士看得目瞪口呆——他们多年没见过这样的恶仗。皇太极攻城不下，在城外扎营休整，北京之围暂时缓解。",
+   "broll": [
+    {"prompt": "Fierce cavalry melee outside a great city gate, outnumbered defenders holding formation in bitter cold, epic battle", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A general in armor directing the fight with arrows stuck in his cloak amid the melee, personal valor", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "City wall defenders watching the battle below in awe, torch-lit battlements at night", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "city gate battlefield in winter dusk, bloody crimson wash"},
+  {"kind": "s5", "title": "平台下狱",
+   "narration": "十二月初一，崇祯以议军饷为名召袁崇焕进城。平台之上，没有寒暄，皇帝当面数了三桩罪：擅杀毛文龙、放敌人兵临城下、擅自与后金议和。不等辩解，锦衣卫一拥而上，当场扒掉他的官服下狱。消息传出，关宁军全营大哭，副帅祖大寿带着部队掉头就往东跑——京城的防线，自己塌了一角。",
+   "broll": [
+    {"prompt": "A cold emperor pointing accusations from his seat at the left while guards seize a shocked general at the right in an audience hall, betrayal moment", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·朱由检", "右·袁崇焕"]},
+    {"prompt": "Guards stripping an official robe from a general in a stone corridor, disgrace by force", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Heartbroken frontier troops streaming away from the capital in winter dusk, mutinous retreat", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "audience hall turning cold with guards moving in, betrayal slate wash"},
+  {"kind": "s6", "title": "凌迟",
+   "narration": "狱中关了八个月。传说皇太极故意让俘虏的太监偷听到一句假情报：袁崇焕与后金有密约。真假难辨，但崇祯要的是个说法。1630年八月，袁崇焕被押赴西市凌迟处死，北京百姓不明真相，认定他引敌入城，争抢分食其肉。一代守边名臣，死得比敌人杀的还惨。家产抄没，兄弟妻子流放三千里。",
+   "broll": [
+    {"prompt": "Shadows whispering into a prison corridor with listening ears at a wall, planted treachery", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A crowded execution ground in the capital under grey sky, grim procession entering, tragic climax", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A lone woman and child being escorted into exile on a long road, fallen family, desolate scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "grey execution ground with whispering crowds, tragic charcoal wash"},
+  {"kind": "s7", "title": "老帅救火",
+   "narration": "京城之围未解，崇祯只好再请七十六岁的孙承宗出山。老帅坐镇通州，调度马世龙等将收复永平、遵化四城，总算把后金军赶出了长城。可账算不回来了：勤王兵马在城下折损殆尽，袁崇焕一死，辽东将领人人自危——皇帝连袁崇焕都剐了，谁还敢给他卖命？",
+   "broll": [
+    {"prompt": "A white-haired veteran general in old armor at the center accepting command again at a field headquarters, last resort", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·孙承宗"]},
+    {"prompt": "Counterattack troops storming a recaptured walled town under winter sky, determined recovery", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Frontier officers exchanging fearful glances around a silent campfire, broken trust", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "winter field headquarters with veteran silhouette, cold steel wash"},
+  {"kind": "s8", "title": "自毁长城",
+   "narration": "己巳之变，后金军在北京城下晃悠了半年，抢够了才走。五年平辽的豪言还挂在墙上，先平掉的是自己的柱石。此后大明边将的原则变成了四个字：不敢担当——守土有责，担责送命。北边的伤口还没包扎，南边腹地已经烧起来了：流民成了流寇，闯字大旗正在路上。下集：流寇席卷，闯王来了不纳粮。袁崇焕该不该死？评论区聊聊。",
+   "broll": [
+    {"prompt": "Looted countryside with smoke columns receding into the distance after an invasion, scarred land", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An empty great wall watchtower at dusk with no soldiers, abandoned vigil", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Long column of desperate refugees on a yellow-earth road under a burning sky, gathering storm of the displaced", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "scarred frontier landscape at dusk with empty towers, desolate grey-gold wash"}
+ ]
+}

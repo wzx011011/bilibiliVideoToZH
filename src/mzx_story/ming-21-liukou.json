@@ -1,0 +1,68 @@
+{
+ "title": "大明演义 21 · 流寇席卷：闯王来了不纳粮",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义21-流寇席卷.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "陕西大旱",
+   "narration": "崇祯元年起，陕北大旱连着旱，赤地千里，草木吃尽就人相食。更绝的是，官府的税一文不减，反而催得更急——辽东的军饷等着呢。活不下去的人只剩一条路：反。王二、王嘉印先后拉起队伍，官逼民反四个字，在黄土高原上应验了。流民，成了造反军取之不尽的兵源。",
+   "broll": [
+    {"prompt": "Cracked yellow-earth plain under a pitiless sun with withered crops, famine land", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Tax collectors seizing grain from starving villagers at a mud-wall village, harsh exaction", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Long column of desperate peasants with bundles and staves on a dusty loess road, rising tide of the hungry", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "yellow-earth plateau under harsh sun with cracked earth, famine ochre wash"},
+  {"kind": "s2", "title": "裁掉一个驿卒",
+   "narration": "1629年，给事中刘茂算了笔账：全国驿站一年烧几十万两，裁掉三成，能省下不少军费。崇祯准了。银川驿站里一个叫李自成的驿卒就此失业——这人早年欠债坐过牢，欠着举人的高利贷，丢了差事走投无路，索性杀了债主投了起义军，辗转投到闯王高迎祥帐下，人称闯将。裁驿站省下的那点钱，最后养出了埋葬帝国的人。",
+   "tts_narration": "1629年，给事中刘茂算了笔账：全国驿站一年烧几十万两，裁掉三成，能省下不少军费。崇祯准了。银川驿站里一个叫李自成的驿卒就此失业——这人早年欠债坐过牢，欠着举人的高利贷，丢了差事走投无路，索性杀了债主投了起义军，辗转投到闯王高迎祥帐下，人称闯将。裁驿站省下的那点钱，最后养出了埋葬帝国的人。",
+   "broll": [
+    {"prompt": "A weathered young courier at the center standing before an abandoned post station with a dismantled horse ledger, lost livelihood", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·李自成"]},
+    {"prompt": "An accountant official marking long lists of post stations for closure by candlelight, cold arithmetic", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A young man walking away from a ruined station into wilderness at dusk, point of no return", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "abandoned post station on a loess road at dusk, forsaken grey-gold wash"},
+  {"kind": "s3", "title": "剿不灭的流寇",
+   "narration": "朝廷不是没剿。三边总督洪承畴能打，可流寇的战术就八个字：打得赢就打，打不赢就跑。官军有固定防区，流寇没有——从陕西跑进山西，从山西流进河南、湖广，越流越多，号称十三家、七十二营。杨鹤主张招安，钱花了，人抚了，转头又反。剿抚摇摆，越剿越多。",
+   "broll": [
+    {"prompt": "Government troops chasing dust clouds on a horizon that has already vanished, futile pursuit", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rider columns flowing like water across provinces on a grand map perspective, spreading insurgency", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rebel leaders raising banners together at a mountain camp, confederacy of the desperate", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "loess ravines with dust columns and scattered banners, elusive dust wash"},
+  {"kind": "s4", "title": "车箱峡绝境反转",
+   "narration": "1634年，总督陈奇瑜把李自成几万人围进汉中车箱峡——峡长八十里，两头一堵，进退不得，山里连下七天大雨，弓弦都泡烂了。眼看全歼，李自成使出诈降：送钱给陈奇瑜，请求回家种地。陈奇瑜信了，派兵押送出峡。一出峡谷，义军把押送官兵反手团灭，掉头连破数县。朝野哗然，招安政策彻底破产。",
+   "tts_narration": "1634年，总督陈奇瑜把李自成几万人围进汉中车箱峡——峡长八十里，两头一堵，进退不得，山里连下七天大雨，弓弦都泡烂了。眼看全歼，李自成使出诈降：送钱给陈奇瑜，请求回家种地。陈奇瑜信了，派兵押送出峡。一出峡谷，义军把押送官兵反手团灭，掉头连破数县。朝野哗然，招安政策彻底破产。",
+   "broll": [
+    {"prompt": "Trapped rebel columns in a narrow rain-soaked gorge with swollen streams, cornered despair", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rebel envoys kneeling with chests of silver before complacent officials under a truce banner, feigned surrender", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rebels overwhelming their escort on a gorge road the moment the valley opens, sudden reversal", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "rainy gorge with trapped columns turning to ambush, storm-green wash"},
+  {"kind": "s5", "title": "凤阳焚陵",
+   "narration": "1635年正月，十三家首领在形阳开会，李自成提出分兵定向、四路攻掠，众头领叫好。张献忠领一路，一路杀到凤阳——朱元璋的老家、大明龙兴之地，一把火烧了皇陵享殿，刨了龙脉的祖坟。消息传到北京，崇祯素服哭庙，天下震动。大明的祖坟，被自己治下的流民刨了。",
+   "tts_narration": "1635年正月，十三家首领在形阳开会，李自成提出分兵定向、四路攻掠，众头领叫好。张献忠领一路，一路杀到凤阳——朱元璋的老家、大明龙兴之地，一把火烧了皇陵享殿，刨了龙脉的祖坟。消息传到北京，崇祯素服哭庙，天下震动。大明的祖坟，被自己治下的流民刨了。",
+   "broll": [
+    {"prompt": "Rebel chieftains gathered around a war map in a great hall striking agreement, council of war", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Imperial mausoleum complexes burning with black smoke against winter sky, sacrilege and shock", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An emperor in plain white mourning robes before an ancestral altar, grief and humiliation", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "burning imperial tombs under winter sky, sacrilege ash-red wash"},
+  {"kind": "s6", "title": "闯王换人",
+   "narration": "1636年，老闯王高迎祥在黑水峪被孙传庭俘虏，押解进京处死。部众推李自成继任闯王——从此闯字大旗姓李。对面的张献忠也不消停，被熊文灿招安后半年复叛，在川楚之间来回拉扯。1638年，李自成在潼关撞上洪承畴、孙传庭的精锐，几乎全军覆没，带着十八骑逃进商洛山。流寇之火，眼看要熄。",
+   "broll": [
+    {"prompt": "A captured leader being escorted down a mountain by government troops, fallen king of rebels", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A new rebel chief raising the chuang banner before kneeling ranks in a mountain valley, succession", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Eighteen weary riders slipping into densely wooded mountains at dusk, survivors of a rout", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "mountain valley with a raised banner and kneeling ranks, firebrand crimson wash"},
+  {"kind": "s7", "title": "两线抽血",
+   "narration": "就在中原眼看要平定时，东北又出事了：1638年清军再次入塞，一路打到济南，督师卢象升战死在巨鹿。崇祯慌忙把最能打的洪承畴、孙传庭调去辽东布防——中原剿寇的班子，一夜之间被抽空。李自成在商洛山里喘过气来，张献忠在谷城重新反了。按下葫芦浮起瓢，两线作战的绞索，越收越紧。",
+   "broll": [
+    {"prompt": "A valiant commander falling in battle amid frozen reeds, last stand of a loyalist", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·卢象升"]},
+    {"prompt": "Order of transfer scrolls sending veteran generals north with long marching columns, thinning front", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rebel campfires rekindling across a dark valley ridge, embers flaring anew", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "frozen battlefield reeds at dusk with distant fires, divided steel-ash wash"},
+  {"kind": "s8", "title": "福禄酒",
+   "narration": "1641年，蛰伏两年的李自成杀出商洛山，一口气攻破洛阳，把万历最宠的儿子福王朱常洵宰了，和鹿肉炖成一锅，号称福禄酒；几乎同时，张献忠奇袭襄阳，杀了襄王。一个月之内，两位藩王人头落地。朝廷十年的围剿，剿出了两个灭国的对手。下集：崇祯的双线十年，松山、襄阳与瘟疫。你猜崇祯最后后悔裁驿站吗？评论区聊聊。",
+   "broll": [
+    {"prompt": "A wealthy prince's mansion burning in a captured city, mob in the streets, reckoning of privilege", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two rebel banners planted on two fallen city walls far apart on a grand map, dual rising powers", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A weary emperor alone at his desk with two burning reports, twilight of control", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "captured city in flames with falling princes' banners, reckoning ember wash"}
+ ]
+}

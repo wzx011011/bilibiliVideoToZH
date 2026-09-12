@@ -1,0 +1,66 @@
+{
+ "title": "大明演义 13 · 张居正：帝国最后的裱糊匠",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义13-张居正.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "一天扳倒高拱",
+   "narration": "1572年六月，隆庆驾崩才二十多天。高拱在内阁叹了句：十岁的太子，怎么治天下？掌印太监冯保添油加醋报给李太后：高阁老想另立藩王！太后、冯保、张居正，铁三角连夜定局——一纸诏书，高拱即日卷铺盖回乡，不许停留。从如日中天到一败涂地，只用了一天。",
+   "broll": [
+    {"prompt": "A blunt senior minister in dark crimson robes at the center sighing over documents in cabinet, unaware of a listening eunuch servant in shadow at the right", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·高拱"]},
+    {"prompt": "A powerful eunuch in dark embroidered robe whispering at the left to an alarmed empress dowager in fine robes seated at the right in lamplight, poison words flowing", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·冯保", "右·李贵妃"]},
+    {"prompt": "A fallen minister boarding a mule cart at dawn gates, escorting guards cold, overnight ruin", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "dawn gate with a departing mule cart, betrayal cold-grey wash"},
+  {"kind": "s2", "title": "摄政者",
+   "narration": "张居正登上首辅之位，外靠李太后信任，内靠冯保呼应，小皇帝恭恭敬敬叫他张先生。接下来十年，他实际主宰着这个帝国。有人问他图什么，他只回了八个字：知我罪我，在所不计。褒也好骂也罢，反正这个摊子，我来收拾。",
+   "broll": [
+    {"prompt": "A tall composed minister in dark blue robes at the left ascending to the first minister's seat, a young boy emperor in imperial yellow at the right bowing respectfully to his tutor", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·张居正", "右·万历"]},
+    {"prompt": "The regent standing over a giant map of the empire at night, lantern glow, solitary burden", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "His resolute profile against a window of dawn light, quiet vow in the eyes, portrait scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "night study with empire map under lantern, resolute indigo wash"},
+  {"kind": "s3", "title": "考成法",
+   "narration": "第一刀砍向官僚系统。1573年考成法：各衙门建台账，六科查六部，内阁查六科，层层盯梢，到期办不完的降职滚蛋。大明朝的官场瞬间提速，号令一出，万里之外朝发夕行。骂他刻薄的人很多，可帝国的齿轮，头一回咬合得这么紧。",
+   "broll": [
+    {"prompt": "Rows of officials anxiously checking ledger books with stamps and deadlines, examination atmosphere", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Lazy officials being dismissed at office gates carrying belongings, ruthless efficiency", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Government couriers riding fast across vast landscape day and night, orders flying, dynamic motion", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "ledger-lined hall with flying couriers beyond windows, brisk steel-blue wash"},
+  {"kind": "s4", "title": "一条鞭法",
+   "narration": "第二刀砍向钱袋子。先清丈全国田亩，把豪强隐匿的地全翻出来；再推行一条鞭法：赋税徭役合并计算，折成银子按亩缴纳，官收官解。地主没法瞒产，小民少受一层盘剥，国库却实打实鼓了起来——太仓存银六百多万两，储备粮可支十年。大明朝二百多年，国力在1580年前后到达顶点。",
+   "broll": [
+    {"prompt": "Surveyors with ropes and measuring poles across vast farmland, hidden fields being counted, epic panorama", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Farmers paying silver tax at an open government counter, transparent scales, fair order", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Overflowing imperial granaries and silver vaults, abundance panorama at golden noon", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "farmland survey panorama at golden noon with grain carts, prosperous wash"},
+  {"kind": "s5", "title": "用人",
+   "narration": "他用人只看一条：能不能干事。戚继光镇守蓟州前线十几年，练车营修敌台，蒙古人不敢南下；李成梁坐镇辽东，打得女真各部服服帖帖；潘季驯治黄河，束水攻沙沿用了几百年。用一人，信一人，终一人——不换、不疑、不掺沙子。这是张居正最被低估的本事。",
+   "tts_narration": "他用人只看一条：能不能干事。戚继光镇守冀州前线十几年，练车营修敌台，蒙古人不敢南下；李成梁坐镇辽东，打得女真各部服服帖帖；潘季驯治黄河，束水攻沙沿用了几百年。用一人，信一人，终一人——不换、不疑、不掺沙子。这是张居正最被低估的本事。",
+   "broll": [
+    {"prompt": "Border fortress with generals reviewing troops and beacon towers, trusted commanders holding the line", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "River engineers directing towering dikes along the yellow river, hydraulic mastery", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "The regent in dark robes at the center handing seals of command to three armored generals in turn, full trust ceremony", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·张居正"]}],
+   "bg": "frontier fortress and river dikes under wide sky, steadfast steel wash"},
+  {"kind": "s6", "title": "夺情风波",
+   "narration": "1577年，张居正父亲去世，按礼制必须回乡守孝二十七个月。可皇帝离不开他，下旨夺情：留任，不必去职。翰林院五名官员联名反对，说你张居正贪恋权位、衣冠禽兽。他的回应是廷杖，一个没饶。他不辩解——回去守孝，改革就得停摆，人亡政息他是知道的。这口气，他硬吞了下去，骂名也照单全收。",
+   "broll": [
+    {"prompt": "A minister in mourning white robes kneeling at the center before the throne as an edict compels him to stay, torn duty", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·张居正"]},
+    {"prompt": "Protesting scholars being seized for punishment in palace courtyard, moral courage against power", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "The regent alone at night holding his father's memorial tablet, tears and resolve mixed, intimate scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "mourning white against throne gold, conflicted slate-gold wash"},
+  {"kind": "s7", "title": "严师的裂缝",
+   "narration": "对学生，他严得过了头。小皇帝背书错一个字都要被当众训斥，太后管教孩子就一句话：让张先生知道了！1580年，十八岁的万历醉酒失德，太后震怒，扬言废帝，逼他下罪己诏。小皇帝跪了半天，心里只剩一个念头：张先生要废我。敬畏，就是从这天起，悄悄变成了怨恨。",
+   "broll": [
+    {"prompt": "A stern tutor in dark blue robes at the left pointing at a scroll before a nervous young emperor in imperial yellow seated at the right in study, oppressive lessons", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·张居正", "右·万历"]},
+    {"prompt": "An empress dowager in fine robes seated at the left, the young emperor in pale robes kneeling at the right before her in the hall, attendants lowering heads, fear of deposition", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·李贵妃", "右·万历"]},
+    {"prompt": "A teenage emperor lying awake staring at canopy, dark resentment growing, brooding night scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "imperial study at night with hanging scrolls, brooding dark-gold wash"},
+  {"kind": "s8", "title": "人亡政息",
+   "narration": "1582年，张居正病逝，皇帝辍朝一天，追谥文忠。然后，清算开始：言官反攻，抄家夺谥，长子自缢，一家饿死十余口。他攒下的家底——满仓的粮、满库的银、听话的边军——帝国吃着红利又走了几十年。可再没有人有他的手腕和狠劲。帝国最后的刹车，松了。下集：万历亲政，与大臣冷战十五年。你觉得张居正算忠臣还是权臣？评论区聊聊。",
+   "broll": [
+    {"prompt": "Grand state funeral procession with white banners through the capital, era ending, epic solemn scene", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Soldiers sealing a disgraced minister's mansion, confiscated chests, family in ruin", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Full granaries and silent border forts standing firm but leaderless, empire running on old momentum, fading dusk", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "dusk over granaries and border forts, afterglow fading grey-gold wash"}
+ ]
+}

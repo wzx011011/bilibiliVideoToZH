@@ -1,0 +1,67 @@
+{
+ "title": "大明演义 12 · 隆庆：闷皇帝干对的两件事",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义12-隆庆开关.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "三十年藩王",
+   "narration": "1567年，嘉靖驾崩，三十岁的裕王朱载坖继位，年号隆庆。这位新皇帝，是大明最没存在感的储君：他爹迷信方术，怕二龙相见，连太子都不肯立，他当了快三十年如履薄冰的见不得天的王爷。继位之后照样闷，朝会上几乎不吭声。但这闷人有天下之主最难得的品质：知道自己不行，就放手让行的人干。",
+   "tts_narration": "1567年，嘉靖驾崩，三十岁的裕王朱载纪继位，年号隆庆。这位新皇帝，是大明最没存在感的储君：他爹迷信方术，怕二龙相见，连太子都不肯立，他当了快三十年如履薄冰的见不得天的王爷。继位之后照样闷，朝会上几乎不吭声。但这闷人有天下之主最难得的品质：知道自己不行，就放手让行的人干。",
+   "broll": [
+    {"prompt": "A cautious adult prince in plain dark robes standing at the center half in shadow of a palace corridor, watching the throne from afar, suppressed years", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·隆庆"]},
+    {"prompt": "A quiet emperor listening to ministers with patient silence, documents stacked, understated presence", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Capable ministers receiving full authority from a nodding emperor, trust handed over like a seal", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "shadowed corridor opening to a bright throne hall, restrained slate wash"},
+  {"kind": "s2", "title": "隆庆开关",
+   "narration": "隆庆元年，第一件大事：解除海禁，开放福建月港为民间海外贸易口岸，史称隆庆开关。这一招釜底抽薪——走私没了暴利空间，倭寇断了兵源财源，作乱二十年的倭患自然消停。更妙的是钱：白银像潮水般涌入，据估算此后几十年全球白银产量的三分之一都流进了大明，东南富得流油。",
+   "broll": [
+    {"prompt": "Bustling open harbor with hundreds of trading junks, merchants weighing silver, customs officials stamping permits", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Former pirates peacefully unloading legal cargo at the port, swords traded for ledgers, redemption scene", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rivers of silver bars flowing into vaults and money houses, prosperous southern trading city panorama", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "sunlit open harbor with trading junks and silver chests, prosperous gold-teal wash"},
+  {"kind": "s3", "title": "俺答封贡",
+   "narration": "北边也用买卖解决。隆庆五年，采纳宣大总督王崇古的建议，与蒙古俺答汗达成和议：封他顺义王，开边境互市，用茶叶布匹换马匹和平，史称俺答封贡。打了几十年的汉蒙边境，从此变成赶集的市场，史书说北部边境安然，百姓耕牧，军费省下大笔。一南一北两件事，不费一兵一卒。闷皇帝只干对了两件事——但这就够了。",
+   "broll": [
+    {"prompt": "Grand border market with Mongol horsemen trading horses for silk and tea under a peace banner, two cultures mingling", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A Mongol khan in furs and silks at the center receiving an imperial seal and title with envoys kneeling, solemn treaty ceremony", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·俺答汗"]},
+    {"prompt": "Frontier towns thriving with caravans and herds, former battlefield turned marketplace, warm peace", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "frontier market at golden hour with horses and silk stalls, harmonious ochre wash"},
+  {"kind": "s4", "title": "内阁暗战",
+   "narration": "皇帝闷着不说话，内阁可炸了锅。首辅之位成了修罗场：徐阶扶高拱上位，又亲手斗走他；高拱忍了几年杀回来，把徐阶旧党连根拔起。文人斗文人，不见刀光，全是诛心。而在这场混战里，有个人不声不响地记着笔记，把每个人的底牌都看在了眼里。",
+   "broll": [
+    {"prompt": "Three powerful ministers in one hall exchanging cold glances over documents, invisible daggers, tense triangle", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "One minister's faction collapsing, allies walking away in rain, political ruin", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A composed young official in plain blue robes at the right corner quietly observing everything, memorizing faces, watchful stillness", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["右·张居正"]}],
+   "bg": "cabinet hall with three shadowed figures and cold window light, scheming indigo wash"},
+  {"kind": "s5", "title": "高拱再起",
+   "narration": "杀回来的高拱当了首辅，是个狠角色：整顿吏治雷厉风行，用殷正茂平定两广，俺答封贡就是他力排众议拍板的。论政务能力，他可能是隆庆朝第一人。但他有个致命毛病：太刚，眼里揉不得沙子，顺我者昌逆我者亡——连宫里的人都得罪了个遍。",
+   "broll": [
+    {"prompt": "A formidable stern first minister in dark crimson robes at the center striding through court with escorts, subordinates bowing stiffly, iron authority", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·高拱"]},
+    {"prompt": "Bold administrative reforms in motion: ledgers burned, corrupt officials dragged out, sweeping force", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Courtiers whispering resentfully behind the great man's back, enemies accumulating in shadow", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "commanding minister silhouette against hall doors, iron red-grey wash"},
+  {"kind": "s6", "title": "张居正其人",
+   "narration": "跟高拱搭班子的次辅张居正，正好相反。湖北江陵人，神童出身：十六岁中举，二十三岁中进士，进裕王府给未来的隆庆皇帝讲了六年书。他看徐阶隐忍翻盘，看严嵩盛极而衰，看高拱刚极易折，悟出一个字：熬。面上跟高拱是老搭档老朋友，底下暗暗较劲——这盘棋，他刚开始下。",
+   "broll": [
+    {"prompt": "A brilliant young scholar at the center studying alone under moonlight, books and quiet ambition, portrait scene", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·张居正"]},
+    {"prompt": "Tutor lecturing a young prince by candlelight, mutual respect, foundation of a future alliance", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two senior ministers toasting as friends at a banquet, a broad-faced stern man in crimson robes at the left and a slender composed man in dark blue robes at the right, one smile hiding calculation, layered mood", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["左·高拱", "右·张居正"]}],
+   "bg": "moonlit study with chess board half-played, patient deep-blue wash"},
+  {"kind": "s7", "title": "幼主临朝",
+   "narration": "1572年五月，隆庆驾崩，在位五年半。十岁的太子朱翊钧继位，改元万历，遗诏命高拱、张居正、高仪三人辅政。主少国疑，太后是二十几岁的李贵妃，司礼监掌印太监冯保跟皇帝从小处得近——十岁的天子加一个斗兽场般的内阁，真正的操盘手会是谁？",
+   "tts_narration": "1572年五月，隆庆驾崩，在位五年半。十岁的太子朱易钧继位，改元万历，遗诏命高拱、张居正、高仪三人辅政。主少国疑，太后是二十几岁的李贵妃，司礼监掌印太监冯保跟皇帝从小处得近——十岁的天子加一个斗兽场般的内阁，真正的操盘手会是谁？",
+   "broll": [
+    {"prompt": "A ten-year-old boy emperor in oversized imperial yellow robes at the center dwarfed by a giant throne, officials kneeling in vast hall, poignant scale", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·万历"]},
+    {"prompt": "Three regents receiving the young emperor's trust, two strong wills sizing each other, unequal burden", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A young empress dowager in plain elegant robes at the center holding her son's hand walking the palace corridor, protective but wary", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·李贵妃"]}],
+   "bg": "vast throne hall with a small figure on the great chair, echoing pale-gold wash"},
+  {"kind": "s8", "title": "山雨欲来",
+   "narration": "高拱如日中天，嘴上没把门的，当众说十岁天子如何亲政，还放话要清理司礼监。他不知道，张居正已经悄悄跟冯保搭上了线，太后那边也递了话——一场不流血的政变正在酝酿。万历元年的大戏马上开锣。下集：张居正，帝国最后的裱糊匠。你觉得隆庆这种放手型老板，算好老板吗？评论区聊聊。",
+   "broll": [
+    {"prompt": "A triumphant broad-faced minister in crimson robes speaking boldly at the center before assembled court, unaware of hidden watchers, hubris moment", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·高拱"]},
+    {"prompt": "A calm second minister in dark blue robes at the left and a powerful eunuch in dark embroidered robe at the right exchanging a quiet knowing look across a lantern-lit courtyard, alliance forming", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·张居正", "右·冯保"]},
+    {"prompt": "Storm clouds gathering over the Forbidden City rooftops at dawn, change coming, cinematic foreboding", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "storm light over palace rooftops at dawn, brewing indigo wash"}
+ ]
+}

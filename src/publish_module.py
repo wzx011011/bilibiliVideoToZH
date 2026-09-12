@@ -324,7 +324,8 @@ def _bili_upload_cover(s: requests.Session, csrf: str, image: bytes) -> str:
     j = r.json()
     if j.get("code") != 0:
         raise RuntimeError(f"封面上传失败: {j.get('message')}")
-    url = ((j.get("data") or {}).get("image_url")) or ""
+    url = (((j.get("data") or {}).get("image_url"))
+           or ((j.get("data") or {}).get("url")) or "")
     if url.startswith("//"):
         url = "https:" + url
     if not url:

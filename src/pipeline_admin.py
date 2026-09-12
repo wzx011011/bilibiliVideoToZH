@@ -1020,6 +1020,41 @@ def ex_ocr_zh(task: Task) -> str:
     return f"OCR {len(cues)} 条 / {total} 字"
 
 
+def _collapse_repeats(text: str) -> str:
+    """折叠 OCR 字幕里的相邻重复片段(B站滚动字幕渐入渐出会被重复识别)。
+
+    字符级、最短周期优先(L>=4,保护"谢谢"叠字与英文双写),匹配带 ~8%
+    容差(OCR 两份拷贝常有字符差异,如 Maquat/Maguat),首尾 3 字符锚点
+    快筛保证性能。不清洗则 TTS 照读重复(ep-23 "这门课的教师 学生"×3 实测)。
+    """
+    punct = r"[\s,。、;;!!??.·'\"\"\-()()]"
+    if len(text) > 20000:  # 保护:异常大文本直接跳过(切块有 3000 字上限兜底)
+        return text
+    for _ in range(10):  # 全局重扫:一轮删除后,前文可能形成新的相邻重复
+        ks = [re.sub(punct, "", c) for c in text]
+        raw = list(range(len(text)))
+        collapsed = False
+        i = 0
+        while i < len(ks):
+            hit = False
+            for L in range(4, (len(ks) - i) // 2 + 1):
+                a, b = ks[i:i + L], ks[i + L:i + 2 * L]
+                if a[:3] != b[:3] or a[-3:] != b[-3:]:
+                    continue  # 首尾锚点不符,快速跳过
+                diff = sum(1 for x, y in zip(a, b) if x != y)
+                if diff <= max(1, L // 12):
+                    del ks[i + L:i + 2 * L]
+                    del raw[i + L:i + 2 * L]
+                    collapsed = hit = True
+                    break  # 停留同一 i:基本周期折完再折外层
+            if not hit:
+                i += 1
+        text = "".join(text[j] for j in raw)
+        if not collapsed:
+            break
+    return re.sub(r"[ \t]{2,}", " ", text).strip()
+
+
 def ex_cut_items(task: Task) -> str:
     """OCR 中文字幕 → 纯文本朗读块(条数+字符双上限,无 prompt)。
 
@@ -1035,6 +1070,7 @@ def ex_cut_items(task: Task) -> str:
     cues = _parse_srt(ocr_srt)
     items, buf, chars = [], [], 0
     for _, _, text in cues:
+        text = _collapse_repeats(text)
         if buf and (chars + len(text) + 1 > MAX_CHARS
                     or len(buf) >= MAX_CUES):
             items.append({"id": len(items), "speaker": "A",

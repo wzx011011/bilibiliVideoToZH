@@ -1,0 +1,221 @@
+{
+ "title": "大明演义 02 · 朱元璋：从乞丐到皇帝",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义02-朱元璋前传.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, early Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {
+   "kind": "s1",
+   "title": "落魄",
+   "narration": "上集说到，朱棣抢了侄子的皇位。要理解他为什么这么拼命，得先说说他爹朱元璋——中国历史上出身最低的开国皇帝。低到什么程度？父母死了都没地埋。这期是前传，三分钟讲完朱元璋的一生。",
+   "bg": "night lantern glow over a quiet village courtyard wall, deep indigo shadows",
+   "broll": [
+    {
+     "prompt": "A new Ming emperor seated on the throne at night, stormy expression, candlelight, tense atmosphere",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A thin ragged boy walking alone on a vast empty road under grey sky, desolate mood",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Two fresh grave mounds on a barren hillside, a kneeling figure in mourning, bleak wind",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s2",
+   "title": "赤贫",
+   "narration": "1328年，朱元璋出生在濠州一个赤贫农家，穷到名字都随便起，他叫朱重八。1344年，旱灾加蝗灾加瘟疫，短短半个月，父亲、母亲、大哥接连饿死。种地的一家人，连块下葬的地都没有，还是邻居可怜，给了一块坡地。",
+   "tts_narration": "1328年，朱元璋出生在壕州一个赤贫农家，穷到名字都随便起，他叫朱重八。1344年，旱灾加蝗灾加瘟疫，短短半个月，父亲、母亲、大哥接连饿死。种地的一家人，连块下葬的地都没有，还是邻居可怜，给了一块坡地。",
+   "broll": [
+    {
+     "prompt": "A humble mud-walled farmhouse in 14th century countryside, a poor peasant family outside, muted tones",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Drought and a locust swarm over withered fields, dying crops, dark ominous sky",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A man burying his parents wrapped in straw mats on a barren slope, grief and wind",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "famine-stricken village in yellow dust, cracked earth and withered crops, pale desolate wash"
+  },
+  {
+   "kind": "s3",
+   "title": "皇觉寺",
+   "narration": "走投无路的朱重八去皇觉寺当了和尚，可五十天后寺里也断了粮。十七岁的他打包出门讨饭，一讨就是三年。三年里他走遍淮西，见识了人情冷暖，也磨出了两样东西：极强的忍耐，和极狠的决断。",
+   "broll": [
+    {
+     "prompt": "A young monk sweeping the courtyard of a small austere temple, quiet discipline",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A young monk with a begging bowl walking through a village, cold reception, overcast light",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Close view of a young man's determined eyes, rivers and dusty roads behind him, three years of wandering",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "misty temple courtyard at dawn, faint pagoda silhouette, cold grey wash"
+  },
+  {
+   "kind": "s4",
+   "title": "投军",
+   "narration": "1352年，红巾军起义爆发，儿时伙伴汤和来信劝他投军。二十五岁的朱重八投了郭子兴，因作战勇猛被提拔，还娶了郭家的养女，就是后来的马皇后。他很快自立门户，徐达、常遇春、李善长这些顶配班底，都是这时候跟的他。",
+   "tts_narration": "1352年，红巾军起义爆发，儿时伙伴汤和来信劝他投军。二十五岁的朱重八投了郭子兴，因作战勇猛被提拔，还娶了郭家的养女，就是后来的马皇后。他很快自立门户，徐达、常遇春、李善常这些顶配班底，都是这时候跟的他。",
+   "bg": "military camp banners at dusk, faint tents and fires on a plain",
+   "broll": [
+    {
+     "prompt": "A letter glowing in firelight, a young peasant reading alone at night, moment of decision",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A young recruit training with a spear in a red-turban rebel camp, dust and banners",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A commander gathering loyal generals around a campfire map, night council",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s5",
+   "title": "定鼎",
+   "narration": "接下来是群雄逐鹿。1363年鄱阳湖大战，朱元璋二十万对陈友谅六十万，火烧连营，一战定乾坤。1367年又收拾了盐贩子张士诚。1368年，四十岁的朱元璋在应天称帝，国号大明，同年徐达北伐攻陷大都，元朝皇室北逃。",
+   "broll": [
+    {
+     "prompt": "Epic naval battle on a vast lake: hundreds of wooden warships, fire arrows, burning ships and towering smoke at dusk",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An army besieging a walled city with siege towers and battering rams, smoke and arrows",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A coronation ceremony in a grand hall, the emperor ascending marble steps, officials kneeling",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "vast lake battlefield at dusk, distant burning ships glow on the horizon, dark water sheen"
+  },
+  {
+   "kind": "s6",
+   "title": "铁腕",
+   "narration": "当了皇帝的朱元璋，干活是真玩命：废掉丞相，大权独揽；铁腕反腐，官员贪污六十两就剥皮实草；同时休养生息、兴修水利、清丈田亩，明初国力迅速恢复。百姓的日子，确实好过了。",
+   "bg": "grand palace hall glow, vermilion pillars fading into shadow, imperial gold wash",
+   "broll": [
+    {
+     "prompt": "An emperor reviewing documents alone late at night, tall piles of memorials, single candle",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Officials trembling before the throne during an anti-corruption tribunal, severe lighting",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Farmers repairing canals and plowing fields, oxen and sprouting crops, recovery and hope",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s7",
+   "title": "屠戮",
+   "narration": "但他对官员和功臣，是另一副面孔。胡惟庸案废除宰相制度，蓝玉案清洗开国武将，两案加上此前的空印案、郭桓案，牵连被杀超过十万人。跟了他一辈子的老兄弟，几乎被杀绝了——他要给孙子留一个绝对安全的朝堂。",
+   "tts_narration": "但他对官员和功臣，是另一副面孔。胡惟庸案废除宰相制度，蓝玉案清洗开国武将，两案加上此前的空印案、郭环案，牵连被杀超过十万人。跟了他一辈子的老兄弟，几乎被杀绝了——他要给孙子留一个绝对安全的朝堂。",
+   "broll": [
+    {
+     "prompt": "Imperial guards arresting a minister inside his mansion, doors broken, family watching in fear",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A desolate execution ground outside the city at dawn, crows circling, bleak silence",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An old emperor watching from a tower's shadow, cold unreadable expression, distant city",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "snowy execution ground under grey sky, faint city wall silhouette, cold desolate wash"
+  },
+  {
+   "kind": "s8",
+   "title": "托孤",
+   "narration": "1398年，朱元璋驾崩，活了七十一岁。他以为给孙子铺平了所有的路——可分封在外的九个塞王手握重兵，尸骨未寒，燕王朱棣就发起了靖难之役。你觉得他对功臣下手是不是太狠了？评论区聊聊。",
+   "tts_narration": "1398年，朱元璋驾崩，活了七十一岁。他以为给孙子铺平了所有的路——可分封在外的九个塞王手握重兵，尸骨未寒，燕王朱棣就发起了静难之役。你觉得他对功臣下手是不是太狠了？评论区聊聊。",
+   "bg": "quiet imperial tomb mound at dusk, cypress silhouettes, pale amber sky",
+   "broll": [
+    {
+     "prompt": "An elderly emperor on his dragon bed with a young grandson standing beside, dim candlelight",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Powerful frontier princes with armored armies standing on a giant realm map",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Storm clouds gathering over a realm map with a rebellion beginning, dark dramatic mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  }
+ ],
+ "broll_backend": "icu"
+}

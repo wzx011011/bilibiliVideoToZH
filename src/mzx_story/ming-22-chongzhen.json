@@ -1,0 +1,67 @@
+{
+ "title": "大明演义 22 · 崇祯的孤注：双线作战的十年",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义22-崇祯双线十年.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "两面战场",
+   "narration": "1640年的大明，是一艘两面漏水的破船：关外，皇太极的八旗磨刀霍霍；关内，李自成张献忠卷土重来。最能打的将军都在前线，可前线有两个。崇祯把辽东的宝押在冀辽总督洪承畴身上，把中原的宝押在督师杨嗣昌身上——两场豪赌，一起开牌。",
+   "tts_narration": "1640年的大明，是一艘两面漏水的破船：关外，皇太极的八旗磨刀霍霍；关内，李自成张献忠卷土重来。最能打的将军都在前线，可前线有两个。崇祯把辽东的宝押在冀辽总督洪承畴身上，把中原的宝押在督师杨嗣昌身上——两场豪赌，一起开牌。",
+   "broll": [
+    {"prompt": "A vast empire map with two dark war fronts glowing on opposite corners, doomed gambler's board", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An anxious emperor at the center pacing between two war tables with generals, impossible choices", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two columns of elite troops marching in opposite directions from a capital gate, split forces", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "empire map with two burning fronts, strained crimson wash"},
+  {"kind": "s2", "title": "松锦决战（上）",
+   "narration": "锦州被围半年，守将祖大寿告急。1641年春，洪承畴率八总兵、十三万大军出关驰援。他的打法很稳：且战且守，慢慢耗——皇太极的国力耗不起。可北京等不了：兵部尚书陈新甲催战，崇祯密旨速战。洪承畴被架着把十三万人压到了松山一线，摆开决战架势。",
+   "broll": [
+    {"prompt": "A commanding governor-general in armor at the center reviewing a massive relief army marching out of the pass, desperate reinforcement", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·洪承畴"]},
+    {"prompt": "Imperial couriers with urgent sealed edicts galloping toward the front, pressure from the throne", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Thirteen army columns deploying across a plain before fortress hills, grand battle formation", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "muster plain before fortress hills with thirteen banners, ominous steel wash"},
+  {"kind": "s3", "title": "松锦决战（下）",
+   "narration": "八月，皇太极亲率主力星夜驰至，抄了明军后路：笔架山粮道被断，十三万人断了炊。突围变成溃逃：各路总兵争先夺路，自相践踏，吴三桂一路逃回宁远。数日之间，明朝最后的野战军团土崩瓦解。第二年春天松山城破，洪承畴被俘，锦州失陷，辽东大门彻底敞开。",
+   "broll": [
+    {"prompt": "Enemy cavalry descending a ridge behind an unsuspecting army, supply carts burning, trap sprung", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Routed armies trampling each other at a broken river crossing in panic, total collapse", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A fortress gate falling under final assault at dawn, commander surrounded, end of the line", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "snow plain littered with broken banners, catastrophic grey-white wash"},
+  {"kind": "s4", "title": "降将与祭坛",
+   "narration": "被俘的洪承畴绝食求死，皇太极派人轮番劝降，最后亲自探视，解下貂裘披在他身上。洪承畴降了。消息传到北京时，朝廷正在给"殉国"的洪督师设坛痛祭，崇祯辍朝一日，祭到一半听说人降了——尬住了，祭也没法收场。从此关外只剩宁远一座孤城，和吴三桂的残兵。",
+   "tts_narration": "被俘的洪承畴绝食求死，皇太极派人轮番劝降，最后亲自探视，解下貂裘披在他身上。洪承畴降了。消息传到北京时，朝廷正在给殉国的洪督师设坛痛祭，崇祯辍朝一日，祭到一半听说人降了——尬住了，祭也没法收场。从此关外只剩宁远一座孤城，和吴三桂的残兵。",
+   "broll": [
+    {"prompt": "A captured general in torn armor refusing food in a prison tent, imperial robe offered by envoys, dignity vs survival", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A monarch draping his own fur cloak over a seated captive's shoulders in a royal tent, unexpected mercy", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A solemn state funeral altar in the capital halted mid-ritual by a breathless messenger, mortifying news", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·朱由检"]}],
+   "bg": "funeral altar in the capital interrupted by news, mortified pale-gold wash"},
+  {"kind": "s5", "title": "武昌称王",
+   "narration": "关内另一边，张献忠再破襄阳后转战安徽、湖广，1643年五月攻下武昌，把楚王沉进长江，开科取士，自称大西王。而督师杨嗣昌，早在襄阳失守、福王被杀后就忧惧交加，病死在军中。朝廷在关内战场，连个压阵的重臣都派不出来了。",
+   "broll": [
+    {"prompt": "A fierce rebel king in usurped regalia at the center enthroned in a captured riverside capital, self-made monarchy", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·张献忠"]},
+    {"prompt": "A great river city in flames with palace treasures thrown into boats, sack of the wealthy", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An aged minister collapsing at a field desk among scattered maps, died of despair", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "captured river capital with new king's banners, usurping ember wash"},
+  {"kind": "s6", "title": "襄京建政",
+   "narration": "李自成走得更远。1643年三月，他把襄阳改成襄京，自称新顺王，不再流窜，开始建政权：设文官、定军制、开仓赈民，喊着迎闯王不纳粮的口号。牛金星、宋献策这些落魄文人当了谋士——流寇变成了朝廷。崇祯这才明白，他要剿的已经不是贼，是一个新王朝的雏形。",
+   "broll": [
+    {"prompt": "A rebel sovereign in dark robes at the center receiving civil officials in a reorganized court hall, state-building", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·李自成"]},
+    {"prompt": "Granaries opening to cheering crowds as edicts are posted on walls, policy of the new power", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Fallen scholars joining a rising court with strategy scrolls, talent flowing to the new banner", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "new court hall in a provincial capital, rising black-red wash"},
+  {"kind": "s7", "title": "大瘟疫",
+   "narration": "屋漏偏逢连夜雨。1643年夏天，北京大瘟疫，史称疙瘩瘟——患者颈腋下生硬块，几日即死，十室九病，死者枕藉。守城的军队病倒大半，站在城墙上的兵，十个人里凑不出两副好身板。帝国的心脏，在敌人进城之前，先自己烂了。",
+   "broll": [
+    {"prompt": "Deserted plague-stricken street with closed shops and litters carrying the sick, silent horror", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Sick soldiers slumped at their posts on city walls, thin defenses, dying garrison", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Coffins and burial carts queuing out of a city gate at dusk, rivers of grief", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "plague street with closed shutters and dusk haze, miasma grey-green wash"},
+  {"kind": "s8", "title": "传庭死，明亡矣",
+   "narration": "十月，最后一支可战之兵也没了：孙传庭在汝州战败，退守潼关，潼关破，孙传庭战死。朝中有人叹：传庭死，明亡矣。爷爷怠政三十年欠的账、辽东挖的坑、流民烧的火，此刻全部压向1644年的春天。下集：煤山的最后一天。你觉得洪承畴该被钉在耻辱柱上吗？评论区聊聊。",
+   "broll": [
+    {"prompt": "A resolute old general in battered armor at the center falling at a mountain pass battle, last pillar falls", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·孙传庭"]},
+    {"prompt": "A mountain pass fortress gate broken open with autumn leaves and smoke, gateway to doom", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A lone emperor silhouette on a palace terrace facing a darkening horizon, end approaching", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "broken mountain pass under autumn storm, final slate-crimson wash"}
+ ]
+}

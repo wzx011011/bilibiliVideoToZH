@@ -1,0 +1,250 @@
+{
+ "title": "大明演义 09 · 正德：不想当皇帝的皇帝",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义09-正德与王阳明.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {
+   "kind": "s1",
+   "title": "接位",
+   "narration": "1505年，十五岁的朱厚照继位，年号正德。他爹弘治一辈子勤政节俭，留给他一个充实的国库；可这位新皇帝的心思，压根不在龙椅上。东宫旧宦刘瑾等八个太监趁机得宠，人称八虎，天天带着皇帝斗鸡走马、放鹰逐兔，朝堂上大臣的奏折根本递不到皇帝眼前。",
+   "broll": [
+    {
+     "prompt": "A teenage emperor Zhu Houzhao on the throne at the center looking bored and restless, elderly ministers lecturing below, grand hall",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "中·朱厚照"
+     ]
+    },
+    {
+     "prompt": "The chief eunuch Liu Jin in dark robes on the left whispering and leading the young emperor Zhu Houzhao in bright robes on the right out to falconry and hounds, sly expressions",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "左·刘瑾",
+      "右·朱厚照"
+     ]
+    },
+    {
+     "prompt": "Towers of unopened memorials piling on a desk, dust motes in shaft of light, neglected state papers",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "grand but neglected court hall with light shafts on stacked papers, dusty amber wash"
+  },
+  {
+   "kind": "s2",
+   "title": "豹房",
+   "narration": "紫禁城嫌拘束，正德就在西华门外修了座豹房：养豹子、练骑射、藏乐户密室，他干脆搬进去住，连朝政都在豹房处理。这里成了事实上的权力中枢，金銮殿反而冷清下来。皇帝把职业干成了副业，玩，才是主业。",
+   "broll": [
+    {
+     "prompt": "An exotic leopard compound outside palace walls with leopards in cages, hunting gear and drums, lively courtyard",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Young emperor practicing archery and riding inside his pleasure compound at dusk, torches lit",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Deserted imperial throne hall with empty seats, wind blowing curtains, cold blue mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "torchlit pleasure compound at dusk with leopard cages, restless amber wash"
+  },
+  {
+   "kind": "s3",
+   "title": "立皇帝",
+   "narration": "带头的大太监刘瑾趁机揽权：打压谏官、卖官鬻爵，官员进京先给他送礼成了潜规则，民间干脆叫他立皇帝——皇帝坐着，他站着，可权在他手里。1510年安化王打着诛刘瑾的旗号造反，大学士杨廷和趁机劝皇帝抄家，竟抄出金银巨万和私藏的甲胄玉玺。刘瑾被凌迟处死，围观百姓争着买他的肉，出气的人排到了城外。",
+   "tts_narration": "带头的大太监刘瑾趁机揽权：打压谏官、卖官鬻爵，官员进京先给他送礼成了潜规则，民间干脆叫他立皇帝——皇帝坐着，他站着，可权在他手里。1510年安化王打着诛刘瑾的旗号造反，大学士杨廷和趁机劝皇帝抄家，竟抄出金银巨万和私藏的甲胄玉玺。刘瑾被凌迟处死，围观百姓争着买他的肉，出气的人一直排到了城外。",
+   "broll": [
+    {
+     "prompt": "A powerful eunuch Liu Jin in dark embroidered robes standing at the center receiving bribes and gifts from kneeling officials, shadowy hall, menacing presence",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "中·刘瑾"
+     ]
+    },
+    {
+     "prompt": "Soldiers seizing a fallen eunuch's mansion, treasure chests and hidden armor and a jade seal exposed in courtyard",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Execution ground crowd scene with banners, dramatic sky, justice finally served, epic composition",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "shadowy hall of a powerful eunuch with tribute chests, sinister indigo wash"
+  },
+  {
+   "kind": "s4",
+   "title": "应州大捷",
+   "narration": "别看正德爱玩，打仗他是真上。1517年蒙古小王子率军南下，正德正好巡边在关外，索性亲自披甲迎战，在应州与蒙古军拉锯厮杀好几天，据记载皇帝亲手砍翻一人，明军士气大振，蒙古军最终退走，史称应州大捷。可回京后史官只给记了斩敌十六——因为皇帝是偷偷溜出关打的仗，文官们憋着一肚子火，连场胜仗都不想给他体面。",
+   "tts_narration": "别看正德爱玩，打仗他是真上。1517年蒙古小王子率军南下，正德正好巡边在关外，索性亲自披甲迎战，在映州与蒙古军拉锯厮杀好几天，据记载皇帝亲手砍翻一人，明军士气大振，蒙古军最终退走，史称映州大捷。可回京后史官只给记了斩敌十六——因为皇帝是偷偷溜出关打的仗，文官们憋着一肚子火，连场胜仗都不想给他体面。",
+   "broll": [
+    {
+     "prompt": "Young emperor in armor personally charging into steppe cavalry battle, dust and arrows, dramatic battlefield",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Ming cavalry clashing with Mongol horsemen on windy grassland for days, banners torn, epic wide composition",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Court historians writing meager records by lamplight, sulking officials, ironic quiet mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "windy steppe battlefield with clashing cavalry silhouettes, dusty ochre wash"
+  },
+  {
+   "kind": "s5",
+   "title": "宁王造反",
+   "narration": "1519年，蓄谋已久的宁王朱宸濠在江西起兵，号称十万大军顺江而下。消息传到北京，正德大喜过望——终于有正经理由打仗了！他自封威武大将军朱寿，御驾亲征。可大军刚走到半路，捷报到了：赣南巡抚王阳明，一个之前从没带过兵的书生，只用四十三天就平了叛乱，活捉了宁王。皇帝的仗，被人家抢先打完了。",
+   "tts_narration": "1519年，蓄谋已久的宁王朱陈豪在江西起兵，号称十万大军顺江而下。消息传到北京，正德大喜过望——终于有正经理由打仗了！他自封威武大将军朱寿，御驾亲征。可大军刚走到半路，捷报到了：赣南巡抚王阳明，一个之前从没带过兵的书生，只用四十三天就平了叛乱，活捉了宁王。皇帝的仗，被人家抢先打完了。",
+   "broll": [
+    {
+     "prompt": "A rebel prince Zhu Chenhao standing on the flagship prow launching a huge river fleet war downstream, warships and banners, ominous grandeur",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "朱宸濠"
+     ]
+    },
+    {
+     "prompt": "Excited young emperor donning armor and self-declared general title, mustering troops with drums",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A calm scholar-official Wang Yangming in plain robe standing on a hilltop on the left directing a swift campaign, the captured rebel prince Zhu Chenhao escorted by soldiers on the right below",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain",
+     "cast": [
+      "左·王阳明",
+      "右·朱宸濠"
+     ]
+    }
+   ],
+   "bg": "great river with war fleets and stormy sky, martial crimson wash"
+  },
+  {
+   "kind": "s6",
+   "title": "再抓一遍",
+   "narration": "捷报压下不发，王阳明被要求重写战报，把功劳记到威武大将军朱寿名下。更离谱的是，到了前线，正德披挂上阵，让士兵围着已经被俘的宁王摆开阵势，自己冲进去亲手再抓一遍，过足了将军瘾。一场改写朝局的叛乱，在皇帝这儿成了cosplay大型现场。所幸江南平稳交接，没出大乱子。",
+   "broll": [
+    {
+     "prompt": "An armored emperor Zhu Houzhao charging in from the left re-enacting a capture in an open field drill, soldiers forming a ring around the captive rebel prince Zhu Chenhao standing at the center, theatrical absurd mood",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "左·朱厚照",
+      "中·朱宸濠"
+     ]
+    },
+    {
+     "prompt": "A scholar rewriting a battle report by candlelight, weary and composed, brush hovering",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "王阳明"
+     ]
+    },
+    {
+     "prompt": "Peaceful southern river towns with markets and boats, order quietly maintained",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "theatrical drill field with ring of banners at dusk, absurdist amber wash"
+  },
+  {
+   "kind": "s7",
+   "title": "落水",
+   "narration": "1520年秋，正德在清江浦泛舟捕鱼取乐，船翻落水，虽被救起，却落下病根，回京后一病不起。1521年春，三十一岁的正德死于豹房，没有留下儿子。他玩了十五年，也确实亲手砍过人、平过乱——可帝国交到他手里，是彻底松了弦的十五年。",
+   "broll": [
+    {
+     "prompt": "An imperial pleasure boat capsizing on a cold autumn river, guards rushing to rescue, chill wind",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A young emperor weakened on a couch in his compound, physicians attending, winter light fading",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Silent leopard compound after the emperor's death, empty cages and cold torch brackets, stillness",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "cold autumn river with overturned boat, fading steel-blue wash"
+  },
+  {
+   "kind": "s8",
+   "title": "堂弟进京",
+   "narration": "皇帝没儿子，内阁首辅杨廷和拍板：迎堂弟朱厚熜进京继位。谁都以为捡了个好拿捏的少年藩王，可这位十四岁的少年还没进城，就跟满朝文武顶上了牛——我爹到底算我什么？这就是大名鼎鼎的大礼议。下一集，看看嘉靖怎么用十五年把文官集团斗趴下。你觉得正德是被史官抹黑的，还是真昏君？评论区聊聊。",
+   "broll": [
+    {
+     "prompt": "Elder statesmen led by the chief grand secretary Yang Tinghe in crimson robes at the center reading the succession edict and choosing a distant young prince, weighty decision",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "中·杨廷和"
+     ]
+    },
+    {
+     "prompt": "A composed teenage prince arriving at city gates with modest retinue, officials waiting, tension in the air",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain",
+     "cast": [
+      "嘉靖"
+     ]
+    },
+    {
+     "prompt": "Courtiers arguing fiercely in ranks before the palace, storm clouds gathering, conflict brewing, dramatic composition",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "palace gates with a young prince's modest retinue and waiting officials, tense dawn wash"
+  }
+ ]
+}

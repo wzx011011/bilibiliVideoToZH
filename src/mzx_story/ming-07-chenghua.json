@@ -1,0 +1,221 @@
+{
+ "title": "大明演义 07 · 成化朝：万贵妃与西厂",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义07-成化朝.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {
+   "kind": "s1",
+   "title": "开局",
+   "narration": "1464年，十八岁的朱见深即位，年号成化。这个皇帝的童年，是在太子被废的恐惧和父亲当了蒙古俘虏的阴影里熬过来的，落下了口吃的毛病。他上位第一件事出乎所有人意料：给于谦平反，替叔叔景泰恢复帝号。",
+   "broll": [
+    {
+     "prompt": "A young emperor enthroned in a vast hall, small figure under a huge canopy, officials far below, scale and loneliness",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A child hiding behind curtains watching political storms, shadows of guards passing, fearful mood",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An edict of rehabilitation read before a memorial arch, officials bowing, snow melting, redemption mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "a vast throne hall with long morning shadows, quiet solemn wash"
+  },
+  {
+   "kind": "s2",
+   "title": "万贵妃",
+   "narration": "他这一生最离不开的人，是大自己十七岁的宫女万贞儿——当年被废太子身边唯一没走的人。登基后想立她为后，被太后和群臣拦住，最后立成了贵妃。成化二年万贵妃生子夭折，此后她容不下任何怀孕的宫人，后宫陷入了长达十年的沉默。",
+   "broll": [
+    {
+     "prompt": "An older palace maid in elaborate dress standing beside a young emperor, protective and possessive posture, candlelight",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A silent palace corridor at night, pregnant maids looking over shoulders in fear, oppressive shadows",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An infant's cradle hidden in a hidden courtyard chamber, a loyal eunuch guarding the door, secret hope",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "deep palace chambers in candle glow, long silk curtain shadows, secretive warm-dark wash"
+  },
+  {
+   "kind": "s3",
+   "title": "西厂",
+   "narration": "1477年，皇帝绕开东厂设了一个新特务机构——西厂，交给宦官汪直提督。西厂办案子比东厂狠得多，几个月就掀翻了一批大臣，闹得京师人人自危。内阁首辅商辂领衔上奏力陈西厂之害，皇帝撤了西厂——可不到一个月，又在宠信下恢复。商辂辞职走人。",
+   "tts_narration": "1477年，皇帝绕开东厂设了一个新特务机构——西厂，交给宦官汪直提督。西厂办案子比东厂狠得多，几个月就掀翻了一批大臣，闹得京师人人自危。内阁首辅商辂领衔上奏力陈西厂之害，皇帝撤了西厂——可不到一个月，又在宠信下恢复。商辂辞职走人。",
+   "broll": [
+    {
+     "prompt": "A new secret police office opening: uniformed agents marching in, officials watching in fear from doorways",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Interrogation room with chains and ledgers, a minister kneeling before inquisitors, harsh single light",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An elderly chief minister laying his resignation tablet on the palace steps, walking away with dignity",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "spy-office ledgers and sealed dossiers on desks, cold iron-blue wash with lantern glow"
+  },
+  {
+   "kind": "s4",
+   "title": "成化犁庭",
+   "narration": "别看成化帝性子软，动起手来是真狠。1467年，建州女真屡犯边境，朝廷发兵五万，分三路直捣其老巢，斩杀近千、焚其巢穴，史称成化犁庭——把院子当田一样犁了一遍。这一战为辽东换来了十几年安稳。",
+   "tts_narration": "别看成化帝性子软，动起手来是真狠。1467年，建州女真屡犯边境，朝廷发兵五万，分三路直捣其老巢，斩杀近千、焚其巢穴，史称成化犁庭——把院子当田一样犁了一遍。这一战为辽东换来了十几年安稳。",
+   "broll": [
+    {
+     "prompt": "Three columns of Ming troops marching through dark forests toward mountain fortresses at dawn",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Ming soldiers storming a wooden hillfort in flames, smoke towering over pines, fierce combat composition",
+     "at": 0.33,
+     "hold": 0.34,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Smoke rising over a devastated valley camp, troops withdrawing in columns, grim aftermath",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "forest fortress ruins under snow, smoke drifting, cold steel-grey wash with ember glow"
+  },
+  {
+   "kind": "s5",
+   "title": "荆襄流民",
+   "narration": "成化年间最大的内政危机，是上百万流民聚进了荆襄山区。朝廷两次用兵平乱之后也回过味来了：堵不如疏。派大员去登记户籍、分田安家，还专门设了郧阳府来管这一片。上百万人的生计，就这么安顿了下来。",
+   "tts_narration": "成化年间最大的内政危机，是上百万流民聚进了荆襄山区。朝廷两次用兵平乱之后也回过味来了：堵不如疏。派大员去登记户籍、分田安家，还专门设了云阳府来管这一片。上百万人的生计，就这么安顿了下来。",
+   "broll": [
+    {
+     "prompt": "A river of refugees with bundles and carts crowding into a mountain valley, rain and mud, epic scale",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Rebel camp on a mountain stronghold with wooden palisades, bonfires and armed followers",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An official registering farming families at a wooden table in the valley, farmers kneeling in gratitude, warm resolution",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "mountain valley farmland under clearing rain clouds, faint terraces and rivers, hopeful green-grey wash"
+  },
+  {
+   "kind": "s6",
+   "title": "纸糊三阁老",
+   "narration": "成化中后期，皇帝深居西苑不见大臣，内阁是纸糊的三阁老，六部是泥塑的六尚书——诏旨全凭传奉官直接任命，一次就授了几百人。官僚系统看着还在运转，其实早已躺平。帝国就这样稀里糊涂地滑向了弘治。",
+   "broll": [
+    {
+     "prompt": "Empty minister seats in a grand hall with dust in sunbeams, abandoned brushes, neglect mood",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Stacks of unopened memorials tied with cords piling in a dim office, dust motes",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A crowd of new officials in mismatched robes jostling at a palace gate, satirical composition",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "dusty government office with unopened document stacks in sunbeam, faded bureaucratic wash"
+  },
+  {
+   "kind": "s7",
+   "title": "弘治到来",
+   "narration": "1487年春天，万贵妃去世，皇帝郁郁数月后驾崩。十八岁的太子朱祐樘即位，就是弘治帝。他登基第一件事，就是把一千多名传奉官全部罢斥——把父皇二十三年的糊涂账，一笔一笔清了出去。",
+   "tts_narration": "1487年春天，万贵妃去世，皇帝郁郁数月后驾崩。十八岁的太子朱佑堂即位，就是弘治帝。他登基第一件事，就是把一千多名传奉官全部罢斥——把父皇二十三年的糊涂账，一笔一笔清了出去。",
+   "broll": [
+    {
+     "prompt": "An elderly emperor on his sickbed looking at the empty seat of a deceased consort, grief in dim hall",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A young prince in mourning white receiving the seal, officials bowing in a bright hall",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Edicts of dismissal posted at palace gates, dismissed officials carrying boxes leaving, fresh start mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "young emperor's bright audience hall with morning sun through lattice, fresh clean wash"
+  },
+  {
+   "kind": "s8",
+   "title": "矛盾体",
+   "narration": "怎么评价成化帝？他宠万贵妃、设西厂、放任传奉官，昏聩得出名；可他为于谦平反、恢复景泰帝号、犁庭扫穴、安置百万流民——关键时刻一次没软过。懒与狠、情与政，拧成了二十三年。你觉得他是昏君吗？评论区聊聊。",
+   "broll": [
+    {
+     "prompt": "The emperor's study split by candlelight and moonlight, two sides of a scale mood, contemplative",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A rehabilitation edict before Yu Qian's memorial tablet, incense smoke rising, solemn redemption",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The emperor alone on the city wall at dusk looking over the empire, wind in robes, contemplative ending composition",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "imperial study at dusk with half candlelight half moonlight, contemplative ink wash"
+  }
+ ]
+}

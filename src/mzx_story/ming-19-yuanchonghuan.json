@@ -1,0 +1,69 @@
+{
+ "title": "大明演义 19 · 袁崇焕与宁远：帝国最后的高光",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义19-袁崇焕与宁远.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "书生请缨",
+   "narration": "袁崇焕，广东东管人，万历四十七年进士——中举那一年，萨尔浒惨败的消息正好传到京城。别人躲辽东都来不及，这个文官却拍着胸脯自荐：给我军马钱粮，我一人足以守住此地。孙承宗经营关宁防线时，他守宁前；孙一走，新任经略下令全线撤回山海关，只有他抗命不撤：我是宁前道，官在此，就死在此。",
+   "tts_narration": "袁崇焕，广东东管人，万历四十七年进士——中举那一年，萨尔浒惨败的消息正好传到京城。别人躲辽东都来不及，这个文官却拍着胸脯自荐：给我军马钱粮，我一人足以守住此地。孙承宗经营关宁防线时，他守宁前；孙一走，新任经略下令全线撤回山海关，只有他抗命不撤：我是宁前道，官在此，就死在此。",
+   "broll": [
+    {"prompt": "A resolute scholar-official in plain blue robes at the center stepping forward in a court of shrinking generals, lone volunteer", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·袁崇焕"]},
+    {"prompt": "Frontier fortress town with refugees and troops streaming toward a distant pass, general retreat", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A lone figure standing firm on a fortress wall facing empty plains at dusk, refusal to yield", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "lonely frontier fortress on snowy plain at dusk, steadfast slate wash"},
+  {"kind": "s2", "title": "宁远血战",
+   "narration": "1626年正月，努尔哈赤号称十三万大军扑向宁远，城里的守军只有一万多。袁崇焕刺血为书激励将士，把十一门西洋红衣大炮架上城头：任你骑兵挖墙凿城，我一律凭坚城、用大炮。连轰三日，后金军尸积如山，据说努尔哈赤本人也被炮火所伤，含恨退兵。明朝对后金的第一场大胜，就赢在这座孤城。",
+   "broll": [
+    {"prompt": "Defenders heaving heavy western cannon onto a fortress wall in snow, preparation under pressure", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Cannon roaring from a fortress wall into massed assaulting cavalry at close range, fire and ice battle", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Snow field littered with retreated attackers before a smoking fortress, victorious defenders on wall", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "snowbound fortress under cannon fire at dawn, heroic red-grey wash"},
+  {"kind": "s3", "title": "胜了，功劳不是你的",
+   "narration": "第二年五月，皇太极接着打，锦州、宁远又是一场恶战，还是没讨到便宜。可胜报进京，封赏名单上全是魏忠贤的子侄，袁崇焕只升了一级。他心一横，辞官回了广东老家。守国的功臣斗不过修祠的太监——这是天启朝最后的荒诞。",
+   "broll": [
+    {"prompt": "Renewed siege assault on fortress walls in early summer, determined defense", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Victory report scroll being handed to gaudy courtiers while a general stands ignored in armor, stolen credit", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A lone official's boat sailing south through misty water towns, resigned homecoming", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "victory dispatch ignored amid gilded courtiers, bitter grey-gold wash"},
+  {"kind": "s4", "title": "崇祯清算",
+   "narration": "新皇帝崇祯出手又快又狠：接到弹劾奏疏后，先稳住，再收网。魏忠贤被贬去凤阳守陵，走到半路接到追查的旨意，上吊自尽；尸体被剐，奶妈客氏活活鞭死，阉党两百多人列为逆案，东林冤案全部平反。十七岁的少年，用两三个月干净利落地拆掉了九千岁的朝廷，朝野喊出了四个字：众正盈朝。",
+   "tts_narration": "新皇帝崇祯出手又快又狠：接到弹劾奏疏后，先稳住，再收网。魏忠贤被贬去凤阳守陵，走到半路接到追查的旨意，上吊自尽；尸体被剐，奶妈客氏活活鞭死，阉党两百多人列为逆案，东林冤案全部平反。十七岁的少年，用两三个月干净利落地拆掉了九千岁的朝廷，朝野喊出了四个字：众正盈朝。",
+   "broll": [
+    {"prompt": "A young sovereign in dark robes at the center watching from an elevated seat as guards dismantle a corrupt faction, silent purge", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱由检"]},
+    {"prompt": "A gaunt fallen eunuch hanging himself from a beam at a wayside inn at night, inglorious end", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Court hall crowded with upright officials exchanging hopeful looks, renewal of hope", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "wayside inn at night with a fallen silhouette, cold reckoning slate wash"},
+  {"kind": "s5", "title": "平台召对",
+   "narration": "1628年七月，崇祯在平台召见袁崇焕，问：建部跳梁，什么时候能平？袁崇焕脱口而出：五年。事后他自己承认，看皇帝忧心，这话是宽慰圣心随口说的。可崇祯当了真：给尚方剑，加太子太保，督师冀辽，户部优先供饷，要人给人要钱给钱。君臣这对组合，一个敢说，一个敢信。",
+   "tts_narration": "1628年七月，崇祯在平台召见袁崇焕，问：建部跳梁，什么时候能平？袁崇焕脱口而出：五年。事后他自己承认，看皇帝忧心，这话是宽慰圣心随口说的。可崇祯当了真：给尚方剑，加太子太保，督师冀辽，户部优先供饷，要人给人要钱给钱。君臣这对组合，一个敢说，一个敢信。",
+   "broll": [
+    {"prompt": "A solemn young emperor in dark robes at the left leaning forward in audience with an armored general gesturing five fingers at the right, grand promise", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·朱由检", "右·袁崇焕"]},
+    {"prompt": "An ornate sword of authority being presented with silk sash, full trust ceremony", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Supply carts and coin chests streaming toward the northern frontier, total backing", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "audience hall with sword ceremony, hopeful crimson wash"},
+  {"kind": "s6", "title": "擅杀毛文龙",
+   "narration": "手握尚方剑的袁崇焕，第一刀没砍敌人，砍了自己人。1629年六月，他登上东江镇的双岛，当众宣布毛文龙十二条大罪，矫诏将其斩首。毛文龙盘踞皮岛，牵制后金后方，功劳有，毛病也多——但杀他，连请示都没请示。崇祯听到消息，惊得说不出话，可话是自己放的，人只能咽下去。裂痕，从此埋下。",
+   "broll": [
+    {"prompt": "A general in full armor at the left reading charges from a scroll before a stunned older commander seized by guards at the right on a sea island camp", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·袁崇焕", "右·毛文龙"]},
+    {"prompt": "Execution on a windswept island shore with stunned garrison soldiers watching, shockwave moment", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A young emperor's hand crushing a report letter by candlelight, suppressed fury", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "windy island camp with shocked garrison, fracture grey-teal wash"},
+  {"kind": "s7", "title": "暗流",
+   "narration": "海面之下，两条线都在走：皇太极被宁远宁锦两场败仗打醒了——坚城大炮啃不动，那就不啃，他开始跟蒙古各部谈借道，琢磨绕开山海关直插喜峰口；袁崇焕这边，则私下跟后金议和接触，想腾出手整顿防务。一个在找软肋，一个在自作主张，而北京的言官已经开始写小报告。",
+   "tts_narration": "海面之下，两条线都在走：皇太极被宁远宁锦两场败仗打醒了——坚城大炮啃不动，那就不啃，他开始跟蒙古各部谈借道，琢磨绕开山海关直插喜峰口；袁崇焕这边，则私下跟后金议和接触，想腾出手整顿防务。一个在找软肋，一个在自作主张，而北京的言官已经开始写小报告。",
+   "broll": [
+    {"prompt": "Mongol horsemen and manchu envoys negotiating around a campfire on steppe, secret pact", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Envoys exchanging letters under truce flags on a riverbank, shadowy negotiation", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Officials writing memorials by lamplight with whispering messengers, whispers of doubt", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "steppe campfire with shadowed riders, scheming dark-teal wash"},
+  {"kind": "s8", "title": "全部的信任",
+   "narration": "到1629年秋天，袁崇焕站在了一生的顶点：皇帝无条件信任，尚方剑在手，关宁铁骑在手。可历史很快会告诉你，在这位多疑的天子手里，顶点的另一头，拴着的是一条凌迟的罪名。下集：己巳之变——皇太极绕过关宁防线，十万铁骑直扑北京城下。你觉得毛文龙该不该杀？评论区聊聊。",
+   "broll": [
+    {"prompt": "A commanding general on horseback at the center before ranks of border cavalry at dawn, peak of power", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Shadowy enemy riders scouting a mountain path far from the fortified line, unseen threat", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A hangman's rope and a general's cloak laid on cold stone by lantern light, ominous foreshadow", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "dawn cavalry muster on northern plain, proud crimson wash"}
+ ]
+}

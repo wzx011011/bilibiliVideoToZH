@@ -325,3 +325,29 @@ def test_run_timeout_kills_and_reports(tmp_path, monkeypatch):
     with pytest.raises(RuntimeError) as ei:
         pa._run(cmd, t, timeout=3)
     assert "超时" in str(ei.value)
+
+
+# ======================== OCR 重复折叠 ========================
+
+def test_collapse_repeats_ep23_patterns():
+    """ep-23 实测的三种 B站滚动字幕 OCR 重复。"""
+    r = pa._collapse_repeats
+    out = r("下午2点参加Hendriana和Maquat的免费薄饼计 下午2点参加Hendriana和Maquat的免费薄饼计 九年前")
+    assert out == "下午2点参加Hendriana和Maquat的免费薄饼计 九年前"
+    out = r("这门课的教师 学生 这门课的教师学生 这门课的教师 学生 不管是曾经上过的")
+    assert out == "这门课的教师 学生 不管是曾经上过的"
+    out = r("期待周六10点到2点你们的参与 出于善意来享用薄饼 谢谢")
+    assert "周六10点" in out  # 正常文本不误伤
+
+
+def test_collapse_repeats_keeps_normal_text():
+    r = pa._collapse_repeats
+    text = "大家好 我是来自科克兰宿舍的大四学生 一种慢性神经系统疾病"
+    assert r(text) == text
+
+def test_collapse_repeats_tolerates_ocr_char_variants():
+    """OCR 两份拷贝常有 1-2 字符差异(Maquat/Maguat),容差匹配必须折叠。"""
+    out = pa._collapse_repeats(
+        "下午2点参加Hendriana和Maquat的免费薄饼计 "
+        "下午2点参加Hendriana和Maguat的免费薄饼计 九年前")
+    assert out.count("免费薄饼计") == 1 and "九年前" in out

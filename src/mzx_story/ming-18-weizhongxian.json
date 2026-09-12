@@ -1,0 +1,67 @@
+{
+ "title": "大明演义 18 · 魏忠贤：九千岁的天下",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义18-魏忠贤.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "泼皮翻身",
+   "narration": "魏忠贤，河北肃宁人，前半生是个输光的赌徒：欠一屁股赌债，一咬牙自阉进宫当了太监，那一年他都五十多了。入宫后攀上了一个人——皇长孙朱由校的奶妈客氏。天启登基，鸡犬升天：一个目不识丁的老太监，一路做到司礼监秉笔，替皇帝批红。官员们见了他，开口就是九千岁。",
+   "broll": [
+    {"prompt": "A desperate middle-aged gambler kneeling in a dusty roadside hut with scattered dice and debt notes, rock bottom", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A plump elderly eunuch in luxurious dark robes at the center standing smugly in a palace corridor, servants bowing deep", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·魏忠贤"]},
+    {"prompt": "Officials lining up to bow to a smiling eunuch at a palace gate, absurd hierarchy", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "palace corridor with bowing officials and a smug silhouette, corrupt gold-black wash"},
+  {"kind": "s2", "title": "阉党成型",
+   "narration": "东林党当初帮天启抢到皇位，自恃功高，把齐楚浙党往死里整。被整的人没处去，全投了魏忠贤：什么五虎、五彪，盘踞内阁、六部和厂卫。东林人这才明白，他们斗倒了旧党，亲手扶起了一个更狠的。晚明最黑暗的党争，从这一刻开场。",
+   "broll": [
+    {"prompt": "Disgraced officials slinking into a shadowy mansion gate carrying gifts, alliance of the desperate", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A web of corruption spreading from a throne-like seat to desks of government, dark organization chart scene", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Arrogant scholars receiving their dismissal papers in a court hall, fallen pride", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "shadowy mansion with gift-laden visitors, scheming dark-violet wash"},
+  {"kind": "s3", "title": "六君子之狱",
+   "narration": "天启四年，副都御史杨涟拍案而起，上疏历数魏忠贤二十四大罪，天下传抄。魏忠贤的报复第二年就到：杨涟、左光斗等六位东林干将下诏狱，狱卒头子许显纯五日一拷打，土囊压身、铁钉贯耳，六人全部死于狱中。杨涟死前咬破手指写下血书：大笑大笑还大笑，刀砍东风，于我何有哉！",
+   "tts_narration": "天启四年，副都御史杨涟拍案而起，上疏历数魏忠贤二十四大罪，天下传抄。魏忠贤的报复第二年就到：杨涟、左光斗等六位东林干将下诏狱，狱卒头子许显纯五日一拷打，土囊压身、铁钉贯耳，六人全部死于狱中。杨涟死前咬破手指写下血书：大笑大笑还大笑，刀砍东风，于我何有哉！",
+   "broll": [
+    {"prompt": "An upright gaunt official in plain robes at the left dramatically presenting a long impeachment scroll before a smirking eunuch faction at the right", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·杨涟"]},
+    {"prompt": "A grim stone prison interior with shackled scholars being interrogated under a single torch, brutal darkness", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A wounded prisoner writing with blood on cloth by faint light, unbroken eyes, final testimony", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "stone prison with torch shadows and chains, brutal charcoal wash"},
+  {"kind": "s4", "title": "生祠遍天下",
+   "narration": "活人修祠，自古罕见；给太监修生祠，大明独一份。天启六年，浙江巡抚潘汝祯带头，在西湖边给魏忠贤修生祠，与岳飞庙做了邻居。各地立刻卷起来：祠堂越修越气派，泥像用沉香木做身子，官员进祠要行五拜三叩的大礼。满朝文武管他叫厂臣，国子监生甚至请让魏忠贤陪祭孔子。",
+   "tts_narration": "活人修祠，自古罕见；给太监修生祠，大明独一份。天启六年，浙江巡抚潘汝祯带头，在西湖边给魏忠贤修生祠，与岳飞庙做了邻居。各地立刻卷起来：祠堂越修越气派，泥像用沉香木做身子，官员进祠要行五拜三叩的大礼。满朝文武管他叫厂臣，国子监生甚至请让魏忠贤陪祭孔子。",
+   "broll": [
+    {"prompt": "A grand new shrine by a lake with officials kowtowing to a living man's wooden statue, absurd worship", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Carpenters crafting a fragrant wood statue with ceremonial banner processions, escalating cult", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rows of officials performing deep ritual bows before a shrine gate, synchronized servility", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "lakeside shrine with incense clouds and bowing crowds, gaudy gold wash"},
+  {"kind": "s5", "title": "边关的另一面",
+   "narration": "也是在天启六年正月，辽东传来一个消息：努尔哈赤亲率大军扑向宁远城，被一个叫袁崇焕的文官带着残兵硬生生打了回去，据说老汗王本人也中了炮伤。京城在忙着给太监修祠，边关在用命守城——这个帝国一边烂着，一边硬撑着，荒诞又悲壮。",
+   "broll": [
+    {"prompt": "A calm scholar-official in armor at the center standing on a fortress wall under cannon smoke, unyielding defense", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·袁崇焕"]},
+    {"prompt": "Massive siege assault on an icy fortress wall with cannon flashes and falling riders, desperate battle", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Retreating banner columns of cavalry dragging wounded across snow, defeated horde", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "icy fortress wall at dawn with cannon fire, defiant steel-blue wash"},
+  {"kind": "s6", "title": "天启驾崩",
+   "narration": "天启皇帝朱由校，做了七年木匠，二十三岁就走到头了：两年前西苑泛舟落了水，落下病根，1627年八月驾崩，没有留下儿子。张皇后力排客魏的干扰，坚持传位给弟弟信王朱由检。深夜，十七岁的信王接到入宫的旨意——所有人都知道，这一夜凶险莫测。",
+   "broll": [
+    {"prompt": "A young emperor failing on a sickbed with wood carvings beside, fading craft and life, autumn light", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A dignified young empress in plain elegance at the center standing firm before scheming courtiers, quiet iron will", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·张皇后"]},
+    {"prompt": "A summons delivered at night to a residence gate, lantern glow on a pale young face, dread moment", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "autumn palace courtyard with drifting leaves, fading amber-grey wash"},
+  {"kind": "s7", "title": "即位之夜",
+   "narration": "朱由检进宫前，在袖子里藏了干粮——宫里所有人的饭，他一口都不敢吃；夜里不敢合眼，点着蜡烛坐到天亮。魏忠贤哭得像死了亲爹，试探着辞官，少年皇帝温言挽留，照旧赏赐。满朝都以为九千岁还是九千岁，只有这个少年知道：他在等，等一个递刀的人。",
+   "broll": [
+    {"prompt": "A vigilant teenager in plain robes at the center sitting upright by candlelight in a vast unfamiliar hall through the night, hidden fear and resolve", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱由检"]},
+    {"prompt": "A weeping old eunuch kowtowing before a composed young sovereign who gestures calm reassurance, theater of loyalty", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Candle burning low beside an untouched plate of food, watchful night, quiet tension", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "candlelit vast hall with tiny vigilant figure, suspense indigo wash"},
+  {"kind": "s8", "title": "递刀的人来了",
+   "narration": "两个月后，一个嘉兴贡生钱嘉征上疏，弹劾魏忠贤十大罪。少年皇帝看完，一句话没说，只让身边人把奏疏念给魏忠贤听。九千岁跪在地上，汗流浃背——大限到了。下集：宁远城头一炮惊天下，与崇祯的铁腕清算。你猜天启要是多活十年，大明还有救吗？评论区聊聊。",
+   "broll": [
+    {"prompt": "A young scholar submitting a thick impeachment scroll at the palace gates, dawn of reckoning", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An old eunuch kneeling drenched in sweat before a throne as an official reads aloud, judgment arriving", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Shrine banners being torn down in a town square, statues toppling, cult collapsing", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "falling shrine banners and grey dawn, collapsing gold wash"}
+ ]
+}

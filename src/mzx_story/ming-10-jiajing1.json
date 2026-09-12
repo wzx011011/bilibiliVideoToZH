@@ -1,0 +1,68 @@
+{
+ "title": "大明演义 10 · 嘉靖（上）：外藩少年掀翻满朝文武",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义10-嘉靖大礼议.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "入京",
+   "narration": "1521年，正德无嗣，十四岁的堂弟朱厚熜从湖北安陆进京继位。可人还没进城，先吃了下马威：礼部安排他从旁门进宫，先按太子礼再登基。少年当场拒绝：我是奉遗诏来继位的，不是来当太子的。僵到最后，文官让步——他从大明门进，直接登基，年号嘉靖。第一次交锋，少年赢了。",
+   "tts_narration": "1521年，正德无嗣，十四岁的堂弟朱厚聪从湖北安陆进京继位。可人还没进城，先吃了下马威：礼部安排他从旁门进宫，先按太子礼再登基。少年当场拒绝：我是奉遗诏来继位的，不是来当太子的。僵到最后，文官让步——他从大明门进，直接登基，年号嘉靖。第一次交锋，少年赢了。",
+   "broll": [
+    {"prompt": "A modest teenage prince's procession arriving at massive city gates, the young prince in plain dark robe at the center, officials waiting in formal rows, tension", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "A determined young boy in plain dark robes standing firm at the center before protocol officials in crimson robes, refusing to move, dramatic standoff", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "Teenage emperor enthroned through the great central gate, banners and drums, young face calm and sharp", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "massive gate towers with a modest procession at dawn, tense cool wash"},
+  {"kind": "s2", "title": "改爹难题",
+   "narration": "登基第五天，嘉靖抛出一道让全体文官头疼的题：我亲爹兴献王，该叫什么？以首辅杨廷和为首的礼官给出标准答案：按惯例，你过继给弘治一脉，亲爹以后改叫叔父。少年不干：皇位是你们施舍的吗？亲爹娘岂能说改就改？一道诏书引发全朝弹劾，君臣拉锯三年，谁也不让步。",
+   "broll": [
+    {"prompt": "A young emperor alone at his desk at the center studying ritual classics, a portrait tablet of his father beside, candlelit resolve", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "Rows of senior scholars in court arguing in unison, led by a stern chief minister in crimson robes at the center, scrolls thrust forward, wall of orthodoxy", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·杨廷和"]},
+    {"prompt": "Young emperor glaring down from throne at assembled ministers, silent war of wills, dramatic composition", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "court hall divided in two camps under high beams, cold blue-grey wash"},
+  {"kind": "s3", "title": "理论武器",
+   "narration": "转机来自一个考了多次才中进士的底层官员张璁。他上书：礼经有据，继统不继嗣——皇帝可以不改爹！嘉靖如获至宝，张璁和桂萼两个小官火箭般升入京城。文官集团骂他们投机钻营，可皇帝不在乎出身，只在乎有人递刀。新贵与旧臣，朝堂撕成两派。",
+   "tts_narration": "转机来自一个考了多次才中进士的底层官员张聪。他上书：礼经有据，继统不继嗣——皇帝可以不改爹！嘉靖如获至宝，张聪和桂鄂两个小官火箭般升入京城。文官集团骂他们投机钻营，可皇帝不在乎出身，只在乎有人递刀。新贵与旧臣，朝堂撕成两派。",
+   "broll": [
+    {"prompt": "A humble lower official in plain robe writing a bold memorial at night, quill steady, quiet courage", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two minor officials riding fast toward the capital through gates, promotion scrolls behind them, meteoric rise", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Court splitting into two glaring factions across the hall, invisible fault line, charged atmosphere", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "night study with bold memorial draft and oil lamp, resolute amber wash"},
+  {"kind": "s4", "title": "左顺门",
+   "narration": "1524年七月，杨廷和已经退休，他儿子杨慎带头，两百多名官员跪在左顺门前放声大哭，声震大内。嘉靖摊牌了：尽数逮捕！四品以上罚俸，五品以下廷杖，十六个人当场被打死，史称左顺门廷杖。哭声戛然而止，从此再没人敢提改爹的事——亲爹兴献帝顺利称宗祔庙，进了太庙。",
+   "tts_narration": "1524年七月，杨廷和已经退休，他儿子杨慎带头，两百多名官员跪在左顺门前放声大哭，声震大内。嘉靖摊牌了：尽数逮捕！四品以上罚俸，五品以下廷杖，十六个人当场被打死，史称左顺门廷杖。哭声戛然而止，从此再没人敢提改爹的事——亲爹兴献帝顺利称宗附庙，进了太庙。",
+   "broll": [
+    {"prompt": "Hundreds of officials kneeling and weeping before a palace side gate, led by a young scholar-official in crimson robe at the left, robes spread on stones, moving mass scene", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·杨慎"]},
+    {"prompt": "Imperial guards seizing protesting officials in the courtyard, robes torn, chaos ordered by force, dramatic composition", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A solemn ancestral tablet being carried into the imperial temple procession, incense and banners, victory ritual", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "palace side gate courtyard under storm light, heavy slate wash"},
+  {"kind": "s5", "title": "新贵上位",
+   "narration": "廷杖之后，议礼派全面上位：张璁入阁，桂萼执掌礼部，反对派被一个个外放、罢官。皇帝尝到了权力的甜头：文官集团看着铁板一块，其实找准缝就能撬开——拉一派，打一派，让他们自己咬自己。这套权谋，嘉靖玩了一辈子，炉火纯青。",
+   "broll": [
+    {"prompt": "New powerful ministers ascending palace steps in bright robes, old guards descending in shadows, power shift", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An emperor behind a lattice screen at the center moving two faction tokens against each other like chess pieces, hands in lamplight, scheming close-up", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "Dismissed officials leaving the capital gates with luggage in the rain, forlorn procession", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "lattice-screened inner chamber with chess-like scheming table, sly indigo wash"},
+  {"kind": "s6", "title": "西苑修玄",
+   "narration": "权力稳固之后，嘉靖的兴趣转向了道教：设醮炼丹、修斋建醮，干脆搬出大内住进西苑，一住就是二十多年。但别以为他是甩手掌柜——奏章他亲自批，内阁人选他亲自挑，财政人事一把抓。不上朝，不等于不理政：他只是把自己藏进了幕帘后面，当那个操控全局的人。",
+   "broll": [
+    {"prompt": "A Taoist alchemy courtyard with incense smoke, bronze furnace and priest robes, mystical haze", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An emperor in Taoist robe at the center reviewing state documents by lamplight in a garden pavilion, dual life", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "Empty morning court hall again, officials bowing to an absent throne, echoing emptiness", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "misty western-garden pavilion with incense coils, elusory teal wash"},
+  {"kind": "s7", "title": "壬寅宫变",
+   "narration": "1542年十月深夜，端妃宫里，宫女杨金英等十几人趁皇帝熟睡，用黄绫绳勒住他的脖子——慌乱中绳子打成死结，怎么也勒不死。方皇后闻讯赶到，皇帝捡回一条命，涉事宫女全部处死。经此一吓，嘉靖认定宫里全是索命之人，从此彻底住死西苑，连大内都不回，更不再见朝臣。",
+   "broll": [
+    {"prompt": "Assassination attempt in a dark imperial chamber, palace maids struggling with a silk cord over the sleeping emperor on the bed at the center, terrifying night scene", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "The empress in formal ceremonial robes at the center bursting in with lanterns and guards, chamber in uproar, rescue at the brink", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·方皇后"]},
+    {"prompt": "A shaken emperor wrapped in a cloak staring at sealed palace doors, paranoia closing in, claustrophobic mood", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "dark chamber with tangled silk cord and overturned lamps, chilling indigo wash"},
+  {"kind": "s8", "title": "幕后操盘手",
+   "narration": "斗赢了满朝文武的皇帝，差点栽在十几个宫女手里。此后二十年，他躲在幕帘后头，用一纸诏书遥控帝国——而西苑的炼丹炉越烧越旺，一个擅长顺着皇帝心思爬的人，正悄悄走到台前：严嵩。你觉得皇帝该不该跟大臣较劲改爹？评论区聊聊。下集，严嵩、倭寇与庚戌之变。",
+   "broll": [
+    {"prompt": "A shadowy figure behind a grand curtain holding the empire's documents, hands in light, face hidden, iconic composition", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Alchemy furnace glowing hotter in the night garden, smoke curling into dark sky", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A smooth-faced elderly official in dark crimson robes bowing deeply at the center in incense smoke, ambition hidden behind humility, ominous presence", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·严嵩"]}],
+   "bg": "curtain-shadowed imperial study with glowing furnace light, ominous amber wash"}
+ ]
+}

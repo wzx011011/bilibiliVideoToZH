@@ -1,0 +1,66 @@
+{
+ "title": "大明演义 11 · 嘉靖（下）：严嵩、倭寇与庚戌之变",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义11-嘉靖倭寇与严嵩.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "青词宰相",
+   "narration": "皇帝躲在西苑写青词祭天，谁能写好青词，谁就上桌。六十多岁的严嵩靠这一手入阁，又斗倒首辅夏言，独揽内阁二十年。他儿子严世蕃更精，奏章一眼看穿要害，人称小丞相。父子俩把国家当提款机，边饷、河工的银子层层扒皮，严家富可敌国。",
+   "broll": [
+    {"prompt": "An elderly minister in dark crimson robes kneeling at the left to present ornate prayer texts to the emperor in imperial yellow robes enthroned at the right, amid incense smoke, servile elegance", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·严嵩", "右·嘉靖"]},
+    {"prompt": "An elderly father minister in dark crimson robes at the left and his adult son in fine blue robes at the right counting enormous treasure chests in a lavish mansion, gold overflowing, rapacious mood", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·严嵩"]},
+    {"prompt": "An ousted senior statesman in plain dark robes at the center leaving the capital in snow, former power fading behind", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·夏言"]}],
+   "bg": "incense-hazed palace garden with treasure chests, gilded greed wash"},
+  {"kind": "s2", "title": "铁肩担道义",
+   "narration": "敢说话的人不是没有。1553年，兵部员外郎杨继盛上疏弹劾严嵩十大罪五大奸，字字见血。下场呢？廷杖一百，打入死牢三年，最后被处决。他在狱中用碎碗片自己剜掉腐肉，妻子殉死。留下一句名言：铁肩担道义，辣手著文章。此后十几年，再没人敢碰严家。",
+   "broll": [
+    {"prompt": "An upright thin official in plain blue robes kneeling at the left to submit a long damning memorial before towering ministers at the right, fearless posture", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·杨继盛"]},
+    {"prompt": "A dark prison cell with a wounded scholar writing on a wall with a broken pottery shard, single light beam", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Officials in court bowing heads in fearful silence before a smirking powerful minister in dark crimson robes at the center, oppressive atmosphere", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·严嵩"]}],
+   "bg": "prison wall with single light beam and writing hand, stark charcoal wash"},
+  {"kind": "s3", "title": "庚戌之变",
+   "narration": "1550年，蒙古俺答汗绕开重兵防守的大同，从古北口破关而入，兵锋直抵北京城下，在城外烧杀了八天。满朝慌乱，严嵩却下令各军不许出战，说了一句千古名言：塞上打球，饱了自然回去。敌人真就满载而去。皇帝在城楼上看着火光冲天，帝国的脸面，摔得粉碎，史称庚戌之变。",
+   "broll": [
+    {"prompt": "Mongol cavalry breaking through mountain pass at dawn, beacon smoke rising, unstoppable horde", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Beijing city walls with defenders watching suburbs burn in the distance, smoke columns, helpless fury", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Mongol riders driving plundered herds and carts back north across grassland, laden and triumphant", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "city walls at dusk with distant burning suburbs, smoke-grey crimson wash"},
+  {"kind": "s4", "title": "倭乱大爆发",
+   "narration": "北边刚烧完，东南又炸了。海禁越严，走私越疯：沿海豪强勾结日本浪人，组成亦商亦盗的武装集团，王直这样的走私大王自称净海王。到嘉靖中后期，倭患全面糜烂，几十个倭寇居然能一路打到南京城下，如入无人之境。富庶的江浙，成了人间地狱。",
+   "broll": [
+    {"prompt": "Smuggler junks meeting Japanese ronin pirates on a night coast, contraband crates, conspiracy under moonlight", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Pirate raiders sweeping through a prosperous Jiangnan water town, burning docks, terrified villagers, chaos", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A small band of pirates striding boldly toward huge city walls, defenders frozen, audacious menace", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "night coast with smuggler junks and moonlight, treacherous teal wash"},
+  {"kind": "s5", "title": "戚家军",
+   "narration": "乱世出强人。山东小伙戚继光在浙江义乌募了四千矿工农民，练成令行禁止的戚家军，发明专克倭刀的鸳鸯阵：长短兵器十二人一组，攻防一体。1561年台州之战，一个多月九战九捷，自身伤亡不到二十人，歼敌上千。他与俞大猷并称俞龙戚虎，倭寇听见戚字号令，掉头就跑。",
+   "tts_narration": "乱世出强人。山东小伙戚继光在浙江义乌募了四千矿工农民，练成令行禁止的戚家军，发明专克倭刀的鸳鸯阵：长短兵器十二人一组，攻防一体。1561年胎州之战，一个多月九战九捷，自身伤亡不到二十人，歼敌上千。他与俞大犹并称俞龙戚虎，倭寇听见戚字号令，掉头就跑。",
+   "broll": [
+    {"prompt": "Disciplined new army drilling with long spears in mountain valley formation, a young commander in armor on a rock at the center observing", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·戚继光"]},
+    {"prompt": "Mandarin-duck formation in battle: twelve-man cells with long bamboo lances trapping sword-wielding pirates", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Nine victories banners over coastal battlefield at sunset, victorious troops marching, sweeping epic scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "valley drill ground with spear formation silhouettes, disciplined ochre wash"},
+  {"kind": "s6", "title": "平倭",
+   "narration": "台州之后，戚继光援福建、战平海卫、克横屿，俞大猷在陆上节节进逼，总督胡宗宪居中调度，到嘉靖末年，肆虐二十年的倭患基本平定。但说句实在话：堵不如疏——真正治本的，是几年后解除海禁的隆庆开关，这个咱们下集说。",
+   "broll": [
+    {"prompt": "Ming troops storming an island pirate stronghold at low tide, mudflat crossing with bundled reeds, daring assault", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Coastal fortress recaptured with flags restored, liberated townsfolk welcoming troops", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Trading ships returning to reopened harbors with cargoes, hopeful dawn over busy docks", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "reclaimed coastal fortress with returning ships, relieved dawn wash"},
+  {"kind": "s7", "title": "抬棺骂皇帝",
+   "narration": "1566年，户部小官海瑞干了一件震动天下的事：买好棺材、告别妻子，把《治安疏》递了上去——陛下炼丹修玄二十年，天下不治久矣！嘉靖嘉靖，家家皆净！嘉靖气得把奏疏摔在地上喊快抓住他，别让他跑了。旁边太监说：这人早买好棺材，不会跑的。皇帝沉默半晌，捡起奏疏又读了一遍，叹口气：他想当比干，我可不做纣王。不杀，下狱。",
+   "broll": [
+    {"prompt": "A stern upright official in plain blue robes at the center placing his own coffin in courtyard before submitting a memorial, family tearfully bowing", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·海瑞"]},
+    {"prompt": "An aged emperor in dark robes at the center hurling a memorial scroll then slowly picking it up, rereading in candlelight, complex rage", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "A calm prisoner seated in cell with folded hands, guards outside uneasy, quiet moral victory", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "courtyard with a standing coffin and determined figure, resolute grey-gold wash"},
+  {"kind": "s8", "title": "帝国病了",
+   "narration": "同年底，嘉靖驾崩，严嵩早在四年前倒台，儿子被杀，家产抄出黄金三万两、白银二百万两，相当于国库一年收入。海瑞出狱复官。一个抬棺骂皇帝的人平安活下来，一个巨贪被清算——看着解气，可北虏、倭寇、贪腐三座大山一座没搬走。帝国的病，已经无药可医，除非换一种活法。下一集：隆庆开关，与张居正登场。",
+   "broll": [
+    {"prompt": "Imperial treasury raid: soldiers hauling gold and silver from a fallen minister's mansion, mountains of bullion", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An aging emperor in Taoist robe on his deathbed at the center in a garden pavilion, incense dying out, era ending", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·嘉靖"]},
+    {"prompt": "A released official in plain robe at the center walking out of prison gates into morning light, people watching with respect, new beginning", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·海瑞"]}],
+   "bg": "dawn light over prison gates and confiscated bullion, cathartic grey-gold wash"}
+ ]
+}

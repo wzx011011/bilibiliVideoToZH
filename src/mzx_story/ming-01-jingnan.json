@@ -1,0 +1,194 @@
+{
+ "title": "大明演义 01 · 靖难之役",
+ "voice": "doubao-京腔侃爷",
+ "chapters": [
+  {
+   "kind": "s1",
+   "title": "开场",
+   "narration": "明朝建国三十一年，南京城里出了大事儿。七十一岁的朱元璋驾崩了，接班的不是儿子，而是孙子。爷爷尸骨未寒，新皇帝环顾四周，发现一圈虎视眈眈的叔叔。今天讲的就是这场叔叔和侄子的火并——靖难之役。",
+   "tts_narration": "明朝建国三十一年，南京城里出了大事儿。七十一岁的朱元璋驾崩了，接班的不是儿子，而是孙子。爷爷尸骨未寒，新皇帝环顾四周，发现一圈虎视眈眈的叔叔，今天我们就来讲讲这场叔叔和侄子之间的火并，史称静难之役。",
+   "broll": [
+    {
+     "prompt": "Night scene inside the Ming imperial palace in Nanjing, year 1398: an elderly emperor lying on his dragon bed near death, candlelight shadows on silk curtains, a young heir kneeling at a distance, grief and tension, wide cinematic composition",
+     "at": 0.0,
+     "hold": 0.32,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A young nervous emperor on the throne surrounded by shadowy uncles in armor standing in a ring, oppressive atmosphere at dawn",
+     "at": 0.33,
+     "hold": 0.32,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Armored princes with armies standing in a ring around a giant map of the empire, ambition in their eyes, dark dramatic mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "night view of palace rooftops and a hazy moon behind drifting clouds, candle-warm glow fading into dark indigo corners"
+  },
+  {
+   "kind": "s2",
+   "title": "分封的雷",
+   "narration": "朱元璋生前搞了个制度：把儿子们分封到各地当藩王，个个手握兵权，替朝廷看家。他觉得，自家人嘛，靠得住。可他没想到，自己刚走，二十多个手握兵权的叔叔，就成了新皇帝建文帝的心病。尤其是北边的燕王朱棣，常年跟蒙古人过招，战力天花板。",
+   "bg": "an old parchment campaign table with faint ink-wash coastlines and mountain ridges, dim lamp light from the upper left",
+   "broll": [
+    {
+     "prompt": "An aged emperor proclaiming the enfeoffment of his princes in a grand ceremony, princes kneeling to receive seals and armies, solemn ritual, wide cinematic composition",
+     "at": 0.0,
+     "hold": 0.3,
+     "fit": "contain"
+    },
+    {
+     "type": "diagram",
+     "prompt": "",
+     "at": 0.3,
+     "hold": 0.7
+    }
+   ]
+  },
+  {
+   "kind": "s3",
+   "title": "削藩",
+   "narration": "建文帝一咬牙，决定削藩。齐泰、黄子澄两个书生出主意：先挑软柿子捏。一年之内，周王、齐王、湘王、代王、岷王接连被废，湘王全家自焚。名单上的叔叔一个个倒下，就剩最大的那只——燕王朱棣。留给他的时间不多了。",
+   "broll": [
+    {
+     "prompt": "Ming dynasty imperial court hall: a young emperor on the throne consulting two scholar-officials presenting memorials, tense political atmosphere, documents and a map on the desk, wide cinematic composition",
+     "at": 0.0,
+     "hold": 0.28,
+     "fit": "contain"
+    },
+    {
+     "type": "diagram",
+     "prompt": "",
+     "at": 0.28,
+     "hold": 0.72
+    }
+   ],
+   "bg": "the same parchment campaign table with faint red circle marks and scattered memorial papers, dim lamp light"
+  },
+  {
+   "kind": "s4",
+   "title": "影帝朱棣",
+   "narration": "朱棣的应对方式相当迷惑：装疯。大夏天的裹着棉被在街上烤火，抢人家酒食，满嘴胡话。朝廷派来的探子一看，得，真疯了。奏报递上去，建文帝信了一半，压住了手。就在这段真空期里，朱棣偷偷招兵买马，赶造兵器，把王府后院练成了兵营。",
+   "broll": [
+    {
+     "prompt": "A Ming prince disguised as a madman in a ragged winter fur robe, sitting beside a small charcoal fire on a hot summer street, eccentric wild expression, bystanders pointing from afar, sweltering sunlight, cinematic street scene",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The mad prince snatching wine and food from street vendors, crowd laughing and pointing, chaotic market scene",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Secret night training in the prince's mansion courtyard: soldiers drilling with weapons, forging armor, torchlight, conspiracy mood",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "a quiet summer street corner in soft haze, faint silhouettes of market stalls and rooftops, warm dusty sunlight"
+  },
+  {
+   "kind": "s5",
+   "title": "起兵",
+   "narration": "建文元年七月，纸包不住火了。朝廷下令逮捕燕王府官员，朱棣先下手为强，把来使一刀咔嚓，八百死士控制北平，起兵。旗号也讲究：不是造反，是奉祖训、清君侧，名靖难。意思很清楚：皇帝没错，错的是皇帝身边那几个奸臣。",
+   "broll": [
+    {
+     "prompt": "Night assault on the Beiping city gate: Ming soldiers with torches, blades and banners storming through the gate, torchlight flaring on ancient fortress walls, chaos of a rebellion breaking out, wide cinematic composition",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Eight hundred elite soldiers seizing the city government offices at night, swift silent takeover, torch columns in the streets",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A huge red rebellion banner raised above the city gate at dawn, assembled armies below, dramatic uprising scene",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "faint silhouettes of fortress walls and war banners in night mist, distant torch glow along the bottom edge"
+  },
+  {
+   "kind": "s6",
+   "title": "三年拉锯",
+   "narration": "接下来三年，就是一场马拉松。朝廷兵多粮多，输得起；朱棣能打，但穷，输一场就伤筋动骨。李景隆五十万大军围北平，被朱棣回手就打崩；济南城铁铉死守，愣是打不下来；东昌一战朱棣差点交代。最离谱的是朝廷还给朱棣上了个护身符：别让我背上杀叔叔的名声。于是朱棣每次都敢站在箭雨最密的地方。",
+   "bg": "vast battlefield plain in dust haze, faint distant ridgelines and broken banner poles, muted afternoon light",
+   "broll": [
+    {
+     "prompt": "Brutal aftermath of a lost battle: broken spears, fallen banners and wounded soldiers across a snowy field, crows circling, desolate",
+     "at": 0.0,
+     "hold": 0.25,
+     "fit": "contain"
+    },
+    {
+     "type": "diagram",
+     "prompt": "",
+     "at": 0.25,
+     "hold": 0.75
+    }
+   ]
+  },
+  {
+   "kind": "s7",
+   "title": "直捣南京",
+   "narration": "建文四年，谍报说南京空虚。朱棣一咬牙，不攻城、不下寨，绕过所有重镇，轻骑直插南京。六月，瓜洲渡江，金川门守将开门投降。皇宫起火，建文帝不知所踪。四年叔侄之战，就此收场。",
+   "broll": [
+    {
+     "type": "diagram",
+     "prompt": "",
+     "at": 0.0,
+     "hold": 0.7
+    },
+    {
+     "prompt": "The Nanjing imperial palace complex engulfed in towering flames at night, black silhouettes of palace halls against a fire-glow sky, embers and smoke rising into darkness, tragic dramatic climax, wide cinematic composition",
+     "at": 0.7,
+     "hold": 0.3,
+     "fit": "contain"
+    }
+   ],
+   "bg": "river mist at dusk with a faint distant walled city on the horizon, pale amber sky wash, subtle dark river sheen at the bottom"
+  },
+  {
+   "kind": "s8",
+   "title": "结局与悬案",
+   "narration": "后来的事儿大家都知道了：朱棣成了永乐大帝，迁都北京、派郑和下西洋、修永乐大典，把大明干成了超级大国。而建文帝的下落，成了明朝第一悬案：有人说烧死了，有人说出家了，甚至有人说郑和下西洋都带着找人的任务。那么问题来了——你觉得建文帝去哪儿了？评论区聊聊。",
+   "bg": "calm dawn over sea and desert dunes, faint sail silhouettes on the horizon, pale gold wash fading into parchment white",
+   "broll": [
+    {
+     "prompt": "The grand forbidden city palace complex completed at dawn, golden roofs glowing, epic wide composition",
+     "at": 0.0,
+     "hold": 0.32,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Treasure fleet with giant red-sailed ships departing the harbor into golden sunrise",
+     "at": 0.33,
+     "hold": 0.32,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A mysterious monk silhouette walking away into misty mountains, enigmatic question mood, ending scene",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  }
+ ],
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, early Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "video_name": "大明演义01-靖难之役.mp4",
+ "broll_backend": "icu"
+}

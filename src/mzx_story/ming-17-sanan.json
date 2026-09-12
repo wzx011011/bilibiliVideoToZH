@@ -1,0 +1,67 @@
+{
+ "title": "大明演义 17 · 晚明三大案：一个月皇帝与三场罗生门",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义17-晚明三大案.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "苦命太子",
+   "narration": "万历的太子朱常洛，是明朝最憋屈的储君：因为亲妈出身低，他爹跟大臣冷战十五年才肯立他。1615年，一个叫张差的汉子抡着枣木棍，居然一路打进太子的慈庆宫——审到最后，线索隐隐指向郑贵妃宫里，万历却不许深挖，砍了张差匆匆结案。这就是晚明三大案的第一案：梃击案。",
+   "tts_narration": "万历的太子朱常洛，是明朝最憋屈的储君：因为亲妈出身低，他爹跟大臣冷战十五年才肯立他。1615年，一个叫张差的汉子抡着枣木棍，居然一路打进太子的慈庆宫——审到最后，线索隐隐指向郑贵妃宫里，万历却不许深挖，砍了张差匆匆结案。这就是晚明三大案的第一案：挺击案。",
+   "broll": [
+    {"prompt": "A melancholy young prince in plain dark robes at the center standing in a sparse study, long years of waiting", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱常洛"]},
+    {"prompt": "A wild man swinging a wooden club bursting through palace gates at night, guards scrambling, sudden attack", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Interrogation under lantern light with officials exchanging whispers of deeper conspiracy, murk and suspicion", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "palace side gate at night with scattered torches, sinister indigo wash"},
+  {"kind": "s2", "title": "一个月的新政",
+   "narration": "1620年七月，万历驾崩，三十八岁的朱常洛终于登基，改元泰昌。新官上任三把火烧得漂亮：罢矿税、撤矿监税使、补上空缺的大臣、发内帑犒劳边军，朝野一片欢呼——大家盼着中兴。谁也没想到，这位苦熬了十九年的太子皇帝，只干了二十九天。",
+   "broll": [
+    {"prompt": "A new emperor in fresh imperial yellow robes at the center receiving joyous officials in dawn light, hope of renewal", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱常洛"]},
+    {"prompt": "Edicts abolishing mining taxes announced to cheering merchants and crowds, relief and celebration", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Treasury silver being loaded onto carts for frontier soldiers, renewed morale, brisk energy", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "throne hall bathed in fresh dawn gold, hopeful amber wash"},
+  {"kind": "s3", "title": "红丸案",
+   "narration": "八月初十，泰昌病倒了。郑贵妃送来八名美女，皇帝照单全收，病情加重；掌管御药的崔文升又下了猛泻药，一昼夜泻几十次，人直接脱了相。危急关头，鸿胪寺丞李可灼献上一颗红色药丸，说是仙丹。第一丸下去，皇帝说暖润舒畅；再进一丸——次日凌晨，暴毙。在位二十九天。这就是第二案：红丸案。",
+   "broll": [
+    {"prompt": "A sick emperor propped on his bed attended by worried physicians in a candlelit chamber, steady decline", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A red pill held aloft in a small open porcelain box by kneeling officials, ominous gift", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Court in black mourning overnight with incense before an empty throne, sudden death shock", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "candlelit sick chamber with a single red pill glowing, ominous crimson wash"},
+  {"kind": "s4", "title": "移宫案",
+   "narration": "皇帝暴毙，新麻烦来了：抚养皇长子的李选侍，赖在皇帝正宫乾清宫不走，还把十六岁的朱由校攥在手里——挟天子号令群臣的意思，摆在了明面上。杨涟、左光斗等大臣急了，硬闯进宫把朱由校抢了出来，当天拥立登基，再逼李选侍搬出乾清宫。这就是第三案：移宫案。三案聚齐，只用了一个月。",
+   "broll": [
+    {"prompt": "Furious ministers in crimson robes at the left hustling a teenage heir to safety through palace doors at dawn, palace coup", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·杨涟"]},
+    {"prompt": "A proud consort in rich robes at the center refusing to leave a grand hall, maids and eunuchs frozen around her", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·李选侍"]},
+    {"prompt": "A teenage emperor enthroned in a vast hall while courtiers exhale in relief, uneasy dawn", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "grand palace hall at dawn with hurrying figures, tense slate wash"},
+  {"kind": "s5", "title": "东林与党争",
+   "narration": "三案的背后，站着一整个分裂的朝廷。顾宪成的东林书院成了舆论中心，讲究家事国事天下事，事事关心；朝堂上的齐、楚、浙党跟东林互为死敌，逢事必撕。梃击、红丸、移宫，每一案都成了党争的武器：办你，不是为了查真相，是为了把你划成坏人。晚明党争，从这时候起彻底白热化。",
+   "tts_narration": "三案的背后，站着一整个分裂的朝廷。顾宪成的东林书院成了舆论中心，讲究家事国事天下事，事事关心；朝堂上的齐、楚、浙党跟东林互为死敌，逢事必撕。挺击、红丸、移宫，每一案都成了党争的武器：办你，不是为了查真相，是为了把你划成坏人。晚明党争，从这时候起彻底白热化。",
+   "broll": [
+    {"prompt": "Scholars debating passionately in a canal-side academy hall, scrolls and earnest faces, birth of a faction", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two camps of officials glaring across a court aisle, invisible wall of faction rivalry", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Crowds reading notices pinned to a post in a market street, storm of public opinion", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "academy hall and court aisle split by light, partisan blue-grey wash"},
+  {"kind": "s6", "title": "木匠皇帝",
+   "narration": "接盘的朱由校，是个十六岁的少年。他祖父嫌他家出身低，没人给他正经请老师，大字不识几个。这孩子有一样天赋：木工。做出来的水傀儡、楼台亭榭巧夺天工，锯子刨子不离手。可皇帝痴迷打家具，朝政总得有人管——他信任谁？一个是从小抱大他的奶妈客氏，一个是目不识丁却伶俐讨喜的太监魏忠贤。",
+   "broll": [
+    {"prompt": "A teenage emperor in plain work apron at the center planing wood in a palace workshop, exquisite miniature palaces around him", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱由校"]},
+    {"prompt": "A matronly nurse in fine silks at the left and a plump smiling eunuch in dark robe at the right standing close together in shadow, intimate influence", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·客氏", "右·魏忠贤"]},
+    {"prompt": "A stack of memorials growing beside an abandoned imperial desk covered in wood shavings, priorities askew", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "palace workshop with wood shavings and miniature pavilions, warm sawdust wash"},
+  {"kind": "s7", "title": "批红到了太监手里",
+   "narration": "大字不识的魏忠贤，被派去掌管替皇帝批红的司礼监——皇帝刻木头，太监念奏章，念什么、怎么批，全凭他一张嘴。加上客氏在宫里吹风，帝国最高权力，就这样滑到了两个文盲手里。天启初年的东林党人刚刚掌权，正意气风发，还没意识到真正的对手，已经站到了皇帝身边。",
+   "broll": [
+    {"prompt": "A eunuch reading memorials aloud to a distracted emperor carving wood, power flowing sideways", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A red ink brush handed to shadowy hands behind a curtain, decisions made unseen", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Opposition scholars being dragged away by guards while officials watch in fear, purge beginning", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "curtained inner hall with red ink and shadows, usurping indigo wash"},
+  {"kind": "s8", "title": "三个月换了三朝",
+   "narration": "1620年这一年，大明三个月里换了三朝：爷爷万历走了，爹泰昌只干二十九天，十六岁的木匠少年仓促接盘——大明的运气，真是捉摸不透。皇帝的手艺越精，帝国的方向盘越虚。下集：九千岁魏忠贤，与阉党血洗东林。你觉得三大案里哪一案最可疑？评论区聊聊。",
+   "broll": [
+    {"prompt": "Three empty imperial thrones in a row fading into mist, three reigns lost, elegiac scene", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A lone teenage silhouette in a vast dark hall holding a small wooden model of a palace, lonely burden", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Storm light gathering over forbidden city rooftops at dusk, change coming, cinematic dread", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "misty throne hall with three empty seats, fading pale-gold wash"}
+ ]
+}

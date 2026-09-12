@@ -1,0 +1,68 @@
+{
+ "title": "大明演义 24 · 南明终章",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义24-南明终章.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "弘光朝廷",
+   "narration": "北京陷落的消息传到南京，一个半月后，群臣拥立福王朱由崧监国、登基，年号弘光。按说这半壁江山还有百万兵，可朝廷上下想的不是复仇，而是幻想跟清廷议和、借清兵的刀平掉李自成——美其名曰联虏平寇。清廷没谈下来，内部倒先斗起来了。",
+   "broll": [
+    {"prompt": "Courtiers crowning a reluctant noble in a southern capital hall, half an empire's desperate hope", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Officials drafting a peace letter toward the north while ignoring military maps, delusive diplomacy", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Factions of officials arguing in a grand hall while the frontier burns outside, factional strife", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "southern capital palace under uneasy amber dusk, complacent amber wash"},
+  {"kind": "s2", "title": "扬州十日",
+   "narration": "1645年四月，清军多铎部直扑扬州。督师史可法手中无兵，各镇不救，他拒绝诱降，写下绝命家书，率残部死守。城破，史可法巷战被俘，劝降不跪，从容赴死。清军随即屠城十日，史称扬州十日，死者以数十万计。梅花岭上至今只有衣冠冢——遗体没能找回来。",
+   "broll": [
+    {"prompt": "A lone general in dark armor at the center on a besieged city wall writing a farewell letter by torchlight, doomed resolve", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·史可法"]},
+    {"prompt": "Street fighting and fallen banners inside a breached walled city, fierce last resistance", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A solitary tomb mound on a plum-covered ridge under falling petals, mourning without a body", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "besieged yangzhou walls under dark rain clouds, tragic ink-grey wash"},
+  {"kind": "s3", "title": "隆武帝",
+   "narration": "南京陷落，弘光被俘。福州方面，郑芝龙把唐王朱聿键推上皇位，年号隆武。这位皇帝是南明最有进取心的一位：整军、筹饷、决意亲征。可兵权财权全在郑芝龙手里——郑家算的是买卖账，清军一招安，郑芝龙连招呼都不打就降了。隆武帝突围被俘，绝食而死。",
+   "tts_narration": "南京陷落，弘光被俘。福州方面，郑芝龙把唐王朱玉键推上皇位，年号隆武。这位皇帝是南明最有进取心的一位：整军、筹饷、决意亲征。可兵权财权全在郑芝龙手里——郑家算的是买卖账，清军一招安，郑芝龙连招呼都不打就降了。隆武帝突围被俘，绝食而死。",
+   "broll": [
+    {"prompt": "A determined emperor in a coastal capital reviewing troops with burning resolve, ambitious reformer", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A merchant-admiral weighing silver coins on one hand and military orders on the other, profiteering broker", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An emperor's small escort surrounded in mountain mist, betrayed and out of options", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "coastal capital harbor with war junks and betrayal shadows, ambivalent teal wash"},
+  {"kind": "s4", "title": "两蹶名王",
+   "narration": "张献忠战死后，义子孙可望、李定国率大西军余部联明抗清，拥立永历帝朱由榔。1652年，李定国攻克桂林，逼得清定南王孔有德自焚；随后衡州设伏，阵斩敬谨亲王尼堪——一年之内两蹶名王，明清开战以来明军从未有过的胜绩，天下震动。可惜随后内讧：孙可望与李定国火并，兵败降清，云贵布防尽入清手。",
+   "broll": [
+    {"prompt": "A young general in bright armor at the center leading an elephant-mounted charge through a city gate, meteoric triumph", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·李定国"]},
+    {"prompt": "A burning princely mansion and a fallen enemy commander's banner after a storming assault, dynasty's pride broken", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two allied generals facing off coldly across a divided camp, alliance cracking into civil strife", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "southern mountains with war elephants at dawn, meteoric crimson wash"},
+  {"kind": "s5", "title": "国姓爷",
+   "narration": "郑芝龙降清，他的儿子郑成功不肯跟，拉起一支海上劲旅，被隆武帝赐国姓，人称国姓爷。1659年，他率十七万大军溯长江北伐，克瓜洲、取镇江，兵临南京城下——中了清军缓兵之计，主力尽丧。1661年，郑成功转向东进，渡海围攻台湾，苦战九个月逼降荷兰人。次年，他病逝台湾，年仅三十八岁。",
+   "broll": [
+    {"prompt": "A commanding young admiral at the prow of a flagship with a vast junk fleet behind him, sea-born army", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·郑成功"]},
+    {"prompt": "A mighty fleet sailing up a great river toward a walled capital, the offensive at its peak", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Landing boats storming a green island shore under fortress cannon fire, amphibious assault across the sea", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "great sailing junk fleet on open sea at dawn, azure-gold naval wash"},
+  {"kind": "s6", "title": "永历末路",
+   "narration": "1658年，清军三路攻入云贵，永历帝逃入缅甸。1661年，缅人在咒水之变中袭杀随行群臣，把永历献给吴三桂。1662年四月，昆明，永历帝被用弓弦绞死，南明最后一个朝廷落幕。消息传到边境，李定国悲愤成疾，病逝于勐腊，临终留下六个字：宁死荒外，勿降也！",
+   "tts_narration": "1658年，清军三路攻入云贵，永历帝逃入缅甸。1661年，缅人在咒水之变中袭杀随行群臣，把永历献给吴三桂。1662年四月，昆明，永历帝被用弓弦绞死，南明最后一个朝廷落幕。消息传到边境，李定国悲愤成疾，病逝于猛腊，临终留下六个字：宁死荒外，勿降也！",
+   "broll": [
+    {"prompt": "A fleeing emperor's small cortege crossing a jungle river at dusk into foreign land, exile and fear", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱由榔"]},
+    {"prompt": "A bound captive emperor delivered to enemy generals under cold torchlight, last betrayal", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A dying general in camp at the jungle frontier gripping a sword, unyielding to the end", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "jungle frontier river at dusk with a fleeing cortege, funereal violet wash"},
+  {"kind": "s7", "title": "孤岛余晖",
+   "narration": "大陆悉数沦陷，台湾的郑氏政权仍奉永历年号，又撑了二十二年。1683年，施琅率水师攻取澎湖，郑氏后人纳土归降。寓居台湾的宁靖王朱术桂自缢殉国，留下题诗：艰辛避海外，总为几茎发——为的正是那身汉家衣冠。至此，大明最后的余晖熄灭。",
+   "tts_narration": "大陆悉数沦陷，台湾的郑氏政权仍奉永历年号，又撑了二十二年。1683年，施琅率水师攻取澎湖，郑氏后人纳土归降。寓居台湾的宁靖王朱述桂自缢殉国，留下题诗：艰辛避海外，总为几茎发——为的正是那身汉家衣冠。至此，大明最后的余晖熄灭。",
+   "broll": [
+    {"prompt": "A lone prince in plain robes standing before his own prepared grave on an island cliff, final dignity", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "War junks storming island harbor defenses under cannon smoke, last stronghold falling", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A fading sunset over an island fortress lowering its banner, the last light of a dynasty", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "island fortress at fading sunset, wistful indigo-teal wash"},
+  {"kind": "s8", "title": "大明落幕",
+   "narration": "从1368年朱元璋应天府称帝，到1644年崇祯自缢煤山，大明十六帝、二百七十六年。这个王朝有过永乐的万国来朝，有过土木堡的惊惶，有过嘉靖的二十年不上朝，也有过煤山那棵树。于谦、王阳明、张居正、戚继光、史可法、郑成功——王朝会落幕，名字留了下来。明朝系列到此完结，你最想给谁递一杯酒？评论区聊聊。",
+   "broll": [
+    {"prompt": "A golden age montage of a grand capital with foreign envoys arriving, dynasty at its zenith", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A sweeping panorama of the dynasty's rise and fall across mountains rivers and city walls, three centuries in one frame", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A row of resolute historical figures' silhouettes under a vast sky with the final page turning, epic farewell frame", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "vast sky over mountains and a turning final page, farewell gold-dusk wash"}
+ ]
+}

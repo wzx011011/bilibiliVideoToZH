@@ -1,0 +1,69 @@
+{
+ "title": "大明演义 16 · 万历三大征（下）：打赢了所有仗，也打空了家底",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义16-万历三大征下.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "七百年的土司",
+   "narration": "播州，今天的贵州遵义，杨家在这儿当了一千年的土皇帝：从唐朝末年算起，传了二十九代，朝廷换了好几家，杨家一直没挪窝。传到杨应龙这代，骄横不法，据险自雄，早就把重庆的官府不放在眼里。1599年，他索性撕破脸，起兵造反，一路杀到綦江，全城血洗——西南大门，门户洞开。",
+   "tts_narration": "播州，今天的贵州遵义，杨家在这儿当了一千年的土皇帝：从唐朝末年算起，传了二十九代，朝廷换了好几家，杨家一直没挪窝。传到杨应龙这代，骄横不法，据险自雄，早就把重庆的官府不放在眼里。1599年，他索性撕破脸，起兵造反，一路杀到其江，全城血洗——西南大门，门户洞开。",
+   "broll": [
+    {"prompt": "A haughty regional chieftain in mixed tribal and official regalia at the center seated in a mountain stronghold hall, hereditary pride turning to defiance", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·杨应龙"]},
+    {"prompt": "Mountain fortress city on a steep ridge above a river valley, terraced defenses, impregnable stronghold", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Rebel troops sweeping through a river town with smoke and fleeing civilians, brutal sack", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "mountain stronghold above river gorge in southwest china, brooding green-grey wash"},
+  {"kind": "s2", "title": "八路大军",
+   "narration": "朝廷的反应是倾国一战：总督李化龙坐镇重庆，调集二十多万大军，分八路进兵——这是三大征里出动兵力最多的一次。前线的将军里有个狠角色：大刀刘綎，使一百二十斤镔铁大刀，人称晚明第一猛将。1600年春天，八路大军齐头并进，一路攻克娄山关，兵锋直指杨应龙的老巢。",
+   "tts_narration": "朝廷的反应是倾国一战：总督李化龙坐镇重庆，调集二十多万大军，分八路进兵——这是三大征里出动兵力最多的一次。前线的将军里有个狠角色：大刀刘厅，使一百二十斤镔铁大刀，人称晚明第一猛将。1600年春天，八路大军齐头并进，一路攻克娄山关，兵锋直指杨应龙的老巢。",
+   "broll": [
+    {"prompt": "Imperial war council map table with eight campaign arrows drawn by generals, grand strategy scene", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A mighty general with a huge iron blade riding at the head of a mountain column, fearsome vanguard", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Eight army columns descending through mountain passes simultaneously, epic multi-front campaign", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "eight columns snaking through karst mountains, thunderous crimson wash"},
+  {"kind": "s3", "title": "海龙囤",
+   "narration": "杨应龙的老巢海龙囤，建在山顶台地上，只有一条石阶小路能上，飞鸟难渡，杨家经营了几百年。但再险的城也怕不要命的人：刘綎部抢先登城，各路冒死仰攻，一百一十四天，海龙囤城破。杨应龙自尽，传承七百年的杨氏土司，就此灰飞烟灭。朝廷顺势改土归流，把播州划成了两个流官府。",
+   "tts_narration": "杨应龙的老巢海龙盾，建在山顶台地上，只有一条石阶小路能上，飞鸟难渡，杨家经营了几百年。但再险的城也怕不要命的人：刘厅部抢先登城，各路冒死仰攻，一百一十四天，海龙盾城破。杨应龙自尽，传承七百年的杨氏土司，就此灰飞烟灭。朝廷顺势改土归流，把播州划成了两个流官府。",
+   "broll": [
+    {"prompt": "Towering mountain-top fortress with single stone stairway clinging to cliffs, legendary citadel", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Soldiers scaling steep fortress walls up a mountain summit under arrows, desperate frontal assault", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A general in bright armor first over the fortress wall at the center, burning citadel behind, decisive moment", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·刘綎"]}],
+   "bg": "mountain citadel under assault with smoke columns, climactic fire wash"},
+  {"kind": "s4", "title": "算总账",
+   "narration": "三大征到此收官，账本摊开：宁夏用银二百多万两，朝鲜之役七百多万两，播州又是二三百万两——合计上千万两白银，差不多是国库好几年的收入。官兵伤亡数以万计。军事上，三大征全胜，打得漂亮；财政上，这是一次惨胜：张居正攒的每一个铜板，都被他学生花光了。",
+   "broll": [
+    {"prompt": "Three campaign trophies on a war office table with maps of frontier, korea and southwest, summing up", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Accountant officials pouring over enormous ledgers while silver drains from a chest, fiscal drain", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Empty granary and thinning vaults in an imperial storehouse, spent fortune, aftermath mood", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "war trophies and exhausted ledger pages, spent gold-grey wash"},
+  {"kind": "s5", "title": "皇帝的私房钱",
+   "narration": "仗打穷了，皇帝想的不是省钱，是捞钱。万历派太监四处开矿收税：矿监税使遍及天下，名义上给国库找钱，实际上大头进了皇帝的私库。商人破产，织工罢市，临清、苏州、武昌接连民变。国库一天天空，内库一天天满——一个帝国的皇帝，跟自己的国家玩起了左右手互搏。",
+   "broll": [
+    {"prompt": "Imperial eunuchs with mining permits and tax ledgers descending on a prosperous market town, predatory officials", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Angry merchants and artisans rioting in a commercial street, overturned stalls, civil unrest", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two treasure chests, one nearly empty labeled for the state and one overflowing carried into the inner palace, stark contrast", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "market town under tax collectors with overflowing chests, greedy amber wash"},
+  {"kind": "s6", "title": "辽东的老虎",
+   "narration": "再看东北。辽东总兵李成梁，镇守此地二十多年，打蒙古、压女真，威名是九边第一。但他晚年干了两件糊涂事：一是放弃宽甸六堡，把开拓的领土白白让出去；二是对努尔哈赤睁一只眼闭一只眼，任由这个年轻人吞并各部。猛虎老了，还亲手养大了一只年轻的虎。",
+   "broll": [
+    {"prompt": "An aging iron-faced general in veteran armor at the center reviewing liao dong cavalry, veteran power", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·李成梁"]},
+    {"prompt": "Frontier stockade towns being abandoned, settlers withdrawing from six forts, strategic retreat", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A young hawk watching from a snowy ridge while an old tiger rests below, predator metaphor scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "liao dong frontier with veteran cavalry and watchtowers, hardened steel wash"},
+  {"kind": "s7", "title": "十三副遗甲",
+   "narration": "努尔哈赤起家，起点其实是一场冤案：1583年，他祖父和父亲在一场寨乱里被明军误杀。朝廷自知理亏，赔了敕书和马匹，还让他承袭了官职。这个二十五岁的年轻人收了赔偿，转身以十三副遗甲起兵，几十年间统一建州、大破九部联军。到万历晚年，辽东隔壁已经站着一个完整的政权，只差一个开战的借口。",
+   "tts_narration": "努尔哈赤起家，起点其实是一场冤案：1583年，他祖父和父亲在一场寨乱里被明军误杀。朝廷自知理亏，赔了敕书和马匹，还让他承袭了官职。这个二十五岁的年轻人收了赔偿，转身以十三副遗甲起兵，几十年间统一建州、大破九部联军。到万历晚年，辽东隔壁已经站着一个完整的政权，只差一个开战的借口。",
+   "broll": [
+    {"prompt": "A grieving young warrior kneeling by two graves in snowy birch forest, oath of vengeance", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A young manar in simple armor at the center mustering tribal riders with thirteen old armor suits on display, humble beginning of a power", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·努尔哈赤"]},
+    {"prompt": "Confederated tribal army charging down a mountain at a fortified camp, nine banners in chaos, decisive battle", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "snowy birch forest with thirteen armor stands, cold dawn-teal wash"},
+  {"kind": "s8", "title": "空转的帝国",
+   "narration": "到1600年前后，大明攒下的家底见了底：三大征的军费、矿税惹出的民变、辽东暗自生长的强敌，全在同一时间压了上来。帝国的军队还能打赢任何一场仗，但已经打不起任何一场仗了。就在这个节骨眼上，紫禁城里出了一连串谁也说不清的悬案。下集：晚明三大案——一个月皇帝与三场罗生门。",
+   "broll": [
+    {"prompt": "A grand imperial balance scale tipping, war bills and tax coins outweighing the state, overload metaphor", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Weary court officials walking past empty treasury halls and endless petition piles, systemic fatigue", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Dark storm clouds rolling over the forbidden city rooftops at dusk, unease gathering, cinematic foreboding", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "overcast forbidden city rooftops with gathering storm, foreboding indigo wash"}
+ ]
+}

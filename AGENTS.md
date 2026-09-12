@@ -14,6 +14,9 @@
 - **五件套**(每任务充分必要产物):视频源在原片库,英文字幕/中文字幕/中文音频/成品在成品库,每阶段产物自动 scp 到 NAS 对应系列目录
 - 配音:CosyVoice2 零样本克隆(WSL2 GPU,断点续跑;音色库 `work/studio/voices/`);翻译:Ollama qwen3:14b
 - 工作目录:`work/studio/<slug>/`;任务状态:`work/studio/tasks/*.json`(schema 2)
+- **哈佛积极心理学系列(ep1~23)成品以 v1 豆包链路 `videos/episode-N.mp4` 为准**(2026-09-11
+  用户定,要保持系列统一):豆包网页版音色+干净字幕+49 分钟量级;平台 zh_hard 重排版
+  (CosyVoice 克隆音色/ASR 字幕乱码复读/仅 21 分钟)已弃用,ep-23 的 NAS 成品已换回 v1 版
 - 冒烟参数:API 建任务时传 `_smoke_blocks`/`_smoke_chars` 快速验证
 - 豆包链(v1)已退役:`doubao_*.py`/`autosend`/`captcha-extension` 保留在仓库作历史资产,平台不再引用
 
@@ -84,7 +87,7 @@ Remotion 分块渲染。props/音频/头像按 slug 隔离在 podcast-studio 下
 
 ## 目录
 
-- `src/pipeline_admin.py + admin.html` 平台服务与前端;`voice_lib.py` 音色库;`render_original.py` 原片保留渲染;`render_podcast.py` 播客渲染;`whisper_slots.py` 无字幕 ASR 成槽;`narration.py` 语义段落合并;`assemble_narration.py` 旁白+低混音轨;`narration_srt.py` 旁白字幕;`polish_parts.py` 配音精修;`build_podcast_props.py` 播客 props;`podcast_srt.py` 播客字幕;`extract_avatars.py` 播客头像;`doubao_harvest_all.py`+`doubao_gen_refs.py` 豆包音色收割;`compose_bilingual.py` 双语字幕;`make_cover_video.py` 封面渲染;`align_srt_asr.py` ASR 字幕(独立轻量);`align_worker.py`+`label_speakers.py`+`audit_translation.py` 质检三件套;`make_episode.py`/`subtitle_ocr.py` 课程单集主控与 OCR(v2 仍复用)
+- `src/pipeline_admin.py + admin.html` 平台服务与前端;`voice_lib.py` 音色库;`render_original.py` 原片保留渲染;`render_podcast.py` 播客渲染;`whisper_slots.py` 无字幕 ASR 成槽;`narration.py` 语义段落合并;`assemble_narration.py` 旁白+低混音轨;`narration_srt.py` 旁白字幕;`polish_parts.py` 配音精修;`build_podcast_props.py` 播客 props;`podcast_srt.py` 播客字幕;`extract_avatars.py` 播客头像;`doubao_harvest_all.py`+`doubao_gen_refs.py` 豆包音色收割;`compose_bilingual.py` 双语字幕;`make_cover_video.py` 封面渲染;`align_srt_asr.py` ASR 字幕(独立轻量);`align_worker.py`+`label_speakers.py`+`audit_translation.py` 质检三件套;`make_episode.py`/`subtitle_ocr.py` 课程单集主控与 OCR(v2 仍复用);`apple_event/` 发布会监控+速览成片(monitor.py 三源轮询→facts/raw 快照,prepare/render 复用 gpt_explainer 管线换苹果夜皮肤,音色东方浩然);gpt_explainer 渲染器支持 `kind:"image"` 章节(官方产品图左+要点右,带进度推近,图片按 chapter.image 字段引用),产品速览类视频必须配官方产品图(2026-09 用户定)
 - `work/studio/` 平台任务目录;`work/voice-clone-demo/` CosyVoice 引擎(gitignore,含 5.3GB 模型勿删;脚本已参数化);`work/video-tools/` ffmpeg
 - `youtube/` 下载库(按人物);`downloads/` B站原片;`subtitles/` 历史 OCR;`videos/`+`episodes/` 历史成品归档
 - NAS 部署:`deploy-nas-studio.sh`(控制面容器)+ `start-studio-agent.cmd`(PC 代理开机自启)
@@ -139,11 +142,11 @@ $PY -m pytest tests/ -q              # 测试(140 个)
 
 ## 架构边界
 
-- **CosyVoice 只在 WSL2 GPU 跑**(`Ubuntu-24.04`,`/home/comfy/cosy-gpu-venv`;env `HSA_ENABLE_DXG_DETECTION=1 COSY_FP16=0 TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1`;fp16 会出乱码)。Windows CPU 可保底(约 1/3 速度)。环境重建见 skill `doubao-voice-clone`
+- **CosyVoice 只在 WSL2 GPU 跑**(`Ubuntu-24.04`,`/home/comfy/cosy-gpu-venv`;env `HSA_ENABLE_DXG_DETECTION=1 COSY_FP16=0 TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1`;fp16 会出乱码)。Windows CPU 可保底(约 1/3 速度)。环境重建见 skill `doubao-voice-clone`。**CV3 已入产线**(2026-09-12):`work/voice-clone-demo/models/Fun-CosyVoice3-0.5B-2512`(8.3GB,ModelScope);CV3 加载不能走 `generate_voice.py`(AutoModel 转发 load_jit 会 TypeError),用 `cv3_generate_voice.py`;refs 的 ref_text 必须带 `You are a helpful assistant.<|endofprompt|>` 前缀;CV3 还支持拼音 hotfix 内标注(`[j][ǐ]` 直接锁音)
 - 访谈声纹分离用 campplus 锚点(同人相似度 ≥0.87);锚点时间需人工从原片选
 - zh_hard 型默认封面渲染(中文音频短于原片,时间轴不对齐);访谈型原片保留(旁白版与原片等长)
 - 字幕切分 `MAX_SUBTITLE_CHARS=54`(两行容量);libass force_style 不支持 max_lines,文本端控制
-- ASR 缓存 `.asr.json` 存在则字幕秒级;whisper large-v3-turbo cpu/int8
+- ASR 缓存 `.asr.json` 按 mtime 校验(2026-09-11 修复:ep23 音频重收割后旧短音频缓存未失效,字幕只烧了前 16 分钟/音频 49 分钟,全系列覆盖度扫描脚本 `work/scan_srt_coverage.py`);whisper large-v3-turbo cpu/int8
 - 旁白模式:段碰撞自动后移(不硬对齐原时间轴),原声 -22dB 低混,双语字幕可选但默认纯中文
 
 ### 科普视频管线(kinetic_demo)
@@ -157,6 +160,55 @@ $PY -m pytest tests/ -q              # 测试(140 个)
 - 人物音色档案:`src/voice_casting.py` + work/studio/voice-castings.json,同一人物跨片复用
 - **不做幕后彩蛋环节**(2026-09 用户定):解说词来源/制作方式自曝段永久移除
 - 坑:改文案后必须清 <slug>_video/parts* 再跑(配音断点续跑会跳过旧缓存);stage 文件名必须等于 slug
+
+### 手绘/推演系列(src/mzx_story、src/mzx_series,2026-09 新增)
+
+- 复用 gpt_explainer.render 的配音拼装/时间轴/字幕/探测管线;Pillow 逐帧流式喂 ffmpeg
+  (15fps 绘制复制成 30fps),不落帧盘,成片在 D 盘临时目录
+- **B-roll 编排原则**(2026-09-12 讨论定):**插画讲"人",图解讲"势"**——插画保持连续铺满
+  作画面主体;解说讲到地理移动/多方对峙/数字对比的段落,该段时间划给矢量图解
+  (ep01 模式:diagram 段与插画段段级互斥、首尾相接、0.12×段长交叉淡化、同一羊皮纸色系,
+  机制现成免改渲染)。图解段长驻 ≥20s,每集 0~4 个按内容定不硬凑;ep09~24(北京保卫战、
+  庚戌之变、倭乱海防、三大征)天然多"势"段。多人插画分不清谁是谁 → **cast 人名标注**
+  (用户定:AI 直接画进图里):broll 节拍加 `"cast": ["左·于谦", "右·朱祁钰"]`
+  (位置前缀 左/中/右,单人可省),generate.py 对 cast 节拍去掉 broll_style 的 no text
+  约束、追加羊皮纸签+楷书墨字指令,**强制 ICU 后端**(SDXL 画不了中文),生成后 RapidOCR
+  回读校验姓名全部命中(`rapidocr_onnxruntime`,.venv-ocr 自带),未命中自动重生成,连续
+  3 次失败不落正式文件名(渲染端缺图报错门禁拦截),末张留 `<name>.reject.png` 人工检查;
+  manifest 记 `cast_check`。prompt 纪律:多人节拍必须写服色+左右锚点(绯红官服居左/明黄
+  龙袍居右),保证标注位置词与画面一致。**节拍 at/hold 顺序必须跟解说提及顺序对齐**
+  (ep-09 s6 曾反排:字幕讲"王阳明重写战报"画面却是"再抓一遍",用户指出;av_qc 的
+  frame_manifest 就是逐 4s 画面-字幕配对清单,排产后必须过一遍)。试稿实证(2026-09-12,
+  `work/probe-cast-labels.py`):
+  gpt-image-2 中文姓名签 6/6 OCR 全命中、位置全对、羊皮纸签+红印章完全融入系列画风
+  (含朱祁镇/朱祁钰兄弟同袍最难例);OCR 门禁对繁体/错字不放过(歷→历 类错字必须重生成)。
+- **B-roll 分镜层**(2026-09-10 用户定):故事章节由 AI 分镜**连续铺满整章**(`broll:[{prompt,at,hold}]` 按解说句子节拍切分,段间 AI↔AI 交叉淡化,矢量层不再闪现);**图解节拍** `{"type":"diagram","at","hold"}` 让矢量图解(地图/价格/战线)长驻整段解说时长、可读性优先;章节氛围背景板 `bg` 垫底 + 系列级 `broll_style` 前缀;`src/broll/generate.py` 批量生成(fingerprint 缓存,缺图渲染报错)。**生图双后端**:本机 ComfyUI(WSL ROCm, SDXL, 127.0.0.1:8188, 零成本, 服务丢了自动拉起)优先, ICU gpt-image-2 计费回退(`--backend`);权重 `~/ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors`。 **大明演义系列定档纯 ICU 出图**(内容 JSON `broll_backend:"icu"`,用户定:ICU 额度不足即停止,不用本地模型降级——除非本地调教到 gpt-image-2 同等质量)坑:给 cosy-gpu-venv 装 ComfyUI 依赖必须 `grep -v -i '^torch'` 过滤并关键包 `--no-deps`,否则 pip 会把 CUDA 版 torch 顶掉 ROCm 版(踩过,修复脚本 `src/broll/restore_torch.sh`)。**不加"AI 插画"角标**(用户定,视作水印);**字幕单行**(cue ≤16 字、优先在 ，。：、 断句整句显示不折行不截断,字幕带压缩到 168px,舞台加高到 912)。适用:历史故事线;新闻类(苹果速览)只用官方实拍图,引文/数据页不用 AI 图
+- **Qwen-Image 本地试稿引擎**(2026-09-11 部署;**用户定:生产生图仍只用 ICU gpt-image-2**,
+  Qwen 不接入 generate.py 后端路由,仅作零成本试稿/中文文字封面辅助):ComfyUI-GGUF +
+  Qwen-Image-2512 GGUF Q4_K_S + fp8 文本编码器(device=cpu)+ VAEDecodeTiled;7800XT
+  16GB 完整驻留,热态 2.5 分钟/张,中文标题字 8/8 全对;羊皮纸平涂配方与坑全记录
+  在 `work/probe-qwen-image/README.md`(要点:风格硬约束前置,忌 cinematic lighting,
+  VAE 必须 Tiled 解码,启动带 HSA_ENABLE_DXG_DETECTION=1,WSL 空闲整机会回收)
+- **明朝故事线**(`src/mzx_story/vector_render.py`):准确、生动的矢量动画图解——真实地理投影、角色服化道、镜头随叙事推进；统一 1920×1080 三段式版面(顶部信息区/中部内容舞台/底部字幕安全带)，字幕和场景不得互相侵入。所有场景坐标使用最终像素，超采样只在渲染器内部执行；每章 8 个时间点抽样并输出 `layout_report.json`，通过布局门禁后才渲染成片。镜头语义=舞台窗口(中心 cx,cy + 缩放 zoom,窗口高 700/zoom)，**每场镜头窗口必须覆盖本场全部内容**(曾因按 1080 取景把燕王标记整体裁掉)。人物头底必须搭在袍肩上(hy=y-0.675h)。多音字纠音字段 `tts_narration` 保留作兜底(如"静难之役"锁 jìng nàn)，字幕仍显示正确写法。**配音引擎已切 CV3**(2026-09-12 用户验收)：ep-08 CV3 版 QC PASS(纯 narration 原文零纠音,朱祐樘/斋醮 直读正确,整体 hard CER 3.01%)，`prepare.py` 固定走 `cv3_generate_voice.py`+endofprompt 前缀，指纹含引擎标记(换引擎自动作废旧 parts)；其余集仍是 CV2 旧成品，重渲即转新链路；已知小瑕疵:ep-08 边防章一处"弘治"读偏(近似"红日")，av_qc 转写可复查。封面用 `src/mzx_story/make_cover.py`(gpt-image-2 出图+本地合成标题，key 只读 OPENAI_API_KEY，原图按指纹缓存+manifest)。音色固定 **doubao-京腔侃爷**(2026-09 用户定,写进内容 JSON `voice` 字段)。旧白板实现 `doodle_render.py` 仅保留作历史资产，不作为当前默认链路。
+- **毛选推演线**(`src/mzx_series/render.py`):战略批注风(米黄文件纸+红蓝推演色+印章),
+  音色东方浩然;来源标注+原文引用角标的可信度体系每集必备
+- 换音色/换文案=指纹变化:清 <OUT>/tts_fingerprint.txt 和 parts 后重跑 prepare
+- 样片与音色小样归档 NAS `临时-试听/`;通过验收才进成品库
+- **发布前 QC 门禁**(`src/av_qc.py`,work/.venv-ocr 环境):ASR 回环校验——成品音频用本地
+  faster-whisper(large-v3-turbo,模型在 `work/models/faster-whisper-large-v3-turbo`)转回
+  文字与 TTS 期望文本逐字比对;**hard CER**(剔除同音转写,只计异音替换+缺字)整体 ≤6%、
+  单章 ≤12% 为 PASS,可疑错读带时间戳全量列出供复核;并输出逐帧"画面-字幕-节拍"配对
+  清单(frame_manifest)供审片。**必须逐章音频单独转写**(整段转写的 whisper 长段会跨章
+  串扰,CER 虚增到 30%+);同音字替换(静→靖)是 ASR 正常选字,不计错;
+  **whisper 静音尾段幻觉过滤**(`is_hallucination`,"请不吝点赞…明镜与点点"/"优优独播剧场
+  YoYo"等频道水印串)在拼 CER 前丢弃——ep-09 尾部 ~0.7s 静音曾幻觉出 19 字推广串,
+  把该章 hard CER 顶到 16.9% 假 FAIL(ep-08 修复脚本 BLACKLIST 同源问题的前身);
+  **成片逐章尾句转写核对必做**(2026-09-12 教训):av_qc 逐章转写的是原始 parts,
+  测不到 assemble+polish 环节的损伤——ep08 s7"好生教导"被 polish 的停顿压缩从段尾
+  一刀切剁成"要好生"(用户听出),波形互相关+成片局部转写才定位。根因:
+  `_polish_frames` 停顿压缩对每个超长停顿 `audio[:len-超出]` 砍尾部,停顿越多的章被砍
+  越多;已改为在停顿位置拼接收窄(回归测试 tests/test_gpt_explainer_render.py),
+  ep08-cv3 重渲修复。诊断手法:ffmpeg 抽成片末段转写 + 原始件/成片互相关对齐切点
 
 # Windows 坑
 

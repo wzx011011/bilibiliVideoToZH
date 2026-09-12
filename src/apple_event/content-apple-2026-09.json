@@ -1,0 +1,229 @@
+{
+ "title": "苹果 2026 秋季发布会速览",
+ "as_of": "2026-09-10",
+ "voice": "doubao-东方浩然",
+ "sources": [
+  {
+   "id": "pr-pro",
+   "label": "Apple Newsroom · iPhone 18 Pro",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/"
+  },
+  {
+   "id": "pr-duo",
+   "label": "Apple Newsroom · iPhone Duo",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/"
+  },
+  {
+   "id": "pr-s12",
+   "label": "Apple Newsroom · Apple Watch Series 12",
+   "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system/"
+  },
+  {
+   "id": "pr-ultra",
+   "label": "Apple Newsroom · Apple Watch Ultra 4",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-unveils-apple-watch-ultra-4/"
+  },
+  {
+   "id": "pr-airpods",
+   "label": "Apple Newsroom · AirPods 5",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/"
+  },
+  {
+   "id": "pr-health",
+   "label": "Apple Newsroom · 健康与研究",
+   "url": "https://www.apple.com/newsroom/2026/09/apple-advances-health-and-fitness-capabilities-using-apple-intelligence/"
+  },
+  {
+   "id": "edit",
+   "label": "编辑观点（非官方）",
+   "url": ""
+  }
+ ],
+ "chapters": [
+  {
+   "kind": "hook",
+   "title": "开场",
+   "headline": "",
+   "kicker": "2026 秋季发布会",
+   "narration": "北京时间九月十日凌晨，苹果秋季发布会Surprise and Shine在Apple Park举行。这也是蒂姆库克把话筒交给新任CEO约翰特努斯之后的第一场发布会。三分钟，带你看完全部官方重点。",
+   "beats": [
+    {
+     "src": "work/apple-event-202609/images/duo-hero.jpg",
+     "big": "苹果，折叠了。",
+     "small": "首款折叠屏 iPhone Duo · $1,999"
+    },
+    {
+     "src": "work/apple-event-202609/images/pro-hero.jpg",
+     "big": "2nm A20 Pro",
+     "small": "iPhone 18 Pro · 可变光圈"
+    },
+    {
+     "src": "work/apple-event-202609/images/s12-hero.jpg",
+     "big": "手表，双发。",
+     "small": "Watch Series 12 · Ultra 4"
+    },
+    {
+     "src": "work/apple-event-202609/images/airpods-hero.jpg",
+     "big": "开放式降噪",
+     "small": "AirPods 5 · $129"
+    }
+   ],
+   "source_ids": [
+    "pr-duo",
+    "pr-pro",
+    "pr-s12",
+    "pr-airpods"
+   ]
+  },
+  {
+   "kind": "image",
+   "title": "iPhone 18 Pro",
+   "headline": "iPhone 18 Pro / Pro Max",
+   "kicker": "旗舰",
+   "narration": "先看主角iPhone 18 Pro系列。首发两纳米A20 Pro芯片，主摄升级为4800万像素可变光圈，四档光圈可以在相机里手动调。Pro Max拿下iPhone历史上最大的电池续航提升。美区Pro起步1199美元，Pro Max起步1299美元，9月12日预订，9月18日发售，最高提供2TB存储。",
+   "notes": [
+    "A20 Pro 芯片：最新 2nm 工艺",
+    "48MP Fusion 主摄 + 四档可变光圈（可手动）",
+    "Pro Max：iPhone 史上最大电池续航提升",
+    "256GB–2TB · 黑/银/冰川/勃艮第红"
+   ],
+   "source_ids": [
+    "pr-pro"
+   ],
+   "image": "work/apple-event-202609/images/pro-hero.jpg"
+  },
+  {
+   "kind": "image",
+   "title": "iPhone Duo",
+   "headline": "首款折叠屏 iPhone Duo",
+   "kicker": "折叠屏",
+   "narration": "真正的悬念是首款折叠屏iPhone Duo。星白与夜空两色，五级钛合金镜面抛光；合盖时的外屏就有iPhone 18 Pro约九成的屏幕面积，内屏用纳米纹理把折痕感降到最低，精密铰链配磁吸阵列。同款A20 Pro芯片，还有均热腔散热和双电池。起步1999美元，10月16日预订，10月23日发售。",
+   "notes": [
+    "外屏面积 ≈ iPhone 18 Pro 的 90%",
+    "纳米纹理内屏，降低折痕可见度",
+    "A20 Pro + 均热腔 + 双电池",
+    "$1,999 · 10/16 预订 · 10/23 发售"
+   ],
+   "source_ids": [
+    "pr-duo"
+   ],
+   "image": "work/apple-event-202609/images/duo-hero.jpg"
+  },
+  {
+   "kind": "image",
+   "title": "Apple Watch",
+   "headline": "Watch Series 12 与 Ultra 4",
+   "kicker": "手表",
+   "narration": "手表一次发两支。Series 12和Ultra 4都换上新的健康感知系统和S11芯片，也就是苹果目前最强的可穿戴芯片。心率与心率变异性测量频率更高，还带来新的状态评分。Series 12新增陶瓷材质，399美元起；Ultra 4天然钛与黑色钛双色，799美元起，都是9月18日发售。",
+   "notes": [
+    "Series 12 $399 起 · Ultra 4 $799 起",
+    "S11：苹果最强可穿戴芯片",
+    "更高频率心率/HRV + readiness 评分",
+    "Series 12 首次新增陶瓷版本"
+   ],
+   "source_ids": [
+    "pr-s12",
+    "pr-ultra"
+   ],
+   "image": "work/apple-event-202609/images/s12-hero.jpg"
+  },
+  {
+   "kind": "image",
+   "title": "AirPods 5",
+   "headline": "开放式耳机也有主动降噪",
+   "kicker": "音频",
+   "narration": "AirPods 5把主动降噪做进了开放式耳塞，官方数据比AirPods 4多消除一半的外部噪声，开降噪能听五个小时。标准版129美元，无线充电盒版149美元，9月18日发售。",
+   "notes": [
+    "开放式设计 + 主动降噪（ANC）",
+    "比 AirPods 4 (ANC) 多消除 50% 外部噪声",
+    "ANC 开启续航 5 小时（+1 小时）",
+    "$129 · 无线充电盒版 $149"
+   ],
+   "source_ids": [
+    "pr-airpods"
+   ],
+   "image": "work/apple-event-202609/images/airpods-hero.jpg"
+  },
+  {
+   "kind": "limits",
+   "title": "系统与健康",
+   "headline": "iOS 27 · watchOS 27 · 健康 App",
+   "kicker": "系统",
+   "narration": "系统方面，iOS 27和watchOS 27将在9月14日推送。新版Siri AI同步而来，但首发不含欧盟地区。健康App年内大改版，美国用户还可以119美元在Quest Diagnostics加做五十多项生物指标的实验室检查。",
+   "notes": [
+    "iOS 27 / watchOS 27：9 月 14 日免费推送",
+    "新版 Siri AI 首发，欧盟地区暂不可用",
+    "健康 App 年内改版（美国先行）",
+    "Quest 50+ 项生物指标检查：$119"
+   ],
+   "source_ids": [
+    "pr-health",
+    "pr-pro"
+   ]
+  },
+  {
+   "kind": "bars",
+   "title": "价格一览",
+   "headline": "美区起步价",
+   "kicker": "价格",
+   "narration": "最后用一张图记住价格：Pro 1199，Pro Max 1299，折叠屏Duo 1999，手表S12 399，Ultra 4是799美元起。",
+   "bars": [
+    {
+     "label": "iPhone 18 Pro",
+     "value": 1199,
+     "max": 2000,
+     "display": "$1,199"
+    },
+    {
+     "label": "iPhone 18 Pro Max",
+     "value": 1299,
+     "max": 2000,
+     "display": "$1,299"
+    },
+    {
+     "label": "iPhone Duo",
+     "value": 1999,
+     "max": 2000,
+     "display": "$1,999"
+    },
+    {
+     "label": "Watch Series 12",
+     "value": 399,
+     "max": 2000,
+     "display": "$399"
+    },
+    {
+     "label": "Watch Ultra 4",
+     "value": 799,
+     "max": 2000,
+     "display": "$799"
+    }
+   ],
+   "notes": [
+    "均为美区起售价，不含税",
+    "数据来源：Apple 官方通稿"
+   ],
+   "source_ids": [
+    "pr-pro",
+    "pr-duo",
+    "pr-s12",
+    "pr-ultra"
+   ]
+  },
+  {
+   "kind": "summary",
+   "title": "编辑观点",
+   "headline": "形态之年，价格持平",
+   "kicker": "编辑观点",
+   "narration": "编辑观点：这一场的重点不是参数暴涨，而是形态。苹果用折叠屏和可变光圈换了一条产品路线；美区起步价整体持平，真正的分晓要等10月23日Duo上市那天。以上规格均出自Apple官方通稿，媒体报道未计入。",
+   "notes": [
+    "编辑观点：主题是形态——折叠与可变光圈",
+    "美区起步价整体持平，无涨价",
+    "Duo 实际表现看 10 月 23 日上市"
+   ],
+   "source_ids": [
+    "edit"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "title": "大明演义 14 · 万历亲政：皇帝跟大臣冷战十五年",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义14-万历与国本之争.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "亲政",
+   "narration": "1582年张居正一死，二十岁的万历终于亲政。前十年他是什么？一件盖章的工具：功课被张先生盯，朝政被张先生定，连太后都拿张先生压他。如今枷锁没了，年轻人憋着一股劲：朕要让天下看看，没有张居正，朕照样行。",
+   "broll": [
+    {"prompt": "A young emperor in imperial yellow robes at the center removing his tutor's memorial tablet from the hall, reclaiming authority, symbolic dawn light", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·万历"]},
+    {"prompt": "Flashback contrast: a small boy in pale robes at the left stamping documents while a tall stern tutor in dark blue robes at the right decided everything, muted memory tones", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["左·万历", "右·张居正"]},
+    {"prompt": "Young emperor rolling up sleeves at his desk alone, Determined to prove himself, fresh vigor", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "imperial desk in fresh morning light with young figure, new-leaf gold wash"},
+  {"kind": "s2", "title": "清算与勤政",
+   "narration": "亲政第一件事，清算张居正：言官的弹劾像雪片，皇帝顺水推舟——抄家、夺谥、逼死其长子，十年的老师被清算得干干净净。平心而论，头几年的万历是真勤政：批奏章、整军备、轻徭薄赋，模样像个中兴之主。谁也没想到，这是他人生的上限。",
+   "broll": [
+    {"prompt": "Imperial guards sealing a fallen tutor's estate as censors' memorials rain on the throne, political storm", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Young emperor working diligently at dawn desk with neat stacks of documents, capable ruler pose", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Military review with banners and cavalry inspection, ambitious young reign at its height", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "palace hall with document rain and morning drills, vigorous red-gold wash"},
+  {"kind": "s3", "title": "立储难题",
+   "narration": "1586年，一道无解题摆在朝堂上。万历宠爱郑贵妃，想把她的儿子朱常洵立为太子；可皇长子朱常洛，是他偶然临幸一个宫女所生，皇帝嫌人家母子出身低。大臣们抱着祖制不撒手：有嫡立嫡，无嫡立长，皇长子名分早定！皇帝和大臣，谁也说服不了谁。",
+   "broll": [
+    {"prompt": "A favored consort in rich silks whispering at the left beside the emperor while a dignified elder lady-in-waiting holds a small boy afar at the right, palace politics", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["左·郑贵妃"]},
+    {"prompt": "Ministers presenting the succession rule scroll before hesitant emperor, wall of tradition", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Two princes contrasted: a humble elder boy in plain robe at the left and a pampered younger boy in rich dress at the right, unfair fate", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["左·朱常洛", "右·朱常洵"]}],
+   "bg": "inner palace with divided favor and distant two boys, conflicted rose-gold wash"},
+  {"kind": "s4", "title": "争国本",
+   "narration": "这一争，就是十五年。第一个上疏的言官当天被贬；内阁首辅申时行两头受气，辞官走人；接着几百人排队上书，前赴后继地被贬被杖。万历的对策更绝：拖。奏折留中不发，辞呈不批，官员空缺不补。到后来六部衙门缺员过半，帝国成了半空转的机器。",
+   "broll": [
+    {"prompt": "Endless lines of officials submitting memorials in relays across the years, seasons changing behind them", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A weary first minister in dark crimson robes at the center caught between throne and protesting colleagues, caught in middle, leaving in rain", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·申时行"]},
+    {"prompt": "Half-empty government offices with cobwebs on official chairs, abandoned desks, eerie stillness", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "relay lines of memorials across a year wheel, dogged grey-blue wash"},
+  {"kind": "s5", "title": "史上最长罢工",
+   "narration": "万历的怠政破了纪录：二十多年不上朝、不祭天、不祭祖、不见大臣。但注意，他不是昏睡——军国大事照抓，万历三大征都是他遥控拍板，奏章照批，只是拒绝见他讨厌的人。同样是躲，嘉靖是在帘后操盘，万历是在床上摆烂：朕不吵，朕拖死你们。",
+   "broll": [
+    {"prompt": "An empty throne hall with ministers bowing to vacancy, dust in light shafts, iconic emptiness", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "The emperor lounging in inner chambers reading frontier reports at leisure, remote control governance", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Contrast panel: shadowy figure behind curtain versus languid figure behind bed curtains, two kinds of absence", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "empty throne hall with dust light shafts, ghostly pale wash"},
+  {"kind": "s6", "title": "东林雏形",
+   "narration": "体制内出不去声音，声音就去了体制外。无锡人顾宪成，因为在立储问题上顶撞皇帝被革职，回乡把东林书院修起来讲学：风声雨声读书声，声声入耳；家事国事天下事，事事关心。天下士子闻风而来，书院里褒贬人物、议论朝政——东林党的雏形，就此埋下晚明党争的引信。",
+   "broll": [
+    {"prompt": "A dismissed scholar-official in plain blue robes at the center reopening an old academy by a canal, students gathering with books, hopeful intellectual scene", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·顾宪成"]},
+    {"prompt": "Rain on academy windows with reading voices inside, the famous couplet mood, poetic scholarship", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Scholars debating heatedly in a hall with maps of the empire, sparks of faction politics, charged atmosphere", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "canal-side academy in rain with warm study light, scholarly indigo wash"},
+  {"kind": "s7", "title": "帝国空转",
+   "narration": "结果是明摆着的：官员缺一半，奏章堆成山，党争全面开花，内阁跟言官互相撕咬；皇帝派出去的矿监税使四处搜刮，激起一片民变。帝国像一辆没了司机的马车，靠惯性和老臣的肩膀往前滑。所有人都感觉到了：要出大事。",
+   "broll": [
+    {"prompt": "Overturned carriages and scattered tax edicts in provincial unrest, mining tax collectors fleeing, popular anger", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ministers brawling verbally in court across the aisle, faction banners behind each side, vicious division", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A driverless imperial carriage rolling downhill on a long slope, passengers oblivious, powerful metaphor scene", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "downhill imperial carriage metaphor under storm sky, runaway slate wash"},
+  {"kind": "s8", "title": "惨胜",
+   "narration": "1601年，扛了十五年，万历终于妥协：立朱常洛为太子，争国本以文官惨胜收场。可帝国的元气，在十五年空转里漏光了：皇帝跟文官彻底撕破脸，信任再也回不来。就在帝国注意力全在吵架上时，东北的白山黑水间，一个25岁的年轻人点了十三副铠甲起兵——他叫努尔哈赤。下集：万历三大征。",
+   "tts_narration": "1601年，扛了十五年，万历终于妥协：立朱常洛为太子，争国本以文官惨胜收场。可帝国的元气，在十五年空转里漏光了：皇帝跟文官彻底撕破脸，信任再也回不来。就在帝国注意力全在吵架上时，东北的白山黑水间，一个25岁的年轻人点了十三副铠甲起兵——他叫努尔哈赤。下集：万历三大征。",
+   "broll": [
+    {"prompt": "A humble elder prince in plain ceremonial robes installed as heir at the center in a subdued ceremony, joyless victory", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·朱常洛"]},
+    {"prompt": "Emperor and ministers turned back to back across the hall, trust broken permanently, cold chasm", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Distant northern mountains at dawn with a lone armored warrior at the center arming himself with thirteen suits of armor, omen rising, ominous horizon", "at": 0.66, "hold": 0.34, "fit": "contain", "cast": ["中·努尔哈赤"]}],
+   "bg": "northern dawn mountains with lone armored silhouette, omen cold-teal wash"}
+ ]
+}

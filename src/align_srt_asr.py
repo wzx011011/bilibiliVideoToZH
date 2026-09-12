@@ -70,12 +70,16 @@ def transcribe(audio_path: Path, model_size: str = "large-v3-turbo",
 
     cache_path：若提供，识别结果缓存为 JSON，下次直接读取（省去重跑 ASR）。
     """
-    # 优先读缓存
-    if cache_path and cache_path.exists():
+    # 优先读缓存；音频比缓存新 = 音频重收割过，缓存按文件名对不上内容，必须作废
+    # （ep23 事故：8-11 旧短音频的缓存被 8-19 重收割的长音频复用，字幕只覆盖 33%）
+    if cache_path and cache_path.exists() \
+            and cache_path.stat().st_mtime >= audio_path.stat().st_mtime:
         import json
         data = json.loads(cache_path.read_text(encoding="utf-8"))
         print(f"[ASR] 复用缓存：{len(data)} 段（{cache_path.name}）", file=sys.stderr)
         return [(d["start"], d["end"], d["text"]) for d in data]
+    if cache_path and cache_path.exists():
+        print(f"[ASR] 缓存过期（音频比缓存新），重新识别", file=sys.stderr)
 
     print(f"[ASR] 加载模型 {model_size}...", file=sys.stderr)
     from faster_whisper import WhisperModel

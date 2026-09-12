@@ -1,0 +1,218 @@
+{
+ "title": "大明演义 04 · 朱高炽与朱瞻基：胖皇帝和蛐蛐皇帝",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义04-仁宣之治.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, early Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {
+   "kind": "s1",
+   "title": "胖皇帝",
+   "narration": "1424年，朱棣死在北征路上，太子朱高炽即位。这位新皇帝体胖腿疾，走路都要人搀，当了二十年太子，被两个弟弟挤兑了二十年——所有人都觉得，他撑不了多久。",
+   "bg": "soft candlelit palace corridor, heavy curtains and deep shadows, warm quiet wash",
+   "broll": [
+    {
+     "prompt": "A heavy-set prince struggling to walk with two attendants supporting him along a palace corridor",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Two ambitious princes whispering and plotting together in a dark corridor",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The new emperor seated heavily on the throne while the whole court watches with doubt",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s2",
+   "title": "仁政",
+   "narration": "可他一上任就展示了段位：赦免建文旧臣家属、平反冤狱、叫停下西洋、减免赋税，让打了几十年仗的国家喘了口气。年号洪熙——虽然这个年号，前后只用了十个月。",
+   "bg": "neat stacks of imperial memorials on a desk with morning light, calm orderly wash",
+   "broll": [
+    {
+     "prompt": "An emperor signing amnesty documents, freed officials reuniting with families outside prison",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Workers dismantling a fleet in the harbor, timber repurposed, pragmatic morning mood",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Farmers resting near full granaries in fertile fields, peaceful golden light",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s3",
+   "title": "惊险",
+   "narration": "1425年五月，朱高炽暴卒，年仅四十七。当时太子朱瞻基远在南京，二叔朱高煦在半路埋伏截杀。朱瞻基却抢先赶回北京登基，闪电奔丧，直接粉碎了叔叔的皇帝梦。",
+   "broll": [
+    {
+     "prompt": "A court in mourning: white banners, weeping officials and an empty throne at dawn",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Hidden assassins ambushing a night road, blades glinting among dark trees",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A prince racing to the capital by fast barge and horse, arriving at the gates at dawn",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "moonlit palace road with galloping dust, cold night-blue wash with torch glow at the horizon"
+  },
+  {
+   "kind": "s4",
+   "title": "三杨",
+   "narration": "朱瞻基即位，是为宣德。他重用杨士奇、杨荣、杨溥三位阁臣，史称三杨辅政。君臣默契，政令清明，赋税宽平，社会安定——明朝的国力，在这一时期达到了顶峰。",
+   "bg": "bright court hall with sunlight through tall windows, clean dignified wash",
+   "broll": [
+    {
+     "prompt": "Three elderly ministers in deep discussion over memorials, dignified and calm",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Emperor and ministers in harmonious audience, sunlight streaming through tall hall windows",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Prosperous markets and busy farmland panorama, the empire at its peak",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  },
+  {
+   "kind": "s5",
+   "title": "促织天子",
+   "narration": "这位明君也有出名的爱好：斗蛐蛐，人称促织天子，各地进贡促织一度扰民。他还精于书画，宣德炉至今是收藏名品。明君也是人，有爱好不丢人——但要把握分寸，过了界就是民怨。",
+   "broll": [
+    {
+     "prompt": "Porcelain cricket pots arranged on an imperial desk, the emperor leaning in with delight",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Messengers collecting cricket tribute from anxious farmers in a village",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "An elegant study with ink paintings and a bronze incense burner, refined warm atmosphere",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "cricket gourds, bronze incense burner and ink paintings on a scholar desk, warm elegant wash"
+  },
+  {
+   "kind": "s6",
+   "title": "弃安南",
+   "narration": "宣德年间最大的战略收缩，是放弃安南。朱棣花了大力气吞并的交趾，驻军年年亏空，朱瞻基干脆撤兵。省下了巨额军费，也永久丢了这块领土——功过至今争论。",
+   "broll": [
+    {
+     "prompt": "A weary Ming garrison in a tropical fortress, humid heat and faded banners",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Ships loading soldiers and supplies for withdrawal from a tropical harbor at dawn",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Local rulers resuming their throne as the ming fleet sails away, bittersweet light",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "tropical southern coastline with anchored junks, humid green-gold haze"
+  },
+  {
+   "kind": "s7",
+   "title": "汉王之乱",
+   "narration": "二叔朱高煦的皇帝梦还没醒。1428年他起兵谋反，朱瞻基御驾亲征，大军压境，朱高煦开城投降。这位二叔最后被扣在三百斤的铜缸里活活炙死——皇子争储，输家没有退路。",
+   "tts_narration": "二叔朱高续的皇帝梦还没醒。1428年他起兵谋反，朱瞻基御驾亲征，大军压境，朱高续开城投降。这位二叔最后被扣在三百斤的铜缸里活活炙死——皇子争储，输家没有退路。",
+   "broll": [
+    {
+     "prompt": "A prince in armor raising a rebellion banner outside his fortified city, defiant",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The imperial army surrounding the rebel city with cannons and ranked spears",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "The surrendered prince kneeling before the emperor near a giant bronze cauldron, grim",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ],
+   "bg": "massive bronze cauldron before palace gates under dark storm clouds, ominous red-black wash"
+  },
+  {
+   "kind": "s8",
+   "title": "十年之治",
+   "narration": "1435年，朱瞻基病逝，年仅三十八。他和父亲在位的十年，史称仁宣之治——明朝国力的顶峰。但他也开了个坏头：教太监读书，司礼监批红权力膨胀。几十年后的魏忠贤，种子就是这时候种下的。你觉得皇帝有爱好该不该被骂？评论区聊聊。",
+   "bg": "flourishing farmland and cities at golden noon, peaceful prosperous wash fading to parchment",
+   "broll": [
+    {
+     "prompt": "Golden farmlands and busy markets panorama, the empire prosperous at noon",
+     "at": 0.0,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "Palace eunuchs being taught to read in a hall, subtle ominous light",
+     "at": 0.33,
+     "hold": 0.33,
+     "fit": "contain"
+    },
+    {
+     "prompt": "A watchful young heir in the shadows of a palace hall, a storm far beyond the walls",
+     "at": 0.66,
+     "hold": 0.34,
+     "fit": "contain"
+    }
+   ]
+  }
+ ],
+ "broll_backend": "icu"
+}

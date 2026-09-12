@@ -76,3 +76,14 @@ Thumbs.db
 
 # ============ 演示产物（本地保存）============
 kinetic_demo/
+
+# ============ work/ 工作区：机器本地，白名单收纳文档化工具 ============
+work/*
+!work/tail_check.py
+!work/scan_srt_coverage.py
+!work/watch_*.py
+!work/probe-qwen-image/
+
+# 历史成品归档(大媒体,成品以 NAS 为准)
+episodes/
+videos/

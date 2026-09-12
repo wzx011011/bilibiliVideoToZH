@@ -1,0 +1,65 @@
+{
+ "title": "大明演义 08 · 弘治中兴：只娶一个人的皇帝",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义08-弘治中兴.mp4",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "broll_backend": "icu",
+ "chapters": [
+  {"kind": "s1", "title": "接位",
+   "narration": "1487年九月，十八岁的朱祐樘即位，年号弘治。他的童年堪称惊险：生在冷宫、被万贵妃迫害、靠废皇后吴氏和宫女太监藏在密室里才活到六岁。即位第一件事，就是把父皇留下的上千名传奉官全部罢斥，朝野上下为之一振。",
+   "broll": [
+    {"prompt": "A teenage emperor enthroned in a bright autumn hall, solemn officials, new beginnings after dark times", "at": 0.0, "hold": 0.33, "fit": "contain", "backend": "icu"},
+    {"prompt": "A small child hiding in a dim palace side-chamber, an old woman guarding the door, fearful soft light", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Dismissed officials carrying boxes out of palace gates, crowds watching, fresh sweep mood", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "autumn palace hall at dawn, red leaves on courtyard trees, fresh solemn wash"},
+  {"kind": "s2", "title": "一夫一妻",
+   "narration": "他还有一项中国帝王史上的独一份纪录：一生只娶了张皇后一个人，不选妃、不纳嫔，两人同起同卧，像民间夫妻。这个纪录，前后两千年，再没有第二个帝王做到过。",
+   "broll": [
+    {"prompt": "An emperor and his empress reading together by candlelight in a modest chamber, domestic warmth, like common folk", "at": 0.0, "hold": 0.33, "fit": "contain", "backend": "icu"},
+    {"prompt": "The empress in elegant dress receiving greetings, no other consorts around, quiet dignity", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Palace historians recording an unusual imperial household, brush and scrolls", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "candlelit modest imperial chamber with double pillows, warm intimate wash"},
+  {"kind": "s3", "title": "勤政",
+   "narration": "弘治的勤政是出了名的：早朝之外重开午朝，恢复经筵侍讲，批阅奏章常常到深夜。对待大臣宽厚仁和，从不廷杖羞辱，被赞有帝王气度。",
+   "broll": [
+    {"prompt": "Morning court assembly with ranks of officials, emperor attentive on throne, grand hall", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Afternoon study session with scholars lecturing the emperor, classics open on desks", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Late night candlelit desk with tall stacks of memorials, emperor still writing", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "grand court hall with ranked officials in morning light, dignified orderly wash"},
+  {"kind": "s4", "title": "君臣",
+   "narration": "他用人也有一套：王恕、马文升、刘大夏、戴珊、李东阳，弘治朝君子满朝。君臣坐而论道、延访治道，直言进谏不但不罚，反而加官——这份胸襟，明朝皇帝里少见。",
+   "broll": [
+    {"prompt": "Emperor seated in round-table council with elder statesmen discussing statecraft, maps and memorials, respectful atmosphere, dramatic cinematic composition", "at": 0.0, "hold": 0.33, "fit": "contain", "backend": "icu"},
+    {"prompt": "Elder statesmen walking through palace gardens in deep discussion", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An upright official presenting a frank petition before the throne, emperor listening", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "council chamber with elder statesmen and tea, warm respectful wash"},
+  {"kind": "s5", "title": "治河安民",
+   "narration": "民生上，黄河决口他派刘大夏主持治河，江南水患全力赈济减赋。成化年间积压的流民问题也逐步安置。户籍回升、田野渐辟，百姓的日子实实在在好了起来，史称弘治中兴。",
+   "broll": [
+    {"prompt": "Yellow river floodwaters breaching dikes, villagers on higher ground, dramatic sky", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Thousands of laborers reinforcing river dikes under supervision, boats and stone works along the banks, epic engineering scene", "at": 0.33, "hold": 0.33, "fit": "contain", "backend": "icu"},
+    {"prompt": "Grain relief distribution to villagers, officials measuring rice, humane governance", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "river dikes and engineering boats, soft engineering wash"},
+  {"kind": "s6", "title": "边防",
+   "narration": "边防上他也不含糊：明军收复哈密、整备九边军务，任用名将镇守北疆；蒙古各部不敢轻易南下。大明在弘治年间，难得地既安内又攘外。",
+   "broll": [
+    {"prompt": "Ming cavalry patrols on the northern frontier at dawn, beacon towers, crisp light", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Fortress town of Hami with caravans and garrison banners restored, desert light", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Generals reviewing troops along the great wall, disciplined ranks, golden dusk", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "northern frontier beacon towers at dawn, crisp cold wash"},
+  {"kind": "s7", "title": "隐忧",
+   "narration": "当然，弘治并非完美：他也宠信过宦官李广，迷信斋醮方术；好在能听阁臣劝谏及时收手。1505年，三十六岁的朱祐樘驾崩，遗诏还在叮嘱：东宫聪明，但年少，要好生教导。",
+   "broll": [
+    {"prompt": "An incense altar with Taoist priests, emperor watching from shadows, mystical haze", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ministers remonstrating before the throne, one kneeling with a memorial held high, emperor listening in thought, dramatic cinematic composition", "at": 0.33, "hold": 0.33, "fit": "contain", "backend": "icu"},
+    {"prompt": "The young emperor on his sickbed with ministers weeping, winter light through lattice, solemn", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "dim altar with mystical haze and scholar books, mixed mystic wash"},
+  {"kind": "s8", "title": "中兴",
+   "narration": "他留给儿子的，是充实的国库、清廉的朝堂——弘治中兴，成色十足。可惜继位的朱厚照，将成为明朝最会玩的皇帝。你觉得一个皇帝不折腾百姓，算不算大功？评论区聊聊。",
+   "broll": [
+    {"prompt": "A golden prosperous empire panorama: busy canals, full granaries, peaceful cities at noon, epic wide composition", "at": 0.0, "hold": 0.33, "fit": "contain", "backend": "icu"},
+    {"prompt": "A teenage prince practicing archery in the palace yard, restless energy, tutors watching", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Historians writing the chronicle of Hongzhi reign by candlelight, satisfied nod, closing composition", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "golden noon empire panorama with canals and cities, prosperous warm wash"}
+ ]
+}

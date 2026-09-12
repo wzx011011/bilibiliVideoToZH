@@ -1,0 +1,66 @@
+{
+ "title": "大明演义 23 · 1644：煤山的最后一天",
+ "voice": "doubao-京腔侃爷",
+ "video_name": "大明演义23-1644煤山.mp4",
+ "broll_backend": "icu",
+ "broll_style": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.",
+ "chapters": [
+  {"kind": "s1", "title": "南迁之议",
+   "narration": "1644年正月，李自成在西安建国大顺，年号永昌，誓师东征，目标只有一个：北京。二月，山西全线崩盘，崇祯动了南迁的心思：太子先去南京监国，给朝廷留条后路。李明睿等人力主，光时亨当廷怒斥，皇帝又怕背上丢弃宗庙的骂名——吵吵嚷嚷一个月，什么都定不下来。",
+   "broll": [
+    {"prompt": "A rebel king enthroned in a northwestern capital with a vast army mustering below the walls, new dynasty rising", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Court officials in two shouting camps around a throne, a southern route map unrolled, futile debate", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A tormented emperor alone between two doors, one bright south one dark north, fateful indecision", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "northern capital under gathering storm with a southern route map, divided amber-grey wash"},
+  {"kind": "s2", "title": "宁武关",
+   "narration": "大顺军随后猛攻宁武关。总兵周遇吉手里只有几千人，硬扛了七天七夜，城破之后转入巷战，身中数箭力竭被擒，骂不绝口而死，全家殉国。这一仗李自成赢了，也吓出一身冷汗：一座小关就这么难打，后面还有大同宣府。结果他想多了——两镇守将开门投降，进京的大门彻底敞开。",
+   "broll": [
+    {"prompt": "A scarred frontier general in broken armor at the center directing a doomed defense from a burning gate tower, iron will", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·周遇吉"]},
+    {"prompt": "Street fighting inside a shattered mountain pass fortress, fallen banners, heroic last stand", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Fortress gates of frontier towns swinging open without a fight, treacherous surrender", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "mountain pass fortress under seven days of assault, heroic charcoal-crimson wash"},
+  {"kind": "s3", "title": "兵临城下",
+   "narration": "三月十七，大顺军合围北京。城外三大营一战即溃，火炮辎重全送了对手；城内瘟疫未过，守军缺饷缺粮，站在城墙上跟没站一样。十八日，出城谈判的太监带回消息：对方要西北一带封王。崇祯不允。当夜，外城破。",
+   "broll": [
+    {"prompt": "Vast besieging army ringing a capital city at dusk with campfires everywhere, noose tightening", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Ragged garrison soldiers slumping on vast city walls, indefensible city, quiet despair", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Outer city walls breached at night with torch streams pouring through, the fall begins", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "besieged capital under smoke and night fires, siege indigo wash"},
+  {"kind": "s4", "title": "煤山",
+   "narration": "十八日夜，崇祯做了最后的安排：把三个儿子化装送出宫，逼周皇后自尽，拔剑砍向长平公主——汝何故生我家！天快亮时，他带着太监王承恩登上煤山，遥望城内火光。十九日凌晨，君王在寿皇亭旁自缢，衣襟里留着最后一道遗诏：任贼分裂朕尸，勿伤百姓一人。这一年，大明立国二百七十六年。",
+   "broll": [
+    {"prompt": "A pale emperor in the night dismissing his disguised children through a small gate, terrible farewell", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "An emperor in plain robes at the center standing under an old crooked pine on a small hill at first light, lone attendant behind, vast silence", "at": 0.33, "hold": 0.33, "fit": "contain", "cast": ["中·朱由检"]},
+    {"prompt": "Dawn breaking over a burning capital seen from a quiet hilltop tree, end of an era", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "hilltop pine at dawn over a burning capital, elegiac grey-gold wash"},
+  {"kind": "s5", "title": "城破之后",
+   "narration": "大顺军进城，头几天军纪尚好。李自成搜寻太子未果，却在一棵树下找到了崇祯的遗体——天子穿着蓝衣，以发覆面，一只脚上没有鞋，据说是无颜见列祖列宗于地下。新朝下令以礼安葬，葬进了田贵妃墓。一代帝王，最后连一座像样的皇陵都没有。",
+   "broll": [
+    {"prompt": "Victorious troops entering a great capital gate with uneasy discipline, quiet streets, tense new order", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A fallen emperor's body found beneath a tree by searching soldiers, blue robe in morning light, somber discovery", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A modest burial procession without royal honors in the rain, humble grave, fallen majesty", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "quiet conquered capital streets under grey sky, somber slate wash"},
+  {"kind": "s6", "title": "吴三桂",
+   "narration": "驻守山海关的吴三桂，正在进京勤王路上，走到半道，北京陷了。他手握关宁铁骑四五万，成了两边争夺的香饽饽：李自成派人招抚，他一度答应。走到半路接连传来消息——父亲吴襄被拷打追赃，爱妾陈圆圆被部将夺去。吴三桂调头回师，一举夺回山海关，跟大顺彻底翻脸。冲冠一怒为红颜，这笔账后世吵了三百年。",
+   "broll": [
+    {"prompt": "A border general at the center reining his cavalry to a halt on a road as bad news riders arrive, fateful turn", "at": 0.0, "hold": 0.33, "fit": "contain", "cast": ["中·吴三桂"]},
+    {"prompt": "Cavalry column wheeling around at night toward a coastal fortress gate, sudden reversal", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A great pass fortress between mountains and sea changing hands under storm sky, strategic hinge", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "coastal pass fortress under storm sky with turning cavalry, betrayal steel-blue wash"},
+  {"kind": "s7", "title": "一片石",
+   "narration": "四月，李自成亲率大军东征山海关。血战到白热化，吴三桂渐不能支，关外刚刚立国的清军成了胜负手：多尔滚坐等两虎相争，吴三桂剃发出关请兵。四月二十二日，八旗铁骑在一片石突入战团，大顺军全线崩溃。李自成退回北京，匆忙称帝，一把火烧了宫城，向西撤走——而清军入了关，从此再没走。",
+   "tts_narration": "四月，李自成亲率大军东征山海关。血战到白热化，吴三桂渐不能支，关外刚刚立国的清军成了胜负手：多尔滚坐等两虎相争，吴三桂剃发出关请兵。四月二十二日，八旗铁骑在一片石突入战团，大顺军全线崩溃。李自成退回北京，匆忙称帝，一把火烧了宫城，向西撤走——而清军入了关，从此再没走。",
+   "broll": [
+    {"prompt": "Massive battle at a mountain-and-sea pass with two armies locked and fresh cavalry waiting on a ridge, decisive moment", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Armored riders charging down from a ridge into a exhausted battle line, thunderous intervention", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A retreating army burning a palace city behind it at night, new banners advancing at dawn, dynastic change", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "pass battlefield with a third force descending, tectonic crimson-grey wash"},
+  {"kind": "s8", "title": "国门与社稷",
+   "narration": "天子守国门，君王死社稷。二百七十六年的大明，在崇祯自缢的那一刻落幕——可抵抗还没有结束：江南还有半壁江山，史可法、郑成功、李定国的故事还在后头。明朝系列的最后一集，讲南明，讲那些不肯低头的名字。如果崇祯当年南迁了，历史会不会不一样？评论区聊聊。",
+   "broll": [
+    {"prompt": "A grand dynasty's empty throne draped in fading light, end of an age, elegiac hall", "at": 0.0, "hold": 0.33, "fit": "contain"},
+    {"prompt": "Southern rivers and mountains under distant banners of resistance, half an empire holding on", "at": 0.33, "hold": 0.33, "fit": "contain"},
+    {"prompt": "A line of resolute silhouettes with different banners on a horizon, unfinished resistance, epic closing frame", "at": 0.66, "hold": 0.34, "fit": "contain"}],
+   "bg": "southern rivers and mountains at dusk with distant banners, unfinished epic teal wash"}
+ ]
+}

@@ -511,71 +511,69 @@ def main() -> None:
     # ---------- 步骤 3: gen-srt + 字幕延后 + 拼音频 ----------
     if args.step in ("build", "audio"):
         print("[audio] gen-srt + 拼音频")
+
+    # video/subtitle 步骤只消费已有产物；此段重生成 raw.srt/拼音频，仅 build/audio 执行
+    # （曾因无门控，--step video 在 chunks manifest 不完整时误跑 gen-srt 直接报错）
     raw_srt = work_dir / f"episode-{ep:02d}-raw.srt"
-    run([
-        PY, str(TOOL_DIR / "doubao_pipeline.py"), "gen-srt",
-        "--chunks-dir", str(chunks_dir),
-        "-o", str(raw_srt),
-        "--max-chars", "35",
-    ])
-
-    # 字幕延后
     final_srt = work_dir / f"episode-{ep:02d}.srt"
-    shift_srt(raw_srt, args.subtitle_delay, final_srt)
-    print(f"  字幕延后 {args.subtitle_delay}s → {final_srt.name}")
-
-    # 拼接音频（所有 wav → mp3）
-    manifest = json.loads((chunks_dir / "manifest.json").read_text(encoding="utf-8"))
-    expected = sorted(int(chunk["chunk_index"]) for chunk in manifest["chunks"])
-    harvested = sorted(int(index) for index in manifest.get("harvested_chunks", []))
-    if harvested != expected:
-        sys.exit(f"[✗] manifest 音频不完整：{harvested} / {expected}")
-    # 先确保所有块都有 wav
-    for idx in harvested:
-        ogg = chunks_dir / f"{idx:02d}.ogg"
-        wav = chunks_dir / f"{idx:02d}.wav"
-    manifest = json.loads((chunks_dir / "manifest.json").read_text(encoding="utf-8"))
-    expected = sorted(int(chunk["chunk_index"]) for chunk in manifest["chunks"])
-    harvested = sorted(int(index) for index in manifest.get("harvested_chunks", []))
-    if harvested != expected:
-        sys.exit(f"[✗] manifest 音频不完整：{harvested} / {expected}")
-    # 先确保所有块都有 wav
-    for idx in harvested:
-        ogg = chunks_dir / f"{idx:02d}.ogg"
-        wav = chunks_dir / f"{idx:02d}.wav"
-        if not wav.exists() and ogg.exists():
-            wav_tmp = wav.with_name(f"{wav.stem}.part{wav.suffix}")
-            wav_tmp.unlink(missing_ok=True)
-            subprocess.run([FFMPEG, "-y", "-loglevel", "error",
-                            "-i", str(ogg), str(wav_tmp)], check=True)
-            if wav_tmp.is_file() and wav_tmp.stat().st_size > 0:
-                _probe_media_duration(wav_tmp)
-                os.replace(wav_tmp, wav)
-            else:
-                wav_tmp.unlink(missing_ok=True)
-        if not wav.exists() or wav.stat().st_size <= 0:
-            sys.exit(f"[✗] 缺少有效音频块：{idx:02d}")
-    # concat
-    list_file = work_dir / "concat-list.txt"
-    list_file.write_text(
-        "\n".join(f"file '{(chunks_dir / f'{idx:02d}.wav').as_posix()}'"
-                  for idx in harvested) + "\n",
-        encoding="utf-8",
-    )
     audio_mp3 = work_dir / f"episode-{ep:02d}-audio.mp3"
-    audio_tmp = audio_mp3.with_name(f"{audio_mp3.stem}.part{audio_mp3.suffix}")
-    audio_tmp.unlink(missing_ok=True)
-    subprocess.run([
-        FFMPEG, "-y", "-loglevel", "error",
-        "-f", "concat", "-safe", "0", "-i", str(list_file),
-        "-codec:a", "libmp3lame", "-b:a", "192k", str(audio_tmp),
-    ], check=True)
-    if not audio_tmp.is_file() or audio_tmp.stat().st_size <= 0:
-        sys.exit("[✗] ffmpeg 未生成有效 MP3")
-    _probe_media_duration(audio_tmp)
-    os.replace(audio_tmp, audio_mp3)
-    list_file.unlink(missing_ok=True)
-    print(f"  音频拼接 → {audio_mp3.name} ({audio_mp3.stat().st_size // 1024 // 1024}MB)")
+    if args.step in ("build", "audio"):
+        raw_srt = work_dir / f"episode-{ep:02d}-raw.srt"
+        run([
+            PY, str(TOOL_DIR / "doubao_pipeline.py"), "gen-srt",
+            "--chunks-dir", str(chunks_dir),
+            "-o", str(raw_srt),
+            "--max-chars", "35",
+        ])
+
+        # 字幕延后
+        final_srt = work_dir / f"episode-{ep:02d}.srt"
+        shift_srt(raw_srt, args.subtitle_delay, final_srt)
+        print(f"  字幕延后 {args.subtitle_delay}s → {final_srt.name}")
+
+        # 拼接音频（所有 wav → mp3）
+        manifest = json.loads((chunks_dir / "manifest.json").read_text(encoding="utf-8"))
+        expected = sorted(int(chunk["chunk_index"]) for chunk in manifest["chunks"])
+        harvested = sorted(int(index) for index in manifest.get("harvested_chunks", []))
+        if harvested != expected:
+            sys.exit(f"[✗] manifest 音频不完整：{harvested} / {expected}")
+        # 先确保所有块都有 wav
+        for idx in harvested:
+            ogg = chunks_dir / f"{idx:02d}.ogg"
+            wav = chunks_dir / f"{idx:02d}.wav"
+            if not wav.exists() and ogg.exists():
+                wav_tmp = wav.with_name(f"{wav.stem}.part{wav.suffix}")
+                wav_tmp.unlink(missing_ok=True)
+                subprocess.run([FFMPEG, "-y", "-loglevel", "error",
+                                "-i", str(ogg), str(wav_tmp)], check=True)
+                if wav_tmp.is_file() and wav_tmp.stat().st_size > 0:
+                    _probe_media_duration(wav_tmp)
+                    os.replace(wav_tmp, wav)
+                else:
+                    wav_tmp.unlink(missing_ok=True)
+            if not wav.exists() or wav.stat().st_size <= 0:
+                sys.exit(f"[✗] 缺少有效音频块：{idx:02d}")
+        # concat
+        list_file = work_dir / "concat-list.txt"
+        list_file.write_text(
+            "\n".join(f"file '{(chunks_dir / f'{idx:02d}.wav').as_posix()}'"
+                      for idx in harvested) + "\n",
+            encoding="utf-8",
+        )
+        audio_mp3 = work_dir / f"episode-{ep:02d}-audio.mp3"
+        audio_tmp = audio_mp3.with_name(f"{audio_mp3.stem}.part{audio_mp3.suffix}")
+        audio_tmp.unlink(missing_ok=True)
+        subprocess.run([
+            FFMPEG, "-y", "-loglevel", "error",
+            "-f", "concat", "-safe", "0", "-i", str(list_file),
+            "-codec:a", "libmp3lame", "-b:a", "192k", str(audio_tmp),
+        ], check=True)
+        if not audio_tmp.is_file() or audio_tmp.stat().st_size <= 0:
+            sys.exit("[✗] ffmpeg 未生成有效 MP3")
+        _probe_media_duration(audio_tmp)
+        os.replace(audio_tmp, audio_mp3)
+        list_file.unlink(missing_ok=True)
+        print(f"  音频拼接 → {audio_mp3.name} ({audio_mp3.stat().st_size // 1024 // 1024}MB)")
 
     # ---------- 步骤 3.5: ASR 字幕（直接用配音音频的语音识别做字幕，时间戳最准）----------
     if args.step in ("build", "subtitle") and not args.no_asr_align:
