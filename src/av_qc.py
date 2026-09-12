@@ -11,11 +11,11 @@
 
 用法(work/.venv-ocr 环境,含 faster-whisper):
   work/.venv-ocr/Scripts/python.exe src/av_qc.py \
-    --content src/mzx_story/ming-05-tumu.json \
-    --audio D:/mzx-ming05/audio.wav \
-    --timeline D:/mzx-ming05/timeline.json \
-    --srt D:/mzx-ming05/subtitles.srt \
-    --out D:/mzx-ming05/qc_report.json
+    --content src/mzx_story/ming-05-tumu-icu.json \
+    --audio D:/mzx-ming05-icu/audio.wav \
+    --timeline D:/mzx-ming05-icu/timeline.json \
+    --srt D:/mzx-ming05-icu/subtitles.srt \
+    --out D:/mzx-ming05-icu/qc_report.json
 退出码: 0=PASS  1=FAIL(超阈值)  2=参数/环境错误
 """
 from __future__ import annotations
