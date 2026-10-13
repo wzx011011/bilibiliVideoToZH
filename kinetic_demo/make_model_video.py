@@ -33,7 +33,10 @@ WSL_PY = "/home/comfy/cosy-gpu-venv/bin/python"
 WSL_ENV = ("HSA_ENABLE_DXG_DETECTION=1 COSY_FP16=0 "
            "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1")
 VC_PY = ROOT / "work/voice-clone-demo/.venv/Scripts/python.exe"
-GEN_VOICE = ROOT / "work/voice-clone-demo/generate_voice.py"
+# 必须绝对路径(带盘符):wrapper 的 _norm_path 对相对路径会拼到 voice-clone-demo 下成双份
+CV3_MODEL = str(ROOT / "work/voice-clone-demo/models/Fun-CosyVoice3-0.5B-2512")
+# CV3 零样本 prompt_text 必须带 endofprompt 前缀(模型 README Basic Usage)
+PROMPT_PREFIX = "You are a helpful assistant.<|endofprompt|>"
 FPS = 30
 LEAD_IN = 0.5
 GAP = 0.55
@@ -104,31 +107,77 @@ def split_cues(text, max_w=26.0):
     return [c for c in cues if c.strip()]
 
 
+def _split_sents(text: str) -> list[str]:
+    return [p for p in re.split(r"(?<=[。!?;])", text) if p.strip()]
+
+
+def _concat_wavs(wavs: list[Path], dst: Path, gap: float = 0.15) -> None:
+    """多段 wav 按序拼接,句间插 gap 静音,采样率取首段。"""
+    with _wave.open(str(wavs[0]), "rb") as w:
+        rate = w.getframerate()
+    cmd = [str(FFMPEG), "-y", "-v", "error"]
+    for w in wavs:
+        cmd += ["-i", str(w)]
+    fc = "".join(f"aevalsrc=0:d={gap}:s={rate}[s{i}];" for i in range(len(wavs) - 1))
+    chain = "".join(f"[{i}:a][s{i}]" for i in range(len(wavs) - 1))
+    fc += chain + f"[{len(wavs)-1}:a]concat=n={2 * len(wavs) - 1}:v=0:a=1[out]"
+    cmd += ["-filter_complex", fc, "-map", "[out]",
+            "-ar", str(rate), "-ac", "1", str(dst)]
+    subprocess.run(cmd, check=True)
+
+
 def run_tts(slug: str, cfg: dict, work: Path) -> None:
-    """CosyVoice 逐段配音 + 重采样 16k(build 用)。"""
+    """CosyVoice 逐段配音 + 重采样 16k(build 用)。
+
+    items 可选 tts 字段:配音用它、字幕用 text 原文——
+    型号连字符(GPT-6/Terminal-Bench 等)会被读出"杠",tts 里改写为空格/汉字。"""
     work = work.resolve()  # WSL 侧需要绝对路径
     items = [{"id": it["id"], "speaker": it.get("speaker", "A"),
-              "text": it["text"]} for it in cfg["items"]]
+              "text": it.get("tts") or it["text"]} for it in cfg["items"]]
     (work / "items.json").write_text(
         json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
     voice = cfg.get("voice", "doubao-东方浩然")
     vdir = ROOT / "work/studio/voices" / voice
     refs = {"A": {
         "ref_wav": str(vdir / "ref.wav"),
-        "ref_text_en": (vdir / "ref.txt").read_text(encoding="utf-8").strip(),
+        "ref_text_en": PROMPT_PREFIX
+        + (vdir / "ref.txt").read_text(encoding="utf-8").strip(),
     }}
     (work / "refs.json").write_text(
         json.dumps(refs, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    args = ["--items-json", wsl(work / "items.json"),
-            "--refs-json", wsl(work / "refs.json"),
-            "--out-dir", wsl(work / "parts")]
-    inner = (f"cd {wsl(ROOT)} && env {WSL_ENV} "
-             f"{WSL_PY} work/voice-clone-demo/generate_voice.py "
-             + " ".join(f'"{a}"' for a in args))
-    r = subprocess.run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c", inner])
-    if r.returncode != 0:
-        raise RuntimeError("WSL TTS 失败(见上方输出)")
+    def _cv3(items_path: Path, out_dir: Path) -> int:
+        args = ["--items-json", wsl(items_path),
+                "--refs-json", wsl(work / "refs.json"),
+                "--out-dir", wsl(out_dir),
+                "--model-dir", CV3_MODEL]
+        inner = (f"cd {wsl(ROOT)} && env {WSL_ENV} "
+                 f"{WSL_PY} work/voice-clone-demo/cv3_generate_voice.py "
+                 + " ".join(f'"{a}"' for a in args))
+        return subprocess.run(["wsl", "-d", "Ubuntu-24.04", "--", "bash", "-c", inner]).returncode
+
+    if _cv3(work / "items.json", work / "parts") != 0:
+        # CV3 整段流式合成的已知坑:token2wav 块边界退化,报 conv1d
+        # "Kernel size can't be greater than actual input size";同一文本
+        # 按句拆开合成则全部可过。降级为逐句生成,再按原顺序拼回
+        # (句间 0.15s),听感等价于内部逐句链。
+        print("[tts] 整段合成失败,降级为逐句合成拼接")
+        sent_items = []
+        for it in items:
+            for j, s in enumerate(_split_sents(it["text"])):
+                sent_items.append({"id": it["id"] * 100 + j,
+                                   "speaker": it["speaker"], "text": s})
+        sent_json = work / "items_sent.json"
+        sent_json.write_text(json.dumps(sent_items, ensure_ascii=False, indent=1),
+                             encoding="utf-8")
+        sent_dir = work / "parts_sent"
+        if _cv3(sent_json, sent_dir) != 0:
+            raise RuntimeError("WSL TTS 失败(整段与逐句降级均失败,见上方输出)")
+        for it in items:
+            chunks = sorted(sent_dir.glob(f"item_{it['id'] * 100:04d}*.wav"))
+            if not chunks:
+                raise RuntimeError(f"逐句降级缺 item{it['id']} 的句 wav")
+            _concat_wavs(chunks, work / "parts" / f"item_{it['id']:04d}.wav")
     p16 = work / "parts16"
     p16.mkdir(exist_ok=True)
     for wav in sorted((work / "parts").glob("item_*.wav")):
@@ -209,7 +258,7 @@ def render(slug: str, cfg: dict, data_path: Path, audio: Path,
     html = html.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))
     html = html.replace("__CONTENT_JSON__",
                         json.dumps(cfg["content"], ensure_ascii=False))
-    built = HERE / f"_{slug}_built.html"
+    built = HERE / "issues" / f"_{slug}_built.html"
     built.write_text(html, encoding="utf-8")
 
     frames = HERE / f"_{slug}_frames"
@@ -258,7 +307,7 @@ def main():
     import hashlib
     fp_path = work / "tts_fingerprint.json"
     fp = hashlib.sha256(json.dumps(
-        [[it["id"], it["text"]] for it in cfg["items"]],
+        [[it["id"], it["text"], it.get("tts", "")] for it in cfg["items"]],
         ensure_ascii=False).encode("utf-8")).hexdigest()
     have_parts = all((work / "parts16" / f"item_{sid:04d}.wav").exists()
                      for sid in cfg["order"])
@@ -267,7 +316,9 @@ def main():
     if have_parts and fp_match:
         print("[tts] 指纹一致,跳过配音")
     else:
-        if have_parts and not fp_match:
+        # 指纹不符必须清缓存,与 have_parts 无关——否则改文案/增删段落时
+        # 断点续跑会跳过旧 id 的 wav,新文案配上旧配音(2026-09-18 实测踩坑)
+        if not fp_match:
             print("[tts] 文案已变更,清缓存重录")
             for d in ("parts", "parts16"):
                 shutil.rmtree(work / d, ignore_errors=True)
