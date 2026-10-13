@@ -44,6 +44,45 @@
   .ncard .d .kw { background:#efe4cf; border-radius:8px; padding:2px 12px;
                   color:#7c2d12; font-weight:600; }
 
+  /* B-roll 窗口(官网/第三方真实素材,纯帧函数驱动,禁 CSS transition)
+     注意:定位相对 .scene(顶部已含 86px 导航),top 从场景顶起算 */
+  #brollBox { position:absolute; left:160px; top:24px; width:1600px; display:none; }
+  #brollClip { width:1600px; height:640px; border-radius:22px; overflow:hidden;
+               border:1px solid #e2d8c3; box-shadow:0 16px 44px rgba(90,70,40,.18); }
+  #brollImg { width:100%; height:100%; object-fit:cover; display:block;
+              transform-origin:center; }
+  #brollCap { margin-top:16px; height:62px; display:flex; align-items:center; gap:18px;
+              background:#fbf8f1; border:1px solid #e2d8c3; border-radius:14px;
+              padding:0 26px; }
+  #brollT { font-size:27px; color:#9a3412; font-weight:700; letter-spacing:1px; }
+  #brollS { margin-left:auto; font-size:22px; color:#8a7a5f; }
+  /* B-roll 插播期间,评分小牌嵌在来源条中部(与底部评分条同一份数据) */
+  #brollScores { display:flex; gap:10px; margin:0 20px; }
+  #brollScores .chip { display:flex; align-items:baseline; gap:7px; background:#efe4cf;
+                       border-radius:8px; padding:3px 12px; white-space:nowrap; }
+  #brollScores .chip .n { font-size:19px; color:#3f3627; font-weight:600; }
+  #brollScores .chip .v { font-family:Consolas,monospace; font-size:21px; font-weight:800;
+                          color:#0f766e; }
+  #brollScores .chip .r { font-size:16px; color:#8a7a5f; }
+  #brollScores .chip.ref { opacity:.6; }
+
+  /* 评分条(模型发布类故事标配:第三方榜单分数+榜位)
+     顶部右侧单行,导航下方标题上方,与标题带垂直错位;B-roll 全幅插播时隐藏(评分小牌转场进来源条) */
+  #scoreStrip { position:absolute; z-index:9; right:40px; top:98px; height:46px;
+                display:none; align-items:center; gap:12px;
+                background:rgba(251,248,241,.96); border:1px solid #e2d8c3;
+                border-radius:12px; padding:0 18px;
+                box-shadow:0 8px 22px rgba(90,70,40,.12); }
+  #scoreStrip .h { font-size:20px; font-weight:800; color:#9a3412; letter-spacing:1px;
+                   white-space:nowrap; }
+  #scoreStrip .chip { display:flex; align-items:baseline; gap:7px; background:#efe4cf;
+                      border-radius:8px; padding:4px 13px; white-space:nowrap; }
+  #scoreStrip .chip .n { font-size:19px; color:#3f3627; font-weight:600; }
+  #scoreStrip .chip .v { font-family:Consolas,monospace; font-size:22px; font-weight:800;
+                         color:#0f766e; }
+  #scoreStrip .chip .r { font-size:16px; color:#8a7a5f; }
+  #scoreStrip .chip.ref { opacity:.6; }
+
   /* 底部字幕条 */
   #subwrap { position:absolute; z-index:9; left:0; top:872px; width:1920px;
              height:110px; text-align:center; }
@@ -79,9 +118,14 @@
     <div id="stTitle"></div>
     <div id="cards"></div>
   </div>
+  <div id="brollBox">
+    <div id="brollClip"><img id="brollImg" alt=""></div>
+    <div id="brollCap"><b id="brollT"></b><span id="brollScores"></span><span id="brollS"></span></div>
+  </div>
 </div>
 
 <div id="subwrap"></div>
+<div id="scoreStrip"></div>
 <div id="tl"></div>
 
 <script>window.__DATA__=__DATA_JSON__;window.__CONTENT__=__CONTENT_JSON__;</script>
@@ -116,6 +160,12 @@ function drawSub(t){
 
 /* 每个故事的卡片 DOM(初始化一次,切故事时换内容) */
 let curStory=-1;
+let curBroll='';
+let curScore='';
+
+/* B-roll 素材表:content stories 可选 broll:[{img,cap,src,f1,f2}],f 为段内进度 */
+const BROLL=[];
+C.stories.forEach((s,i)=>(s.broll||[]).forEach(b=>BROLL.push({seg:i,...b})));
 function fillStory(i){
   if(i===curStory) return;
   curStory=i;
@@ -138,13 +188,65 @@ window.renderFrame=function(t){
   if(seg){
     fillStory(seg.pos);
     const p=sceneProg(t,seg);
+    /* 视觉内容比音频段提前约 12% 显现,消除段首空舞台 */
+    const revealP=clamp01(p+0.12);
+    /* B-roll 也使用视觉进度,片头/段首直接落到对应素材 */
+    const visP=revealP;
+    /* B-roll 窗口:f1..f2 为段内进度,边缘 6% 渐入渐出(纯函数,无 transition) */
+    let act=null;
+    for(const b of BROLL){
+      if(b.seg===seg.pos && b.ok && visP>=b.f1 && visP<=b.f2){ act=b; break; }
+    }
+    const bkey=act?(seg.pos+'|'+act.img):'';
+    if(bkey!==curBroll){
+      curBroll=bkey;
+      if(act){
+        $('brollImg').src=act.img;
+        $('brollImg').style.objectPosition=act.pos||'center';
+        $('brollT').textContent=act.cap;
+        $('brollS').textContent=act.src||'';
+        const sc=C.stories[act.seg].scores;
+        if(sc) $('brollScores').innerHTML=sc.rows.map(r=>
+          '<span class="chip'+(r.ref?' ref':'')+'"><span class="n">'+r.name+
+          '</span><span class="v">'+r.value+' 分</span><span class="r">'+r.rank+
+          '</span></span>').join('');
+        else $('brollScores').innerHTML='';
+        $('brollBox').style.display='block';
+      }else{
+        $('brollBox').style.display='none';
+      }
+    }
+    const bek=act?easeOut(clamp01(Math.min(visP-act.f1,act.f2-visP)/0.06)):0;
+    if(act){
+      $('brollBox').style.opacity=bek.toFixed(3);
+      $('brollImg').style.transform=`scale(${(1.02+0.025*bek).toFixed(4)})`;
+    }
+    /* 评分条:story.scores = {title, rows:[{name,value,rank,ref}]},B-roll 插播时让位 */
+    const SC=seg ? C.stories[seg.pos].scores : null;
+    const skey=SC?seg.pos:'';
+    if(skey!==curScore){
+      curScore=skey;
+      if(SC){
+        $('scoreStrip').innerHTML='<div class="h">'+SC.title+'</div>'+
+          SC.rows.map(r=>'<div class="chip'+(r.ref?' ref':'')+'">'+
+            '<span class="n">'+r.name+'</span>'+
+            '<span class="v">'+r.value+' 分</span>'+
+            '<span class="r">'+r.rank+'</span></div>').join('');
+      }
+      $('scoreStrip').style.display=SC?'flex':'none';
+    }
+    if(SC){
+      const sek=clamp01(Math.min(revealP/0.08,(1-revealP)/0.05));
+      $('scoreStrip').style.opacity=(sek*(1-bek)).toFixed(3);
+    }
     const cards=[...$('cards').children];
     cards.forEach((c,i)=>{
-      const k=clamp01((p-0.12-i*0.14)*2.6);
+      /* 比旧版更早展开:第 4 张约在段落 70% 前完全可读 */
+      const k=clamp01((revealP-0.08-i*0.11)*3.2)*(1-bek);
       c.style.opacity=k.toFixed(3);
       c.style.transform=`translateY(${(1-easeOut(k))*44}px)`;
     });
-    $('stTitle').style.opacity=easeOut(clamp01(p*2.6)).toFixed(3);
+    $('stTitle').style.opacity=(easeOut(clamp01(revealP*2.6))*(1-bek)).toFixed(3);
     /* 时间轴状态 */
     C.stories.forEach((s,i)=>{
       const el=$('tl'+i); if(!el)return;
@@ -155,9 +257,25 @@ window.renderFrame=function(t){
   }
   drawSub(t);
 };
-function pickSeg(t){for(const s of SEGS)if(t>=s.start-0.2&&t<=s.end+0.45)return s;
-  return t>=SEGS[SEGS.length-1].end?SEGS[SEGS.length-1]:null;}
-document.fonts.ready.then(()=>{window.__READY__=true;});
+function pickSeg(t){
+  /* 段间保留上一/下一段的视觉内容,不让 0.55s 音频间隔变成空舞台 */
+  for(const s of SEGS) if(t>=s.start-0.2&&t<=s.end+0.45) return s;
+  if(t<SEGS[0].start) return SEGS[0];
+  return t>=SEGS[SEGS.length-1].end?SEGS[SEGS.length-1]:null;
+}
+
+/* 图片预载并入 __READY__ 门禁(缺图不挂死渲染,onerror 照常放行) */
+const imagesReady=new Promise(res=>{
+  if(!BROLL.length) return res();
+  let n=0;
+  BROLL.forEach(b=>{
+    const im=new Image();
+    im.onload=()=>{b.ok=true; if(++n===BROLL.length)res();};
+    im.onerror=()=>{b.ok=false; if(++n===BROLL.length)res();};
+    im.src=b.img;
+  });
+});
+Promise.all([document.fonts.ready, imagesReady]).then(()=>{window.__READY__=true;});
 renderFrame(0);
 </script>
 </body>

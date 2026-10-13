@@ -678,6 +678,86 @@ CAMS: dict[str, Callable[[float], tuple[float, float, float]]] = {
 
 _BROLL_CACHE: dict[str, Image.Image] = {}
 
+# I2V 动态帧源(帧文件夹由 work/ming16_extract_frames.py 预抽成 15fps 完整画面 PNG)。
+# 命中规则: work/mzx_story_i2v_frames/<内容slug>/<节拍png名>/ 存在即用视频帧,
+# 播完后落在"末帧+微缩放"(cover)或末帧定格(contain);无文件夹的节拍自动回退静态。
+I2V_DRAW_FPS = 15
+_I2V_ROOT = ROOT / "work" / "mzx_story_i2v_frames"
+_I2V_COUNT: dict[Path, int] = {}
+_I2V_CONTAIN: dict[Path, tuple] = {}
+
+
+def _i2v_dir_for(seg: dict[str, Any]) -> Path | None:
+    stem = CONTENT.stem if isinstance(CONTENT, Path) else Path(CONTENT).stem
+    d = _I2V_ROOT / stem / Path(seg["src"]).stem
+    return d if d.is_dir() and any(d.glob("f*.png")) else None
+
+
+def _i2v_frames(vdir: Path) -> int:
+    if vdir not in _I2V_COUNT:
+        _I2V_COUNT[vdir] = len(list(vdir.glob("f*.png")))
+    return _I2V_COUNT[vdir]
+
+
+def _i2v_seek(vdir: Path, local: float, beat_seconds: float) -> int:
+    n = _i2v_frames(vdir)
+    t = max(0.0, local * beat_seconds)
+    return min(int(t * I2V_DRAW_FPS), n - 1)
+
+
+def _i2v_cover_frame(vdir: Path, local: float, beat_seconds: float,
+                     height: int) -> Image.Image:
+    """cover 铺法:视频帧铺满舞台;播完后末帧继续缓推(替代原静态 1.05 缩放)。"""
+    img = Image.open(vdir / f"f{_i2v_seek(vdir, local, beat_seconds):04d}.png").convert("RGB")
+    scale = max(WIDTH / img.width, height / img.height)
+    img = img.resize((int(img.width * scale) + 1, int(img.height * scale) + 1), Image.BILINEAR)
+    zoom = 1.0
+    vid_secs = _i2v_frames(vdir) / I2V_DRAW_FPS
+    t = max(0.0, local * beat_seconds)
+    if t >= vid_secs:
+        rest = beat_seconds - vid_secs
+        zoom = 1.0 if rest <= 0.5 else 1.0 + 0.03 * min(1.0, (t - vid_secs) / rest)
+    if zoom > 1.001:
+        cw, ch = max(2, int(img.width / zoom)), max(2, int(img.height / zoom))
+        x0, y0 = (img.width - cw) // 2, (img.height - ch) // 2
+        img = img.crop((x0, y0, x0 + cw, y0 + ch))
+    x0, y0 = (img.width - WIDTH) // 2, (img.height - height) // 2
+    return img.crop((x0, y0, x0 + WIDTH, y0 + height)).resize((WIDTH, height), Image.BILINEAR)
+
+
+def _i2v_contain_setup(vdir: Path, height: int) -> tuple:
+    """contain 铺法的静态件:首帧模糊压暗背景 + 前景几何 + 圆角遮罩(每拍只算一次)。"""
+    if vdir in _I2V_CONTAIN:
+        return _I2V_CONTAIN[vdir]
+    art = Image.open(vdir / "f0000.png").convert("RGB")
+    small = art.resize((480, max(1, 480 * art.height // art.width)), Image.LANCZOS)
+    bscale = max(WIDTH / small.width, height / small.height)
+    bw, bh = int(small.width * bscale) + 2, int(small.height * bscale) + 2
+    bgp = small.resize((bw, bh), Image.BILINEAR)
+    bx, by = (bw - WIDTH) // 2, (bh - height) // 2
+    bgp = bgp.crop((bx, by, bx + WIDTH, by + height)).filter(
+        ImageFilter.GaussianBlur(16))
+    bgp = Image.blend(bgp, Image.new("RGB", bgp.size, (10, 10, 13)), 0.32)
+    fscale = min((WIDTH - 64) / art.width, (height - 56) / art.height)
+    w2, h2 = max(2, int(art.width * fscale)), max(2, int(art.height * fscale))
+    x0, y0 = (WIDTH - w2) // 2, (height - h2) // 2
+    mask = Image.new("L", (w2, h2), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, w2, h2), radius=18, fill=255)
+    _I2V_CONTAIN[vdir] = (bgp, x0, y0, w2, h2, mask)
+    return _I2V_CONTAIN[vdir]
+
+
+def _i2v_contain_frame(vdir: Path, local: float, beat_seconds: float,
+                       height: int) -> Image.Image:
+    """contain 铺法:完整画面带圆角悬浮居中,模糊背景保持首帧,动效集中在前景。"""
+    bgp, x0, y0, w2, h2, mask = _i2v_contain_setup(vdir, height)
+    frame = Image.open(vdir / f"f{_i2v_seek(vdir, local, beat_seconds):04d}.png").convert("RGB")
+    if frame.size != (w2, h2):
+        frame = frame.resize((w2, h2), Image.BILINEAR)
+    out = bgp.copy()
+    out.paste(frame, (x0, y0), mask)
+    return out
+
 
 def _broll_base(src: Path, height: int) -> Image.Image:
     """按舞台宽高预缩放 broll 底图(进程级缓存,避免每帧重读)。"""
@@ -708,7 +788,14 @@ def _broll_segments(chapter: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _segment_frame(seg: dict[str, Any], height: int, local: float,
-                   stage_art: Image.Image) -> Image.Image:
+                   stage_art: Image.Image,
+                   beat_seconds: float | None = None) -> Image.Image:
+    if beat_seconds and seg["type"] == "ai":
+        vdir = _i2v_dir_for(seg)
+        if vdir is not None:
+            if seg.get("fit") == "contain":
+                return _i2v_contain_frame(vdir, local, beat_seconds, height)
+            return _i2v_cover_frame(vdir, local, beat_seconds, height)
     if seg["type"] == "diagram":
         return stage_art
     src = seg["src"]
@@ -754,11 +841,13 @@ def _segment_frame(seg: dict[str, Any], height: int, local: float,
 
 
 def _broll_frame_for(chapter: dict[str, Any], progress: float, height: int,
-                     stage_art: Image.Image) -> Image.Image | None:
+                     stage_art: Image.Image,
+                     chapter_dur: float | None = None) -> Image.Image | None:
     """progress 命中的节拍帧;段间过渡为 AI↔AI(或图解)交叉淡化。
 
     矢量层只在 type=diagram 的图解节拍长驻出现(时长=该节拍 hold,想停多久停多久),
     不再作为节拍间隙的填充闪现。
+    chapter_dur(秒)用于 I2V 动态节拍把 local 映射到视频时间,None 则纯静态。
     """
     segs = _broll_segments(chapter)
     if not segs:
@@ -768,11 +857,14 @@ def _broll_frame_for(chapter: dict[str, Any], progress: float, height: int,
         return None
     seg = segs[idx]
     local = min(1.0, (progress - seg["at"]) / max(seg["hold"], 1e-6))
-    frame = _segment_frame(seg, height, local, stage_art)
+    beat_secs = None if chapter_dur is None else max(0.0, float(chapter_dur) * seg["hold"])
+    frame = _segment_frame(seg, height, local, stage_art, beat_seconds=beat_secs)
     fade = 0.12
     if idx > 0 and local < fade and seg["hold"] > fade:
-        prev = _segment_frame(segs[idx - 1], height, 1.0, stage_art)
-        frame = Image.blend(prev, frame, local / fade)
+        prev = segs[idx - 1]
+        prev_secs = None if chapter_dur is None else max(0.0, float(chapter_dur) * prev["hold"])
+        prev_frame = _segment_frame(prev, height, 1.0, stage_art, beat_seconds=prev_secs)
+        frame = Image.blend(prev_frame, frame, local / fade)
     return frame
 
 
@@ -791,8 +883,69 @@ def _chapter_background(chapter: dict[str, Any]) -> Image.Image | None:
     return _BROLL_CACHE[key]
 
 
+def _load_painters(content_path: Path, content: dict) -> None:
+    """内容 JSON 可带 "painters": "<py 文件>" 指定本集场景模块(新系列试播免改本文件)。
+
+    模块约定:bind(content) 存内容引用;skin(vr) 可覆盖配色;PAINTERS/CAMS 同本文件约定。
+    """
+    name = content.get("painters")
+    if not name:
+        return
+    import importlib.util
+    ppath = content_path.parent / name
+    spec = importlib.util.spec_from_file_location(f"_painters_{content_path.stem}", ppath)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"painters 模块加载失败: {ppath}")
+    pmod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(pmod)
+    if hasattr(pmod, "bind"):
+        pmod.bind(content)
+    if hasattr(pmod, "skin"):
+        pmod.skin(sys.modules[__name__])
+    if hasattr(pmod, "PAINTERS"):
+        globals()["PAINTERS"] = dict(pmod.PAINTERS)
+    if hasattr(pmod, "CAMS"):
+        globals()["CAMS"] = dict(pmod.CAMS)
+
+
+def _draw_era_chrome(d: ImageDraw.ImageDraw, content: dict, chapter: dict) -> None:
+    """纪年角标 + 朝代进度条:内容 JSON 声明 era 且章带 year_val 时启用(何时锚)。"""
+    era = content.get("era") or {}
+    yv = chapter.get("year_val")
+    if not era or yv is None or float(era.get("y1", 1)) <= float(era.get("y0", 0)):
+        return
+    ey0, ey1 = float(era["y0"]), float(era["y1"])
+    strip_w = 460
+    x1 = WIDTH - EDGE_MARGIN
+    x0 = x1 - strip_w
+    yb = 124  # 舞台顶 150 上方留 ~20px 呼吸带,避免与 contain 卡片/模糊底视觉粘连
+
+    def fx(y: float) -> int:
+        return int(x0 + strip_w * (float(y) - ey0) / (ey1 - ey0))
+
+    d.rectangle((x0, yb, x1, yb + 7), fill=(206, 199, 180))
+    cur = fx(yv)
+    d.rectangle((x0, yb, min(cur, x1), yb + 7), fill=RED)
+    for cv in content.get("chapters") or []:
+        cy = cv.get("year_val")
+        if cy is not None:
+            cxp = fx(cy)
+            d.rectangle((cxp - 1, yb - 3, cxp + 1, yb + 7), fill=(120, 110, 95))
+    d.ellipse((cur - 5, yb - 3, cur + 5, yb + 7), fill=DARKRED, outline=PAPER, width=2)
+    name = str(era.get("name", ""))
+    if name:
+        nf = layout_font(22, bold=True)
+        d.text((x0 - 12 - d.textlength(name, font=nf), yb - 8), name, font=nf, fill=BLUE)
+    year_label = chapter.get("year")
+    if year_label:
+        yf = layout_font(30, bold=True)
+        d.text((x1 - d.textlength(str(year_label), font=yf), 86), str(year_label),
+               font=yf, fill=RED)
+
+
 def render_scene(chapter: dict[str, Any], progress: float, *, content: dict,
-                 index: int, total: int, subtitle: str) -> Image.Image:
+                 index: int, total: int, subtitle: str,
+                 chapter_dur: float | None = None) -> Image.Image:
     """Render one scene with an isolated stage and fixed editorial overlays.
 
     Scene artwork is never allowed to paint into the header or subtitle band.  The
@@ -809,7 +962,8 @@ def render_scene(chapter: dict[str, Any], progress: float, *, content: dict,
     img = Image.new("RGB", (WIDTH, HEIGHT), PAPER)
     img.paste(stage_art, (STAGE.left, STAGE.top))
 
-    broll_frame = _broll_frame_for(chapter, progress, STAGE.height, stage_art)
+    broll_frame = _broll_frame_for(chapter, progress, STAGE.height, stage_art,
+                                   chapter_dur=chapter_dur)
     if broll_frame is not None:
         img.paste(broll_frame, (STAGE.left, STAGE.top))
 
@@ -829,8 +983,10 @@ def render_scene(chapter: dict[str, Any], progress: float, *, content: dict,
                  98), fill=RED)
     chapter_title = str(chapter.get("title", ""))
     d.text((EDGE_MARGIN, 112), chapter_title, font=layout_font(22, bold=True), fill=BLUE)
+    _draw_era_chrome(d, content, chapter)
 
-    source_line = "大明演义 · 动画图解 · 画面中的地图与日期为解释性可视化"
+    source_line = content.get("brand_line",
+                              "大明演义 · 动画图解 · 画面中的地图与日期为解释性可视化")
     draw_subtitle_band(img, subtitle, source_line=source_line)
     return img
 
@@ -857,7 +1013,8 @@ def _layout_samples(content, timeline, cues, out: Path) -> tuple[list[Path], lis
         for sample_index, progress in enumerate((0.0, .15, .30, .45, .60, .75, .90, 1.0)):
             seconds = entry["start"] + entry["duration"] * min(progress, .999999)
             image = render_scene(chapter, progress, content=content, index=i, total=total,
-                                 subtitle=_cue_for(cues, seconds))
+                                 subtitle=_cue_for(cues, seconds),
+                                 chapter_dur=entry["duration"])
             path = frames_dir / f"s{i + 1:02d}_{sample_index:02d}.png"
             image.save(path, "PNG")
             paths.append(path)
@@ -865,7 +1022,9 @@ def _layout_samples(content, timeline, cues, out: Path) -> tuple[list[Path], lis
             # which is clipped to STAGE before the overlay is applied.
             overlay_boxes = draw_subtitle_band(Image.new("RGB", (WIDTH, HEIGHT), PAPER),
                                                _cue_for(cues, seconds),
-                                               source_line="明朝故事 · 动画图解 · 画面中的地图与日期为解释性可视化")
+                                               source_line=content.get(
+                                                   "brand_line",
+                                                   "明朝故事 · 动画图解 · 画面中的地图与日期为解释性可视化"))
             reports.append({"chapter": i, "progress": progress, "path": str(path),
                             "issues": validate_layout(overlay_boxes),
                             "black_edge_ratio": black_edge_ratio(image)})
@@ -892,7 +1051,8 @@ def render_video(content, timeline, cues, audio: Path, output: Path) -> dict:
             local = max(0.0, min(1.0, (sec - entry["start"]) / max(entry["duration"], .001)))
             if frame % 2 == 0:  # 15fps 绘制,复制成 30fps
                 img = render_scene(content["chapters"][idx], local, content=content,
-                                   index=idx, total=total, subtitle=_cue_for(cues, sec))
+                                   index=idx, total=total, subtitle=_cue_for(cues, sec),
+                                   chapter_dur=entry["duration"])
                 cached = img.tobytes()
             proc.stdin.write(cached)
     except BrokenPipeError as exc:
@@ -920,6 +1080,7 @@ def run(preview: bool = False, render: bool = False, out: Path | None = None,
     out = Path(out) if out else OUT
     content = json.loads(content_path.read_text(encoding="utf-8"))
     globals()["CONTENT"] = content_path
+    _load_painters(content_path, content)
     out.mkdir(parents=True, exist_ok=True)
     if preview:
         durations = [max(2.5, len(c.get("narration", "")) * 0.19)

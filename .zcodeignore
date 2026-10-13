@@ -1,0 +1,119 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+venv*/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Binary media and generated deliveries
+*.mp4
+*.m4v
+*.mkv
+*.mov
+*.avi
+*.webm
+*.flv
+*.m4a
+*.wav
+*.mp3
+*.aac
+*.flac
+*.ogg
+*.opus
+videos/*.mp4
+
+# Download caches, partial transfers, and logs
+downloads/
+youtube/
+*.part
+*.log
+*.stderr.log
+*.stdout.log
+*.log.stderr
+*.log.stdout
+
+# Models and bundled binaries
+model-cache/
+**/models--*/
+*.bin
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+work/video-tools/
+work/gpt-sovits/
+*.exe
+*.dll
+
+# Transformer renderer artifacts
+work/transformer-video-series/node_modules/
+work/transformer-video-series/out/
+work/transformer-video-series/preview/
+work/transformer-video-series/audio-capture/
+
+# Scratch images
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+
+# Secrets and editor files
+.env
+*.env
+!*.env.example
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+.zcode/
+
+# ============ 演示产物（本地保存）============
+kinetic_demo/
+
+# ============ work/ 工作区：机器本地，白名单收纳文档化工具 ============
+work/*
+!work/tail_check.py
+!work/scan_srt_coverage.py
+!work/watch_*.py
+!work/probe-qwen-image/
+
+# 历史成品归档(大媒体,成品以 NAS 为准)
+episodes/
+videos/
+
+# ===== ↑ 以上同步自 .gitignore（「从 .gitignore 同步」只重写以上部分）=====
+.git/
+.hg/
+.svn/
+node_modules/
+bower_components/
+jspm_packages/
+site-packages/
+venv/
+coverage/
+htmlcov/
+lcov-report/
+cmakefiles/
+cmake-build-*/
+bazel-*/
+pods/
+deriveddata/
+storybook-static/
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+cdk.out/
+*.dist-info/
+eggs/
+pip-wheel-metadata/
+wheels/
+# ----- ↑ 以上为 ZCode 默认排除规则（自定义规则请写在本行下方，不会被同步/恢复改动）-----
+# 自定义规则写在下方（本行提示可删除）

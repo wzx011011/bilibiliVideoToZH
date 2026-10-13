@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>秦汉前传 · 机制动画演示(演"势")</title>
+<style>
+:root{--paper:#e8e3d5;--ink:#26231f;--red:#ac2c24;--darkred:#7e201a;--green:#3a6658;--gray:#8a8378}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:var(--paper);
+  font-family:"Noto Serif SC","Source Han Serif SC","SimSun",serif;color:var(--ink)}
+#app{display:flex;flex-direction:column;height:100vh}
+header{display:flex;align-items:center;gap:12px;padding:8px 18px;z-index:5}
+header .seal{width:34px;height:34px;background:var(--green);color:#f4edda;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+header h1{font-size:16px;letter-spacing:1px}
+header .sub{font-size:12px;color:var(--gray)}
+header .tag{margin-left:auto;font-size:11px;color:var(--gray)}
+#stage{flex:1;position:relative;background:
+  linear-gradient(90deg,rgba(150,120,60,.10) 0 26px,transparent 26px 60px),
+  linear-gradient(-90deg,rgba(150,120,60,.10) 0 26px,transparent 26px 60px),
+  var(--paper)}
+#stage svg{width:100%;height:100%;display:block}
+#strip{height:128px;display:flex;gap:10px;padding:8px 16px;border-top:1px dashed #c9bfa6;
+  background:rgba(244,237,218,.7);overflow-x:auto}
+.cell{flex:none;width:128px;text-align:center}
+.cell svg{width:114px;height:92px;background:#f2ecdd;border:1px solid #d8cdb0;border-radius:8px}
+.cell .nm{font-size:12px;color:var(--darkred);margin-top:2px}
+#sub{position:absolute;left:0;right:0;bottom:12px;text-align:center;pointer-events:none}
+#sub .txt{display:inline-block;background:rgba(38,35,31,.82);color:#f4edda;border-radius:8px;
+  padding:7px 22px;font-size:19px;letter-spacing:1px;transition:opacity .3s}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="seal">势</div>
+    <div>
+      <h1>机制动画演示 · 代码演"势"(取材 ep00 s3 / ep01 s6)</h1>
+      <p class="sub">生图讲人 · 代码演势:行军推进 / 粮道斩断 / 计日翻牌 / 方块落账</p>
+    </div>
+    <span class="tag">静态网页验证版 · 与成片管线无关</span>
+  </header>
+  <div id="stage">
+    <svg id="cv" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice"></svg>
+    <div id="sub"><span class="txt" id="subtxt"></span></div>
+  </div>
+  <div id="strip"></div>
+</div>
+
+<script>
+const PAL={ink:'#26231f',red:'#ac2c24',dark:'#7e201a',green:'#3a6658',
+  yellow:'#c49434',paper:'#e8e3d5',gray:'#8a8378',ochre:'#96703c'};
+const SVGNS='http://www.w3.org/2000/svg';
+function el(tag,attrs,parent){const e=document.createElementNS(SVGNS,tag);
+  for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+const cv=document.getElementById('cv');
+const S=el('g',{},cv);
+const ease=t=>t<0?0:t>1?1:t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+/* ============ 公共:纪年角标 ============ */
+function chrome(year,era){
+  const g=el('g',{},S);
+  el('text',{x:1830,y:88,'text-anchor':'end','font-size':40,fill:PAL.red,'font-weight':'bold'},g).textContent=year;
+  el('rect',{x:1380,y:104,width:450,height:8,rx:4,fill:'#cec3a6'},g);
+  el('rect',{x:1380,y:104,width:236,height:8,fill:PAL.red},g);
+  el('text',{x:1364,y:116,'text-anchor':'end','font-size':24,fill:PAL.dark,'font-weight':'bold'},g).textContent=era;
+  return g;
+}
+const CH_A=chrome('前260','战国'), CH_B=chrome('前355','战国');
+
+/* ============ A 幕:四十六天(合围+断粮+计日) ============ */
+const A={g:el('g',{},S)};
+(function(){
+  const g=A.g;
+  // 地面基线 + 标题
+  el('text',{x:140,y:210,'font-size':44,fill:PAL.ink,'font-weight':'bold'},g).textContent='断粮 · 四十六天';
+  // 邯郸(左)
+  el('circle',{cx:300,cy:700,r:10,fill:PAL.green,stroke:PAL.ink,'stroke-width':3},g);
+  el('text',{x:322,y:706,'font-size':30,fill:PAL.ink,'font-weight':'bold'},g).textContent='邯郸';
+  // 赵军大营(中右)
+  const CX=1350,CY=560;
+  A.camp=el('ellipse',{cx:CX,cy:CY,rx:230,ry:150,fill:'none',stroke:PAL.gray,
+    'stroke-width':3,'stroke-dasharray':'10 8'},g);
+  A.blocks=[];
+  for(let r=0;r<4;r++)for(let c=0;c<7;c++){
+    const b=el('rect',{x:CX-150+c*44,y:CY-58+r*32,width:34,height:22,rx:4,
+      fill:PAL.green,stroke:PAL.ink,'stroke-width':2},g);
+    A.blocks.push(b);
+  }
+  el('text',{x:CX-60,y:CY+128,'font-size':30,fill:PAL.green,'font-weight':'bold'},g).textContent='赵军 · 断粮';
+  // 粮道(邯郸→大营)
+  A.road=el('path',{d:`M 316,688 C 620,640 900,610 ${CX-240},580`,fill:'none',
+    stroke:PAL.ochre,'stroke-width':9,'stroke-linecap':'round',opacity:.9},g);
+  el('text',{x:760,y:660,'font-size':26,fill:PAL.gray},g).textContent='粮道';
+  // 粮车
+  A.cart=el('g',{},g);
+  el('rect',{x:-20,y:-16,width:40,height:18,rx:4,fill:PAL.yellow,stroke:PAL.ink,'stroke-width':2.5},A.cart);
+  el('circle',{cx:-10,cy:6,r:6,fill:'none',stroke:PAL.ink,'stroke-width':2.5},A.cart);
+  el('circle',{cx:10,cy:6,r:6,fill:'none',stroke:PAL.ink,'stroke-width':2.5},A.cart);
+  // 四支秦军箭头(自四角推进)
+  A.arrows=[];
+  const dirs=[[250,250],[1670,250],[250,930],[1670,930]];
+  dirs.forEach((p,i)=>{
+    const [x0,y0]=p;
+    const dx=CX-x0,dy=CY-y0,L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L;
+    const a={line:el('line',{x1:x0,y1:y0,x2:x0,y2:y0,stroke:PAL.red,'stroke-width':8,
+      'stroke-linecap':'round',opacity:.85},g),
+      head:el('polygon',{points:'0,0 -16,10 -16,-10',fill:PAL.red},g)};
+    a.calc=t=>{ // t:0→1 推进,终点停在大营外沿
+      const r=280, maxL=L-r;
+      const len=maxL*ease(t);
+      const tx=x0+ux*len,ty=y0+uy*len;
+      a.line.setAttribute('x2',tx);a.line.setAttribute('y2',ty);
+      const ang=Math.atan2(uy,ux)*180/Math.PI;
+      a.head.setAttribute('transform',`translate(${tx},${ty}) rotate(${ang})`);
+    };
+    A.arrows.push(a);
+  });
+  el('text',{x:180,y:200,'font-size':26,fill:PAL.dark,'font-weight':'bold'},g).textContent='奇袭 25000';
+  el('text',{x:1640,y:200,'font-size':26,fill:PAL.dark,'font-weight':'bold'},g).textContent='骑兵 5000';
+  // 断粮红X
+  A.x1=el('line',{x1:742,y1:616,x2:742,y2:616,stroke:PAL.red,'stroke-width':12,'stroke-linecap':'round'},g);
+  A.x2=el('line',{x1:742,y1:668,x2:742,y2:668,stroke:PAL.red,'stroke-width':12,'stroke-linecap':'round'},g);
+  // 计日牌
+  A.dayCard=el('g',{},g);
+  el('rect',{x:130,y:330,width:280,height:110,rx:12,fill:'#f2ecdd',stroke:PAL.ink,'stroke-width':3.5},A.dayCard);
+  el('text',{x:270,y:368,'text-anchor':'middle','font-size':24,fill:PAL.gray},A.dayCard).textContent='被围';
+  A.dayNum=el('text',{x:270,y:424,'text-anchor':'middle','font-size':52,fill:PAL.red,
+    'font-weight':'bold'},A.dayCard);
+  el('text',{x:270,y:452,'text-anchor':'middle','font-size':20,fill:PAL.gray},A.dayCard).textContent='天';
+})();
+
+/* ============ B 幕:编户齐民(方块落账+兵粮攀升) ============ */
+const B={g:el('g',{},S)};
+(function(){
+  const g=B.g;
+  el('text',{x:140,y:210,'font-size':44,fill:PAL.ink,'font-weight':'bold'},g).textContent='编户齐民 · 把国家数清楚';
+  el('text',{x:146,y:262,'font-size':28,fill:PAL.green},g).textContent='每一户,都变成账本上的数字';
+  // 户籍方块阵 10×6
+  B.cells=[];
+  for(let r=0;r<6;r++)for(let c=0;c<10;c++){
+    const cell=el('rect',{x:200+c*62,y:360+r*62,width:50,height:50,rx:6,
+      fill:'#ded5be',stroke:PAL.ink,'stroke-width':2.5},g);
+    B.cells.push(cell);
+  }
+  el('text',{x:200,y:768,'font-size':26,fill:PAL.gray},g).textContent='五家一伍 · 十家一什(朱砂为伍长)';
+  // 两张结果卡
+  const mkCard=(x,y,title,unit)=>{
+    const cg=el('g',{},g);
+    el('rect',{x:x-20,y:y,width:420,height:150,rx:12,fill:'#f2ecdd',stroke:PAL.ink,'stroke-width':3.5},cg);
+    el('text',{x:x+16,y:y+44,'font-size':28,fill:PAL.gray},cg).textContent=title;
+    const num=el('text',{x:x+16,y:y+118,'font-size':60,fill:PAL.dark,'font-weight':'bold'},cg);
+    el('text',{x:x+330,y:y+118,'font-size':30,fill:PAL.gray},cg).textContent=unit;
+    return num;
+  };
+  B.numBing=mkCard(1300,330,'能征之兵','万');
+  B.numLiang=mkCard(1300,560,'能收之粮','万石');
+  // 引出箭头
+  B.ab=el('path',{d:'M 850,520 Q 1100,470 1270,430',fill:'none',stroke:PAL.ink,
+    'stroke-width':5,'stroke-linecap':'round'},g);
+  B.al=el('path',{d:'M 850,540 Q 1100,600 1270,640',fill:'none',stroke:PAL.ink,
+    'stroke-width':5,'stroke-linecap':'round'},g);
+  el('text',{x:1010,y:400,'font-size':24,fill:PAL.gray},g).textContent='朝廷第一次知道 →';
+})();
+
+/* ============ 字幕 ============ */
+const SUBS=[
+  [0,'A·四十六天',0],
+  [0.4,'两万五千秦军奇袭背后,五千骑兵截断粮道——'],
+  [4.6,'赵括就地筑垒,等待援军和粮食。'],
+  [7.6,'这一等,是四十六天。'],
+  [11.8,'赵国的援兵和粮车,一辆也进不来。'],
+  [14,'B·编户齐民',1],
+  [14.4,'变法第一刀:把每一户,变成账本上的数字。'],
+  [17.6,'朝廷第一次知道:能征多少兵,能收多少粮。'],
+];
+const LOOP=22;
+
+/* ============ 主循环 ============ */
+const subtxt=document.getElementById('subtxt');
+let last=performance.now();
+function frame(now){
+  const T=(now/1000)%LOOP;
+  const inA=T<14;
+  A.g.setAttribute('opacity',inA?1:0);
+  B.g.setAttribute('opacity',inA?0:1);
+  CH_A.setAttribute('opacity',inA?1:0);
+  CH_B.setAttribute('opacity',inA?0:1);
+  if(inA){
+    const t=T;
+    // 粮道先通后断:0~2s 画出,2~2.4s 斩断
+    const roadT=ease(clamp(t/2,0,1));
+    A.road.setAttribute('stroke-dasharray','none');
+    const len=A.road.getTotalLength();
+    A.road.setAttribute('stroke-dasharray',`${len} ${len}`);
+    A.road.setAttribute('stroke-dashoffset',len*(1-roadT));
+    // 粮车沿道走到斩点
+    const cartP=A.road.getPointAtLength(len*Math.min(roadT,clamp((t-0.3)/2.2,0,1)*0.62));
+    A.cart.setAttribute('transform',`translate(${cartP.x},${cartP.y-14})`);
+    A.cart.setAttribute('opacity',t<2.6?1:0);
+    // 红X
+    const xt=ease(clamp((t-2.0)/0.35,0,1));
+    A.x1.setAttribute('x1',742-30*xt);A.x1.setAttribute('y1',616-30*xt);
+    A.x1.setAttribute('x2',742+30*xt);A.x1.setAttribute('y2',616+30*xt);
+    A.x2.setAttribute('x1',742-30*xt);A.x2.setAttribute('y1',668+30*xt);
+    A.x2.setAttribute('x2',742+30*xt);A.x2.setAttribute('y2',668-30*xt);
+    // 四箭头 2.4~5.5 推进
+    const at=clamp((t-2.4)/3.1,0,1);
+    A.arrows.forEach(a=>a.calc(at));
+    // 计日 6→12 翻到 46
+    const dayT=clamp((t-6)/6,0,1);
+    const day=Math.max(1,Math.round(46*ease(dayT)));
+    A.dayNum.textContent=day;
+    // 大营渐弱(减员感)
+    A.blocks.forEach((b,i)=>{
+      const dim=i/ A.blocks.length<dayT*0.5;
+      b.setAttribute('fill',dim?'#8fa398':PAL.green);
+      b.setAttribute('opacity',dim?0.55:1);
+    });
+  }else{
+    const t=T-14;
+    // 方块逐个落账(带 5 的倍数=朱砂伍长)
+    B.cells.forEach((cell,i)=>{
+      const k=clamp((t*30-i)*0.5,0,1); // 高速依次点亮
+      const on=ease(k);
+      cell.setAttribute('opacity',on);
+      const isWu=(i%5)===4;
+      cell.setAttribute('fill',isWu?PAL.red:'#ded5be');
+      cell.setAttribute('transform',`translate(${(1-on)*-8},${(1-on)*8})`);
+    });
+    // 兵粮攀升
+    const bt=ease(clamp((t-2.5)/2.2,0,1)),lt=ease(clamp((t-3.1)/2.2,0,1));
+    B.numBing.textContent=(60*bt).toFixed(0);
+    B.numLiang.textContent=(300*lt).toFixed(0);
+  }
+  // 字幕
+  let line='';
+  for(const [t0,txt] of SUBS) if(T>=t0)line=txt;
+  if(line.startsWith('A·')||line.startsWith('B·'))line='';
+  if(subtxt.textContent!==line)subtxt.textContent=line;
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(t=>{last=t;frame(t);});
+
+/* ============ 原语库预览条 ============ */
+const strip=document.getElementById('strip');
+function mkCell(title,draw){
+  const cell=document.createElement('div');cell.className='cell';
+  const svg=document.createElementNS(SVGNS,'svg');
+  svg.setAttribute('viewBox','0 0 114 92');cell.appendChild(svg);
+  const lbl=document.createElement('div');lbl.className='nm';lbl.textContent=title;cell.appendChild(lbl);
+  strip.appendChild(cell);
+  draw(svg);
+}
+/* ① 行军箭头 */
+mkCell('行军箭头',svg=>{
+  const line=el('line',{x1:14,y1:70,x2:14,y2:70,stroke:PAL.red,'stroke-width':6,'stroke-linecap':'round'},svg);
+  const head=el('polygon',{points:'0,0 -12,8 -12,-8',fill:PAL.red},svg);
+  (function loop(){let t0=performance.now();
+    (function f(now){const t=((now-t0)/1000)%1.6;
+      const p=ease(clamp(t/1.1,0,1));
+      const x=14+p*76,y=70-p*40;
+      line.setAttribute('x2',x);line.setAttribute('y2',y);
+      head.setAttribute('transform',`translate(${x},${y}) rotate(${-27})`);
+      if(t<0.06){line.setAttribute('x2',14);line.setAttribute('y2',70);}
+      requestAnimationFrame(f);})(t0);
+  })();
+});
+/* ② 方块落账 */
+mkCell('方块落账',svg=>{
+  const cells=[];
+  for(let i=0;i<8;i++)cells.push(el('rect',{x:14+(i%4)*24,y:34+Math.floor(i/4)*24,
+    width:19,height:19,rx:3,fill:'#ded5be',stroke:PAL.ink,'stroke-width':1.6},svg));
+  (function loop(){let t0=performance.now();
+    (function f(now){const t=((now-t0)/1000)%2.4;
+      cells.forEach((c,i)=>{
+        const k=clamp((t*6-i)*0.7,0,1),on=ease(k);
+        c.setAttribute('fill',(i%5)===4?PAL.red:'#ded5be');
+        c.setAttribute('opacity',on);
+        c.setAttribute('transform',`translate(0,${(1-on)*8})`);
+      });
+      requestAnimationFrame(f);})(t0);
+  })();
+});
+/* ③ 区域填充(疆域生长) */
+mkCell('疆域填充',svg=>{
+  const blob=el('path',{d:'M 30,66 Q 34,30 62,26 Q 96,22 98,52 Q 100,74 68,76 Q 40,78 30,66 Z',
+    fill:PAL.green,stroke:PAL.ink,'stroke-width':2.4,transform:'scale(0)'},svg);
+  blob.setAttribute('style','transform-origin:62px 50px');
+  (function loop(){let t0=performance.now();
+    (function f(now){const t=((now-t0)/1000)%2.8;
+      const p=ease(clamp(t/1.4,0,1))*(t>2.2?1-ease(clamp((t-2.2)/0.6,0,1)):1);
+      blob.setAttribute('transform',`translate(${62*(1-p)} ${50*(1-p)}) scale(${p})`);
+      requestAnimationFrame(f);})(t0);
+  })();
+});
+/* ④ 计日翻牌 */
+mkCell('计日翻牌',svg=>{
+  el('rect',{x:24,y:18,width:66,height:56,rx:8,fill:'#f2ecdd',stroke:PAL.ink,'stroke-width':2.4},svg);
+  const n=el('text',{x:57,y:58,'text-anchor':'middle','font-size':30,fill:PAL.red,'font-weight':'bold'},svg);
+  (function loop(){let t0=performance.now();
+    (function f(now){const t=((now-t0)/1000)%2.2;
+      n.textContent=t<1.6?Math.max(1,Math.round(46*ease(t/1.6))):46;
+      requestAnimationFrame(f);})(t0);
+  })();
+});
+</script>
+</body>
+</html>

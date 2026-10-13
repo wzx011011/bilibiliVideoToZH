@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中国历史 · 结构版图与视频路线</title>
+<style>
+:root{
+  --paper:#f4edda; --paper2:#ede3c8; --ink:#2c261b; --ink2:#5c4f36; --ink3:#8a7a55;
+  --line:#cfc09a; --card:#faf4e4; --red:#a63a2e; --gold:#b5892f;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper) repeating-linear-gradient(0deg,rgba(140,110,60,.028) 0 1px,transparent 1px 28px);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  line-height:1.55;
+}
+.page{max-width:1400px;margin:0 auto;padding:22px 26px 60px}
+/* ---------- header ---------- */
+header{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.seal{width:52px;height:52px;background:var(--red);color:#f7efdc;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-size:20px;letter-spacing:2px;line-height:1.15;text-align:center;box-shadow:0 2px 8px rgba(166,58,46,.35);flex:none}
+h1{font-size:27px;margin:0;font-weight:700;letter-spacing:1px}
+h1 .thin{font-weight:400;font-size:19px;color:var(--ink2)}
+.sub{margin:2px 0 0;font-size:13px;color:var(--ink3)}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.stat{font-size:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:3px 12px;color:var(--ink2)}
+.stat b{color:var(--ink);font-size:14px}
+.zoom{display:flex;gap:6px}
+.zoom button{font-family:inherit;font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--ink2);
+  border-radius:8px;padding:5px 12px;cursor:pointer}
+.zoom button.on{background:var(--ink);color:#f4edda;border-color:var(--ink)}
+.zoom button:hover{filter:brightness(1.05)}
+/* ---------- timeline ---------- */
+#tl-wrap{overflow-x:auto;overflow-y:hidden;background:var(--paper2);border:1px solid var(--line);border-radius:12px;
+  cursor:grab;box-shadow:inset 0 1px 6px rgba(90,70,30,.08)}
+#tl-wrap:active{cursor:grabbing}
+#tl{position:relative;padding:8px 0 4px;user-select:none}
+.row{position:relative;margin-bottom:3px}
+.rowlab{position:sticky;left:8px;display:inline-block;z-index:7;font-size:11px;color:var(--ink3);
+  background:rgba(238,228,199,.92);border:1px solid var(--line);border-radius:10px;padding:0 8px;pointer-events:none}
+.ruler{height:34px}
+.tick{position:absolute;bottom:4px;width:1px;background:#b9a87c}
+.tick.major{height:18px;background:#a08c5c}
+.tick.minor{height:9px}
+.ticklab{position:absolute;bottom:22px;font-size:11px;color:var(--ink3);transform:translateX(-50%);white-space:nowrap}
+.bar{position:absolute;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#f7f1e0;
+  font-size:12.5px;cursor:pointer;border:1px solid rgba(0,0,0,.18);box-shadow:inset 0 -2px 0 rgba(0,0,0,.18);white-space:nowrap;overflow:hidden}
+.bar:hover{filter:brightness(1.1)}
+.bar.dim{opacity:.5}
+.bar.star{z-index:3;box-shadow:0 0 0 2px rgba(166,58,46,.45),0 3px 12px rgba(166,58,46,.4)}
+.bar .sub{font-size:10px;opacity:.85;margin-left:6px;font-weight:400}
+.bar.tiny span{display:none}
+.bar.flash{outline:2px solid var(--red);outline-offset:2px}
+.f-xq{background:#7d5a36}.f-qh{background:#9c3f32}.f-wj{background:#4f6f80}.f-st{background:#a07a2a}
+.f-wd{background:#6f5a5a}.f-sg{background:#3e7a6a}.f-yu{background:#4a6fa5}.f-liao{background:#5b7fa6}
+.f-jin{background:#7d7a3a}.f-mg{background:#b03a2e}.f-qg{background:#34558b}.f-md{background:#8a4a52}
+.evrow{height:66px}
+.evd{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--red);border:1px solid #f4edda;
+  box-shadow:0 0 0 1px rgba(166,58,46,.5);cursor:pointer}
+.evd:hover{transform:scale(1.35)}
+.evl{position:absolute;font-size:11px;color:var(--ink2);white-space:nowrap;transform:translateX(-50%);cursor:pointer}
+.evl.up{top:0}.evl.down{top:50px}
+.evl:hover{color:var(--red)}
+.evline{position:absolute;width:1px;background:#c3b38a}
+.lane{position:relative;height:41px}
+.lane .base{position:absolute;left:0;right:0;bottom:12px;height:1px;background:#c9b98f}
+.ldot{position:absolute;bottom:8px;width:10px;height:10px;border-radius:50%;cursor:pointer;border:1px solid #f4edda;z-index:2}
+.ldot:hover{transform:scale(1.35)}
+.l1{background:var(--red)}.l2{background:#3e6f8e}.l3{background:#3e7a5a}.l4{background:#8e6a3e}
+.llab{position:absolute;font-size:11px;color:var(--ink2);white-space:nowrap;transform:translateX(-50%);cursor:pointer}
+.llab.a{bottom:20px}.llab.b{bottom:-4px}
+.llab:hover{color:var(--red)}
+.vrow{height:58px}
+.vbar{position:absolute;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;
+  padding:0 8px;font-size:12px;cursor:pointer;white-space:nowrap}
+.vbar:hover{filter:brightness(1.08)}
+.v-ming{background:linear-gradient(180deg,#b03a2e,#8e2f26);color:#f7f1e0;box-shadow:0 2px 8px rgba(176,58,46,.35)}
+.v-qh{background:#9c3f32;color:#f7f1e0;box-shadow:0 2px 8px rgba(156,63,50,.35)}
+.v-mzx{background:#7a4a68;color:#f7f1e0}
+.v-cand{border:1.5px dashed #8a7a55;color:#6f6244;background:rgba(138,122,85,.1)}
+.vbar.narrow span{position:absolute;left:calc(100% + 6px);color:var(--ink2);text-shadow:none}
+.notch{position:absolute;bottom:0;width:1px;height:7px;background:rgba(255,255,255,.55)}
+#tl.fit .evl,#tl.fit .llab{display:none}
+/* ---------- legend / hint ---------- */
+#legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin:10px 2px 4px}
+#legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.hint{font-size:12px;color:var(--ink3);margin:2px 2px 26px}
+/* ---------- sections ---------- */
+h2{font-size:20px;margin:34px 0 12px;padding-left:12px;border-left:4px solid var(--red);letter-spacing:1px}
+h2 .muted{font-size:13px;color:var(--ink3);font-weight:400;margin-left:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(305px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid #d8c79b;border-radius:10px;padding:14px 16px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(90,70,30,.15)}
+.card h3{margin:0;font-size:16px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.card .span{font-size:12px;color:var(--ink3);font-weight:400}
+.card .trend{font-size:13px;color:var(--ink2);margin:7px 0 0}
+.kvs{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.kv{font-size:11px;background:#efe4c6;border-radius:6px;padding:2px 8px;color:var(--ink2)}
+.kv.red{background:#f3dcd5;color:var(--red)}
+.card.dashed{border-style:dashed;background:transparent}
+.eps{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:10px}
+.ep{background:var(--card);border:1px solid #d8c79b;border-radius:10px;padding:10px 13px;cursor:pointer;transition:transform .15s,box-shadow .15s;position:relative}
+.ep:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(90,70,30,.15)}
+.ep .num{font-size:11px;color:var(--ink3)}
+.ep .et{font-size:14.5px;font-weight:700;margin:2px 0 3px}
+.ep .ey{font-size:11.5px;color:var(--ink3)}
+.ep .hook{font-size:12px;color:var(--ink2);margin-top:5px}
+.ep .stdot{position:absolute;top:12px;right:12px;width:9px;height:9px;border-radius:50%}
+.st-pub{background:var(--red)}.st-done{background:var(--gold)}.st-todo{background:#a29a86}
+/* ---------- drawer / tip ---------- */
+#mask{position:fixed;inset:0;background:rgba(40,30,10,.28);display:none;z-index:40}
+#mask.open{display:block}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,94vw);background:#fbf6ea;border-left:1px solid #cbb98e;
+  box-shadow:-8px 0 30px rgba(60,45,15,.25);transform:translateX(105%);transition:transform .22s ease;z-index:45;
+  padding:20px 22px 30px;overflow-y:auto}
+#drawer.open{transform:translateX(0)}
+#drawer h3{margin:0 0 2px;font-size:21px}
+#drawer .dspan{color:var(--ink3);font-size:13px;margin-bottom:12px}
+#drawer .sect{margin:13px 0 4px;font-size:12px;color:var(--red);letter-spacing:2px;border-bottom:1px dashed #d8c79b;padding-bottom:3px}
+#drawer p{margin:6px 0;font-size:13.5px;color:var(--ink2)}
+#drawer ul{margin:6px 0;padding-left:20px;font-size:13.5px;color:var(--ink2)}
+#drawer li{margin:3px 0}
+.dclose{position:absolute;top:12px;right:14px;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);color:var(--ink2);font-size:15px;cursor:pointer}
+.dclose:hover{background:var(--ink);color:#f4edda}
+.jumpbtn{margin-top:14px;font-family:inherit;font-size:13px;background:var(--red);color:#f7efdc;border:none;border-radius:8px;padding:8px 16px;cursor:pointer}
+#tip{position:fixed;display:none;background:#2f2a20;color:#f4edda;font-size:12px;padding:4px 10px;border-radius:6px;
+  pointer-events:none;z-index:60;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+footer{margin-top:44px;font-size:12px;color:var(--ink3);border-top:1px solid var(--line);padding-top:12px}
+footer p{margin:4px 0}
+
+/* 知识卡行(map 版,浅色) */
+#drawer .evt{display:flex;gap:9px;padding:5px 8px;border-radius:8px;align-items:baseline}
+#drawer .evt.jump{cursor:pointer}
+#drawer .evt.jump:hover{background:#efe4c6}
+#drawer .evt .yy{flex:none;min-width:70px;font-size:12px;font-weight:700;color:var(--red)}
+#drawer .evt .yy.na{color:#b3a276;font-weight:400}
+#drawer .evt .tt{font-size:13.5px;color:var(--ink2);line-height:1.55}
+#drawer .evt .tt b{color:var(--ink)}
+#drawer .evt.jump .yy::after{content:" ⇥";color:var(--gold)}
+#drawer .ppl{display:flex;gap:9px;padding:4px 8px;align-items:baseline}
+#drawer .ppl .nn{flex:none;min-width:64px;font-size:13.5px;font-weight:700;color:var(--ink)}
+#drawer .ppl .nn small{font-weight:400;color:var(--ink3);margin-left:4px}
+#drawer .ppl .dd{font-size:13px;color:var(--ink2);line-height:1.55}
+#drawer .bk{padding:3px 8px;font-size:13.5px;color:var(--ink2)}
+#drawer .bk a{color:var(--red)}
+#drawer .bk b{color:var(--ink)}
+#drawer .plain{margin:4px 8px;font-size:13.5px;line-height:1.7;color:var(--ink2)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="seal">史图</div>
+  <div>
+    <h1>中国历史 · 结构版图 <span class="thin">与 视频路线</span></h1>
+    <p class="sub">以朝代为经,以制度暗线为纬 —— 大明演义进行中,后续系列由此取径</p>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="zoom">
+    <button data-z="fit">全览</button>
+    <button data-z="s" class="on">标准</button>
+    <button data-z="l">放大</button>
+    <button id="go-ming">⇥ 明朝</button>
+    <button onclick="location.href='history_tree.html'">谱系3D ↗</button>
+    <button onclick="location.href='history_geo.html'">舆图沙盘 ↗</button>
+  </div>
+</header>
+
+<div id="tl-wrap"><div id="tl"></div></div>
+<div id="legend"></div>
+<div class="hint">拖动或滚轮横向浏览 · 点击色块 / 圆点 / 圆点标签看详情 · 「全览」一屏纵览四千年</div>
+
+<section>
+  <h2>九大结构分期 <span class="muted">每期回答一个问题:这个时代把中国塑造成了什么样</span></h2>
+  <div class="cards" id="period-cards"></div>
+</section>
+
+<section>
+  <h2>大明演义 · 24 集 <span class="muted">1368–1662(前传自 1328)· 01–08 已发 B 站 · 09–24 成片归档 NAS</span></h2>
+  <div class="eps" id="eps"></div>
+</section>
+
+<section>
+  <h2>后续系列候选 <span class="muted">待立项 · 按建议优先级排序</span></h2>
+  <div class="cards" id="future-cards"></div>
+</section>
+
+<footer>
+  <p>年代采用通说:夏商为考古推定;东周止于前 256;图中清自 1644 入关起计(1636 改号);元标注 1279 混一(1271 建号)。</p>
+  <p>明朝系列数据来自仓库 src/mzx_story/OUTLINE.md,状态更新直接改本页 &lt;script&gt; 数据区即可;本页零依赖单文件,可直接分发给协作成员。</p>
+</footer>
+
+</div>
+
+<aside id="drawer"></aside>
+<div id="mask"></div>
+<div id="tip"></div>
+
+<script src="history_knowledge.js"></script>
+<script>
+/* ================= 数据区(状态更新改这里) ================= */
+const YEAR_MIN=-2150, YEAR_MAX=2005, TOTAL=YEAR_MAX-YEAR_MIN;
+
+const ROW_A=[
+ {n:'夏',y0:-2070,y1:-1600,f:'xq',dz:'宗族邦联式早期国家,世袭替代禅让,「家天下」开端。',jz:'青铜时代撑不起官僚制,王权只能靠宗族与祭祀聚合。',sj:['二里头遗址','太康失国','商汤灭夏'],sp:'候选·暂不立项(史料薄,适合纪录片式处理)'},
+ {n:'商',y0:-1600,y1:-1046,f:'xq',dz:'神权国家:占卜与祖先崇拜统治,内外服制。',jz:'鬼神权威+军事殖民,是「共识型王权」的雏形。',sj:['盘庚迁殷','甲骨文成熟','牧野之战'],sp:'候选·暂不立项'},
+ {n:'西周',y0:-1046,y1:-771,f:'xq',dz:'分封+宗法+礼乐三位一体,中国第一次系统化政治设计。',jz:'用血缘网络复制权力——可扩张、不可继承,几代之后必然松动。',sj:['前841国人暴动(确切纪年始)','犬戎破镐京'],sp:'候选'},
+ {n:'东周',y0:-771,y1:-256,f:'xq',dim:1,dz:'天子仅为象征,礼乐征伐自诸侯出。',jz:'分封制的离心力释放期:谁先变法,谁吃掉别人。',sj:['平王东迁'],sp:'—'},
+ {n:'秦',y0:-221,y1:-207,f:'qh',dz:'第一帝国:皇帝制+郡县全面铺开,书同文车同轨。',jz:'制度超前于治理能力——引擎全新、散热不足,徭役过载而二世而亡。',sj:['前221统一','焚书坑儒','大泽乡起义'],sp:'候选「秦汉线」'},
+ {n:'西汉',y0:-202,y1:8,f:'qh',dz:'帝国定型期:郡国并行→推恩令,罢黜百家独尊儒术。',jz:'皇权与官僚合流治天下,「外儒内法」成为两千年底色。',sj:['文景之治','汉武北击匈奴','盐铁会议'],sp:'候选「秦汉线」主体'},
+ {n:'新',y0:9,y1:23,f:'qh',dz:'王莽托古改制:一场理想主义财政实验。',jz:'在土地兼并的死结上做复古手术,必然崩盘。',sj:['王莽篡汉','绿林赤眉'],sp:'—'},
+ {n:'东汉',y0:25,y1:220,f:'qh',dz:'豪族社会:庄园经济+尚书台侵相权。',jz:'皇权依赖豪族又压制豪族,外戚宦官循环无解。',sj:['光武中兴','党锢之祸','黄巾起义'],sp:'候选「秦汉线」尾段'},
+ {n:'西晋',y0:266,y1:316,f:'wj',dz:'短暂统一:占田荫客,门阀起步。',jz:'用宗王封镇代替治理,八王之乱自爆。',sj:['太康之治','八王之乱','永嘉之乱·衣冠南渡'],sp:'候选「魏晋南北朝线」'},
+ {n:'隋',y0:581,y1:618,f:'st',dz:'复归统一:三省六部定型,科举开科,凿大运河。',jz:'又一次「工程透支」:制度奠基如秦,基建透支如隋,果实归下一代。',sj:['开皇之治','大运河','江都之变'],sp:'候选「隋唐线」开篇'},
+ {n:'唐',y0:618,y1:907,f:'st',dz:'第二帝国巅峰:律令制、天可汗、开放多元。',jz:'前期靠均田+府兵低成本扩张;体系一松(土地兼并)即转募兵藩镇——安史之乱是制度账单到期。',sj:['贞观之治','开元盛世','安史之乱','两税法'],sp:'候选「隋唐线」主体'},
+ {n:'北宋',y0:960,y1:1127,f:'sg',dz:'崇文抑武,二府三司,与士大夫共治天下。',jz:'用财政赎买军事风险→「三冗」;不抑兼并换来商业繁荣与财政压力并存。',sj:['澶渊之盟','庆历新政','王安石变法'],sp:'候选「两宋线」'},
+ {n:'南宋',y0:1127,y1:1279,f:'sg',dz:'背海立国,财政高度商业化。',jz:'海贸+纸钞撑起半壁,但会子通胀与权相政治无解。',sj:['靖康南渡','隆兴和议','崖山海战'],sp:'候选「两宋线」尾段'},
+ {n:'元',y0:1279,y1:1368,f:'yu',sub:'1271建号',dz:'草原帝国改造中原:行省、驿站、纸钞。',jz:'省制与站赤是留给明清的骨架;治理粗放留下饥荒火药桶。',sj:['行省定制','马可·波罗来华','石人一只眼'],sp:'候选短季,或并入两宋尾'},
+ {n:'明',y0:1368,y1:1644,f:'mg',star:1,dz:'皇权独走:废丞相、内阁票拟+司礼监批红、厂卫;白银财政。',jz:'小农帝国的财政被全球白银流入与两线军事拖入死循环——《大明演义》讲的正是这个机制。',sj:['废丞相(1380)','靖难之役','土木堡','一条鞭法','甲申之变'],sp:'《大明演义》24集(进行中)'},
+ {n:'清',y0:1644,y1:1912,f:'qg',sub:'1636改号',dz:'边疆整合与皇权顶点:军机处、密折、理藩院。',jz:'摊丁入亩+边疆军政整合奠基现代中国版图;遇工业文明冲击,条约体系终结帝制。',sj:['清军入关','摊丁入亩','鸦片战争','辛亥革命'],sp:'候选「清线」'},
+ {n:'民国',y0:1912,y1:1949,f:'md',dz:'共和实验、军阀混战、抗战与内战。',jz:'救亡压倒启蒙,近代化与民族生存赛跑。',sj:['辛亥革命','全面抗战','新中国成立前夕'],sp:'毛选推演线(进行中·战略批注风)'},
+ {n:'共和国',y0:1949,y1:2004,f:'md',dz:'统一、建设与改革开放。',jz:'—',sj:['开国大典'],sp:'暂不涉及'}
+];
+const ROW_B=[
+ {n:'春秋',y0:-770,y1:-476,f:'xq',dz:'霸主政治:尊王攘夷下的有限战争。',jz:'铁器牛耕萌芽,贵族战争转向领土竞争。',sj:['齐桓首霸','弭兵之会'],sp:'—'},
+ {n:'战国',y0:-475,y1:-221,f:'xq',dz:'变法竞赛,领土国家总体战。',jz:'商鞅式答案胜出:编户+军功爵+郡县,秦制即标准答案。',sj:['商鞅变法','长平之战'],sp:'候选「秦汉线」开篇段'},
+ {n:'三国',y0:220,y1:280,f:'wj',dz:'从军阀混战到三足鼎立。',jz:'汉末秩序崩解后的再均衡:谁的屯田与法家军国更彻底,谁先稳住。',sj:['官渡之战','赤壁之战','九品中正出台'],sp:'候选「魏晋南北朝线」'},
+ {n:'东晋',y0:317,y1:420,f:'wj',dz:'门阀政治:「王与马,共天下」。',jz:'皇权弱势+侨姓士族+流民帅武装的三脚架,缺一即倾。',sj:['衣冠南渡','淝水之战'],sp:'候选「魏晋南北朝线」'},
+ {n:'南朝',y0:420,y1:589,f:'wj',dz:'宋齐梁陈更替,寒人掌机要。',jz:'文化正统性在南方,制度整合力却在北方——结论由隋唐揭晓。',sj:['侯景之乱'],sp:'候选「魏晋南北朝线」'},
+ {n:'五代十国',y0:907,y1:979,f:'wd',dz:'藩镇延长线,南方保境开发。',jz:'禁军+枢密院破解兵变循环;燕云割弃(936)改写宋辽地缘。',sj:['石敬瑭割燕云','柴荣改革'],sp:'—'},
+ {n:'西夏',y0:1038,y1:1227,f:'sg',dz:'番汉杂糅的缓冲国。',jz:'在宋辽金三角里靠制衡求生。',sj:['好水川之战','庆历和议'],sp:'—'}
+];
+const ROW_C=[
+ {n:'十六国',y0:304,y1:439,f:'wj',dz:'北方胡族政权与汉制嫁接的试验场。',jz:'谁完成「胡武+汉治」的融合,谁统一北方——前秦苻坚走到一半。',sj:['汉赵灭西晋','苻坚统一北方'],sp:'候选「魏晋南北朝线」'},
+ {n:'北朝',y0:439,y1:589,f:'wj',sub:'北魏386起',dz:'北魏均田、三长,孝文帝汉化。',jz:'北朝的制度整合力压过南朝的文化正统性——隋唐出自北朝。',sj:['孝文帝迁洛','六镇之乱'],sp:'候选「魏晋南北朝线」'},
+ {n:'辽',y0:916,y1:1125,f:'liao',dz:'南北面官,一国两制治理农牧。',jz:'游牧军事+汉地税赋的混合财政,撑起澶渊百年和平。',sj:['澶渊之盟'],sp:'—'},
+ {n:'金',y0:1125,y1:1234,f:'jin',sub:'1115建国',dz:'猛安谋克入主中原,迅速汉化又迅速腐化。',jz:'征服政权模仿汉制的典型曲线。',sj:['灭辽亡北宋','世宗小康'],sp:'—'}
+];
+const EVENTS=[
+ {y:-841,t:'国人暴动·确切纪年始',d:'共和行政,中国历史从此有确切纪年。'},
+ {y:-356,t:'商鞅变法',d:'废井田、行郡县、奖军功——秦制的起点。'},
+ {y:-221,t:'秦统一',d:'皇帝制诞生,大一统成为此后两千年的母题。'},
+ {y:-202,t:'汉建立',d:'承秦制而缓推行,郡国并行过渡。'},
+ {y:184,t:'黄巾起义',d:'汉末秩序崩解的引信。'},
+ {y:316,t:'永嘉之乱·衣冠南渡',d:'北方士族南迁,江南从此走上历史前台。'},
+ {y:494,t:'孝文帝迁洛',d:'北魏全面汉化,为隋唐统一储备制度。'},
+ {y:581,t:'隋建立',d:'近四百年分裂结束。'},
+ {y:755,t:'安史之乱',d:'唐由盛转急衰,藩镇、两税、盐铁自此始。'},
+ {y:780,t:'两税法',d:'税人丁转向税资产,财政史上大分水岭。'},
+ {y:907,t:'唐亡',d:'进入五代十国。'},
+ {y:936,t:'割燕云',d:'十六州入辽,改写此后四百年南北地缘。'},
+ {y:960,t:'陈桥兵变',d:'宋立,崇文抑武国策定型。'},
+ {y:1005,t:'澶渊之盟',d:'岁币买和平,宋辽百年无大战。'},
+ {y:1069,t:'王安石变法',d:'传统制度内理财改革的极限试验。'},
+ {y:1127,t:'靖康之变',d:'北宋亡,宋室南渡。'},
+ {y:1279,t:'崖山海战',d:'南宋终,元混一天下。'},
+ {y:1368,t:'明建立',d:'朱元璋称帝应天,北伐驱元。'},
+ {y:1380,t:'废丞相',d:'胡惟庸案后皇权独走,六部直隶于帝。'},
+ {y:1399,t:'靖难起兵',d:'朱棣南下,四年夺位。'},
+ {y:1421,t:'迁都北京',d:'天子守国门格局形成。'},
+ {y:1449,t:'土木堡之变',d:'皇帝被俘,勋贵尽没,于谦登场。'},
+ {y:1567,t:'隆庆开关',d:'月港通商,白银大量流入。'},
+ {y:1581,t:'一条鞭法',d:'张居正全国推行,赋役合并折银。'},
+ {y:1644,t:'甲申之变',d:'崇祯自缢煤山,清军入关。'},
+ {y:1662,t:'明朔终',d:'永历殉国,郑成功收复台湾同年。'},
+ {y:1840,t:'鸦片战争',d:'条约体系开端,冲击时代到来。'},
+ {y:1895,t:'甲午战败',d:'洋务体系受致命一击。'},
+ {y:1911,t:'辛亥革命',d:'帝制终结。'},
+ {y:1949,t:'开国大典',d:'中华人民共和国成立。'}
+];
+const LANES=[
+ {name:'皇权与相权',cls:'l1',dots:[
+  {y:-221,t:'皇帝制·三公九卿',d:'秦创皇帝制,丞相辅政;相权自此与皇权相始终。'},
+  {y:-87,t:'尚书台分权',d:'汉武帝以内朝侵外朝,架空丞相之始。'},
+  {y:581,t:'三省六部分相权',d:'决策、审议、执行分立,相权被制度化切割。'},
+  {y:963,t:'二府三司',d:'宋以枢密院分兵权、三司分财权,相权再弱。'},
+  {y:1271,t:'中书一省',d:'元独尊中书省,相权反弹,为明废相埋线。'},
+  {y:1380,t:'废丞相',d:'胡惟庸案后六部直隶皇帝——本页右上「明」的主线。'},
+  {y:1729,t:'军机处',d:'跪受笔录,皇权达到顶点。'},
+  {y:1912,t:'帝制终结',d:'辛亥革命,皇帝制退出历史。'}]},
+ {name:'选官制度',cls:'l2',dots:[
+  {y:-1046,t:'世卿世禄',d:'血缘即任职资格。'},
+  {y:-356,t:'军功爵',d:'以功授爵,打破贵族垄断。'},
+  {y:-134,t:'察举征辟',d:'郡国举孝廉,德行入仕。'},
+  {y:220,t:'九品中正',d:'评人权归中正官,「上品无寒门」。'},
+  {y:605,t:'科举开科',d:'考试取代门第,千年选官框架确立。'},
+  {y:1465,t:'八股定型',d:'成化年间格式固化,学而优的边界收紧。'},
+  {y:1905,t:'废科举',d:'帝国的选官—教育系统整体退役。'}]},
+ {name:'财税主线',cls:'l3',dots:[
+  {y:-1046,t:'井田制',d:'公田私田,劳役地租。'},
+  {y:-594,t:'初税亩',d:'鲁国按亩征税,承认土地私有的开始。'},
+  {y:-119,t:'盐铁官营',d:'汉武专卖理财,国家资本主义雏形。'},
+  {y:624,t:'租庸调',d:'人丁为本的税制,依托均田。'},
+  {y:780,t:'两税法',d:'资产为宗,「量出以制入」。'},
+  {y:1581,t:'一条鞭法',d:'赋役合并折银——大明演义第13集主线。'},
+  {y:1723,t:'摊丁入亩',d:'人头税并入地税,人口爆炸的制度前提。'},
+  {y:1853,t:'厘金',d:'战时商税,地方财政坐大之始。'}]},
+ {name:'中央与地方',cls:'l4',dots:[
+  {y:-1046,t:'分封',d:'封邦建国,层层复制。'},
+  {y:-221,t:'郡县',d:'官僚代世袭,垂直到底。'},
+  {y:-106,t:'刺史部',d:'汉武设十三部监察州,监察区变行政区之始。'},
+  {y:711,t:'节度使萌芽',d:'边镇集军政财于一身,安史之火的燃料。'},
+  {y:963,t:'杯酒释兵权·路',d:'兵权收中央,地方分路设官互相牵制。'},
+  {y:1274,t:'行省定型',d:'元行中书省——「省」沿用至今。'},
+  {y:1376,t:'三司分权',d:'明布政、按察、都指挥三司分立,后督抚补位。'},
+  {y:1550,t:'督抚常态化',d:'明代中期总督巡抚成为事实封疆。'}]}
+];
+const PERIODS=[
+ {name:'先秦',span:'前2070 – 前221',trend:'从封邦建国到兼并成一统:宗法封建制国家在变法竞赛中让位于领土国家。',
+  kvs:['制度:分封·宗法·礼乐 → 郡县·军功爵','经济:井田 → 小农·铁器牛耕','文化:百家争鸣'],video:'候选「秦汉线」起点'},
+ {name:'秦汉',span:'前221 – 220',trend:'第一帝国的建立与定型:皇帝制+官僚帝国+编户齐民。',
+  kvs:['制度:三公九卿·察举','经济:盐铁官营·丝路','文化:经学独尊·《史记》'],video:'候选「秦汉线」'},
+ {name:'魏晋南北朝',span:'220 – 589',trend:'分裂中的再造:门阀社会、衣冠南渡与民族融合,孕育隋唐。',
+  kvs:['制度:九品中正·均田·三长','经济:江南开发·庄园','文化:玄学·佛教·石窟'],video:'候选「魏晋南北朝线」'},
+ {name:'隋唐',span:'581 – 907',trend:'第二帝国:律令国家、科举与开放气象,及安史后的急转。',
+  kvs:['制度:三省六部·科举·府兵→募兵','经济:租庸调→两税·大运河','文化:唐诗·佛道并存'],video:'候选「隋唐线」'},
+ {name:'五代两宋',span:'907 – 1279',trend:'崇文抑武与商业革命:军事收缩、经济与文化的巅峰扩张。',
+  kvs:['制度:二府三司·路','经济:交子·市舶·不抑兼并','文化:理学·市民文艺'],video:'候选「两宋线」(辽夏金并立)'},
+ {name:'元',span:'1206 – 1368',trend:'草原帝国改造中原:行省、驿站、纸钞,东西交流高峰。',
+  kvs:['制度:行省·站赤·族群分治','经济:运河海运·宝钞','文化:元曲·多元交融'],video:'候选短季,或并入两宋尾'},
+ {name:'明',span:'1368 – 1644',trend:'皇权独走与白银财政:内阁票拟、厂卫、一条鞭与两线战争。',
+  kvs:['制度:废丞相·内阁·厂卫','经济:一条鞭·隆庆开关','文化:心学·小说戏曲'],video:'《大明演义》24集(进行中)'},
+ {name:'清',span:'1636 – 1912',trend:'边疆整合与冲击转型:军机处、理藩院奠基现代版图,遇工业化冲击。',
+  kvs:['制度:军机处·密折·理藩院','经济:摊丁入亩·人口爆炸','文化:考据学·西学东渐'],video:'候选「清线」'},
+ {name:'近现代',span:'1912 –',trend:'共和转型与革命建设:救亡、统一与改革。',
+  kvs:['制度:共和实验→现代国家','经济:工业化曲折→改革开放','文化:新文化运动'],video:'毛选推演线(进行中·战略批注风)'}
+];
+/* 大明演义 24 集:st = pub 已发布 / done 成片已归档 / todo 文案已备待产 */
+const EPS=[
+ {n:1,t:'靖难之役',y0:1398,y1:1402,st:'pub',hook:'叔叔和侄子的火并',anchor:'建文削藩 · 朱棣装疯 · 白沟河与灵璧 · 金川门开',tail:'建文下落成谜;朱棣要用紫禁城和下西洋证明皇位'},
+ {n:2,t:'朱元璋前传',y0:1328,y1:1398,st:'pub',hook:'出身最低的开国皇帝',anchor:'皇觉寺讨饭 · 鄱阳湖灭陈友谅 · 称帝北伐 · 废丞相杀功臣 · 分封诸王',tail:'他把一切安排好,唯独没算到儿子造孙子的反(衔接第01集)'},
+ {n:3,t:'朱棣永乐',y0:1402,y1:1424,st:'pub',hook:'抢来的皇位坐得稳吗',anchor:'永乐大典 · 郑和下西洋 · 迁都北京 · 五征漠北 · 奴儿干都司',tail:'功业超越父亲,国库也被掏空'},
+ {n:4,t:'仁宣之治',y0:1424,y1:1435,st:'pub',hook:'胖皇帝和蛐蛐皇帝的十年',anchor:'赦建文旧臣 · 三杨辅政 · 宣德炉与蛐蛐罐',tail:'盛世之下,瓦剌也先正在草原长大'},
+ {n:5,t:'土木堡之变',y0:1435,y1:1449,st:'pub',hook:'皇帝被抓走了',anchor:'王振专权 · 正统亲征 · 五十勋贵战死 · 也先挟帝叩关',tail:'京城空虚:有人喊南迁,有人站了出来'},
+ {n:6,t:'北京保卫战',y0:1449,y1:1457,st:'pub',hook:'于谦的孤注一掷',anchor:'言南迁者可斩 · 整军立景泰 · 也先受挫 · 夺门之变 · 于谦被杀',tail:'救了帝国的人被帝国杀了,八年后平反天下流泪'},
+ {n:7,t:'成化朝',y0:1464,y1:1487,st:'pub',hook:'大十七岁的万贵妃与西厂特务',anchor:'万贵妃专宠 · 汪直西厂 · 成化犁庭 · 纸糊三阁老',tail:'懒政皇帝打赢犁庭,儿子接盘烂摊子'},
+ {n:8,t:'弘治中兴',y0:1487,y1:1505,st:'pub',hook:'只娶一个人的皇帝',anchor:'驱逐奸佞 · 弘治君臣 · 财务治河整顿',tail:'修修补补,交给史上最会玩的儿子'},
+ {n:9,t:'正德',y0:1505,y1:1521,st:'done',hook:'不想当皇帝的皇帝',anchor:'刘瑾被剐 · 应州大捷 · 宁王之乱与王阳明 · 正德落水',tail:'玩了一辈子没留儿子,皇位落到堂弟头上'},
+ {n:10,t:'嘉靖·大礼议',y0:1521,y1:1542,st:'done',hook:'二十年不上朝的权谋大师(上)',anchor:'大礼议 · 廷杖 · 张璁桂萼 · 生父称宗祔庙',tail:'斗赢文官,却差点死在宫女手里——壬寅宫变'},
+ {n:11,t:'嘉靖·严嵩与倭寇',y0:1542,y1:1566,st:'done',hook:'皇帝炼丹,蒙古人打到城下',anchor:'严嵩父子 · 庚戌之变 · 戚继光俞大猷 · 海瑞治安疏',tail:'海瑞抬棺骂皇帝,帝国的病无药可医'},
+ {n:12,t:'隆庆开关',y0:1567,y1:1572,st:'done',hook:'闷皇帝只干对了两件事',anchor:'月港通商 · 俺答封贡 · 高拱张居正入阁',tail:'帝国最后的黄金十年即将开启'},
+ {n:13,t:'张居正',y0:1572,y1:1582,st:'done',hook:'帝国最后的裱糊匠',anchor:'联冯保逐高拱 · 考成法一条鞭 · 清丈田亩 · 戚继光镇蓟州',tail:'死后被抄家清算,帝国再无刹车的人'},
+ {n:14,t:'万历与国本之争',y0:1582,y1:1600,st:'done',hook:'立太子,皇帝和大臣冷战十五年',anchor:'清算张居正 · 争国本 · 怠政 · 东林雏形',tail:'赢了家事,输了国事'},
+ {n:15,t:'三大征(上)',y0:1592,y1:1598,st:'done',hook:'万历的军队跨过鸭绿江',anchor:'哱拜叛乱 · 两次援朝 · 平壤大捷 · 露梁海战',tail:'仗打赢了,辽东精锐打空了——新的势力在崛起'},
+ {n:16,t:'三大征(下)',y0:1599,y1:1600,st:'done',hook:'三大征全胜,国库见底',anchor:'播州之役 · 矿监税使 · 李成梁时代 · 努尔哈赤崛起',tail:'军队还能打赢任何一场仗,但打不起了'},
+ {n:17,t:'晚明三大案',y0:1620,y1:1621,st:'done',hook:'一个月皇帝与三场罗生门',anchor:'梃击 · 红丸 · 移宫 · 党争白热化',tail:'方向盘交给16岁目不识丁的木匠'},
+ {n:18,t:'魏忠贤',y0:1620,y1:1627,st:'done',hook:'九千岁的天下',anchor:'客氏 · 阉党vs东林 · 六君子之狱 · 生祠遍天下',tail:'信王朱由检忐忑登基'},
+ {n:19,t:'袁崇焕与宁远',y0:1626,y1:1628,st:'done',hook:'帝国最后的高光',anchor:'宁远大捷 · 宁锦大捷 · 铲除魏忠贤 · 平台召对「五年平辽」',tail:'全部信任,两年后变成凌迟罪名'},
+ {n:20,t:'己巳之变',y0:1629,y1:1630,st:'done',hook:'皇太极兵临北京',anchor:'皇太极绕道入塞 · 袁崇焕下狱 · 反间计 · 孙承宗再造防线',tail:'自毁长城自此始'},
+ {n:21,t:'流寇席卷',y0:1628,y1:1641,st:'done',hook:'闯王来了不纳粮',anchor:'陕西大旱 · 裁驿失业 · 张献忠 · 车箱峡 · 凤阳焚陵',tail:'剿抚摇摆十年越剿越多,辽东月月催饷'},
+ {n:22,t:'崇祯的孤注',y0:1640,y1:1643,st:'done',hook:'双线作战的十年',anchor:'松锦之战 · 祖大寿降清 · 张献忠破襄阳 · 瘟疫',tail:'关外皇太极、关内李自成、朝中吵架的文官——只剩最后时光'},
+ {n:23,t:'1644:煤山',y0:1644,y1:1644,st:'done',hook:'最后一天',anchor:'南迁搁浅 · 宁武关周遇吉 · 煤山自缢 · 一片石 · 清军入关',tail:'天子守国门,君王死社稷;但抵抗还没有结束'},
+ {n:24,t:'南明终章',y0:1644,y1:1662,st:'done',hook:'南明为什么还是输了',anchor:'弘光隆武永历 · 扬州十日史可法 · 郑成功收台湾 · 李定国两蹶名王',tail:'276年、16帝——评论区聊聊你最喜欢的一位'}
+];
+const CANDS=[
+ {name:'东周·秦汉线(前传已启动)',span:'前771 – 184',why:'钩子:中国为什么注定大一统。东周 16 集(春秋4+战国制度4+百家思想3+名场面5,完璧归赵/诸子百家/屈原全数入片)+秦汉 16 集(灭六国→苍天已死);终界黄巾(184),汉末归魏晋线。',eps:'规划 32 集 · 已出 2(商鞅变法 / 长平之战)',risk:'上古史料密度低、考证成本高;生图已本地化 Qwen-2.1 零成本',y0:-771,y1:184},
+ {name:'魏晋南北朝线',span:'184 – 589',why:'钩子:最乱的 400 年,恰恰孕育了江南与隋唐。',eps:'预估 14–18 集',risk:'多政权并立,地图图解是生命线',y0:185,y1:589},
+ {name:'隋唐线',span:'581 – 907',why:'钩子:第二帝国的巅峰与急转直下,制度账单(安史)讲起来最带感。',eps:'预估 16–20 集',risk:'题材红海,靠制度暗线与讲解深度差异化',y0:581,y1:907},
+ {name:'宋元线',span:'907 – 1368',why:'钩子:军事短板、经济长板——纸钞的故事直通元末;元两集(混一南北/石人一只眼)补齐 1279-1368,递镜大明。',eps:'规划 14 集(五代 2+宋 8+元 2+陈桥澶渊)',risk:'并立政权与元代表述分寸需把握',y0:907,y1:1368},
+ {name:'清线 · 入关到辛亥',span:'1644 – 1912',why:'钩子:现代中国版图如何奠基,与大明线首尾相接。',eps:'规划 16 集',risk:'晚清部分表述需审慎,建议半季一试',y0:1644,y1:1912},
+ {name:'溯源篇 · 文明的起点',span:'前2070 – 前771(实溯良渚 ~前3300)',why:'钩子:中华文明从哪来——良渚五千年实证、二里头最早的中国、甲骨文信史开端、西周宅兹中国;为东周线装好前提。',eps:'规划 4 集(已立项)',risk:'无信史影像,考古题材靠厚涂插画+文物意象',y0:-2070,y1:-771}
+];
+const SERIES=[
+ {name:'大明演义(24集)',y0:1328,y1:1662,cls:'v-ming',tip:'01–08已发B站 · 09–24成片归档NAS(待发布)'},
+ {name:'毛选推演线',y0:1925,y1:1949,cls:'v-mzx',tip:'进行中:战略批注风,近现代革命史'},
+ {name:'溯源篇(待产)',y0:-2070,y1:-771,cls:'v-cand',cand:4,tip:'4 集:良渚五千年实证/二里头/甲骨文/宅兹中国——已立项'},
+ {name:'东周·秦汉线(进行中)',y0:-771,y1:184,cls:'v-qh',cand:0,tip:'进行中:商鞅变法 · 长平之战 已出;东周16+秦汉16 规划见 HISTORY_PLAN.md'},
+ {name:'魏晋南北朝线(候选)',y0:185,y1:589,cls:'v-cand',cand:1,tip:'待立项'},
+ {name:'隋唐线(候选)',y0:581,y1:907,cls:'v-cand',cand:2,tip:'待立项'},
+ {name:'宋元线(候选)',y0:907,y1:1368,cls:'v-cand',cand:3,tip:'待立项(14 集,含元 2 集)'},
+ {name:'清线(候选)',y0:1644,y1:1912,cls:'v-cand',cand:4,tip:'待立项'}
+];
+const ST_TXT={pub:'已发布',done:'成片归档',todo:'文案已备'};
+
+/* ================= 渲染区 ================= */
+const wrap=document.getElementById('tl-wrap'),tl=document.getElementById('tl');
+let PXY=3,MODE='s';
+const x=y=>(y-YEAR_MIN)*PXY;
+const yl=y=>y<0?('前'+(-y)):(''+y);
+
+function render(){
+  if(MODE==='fit')PXY=(wrap.clientWidth-20)/TOTAL;
+  if(MODE==='s')PXY=3;
+  if(MODE==='l')PXY=6;
+  tl.classList.toggle('fit',MODE==='fit');
+  tl.style.width=Math.ceil(x(YEAR_MAX)+30)+'px';
+  build();
+}
+
+function bar(b,top,h){
+  const w=Math.max(4,x(b.y1)-x(b.y0));
+  const tip=`${b.n} ${yl(b.y0)}–${yl(b.y1)}${b.sub?'('+b.sub+')':''}`;
+  const cls='bar f-'+b.f+(b.dim?' dim':'')+(b.star?' star':'');
+  const inner=b.star?`<span>${b.n}</span>`:`<span>${b.n}${b.sub?`<i class="sub">${b.sub}</i>`:''}</span>`;
+  return `<div class="${cls}" style="left:${x(b.y0)}px;width:${w}px;height:${h}px;top:${top}px"
+    data-k="dyn" data-tip="${tip}" data-idx="${b.idx}">${inner}</div>`;
+}
+
+function build(){
+  let h='';
+  /* 标尺 */
+  h+='<div class="ruler">';
+  for(let y=YEAR_MIN;y<=YEAR_MAX;y+=100){
+    const major=y%500===0;
+    h+=`<div class="tick ${major?'major':'minor'}" style="left:${x(y)}px"></div>`;
+    if(major)h+=`<div class="ticklab" style="left:${x(y)}px">${y<0?('前'+(-y)):(y===0?'公元':y)}</div>`;
+  }
+  h+='</div>';
+  /* 三排朝代 */
+  const rows=[{arr:ROW_A,lab:'主脉',bh:42,top:4},{arr:ROW_B,lab:'并立',bh:30,top:2},{arr:ROW_C,lab:'并立',bh:30,top:2}];
+  rows.forEach(r=>{
+    h+=`<div class="row" style="height:${r.bh+r.top+6}px"><span class="rowlab" style="top:${r.top+r.bh/2-11}px">${r.lab}</span>`;
+    r.arr.forEach((b,i)=>{b.idx=i;h+=bar(b,r.top,r.bh);});
+    h+='</div>';
+  });
+  /* 事件排 */
+  h+='<div class="row evrow"><span class="rowlab" style="top:22px">事件</span>';
+  EVENTS.forEach((e,i)=>{
+    const up=i%2===0;
+    h+=`<div class="evd" style="left:${x(e.y)-4}px;${up?'top:30px':'top:40px'}" data-k="evt" data-idx="${i}" data-tip="${yl(e.y)} ${e.t}"></div>`;
+    h+=`<div class="evline" style="left:${x(e.y)}px;${up?'top:16px;height:14px':'top:49px;height:14px'}"></div>`;
+    h+=`<div class="evl ${up?'up':'down'}" style="left:${x(e.y)}px" data-k="evt" data-idx="${i}">${e.t}</div>`;
+  });
+  h+='</div>';
+  /* 暗线区 */
+  h+='<div class="row"><span class="rowlab" style="top:6px">暗线</span>';
+  LANES.forEach(l=>{
+    h+=`<div class="lane"><div class="base"></div><span class="rowlab" style="top:8px;pointer-events:auto;cursor:pointer" data-k="lane" data-tip="${l.name}">${l.name}</span>`;
+    l.dots.forEach((d,i)=>{
+      h+=`<div class="ldot ${l.cls}" style="left:${x(d.y)-5}px" data-k="dot" data-lane="${l.name}" data-idx="${i}" data-tip="${yl(d.y)} ${d.t}"></div>`;
+      h+=`<div class="llab ${i%2===0?'a':'b'}" style="left:${x(d.y)}px" data-k="dot" data-lane="${l.name}" data-idx="${i}">${d.t}</div>`;
+    });
+    h+='</div>';
+  });
+  h+='</div>';
+  /* 视频覆盖排 */
+  h+='<div class="row vrow"><span class="rowlab" style="top:16px">视频</span>';
+  SERIES.forEach((s,i)=>{
+    const w=Math.max(16,x(s.y1)-x(s.y0));
+    h+=`<div class="vbar ${s.cls}" style="left:${x(s.y0)}px;width:${w}px;top:${i<4?'6px':'32px'}" data-k="${s.cand!==undefined?'cand':'ser'}" data-idx="${s.cand!==undefined?s.cand:i}" data-tip="${s.tip}"><span>${s.name}</span></div>`;
+    if(s.cls==='v-ming'){
+      EPS.forEach(e=>{h+=`<i class="notch" style="left:${x(e.y0)-x(s.y0)}px"></i>`;});
+    }
+  });
+  h+='</div>';
+  tl.innerHTML=h;
+  /* 窄块处理 */
+  tl.querySelectorAll('.bar').forEach(el=>{if(el.offsetWidth<34)el.classList.add('tiny');});
+  tl.querySelectorAll('.vbar').forEach(el=>{if(el.offsetWidth<70)el.classList.add('narrow');});
+}
+
+function flashRange(y0,y1){
+  tl.querySelectorAll('.bar').forEach(el=>{
+    const b0=+el.style.left.replace('px',''),b1=b0+parseFloat(el.style.width);
+    const s=x(y0),e=x(y1);
+    if(b0<e&&b1>s)el.classList.add('flash');
+  });
+  setTimeout(()=>tl.querySelectorAll('.bar').forEach(el=>el.classList.remove('flash')),2200);
+}
+function goYear(y){wrap.scrollLeft=Math.max(0,x(y)-wrap.clientWidth/2);}
+
+/* ================= 抽屉 ================= */
+const drawer=document.getElementById('drawer'),mask=document.getElementById('mask');
+function openDrawer(html){drawer.innerHTML='<button class="dclose" onclick="closeDrawer()">✕</button>'+html;drawer.classList.add('open');mask.classList.add('open');}
+function closeDrawer(){drawer.classList.remove('open');mask.classList.remove('open');}
+mask.addEventListener('click',closeDrawer);
+
+function dynHTML(b){
+  const byName={};Object.entries(KN).forEach(([id,n])=>byName[n]=id);
+  const k=K[byName[b.n]]||{};
+  const ev=(k.events||[]).map(e=>{
+    const canJump=typeof e[3]==='number';
+    const inner=`<span class="yy ${canJump?'':'na'}">${e[0]}</span><span class="tt"><b>${e[1]}</b>${e[2]?' — '+e[2]:''}</span>`;
+    return canJump?`<div class="evt jump" title="时间轴跳到当年" onclick="goYear(${e[3]});flashRange(${e[3]-1},${e[3]+1});closeDrawer()">${inner}</div>`
+                  :`<div class="evt">${inner}</div>`;
+  }).join('')||`<ul>${b.sj.map(s=>`<li>${s}</li>`).join('')}</ul>`;
+  const pp=(k.people||[]).map(p=>`<div class="ppl"><span class="nn">${p[0]}<small>${p[1]||''}</small></span><span class="dd">${p[2]||''}</span></div>`).join('')||'<div class="plain">—</div>';
+  const bk=(k.books||[]).map(x=>`<div class="bk"><a target="_blank" rel="noopener" title="维基百科检索" href="https://zh.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(String(x[0]).replace(/[《》]/g,''))}"><b>${x[0]} ↗</b></a> — ${x[1]||''}</div>`).join('')||'<div class="plain">—</div>';
+  return `<h3>${b.n}</h3><div class="dspan">${yl(b.y0)} – ${yl(b.y1)}${b.sub?' · '+b.sub:''} · 都城:${k.cap||'—'}</div>
+  <div class="sect">大势</div><p>${b.dz}</p>
+  <div class="sect">机制一句</div><p>${b.jz}</p>
+  <div class="sect">重大事件<span style="float:right;letter-spacing:0;color:#b3a276">点击时间轴跳到当年 ⇥</span></div>${ev}
+  <div class="sect">人物</div>${pp}
+  <div class="sect">著作</div>${bk}
+  ${k.econ?`<div class="sect">经济</div><div class="plain">${k.econ}</div>`:''}
+  ${k.sys?`<div class="sect">制度</div><div class="plain">${k.sys}</div>`:''}
+  <div class="sect">视频机会</div><p>${b.sp}</p>`;
+}
+function dotHTML(lane,i){
+  const d=LANES.find(l=>l.name===lane).dots[i];
+  return `<h3>${d.t}</h3><div class="dspan">${lane} · ${yl(d.y)}</div>
+  <div class="sect">这条暗线上的意义</div><p>${d.d}</p>`;
+}
+function evtHTML(e){
+  return `<h3>${e.t}</h3><div class="dspan">${yl(e.y)}</div><p>${e.d}</p>`;
+}
+function epHTML(e){
+  return `<h3>第${String(e.n).padStart(2,'0')}集 · ${e.t}</h3>
+  <div class="dspan">${yl(e.y0)} – ${yl(e.y1)} · 状态:${ST_TXT[e.st]}</div>
+  <div class="sect">钩子</div><p>${e.hook}</p>
+  <div class="sect">史实锚点</div><p>${e.anchor}</p>
+  <div class="sect">收尾</div><p>${e.tail}</p>
+  <button class="jumpbtn" onclick="document.getElementById('eps').scrollIntoView({behavior:'smooth'})">查看 24 集总览 ↓</button>`;
+}
+function candHTML(c){
+  return `<h3>${c.name}</h3><div class="dspan">${c.span} · ${c.eps}</div>
+  <div class="sect">为什么值得做</div><p>${c.why}</p>
+  <div class="sect">难点</div><p>${c.risk}</p>`;
+}
+function periodHTML(p){
+  return `<h3>${p.name}</h3><div class="dspan">${p.span}</div>
+  <div class="sect">大势</div><p>${p.trend}</p>
+  <div class="sect">结构切面</div><ul>${p.kvs.map(k=>`<li>${k}</li>`).join('')}</ul>
+  <div class="sect">视频布局</div><p>${p.video}</p>`;
+}
+
+/* ================= 卡片与集列表 ================= */
+document.getElementById('period-cards').innerHTML=PERIODS.map((p,i)=>
+ `<div class="card" data-p="${i}"><h3>${p.name}<span class="span">${p.span}</span></h3>
+  <p class="trend">${p.trend}</p><div class="kvs">${p.kvs.map(k=>`<span class="kv">${k}</span>`).join('')}<span class="kv red">${p.video}</span></div></div>`).join('');
+
+document.getElementById('future-cards').innerHTML=CANDS.map((c,i)=>
+ `<div class="card dashed" data-c="${i}"><h3>${c.name}<span class="span">${c.span} · ${c.eps}</span></h3>
+  <p class="trend">${c.why}</p><div class="kvs"><span class="kv red">难点:${c.risk}</span></div></div>`).join('');
+
+const cnt={pub:0,done:0,todo:0};EPS.forEach(e=>cnt[e.st]++);
+document.getElementById('stats').innerHTML=
+ `<span class="stat">已发布 <b>${cnt.pub}</b> 集</span><span class="stat">成片归档 <b>${cnt.done}</b> 集</span>
+  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">待立项 <b>${CANDS.length}</b> 线</span>`;
+
+document.getElementById('eps').innerHTML=EPS.map((e,i)=>
+ `<div class="ep" data-e="${i}"><span class="stdot st-${e.st}"></span>
+  <div class="num">第 ${String(e.n).padStart(2,'0')} 集 · ${yl(e.y0)}–${yl(e.y1)}</div>
+  <div class="et">${e.t}</div><div class="ey">${ST_TXT[e.st]}</div>
+  <div class="hook">${e.hook}</div></div>`).join('');
+
+document.getElementById('legend').innerHTML=
+ `<span><i class="sw" style="background:var(--red)"></i>已发布(B站)</span>
+  <span><i class="sw" style="background:var(--gold)"></i>成片已归档 NAS</span>
+  <span><i class="sw" style="background:#a29a86"></i>文案已备待产</span>
+  <span><i class="sw" style="border:1.5px dashed #8a7a55;background:rgba(138,122,85,.1)"></i>候选系列</span>
+  <span><i class="sw" style="background:linear-gradient(180deg,#b03a2e,#8e2f26)"></i>大明演义覆盖区间</span>
+  <span><i class="sw" style="background:#9c3f32"></i>秦汉线覆盖区间</span>`;
+
+/* ================= 交互 ================= */
+tl.addEventListener('click',ev=>{
+  const el=ev.target.closest('[data-k]');if(!el)return;
+  const k=el.dataset.k,i=+el.dataset.idx;
+  if(k==='dyn'){const b=[...ROW_A,...ROW_B,...ROW_C][i];openDrawer(dynHTML(b));}
+  else if(k==='evt')openDrawer(evtHTML(EVENTS[i]));
+  else if(k==='dot')openDrawer(dotHTML(el.dataset.lane,i));
+  else if(k==='cand')openDrawer(candHTML(CANDS[i]));
+  else if(k==='ser'){if(i===0)openDrawer(periodHTML(PERIODS[6]));else openDrawer(periodHTML(PERIODS[8]));}
+});
+document.querySelectorAll('.card[data-p]').forEach(el=>el.addEventListener('click',()=>{
+  const p=PERIODS[+el.dataset.p];openDrawer(periodHTML(p));
+  const ranges={'先秦':[-2070,-221],'秦汉':[-221,220],'魏晋南北朝':[184,589],'隋唐':[581,907],'五代两宋':[907,1279],'元':[1206,1368],'明':[1328,1662],'清':[1636,1912],'近现代':[1912,1949]};
+  const r=ranges[p.name];if(MODE==='fit')render();
+  goYear(r[0]+(r[1]-r[0])/2);flashRange(r[0],r[1]);
+}));
+document.querySelectorAll('.card[data-c]').forEach(el=>el.addEventListener('click',()=>{
+  const c=CANDS[+el.dataset.c];openDrawer(candHTML(c));
+  if(MODE==='fit')render();goYear(c.y0+(c.y1-c.y0)/2);flashRange(c.y0,c.y1);
+}));
+document.querySelectorAll('.ep').forEach(el=>el.addEventListener('click',()=>openDrawer(epHTML(EPS[+el.dataset.e]))));
+
+/* tooltip */
+const tip=document.getElementById('tip');
+tl.addEventListener('mousemove',ev=>{
+  const el=ev.target.closest('[data-tip]');
+  if(el){tip.textContent=el.dataset.tip;tip.style.display='block';
+    tip.style.left=Math.min(ev.clientX+14,innerWidth-tip.offsetWidth-8)+'px';
+    tip.style.top=(ev.clientY+16)+'px';}
+  else tip.style.display='none';
+});
+tl.addEventListener('mouseleave',()=>tip.style.display='none');
+
+/* zoom & jump */
+document.querySelectorAll('.zoom button[data-z]').forEach(b=>b.addEventListener('click',()=>{
+  MODE=b.dataset.z;
+  document.querySelectorAll('.zoom button[data-z]').forEach(x=>x.classList.toggle('on',x===b));
+  render();goYear(1450);
+}));
+document.getElementById('go-ming').addEventListener('click',()=>{
+  if(MODE==='fit'){MODE='s';document.querySelectorAll('.zoom button[data-z]').forEach(x=>x.classList.toggle('on',x.dataset.z==='s'));render();}
+  goYear(1500);flashRange(1328,1662);
+});
+
+/* drag pan */
+let dragging=false,dx0=0,sl0=0;
+wrap.addEventListener('pointerdown',e=>{dragging=true;dx0=e.clientX;sl0=wrap.scrollLeft;});
+addEventListener('pointermove',e=>{if(dragging)wrap.scrollLeft=sl0-(e.clientX-dx0);});
+addEventListener('pointerup',()=>dragging=false);
+/* wheel → 横向 */
+wrap.addEventListener('wheel',e=>{if(!e.shiftKey){e.preventDefault();wrap.scrollLeft+=e.deltaY;}},{passive:false});
+addEventListener('resize',()=>{if(MODE==='fit')render();});
+
+/* 初始:定位到宋明之间,给足上下文 */
+render();goYear(1200);
+</script>
+</body>
+</html>

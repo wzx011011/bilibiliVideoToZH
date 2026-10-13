@@ -1,0 +1,313 @@
+{
+  "title": "秦汉前传·商鞅变法",
+  "video_name": "qh-00-shangyang.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "秦汉前传 · 动画图解 · 画面中的地图与日期为解释性可视化",
+  "painters": "qh_painters_00.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集年代依据《史记·商君列传》(通说)",
+  "takeaway": {
+    "kicker": "本集机制",
+    "line": "商鞅之法,一条没废——他改的是国家的底层系统",
+    "points": [
+      "编户齐民:人口变成账本数字 → 动员力碾压六国",
+      "军功爵:利益通道取代血统 → 虎狼之师的来源",
+      "县制+度量衡:国君权力直达每个县 → 集权骨架"
+    ],
+    "callback": "呼应系列路线图 · 「秦制=标准答案」,前221 兑现"
+  },
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "求贤令",
+      "year": "前361",
+      "year_val": -361,
+      "narration": "公元前361年,二十一岁的秦孝公接过秦国。这个国家被中原各国当成西陲蛮夷,会盟都不带它玩。孝公憋了一口气,发下求贤令:谁能让秦国强大,我分地封官。这句话,从魏国招来了一个改变中国走向的人。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "徙木立信",
+      "year": "前356",
+      "year_val": -356,
+      "narration": "新人卫鞅的第一步,不是改法,是立信。南门外立起一根三丈木头:搬到北门,赏十金。没人信,赏格一路加到五十金。有人试着搬了,钱当场兑现。第二天全国都知道:这个官府,说话算数。变法的地基,就是这块木头。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.413,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.398,
+          "hold": 0.158,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.541,
+          "hold": 0.342,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.867,
+          "hold": 0.148,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "编户齐民",
+      "year": "前355",
+      "year_val": -355,
+      "narration": "变法第一刀,把国家数清楚。人口土地登记造册,五家一伍、十家一什,一家犯法,四家连带。严酷吗?严酷。但从此,每一户秦国人都成了账本上的数字——朝廷第一次知道,自己能征多少兵、收多少粮。这份动员能力,六国加起来也比不了。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "军功爵",
+      "year": "前353",
+      "year_val": -353,
+      "narration": "第二刀,砍向血统。二十级军功爵:战场斩首一颗,升一级;宗室没军功,不得入宗谱。躺着继承的时代结束了,站着拼杀的时代开始了。底层人第一次看见上升通道——秦人听说打仗,跟过节一样兴奋,六国管这叫虎狼之师。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "制度包",
+      "year": "前350",
+      "year_val": -350,
+      "narration": "第三刀,改操作系统。废井田,开阡陌,土地私有可以买卖;全国设县,县令由国君直接任命;统一度量衡,迁都咸阳。组合拳打完,秦国不再是贵族的联邦,而是一台上下贯通的机器。两千年帝制的骨架,在这里第一次立起来。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "河西封君",
+      "year": "前340",
+      "year_val": -340,
+      "narration": "机器转了十六年,该验收了。前340年,商鞅伐魏,给老朋友公子卬写了封叙旧信,约罢兵会盟。公子卬赴宴,被当场扣押;魏军群龙无首,大败,河西之地归还秦国。孝公兑现承诺:封十五邑,号商君——卫鞅从此叫商鞅。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "作法自毙",
+      "year": "前338",
+      "year_val": -338,
+      "narration": "前338年,孝公去世,继位的惠文王,正是当年被商鞅处罚过的太子。立刻有人告商鞅谋反。他连夜出逃,想投宿客栈,店家却拒绝:商君之法,收留没有凭证的人,我要连坐。他被自己的法堵死了所有退路,起兵抵抗,兵败身死,尸身车裂。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "收尾·机制",
+      "year": "前338",
+      "year_val": -338,
+      "narration": "讽刺的是,商鞅死了,商鞅之法一条没废。因为他改的不是某个君王的政策,而是整个国家的底层系统:编户供人,军功供劲,县制供权。一百三十年后秦始皇横扫六合,跑的还是这套系统。中国为什么注定大一统?答案从这里开始。你愿意生活在商鞅的法下吗?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.519,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.504,
+          "hold": 0.205,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.694,
+          "hold": 0.172,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.851,
+          "hold": 0.164,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前356",
+      "year_val": -356,
+      "narration": "尾声讲个名字的故事。他生在卫国,公族之后,最早叫卫鞅,也叫公孙鞅。前340年河西大胜,孝公把商於十五邑封给他,从此世上才有了商鞅这个名字。用今天的话说:他一辈子最响亮的头衔,是自己挣来的公司冠名。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.102,
+          "hold": 0.913,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

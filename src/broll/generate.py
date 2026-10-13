@@ -61,6 +61,22 @@ def cast_names(beat: dict) -> list[str]:
     return out
 
 
+# 易混字部件提示:模型高频把某字写成同音形近字时在此登记(2026-09-14 "杨涟"三连画成
+# "杨连" 后加;OCR 门禁按整字比对,部件提示能显著降低重试失败率)
+_CHAR_HINTS = {
+    "涟": ('the character "涟" must contain the three-dot water radical 氵 '
+           'on its left, followed by "连" — do NOT write "连" alone'),
+}
+
+
+def _char_hints(names: list[str]) -> str:
+    hints = []
+    for ch in dict.fromkeys("".join(names)):
+        if ch in _CHAR_HINTS:
+            hints.append(_CHAR_HINTS[ch])
+    return (" Character notes: " + "; ".join(hints) + ".") if hints else ""
+
+
 def cast_clause(cast_entries: list[str]) -> str:
     """cast 字段 -> 姓名签英文指令。位置前缀(左/中/右)映射到画面人物。"""
     items = []
@@ -79,7 +95,8 @@ def cast_clause(cast_entries: list[str]) -> str:
                      f"legible regular script (kaishu) black ink")
     names = "、".join(str(e).strip().split("·")[-1].strip() for e in cast_entries)
     return (f"{', '.join(items)}. These name slips are the ONLY text in the image; "
-            f"render the Chinese characters {names} accurately and completely.")
+            f"render the Chinese characters {names} accurately and completely."
+            f"{_char_hints(names)}")
 
 
 def build_prompt(style: str, beat: dict) -> str:

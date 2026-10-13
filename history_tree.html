@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中国历史 · 王朝谱系星图</title>
+<style>
+:root{
+  --ink:#0f0d09; --paper:#ead9b0; --dim:#a4936f; --red:#c8503f; --gold:#d8a94e;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--ink);
+  font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;gap:14px;
+  padding:10px 22px;background:linear-gradient(180deg,rgba(15,13,9,.92),rgba(15,13,9,0));
+  pointer-events:none}
+header .seal{width:44px;height:44px;background:var(--red);color:#f7efdc;border-radius:8px;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:17px;letter-spacing:1px;
+  box-shadow:0 2px 10px rgba(200,80,63,.45)}
+header h1{margin:0;font-size:21px;color:var(--paper);letter-spacing:1px}
+header .sub{margin:2px 0 0;font-size:12px;color:var(--dim)}
+.ctrl{margin-left:auto;display:flex;gap:8px;pointer-events:auto}
+.ctrl button{font-family:inherit;font-size:12.5px;border:1px solid #6b5c3d;color:var(--paper);
+  background:rgba(35,29,18,.75);border-radius:8px;padding:6px 14px;cursor:pointer}
+.ctrl button:hover{border-color:var(--gold);color:var(--gold)}
+.ctrl button.on{background:var(--gold);color:#241a08;border-color:var(--gold)}
+#cv{display:block;width:100vw;height:100vh;cursor:grab}
+#cv:active{cursor:grabbing}
+#legend{position:fixed;left:18px;bottom:14px;z-index:10;display:flex;flex-wrap:wrap;gap:6px 12px;
+  max-width:75vw;font-size:11.5px;color:var(--dim);pointer-events:none}
+#legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+#legend .star{color:var(--gold)}
+#hint{position:fixed;right:18px;bottom:14px;z-index:10;font-size:11.5px;color:var(--dim);pointer-events:none}
+#tip{position:fixed;display:none;z-index:30;background:rgba(20,16,9,.92);border:1px solid #6b5c3d;
+  color:var(--paper);font-size:12.5px;padding:4px 11px;border-radius:6px;pointer-events:none;white-space:nowrap}
+#tip b{color:var(--gold)}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,94vw);z-index:40;background:#171310;
+  border-left:1px solid #57503c;box-shadow:-8px 0 30px rgba(0,0,0,.5);transform:translateX(105%);
+  transition:transform .22s ease;padding:22px 24px 30px;overflow-y:auto}
+#drawer.open{transform:translateX(0)}
+#drawer h2{margin:0;font-size:26px;color:var(--paper)}
+#drawer .yrs{color:var(--gold);font-size:14px;margin:4px 0 14px}
+#drawer .era{display:inline-block;font-size:12px;border-radius:12px;padding:2px 12px;margin-bottom:12px}
+#drawer p{margin:8px 0;font-size:14px;line-height:1.7;color:#cbbb95}
+#drawer .sect{margin:16px 0 4px;font-size:12px;color:var(--red);letter-spacing:2px;
+  border-bottom:1px dashed #57503c;padding-bottom:3px}
+#drawer .fam{font-size:13px;color:var(--dim)}
+.dclose{position:absolute;top:12px;right:14px;width:30px;height:30px;border-radius:50%;
+  border:1px solid #6b5c3d;background:transparent;color:var(--dim);font-size:15px;cursor:pointer}
+.dclose:hover{color:var(--paper);border-color:var(--paper)}
+
+/* 知识卡(与 history_geo 同款式) */
+#drawer .sect{margin:15px 0 5px;font-size:12px;color:#c8503f;letter-spacing:2px;
+  border-bottom:1px dashed #57503c;padding-bottom:3px}
+#drawer .cap{display:inline-block;background:#241d12;border-radius:8px;padding:3px 12px;
+  font-size:12.5px;color:#cbbb95;margin:2px 4px 2px 0}
+#drawer .evt{display:flex;gap:9px;padding:5px 8px;border-radius:8px;align-items:baseline}
+#drawer .evt:hover{background:#241d12}
+#drawer .evt .yy{flex:none;min-width:70px;font-size:12px;font-weight:700;color:#d8a94e}
+#drawer .evt .yy.na{color:#8a7a55;font-weight:400}
+#drawer .evt .tt{font-size:13.5px;color:#cbbb95;line-height:1.55}
+#drawer .evt .tt b{color:#ead9b0}
+#drawer .evt.jump{cursor:pointer}
+#drawer .evt.jump .yy::after{content:" ↦";color:#d8a94e}
+#drawer .ppl{display:flex;gap:9px;padding:4px 8px;align-items:baseline;cursor:pointer;border-radius:8px}
+#drawer .ppl:hover{background:#241d12}
+#drawer .ppl .nn{flex:none;min-width:64px;font-size:13.5px;font-weight:700;color:#ead9b0}
+#drawer .ppl .nn small{font-weight:400;color:#8a7a55;margin-left:4px}
+#drawer .ppl .dd{font-size:13px;color:#cbbb95;line-height:1.55}
+#drawer .bk{padding:3px 8px;font-size:13.5px;color:#cbbb95}
+#drawer .bk a,#drawer .foot a{color:#d8a94e;text-decoration:none}
+#drawer .bk a:hover,#drawer .foot a:hover{text-decoration:underline}
+#drawer .bk b{color:#ead9b0}
+#drawer .plain{margin:4px 8px;font-size:13.5px;line-height:1.7;color:#cbbb95}
+#drawer .foot{margin-top:18px;font-size:11px;color:#8a7a55;line-height:1.6;border-top:1px solid #57503c;padding-top:8px}
+#drawer .backbtn{font-family:inherit;font-size:12.5px;border:1px solid #57503c;background:transparent;
+  color:#cbbb95;border-radius:8px;padding:4px 12px;cursor:pointer;margin-bottom:8px}
+#drawer .backbtn:hover{border-color:#d8a94e;color:#d8a94e}
+#drawer .peer{display:inline-block;background:#241d12;border-radius:10px;padding:3px 11px;margin:3px 6px 0 0;
+  font-size:12.5px;color:#cbbb95;cursor:pointer}
+#drawer .peer:hover{color:#d8a94e}
+</style>
+</head>
+<body>
+<header>
+  <div class="seal">分合</div>
+  <div>
+    <h1>中国历史 · 王朝谱系星图</h1>
+    <p class="sub">枝条=国祚 · 分裂成枝,统一合流 · 深度轴=南北(北 posterior 在后)</p>
+  </div>
+  <div class="ctrl">
+    <button id="b-front">正面图</button>
+    <button id="b-rot" class="on">旋转中</button>
+    <button id="b-reset">重置</button>
+    <button id="b-map" onclick="location.href='history_map.html'">时间轴版 ↗</button>
+    <button onclick="location.href='history_geo.html'">舆图沙盘 ↗</button>
+  </div>
+</header>
+<canvas id="cv"></canvas>
+<div id="legend"></div>
+<div id="hint">拖动旋转 · 滚轮缩放 · 点击王朝看详情</div>
+<div id="tip"></div>
+<aside id="drawer"></aside>
+
+<script src="history_knowledge.js"></script>
+<script>
+/* ============ 数据区(口径与 history_map.html 一致) ============ */
+const ERAS=[
+ {n:'先秦',c:'#c99a3f'},{n:'秦汉',c:'#d4664f'},{n:'魏晋南北朝',c:'#7fa3b8'},
+ {n:'隋唐',c:'#d8a94e'},{n:'五代两宋',c:'#5fa88c'},{n:'元',c:'#7d9bd4'},
+ {n:'明',c:'#e0604d'},{n:'清',c:'#6d92d8'},{n:'近现代',c:'#c98495'}
+];
+/* x=横向展开, z=南北深度(负=北, 正=南), y0/y1=起讫年, s=大一统星标 */
+const DYN=[
+ {id:'xia',n:'夏',y0:-2070,y1:-1600,e:0,x:0,z:0,s:0,b:'世袭替代禅让,「家天下」的开端。'},
+ {id:'shang',n:'商',y0:-1600,y1:-1046,e:0,x:0,z:0,s:0,b:'神权国家:甲骨文、占卜与祖先崇拜统治,内外服制。'},
+ {id:'zhoux',n:'西周',y0:-1046,y1:-771,e:0,x:0,z:0,s:0,b:'分封+宗法+礼乐三位一体,中国第一次系统化政治设计。'},
+ {id:'chunqiu',n:'春秋',y0:-770,y1:-476,e:0,x:0,z:0,s:0,b:'霸主政治:尊王攘夷下的有限战争,铁器牛耕萌芽。'},
+ {id:'zhanguo',n:'战国',y0:-475,y1:-221,e:0,x:0,z:0,s:0,b:'变法竞赛与总体战:商鞅式答案胜出,秦制即标准答案。'},
+ {id:'qin',n:'秦',y0:-221,y1:-207,e:1,x:0,z:0,s:1,b:'第一帝国:皇帝制+郡县全面铺开,大一统成为两千年母题。'},
+ {id:'xihan',n:'西汉',y0:-202,y1:8,e:1,x:0,z:0,s:1,b:'帝国定型:郡国并行→推恩令,罢黜百家独尊儒术,外儒内法。'},
+ {id:'xin',n:'新',y0:9,y1:23,e:1,x:0,z:0,s:0,b:'王莽托古改制:一场理想主义财政实验,在土地兼并死结上崩盘。'},
+ {id:'donghan',n:'东汉',y0:25,y1:220,e:1,x:0,z:0,s:1,b:'豪族社会:庄园经济+尚书台侵相权,外戚宦官循环无解。'},
+ {id:'wei',n:'魏',y0:220,y1:266,e:2,x:-50,z:-110,s:0,b:'汉末再均衡:屯田与法家军国最彻底的一方,九品中正出台。'},
+ {id:'shu',n:'蜀',y0:221,y1:263,e:2,x:-250,z:130,s:0,b:'诸葛治蜀:疲敝之地撑起争天下的野心。'},
+ {id:'wu',n:'吴',y0:222,y1:280,e:2,x:190,z:150,s:0,b:'江东大族政权,江南开发的第一推手。'},
+ {id:'xijin',n:'西晋',y0:266,y1:316,e:2,x:0,z:0,s:0,b:'占田荫客,门阀起步;用宗王封镇代替治理,八王之乱自爆。'},
+ {id:'dongjin',n:'东晋',y0:317,y1:420,e:2,x:-160,z:175,s:0,b:'「王与马,共天下」:皇权+侨姓士族+流民帅的三脚架。'},
+ {id:'shiliuguo',n:'十六国',y0:304,y1:439,e:2,x:160,z:-175,s:0,b:'北方胡族政权与汉制嫁接的试验场,谁融合谁统一北方。'},
+ {id:'nanchao',n:'南朝',y0:420,y1:589,e:2,x:-160,z:175,s:0,b:'宋齐梁陈更替,寒人掌机要;文化正统在南方。'},
+ {id:'beichao',n:'北朝',y0:439,y1:589,e:2,x:160,z:-175,s:0,b:'北魏均田三长、孝文帝汉化——制度整合力压过南朝,隋唐出自北朝。'},
+ {id:'sui',n:'隋',y0:581,y1:618,e:3,x:0,z:0,s:1,b:'复归统一:三省六部定型,科举开科,凿大运河;工程透支,果实归唐。'},
+ {id:'tang',n:'唐',y0:618,y1:907,e:3,x:0,z:0,s:1,b:'第二帝国巅峰:律令制、天可汗;安史之乱是制度账单到期。'},
+ {id:'wudai',n:'五代',y0:907,y1:979,e:4,x:0,z:0,s:0,b:'藩镇延长线:禁军+枢密院破解兵变循环;燕云割弃改写宋辽地缘。'},
+ {id:'liao',n:'辽',y0:916,y1:1125,e:4,x:185,z:-175,s:0,b:'南北面官:游牧军事+汉地税赋的一国两制,撑起澶渊百年和平。'},
+ {id:'xisia',n:'西夏',y0:1038,y1:1227,e:4,x:-115,z:-120,s:0,b:'番汉杂糅的缓冲国,在宋辽金三角里靠制衡求生。'},
+ {id:'beisong',n:'北宋',y0:960,y1:1127,e:4,x:-40,z:75,s:0,b:'崇文抑武,与士大夫共治天下;财政赎买军事风险,「三冗」渐重。'},
+ {id:'nansong',n:'南宋',y0:1127,y1:1279,e:4,x:-160,z:175,s:0,b:'背海立国:海贸+纸钞撑起半壁,会子通胀与权相政治无解。'},
+ {id:'jin',n:'金',y0:1115,y1:1234,e:4,x:60,z:-150,s:0,b:'猛安谋克入主中原:征服政权模仿汉制的典型曲线,速汉化速腐化。'},
+ {id:'yuan',n:'元',y0:1279,y1:1368,e:5,x:0,z:0,s:1,b:'草原帝国改造中原:行省、驿站、纸钞——省制沿用至今。'},
+ {id:'ming',n:'明',y0:1368,y1:1644,e:6,x:0,z:0,s:1,b:'皇权独走:废丞相、内阁票拟+司礼监批红、厂卫;白银财政。'},
+ {id:'qing',n:'清',y0:1644,y1:1912,e:7,x:0,z:0,s:1,b:'边疆整合与皇权顶点:军机处、密折、理藩院,奠基现代中国版图。'},
+ {id:'mingguo',n:'民国',y0:1912,y1:1949,e:8,x:0,z:0,s:0,b:'共和实验、军阀混战、抗战与内战:救亡压倒启蒙。'},
+ {id:'gonghe',n:'共和国',y0:1949,y1:2004,e:8,x:0,z:0,s:1,b:'统一、建设与改革开放。'}
+];
+/* 继承/合流边:[父,子,merge] merge=1 表示多方归一(合流) */
+const EDGES=[
+ ['xia','shang'],['shang','zhoux'],['zhoux','chunqiu'],['chunqiu','zhanguo'],['zhanguo','qin'],
+ ['qin','xihan'],['xihan','xin'],['xin','donghan'],
+ ['donghan','wei'],['donghan','shu'],['donghan','wu'],
+ ['wei','xijin'],['shu','xijin',1],['wu','xijin',1],
+ ['xijin','dongjin'],['xijin','shiliuguo'],
+ ['dongjin','nanchao'],['shiliuguo','beichao'],
+ ['nanchao','sui',1],['beichao','sui',1],
+ ['sui','tang'],
+ ['tang','wudai'],['tang','liao'],['tang','xisia'],
+ ['wudai','beisong'],
+ ['liao','jin'],['beisong','jin',1],
+ ['beisong','nansong'],
+ ['jin','yuan',1],['nansong','yuan',1],['xisia','yuan',1],
+ ['yuan','ming'],['ming','qing'],['qing','mingguo'],['mingguo','gonghe']
+];
+
+/* ============ 世界坐标与相机 ============ */
+const Y0=-2150, YMAX=2004;
+const SY=0.62;                       // 年→世界单位
+const MIDY=(YMAX+Y0)/2*SY;           // 世界 y 中心
+const wy=y=>(y-Y0)*SY-MIDY;
+const byId=Object.fromEntries(DYN.map(d=>[d.id,d]));
+
+let yaw=0.5, pitch=0.28, dist=5200, FOV=1500;
+let autoRot=true;
+const cv=document.getElementById('cv'), ctx=cv.getContext('2d');
+let W=0,H=0,DPR=1;
+
+function resize(){
+  DPR=Math.min(devicePixelRatio||1,2);
+  W=innerWidth;H=innerHeight;
+  cv.width=W*DPR;cv.height=H*DPR;
+  cv.style.width=W+'px';cv.style.height=H+'px';
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+}
+addEventListener('resize',resize);resize();
+
+function project(wx,wyy,wz){
+  const cy=Math.cos(yaw),sy=Math.sin(yaw);
+  const x1=wx*cy-wz*sy, z1=wx*sy+wz*cy;
+  const cp=Math.cos(pitch),sp=Math.sin(pitch);
+  const y2=wyy*cp-z1*sp, z2=wyy*sp+z1*cp;
+  const zc=z2+dist;
+  if(zc<80)return null;
+  const s=FOV/zc;
+  return {x:W/2+x1*s, y:H/2+y2*s, s, zc};
+}
+
+/* ============ 渲染 ============ */
+const picks=[];   // 每帧拾取缓存 {d, x, y}
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  // 背景微渐变
+  const g=ctx.createRadialGradient(W/2,H*.42,60,W/2,H/2,Math.max(W,H)*.75);
+  g.addColorStop(0,'rgba(46,38,24,.35)');g.addColorStop(1,'rgba(10,8,5,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+
+  // 地面网格(增强纵深)
+  ctx.strokeStyle='rgba(190,170,130,.07)';ctx.lineWidth=1;
+  const GY=wy(YMAX)+260;
+  for(let gx=-800;gx<=800;gx+=200){
+    let prev=null;
+    for(let gz=-800;gz<=800;gz+=80){
+      const p=project(gx,GY,gz);
+      if(prev&&p){ctx.beginPath();ctx.moveTo(prev.x,prev.y);ctx.lineTo(p.x,p.y);ctx.stroke();}
+      prev=p;
+    }
+  }
+  for(let gz=-800;gz<=800;gz+=200){
+    let prev=null;
+    for(let gx=-800;gx<=800;gx+=80){
+      const p=project(gx,GY,gz);
+      if(prev&&p){ctx.beginPath();ctx.moveTo(prev.x,prev.y);ctx.lineTo(p.x,p.y);ctx.stroke();}
+      prev=p;
+    }
+  }
+
+  // 连接边(先画,垫底)
+  for(const [a,b,m] of EDGES){
+    const A=byId[a],B=byId[b];
+    const p0=project(A.x,wy(A.y1),A.z), p1=project(B.x,wy(B.y0),B.z);
+    if(!p0||!p1)continue;
+    ctx.strokeStyle=m?'rgba(216,169,78,.32)':'rgba(190,170,130,.20)';
+    ctx.lineWidth=(m?1.8:1.2)*Math.max(.5,Math.min(p0.s,p1.s)*2.2);
+    ctx.beginPath();ctx.moveTo(p0.x,p0.y);
+    ctx.quadraticCurveTo((p0.x+p1.x)/2,(p0.y+p1.y)/2-(m?26:10),p1.x,p1.y);
+    ctx.stroke();
+    if(m){ // 合流终点圆点
+      ctx.fillStyle='rgba(216,169,78,.8)';
+      ctx.beginPath();ctx.arc(p1.x,p1.y,3.4*Math.max(.6,p1.s*2),0,7);ctx.fill();
+    }
+  }
+
+  // 王朝枝条:远→近排序绘制
+  const items=DYN.map(d=>{
+    const pa=project(d.x,wy(d.y0),d.z), pb=project(d.x,wy(d.y1),d.z);
+    const mid=project(d.x,wy((d.y0+d.y1)/2),d.z);
+    return {d,pa,pb,mid};
+  }).filter(it=>it.pa&&it.pb&&it.pb.zc>0);
+  items.sort((a,b)=>a.pa.zc-b.pa.zc);
+  picks.length=0;
+
+  for(const it of items){
+    const {d,pa,pb,mid}=it;
+    const era=ERAS[d.e];
+    const depth=1-Math.min(1,Math.max(0,(mid.zc-dist*0.55)/(dist*1.15)));
+    const alpha=.35+.65*depth;
+    const wBase=(d.s?7:4.6)*Math.max(.45,Math.min(1.15,mid.s*2.4));
+    // 枝条主体
+    const grad=ctx.createLinearGradient(pa.x,pa.y,pb.x,pb.y);
+    grad.addColorStop(0,era.c);grad.addColorStop(1,'rgba(120,100,70,.25)');
+    ctx.globalAlpha=alpha;
+    ctx.strokeStyle=grad;ctx.lineWidth=wBase;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(pa.x,pa.y);ctx.lineTo(pb.x,pb.y);ctx.stroke();
+    // 起点:王朝名号(印玺风)
+    ctx.font=`bold ${Math.max(12,30*mid.s)}px "Noto Serif SC","SimSun",serif`;
+    ctx.textAlign='center';ctx.textBaseline='middle';
+    const lx=mid.x+(d.x===0&&d.z===0?(d.id==='gonghe'?170:150):(d.x<0?-96*(mid.s*2.2):96*(mid.s*2.2)));
+    const ly=mid.y-14*Math.max(.6,mid.s*2);
+    ctx.fillStyle='#0f0d09';
+    ctx.fillText(d.n,lx+1.5,ly+1.5);
+    ctx.fillStyle=d.s?'#f0d9a0':'#ead9b0';
+    ctx.fillText(d.n,lx,ly);
+    if(d.s){ // 大一统星标
+      ctx.fillStyle='#d8a94e';ctx.font=`${Math.max(11,22*mid.s)}px serif`;
+      ctx.fillText('★',lx+ctx.measureText(d.n).width/2+13*Math.max(.6,mid.s*2),ly-1);
+      ctx.beginPath();ctx.arc(pa.x,pa.y,wBase*1.5+3,0,7);
+      ctx.fillStyle=era.c;ctx.globalAlpha=alpha*.9;ctx.fill();
+    }
+    ctx.globalAlpha=1;
+    picks.push({d,x:lx,y:ly,r:Math.max(30,120*mid.s)});
+    picks.push({d,x:mid.x,y:mid.y,r:Math.max(26,90*mid.s)});
+  }
+}
+
+function loop(){
+  if(autoRot)yaw+=0.0022;
+  draw();
+  requestAnimationFrame(loop);
+}
+loop();
+
+/* ============ 交互 ============ */
+const tip=document.getElementById('tip');
+let down=null,moved=0;
+cv.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY,yaw,pitch};moved=0;setRot(false);});
+addEventListener('pointermove',e=>{
+  if(down){
+    const dx=e.clientX-down.x,dy=e.clientY-down.y;
+    moved=Math.max(moved,Math.abs(dx)+Math.abs(dy));
+    yaw=down.yaw+dx*0.0045;
+    pitch=Math.min(1.35,Math.max(-0.5,down.pitch+dy*0.0035));
+  }else{
+    const hit=pick(e.clientX,e.clientY);
+    if(hit){
+      tip.style.display='block';
+      tip.innerHTML=`<b>${hit.n}</b> ${yl(hit.y0)}–${yl(hit.y1)} · ${ERAS[hit.e].n}`;
+      tip.style.left=Math.min(e.clientX+14,W-tip.offsetWidth-8)+'px';
+      tip.style.top=(e.clientY+16)+'px';
+      cv.style.cursor='pointer';
+    }else{tip.style.display='none';cv.style.cursor='grab';}
+  }
+});
+addEventListener('pointerup',e=>{
+  if(down&&moved<5){
+    const hit=pick(e.clientX,e.clientY);
+    if(hit)openDrawer(hit);
+  }
+  down=null;
+});
+cv.addEventListener('wheel',e=>{
+  e.preventDefault();
+  dist=Math.min(13000,Math.max(2000,dist*(1+e.deltaY*0.0011)));
+},{passive:false});
+
+function pick(mx,my){
+  let best=null,bd=1e9;
+  for(const p of picks){
+    const dd=(mx-p.x)**2+(my-p.y)**2;
+    if(dd<p.r*p.r&&dd<bd){bd=dd;best=p.d;}
+  }
+  return best;
+}
+const yl=y=>y<0?('前'+(-y)):(''+y);
+
+const drawer=document.getElementById('drawer');
+function kLink(y){return `history_geo.html?y=${y}`;}
+function openDrawer(d){
+  const k=K[d.id]||{},era=ERAS[d.e];
+  const ev=(k.events||[]).map(e=>{
+    const canJump=typeof e[3]==='number';
+    const inner=`<span class="yy ${canJump?'':'na'}">${e[0]}</span><span class="tt"><b>${e[1]}</b>${e[2]?' — '+e[2]:''}</span>`;
+    return canJump?`<a class="evt jump" target="_blank" rel="noopener" title="在舆图沙盘打开当年" href="${kLink(e[3])}">${inner}</a>`
+                  :`<div class="evt">${inner}</div>`;
+  }).join('')||'<div class="plain">—</div>';
+  const pp=(k.people||[]).map((p,pi)=>`<div class="ppl" onclick="openPerson('${d.id}',${pi})" title="查看人物词条">
+    <span class="nn">${p[0]}<small>${p[1]||''}</small></span><span class="dd">${p[2]||''}</span></div>`).join('')||'<div class="plain">—</div>';
+  const bk=(k.books||[]).map(b=>`<div class="bk"><a target="_blank" rel="noopener" title="维基百科检索"
+    href="https://zh.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(String(b[0]).replace(/[《》]/g,''))}"><b>${b[0]} ↗</b></a> — ${b[1]||''}</div>`).join('')||'<div class="plain">—</div>';
+  drawer.innerHTML=`<button class="dclose" onclick="closeDrawer()">✕</button>
+  <h2>${d.n}${d.s?' <span style="color:#d8a94e;font-size:18px">★ 大一统</span>':''}</h2>
+  <div class="yrs">${yl(d.y0)} – ${yl(d.y1)} · 国祚 ${d.y1-d.y0} 年</div>
+  <span class="cap" style="color:${era.c}">${era.n}</span><span class="cap">都城:${k.cap||'—'}</span>
+  <div class="sect">大势</div><p>${d.b}</p>
+  <div class="sect">重大事件<span style="float:right;letter-spacing:0;color:#8a7a55">点击在舆图沙盘打开当年 ↦</span></div>${ev}
+  <div class="sect">人物<span style="float:right;letter-spacing:0;color:#8a7a55">点击看词条</span></div>${pp}
+  <div class="sect">著作</div>${bk}
+  <div class="sect">经济</div><div class="plain">${k.econ||'—'}</div>
+  <div class="sect">制度</div><div class="plain">${k.sys||'—'}</div>
+  <div class="sect">坐标</div>
+  <div class="plain">${d.z<-60?'北方政权(深度在后)':d.z>60?'南方政权(深度在前)':'中原主线'}${d.x<-60?' · 偏西':d.x>60?' · 偏东':''}</div>
+  <div class="foot">在 <a target="_blank" rel="noopener" href="${kLink(Math.round((d.y0+d.y1)/2))}">舆图沙盘查看${d.n}当年版图 ↗</a>
+  ·<a href="history_map.html" style="color:#d8a94e"> 时间轴版 →</a></div>`;
+  drawer.classList.add('open');
+}
+function openPerson(dynId,pi){
+  const d=DYN.find(x=>x.id===dynId);if(!d)return;
+  const k=K[dynId]||{},p=(k.people||[])[pi];if(!p)return;
+  const evs=(k.events||[]).map(e=>{
+    const canJump=typeof e[3]==='number';
+    const inner=`<span class="yy ${canJump?'':'na'}">${e[0]}</span><span class="tt"><b>${e[1]}</b>${e[2]?' — '+e[2]:''}</span>`;
+    return canJump?`<a class="evt jump" target="_blank" rel="noopener" href="${kLink(e[3])}">${inner}</a>`:`<div class="evt">${inner}</div>`;
+  }).join('')||'<div class="plain">—</div>';
+  const peers=(k.people||[]).filter((_,i)=>i!==pi).map((q,qi)=>`<span class="peer" onclick="openPerson('${dynId}',${qi})">${q[0]}·${q[1]||''}</span>`).join('')||'<span class="plain">本政权暂无其他收录人物</span>';
+  drawer.innerHTML=`<button class="dclose" onclick="closeDrawer()">✕</button>
+  <button class="backbtn" onclick="openDrawer(DYN.find(x=>x.id==='${dynId}'))">← 返回 ${d.n}</button>
+  <h2 style="margin-top:6px">${p[0]}</h2>
+  <div class="yrs">${p[1]||''} · ${d.n}(${yl(d.y0)}–${yl(d.y1)})</div>
+  <div class="sect">简介</div><div class="plain">${p[2]||'—'}</div>
+  <div class="sect">同时代大事<span style="float:right;letter-spacing:0;color:#8a7a55">点击在舆图沙盘打开当年 ↦</span></div>${evs}
+  <div class="sect">同时代人物</div><div style="padding:2px 8px;line-height:2">${peers}</div>
+  <div class="foot">深读:<a target="_blank" rel="noopener"
+   href="https://zh.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(p[0])}">维基百科查 ${p[0]} ↗</a></div>`;
+  drawer.classList.add('open');
+}
+function closeDrawer(){drawer.classList.remove('open');}
+function setRot(on){
+  autoRot=on;
+  const b=document.getElementById('b-rot');
+  b.classList.toggle('on',on);b.textContent=on?'旋转中':'已暂停';
+}
+document.getElementById('b-front').onclick=()=>{yaw=0;pitch=0;setRot(false);};
+document.getElementById('b-rot').onclick=()=>setRot(!autoRot);
+document.getElementById('b-reset').onclick=()=>{yaw=0.5;pitch=0.28;dist=5200;setRot(true);};
+
+/* 图例 */
+document.getElementById('legend').innerHTML=
+ ERAS.map(e=>`<span><i class="sw" style="background:${e.c}"></i>${e.n}</span>`).join('')
+ +`<span class="star">★ 大一统</span><span>金色弧线 = 合流统一</span>`;
+</script>
+</body>
+</html>

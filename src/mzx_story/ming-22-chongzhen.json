@@ -28,7 +28,7 @@
     {"prompt": "A fortress gate falling under final assault at dawn, commander surrounded, end of the line", "at": 0.66, "hold": 0.34, "fit": "contain"}],
    "bg": "snow plain littered with broken banners, catastrophic grey-white wash"},
   {"kind": "s4", "title": "降将与祭坛",
-   "narration": "被俘的洪承畴绝食求死，皇太极派人轮番劝降，最后亲自探视，解下貂裘披在他身上。洪承畴降了。消息传到北京时，朝廷正在给"殉国"的洪督师设坛痛祭，崇祯辍朝一日，祭到一半听说人降了——尬住了，祭也没法收场。从此关外只剩宁远一座孤城，和吴三桂的残兵。",
+   "narration": "被俘的洪承畴绝食求死，皇太极派人轮番劝降，最后亲自探视，解下貂裘披在他身上。洪承畴降了。消息传到北京时，朝廷正在给“殉国”的洪督师设坛痛祭，崇祯辍朝一日，祭到一半听说人降了——尬住了，祭也没法收场。从此关外只剩宁远一座孤城，和吴三桂的残兵。",
    "tts_narration": "被俘的洪承畴绝食求死，皇太极派人轮番劝降，最后亲自探视，解下貂裘披在他身上。洪承畴降了。消息传到北京时，朝廷正在给殉国的洪督师设坛痛祭，崇祯辍朝一日，祭到一半听说人降了——尬住了，祭也没法收场。从此关外只剩宁远一座孤城，和吴三桂的残兵。",
    "broll": [
     {"prompt": "A captured general in torn armor refusing food in a prison tent, imperial robe offered by envoys, dignity vs survival", "at": 0.0, "hold": 0.33, "fit": "contain"},

@@ -21,7 +21,8 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = Path("D:/mzx-ming01")
 CONTENT = Path(__file__).with_name("ming-01-jingnan.json")
 GEN = "work/voice-clone-demo/cv3_generate_voice.py"
-MODEL_DIR = "work/voice-clone-demo/models/Fun-CosyVoice3-0.5B-2512"
+# 必须绝对路径(带盘符):_norm_path 对相对路径会拼到 work/voice-clone-demo 下成双份
+MODEL_DIR = "E:/ai/bilibiliVideoToZH/work/voice-clone-demo/models/Fun-CosyVoice3-0.5B-2512"
 ENGINE = "cosyvoice3-0.5b-2512"
 # CV3 零样本 prompt_text 新增格式要求(模型 README Basic Usage),CV2 不需要
 PROMPT_PREFIX = "You are a helpful assistant.<|endofprompt|>"

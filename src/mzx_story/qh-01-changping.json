@@ -1,0 +1,288 @@
+{
+  "title": "秦汉前传·长平之战",
+  "video_name": "qh-01-changping.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "秦汉前传 · 动画图解 · 画面中的地图与日期为解释性可视化",
+  "painters": "qh_painters_01.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集年代依据《史记·白起王翦列传》《史记·廉颇蔺相如列传》(通说)",
+  "takeaway": {
+    "kicker": "本集机制",
+    "line": "长平不是输在赵括——是两台国家机器的对决",
+    "points": [
+      "对峙一年拼粮饷:耕战机器的消耗战,六国无人能扛",
+      "反间计只用了四两:赵王自己的急,才是那千斤",
+      "四十万一代人:赵国此后二十年缓不过来"
+    ],
+    "callback": "呼应第00集·商鞅的机器,前221 兑现"
+  },
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "上党之祸",
+      "year": "前262",
+      "year_val": -262,
+      "narration": "公元前262年,秦国攻韩,切断了上党郡与韩国本土的联系。郡守冯亭不肯降秦,把上党十七城献给赵国。平原君劝赵王:白捡的便宜,不占白不占。赵国笑纳了这块地——也笑纳了秦国的怒火。祸根,就此埋下。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.31,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.295,
+          "hold": 0.226,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.505,
+          "hold": 0.426,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.916,
+          "hold": 0.099,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "廉颇坚壁",
+      "year": "前261",
+      "year_val": -261,
+      "narration": "前261年,秦军来夺上党,赵军在长平接防。老将廉颇打了几仗,都输了,干脆收缩战线,筑垒坚守。秦军远道而来,利在速战;廉颇就是不出来。这一对峙,就是一年多。秦国的粮道越拉越长,赵国的粮仓越挖越空。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.489,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.474,
+          "hold": 0.221,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.68,
+          "hold": 0.128,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.794,
+          "hold": 0.221,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "反间计",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "僵局摆在两边君主面前:秦昭王急,赵孝成王更急。范雎看准了这一点,派人带千金去邯郸散布流言:秦军最怕的,是赵括带兵。赵王本来就嫌廉颇胆小,一听这话,立刻换将。廉颇苦劝无效,黯然离营。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.271,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.256,
+          "hold": 0.393,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.633,
+          "hold": 0.248,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.867,
+          "hold": 0.148,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "纸上谈兵",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "赵括是将门之后,兵书倒背如流,谈起用兵,连父亲赵奢都驳不倒他。但赵奢早有断言:打仗是生死大事,他看得太容易,赵国若用他为将,必败。这句话,赵王没听进去。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "白起上阵",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "赵国换将的情报,当天就到了咸阳。秦昭王秘密换上真正的杀神:白起,严令泄密者斩。白起到任,第一道命令就是佯装败退。赵括一看秦军后撤,大喜:兵书说了,敌退可追。他倾巢而出,离开了坚固的营垒。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.434,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.419,
+          "hold": 0.198,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.602,
+          "hold": 0.252,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.839,
+          "hold": 0.176,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "四十六天",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "赵括追到秦军营垒前,攻不动;回头一看,退路没了。两万五千秦军奇袭背后,五千骑兵截断粮道,赵军被拦腰截成两段。赵括就地筑垒,等待援军和粮食。这一等,是四十六天。赵国的援兵和粮车,一辆也进不来。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.268,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.253,
+          "hold": 0.331,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.568,
+          "hold": 0.278,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.832,
+          "hold": 0.183,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "决战与坑杀",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "断粮四十六天,赵军先杀战马,再暗中相食。前260年九月,赵括组织突围,身中流箭而死,四十万赵军放下武器。白起的处置冷得像冰:留二百四十个年纪小的放回赵国报信,其余,全部坑杀。赵国一朝,损失了整整一代男人。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "收尾·机制",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "后人都说,长平输在赵括纸上谈兵。可账要算深一层:对峙一年,拼的是粮食、人口和动员——这正是商鞅那台机器最擅长的战场。赵括换了廉颇,胜负或许换个输法,但机器对机器,赵国已经输了。此战之后,六国再无一国敢单独抗秦。你怎么看?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": []
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "最后说个冷知识:纸上谈兵,其实是后人发明的成语。赵括那年,中国根本没有纸——纸要到四百年后的东汉才有,他读的兵书全是一卷卷竹简。真要严谨,这词儿该叫简上谈兵;而它定型成今天的样子,甚至晚到清代的书里。大众最熟的赵括标签,是个不折不扣的穿越道具。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.197,
+          "hold": 0.818,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}
