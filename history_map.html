@@ -359,9 +359,9 @@ const EPS=[
  {n:24,t:'南明终章',y0:1644,y1:1662,st:'done',hook:'南明为什么还是输了',anchor:'弘光隆武永历 · 扬州十日史可法 · 郑成功收台湾 · 李定国两蹶名王',tail:'276年、16帝——评论区聊聊你最喜欢的一位'}
 ];
 const PLAN=[
- {id:'su',name:'溯源篇 · 文明的起点',span:'~前3300 – 前771',y0:-2070,y1:-771,st:'todo',stat:'待产 0/4 · 已立项',
+ {id:'su',name:'溯源篇 · 文明的起点',span:'~前3300 – 前771',y0:-2070,y1:-771,st:'todo',stat:'进行中 1/4',
   why:'中华文明从哪来:良渚五千年实证、二里头最早的中国、甲骨文信史开端、西周宅兹中国——为东周线装好前提。',
-  eps:['满天星斗·良渚实证','二里头·最早的中国','商·甲骨文','西周·宅兹中国']},
+  eps:['✅满天星斗·良渚','二里头·最早的中国','商·甲骨文','西周·宅兹中国']},
  {id:'zq',name:'东周线 · 春秋战国(做足)',span:'前771 – 前238',y0:-771,y1:-238,st:'ing',stat:'进行中 2/16',
   why:'全史故事与著作密度之最:课本名场面正片化,百家争鸣三集,著作谱成串。',
   eps:['射王肩','齐桓晋文','弭兵与吴越','孔子','三家分晋','魏国首霸','✅商鞅变法','胡服骑射','儒墨道·三张药方','稷下学宫','法家集大成','合纵连横','将相和(完璧归赵)','✅长平之战','屈原与楚辞','邯郸之围']},
@@ -390,7 +390,7 @@ const PLAN=[
 const SERIES=[
  {name:'大明演义(24集)',y0:1328,y1:1662,cls:'v-ming',tip:'01–08已发B站 · 09–24成片归档NAS(待发布)'},
  {name:'毛选推演线',y0:1925,y1:1949,cls:'v-mzx',tip:'进行中:战略批注风,近现代革命史'},
- {name:'溯源篇(待产)',y0:-2070,y1:-771,cls:'v-cand',cand:0,tip:'4 集:良渚五千年实证/二里头/甲骨文/宅兹中国——已立项'},
+ {name:'溯源篇(进行中)',y0:-2070,y1:-771,cls:'v-qh',cand:0,tip:'进行中:S1 满天星斗·良渚 已出(NAS 试听);S2 二里头/S3 甲骨文/S4 宅兹中国待产'},
  {name:'东周·秦汉线(进行中)',y0:-771,y1:184,cls:'v-qh',cand:1,tip:'进行中:商鞅变法 · 长平之战 已出;东周16+秦汉16 规划见 HISTORY_PLAN.md'},
  {name:'魏晋南北朝线(候选)',y0:185,y1:589,cls:'v-cand',cand:2,tip:'待立项'},
  {name:'隋唐线(候选)',y0:581,y1:907,cls:'v-cand',cand:3,tip:'待立项'},
@@ -556,7 +556,7 @@ document.getElementById('future-cards').innerHTML=PLAN.map((p,i)=>
 const cnt={pub:0,done:0,todo:0};EPS.forEach(e=>cnt[e.st]++);
 document.getElementById('stats').innerHTML=
  `<span class="stat">已发布 <b>${cnt.pub}</b> 集</span><span class="stat">成片归档 <b>${cnt.done}</b> 集</span>
-  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">全库 <b>26</b>/120 集</span>`;
+  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">全库 <b>27</b>/120 集</span>`;
 
 document.getElementById('eps').innerHTML=EPS.map((e,i)=>
  `<div class="ep" data-e="${i}"><span class="stdot st-${e.st}"></span>

@@ -1,0 +1,303 @@
+{
+  "title": "溯源篇·满天星斗",
+  "video_name": "sy-01-liangzhu.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "溯源篇 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "sy_painters_01.py",
+  "era": {
+    "name": "良渚",
+    "y0": -3300,
+    "y1": -2300
+  },
+  "refs": "本集依据:良渚古城遗址考古发掘报告与中华文明探源工程(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "没有文字的国度",
+      "year": "前3300",
+      "year_val": -3300,
+      "narration": "2019年7月6日,良渚古城遗址列入《世界遗产名录》。这个五千年前的地方,没有文字,没有青铜,却被公认进入了文明社会。它靠什么过关?靠三样东西:一座城,一组坝,一片王陵。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "十一条坝",
+      "year": "前3000",
+      "year_val": -3000,
+      "narration": "先说坝。良渚人外围修了十一条堤坝,组成高低两级水库;总土方约一千万立方,相当于四座胡夫金字塔。它既能防洪,又能灌溉运输,是同时期全世界最大的水利工程。而设计它的文明,还没有金属工具。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "四座紫禁城",
+      "year": "前2900",
+      "year_val": -2900,
+      "narration": "再说城。城的中心是莫角山,一座三十万平方米的人工土台,宫殿就盖在上面。外城约三百万平方米,差不多四个紫禁城那么大。五千年前,地球上最大的城市之一,就在这里。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "玉琮王",
+      "year": "前2900",
+      "year_val": -2900,
+      "narration": "王陵在反山。十二号墓出土的玉琮王,高八点九厘米,重六点五公斤,是所有玉琮里唯一的天子级配置。琮上刻着神人兽面纹,考古队叫它神徽。最细的阴线,一毫米里要刻四五条,比头发丝还细。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "玉的身份系统",
+      "year": "前2800",
+      "year_val": -2800,
+      "narration": "玉,就是良渚的身份系统。王墓里,琮、璧、钺成套出现;贵族墓只有零星几件;平民墓里,几乎找不到玉。再加上漆器、黑陶、丝绸,一个金字塔形的社会,明明白白摆在地下。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "饭稻羹鱼",
+      "year": "前2700",
+      "year_val": -2700,
+      "narration": "这么大的城,吃什么?稻米。池中寺粮仓遗址,一次性堆着约二十万公斤碳化稻谷。稻田、骨耜、石镰,一套成熟的稻作系统,养活了数万人口。南方,从此成为中国的大粮仓。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "满天星斗",
+      "year": "前2600",
+      "year_val": -2600,
+      "narration": "良渚不是孤星。同一年代,辽河有红山,江淮有凌家滩,长江中游有石家河,黄河流域是仰韶和龙山。考古学家苏秉琦说,中华文明的起源,就像满天星斗。而多元一体,从此成为中华文明的底色。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "玉的远行",
+      "year": "前2300",
+      "year_val": -2300,
+      "narration": "大约四千三百年前,良渚衰落了,原因至今成谜,水患是最大的嫌疑人。但它的玉,一路北上汇入中原,后来商周王墓里的玉琮,源头就在这里。文明没有消失,只是换了个方式,继续往前走。你觉得,判定一个文明的标准是什么?评论区聊。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.314,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.299,
+          "hold": 0.314,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.598,
+          "hold": 0.211,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.794,
+          "hold": 0.221,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前2300",
+      "year_val": -2300,
+      "narration": "补一个课本冷知识。老教材说,文明三要素是文字、城市、青铜,良渚一样都凑不齐。但它偏偏是文明:因为中华文明探源工程换了一套标准,城市、阶级、王权,三样它全有。良渚申遗成功,等于全世界承认了这张中国考卷。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.09,
+          "hold": 0.925,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}
