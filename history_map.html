@@ -100,6 +100,7 @@ h2 .muted{font-size:13px;color:var(--ink3);font-weight:400;margin-left:8px}
 .kvs{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
 .kv{font-size:11px;background:#efe4c6;border-radius:6px;padding:2px 8px;color:var(--ink2)}
 .kv.red{background:#f3dcd5;color:var(--red)}
+.kv.ok{background:#dcefe2;color:#2c6a4a}
 .card.dashed{border-style:dashed;background:transparent}
 .eps{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:10px}
 .ep{background:var(--card);border:1px solid #d8c79b;border-radius:10px;padding:10px 13px;cursor:pointer;transition:transform .15s,box-shadow .15s;position:relative}
@@ -186,7 +187,7 @@ footer p{margin:4px 0}
 </section>
 
 <section>
-  <h2>后续系列候选 <span class="muted">待立项 · 按建议优先级排序</span></h2>
+  <h2>全库规划 · 120 集 <span class="muted">良渚 → 1912 · 时间轴零缝隙 · 详见 HISTORY_PLAN.md · 点卡片看各线集数清单</span></h2>
   <div class="cards" id="future-cards"></div>
 </section>
 
@@ -357,23 +358,44 @@ const EPS=[
  {n:23,t:'1644:煤山',y0:1644,y1:1644,st:'done',hook:'最后一天',anchor:'南迁搁浅 · 宁武关周遇吉 · 煤山自缢 · 一片石 · 清军入关',tail:'天子守国门,君王死社稷;但抵抗还没有结束'},
  {n:24,t:'南明终章',y0:1644,y1:1662,st:'done',hook:'南明为什么还是输了',anchor:'弘光隆武永历 · 扬州十日史可法 · 郑成功收台湾 · 李定国两蹶名王',tail:'276年、16帝——评论区聊聊你最喜欢的一位'}
 ];
-const CANDS=[
- {name:'东周·秦汉线(前传已启动)',span:'前771 – 184',why:'钩子:中国为什么注定大一统。东周 16 集(春秋4+战国制度4+百家思想3+名场面5,完璧归赵/诸子百家/屈原全数入片)+秦汉 16 集(灭六国→苍天已死);终界黄巾(184),汉末归魏晋线。',eps:'规划 32 集 · 已出 2(商鞅变法 / 长平之战)',risk:'上古史料密度低、考证成本高;生图已本地化 Qwen-2.1 零成本',y0:-771,y1:184},
- {name:'魏晋南北朝线',span:'184 – 589',why:'钩子:最乱的 400 年,恰恰孕育了江南与隋唐。',eps:'预估 14–18 集',risk:'多政权并立,地图图解是生命线',y0:185,y1:589},
- {name:'隋唐线',span:'581 – 907',why:'钩子:第二帝国的巅峰与急转直下,制度账单(安史)讲起来最带感。',eps:'预估 16–20 集',risk:'题材红海,靠制度暗线与讲解深度差异化',y0:581,y1:907},
- {name:'宋元线',span:'907 – 1368',why:'钩子:军事短板、经济长板——纸钞的故事直通元末;元两集(混一南北/石人一只眼)补齐 1279-1368,递镜大明。',eps:'规划 14 集(五代 2+宋 8+元 2+陈桥澶渊)',risk:'并立政权与元代表述分寸需把握',y0:907,y1:1368},
- {name:'清线 · 入关到辛亥',span:'1644 – 1912',why:'钩子:现代中国版图如何奠基,与大明线首尾相接。',eps:'规划 16 集',risk:'晚清部分表述需审慎,建议半季一试',y0:1644,y1:1912},
- {name:'溯源篇 · 文明的起点',span:'前2070 – 前771(实溯良渚 ~前3300)',why:'钩子:中华文明从哪来——良渚五千年实证、二里头最早的中国、甲骨文信史开端、西周宅兹中国;为东周线装好前提。',eps:'规划 4 集(已立项)',risk:'无信史影像,考古题材靠厚涂插画+文物意象',y0:-2070,y1:-771}
+const PLAN=[
+ {id:'su',name:'溯源篇 · 文明的起点',span:'~前3300 – 前771',y0:-2070,y1:-771,st:'todo',stat:'待产 0/4 · 已立项',
+  why:'中华文明从哪来:良渚五千年实证、二里头最早的中国、甲骨文信史开端、西周宅兹中国——为东周线装好前提。',
+  eps:['满天星斗·良渚实证','二里头·最早的中国','商·甲骨文','西周·宅兹中国']},
+ {id:'zq',name:'东周线 · 春秋战国(做足)',span:'前771 – 前238',y0:-771,y1:-238,st:'ing',stat:'进行中 2/16',
+  why:'全史故事与著作密度之最:课本名场面正片化,百家争鸣三集,著作谱成串。',
+  eps:['射王肩','齐桓晋文','弭兵与吴越','孔子','三家分晋','魏国首霸','✅商鞅变法','胡服骑射','儒墨道·三张药方','稷下学宫','法家集大成','合纵连横','将相和(完璧归赵)','✅长平之战','屈原与楚辞','邯郸之围']},
+ {id:'qh',name:'秦汉线 · 第一帝国',span:'前230 – 184',y0:-230,y1:184,st:'todo',stat:'待产 0/16',
+  why:'中国为什么注定大一统:机器造好之后,碾平六国、定型两千年制度,终于黄巾。',
+  eps:['六国坟场','始皇帝','帝国的火药桶','大泽乡','楚汉争霸','白登与文景','推恩令','卫霍击匈','张骞与丝路','轮台罪己','霍光与昭宣','王莽改制','光武中兴','班超与造纸','外戚宦官死循环','苍天已死(交接魏晋)']},
+ {id:'wj',name:'魏晋南北朝线',span:'184 – 589',y0:185,y1:589,st:'todo',stat:'待产 0/14',
+  why:'最乱的 400 年,恰恰孕育了江南与隋唐;民族融合的试验场。',
+  eps:['汉魏禅让','三国·上','三国·下','八王之乱','永嘉南渡','东晋门阀','十六国','淝水之战','孝文帝汉化','六镇之乱','东西魏·周齐','南朝更替','北周统一北方','收官·递镜隋']},
+ {id:'st',name:'隋唐线 · 第二帝国',span:'581 – 907',y0:581,y1:907,st:'todo',stat:'待产 0/16',
+  why:'巅峰与急转直下,安史之乱这张制度账单讲起来最带感。',
+  eps:['开皇之治','大业与运河','玄武门','贞观','武周','开元盛世','安史·上','安史·下','藩镇与两税','元和中兴','甘露之变','牛李党争','大中之治','黄巢','唐亡收官','(细目文案期定)']},
+ {id:'sy',name:'宋元线',span:'907 – 1368',y0:907,y1:1368,st:'todo',stat:'待产 0/14',
+  why:'军事短板、经济长板;元两集补齐 1279–1368,递镜大明。',
+  eps:['中原换庄','十国与柴荣','陈桥与澶渊','庆历新政','王安石变法','靖康之变','南渡与和战·上','南渡与和战·下','联蒙灭金','崖山','混一南北(元)','石人一只眼(元末)']},
+ {id:'qg',name:'清线 · 入关到辛亥',span:'1644 – 1912',y0:1644,y1:1912,st:'todo',stat:'待产 0/16',
+  why:'现代中国版图如何奠基;晚清表述审慎,单集试水再批量。',
+  eps:['入关与三藩','康熙','雍正','乾隆·盛世','乾隆·闭关','嘉道中衰','鸦片战争','太平天国','洋务运动','甲午之败','戊戌变法','辛亥收官','(细目文案期定)']},
+ {id:'ming',name:'大明演义',span:'1368 – 1662',y0:1328,y1:1662,st:'done',stat:'✅ 完成 24/24(01–08 已发 B 站)',
+  why:'全库第一条完成线:靖难到南明,24 集全部成片归档 NAS。',
+  eps:'EPS'},
+ {id:'mzx',name:'毛选推演线(独立)',span:'1925 – 1949',y0:1925,y1:1949,st:'ing',stat:'进行中 · 战略批注风',
+  why:'近现代革命史,风格与讲史体不同,独立运营,不计入 120 集。',
+  eps:['src/mzx_series 产线,另行推进']}
 ];
 const SERIES=[
  {name:'大明演义(24集)',y0:1328,y1:1662,cls:'v-ming',tip:'01–08已发B站 · 09–24成片归档NAS(待发布)'},
  {name:'毛选推演线',y0:1925,y1:1949,cls:'v-mzx',tip:'进行中:战略批注风,近现代革命史'},
- {name:'溯源篇(待产)',y0:-2070,y1:-771,cls:'v-cand',cand:4,tip:'4 集:良渚五千年实证/二里头/甲骨文/宅兹中国——已立项'},
- {name:'东周·秦汉线(进行中)',y0:-771,y1:184,cls:'v-qh',cand:0,tip:'进行中:商鞅变法 · 长平之战 已出;东周16+秦汉16 规划见 HISTORY_PLAN.md'},
- {name:'魏晋南北朝线(候选)',y0:185,y1:589,cls:'v-cand',cand:1,tip:'待立项'},
- {name:'隋唐线(候选)',y0:581,y1:907,cls:'v-cand',cand:2,tip:'待立项'},
- {name:'宋元线(候选)',y0:907,y1:1368,cls:'v-cand',cand:3,tip:'待立项(14 集,含元 2 集)'},
- {name:'清线(候选)',y0:1644,y1:1912,cls:'v-cand',cand:4,tip:'待立项'}
+ {name:'溯源篇(待产)',y0:-2070,y1:-771,cls:'v-cand',cand:0,tip:'4 集:良渚五千年实证/二里头/甲骨文/宅兹中国——已立项'},
+ {name:'东周·秦汉线(进行中)',y0:-771,y1:184,cls:'v-qh',cand:1,tip:'进行中:商鞅变法 · 长平之战 已出;东周16+秦汉16 规划见 HISTORY_PLAN.md'},
+ {name:'魏晋南北朝线(候选)',y0:185,y1:589,cls:'v-cand',cand:2,tip:'待立项'},
+ {name:'隋唐线(候选)',y0:581,y1:907,cls:'v-cand',cand:3,tip:'待立项'},
+ {name:'宋元线(候选)',y0:907,y1:1368,cls:'v-cand',cand:4,tip:'待立项(14 集,含元 2 集)'},
+ {name:'清线(候选)',y0:1644,y1:1912,cls:'v-cand',cand:5,tip:'待立项'}
 ];
 const ST_TXT={pub:'已发布',done:'成片归档',todo:'文案已备'};
 
@@ -507,10 +529,13 @@ function epHTML(e){
   <div class="sect">收尾</div><p>${e.tail}</p>
   <button class="jumpbtn" onclick="document.getElementById('eps').scrollIntoView({behavior:'smooth'})">查看 24 集总览 ↓</button>`;
 }
-function candHTML(c){
-  return `<h3>${c.name}</h3><div class="dspan">${c.span} · ${c.eps}</div>
-  <div class="sect">为什么值得做</div><p>${c.why}</p>
-  <div class="sect">难点</div><p>${c.risk}</p>`;
+function planHTML(p){
+  const eps = p.eps==='EPS' ? EPS.map(e=>`<div class="evt" style="cursor:default"><span class="yy na">第${String(e.n).padStart(2,'0')}集</span><span class="tt"><b>${e.t}</b> · ${e.hook}</span></div>`).join('')
+    : (Array.isArray(p.eps)?p.eps:['—']).map((e,i)=>`<div class="evt" style="cursor:default"><span class="yy na">${String(i+1).padStart(2,'0')}</span><span class="tt"><b>${e.replace('✅','')}</b>${e.startsWith('✅')?' · ✅ 已成片':''}</span></div>`).join('');
+  return `<h3>${p.name}</h3><div class="dspan">${p.span} · ${p.stat}</div>
+  <div class="sect">定位</div><p>${p.why}</p>
+  <div class="sect">集数清单</div>${eps}
+  <button class="jumpbtn" onclick="if(MODE==='fit')render();goYear(${Math.round((p.y0+p.y1)/2)});flashRange(${p.y0},${p.y1});closeDrawer()">在时间轴上定位本线 →</button>`;
 }
 function periodHTML(p){
   return `<h3>${p.name}</h3><div class="dspan">${p.span}</div>
@@ -524,14 +549,14 @@ document.getElementById('period-cards').innerHTML=PERIODS.map((p,i)=>
  `<div class="card" data-p="${i}"><h3>${p.name}<span class="span">${p.span}</span></h3>
   <p class="trend">${p.trend}</p><div class="kvs">${p.kvs.map(k=>`<span class="kv">${k}</span>`).join('')}<span class="kv red">${p.video}</span></div></div>`).join('');
 
-document.getElementById('future-cards').innerHTML=CANDS.map((c,i)=>
- `<div class="card dashed" data-c="${i}"><h3>${c.name}<span class="span">${c.span} · ${c.eps}</span></h3>
-  <p class="trend">${c.why}</p><div class="kvs"><span class="kv red">难点:${c.risk}</span></div></div>`).join('');
+document.getElementById('future-cards').innerHTML=PLAN.map((p,i)=>
+ `<div class="card ${p.st==='done'?'':'dashed'}" data-plan="${i}"><h3>${p.name}<span class="span">${p.span}</span></h3>
+  <p class="trend">${p.why}</p><div class="kvs"><span class="kv ${p.st==='done'?'ok':(p.st==='ing'?'red':'')}">${p.stat}</span>${(Array.isArray(p.eps)?p.eps:[]).slice(0,5).map(e=>`<span class="kv">${e.replace('✅','')}</span>`).join('')}${(Array.isArray(p.eps)&&p.eps.length>5)?'<span class="kv">…</span>':''}</div></div>`).join('');
 
 const cnt={pub:0,done:0,todo:0};EPS.forEach(e=>cnt[e.st]++);
 document.getElementById('stats').innerHTML=
  `<span class="stat">已发布 <b>${cnt.pub}</b> 集</span><span class="stat">成片归档 <b>${cnt.done}</b> 集</span>
-  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">待立项 <b>${CANDS.length}</b> 线</span>`;
+  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">全库 <b>26</b>/120 集</span>`;
 
 document.getElementById('eps').innerHTML=EPS.map((e,i)=>
  `<div class="ep" data-e="${i}"><span class="stdot st-${e.st}"></span>
@@ -554,7 +579,7 @@ tl.addEventListener('click',ev=>{
   if(k==='dyn'){const b=[...ROW_A,...ROW_B,...ROW_C][i];openDrawer(dynHTML(b));}
   else if(k==='evt')openDrawer(evtHTML(EVENTS[i]));
   else if(k==='dot')openDrawer(dotHTML(el.dataset.lane,i));
-  else if(k==='cand')openDrawer(candHTML(CANDS[i]));
+  else if(k==='cand')openDrawer(planHTML(PLAN[i]));
   else if(k==='ser'){if(i===0)openDrawer(periodHTML(PERIODS[6]));else openDrawer(periodHTML(PERIODS[8]));}
 });
 document.querySelectorAll('.card[data-p]').forEach(el=>el.addEventListener('click',()=>{
@@ -563,9 +588,8 @@ document.querySelectorAll('.card[data-p]').forEach(el=>el.addEventListener('clic
   const r=ranges[p.name];if(MODE==='fit')render();
   goYear(r[0]+(r[1]-r[0])/2);flashRange(r[0],r[1]);
 }));
-document.querySelectorAll('.card[data-c]').forEach(el=>el.addEventListener('click',()=>{
-  const c=CANDS[+el.dataset.c];openDrawer(candHTML(c));
-  if(MODE==='fit')render();goYear(c.y0+(c.y1-c.y0)/2);flashRange(c.y0,c.y1);
+document.querySelectorAll('.card[data-plan]').forEach(el=>el.addEventListener('click',()=>{
+  const p=PLAN[+el.dataset.plan];openDrawer(planHTML(p));
 }));
 document.querySelectorAll('.ep').forEach(el=>el.addEventListener('click',()=>openDrawer(epHTML(EPS[+el.dataset.e]))));
 
