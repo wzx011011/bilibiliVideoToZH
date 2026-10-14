@@ -1,0 +1,308 @@
+{
+  "title": "溯源篇·甲骨文",
+  "video_name": "sy-03-jiaguwen.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "溯源篇 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "晚商",
+    "y0": -1300,
+    "y1": -1046
+  },
+  "refs": "本集依据:殷墟考古报告、《史记·殷本纪》与甲骨学研究(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "五迁与盘庚",
+      "year": "前1300",
+      "year_val": -1300,
+      "narration": "商朝建立之后,都城搬了五次,两百多年不安生。前1300年,盘庚力排众议,把都城迁到洹水边,从此这里叫殷。此后二百七十年不再搬家,商,也从此被称为殷。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "洹水大都",
+      "year": "前1250",
+      "year_val": -1250,
+      "narration": "洹水两岸,宫殿区、宗庙区、王陵区、作坊区,各归各位。一座晚商大都,人口以十万计,在当时的世界名列前茅。这座城,后来有个名字:殷墟。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "占卜治国",
+      "year": "前1230",
+      "year_val": -1230,
+      "narration": "商王的一天,从问天开始。用兵、祭祀、收成、出行,甚至做梦,都要烧龟甲兽骨,问一问吉凶。灼裂的纹路,就是天地的回答。这些刻在甲骨上的记录,就是商王的档案库。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "一味中药",
+      "year": "1899",
+      "narration": "1899年,金石学家王懿荣抓药,在一味叫龙骨的药材上,看见了细密的刻痕。他认出来了:那是三千多年前的文字。一味中药,唤醒了一个王朝。中国信史的大门,就此推开。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.471,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.456,
+          "hold": 0.23,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.671,
+          "hold": 0.18,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.835,
+          "hold": 0.18,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "妇好",
+      "year": "前1200",
+      "year_val": -1200,
+      "narration": "1976年,考古学家郑振香坚持再钻一铲,挖出了商王武丁的王后——妇好。墓中一千九百多件随葬,还有象征军权的铜钺。甲骨文里,她曾率一万三千人出征,是商朝第一女将。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "后母戊鼎",
+      "year": "前1150",
+      "year_val": -1150,
+      "narration": "后母戊鼎,八百三十二公斤,商代青铜的巅峰之作。铸这样一件大鼎,要上百名工匠、多个坩埚同时浇注,差一秒都会失败。一个国家的组织能力,就这样铸进了铜里。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "神权世界",
+      "year": "前1100",
+      "year_val": -1100,
+      "narration": "商人的世界,鬼神无处不在:上帝、祖先、河岳,都要祭祀,甚至用人牲。这份对天命的迷信,是它强盛的来源,也埋下了沉重的负担。武丁之后,殷,渐渐疲惫。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "牧野落幕",
+      "year": "前1046",
+      "year_val": -1046,
+      "narration": "前1046年,牧野一战,商周鼎革,纣王自焚,五百多年商朝落幕。它留下了甲骨文、青铜器,和信史的第一页。你知道自己姓氏的甲骨文写法吗?评论区聊。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前1200",
+      "year_val": -1200,
+      "narration": "甲骨文里,藏着商王的日常。牙疼,占卜;做噩梦,占卜;鼻子出血,也要占卜。有一片卜辞问:王齿,唯有害?翻译过来就是——大王牙疼,是天降的祸吗?三千年前,牙疼是件天大的事。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.848,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.833,
+          "hold": 0.182,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

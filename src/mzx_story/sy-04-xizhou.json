@@ -1,0 +1,309 @@
+{
+  "title": "溯源篇·宅兹中国",
+  "video_name": "sy-04-xizhou.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "溯源篇 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "西周",
+    "y0": -1150,
+    "y1": -771
+  },
+  "refs": "本集依据:《史记·周本纪》、何尊铭文与西周考古(通说);烽火戏诸侯的史料争议已在片尾标注",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "周原生长",
+      "year": "前1100",
+      "year_val": -1100,
+      "narration": "商的西边,岐山脚下的周原,一个农耕民族在静静生长。数代人韬光养晦,到了文王手里,周已三分天下有其二。机会,只在等一个时机。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "牧野之战",
+      "year": "前1046",
+      "year_val": -1046,
+      "narration": "前1046年正月,武王戎车三百乘,联军东进,在牧野与商军对阵。清晨誓师,商军前徒倒戈,一战而下,黄昏已定天下。周,代商,天命从此换了主人。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "封邦建国",
+      "year": "前1040",
+      "year_val": -1040,
+      "narration": "周天子把土地和人民,分封给亲戚与功臣,建立七十一国,像众星拱月般环卫王畿。这叫封建——封邦建国的封建,不是后世那个词的意思。周人的网,撒向了整个天下。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "宗法之树",
+      "year": "前1030",
+      "year_val": -1030,
+      "narration": "天子、诸侯、卿大夫、士,一级级分下去;嫡长子继承大宗,其余分立小宗。整棵家族树,就是整台国家机器,根系是血缘,枝叶是政治。宗法制,是周朝的操作系统。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "礼乐密码",
+      "year": "前1000",
+      "year_val": -1000,
+      "narration": "天子九鼎八簋,诸侯七鼎,大夫五鼎,士三鼎——连吃饭的家伙什,都是等级。礼乐制度,把秩序写进了日常生活的每一个细节。这套密码,中国人破译了三千年。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "宅兹中国",
+      "year": "前1038",
+      "year_val": -1038,
+      "narration": "1963年,宝鸡一户农家的后院,一件青铜尊破土而出。尊底铭文一百二十二宇,其中四个字石破天惊——宅兹中国。中国这个词,第一次出现在历史上,意思是:住在天下之中。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "国人暴动",
+      "year": "前841",
+      "year_val": -841,
+      "narration": "前841年,镐京的国人忍无可忍,冲进王宫,周厉王仓皇出逃。此后十四年,周公召公联合执政,史称共和。就是从这一年起,中国历史有了确切不移的纪年——每一年,都能数了。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "骊山之末",
+      "year": "前771",
+      "year_val": -771,
+      "narration": "前771年,犬戎破镐京,幽王死于骊山之下,西周落幕。次年平王东迁洛邑,天子的威严一去不返。一个新时代开了门——春秋。第一箭,已经搭在弦上。谁射的?下一集见。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.348,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.333,
+          "hold": 0.259,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.577,
+          "hold": 0.323,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.885,
+          "hold": 0.13,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前771",
+      "year_val": -771,
+      "narration": "烽火戏诸侯,可能是司马迁写的小说。史记说幽王点烽火博美人一笑,可后来出土的清华简《系年》里,这段故事压根没有烽火。一个流传两千年的亡国童话,被一卷战国竹简轻轻推翻——读史,永远要留一手。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.628,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.613,
+          "hold": 0.402,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

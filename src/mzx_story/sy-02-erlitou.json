@@ -1,0 +1,308 @@
+{
+  "title": "溯源篇·最早的中国",
+  "video_name": "sy-02-erlitou.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "溯源篇 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "二里头",
+    "y0": -1800,
+    "y1": -1500
+  },
+  "refs": "本集依据:二里头遗址考古发掘报告(通说);夏商断代与学界争议处已标注",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "洛河边的崛起",
+      "year": "前1750",
+      "year_val": -1750,
+      "narration": "洛河平原上,一座聚落正在悄悄长大。没有城墙,没有喧哗,几个世代之后,它成了天下最大的都邑。考古学家按村庄的名字,叫它二里头。它的身份,是中国考古学最大的悬案之一。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "中轴线的鼻祖",
+      "year": "前1700",
+      "year_val": -1700,
+      "narration": "宫城居中,道路成井字,把都城划成九宫格。这套中轴对称、宫城居中的规划,后来传给汉魏长安,再传给元明清的北京。你今天看到的故宫格局,源头就在这几条夯土大道上。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "青铜时代开场",
+      "year": "前1680",
+      "year_val": -1680,
+      "narration": "官营青铜作坊,就设在宫殿区旁边。绿铜出炉,浇进陶范,中国青铜时代从这里开场。爵、斝、鼎成套出现——礼器,从此成为权力的语言。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "绿松石龙",
+      "year": "前1670",
+      "year_val": -1670,
+      "narration": "2002年,一座贵族墓里,两千多片绿松石拼出一条七十厘米的长龙,趴在墓主人身上。这是中国龙形象最正统的起点之一。它的主人是谁?不知道——那个时代,还没有文字。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "四千年前的车辙",
+      "year": "前1660",
+      "year_val": -1660,
+      "narration": "井字形大道,最宽二十米。路面土层里,压着两道细细的车辙——双轮车来过的痕迹。这是中国最早的车辙证据之一。四千年前的十字路口,已经车来车往。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "夏的悬案",
+      "year": "前1600",
+      "year_val": -1600,
+      "narration": "文献说,夏在商前;碳十四说,二里头也在商前。但二里头至今没挖出一个夏字。它到底是夏都,还是早商,还是别的什么?考古学家为此争论了半个多世纪,到今天,仍无定论。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "广域王权",
+      "year": "前1650",
+      "year_val": -1650,
+      "narration": "但有一点没有争议:二里头的影响,北到燕山,南到长江,东到海岱,西到陇东。中国第一个跨区域的王权中心,在这里出现。学者们给了它一个名字——最早的中国。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "手铲释天书",
+      "year": "前1520",
+      "year_val": -1520,
+      "narration": "一座没有留下名字的王都,一段争论了六十年的身份,一条被后世继承三千年的中轴线。考古学家说,手铲释天书。你相信二里头是夏都吗?评论区聊。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "1959",
+      "narration": "1959年春天,七十一岁的徐旭生先生出发去豫西,目标是文献里的夏墟。他一路按古书把遗址过了一遍,却在偃师二里头村停下脚步——当时他先猜,这可能是商都。几年之后,学界开始倾向:它更可能是夏。找夏的人,撞见了最早的中国。考古的浪漫,就在这儿。",
+      "bg": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.645,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.63,
+          "hold": 0.385,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}
