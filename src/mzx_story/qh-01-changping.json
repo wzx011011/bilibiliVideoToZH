@@ -266,7 +266,32 @@
       "year_val": -260,
       "narration": "后人都说,长平输在赵括纸上谈兵。可账要算深一层:对峙一年,拼的是粮食、人口和动员——这正是商鞅那台机器最擅长的战场。赵括换了廉颇,胜负或许换个输法,但机器对机器,赵国已经输了。此战之后,六国再无一国敢单独抗秦。你怎么看?评论区聊。",
       "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
-      "broll": []
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.519,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.504,
+          "hold": 0.276,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.765,
+          "hold": 0.163,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.913,
+          "hold": 0.102,
+          "fit": "contain"
+        }
+      ]
     },
     {
       "kind": "s9",
@@ -278,8 +303,14 @@
       "broll": [
         {
           "prompt": "scene",
-          "at": 0.197,
-          "hold": 0.818,
+          "at": 0.0,
+          "hold": 0.54,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.525,
+          "hold": 0.49,
           "fit": "contain"
         }
       ]

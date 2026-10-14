@@ -293,8 +293,14 @@
       "broll": [
         {
           "prompt": "scene",
-          "at": 0.09,
-          "hold": 0.925,
+          "at": 0.0,
+          "hold": 0.795,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.78,
+          "hold": 0.235,
           "fit": "contain"
         }
       ]

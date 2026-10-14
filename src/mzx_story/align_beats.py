@@ -53,10 +53,9 @@ def main() -> int:
         if not cc:
             continue
         if k == 1:
-            s = cc[1][0] if len(cc) > 2 else cc[0][0]
-            e = cc[-1][1]
-            ch['broll'][0]['at'] = round(max(0.0, (s - t0) / dur), 3)
-            ch['broll'][0]['hold'] = round((e - s) / dur + 0.015, 3)
+            # 单拍章也全章覆盖:矢量层彻底不露(2026-10-14 用户定)
+            ch['broll'][0]['at'] = 0.0
+            ch['broll'][0]['hold'] = 1.015
             continue
         total = cc[-1][1] - cc[0][0]
         bounds = [cc[0][0]]
