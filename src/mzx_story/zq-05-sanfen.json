@@ -1,0 +1,309 @@
+{
+  "title": "东周线·三家分晋",
+  "video_name": "zq-05-sanfen.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "春秋",
+    "y0": -771,
+    "y1": -476
+  },
+  "refs": "本集依据:《史记·晋世家》《资治通鉴》开篇(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "曲沃代翼",
+      "year": "前678",
+      "year_val": -678,
+      "narration": "晋国的乱,是有传统的。春秋初年,晋国公族内部自相残杀六十七年,小宗曲沃一族最终灭了国都的大宗。这堂课教会晋国后来的国君一件事:亲戚最危险。于是晋国开始大规模清洗公族。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "不畜群公子",
+      "year": "前650",
+      "year_val": -650,
+      "narration": "此后历代晋君,几乎杀尽驱逐了所有公子王孙——不畜群公子。国君的权力没有了宗室掣肘,确实集中了。但麻烦也随之而来:朝堂上的空位,只能由外姓大夫来填。这些家族越做越大,君主反而慢慢变得弱势。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.316,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.301,
+          "hold": 0.219,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.505,
+          "hold": 0.295,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.785,
+          "hold": 0.23,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "六卿专权",
+      "year": "前550",
+      "year_val": -550,
+      "narration": "到了春秋中后期,晋国军政大权落入六大家族之手:赵、魏、韩、智、范、中行。六卿各养私兵、各占地盘,连国君的税都要跟他们抢。晋文公当年为了称霸给功臣的封赏,如今成了公室的账单。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "赵氏孤儿",
+      "year": "前583",
+      "year_val": -583,
+      "narration": "大夫倾轧有多惨烈?前583年,赵家几乎被灭门,史称下宫之难。经典的赵氏孤儿故事就源于此——程婴、公孙杵臼舍命护住赵家遗孤赵武。多年后赵武复位,赵家不但没倒,反而愈发壮大。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "四卿火并",
+      "year": "前490",
+      "year_val": -490,
+      "narration": "六卿内斗也停不下来。范氏、中行氏先被其余四家联手灭掉,土地被瓜分。晋国从六卿变成四卿:智氏最强,赵魏韩次之。国君被彻底架空,连祭祀用的土地都要看四家脸色。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "晋阳之战",
+      "year": "前453",
+      "year_val": -453,
+      "narration": "前455年,智伯瑶向三家索地,韩魏割地自保,赵襄子拒绝。智伯裹挟韩魏围赵家老巢晋阳,引水灌城,城内悬釜而炊。危急关头,赵襄子派人说服韩魏:唇亡齿寒,赵亡了下一个就是你们。三家反手决堤,水淹智军,智伯兵败身死。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.284,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.269,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.519,
+          "hold": 0.313,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.817,
+          "hold": 0.198,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "三家分晋",
+      "year": "前403",
+      "year_val": -403,
+      "narration": "前453年,赵魏韩三家瓜分智氏领地,晋国名存实亡。前403年,周威烈王正式册封三家为诸侯。司马迁写史记到此为止;司马光写资治通鉴从这里开始——他认定,战国就是从这一纸册封开始的。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "名存实亡",
+      "year": "前376",
+      "year_val": -376,
+      "narration": "前376年,晋静公被废为平民,晋国祭祀断绝。曾经称霸百年的第一强国,就这么被家臣肢解。而瓜分它的赵魏韩,后来全部跻身战国七雄。教训被各国君主记下:防范外姓大夫,从今天起是头等大事。你觉得晋国还有救吗?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.425,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.41,
+          "hold": 0.205,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.6,
+          "hold": 0.272,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.857,
+          "hold": 0.158,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前453",
+      "year_val": -453,
+      "narration": "晋阳之战还有个余波:智伯的头骨被赵襄子做成饮器,拿它喝酒。智伯的家臣豫让为此立志复仇,吞炭漆身,两次行刺都没成功。最后赵襄子脱下衣袍,让他象征性地刺了一剑,成全他的忠义。豫让说完一句流传千古的话就自尽了——士为知己者死。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.533,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.518,
+          "hold": 0.497,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

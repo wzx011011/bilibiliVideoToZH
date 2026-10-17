@@ -1,0 +1,309 @@
+{
+  "title": "东周线·齐桓晋文",
+  "video_name": "zq-02-hengwen.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "春秋",
+    "y0": -771,
+    "y1": -476
+  },
+  "refs": "本集依据:《史记·齐太公世家》《左传·僖公》(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "一箭之仇",
+      "year": "前685",
+      "year_val": -685,
+      "narration": "前685年,齐国大乱,两位流亡的公子赛跑回国抢王位。管仲辅佐公子纠,一箭射向小白,射中带钩。小白装死,日夜兼程抢先入城,即位为齐桓公。而他做的第一件大事,是把射他的人请来当相国。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.307,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.292,
+          "hold": 0.24,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.517,
+          "hold": 0.251,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.753,
+          "hold": 0.262,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "管仲相齐",
+      "year": "前680",
+      "year_val": -680,
+      "narration": "鲍叔牙举荐管仲,桓公不计一箭之仇。管仲治国:兴鱼盐之利,通货商之业,把齐国练成头号经济强国。他自己说得直白:仓廪实而知礼节,衣食足而知荣辱。称霸的地基,是先让老百姓吃饱。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "尊王攘夷",
+      "year": "前663",
+      "year_val": -663,
+      "narration": "前663年,山戎攻打燕国,齐桓公千里驰援,深入荒漠。归途迷路,几匹老马领着大军找到了路——老马识途。救燕、存卫、复邢,打着尊王攘夷的旗号,威望攒满中原。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "葵丘之会",
+      "year": "前651",
+      "year_val": -651,
+      "narration": "前651年,葵丘大会,周天子派人赏赐祭肉,破例免他下拜——桓公还是坚持下拜受赐。会盟立下五条规矩:敬老慈幼,不塞泉泽,不改嫡长子……这是齐桓公霸业的顶点:以德服人当盟主。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "流亡十九年",
+      "year": "前655",
+      "year_val": -655,
+      "narration": "同一时代,晋国公子重耳正开始一场漫长的流亡。骊姬之乱,四十三岁出走,一路浪迹狄、卫、齐、曹、宋、郑、楚、秦,十九年,六十岁才回国即位。当年楚王问他将来怎么报答,他说:若两军相遇,退避三舍。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "城濮之战",
+      "year": "前632",
+      "year_val": -632,
+      "narration": "前632年,晋楚果然在城濮对阵。晋文公真的退避三舍,后撤九十里——既还了人情,又避了锐气。楚军轻进,晋军合围,大破楚师。践土之盟,晋文公接着齐桓公,坐上了第二把霸主交椅。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "争霸的规矩",
+      "year": "前630",
+      "year_val": -630,
+      "narration": "注意:春秋的争霸,不是灭国,是当盟主。会盟、下拜、还人情、守承诺——规则感还挂在嘴上。这份体面还能维持一百年,直到有一天,大家发现讲规矩不如讲拳头。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "霸主的黄昏",
+      "year": "前632",
+      "year_val": -632,
+      "narration": "齐桓晋文,一东一西,把霸主的模板立了两千年:以德服人,尊王攘夷。可模板的缝隙里也埋着答案——霸主一死,霸业就散。你觉得春秋哪家最可惜?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前643",
+      "year_val": -643,
+      "narration": "正片之外,说说第一位霸主的结局。前643年,齐桓公病重,五个儿子各带党羽争位,宫门被围,没人管老头。一代霸主活活饿死在寝宫,尸体停了六十七天,蛆虫爬出窗外,新君才想起来收殓。管仲临终劝他远离的三个小人,他一个都没舍得。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.813,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.798,
+          "hold": 0.217,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

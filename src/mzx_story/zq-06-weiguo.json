@@ -1,0 +1,309 @@
+{
+  "title": "东周线·魏国首霸",
+  "video_name": "zq-06-weiguo.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《史记·魏世家》《战国策·魏策》(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "三家分晋之后",
+      "year": "前403",
+      "year_val": -403,
+      "narration": "三家分晋,瓜分到的家底却不一样。魏国分到最肥的河东平原,但四面都是强国:西有秦,南有楚,东有齐,北有赵。地势四战之地,不自强就是死路。新任国君魏文侯,决定赌一把大的。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "李悝变法",
+      "year": "前445",
+      "year_val": -445,
+      "narration": "魏文侯请来法家先驱李悝,开始战国第一场变法。尽地力之教,提升粮食产量;平籴法稳定粮价;再编《法经》六篇,以法治国。商鞅后来带着这本法经入秦——魏国,才是战国变法的祖师爷。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "西门豹治邺",
+      "year": "前440",
+      "year_val": -440,
+      "narration": "魏国还有位名臣西门豹。他在邺城治水兴农,更出名的破除迷信:当地巫婆每年给河伯娶亲,把女孩投河。西门豹将计就计,把巫婆扔进河里,请她去通报河伯。从此没人再提娶亲,邺城大治。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "魏武卒",
+      "year": "前430",
+      "year_val": -430,
+      "narration": "军事上,吴起练出战国第一支职业精锐:魏武卒。入选标准是全副甲胄、背着三天军粮,半天能走一百里。武卒全家免税、赐田宅——打胜仗就能改命,士兵自然拼命。这支军队,七十二场大战六十四胜。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "桂陵之战",
+      "year": "前354",
+      "year_val": -354,
+      "narration": "魏国国力独大后,开始四面出击,连盟友赵国都打。前354年,魏军围困赵都邯郸,赵国向齐国求救。齐国军师孙膑没有直接救邯郸,而是直插魏都大梁——围魏救赵,在桂陵设伏,活捉魏将庞涓。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "马陵之战",
+      "year": "前341",
+      "year_val": -341,
+      "narration": "前341年,魏攻韩国,齐再次出兵。孙膑用减灶之计,让魏军误以为齐军天天在逃兵,一路追到马陵道。万箭齐发,庞涓自刎,太子被俘。魏国最精锐的武卒,从此一蹶不振。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "人才流失",
+      "year": "前360",
+      "year_val": -360,
+      "narration": "魏国衰落还有个致命原因:留不住人。商鞅、吴起、孙膑、范雎、张仪,这批战国最顶尖的人才,不是魏国出生,就是在魏国做过官。最后,他们一个个都去了敌国。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "祖师爷的遗产",
+      "year": "前340",
+      "year_val": -340,
+      "narration": "首霸魏国的遗产很特殊:变法制度被各国抄走,法经被商鞅发扬光大,魏武卒的职业化被各国效仿。而魏国自己,成了所有后来者的垫脚石。为什么魏国起了个大早,却赶了个晚集?评论区聊聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前440",
+      "year_val": -440,
+      "narration": "西门豹治邺还留了个公案。他修十二条水渠引漳水灌田,开工时百姓抱怨劳民伤财。西门豹说:现在苦一点,父老子孙会感谢我。渠成之后,邺城成了魏国粮仓。直到汉朝,这十二条渠还在灌溉。今天安阳附近仍有遗迹——两千年前的基建狂魔,说的就是这批人。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.627,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.612,
+          "hold": 0.403,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

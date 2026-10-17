@@ -1,0 +1,309 @@
+{
+  "title": "东周线·射王肩",
+  "video_name": "zq-01-shewangjian.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "春秋",
+    "y0": -771,
+    "y1": -476
+  },
+  "refs": "本集依据:《史记·周本纪》《左传·桓公五年》(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "东迁之后",
+      "year": "前771",
+      "year_val": -771,
+      "narration": "前771年,骊山火起,幽王死于戎人之手。次年,平王东迁洛邑。天子从此住进了诸侯的地盘——周王室还叫天下共主,但家底只剩洛邑周围一小块。所谓春秋,就从这份尴尬开始。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "郑国的膨胀",
+      "year": "前770",
+      "year_val": -770,
+      "narration": "护送平王东迁的队伍里,郑国出力最多。郑武公、郑庄公父子相继当上王室的卿士,一手把持朝政,一手把自家国家养肥。王室看在眼里,恨在心里,却毫无办法。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "周郑交质",
+      "year": "前720",
+      "year_val": -720,
+      "narration": "前720年,周平王想把政务分给虢公,郑庄公当场翻脸。最后双方各退一步,交换人质:王子狐去郑国,公子忽来周室。天子和臣子互换人质——周礼的体面,从此撕开了第一道口子。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "繻葛之战",
+      "year": "前707",
+      "year_val": -707,
+      "narration": "前707年,周桓王凑齐陈、蔡、卫三国联军,亲自讨伐郑国。繻葛一战,郑军摆出鱼丽之阵,大破王师。混战中,郑将祝聃一箭射出,正中桓王肩膀。天子中箭——这一箭,射穿了三百年的规矩。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.337,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.322,
+          "hold": 0.233,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.54,
+          "hold": 0.245,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.77,
+          "hold": 0.245,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "不敢追的一箭",
+      "year": "前707",
+      "year_val": -707,
+      "narration": "祝聃请命追击,郑庄公却摆手收兵:君子不逼人太甚,何况对方是天子。当夜,他派使者带着礼物去慰问桓王的伤。看明白了吗?郑国赢了仗,却不敢赢走最后一点敬畏——权威已死,余威还在。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "南方的不服",
+      "year": "前704",
+      "year_val": -704,
+      "narration": "北方刚射完天子,南方就来了消息。前704年,楚国的熊通自立为王,放话:我有敝甲,想进中原看看。中原喊他蛮夷,他干脆连爵位都不要了。天下共主的招牌,如今南北都不认账。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "霸主的种子",
+      "year": "前700",
+      "year_val": -700,
+      "narration": "秩序真空一旦出现,就一定有人来填。接下来的戏码,叫尊王攘夷:打着天子的旗号,管着天下的事。第一个吃螃蟹的人,已经在东方的齐国磨刀霍霍。他的名字,叫齐桓公。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "一箭之后",
+      "year": "前707",
+      "year_val": -707,
+      "narration": "一箭射中了天子,却没人敢真的推翻天子。春秋三百年,就在这种别扭里展开:大家一边撕破规矩,一边又靠规矩说事。如果你是郑庄公,那一箭之后,你敢不敢追?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前722",
+      "year_val": -722,
+      "narration": "正片之外,讲个课本里的名场面。郑庄公打败叛乱的弟弟后,把偏心的母亲关起来,发誓:不及黄泉,无相见也。话很快后悔了。大臣颍考叔出主意:挖条隧道,见泉水,不就及黄泉了?母子在隧道里相见,和好如初。中国最早的孝子豁免条款,靠土木工程实现。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.843,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.828,
+          "hold": 0.187,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

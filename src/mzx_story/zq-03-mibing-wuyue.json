@@ -1,0 +1,309 @@
+{
+  "title": "东周线·弭兵与吴越",
+  "video_name": "zq-03-mibing-wuyue.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "春秋",
+    "y0": -771,
+    "y1": -476
+  },
+  "refs": "本集依据:《史记·楚世家》《左传》《史记·越王句践世家》(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "一鸣惊人",
+      "year": "前606",
+      "year_val": -606,
+      "narration": "前606年,楚庄王北上伐陆浑之戎,把大军开到周都洛阳郊外,阅兵示威。他派人问九鼎的大小轻重——鼎是王权的象征,问鼎,就是问天下。大臣王孙满回了一句:在德不在鼎。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "邲之战",
+      "year": "前597",
+      "year_val": -597,
+      "narration": "前597年,邲之战,楚军大破晋军,楚庄王坐实霸主。这位国君三年不飞不鸣,一飞冲天——一鸣惊人的成语,说的就是他。晋楚争霸近百年,中原小国两边交钱,苦不堪言。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "弭兵之会",
+      "year": "前546",
+      "year_val": -546,
+      "narration": "前546年,宋国大夫向戌发起弭兵大会,十四国在宋国会盟:晋楚共为盟主,诸侯的贡赋两国平分。打了一百年的两个巨人,决定坐下分蛋糕。中原战场安静了,火药桶却滚向了东南。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.552,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.537,
+          "hold": 0.027,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.549,
+          "hold": 0.247,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.781,
+          "hold": 0.234,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "伍子胥奔吴",
+      "year": "前522",
+      "year_val": -522,
+      "narration": "前522年,楚国权臣费无忌构陷伍奢,伍家满门被杀,只有次子伍子胥逃出。他一夜白头,混过昭关,投奔吴国。又一位避祸的奇人孙武也来了——两个楚国人,要帮吴国灭楚。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "柏举破郢",
+      "year": "前506",
+      "year_val": -506,
+      "narration": "前506年,吴军三万深入楚国,柏举一战击溃楚军二十万,攻破郢都。伍子胥掘开楚平王的墓,鞭尸三百。楚臣申包胥去秦国哭了七天七夜,哭来秦军,楚国才免于灭亡。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "会稽之耻",
+      "year": "前494",
+      "year_val": -494,
+      "narration": "吴王夫差继位后,夫椒一战大破越国,勾践只剩五千残兵,困守会稽。范蠡献计:投降,做人质,忍。勾践给夫差牵马坠镫,尝粪问疾,三年才被放回。回国后,他睡柴草,每天尝一口苦胆。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.384,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.369,
+          "hold": 0.182,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.536,
+          "hold": 0.277,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.798,
+          "hold": 0.217,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "十年生聚",
+      "year": "前473",
+      "year_val": -473,
+      "narration": "十年生聚,十年教训。越国暗中练兵,还送去了西施和煮熟的种子。前472年前后,时机成熟,越军突入吴都,夫差求和不得,蒙面自尽。勾践北上会盟,成了春秋最后一位霸主。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "春秋的尾声",
+      "year": "前473",
+      "year_val": -473,
+      "narration": "东南的恩怨情仇落幕,春秋也走到尽头。翻过这一页,就是战国——规矩彻底失效,兼并成为主旋律。范蠡功成身退,泛舟五湖;文种不走,被赐剑自尽。兔死狗烹,鸟尽弓藏。你怎么选?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.526,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.511,
+          "hold": 0.276,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.773,
+          "hold": 0.129,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.886,
+          "hold": 0.129,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前473",
+      "year_val": -473,
+      "narration": "正片之外,补个课本冷知识。卧薪尝胆,其实是两个朝代拼起来的成语。史记只写了尝胆:置胆于坐,饮食亦尝胆也。卧薪两个字,要到宋朝苏轼的文章里才出现,明朝人才把两个词凑成一对。也就是说,勾践可能从来没睡过柴草堆——我们熟悉的苦情画面,一半是后人加戏。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.712,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.697,
+          "hold": 0.318,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

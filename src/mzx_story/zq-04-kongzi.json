@@ -1,0 +1,309 @@
+{
+  "title": "东周线·孔子",
+  "video_name": "zq-04-kongzi.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "春秋",
+    "y0": -771,
+    "y1": -476
+  },
+  "refs": "本集依据:《史记·孔子世家》《论语》(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "陬邑少年",
+      "year": "前551",
+      "year_val": -551,
+      "narration": "前551年,孔子生于鲁国陬邑。父亲叔梁纥是武士,在他三岁时去世,母亲带他迁居曲阜。少年孔子做过委吏、乘田,管仓库、管牛羊——圣人也是从基层公务员干起的。十五志于学,他在礼乐里找到了一生的事业。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "有教无类",
+      "year": "前525",
+      "year_val": -525,
+      "narration": "三十岁上下,孔子开始办学。在他之前,学在官府,只有贵族子弟有书读;在他之后,只要交十条干肉,人人可以入门。有教无类四个字,是中国教育史的分水岭——知识,第一次向平民开门。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "问礼闻韶",
+      "year": "前517",
+      "year_val": -517,
+      "narration": "孔子到周都,问礼于老子。老子送他几句忠告:聪明深察而近于死者,好议人者也。几年后他到齐国,听到上古的韶乐,三个月吃肉都尝不出味道。三十而立,四十不惑——学问与境界,一路长成。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "周游列国",
+      "year": "前497",
+      "year_val": -497,
+      "narration": "前497年,五十五岁的孔子离开鲁国,开始周游列国。卫、曹、宋、郑、陈、蔡、楚,一走十四年。在宋国,权臣桓魋要杀他;在郑国,他与弟子走散,被人形容:累累若丧家之狗。孔子笑了:然哉然哉。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "陈蔡之厄",
+      "year": "前489",
+      "year_val": -489,
+      "narration": "前489年,陈蔡之间,绝粮七日,随行弟子饿得站不起来。子路愠怒:君子亦有穷乎?孔子抚琴不断:君子固穷,小人穷斯滥矣。最艰难的时刻,他反问弟子:我们的道,错了吗?没有一个弟子答得圆满。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "晚年在鲁",
+      "year": "前484",
+      "year_val": -484,
+      "narration": "六十八岁,孔子归鲁。政治仍不得志,他转身整理文化:删诗书,订礼乐,读易翻断皮绳,笔削春秋。一字之褒,荣于华衮;一字之贬,严于斧钺。中国最早的教科书,诞生在这里。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "弟子三千",
+      "year": "前482",
+      "year_val": -482,
+      "narration": "孔门弟子三千,贤者七十二。颜回好学,一箪食一瓢饮;子路勇烈,最后结缨而死;子贡善贾,富可敌国还处处护着老师。一群性格迥异的年轻人,和一位循循善诱的老师——论语里的每一段对话,都活了三千年。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "高山仰止",
+      "year": "前479",
+      "year_val": -479,
+      "narration": "前479年,孔子卒,年七十三。弟子守丧三年,子贡结庐六年。他生前没能实现理想,身后却塑造了此后所有的中国。孔子如果生在战国,会成功吗?评论区聊聊你的看法。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前551",
+      "year_val": -551,
+      "narration": "正片之外,讲个课本没细说的冷知识:孔子是个大高个。史记记载他身高九尺有六,按周尺折算接近两米,还继承了父亲的武力,传说力能招开城门闩。那位讲礼的老先生,很可能是当时街上最壮的人——道理讲不通的时候,他还有物理选项。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.641,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.626,
+          "hold": 0.389,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}
