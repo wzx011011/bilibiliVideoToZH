@@ -362,9 +362,9 @@ const PLAN=[
  {id:'su',name:'溯源篇 · 文明的起点',span:'~前3300 – 前771',y0:-2070,y1:-771,st:'todo',stat:'✅ 完成 4/4',
   why:'中华文明从哪来:良渚五千年实证、二里头最早的中国、甲骨文信史开端、西周宅兹中国——为东周线装好前提。',
   eps:['✅满天星斗·良渚','✅二里头·最早的中国','✅商·甲骨文','✅西周·宅兹中国']},
- {id:'zq',name:'东周线 · 春秋战国(做足)',span:'前771 – 前238',y0:-771,y1:-238,st:'ing',stat:'进行中 8/16',
+ {id:'zq',name:'东周线 · 春秋战国(做足)',span:'前771 – 前238',y0:-771,y1:-238,st:'ing',stat:'进行中 12/16',
   why:'全史故事与著作密度之最:课本名场面正片化,百家争鸣三集,著作谱成串。',
-  eps:['✅射王肩','✅齐桓晋文','✅弭兵与吴越','✅孔子','✅三家分晋','✅魏国首霸','✅商鞅变法','胡服骑射','百家争鸣·儒墨道','稷下学宫','法家集大成','合纵连横','将相和(完璧归赵)','✅长平之战','屈原与楚辞','邯郸之围']},
+  eps:['✅射王肩','✅齐桓晋文','✅弭兵与吴越','✅孔子','✅三家分晋','✅魏国首霸','✅商鞅变法','胡服骑射','✅百家争鸣·儒墨道','✅稷下学宫','法家集大成','合纵连横','将相和(完璧归赵)','✅长平之战','屈原与楚辞','邯郸之围']},
  {id:'qh',name:'秦汉线 · 第一帝国',span:'前230 – 184',y0:-230,y1:184,st:'todo',stat:'待产 0/16',
   why:'中国为什么注定大一统:机器造好之后,碾平六国、定型两千年制度,终于黄巾。',
   eps:['六国坟场','始皇帝','帝国的火药桶','大泽乡','楚汉争霸','白登与文景','推恩令','卫霍击匈','张骞与丝路','轮台罪己','霍光与昭宣','王莽改制','光武中兴','班超与造纸','外戚宦官死循环','苍天已死(交接魏晋)']},
@@ -556,7 +556,7 @@ document.getElementById('future-cards').innerHTML=PLAN.map((p,i)=>
 const cnt={pub:0,done:0,todo:0};EPS.forEach(e=>cnt[e.st]++);
 document.getElementById('stats').innerHTML=
  `<span class="stat">已发布 <b>${cnt.pub}</b> 集</span><span class="stat">成片归档 <b>${cnt.done}</b> 集</span>
-  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">全库 <b>38</b>/120 集</span>`;
+  <span class="stat">待产 <b>${cnt.todo}</b> 集</span><span class="stat">全库 <b>42</b>/120 集</span>`;
 
 document.getElementById('eps').innerHTML=EPS.map((e,i)=>
  `<div class="ep" data-e="${i}"><span class="stdot st-${e.st}"></span>

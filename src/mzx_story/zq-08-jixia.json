@@ -1,0 +1,309 @@
+{
+  "title": "东周线·稷下学宫",
+  "video_name": "zq-08-jixia.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《史记·田敬仲完世家》、稷下学宫遗址考古(通说)",
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "世界第一学府",
+      "year": "前370",
+      "year_val": -370,
+      "narration": "齐国临淄的稷门之外,有一片学宫。在这里,学者不任实职、不担罪名,只负责一件事:说话。国家出钱养你,还给你上大夫的待遇。这所官办大学,叫稷下学宫,办了一百五十年。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "先生们",
+      "year": "前330",
+      "year_val": -330,
+      "narration": "稷下的阵容足以照亮历史:孟子来过,荀子三次担任学宫之长。阴阳家邹衍、名家淳于髡,还有白马非马的公孙龙。诸子百家,大半在这里留下过声音。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "不治而议论",
+      "year": "前320",
+      "year_val": -320,
+      "narration": "稷下最了不起的制度叫不治而议论:说任何话,朝廷不定罪。批评国君是常态,骂完还能涨工资。齐王们未必爱听,但他们明白:招揽贤士的名声,比一时面子值钱。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "辩的技艺",
+      "year": "前310",
+      "year_val": -310,
+      "narration": "稷下的辩论有实战规则。白马非马、鸡三足,名家诡辩听起来荒诞,却训练了中国的逻辑思维。更高级的论战是真问题:性善还是性恶?有为还是无为?每一场辩论,都是思想的武器测试。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "学术的成果",
+      "year": "前290",
+      "year_val": -290,
+      "narration": "稷下百年,学术成果惊人:《管子》托名管仲,实为稷下文集;荀子的礼法并重在此成型;邹衍的五德终始说,从此影响王朝更替理论。诸子合流,就在这座学宫。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "体制的裂缝",
+      "year": "前284",
+      "year_val": -284,
+      "narration": "学宫的兴盛依附于齐国的强盛。前284年,乐毅率五国联军破齐,临淄陷落,稷下学者四散。学宫虽曾复办,黄金时代已过——思想的繁荣,永远依附于供养它的土壤。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "秦的答案",
+      "year": "前237",
+      "year_val": -237,
+      "narration": "后来秦国也给过学者机会,吕不韦编《吕氏春秋》,悬赏千金改一字。但秦统一后,答案变了:焚书,以吏为师。百家争鸣的时代就此落幕。下一种声音,要等四百年后的魏晋才重新响起。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "自由的价码",
+      "year": "前237",
+      "year_val": -237,
+      "narration": "稷下学宫证明了一件事:思想的黄金时代需要两样东西——乱世的竞争,和供养者的宽容。两者缺一,争鸣即止。如果稷下学宫办到今天,你觉得会被关掉几次?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前310",
+      "year_val": -310,
+      "narration": "稷下学宫有位怪咖淳于髡,出身卑微、其貌不扬,却是最敢说的。齐威王问:先生喝多少会醉?他答:臣喝一斗也醉,喝一石也醉——酒极则乱,乐极则悲。齐威王听懂了,撤了连夜宴。讽谏的艺术,一句话救一个酒局。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.726,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.711,
+          "hold": 0.304,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}
