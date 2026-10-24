@@ -1,0 +1,310 @@
+{
+  "title": "东周线·法家集大成",
+  "video_name": "zq-14-fajia.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《史记·老子韩非列传》《韩非子》(通说)",
+  "takeaway": null,
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "韩国公子",
+      "year": "前280",
+      "year_val": -280,
+      "narration": "韩非,韩国宗室公子,与李斯同拜荀子门下。李斯自认才不如韩非。他有口吃的毛病,不善言谈,却善著书——天下最强的笔,长在了一个说不利索话的人手里。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "弱国的痛",
+      "year": "前250",
+      "year_val": -250,
+      "narration": "韩非眼看着祖国被秦一步步蚕食,屡次上书韩王,韩王不用。他退而著书:孤愤、五蠹、内外储说,十余万言。他总结商鞅之法、申不害之术、慎到之势——法、术、势,三合一。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "法术势合一",
+      "year": "前240",
+      "year_val": -240,
+      "narration": "法是公开的规则,术是君王的权谋,势是绝对的权威。三者合一,就是君主专制的完整操作系统。诸子百家研究怎么让天下变好,法家研究怎么让君王赢——这就是它在战国胜出的原因。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "秦王读韩非",
+      "year": "前234",
+      "year_val": -234,
+      "narration": "韩非的书传到秦国,秦王嬴政读完击节:嗟乎,寡人得见此人与之游,死不恨矣!为了见一个作者,不惜发兵攻韩。韩国惶恐,交出韩非——用国宝换和平的最后一搏。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "同门相残",
+      "year": "前233",
+      "year_val": -233,
+      "narration": "韩非入秦,秦王大喜却未用。李斯进谗:韩非终究是韩国公子,留之有害,放之归韩是养虎。秦王下狱。李斯送来毒药,韩非想见秦王自辩,不得。同年,死于狱中。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "秦王之悔",
+      "year": "前233",
+      "year_val": -233,
+      "narration": "韩非死后,秦王后悔,派人赦免,人已死。但韩非的思想被秦王全盘继承:事在四方,要在中央;圣人执要,四方来效。这套中央集权理论,成了秦帝国的说明书。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "说难的宿命",
+      "year": "前233",
+      "year_val": -233,
+      "narration": "韩非写过《说难》:凡说之难,在知所说之心。他精密论证了游说的每种死法——进言太直会死,太曲会死,触及隐私会死。他自己,正死于向君王进言。理论赢了,人输了。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "法家的胜利",
+      "year": "前221",
+      "year_val": -221,
+      "narration": "前221年,秦灭六国,韩非的帝国蓝图全面落地。但纯用法家,二世而亡。汉承秦制又独尊儒术——外儒内法,才是中国帝制的真实操作系统。韩非死了,他的法,活了两千年。法家是救世良方还是暴政之源?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前233",
+      "year_val": -233,
+      "narration": "最后补一个细节:韩非是口吃。史记明载:非为人口吃,不能道说,而善著书。史上最锋利的笔,配着史上最不利索的嘴。同门李斯靠嘴上位,韩非靠笔不朽——历史的公平之处在于:它会记住文字,而忘掉口才。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.515,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.515,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

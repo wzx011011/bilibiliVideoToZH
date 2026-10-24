@@ -1,0 +1,310 @@
+{
+  "title": "东周线·合纵连横",
+  "video_name": "zq-10-hezong.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《战国策》《史记·张仪列传》;苏秦年代学界的帛书争议已在片尾标注",
+  "takeaway": null,
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "舌头的时代",
+      "year": "前334",
+      "year_val": -334,
+      "narration": "战国中期,战争之外多了一个新战场:外交。一介布衣凭三寸不烂之舌,可以挂六国相印;一张嘴,能让大国结盟或者反目。这个行业的名字,叫纵横家。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "合纵初试",
+      "year": "前318",
+      "year_val": -318,
+      "narration": "公孙衍首倡合纵:六国南北结盟,共抗强秦。前318年,五国伐秦,声势浩大,结果各怀鬼胎,一触即溃。合纵的第一课:盟友靠不住,是所有人的共识,也是所有人的软肋。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "张仪连横",
+      "year": "前328",
+      "year_val": -328,
+      "narration": "秦国这边,张仪推行连横:各国与秦 individually 结好,瓦解合纵。他的名言:事秦则安,背秦则危。拆散联盟不用刀兵,用利益——每个国家的私心,就是他的兵器。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "商於六百里",
+      "year": "前313",
+      "year_val": -313,
+      "narration": "前313年,张仪对楚怀王开出天价:绝齐之交,献商於六百里。怀王贪地绝齐,张仪却改口:我说的是六里。怀王大怒伐秦,丹阳、蓝田两战皆败,八万甲士埋骨。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "怀王之死",
+      "year": "前299",
+      "year_val": -299,
+      "narration": "前299年,秦昭王邀怀王会盟武关,屈原苦谏不去。怀王去了,被扣秦国,三年后客死异乡。楚人哀之:楚虽三户,亡秦必楚。这句毒誓,后来字字应验。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "纵横的规则",
+      "year": "前290",
+      "year_val": -290,
+      "narration": "纵横家没有立场:昨日的合纵领袖,今日可为连横奔走。他们贩卖的不是忠诚,是解决方案。各国君主明知是套路,却都离不开——因为谁不玩外交,谁就第一个出局。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "嘴的黄昏",
+      "year": "前280",
+      "year_val": -280,
+      "narration": "纵横家再能说,也改变不了硬实力的差距。秦国的国力碾压成型后,外交技巧成了杯水车薪。前284年之后,纵横家渐渐退场:当实力差距太大,舌头就不值钱了。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "一张嘴的遗产",
+      "year": "前280",
+      "year_val": -280,
+      "narration": "纵横家留下的是一套外交思维:利益计算、联盟制衡、信息不对称。这些原则至今写在外交学院的教材里。如果没有张仪苏秦,战国会少一半精彩。你认为纵横家是骗子还是国士?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前300",
+      "year_val": -300,
+      "narration": "苏秦张仪谁先谁后?史记说二人是同门师兄弟,一纵一横唱双簧。但1973年马王堆帛书出土:苏秦活跃年代比张仪晚得多,二人根本没交过手。双簧戏,被一卷帛书拆了台。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.515,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.515,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

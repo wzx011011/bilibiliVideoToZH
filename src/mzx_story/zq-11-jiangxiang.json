@@ -1,0 +1,310 @@
+{
+  "title": "东周线·将相和",
+  "video_name": "zq-11-jiangxiang.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《史记·廉颇蔺相如列传》(通说);完璧归赵的另类解读已在片尾标注",
+  "takeaway": null,
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "和氏璧之约",
+      "year": "前283",
+      "year_val": -283,
+      "narration": "前283年,赵惠文王得到和氏璧,秦昭王开价十五城求换。给,怕被白嫖;不给,怕挨打。左右为难之际,宦官令缪贤举荐了一个门客:蔺相如。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "完璧归赵",
+      "year": "前283",
+      "year_val": -283,
+      "narration": "章台见璧,秦王只顾传看,绝口不提城池。相如上前:璧有微瑕,请指示王。拿回璧后,他倚柱而立,怒发冲冠:大王必欲急臣,臣头今与璧俱碎于柱矣!举璧睨柱,以死相拼。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "完璧归赵",
+      "year": "前283",
+      "year_val": -283,
+      "narration": "相如暗遣随从怀璧潜逃,归赵。秦王想杀了相如又怕失信于天下,只得放行。完璧归赵四个字,让一个门客一战成名——归国即拜上大夫。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "渑池之会",
+      "year": "前279",
+      "year_val": -279,
+      "narration": "前279年,秦王约赵王渑池相会。宴上秦王请赵王鼓瑟,赵王鼓之——秦国史官当场记录:某年月日,秦王与赵王会饮,令赵王鼓瑟。相如挺身请秦王击缶:五步之内,相如请以颈血溅大王矣!",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "位居廉颇上",
+      "year": "前279",
+      "year_val": -279,
+      "narration": "渑池归来,相如拜上卿,位居廉颇之上。老将军怒了:我攻城野战之功,不如一个靠嘴皮子的?宣言:见相如,必辱之。而相如的反应是:称病不上朝,远远看见就调头。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "先国后私",
+      "year": "前279",
+      "year_val": -279,
+      "narration": "门客不解,相如道破天机:强秦不敢加兵于赵,正因将相和睦。两虎相斗,必有一伤——吾所以为此者,先国家之急而后私仇也。这话传到廉颇耳里,老将军脱衣负荆,登门请罪。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "刎颈之交",
+      "year": "前279",
+      "year_val": -279,
+      "narration": "将相和好,誓同生死,史称刎颈之交。此后赵国将相同心,秦军多年不敢犯境。一个国家最强的防线,往往不是城墙,而是内部的关系。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "战国美谈的终章",
+      "year": "前260",
+      "year_val": -260,
+      "narration": "可惜将相和的佳话没能救赵国于长平:廉颇被换、相如病重,人和的资产在权力交接中耗散。美谈之所以是美谈,正因为它稀有。说说你身边将相和的故事?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前283",
+      "year_val": -283,
+      "narration": "明朝王世贞写过一篇翻案文章《蔺相如完璧归赵论》,观点扎心:璧最终留在了秦国。相如胜在气节,输在算计——完璧归赵,归的不是璧,是脸面。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.515,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.515,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

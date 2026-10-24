@@ -1,0 +1,310 @@
+{
+  "title": "东周线·邯郸之围",
+  "video_name": "zq-13-handan.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《史记·魏公子列传》《史记·平原君虞卿列传》(通说)",
+  "takeaway": null,
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "长平之后",
+      "year": "前259",
+      "year_val": -259,
+      "narration": "长平惨败九个月后,秦军趁胜围攻赵都邯郸,欲一举灭赵。赵国精锐尽丧,全国悲愤:平原君散尽家财,妻妾编入行伍,邯郸军民同仇敌忾,死守不降。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "白起缺席",
+      "year": "前259",
+      "year_val": -259,
+      "narration": "秦王想请白起挂帅,白起拒绝:邯郸实未易攻也,诸侯救日至。他看出长平之后秦军该休整,硬攻必败。秦王改用王陵,久攻不下;再请白起,仍拒。君臣裂痕,自此埋下。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "毛遂自荐",
+      "year": "前257",
+      "year_val": -257,
+      "narration": "赵国求救于楚,平原君选二十名文武双全的门客同行,选到十九人,毛遂自荐。平原君:先生来此三年,我未有所闻。毛遂答:今日处囊中,乃颖脱而出。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "按剑定纵",
+      "year": "前257",
+      "year_val": -257,
+      "narration": "楚廷谈判从日出谈到中午,楚王仍犹豫不决。毛遂按剑历阶而上,喝道:吾君在前,叱者何也?又以三寸之舌直陈利害:合纵为楚,非为赵也。楚王当场歃血定纵。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "信陵君窃符",
+      "year": "前257",
+      "year_val": -257,
+      "narration": "魏安釐王惧秦,晋鄙十万大军驻境观望。信陵君用侯嬴之计,托如姬窃得兵符,椎杀晋鄙,夺军北上。朱亥四十斤铁椎,一椎定乾坤。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "邯郸大捷",
+      "year": "前257",
+      "year_val": -257,
+      "narration": "前257年,魏楚赵三国夹击,秦军大败,郑安平两万人降赵,邯郸解围。这是秦国东出以来最惨的一次失败。信陵君名震天下,不敢归魏,留赵十年。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "白起之死",
+      "year": "前257",
+      "year_val": -257,
+      "narration": "邯郸惨败后,秦王强令白起出征,白起称病。行至杜邮,秦王赐剑:君何故不服?白起仰天长叹:我何罪于天而至此哉?良久又道:我固当死,长平之战,吾诈而坑之。遂自刎。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "四公子的时代",
+      "year": "前250",
+      "year_val": -250,
+      "narration": "邯郸之围成就了战国四公子的最后高光:信陵君窃符,平原君毛遂,春申君援赵。四公子养士的贵族时代,随着他们凋零,也走向终结。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前243",
+      "year_val": -243,
+      "narration": "信陵君留赵十年,归魏后率五国联军伐秦,把秦军压回函谷关——这是合纵最后一次大胜。但功高震主,魏王猜忌,信陵君称病不朝,日夜饮酒四年而死。秦人听说他死了,立刻大举攻魏。十八年后,魏亡。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.515,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.515,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

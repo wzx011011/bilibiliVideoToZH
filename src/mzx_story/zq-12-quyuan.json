@@ -1,0 +1,310 @@
+{
+  "title": "东周线·屈原与楚辞",
+  "video_name": "zq-12-quyuan.mp4",
+  "voice": "doubao-渊博小叔",
+  "brand_line": "东周线 · 动画图解 · 画面中的地图与年代为解释性可视化",
+  "painters": "generic_painters.py",
+  "era": {
+    "name": "战国",
+    "y0": -475,
+    "y1": -221
+  },
+  "refs": "本集依据:《史记·屈原贾生列传》《楚辞》(通说);端午起源先于屈原已标注",
+  "takeaway": null,
+  "chapters": [
+    {
+      "kind": "s1",
+      "title": "左徒屈原",
+      "year": "前320",
+      "year_val": -320,
+      "narration": "屈原,楚之同姓贵族,博闻强志,明于治乱,娴于辞令。年轻时官拜左徒,入则与王图议国事,出则接遇宾客——屈原二十多岁,就站在了楚国权力的中心。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s2",
+      "title": "遭谗被疏",
+      "year": "前317",
+      "year_val": -317,
+      "narration": "他主张举贤授能、联齐抗秦,动了旧贵族的奶酪。上官大夫争宠而心害其能,进谗言:每一令出,平伐其功,曰以为非我莫能为也。怀王怒而疏屈平。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s3",
+      "title": "张仪欺楚",
+      "year": "前313",
+      "year_val": -313,
+      "narration": "张仪来楚,许商於六百里地,前提是与齐断交。屈原力谏:秦虎狼之国,不可信。怀王不听。绝齐之后,张仪翻脸:臣只说奉邑六里。楚齐皆失,楚国被玩弄于股掌。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s4",
+      "title": "怀王之死",
+      "year": "前296",
+      "year_val": -296,
+      "narration": "前299年,怀王赴秦会盟被扣,三年后客死秦国。顷襄王即位,令尹子兰迁怒屈原,再放逐江南。一个始终清醒的人,眼睁睁看着祖国一步步走向深渊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s5",
+      "title": "行吟泽畔",
+      "year": "前290",
+      "year_val": -290,
+      "narration": "披发行吟泽畔,颜色憔悴,形容枯槁。渔父问:何故至于斯?屈原答:举世皆浊我独清,众人皆醉我独醒,是以见放。渔父劝他随波逐流,他拒绝:安能以皓皓之白,而蒙世俗之尘埃。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s6",
+      "title": "离骚与楚辞",
+      "year": "前290",
+      "year_val": -290,
+      "narration": "路漫漫其修远兮,吾将上下而求索。屈原把满腔悲愤写成长诗《离骚》,开创楚辞一体:香草美人,上天入地。中国文学史上第一位有名有姓的大诗人,就此诞生。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s7",
+      "title": "白起拔郢",
+      "year": "前278",
+      "year_val": -278,
+      "narration": "前278年,白起攻破郢都,焚楚先王墓,楚国东迁。流亡中的屈原听闻国都沦陷,于五月初五抱石投汨罗江而死。百姓划船打捞,投米团入江——这传说,就是端午的由来之一。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s8",
+      "title": "一个民族的节日",
+      "year": "2009",
+      "year_val": 2009,
+      "narration": "一个诗人,让一个民族用两千多年时间,每年划船纪念他——这在世界史上绝无仅有。2009年端午节入选人类非遗。屈原失败的政客生涯,换来了不朽的文化生命。你觉得值吗?评论区聊。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.25,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.265,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.75,
+          "hold": 0.265,
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "kind": "s9",
+      "title": "尾声·趣闻",
+      "year": "前290",
+      "year_val": -290,
+      "narration": "一个考据:端午划龙舟的习俗,在吴越地区早于屈原数百年就有,本是祭龙仪式。是后人把节日献给了诗人。但这恰恰是最动人的一点:节日可以被抢先,但纪念谁是人民自己选的。屈原没过过端午节——是端午节,过成了屈原节。",
+      "bg": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark.",
+      "broll": [
+        {
+          "prompt": "scene",
+          "at": 0.0,
+          "hold": 0.515,
+          "fit": "contain"
+        },
+        {
+          "prompt": "scene",
+          "at": 0.5,
+          "hold": 0.515,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}
