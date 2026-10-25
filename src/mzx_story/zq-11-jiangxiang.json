@@ -295,13 +295,13 @@
         {
           "prompt": "scene",
           "at": 0.0,
-          "hold": 0.515,
+          "hold": 0.591,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.5,
-          "hold": 0.515,
+          "at": 0.576,
+          "hold": 0.439,
           "fit": "contain"
         }
       ]

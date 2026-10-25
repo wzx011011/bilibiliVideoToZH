@@ -91,25 +91,25 @@
         {
           "prompt": "scene",
           "at": 0.0,
-          "hold": 0.265,
+          "hold": 0.303,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.25,
-          "hold": 0.265,
+          "at": 0.288,
+          "hold": 0.289,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.5,
-          "hold": 0.265,
+          "at": 0.562,
+          "hold": 0.262,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.75,
-          "hold": 0.265,
+          "at": 0.808,
+          "hold": 0.207,
           "fit": "contain"
         }
       ]
@@ -261,25 +261,25 @@
         {
           "prompt": "scene",
           "at": 0.0,
-          "hold": 0.265,
+          "hold": 0.462,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.25,
-          "hold": 0.265,
+          "at": 0.447,
+          "hold": 0.191,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.5,
-          "hold": 0.265,
+          "at": 0.624,
+          "hold": 0.262,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.75,
-          "hold": 0.265,
+          "at": 0.871,
+          "hold": 0.144,
           "fit": "contain"
         }
       ]
@@ -295,13 +295,13 @@
         {
           "prompt": "scene",
           "at": 0.0,
-          "hold": 0.515,
+          "hold": 0.799,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.5,
-          "hold": 0.515,
+          "at": 0.784,
+          "hold": 0.231,
           "fit": "contain"
         }
       ]

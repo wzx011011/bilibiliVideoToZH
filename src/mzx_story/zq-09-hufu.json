@@ -261,25 +261,25 @@
         {
           "prompt": "scene",
           "at": 0.0,
-          "hold": 0.265,
+          "hold": 0.558,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.25,
-          "hold": 0.265,
+          "at": 0.543,
+          "hold": 0.2,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.5,
-          "hold": 0.265,
+          "at": 0.728,
+          "hold": 0.163,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.75,
-          "hold": 0.265,
+          "at": 0.877,
+          "hold": 0.138,
           "fit": "contain"
         }
       ]
@@ -295,13 +295,13 @@
         {
           "prompt": "scene",
           "at": 0.0,
-          "hold": 0.515,
+          "hold": 0.696,
           "fit": "contain"
         },
         {
           "prompt": "scene",
-          "at": 0.5,
-          "hold": 0.515,
+          "at": 0.681,
+          "hold": 0.334,
           "fit": "contain"
         }
       ]
