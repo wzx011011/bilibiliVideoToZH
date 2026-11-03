@@ -102,7 +102,7 @@ ender-tmp;D/E/F 为机械盘,索引服务排除见会话记录
 ```bash
 PY=work/.venv-ocr/Scripts/python.exe
 $PY src/pipeline_admin.py            # 平台(页面建任务即全自动)
-$PY -m pytest tests/ -q              # 测试(140 个)
+$PY -m pytest tests/ -q              # 测试
 # ollama pull qwen3:14b 需清代理: env -u http_proxy -u https_proxy ollama pull qwen3:14b
 # NAS 控制面更新: bash deploy-nas-studio.sh
 # PC 代理启动: agent-forever.cmd(看门狗,console 输出落 work/studio/agent-console.log)
