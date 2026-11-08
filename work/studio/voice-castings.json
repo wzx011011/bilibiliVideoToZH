@@ -1,0 +1,130 @@
+{
+ "Sam Altman": {
+  "voice": "doubao-磁性俊宇（升级版）",
+  "display_name": "Sam Altman",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "人工试听(声纹top2)",
+  "f0_p25": 136,
+  "notes": "年轻清亮嗓;2026-08-26 用户试听定案"
+ },
+ "李飞飞": {
+  "voice": "doubao-知性小棠",
+  "display_name": "李飞飞",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "人工定案(自动判别误判低起音女声)",
+  "notes": "知性学者气质"
+ },
+ "Fei-Fei Li": {
+  "voice": "doubao-知性小棠",
+  "display_name": "李飞飞",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "同 李飞飞"
+ },
+ "Dario Amodei": {
+  "voice": "doubao-湾区大叔",
+  "display_name": "Dario Amodei",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "声纹top1(452期0.312)",
+  "notes": "低沉稳重;两部统一"
+ },
+ "Demis Hassabis": {
+  "voice": "doubao-温暖阿虎",
+  "display_name": "Demis Hassabis",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "声纹top1(299期)",
+  "notes": "两部统一"
+ },
+ "Elon Musk": {
+  "voice": "doubao-率性阿哲",
+  "display_name": "Elon Musk",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "声纹top4(避开主持音色)",
+  "notes": "中低略沙;两部统一"
+ },
+ "Yann LeCun": {
+  "voice": "doubao-湾区大叔",
+  "display_name": "Yann LeCun",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "声纹top1"
+ },
+ "Naval Ravikant": {
+  "voice": "doubao-悠悠君子",
+  "display_name": "Naval Ravikant",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "声纹top1"
+ },
+ "Geoffrey Hinton": {
+  "voice": "doubao-shenyeboker",
+  "display_name": "Geoffrey Hinton",
+  "role": "guest",
+  "picked_at": "2026-08-26",
+  "source": "历史定案(Hinton医学访谈最终版)",
+  "notes": "低沉老年声线"
+ },
+ "Lex Fridman": {
+  "voice": "doubao-yuanboxiaoshu",
+  "display_name": "Lex Fridman",
+  "role": "host",
+  "picked_at": "2026-08-26",
+  "source": "系列主持声",
+  "notes": "平台主持人统一品牌声"
+ },
+ "Theo Von": {
+  "voice": "doubao-yuanboxiaoshu",
+  "display_name": "Theo Von",
+  "role": "host",
+  "picked_at": "2026-08-26",
+  "source": "主持位统一",
+  "notes": "主持角色"
+ },
+ "Eric Topol": {
+  "voice": "doubao-yuanboxiaoshu",
+  "display_name": "Eric Topol",
+  "role": "host",
+  "picked_at": "2026-08-26",
+  "source": "Hinton片主持人定案"
+ },
+ "Jensen Huang": {
+  "voice": "doubao-悠悠君子",
+  "display_name": "Jensen Huang",
+  "role": "guest",
+  "picked_at": "2026-08-27",
+  "source": "声纹top1(0.332)",
+  "f0_p25": 91,
+  "notes": "英伟达CEO;低沉稳重"
+ },
+ "Nathan Lambert": {
+  "voice": "doubao-率性阿哲",
+  "display_name": "Nathan Lambert",
+  "role": "guest",
+  "picked_at": "2026-08-27",
+  "source": "声纹top2(0.242初配)",
+  "f0_p25": 98,
+  "notes": "AI研究者;初配待试听"
+ },
+ "Dianne Penn": {
+  "voice": "doubao-知性小棠",
+  "display_name": "Dianne Penn",
+  "role": "guest",
+  "picked_at": "2026-08-27",
+  "source": "人工定案(低起音女声自动误判)",
+  "notes": "Anthropic;与李飞飞同款修正"
+ },
+ "Ian Silber": {
+  "voice": "doubao-温暖阿虎",
+  "display_name": "Ian Silber",
+  "role": "guest",
+  "picked_at": "2026-08-27",
+  "source": "声纹top1(0.376)",
+  "f0_p25": 99,
+  "notes": "OpenAI设计负责人"
+ }
+}
