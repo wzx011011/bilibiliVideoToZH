@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>秦汉前传 · 机制动画 · 编户齐民</title>
+<link rel="stylesheet" href="stage.css">
+</head>
+<body>
+<div id="frame">
+  <canvas id="cv" width="1920" height="1080"></canvas>
+  <div id="sub"><span class="txt" id="subtxt"></span></div>
+</div>
+<script src="lib.js"></script>
+<script>
+/* 编户齐民。史实据《史记·商君列传》:"令民为什伍,而相牧司连坐"——五家为伍、十家为什,
+   一家有罪、同伍连坐。户籍→征兵、纳粮为机制示意:一户出一丁、纳一袋,不标虚构数字。 */
+const DUR=17.2;
+const HEADER={series:'秦汉前传 · 机制动画样片',title:'编户齐民 · 把国家数清楚',year:'前356',yearVal:356,
+  source:'据《史记·商君列传》'};
+
+/* ============ 布局(世界坐标 = 1920×1080 基准) ============ */
+const WORLD={X0:-240,Y0:-150,W:2400,H:1380,S:1.25};
+const RIVER=samplePath('M -300,860 C 150,800 520,905 960,850 S 1650,800 2300,845',4);
+const wY=lookup(RIVER,'x',WORLD.X0,WORLD.X0+WORLD.W,850);       // 渭水 y(x)
+const LANE=samplePath('M 400,492 C 620,470 860,505 1120,486 S 1300,482 1392,512',4);
+const GOV={x:1440,y:470,w:132,h:98};                            // 官府(户籍所在)
+const GATE=[GOV.x,GOV.y+GOV.h/2];
+const MUSTER={x:420,y:700};
+const GRAN=[[1228,700],[1282,712],[1254,754]];
+const VILLAGES=[{x:230,y:280,n:3},{x:1690,y:300,n:4},{x:1770,y:690,n:3},
+  {x:180,y:520,n:2},{x:1150,y:205,n:3},{x:1350,y:950,n:2}];      // 外围六村:中心与伍数
+
+/* 聚落:主村 12 伍 60 户(两排,每排三什);外围六村共 85 户,收尾时接入户籍网 */
+const HOUSES=[],CLUMPS=[];
+(function(){const R=rng(77);
+  const OFF=[[-35,-13],[0,-17],[35,-13],[-18,16],[18,16]];
+  function clump(vil,cx,cy){
+    const c={vil,cx,cy,houses:[]};
+    for(const [ox,oy] of OFF){const h={x:cx+ox+(R()-.5)*5,y:cy+oy+(R()-.5)*4,a:(R()-.5)*.24,vil,clump:CLUMPS.length};
+      h.o=HOUSES.length;HOUSES.push(h);c.houses.push(h);}
+    c.loop=samplePath(blobPath(c.houses.map(h=>[h.x,h.y]),26,CLUMPS.length*7+3).d,3);
+    CLUMPS.push(c);return c;
+  }
+  for(let r=0;r<2;r++)for(let k=0;k<6;k++)clump(0,500+k*136+(R()-.5)*14,(r?565:415)+(R()-.5)*10);
+  const SPOTS=[[-64,-6],[64,6],[0,-58],[0,58]];
+  VILLAGES.forEach((v,i)=>{v.clumps=[];
+    for(let k=0;k<v.n;k++)v.clumps.push(clump(i+1,v.x+SPOTS[k][0]+(R()-.5)*10,v.y+SPOTS[k][1]+(R()-.5)*10));
+    v.link=samplePath(`M ${v.x},${v.y} Q ${(v.x+GOV.x)/2},${(v.y+GOV.y)/2-70} ${GOV.x},${GOV.y}`,3);});
+})();
+const V0=HOUSES.filter(h=>h.vil===0);                          // 主村 60 户,o=0..59 即登记顺序
+const SHI=[];                                                   // 什:同排相邻两伍
+for(let r=0;r<2;r++)for(let k=0;k<6;k+=2){const A=CLUMPS[r*6+k],B=CLUMPS[r*6+k+1];
+  SHI.push({a:r*6+k,b:r*6+k+1,
+    l1:samplePath(`M ${A.cx+54},${A.cy-4} L ${B.cx-54},${B.cy-4}`,2),
+    l2:samplePath(`M ${A.cx+54},${A.cy+4} L ${B.cx-54},${B.cy+4}`,2)});}
+const SUSPECT=CLUMPS[4], CULPRIT=SUSPECT.houses[1];             // 连坐演示:第一排第五伍
+const WATCH=[];                                                 // 相牧司:同伍五家两两互看
+for(let i=0;i<5;i++)for(let j=i+1;j<5;j++){const a=SUSPECT.houses[i],b=SUSPECT.houses[j];
+  const mx=(a.x+b.x)/2,my=(a.y+b.y)/2,ox=mx-SUSPECT.cx,oy=my-SUSPECT.cy,ol=Math.hypot(ox,oy)||1;   // 弧线向伍外鼓出
+  WATCH.push(samplePath(`M ${a.x},${a.y-4} Q ${mx+ox/ol*16},${my+oy/ol*16-4} ${b.x},${b.y-4}`,2));}
+
+/* ============ 地形:关中平原,北山与秦岭夹渭水 ============ */
+function height(x,y){
+  const mN=.55*sm((150+50*(noise1(x*.004,11)*2-1)-y)/230);
+  const mS=.75*sm((y-(1010+40*(noise1(x*.004,12)*2-1)))/230);
+  const m=Math.max(mN,mS);
+  let h=.07+.03*(fbm(x*.0025,y*.0025,3)*.5+.5);
+  if(m>.003){const wx=x+70*fbm(x*.0019+3,y*.0019,2),wy=y+70*fbm(x*.0019-7,y*.0019+5,2);
+    h+=m*(.24+.76*ridged(wx*.0018,wy*.0036,4,.42))*.92;}                                    // 东西走向的山脉
+  const dy=(y-wY(x))/34;h-=.045*Math.exp(-dy*dy);                      // 渭水河槽
+  return h;
+}
+const SETTLE=[[GOV.x,GOV.y,112],[MUSTER.x,MUSTER.y,84],[1254,724,76],...VILLAGES.map(v=>[v.x,v.y,118])];
+function settled(x,y,j=1){                                     // j:边缘抖动系数(田块参差地让出村落)
+  if(Math.hypot((x-840)/(450*j),(y-490)/(178*j))<1)return true;  // 主村
+  return SETTLE.some(([sx,sy,r])=>Math.hypot(x-sx,y-sy)<r*j);
+}
+function decorate(g){
+  // 阡陌:大块田以阡陌小路分隔,块内随机横竖分成长条田(畛),村落边缘参差让出
+  const th=.04,co=Math.cos(th),si=Math.sin(th),BW=300,BH=200,GAP=7,R=rng(5);
+  const P=(u,v)=>[u*co-v*si,u*si+v*co];
+  const TINT=['rgba(160,146,92,.10)','rgba(126,142,96,.10)','rgba(178,160,110,.08)','rgba(140,150,104,.07)'];
+  const ok=(x,y)=>height(x,y)<=.11&&Math.abs(y-wY(x))>=50&&!settled(x,y,.88+.3*hash2(x|0,y|0,9));
+  for(let bi=-2;bi<10;bi++)for(let bj=-2;bj<9;bj++){
+    const u0=-300+bi*BW+GAP,v0=-200+bj*BH+GAP,w=BW-2*GAP,hh=BH-2*GAP,horiz=R()<.5,n=4+Math.floor(R()*4);
+    const cuts=[0];for(let k=1;k<n;k++)cuts.push(k/n+(R()-.5)*.08);cuts.push(1);
+    let any=false;
+    for(let k=0;k<n;k++){
+      const a=cuts[k],b=cuts[k+1];
+      const q=horiz?[[u0,v0+a*hh],[u0+w,v0+a*hh],[u0+w,v0+b*hh],[u0,v0+b*hh]]
+                   :[[u0+a*w,v0],[u0+b*w,v0],[u0+b*w,v0+hh],[u0+a*w,v0+hh]];
+      const [cx,cy]=P((q[0][0]+q[2][0])/2,(q[0][1]+q[2][1])/2);
+      if(!ok(cx,cy))continue;
+      any=true;
+      g.beginPath();q.forEach(([u,v],m)=>{const [x,y]=P(u+(R()-.5)*4,v+(R()-.5)*4);m?g.lineTo(x,y):g.moveTo(x,y);});g.closePath();
+      g.fillStyle=TINT[Math.floor(R()*4)];g.fill();g.lineWidth=.9;g.strokeStyle='rgba(140,112,72,.2)';g.stroke();
+    }
+    if(any){g.beginPath();[[u0,v0],[u0+w,v0],[u0+w,v0+hh],[u0,v0+hh]].forEach(([u,v],m)=>{const [x,y]=P(u,v);m?g.lineTo(x,y):g.moveTo(x,y);});
+      g.closePath();g.lineWidth=2;g.strokeStyle='rgba(156,124,80,.3)';g.stroke();}
+  }
+  strokeRiver(g,RIVER.d,26);
+  // 里中小路(通官府)
+  const lp=new Path2D(LANE.d);
+  g.strokeStyle='rgba(170,140,95,.55)';g.lineWidth=8;g.stroke(lp);
+  g.strokeStyle='rgba(228,208,164,.6)';g.lineWidth=3;g.stroke(lp);
+  // 河岸与村旁草木
+  stipple(g,260,[-240,-100,2400,1250],(x,y)=>{const d=Math.abs(y-wY(x));
+    return height(x,y)<.2&&((d>36&&d<100)||SETTLE.some(([sx,sy,r])=>{const e=Math.hypot(x-sx,y-sy);return e>r*.8&&e<r*1.15;}));},606);
+}
+
+/* ============ 场景层 ============ */
+function riverFlow(t){
+  ctx.save();ctx.strokeStyle='rgba(236,244,238,.55)';ctx.lineWidth=2;ctx.lineCap='round';
+  for(let s=(t*38)%64;s<RIVER.L;s+=64){
+    const [x,y]=at(RIVER,s),[tx,ty]=tan(RIVER,s),o=(noise1(s*.05,3)-.5)*14,[x2,y2]=at(RIVER,s+16);
+    ctx.beginPath();ctx.moveTo(x-ty*o,y+tx*o);ctx.lineTo(x2-ty*o,y2+tx*o);ctx.stroke();}
+  ctx.restore();
+}
+function drawGov(t){
+  const {x,y,w,h}=GOV;
+  ctx.save();
+  ctx.fillStyle='rgba(226,214,182,.95)';ctx.fillRect(x-w/2,y-h/2,w,h);
+  ctx.strokeStyle='#7a5c3a';ctx.lineWidth=7;                       // 夯土院墙(南面留门)
+  ctx.beginPath();ctx.moveTo(x-14,y+h/2);ctx.lineTo(x-w/2,y+h/2);ctx.lineTo(x-w/2,y-h/2);
+  ctx.lineTo(x+w/2,y-h/2);ctx.lineTo(x+w/2,y+h/2);ctx.lineTo(x+14,y+h/2);ctx.stroke();
+  ctx.strokeStyle=INK;ctx.lineWidth=1.2;ctx.strokeRect(x-w/2-3.5,y-h/2-3.5,w+7,h+7);
+  const roof=(rx,ry,rw,rh)=>{ctx.fillStyle='#7f7466';ctx.fillRect(rx-rw/2,ry-rh/2,rw,rh);
+    ctx.fillStyle='rgba(30,24,18,.3)';ctx.fillRect(rx-rw/2,ry,rw,rh/2);
+    ctx.strokeStyle=INK;ctx.lineWidth=1.3;ctx.strokeRect(rx-rw/2,ry-rh/2,rw,rh);
+    ctx.beginPath();ctx.moveTo(rx-rw/2,ry);ctx.lineTo(rx+rw/2,ry);ctx.stroke();};
+  roof(x,y-14,58,30);roof(x-44,y+10,18,40);roof(x+44,y+10,18,40);
+  ctx.restore();
+  banner(x+w/2-12,y-h/2+2,QIN_RED,0,1,1,t,1);
+  const s=seg(t,1.0,1.2);                                          // 变法令
+  if(s>0)seal(x,y-h/2-40,48,'令',CINNABAR,s,lerp(1.6,1,ease(s)));
+}
+function drawRipple(t){
+  ctx.save();ctx.lineWidth=2.6;
+  for(let k=0;k<3;k++){const r=(t-1.1-k*.35)*520;if(r<=0||r>1150)continue;
+    ctx.strokeStyle=`rgba(168,40,32,${.5*(1-r/1150)})`;
+    ctx.beginPath();ctx.arc(GOV.x,GOV.y,r,0,7);ctx.stroke();}
+  ctx.restore();
+}
+function drawGranaries(t){
+  for(let k=0;k<3;k++){const [x,y]=GRAN[k],r=21;
+    const got=V0.filter(h=>Math.floor(h.o/20)===k&&t>=sackT(h)+1.0).length,f=got/20;
+    ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fillStyle='#cdb88a';ctx.fill();
+    if(f>0){ctx.beginPath();ctx.moveTo(x,y);ctx.arc(x,y,r-3,-Math.PI/2,-Math.PI/2+f*Math.PI*2);ctx.closePath();
+      ctx.fillStyle='rgba(214,164,58,.9)';ctx.fill();}
+    ctx.strokeStyle=INK;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.stroke();
+    ctx.lineWidth=.9;for(let i=0;i<8;i++){const a=i/8*Math.PI*2;            // 囷顶草苫
+      ctx.beginPath();ctx.moveTo(x+Math.cos(a)*4,y+Math.sin(a)*4);ctx.lineTo(x+Math.cos(a)*r,y+Math.sin(a)*r);ctx.stroke();}
+  }
+}
+const loopT=c=>3.8+c*.2;                                         // 主村第 c 伍画圈时刻
+const slipT=h=>3.9+h.o*.04;                                       // 户籍竹简起飞时刻(飞行 0.85s)
+const soldierT=h=>10.9+h.o*.022;
+const sackT=h=>11.1+h.o*.022;
+function drawLoops(t){
+  for(let c=0;c<12;c++){const p=ease(seg(t,loopT(c),loopT(c)+.5));
+    if(p>0)brush(CLUMPS[c].loop,0,CLUMPS[c].loop.L*p,4.5,'rgba(168,40,32,.8)',c*5+1);}
+  SHI.forEach((s,i)=>{const t0=loopT(s.b)+.5,p=ease(seg(t,t0,t0+.3));
+    if(p>0){brush(s.l1,0,s.l1.L*p,2.6,'rgba(58,47,34,.85)',i*3+2,false);brush(s.l2,0,s.l2.L*p,2.6,'rgba(58,47,34,.85)',i*3+5,false);}});
+  // 收网:外围诸村依次编伍、接入官府
+  VILLAGES.forEach((v,i)=>{const t0=14.0+i*.22;
+    v.clumps.forEach((c,k)=>{const p=ease(seg(t,t0+k*.07,t0+k*.07+.45));if(p>0)brush(c.loop,0,c.loop.L*p,4,'rgba(168,40,32,.75)',90+i*7+k);});
+    const p=ease(seg(t,t0+.1,t0+.7));if(p>0)brush(v.link,0,Math.max(0,v.link.L-74)*p,2.6,'rgba(60,46,30,.6)',70+i,false);});
+}
+function drawHouses(t){
+  const a=ease(seg(t,0,.6)),cul=seg(t,7.7,7.9),mk=seg(t,8.5,8.8),sus=CLUMPS.indexOf(SUSPECT);
+  for(const h of HOUSES){
+    const roof=h===CULPRIT&&cul>0?'#b3322a':h.clump===sus&&mk>0?`rgb(${lerp(185,214,mk)|0},${lerp(168,140,mk)|0},${lerp(138,120,mk)|0})`:'#b9a88a';
+    house(h.x,h.y,h.a,a,null,roof);
+  }
+}
+function drawSlips(t){
+  ctx.save();
+  for(const h of V0){const p=seg(t,slipT(h),slipT(h)+.85);if(p<=0||p>=1)continue;
+    const q=ease(p),cx=(h.x+GATE[0])/2,cy=Math.min(h.y,GATE[1])-130;
+    const x=(1-q)*(1-q)*h.x+2*(1-q)*q*cx+q*q*GATE[0],y=(1-q)*(1-q)*h.y+2*(1-q)*q*cy+q*q*GATE[1];
+    ctx.globalAlpha=Math.min(1,p*5,(1-p)*6);
+    ctx.save();ctx.translate(x,y);ctx.rotate(q*Math.PI*2.5+h.o);
+    ctx.fillStyle=h===CULPRIT&&t>=7.7?'#b3322a':'#d8c08a';ctx.fillRect(-2.2,-9,4.4,18);
+    ctx.strokeStyle=INK;ctx.lineWidth=.8;ctx.strokeRect(-2.2,-9,4.4,18);ctx.restore();}
+  ctx.restore();
+}
+function drawWatch(t){
+  const sl=seg(t,7.5,7.9)*(1-seg(t,10.4,11));                    // 聚光:伍外蒙一层纸色
+  if(sl>0){const g=ctx.createRadialGradient(SUSPECT.cx,SUSPECT.cy,70,SUSPECT.cx,SUSPECT.cy,190);
+    g.addColorStop(0,'rgba(236,228,206,0)');g.addColorStop(1,`rgba(236,228,206,${.62*sl})`);
+    ctx.fillStyle=g;ctx.fillRect(WORLD.X0,WORLD.Y0,WORLD.W,WORLD.H);}
+  const p0=ease(seg(t,7.95,8.25));
+  if(p0>0)brush(SUSPECT.loop,0,SUSPECT.loop.L*p0,8,'rgba(190,44,32,.85)',301);
+  ctx.save();ctx.setLineDash([6,4]);ctx.lineWidth=2.4;ctx.lineCap='round';ctx.strokeStyle='rgba(168,40,32,.9)';
+  WATCH.forEach((w,i)=>{const t0=8.0+i*.06,p=ease(seg(t,t0,t0+.35));if(p<=0)return;
+    ctx.beginPath();for(let s=0;s<=w.L*p;s+=2){const [x,y]=at(w,s);s?ctx.lineTo(x,y):ctx.moveTo(x,y);}ctx.stroke();});
+  ctx.restore();
+  const s=seg(t,7.7,7.9);
+  if(s>0)seal(CULPRIT.x+24,CULPRIT.y-26,28,'罪',CINNABAR,s,lerp(1.6,1,ease(s)));
+}
+function musterSlot(o){return [MUSTER.x-36+(o%10)*8,MUSTER.y-20+Math.floor(o/10)*8];}
+function drawMuster(t){
+  const a=seg(t,10.8,11.2);if(a<=0)return;
+  ctx.save();ctx.globalAlpha=a;ctx.setLineDash([3,6]);ctx.strokeStyle='rgba(58,47,34,.6)';ctx.lineWidth=1.6;
+  ctx.strokeRect(MUSTER.x-52,MUSTER.y-34,104,66);ctx.setLineDash([]);ctx.restore();
+  ctx.fillStyle='#7a1d17';ctx.beginPath();
+  for(const h of V0){const p=ease(seg(t,soldierT(h),soldierT(h)+.9));if(p<=0)continue;
+    const [sx,sy]=musterSlot(h.o),x=lerp(h.x,sx,p),y=lerp(h.y,sy,p)-Math.sin(p*Math.PI)*40;
+    ctx.moveTo(x+2.3,y);ctx.arc(x,y,2.3,0,7);}
+  ctx.fill();
+  banner(MUSTER.x-46,MUSTER.y-26,QIN_RED,0,seg(t,12.4,12.8),2,t,.95);
+  for(const h of V0){const p=ease(seg(t,sackT(h),sackT(h)+1.0));if(p<=0||p>=1)continue;    // 粮袋
+    const [gx,gy]=GRAN[Math.floor(h.o/20)],x=lerp(h.x,gx,p),y=lerp(h.y,gy,p)-Math.sin(p*Math.PI)*50;
+    ctx.beginPath();ctx.roundRect(x-3.2,y-2.6,6.4,5.2,1.6);ctx.fillStyle='#c99b45';ctx.fill();
+    ctx.strokeStyle=INK;ctx.lineWidth=.8;ctx.stroke();}
+}
+function drawLabels(t){
+  halo('关　中',820,232,`bold 44px ${KAI}`,'rgba(60,62,52,.7)','center',7,.85);
+  halo('渭　水',1560,874,`bold 32px ${KAI}`,'#3f5f58','center',6,.9);
+  label(GOV.x,GOV.y+GOV.h/2+46,'官',CINNABAR,'官府·户籍',28,'center',seg(t,.6,1.1));
+  const c0=CLUMPS[0],c1=CLUMPS[1],cf=1-seg(t,7.2,7.6);
+  label(c0.cx-66,c0.cy+8,'伍',CINNABAR,'五家为伍',28,'right',seg(t,4.2,4.6)*cf);
+  label((c0.cx+c1.cx)/2,c0.cy-72,'什',CINNABAR,'十家为什',28,'center',seg(t,4.9,5.3)*cf);
+  label(SUSPECT.cx,SUSPECT.cy-82,'连',CINNABAR,'相牧司·连坐',28,'center',seg(t,8.9,9.3)*(1-seg(t,10.6,11)));
+  label(MUSTER.x,MUSTER.y+70,'兵',CINNABAR,'兵源·按户征丁',28,'center',seg(t,11.3,11.8));
+  label(1254,812,'粮',CINNABAR,'仓廪·按户纳粮',28,'center',seg(t,11.5,12));
+}
+
+/* ============ 屏幕层:户籍册 ============ */
+function drawRegister(t){
+  const a=seg(t,3.6,4.0);if(a<=0)return;
+  const n0=V0.filter(h=>t>=slipT(h)+.85).length,n=n0+Math.round(85*ease(seg(t,14.2,16.0)));
+  ctx.save();ctx.globalAlpha=a;
+  card(110,790,340,196);
+  halo('户籍',136,840,`bold 30px ${KAI}`,'#6f675c','left',0);
+  halo(`在籍${cnum(n)}户`,424,842,`bold ${n>99?25:34}px ${KAI}`,CINNABAR,'right',0);
+  for(const h of V0){const p=seg(t,slipT(h)+.75,slipT(h)+.95);if(p<=0)continue;
+    const x=140+(h.o%30)*10.2,y=862+Math.floor(h.o/30)*54;
+    ctx.globalAlpha=a*p;ctx.fillStyle=h===CULPRIT&&t>=7.7?'#b3322a':'#d8c08a';ctx.fillRect(x,y,6.2,40);
+    ctx.strokeStyle=INK;ctx.lineWidth=.8;ctx.strokeRect(x,y,6.2,40);
+    ctx.beginPath();ctx.moveTo(x+1.6,y+9);ctx.lineTo(x+4.6,y+9);ctx.moveTo(x+1.6,y+17);ctx.lineTo(x+4.6,y+17);ctx.stroke();}
+  ctx.restore();
+}
+const LEGEND=[['txt','图例','#7e201a'],['house'],['txt','一户','#4a4238']];
+const CAM=[[0,840,490,1.25],[3.4,960,490,1.08],[6.9,960,495,1.06],[7.6,SUSPECT.cx,445,2.1],[10.4,SUSPECT.cx,445,2.1],
+  [11.3,900,580,1.0],[13.7,900,580,.98],[15.2,960,560,.84],[17.2,960,560,.82]];
+
+mechMain({
+  dur:DUR, cam:CAM, world:WORLD, height, decorate,
+  drawWorld(t){
+    riverFlow(t);drawRipple(t);drawGranaries(t);drawGov(t);drawHouses(t);
+    drawLoops(t);drawWatch(t);drawSlips(t);drawMuster(t);drawLabels(t);
+  },
+  drawScreen(t){drawHeader(HEADER);drawLegend(LEGEND,t,seg(t,.8,1.4));drawRegister(t);},
+  subs:[
+    [0.3,3.6,'商鞅变法，第一刀落在每一户人家头上。'],
+    [3.6,7.4,'五家编为一伍，十家编为一什，家家户户登记在册。'],
+    [7.4,10.8,'一家犯法，同伍连坐——邻里之间，彼此看管。'],
+    [10.8,14.0,'户籍在手，朝廷算得清：能征多少兵，能收多少粮。'],
+    [14.0,16.8,'一张户籍网，把整个秦国罩了进去。'],
+  ],
+});
+</script>
+</body>
+</html>

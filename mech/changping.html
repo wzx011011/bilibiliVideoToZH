@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>秦汉前传 · 机制动画 · 长平断粮</title>
+<link rel="stylesheet" href="stage.css">
+</head>
+<body>
+<div id="frame">
+  <canvas id="cv" width="1920" height="1080"></canvas>
+  <div id="sub"><span class="txt" id="subtxt"></span></div>
+</div>
+<script src="lib.js"></script>
+<script>
+/* 长平断粮。史实据《史记·白起王翦列传》:"秦奇兵二万五千人绝赵军后,又一军五千骑绝赵壁间,
+   赵军分而为二,粮道绝……赵卒不得食四十六日"。兵力按比例:一点约二百人,一旗约一万人。 */
+const DUR=17;
+const HEADER={series:'秦汉前传 · 机制动画样片',title:'长平 · 断粮四十六日',year:'前260',yearVal:260,
+  source:'据《史记·白起王翦列传》'};
+
+/* ============ 布局(世界坐标 = 1920×1080 基准) ============ */
+const WORLD={X0:-240,Y0:-150,W:2400,H:1380,S:1.25};
+const CAMP={x:935,y:600,rx:255,ry:170};
+const RIVER=samplePath('M 720,-300 C 660,80 770,260 680,440 S 560,760 640,980 S 720,1250 680,1400',4);
+const ROAD=samplePath('M 1150,612 C 1360,600 1560,560 1740,540 S 1960,515 2200,505',3);
+const WALL=samplePath('M 470,250 C 505,420 445,600 492,880',3);
+const CUT_S=ROAD.L*0.33, CUT=at(ROAD,CUT_S), CUT_T=tan(ROAD,CUT_S), CUT_N=[CUT_T[1],-CUT_T[0]];
+const XC=[CUT[0]+CUT_T[0]*34,CUT[1]+CUT_T[1]*34];                     // 朱砂 X 在封锁线东侧
+const FLANK=samplePath(`M 440,300 C 600,245 ${CUT[0]-330},255 ${CUT[0]-70},${CUT[1]-190} S ${CUT[0]-8},${CUT[1]-80} ${CUT[0]-10},${CUT[1]-30}`,3);
+const CAV=samplePath(`M 500,470 C 640,360 880,300 ${CAMP.x},440 L ${CAMP.x},${CAMP.y+178}`,3);
+const CAV_IN=(()=>{for(let i=0;i<CAV.pts.length;i++){const [x,y]=CAV.pts[i];
+  if(Math.abs(x-CAMP.x)<2&&y>CAMP.y-CAMP.ry+6)return i*CAV.step;}return CAV.L*.5;})();
+const XS1=samplePath(`M ${XC[0]-30},${XC[1]-32} L ${XC[0]+30},${XC[1]+32}`,2);
+const XS2=samplePath(`M ${XC[0]+30},${XC[1]-32} L ${XC[0]-30},${XC[1]+32}`,2);
+const rX=lookup(RIVER,'y',WORLD.Y0,WORLD.Y0+WORLD.H,720);     // 丹水 x(y)
+const rY=lookup(ROAD,'x',WORLD.X0,WORLD.X0+WORLD.W,612);      // 古道 y(x)
+
+/* ============ 地形:西岭(秦)、东岭太行(山口出古道)、丹水河谷 ============ */
+function height(x,y){
+  const westEdge=560+80*(noise1(y*.004,1)*2-1)+35*(noise1(y*.012,2)*2-1);
+  const eastEdge=1310+80*(noise1(y*.004,3)*2-1)+35*(noise1(y*.012,4)*2-1);
+  let mW=sm((westEdge-x)/250), mE=sm((x-eastEdge)/260);
+  if(x>1100){const d=(y-rY(x))/78;mE*=1-.92*Math.exp(-d*d);}          // 东岭山口(古道)
+  const mN=.62*sm((40+40*(noise1(x*.005,5)*2-1)-y)/220);
+  const mS=.5*sm((y-1010-30*(noise1(x*.005,6)*2-1))/230);
+  const m=Math.max(mW,mE,mN,mS);
+  let h=.07+.035*(fbm(x*.0028,y*.0028,3)*.5+.5);
+  if(m>.003){const wx=x+70*fbm(x*.0019+3,y*.0019,2),wy=y+70*fbm(x*.0019-7,y*.0019+5,2);   // 域扭曲
+    h+=m*(.24+.76*ridged(wx*.0034,wy*.0017,4,.42))*.92;}                                    // 南北走向的山脉
+  const dx=(x-rX(y))/30;h-=.045*Math.exp(-dx*dx);                       // 丹水河槽
+  return h;
+}
+function decorate(g){
+  strokeRiver(g,RIVER.d);
+  g.setLineDash([3,10]);g.strokeStyle='rgba(128,94,52,.75)';g.lineWidth=4;g.stroke(new Path2D(ROAD.d));g.setLineDash([]);
+  stipple(g,240,[560,-120,760,1300],(x,y)=>Math.abs(x-rX(y))>=48
+    &&Math.hypot((x-CAMP.x)/(CAMP.rx+40),(y-CAMP.y)/(CAMP.ry+40))>=1
+    &&!(x>1120&&Math.abs(y-rY(x))<40)&&height(x,y)<=.2,4242);
+}
+
+/* ============ 兵力(固定种子) ============ */
+const ZC=[],ZD=[];        // 赵军 40 营(一营≈一万=50 点)
+(function(){const R=rng(31);
+  for(let r=0;r<5;r++)for(let c=0;c<8;c++){
+    const cx=CAMP.x-196+c*56+(r%2)*28-14,cy=CAMP.y-96+r*48;
+    const edge=Math.max(Math.abs(cx-CAMP.x)/210,Math.abs(cy-CAMP.y)/100);
+    ZC.push({cx,cy,edge,ph:R()*6});
+    for(let k=0;k<50;k++)ZD.push({c:ZC.length-1,dx:(k%10-4.5)*4.2+(R()-.5)*1.2,dy:(Math.floor(k/10)-2)*4.4+4+(R()-.5)*1.2,u:R(),ph:R()*6});
+  }})();
+const FD=[],KD=[];        // 奇兵 125 点 / 轻骑 25 点
+(function(){const R=rng(53);
+  for(let i=0;i<125;i++)FD.push({lat:(R()-.5)*14,ph:R()*6});
+  for(let i=0;i<25;i++)KD.push({lat:(R()-.5)*10,ph:R()*6});})();
+
+const CAM=[[0,960,560,1.05],[1.8,960,560,1.0],[2.7,1170,470,1.16],[4.6,1250,520,1.24],
+  [5.6,980,560,1.28],[7.8,935,590,1.4],[9.2,960,560,1.06],[14.4,960,560,1.02],[17,960,555,1.0]];
+
+/* ============ 场景层 ============ */
+function riverFlow(t){
+  ctx.save();ctx.strokeStyle='rgba(236,244,238,.55)';ctx.lineWidth=2;ctx.lineCap='round';
+  for(let s=(t*38)%64;s<RIVER.L;s+=64){
+    const [x,y]=at(RIVER,s),[tx,ty]=tan(RIVER,s),o=(noise1(s*.05,3)-.5)*12,[x2,y2]=at(RIVER,s+16);
+    ctx.beginPath();ctx.moveTo(x-ty*o,y+tx*o);ctx.lineTo(x2-ty*o,y2+tx*o);ctx.stroke();}
+  ctx.restore();
+}
+function drawWall(t){
+  const a=ease(seg(t,0,.6));if(a<=0)return;
+  ctx.save();ctx.globalAlpha=a;
+  brush(WALL,0,WALL.L,6,'rgba(110,32,24,.88)',5,false);
+  ctx.strokeStyle='rgba(110,32,24,.88)';ctx.lineWidth=2.4;ctx.lineCap='round';
+  for(let s=8;s<WALL.L;s+=15){const [x,y]=at(WALL,s),[tx,ty]=tan(WALL,s);
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-ty*7,y+tx*7);ctx.stroke();}   // 垛口朝东(朝赵)
+  for(let i=0;i<9;i++){const [x,y]=at(WALL,WALL.L*(.06+i*.11));banner(x-30-(i%2)*14,y+6,QIN_RED,0,1,i,t,.95);}
+  ctx.restore();
+}
+function zhaoState(t){return {sp:ease(seg(t,6.6,7.8)),dp:seg(t,8.6,12.8)};}
+function campOffset(c,sp){
+  const d=c.cx-CAMP.x,sg=d<0?-1:1;return sg*52*sp*(1-.45*Math.min(1,Math.abs(d)/220));}
+function drawZhao(t){
+  const a=ease(seg(t,0,.6));if(a<=0)return;
+  const {sp,dp}=zhaoState(t);
+  ctx.save();ctx.globalAlpha=a;
+  // 营垒:木栅圈(分裂后成两营)
+  ctx.setLineDash([2,7]);ctx.lineCap='round';ctx.lineWidth=3;ctx.strokeStyle='rgba(52,40,28,.75)';
+  if(sp<1){ctx.globalAlpha=a*(1-sp);ctx.beginPath();ctx.ellipse(CAMP.x,CAMP.y,CAMP.rx,CAMP.ry,0,0,7);ctx.stroke();}
+  if(sp>0){ctx.globalAlpha=a*sp;
+    for(const s of[-1,1]){ctx.beginPath();ctx.ellipse(CAMP.x+s*(128+22*sp),CAMP.y,140,CAMP.ry,0,0,7);ctx.stroke();}}
+  ctx.setLineDash([]);ctx.globalAlpha=a;
+  // 兵点:按饥饿程度分 6 档批量绘制
+  const B=[[],[],[],[],[],[]];
+  for(let i=0;i<ZD.length;i++){const d=ZD[i],c=ZC[d.c];
+    const thr=.12+.78*(.6*d.u+.4*(1-c.edge));
+    const lv=clamp((dp-thr+.08)/.16,0,1);B[Math.round(lv*5)].push(i);}
+  for(let b=0;b<6;b++){const k=b/5;
+    ctx.fillStyle=`rgba(${lerp(40,160,k)|0},${lerp(70,152,k)|0},${lerp(60,132,k)|0},${lerp(1,.5,k)})`;
+    ctx.beginPath();
+    for(const i of B[b]){const d=ZD[i],c=ZC[d.c],x=c.cx+campOffset(c,sp)+d.dx+.5*Math.sin(t*2.2+d.ph),y=c.cy+d.dy;
+      ctx.moveTo(x+1.8,y);ctx.arc(x,y,1.8,0,7);}
+    ctx.fill();}
+  // 营旗(一旗≈一万)
+  for(const c of ZC){const thr=.12+.78*(.55+.45*(1-c.edge))*.9,lv=clamp((dp-thr+.1)/.2,0,1);
+    banner(c.cx+campOffset(c,sp)-16,c.cy-8,lv>.5?'#9c9a86':ZHAO_GREEN,lv,1-.45*lv,c.ph,t,.85);}
+  ctx.restore();
+}
+function drawCarts(t){
+  for(let k=0;k<4;k++){
+    const stop=CUT_S+78+k*44,s0=ROAD.L*.97+k*40;
+    const s=lerp(s0,stop,ease(seg(t,.5+k*.35,4.3+k*.25)));
+    if(s>ROAD.L-2)continue;
+    const [x,y]=at(ROAD,s),[tx,ty]=tan(ROAD,s);
+    cart(x,y-4,Math.atan2(ty,tx),seg(t,.5+k*.35,.9+k*.35)*(1-.25*seg(t,8.6,12)));
+  }
+}
+function cordonPos(i){const r=i%3,c=Math.floor(i/3),a=(c-20.5)*3.9,b=(r-1)*5.5-6;
+  return [CUT[0]+CUT_N[0]*a+CUT_T[0]*b,CUT[1]+CUT_N[1]*a+CUT_T[1]*b];}
+function drawFlank(t){
+  const fs=ease(seg(t,1.8,4.5)),head=FLANK.L*fs,dep=ease(seg(t,4.6,5.4));
+  if(fs<=0)return;
+  brush(FLANK,0,head,11,'rgba(168,40,32,.72)',7);
+  arrowHead(FLANK,head,30*(1-.6*dep),'rgba(168,40,32,.9)');
+  ctx.fillStyle='#7a1d17';ctx.beginPath();
+  const pos=[];
+  for(let i=0;i<FD.length;i++){const s=head-i*5.2;
+    let p=null;
+    if(s>0){const [x,y]=at(FLANK,s),[tx,ty]=tan(FLANK,s),o=FD[i].lat+1.2*Math.sin(t*6+FD[i].ph);p=[x-ty*o,y+tx*o];}
+    if(dep>0){const q=cordonPos(i);p=p?[lerp(p[0],q[0],dep),lerp(p[1],q[1],dep)]:q;}
+    pos.push(p);if(p){ctx.moveTo(p[0]+2,p[1]);ctx.arc(p[0],p[1],2,0,7);}}
+  ctx.fill();
+  for(const i of[6,62,118])if(pos[i])banner(pos[i][0]+2,pos[i][1]-3,QIN_RED,0,1,i,t,.9);
+}
+function drawCav(t){
+  const ks=ease(seg(t,5.6,7.2)),head=CAV.L*ks,dep=ease(seg(t,7.2,7.9));
+  if(ks<=0)return;
+  const mv=Math.min(seg(t,5.6,5.9),1-seg(t,7.0,7.5));
+  for(let k=9;k>=0;k--){const s=head-24-k*17;if(s<=0||mv<=0)continue;     // 马蹄扬尘
+    const [x,y]=at(CAV,s),o=(noise1(s*.04+k,8)-.5)*16,r=11+k*2.2;
+    const g=ctx.createRadialGradient(x+o,y,0,x+o,y,r);
+    g.addColorStop(0,`rgba(176,150,104,${.22*(1-k/10)*mv})`);g.addColorStop(1,'rgba(176,150,104,0)');
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(x+o,y,r,0,7);ctx.fill();}
+  brush(CAV,0,head,8,'rgba(150,32,26,.8)',11);
+  arrowHead(CAV,head,24*(1-.7*dep),'rgba(150,32,26,.92)');
+  ctx.fillStyle='#5e1510';ctx.beginPath();const pos=[];
+  for(let i=0;i<KD.length;i++){const s=head-i*7;let p=null;
+    if(s>0){const [x,y]=at(CAV,s),[tx,ty]=tan(CAV,s),o=KD[i].lat;p=[x-ty*o,y+tx*o];}
+    if(dep>0){const [x,y]=at(CAV,CAV_IN+(CAV.L-CAV_IN)*(i/24));const q=[x+KD[i].lat*.3,y];
+      p=p?[lerp(p[0],q[0],dep),lerp(p[1],q[1],dep)]:q;}
+    pos.push(p);if(p){ctx.moveTo(p[0]+2.2,p[1]);ctx.arc(p[0],p[1],2.2,0,7);}}
+  ctx.fill();
+  if(pos[1])banner(pos[1][0]+3,pos[1][1]-2,QIN_RED,0,1,3,t,.9);
+}
+function drawCut(t){
+  const p1=ease(seg(t,4.5,4.72)),p2=ease(seg(t,4.66,4.9));
+  if(p1>0)brush(XS1,0,XS1.L*p1,13,'rgba(172,36,28,.92)',21);
+  if(p2>0)brush(XS2,0,XS2.L*p2,13,'rgba(172,36,28,.92)',23);
+  const sp=seg(t,4.86,5.06);
+  if(sp>0)seal(XC[0]+44,XC[1]+40,40,'断',CINNABAR,sp,lerp(1.5,1,ease(sp)));
+}
+function drawEmphasis(t){
+  const e=seg(t,14.4,14.9)*(1-seg(t,16.4,16.9));if(e<=0)return;
+  const pulse=.5+.5*Math.sin((t-14.4)*Math.PI*1.6);
+  ctx.save();ctx.globalAlpha=e*(.18+.22*pulse);
+  brush(CAV,CAV_IN-10,CAV.L,30,'rgba(214,70,48,1)',41,false);
+  const a=cordonPos(1),b=cordonPos(124);
+  ctx.strokeStyle='rgba(214,70,48,1)';ctx.lineWidth=26;ctx.lineCap='round';
+  ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();ctx.restore();
+}
+function drawLabels(t){
+  const {sp}=zhaoState(t);
+  // 地名(舆图题注)
+  halo('太　行　山',1660,330,`bold 40px ${KAI}`,'rgba(60,62,52,.75)','center',7,.85);
+  { const y0=690,x=rX(y0)-40;for(let k=0;k<2;k++)halo('丹水'[k],x,y0+k*36,`bold 30px ${KAI}`,'#3f5f58','center',6,.95); }
+  label(1880,492,null,null,'邯郸 →',30,'right',seg(t,.6,1.1));
+  { const [x,y]=at(ROAD,ROAD.L*.62);label(x,y+46,null,null,'粮道',26,'center',seg(t,1.2,1.7)); }
+  // 军队
+  label(408,560,'秦',CINNABAR,'秦军壁垒',30,'right',seg(t,.3,.8));
+  label(CAMP.x,CAMP.y+CAMP.ry+48,'赵',ZHAO_GREEN,'赵军四十万',30,'center',seg(t,.3,.8)*(1-sp));
+  label(CAMP.x,CAMP.y+CAMP.ry+48,'赵',ZHAO_GREEN,'赵军分而为二',30,'center',sp);
+  label(CUT[0]+16,CUT[1]+112,'秦',CINNABAR,'奇兵二万五千·绝赵军后',28,'left',seg(t,3.4,3.9));
+  label(CAMP.x-26,392,'秦',CINNABAR,'轻骑五千·绝赵壁间',28,'right',seg(t,5.9,6.4));
+}
+
+/* ============ 屏幕层:计日「正」字 ============ */
+const ZHENG=[[.08,.1,.92,.1],[.5,.1,.5,.92],[.5,.5,.86,.5],[.2,.46,.2,.92],[0,.92,1,.92]];
+function drawTally(t){
+  const a=seg(t,8.2,8.6);if(a<=0)return;
+  const dp=seg(t,8.6,12.8),total=46*ease(dp),day=Math.max(1,Math.ceil(total-1e-6));
+  ctx.save();ctx.globalAlpha=a;
+  card(110,790,340,196);
+  halo('断粮',136,840,`bold 30px ${KAI}`,'#6f675c','left',0);
+  halo(`第${cnum(day)}日`,424,842,`bold 38px ${KAI}`,CINNABAR,'right',0);
+  ctx.strokeStyle=CINNABAR;ctx.lineWidth=4.2;ctx.lineCap='round';
+  for(let j=0;j<46;j++){const p=clamp(total-j,0,1);if(p<=0)break;
+    const ch=Math.floor(j/5),st=ZHENG[j%5],bx=140+(ch%5)*60,by=864+Math.floor(ch/5)*56,S=40;
+    ctx.beginPath();ctx.moveTo(bx+st[0]*S,by+st[1]*S);ctx.lineTo(bx+lerp(st[0],st[2],p)*S,by+lerp(st[1],st[3],p)*S);ctx.stroke();}
+  ctx.restore();
+}
+const LEGEND=[['txt','图例','#7e201a'],['dot','#2c4a40'],['txt','约二百人','#4a4238'],['gap'],['flag',ZHAO_GREEN],['txt','约一万人','#4a4238']];
+
+mechMain({
+  dur:DUR, cam:CAM, world:WORLD, height, decorate,
+  drawWorld(t){
+    riverFlow(t);
+    const rp=ease(seg(t,0,1.8));if(rp>0)brush(ROAD,ROAD.L*(1-rp),ROAD.L,9,'rgba(132,92,44,.82)',3);
+    drawWall(t);drawZhao(t);drawCarts(t);drawFlank(t);drawCav(t);drawCut(t);
+    const dp=seg(t,8.6,12.8);
+    if(dp>0){ctx.fillStyle=`rgba(46,30,14,${.2*ease(dp)})`;ctx.fillRect(WORLD.X0,WORLD.Y0,WORLD.W,WORLD.H);}   // 断粮日久,画面渐沉
+    drawEmphasis(t);drawLabels(t);
+  },
+  vignette:t=>.32+.4*ease(seg(t,8.6,12.8)),
+  drawScreen(t){drawHeader(HEADER);drawLegend(LEGEND,t,seg(t,.8,1.4));drawTally(t);},
+  subs:[
+    [0.3,4.5,'长平对峙，四十万赵军的粮草，全靠背后这一条粮道。'],
+    [4.5,5.6,'秦军奇兵两万五千，绕到赵军背后——粮道断了。'],
+    [5.6,8.6,'又有五千轻骑插进赵军营垒之间，赵军被一分为二。'],
+    [8.6,12.0,'史书只记了一句：赵卒不得食，四十六日。'],
+    [12.0,14.4,'援兵和粮车，一辆也进不来。'],
+    [14.4,16.7,'五千人，切开了四十万人。'],
+  ],
+});
+</script>
+</body>
+</html>
