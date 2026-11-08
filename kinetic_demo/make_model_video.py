@@ -90,8 +90,11 @@ def split_cues(text, max_w=26.0):
             cues.append(sent)
             continue
         parts, buf = [], ''
-        for ch in sent:
+        for k, ch in enumerate(sent):
             buf += ch
+            # 『——』成对出现,只在第二个 — 后切(1104 期字幕曾被拆成「误导—」「—可解释」)
+            if ch == '—' and sent[k + 1:k + 2] == '—':
+                continue
             if ch in ',,、:：——' and width(buf) >= max_w * 0.45:
                 parts.append(buf); buf = ''
         if buf.strip():
@@ -174,9 +177,13 @@ def run_tts(slug: str, cfg: dict, work: Path) -> None:
         if _cv3(sent_json, sent_dir) != 0:
             raise RuntimeError("WSL TTS 失败(整段与逐句降级均失败,见上方输出)")
         for it in items:
-            chunks = sorted(sent_dir.glob(f"item_{it['id'] * 100:04d}*.wav"))
-            if not chunks:
-                raise RuntimeError(f"逐句降级缺 item{it['id']} 的句 wav")
+            # 按句 id 精确取片:glob("item_0000*.wav") 只命中首句 item_0000,
+            # item_0001.. 会被漏掉,整段只剩第一句(2026-11-04 实证)
+            n = len(_split_sents(it["text"]))
+            chunks = [sent_dir / f"item_{it['id'] * 100 + j:04d}.wav" for j in range(n)]
+            missing = [c.name for c in chunks if not c.exists()]
+            if missing:
+                raise RuntimeError(f"逐句降级缺 item{it['id']} 的句 wav: {missing}")
             _concat_wavs(chunks, work / "parts" / f"item_{it['id']:04d}.wav")
     p16 = work / "parts16"
     p16.mkdir(exist_ok=True)
@@ -256,8 +263,13 @@ def render(slug: str, cfg: dict, data_path: Path, audio: Path,
             raise SystemExit(f"[stage] 通用模板缺失: {stage}")
     html = stage.read_text(encoding="utf-8")
     html = html.replace("__DATA_JSON__", json.dumps(data, ensure_ascii=False))
+    # broll 相对路径按 built 页位置(issues/)会解析失败,统一改写为绝对 file URI
+    content = json.loads(json.dumps(cfg["content"], ensure_ascii=False))
+    for st in content.get("stories", []):
+        for b in st.get("broll", []):
+            b["img"] = (HERE / b["img"]).resolve().as_uri()
     html = html.replace("__CONTENT_JSON__",
-                        json.dumps(cfg["content"], ensure_ascii=False))
+                        json.dumps(content, ensure_ascii=False))
     built = HERE / "issues" / f"_{slug}_built.html"
     built.write_text(html, encoding="utf-8")
 
@@ -320,7 +332,9 @@ def main():
         # 断点续跑会跳过旧 id 的 wav,新文案配上旧配音(2026-09-18 实测踩坑)
         if not fp_match:
             print("[tts] 文案已变更,清缓存重录")
-            for d in ("parts", "parts16"):
+            # parts_sent 也要清:cv3_generate_voice 跳过已存在的 wav,
+            # 逐句降级会把旧文案的句子当成新配音拼进去
+            for d in ("parts", "parts16", "parts_sent"):
                 shutil.rmtree(work / d, ignore_errors=True)
         print(f"[tts] {slug} ...")
         run_tts(slug, cfg, work)

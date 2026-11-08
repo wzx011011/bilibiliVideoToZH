@@ -216,7 +216,12 @@ window.renderFrame=function(t){
         $('brollBox').style.display='none';
       }
     }
-    const bek=act?easeOut(clamp01(Math.min(visP-act.f1,act.f2-visP)/0.06)):0;
+    /* 同段两窗首尾相接(f2===下一窗 f1)时该边不淡出,直接硬切换图,
+       否则两窗交界处 bek 归零,底下的卡片会透出来叠影(1104 期实证) */
+    const joined=(x,y)=>BROLL.some(b=>act&&b!==act&&b.seg===act.seg&&b.ok&&Math.abs(b[x]-act[y])<1e-6);
+    const bek=act?easeOut(clamp01(Math.min(
+      joined('f2','f1')?1:(visP-act.f1)/0.06,
+      joined('f1','f2')?1:(act.f2-visP)/0.06))):0;
     if(act){
       $('brollBox').style.opacity=bek.toFixed(3);
       $('brollImg').style.transform=`scale(${(1.02+0.025*bek).toFixed(4)})`;
