@@ -1,0 +1,162 @@
+{
+ "brand": "AI 快讯 · 2026年11月6日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年11月6日",
+  "nav": [
+   "Intro",
+   "模型发布",
+   "行业风向"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "Ripple-65B",
+    "accent": "#1d4ed8",
+    "title": "Ripple-65B:<span class='num'>美国开源</span>代码模型新 SOTA",
+    "broll": [
+     {
+      "img": "broll/ai-news-1106/card-ripple.png",
+      "cap": "官方页:11/5 发布",
+      "src": "来源:ricursive.com 11/5",
+      "f1": 0.05,
+      "f2": 0.55
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "65B 从头训",
+      "d": "Ricursive Intelligence 发布 <b>Ripple-65B Preview</b>:65B 稠密模型,<span class='kw'>十二万亿 token 从头预训</span>,Apache 2.0。"
+     },
+     {
+      "g": "✦",
+      "t": "以小博大",
+      "d": "宣称拿下<span class='kw'>美国开源权重</span>智能体编码 SOTA,基准表现胜过体量十五倍的开源模型。"
+     },
+     {
+      "g": "№",
+      "t": "芯片公司造模型",
+      "d": "前谷歌团队创办,主线是<span class='kw'>用 AI 设计 AI 芯片</span>,Ripple 是其芯片设计平台的通用变体。"
+     },
+     {
+      "g": "⟳",
+      "t": "读数待补",
+      "d": "<b>AA 官方读数未出</b>,SOTA 口径出自厂商自选基准,先看后评。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "ERNIE 5.5",
+    "accent": "#059669",
+    "title": "百度开源 <span class='num'>ERNIE 5.5</span> Flash Base",
+    "broll": [
+     {
+      "img": "broll/ai-news-1106/card-ernie.png",
+      "cap": "官方发布页:11/5",
+      "src": "来源:ernie.baidu.com 11/5",
+      "f1": 0.05,
+      "f2": 0.55
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "280B MoE",
+      "d": "总参 <b>2800 亿</b>、每 token 激活约 <b>140 亿</b>,混合注意力设计,<span class='kw'>33.5 万亿 token</span> 从头预训。"
+     },
+     {
+      "g": "✦",
+      "t": "Base 定位",
+      "d": "放出的是<span class='kw'>原始预训练基座</span>:给研究者一个固定起点,继续训练与评测不必重跑预训。"
+     },
+     {
+      "g": "№",
+      "t": "HuggingFace 开源",
+      "d": "权重已上 <b>HuggingFace</b>(baidu/ERNIE-5.5-Flash-Base),官方博客同步说明。"
+     },
+     {
+      "g": "⟳",
+      "t": "读数待补",
+      "d": "AA 暂只收录百度两款旧模型,<span class='kw'>5.5 Flash Base 读数未出</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "Meta 收编",
+    "accent": "#b45309",
+    "title": "Meta 收购 AI 编码编排工具 <span class='num'>Conductor</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1106/card-conductor.png",
+      "cap": "TechCrunch:11/5 报道",
+      "src": "来源:techcrunch.com 11/5",
+      "f1": 0.05,
+      "f2": 0.55
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "收购落地",
+      "d": "Meta 收购 <b>Conductor</b>——让工程师同时管理多个 AI 编码智能体的工具;金额未披露。"
+     },
+     {
+      "g": "№",
+      "t": "云服务将关",
+      "d": "Conductor Cloud <span class='kw'>11/20 关停</span>,13 日起只读,用户数据随后删除。"
+     },
+     {
+      "g": "✦",
+      "t": "巨头上桌",
+      "d": "科技媒体解读:Meta 正式<span class='kw'>加入 AI 编码赛道</span>争夺,为其自有模型补工具链。"
+     },
+     {
+      "g": "⟳",
+      "t": "风向",
+      "d": "编码工具成为巨头收购标的热门品类,<span class='kw'>独立开发者的出口</span>变窄。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,一家造芯片的公司,顺手放了个前沿模型。前谷歌团队创办的 Ricursive Intelligence 发布 Ripple-65B 预览版:六百五十亿参数的稠密模型,十二万亿 token 从头预训,Apache 二点零协议开源。他们的主线其实是用 AI 设计 AI 芯片,Ripple 就是芯片设计平台背后的那个模型的通用变体。官方宣称它在智能体编码基准上拿下美国开源权重的最好成绩,赢过体量十五倍的开源模型。要提醒一句:这是厂商自选基准的说法,Artificial Analysis 的官方读数还没出,先看后评。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,百度把预训练底座直接端出来了。ERNIE 5.5 Flash Base 开源上线 HuggingFace:总参数两千八百亿的混合专家架构,每个 token 只激活大约一百四十亿,混合注意力设计,三十三点五万亿 token 从头预训。它的定位很特别——不是聊天模型,而是给研究者一个固定的预训练基座,继续训练和评测都不用重跑最烧钱的那一步。Artificial Analysis 暂时只收录了百度两款旧模型,这个新底座的读数还得等。开源底座从『锦上添花』变成『标准动作』,这场竞赛的门票越来越实打实了。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,Meta 下场买工具了。Meta 收购 Conductor——一个让工程师同时管理多个 AI 编码智能体的工具,收购金额没有披露。对用户最实际的影响:Conductor 云服务本月二十号直接关停,十三号起只读,随后开始删用户数据。科技媒体的解读很一致:Meta 正式加入 AI 编码赛道的争夺,给自己的模型补上工具链。对独立开发者来说,这也说明编码工具已经成了巨头收购的热门标的,想保持独立,窗口越来越窄。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Ripple-65B"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "ERNIE 5.5"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "Meta 收编"
+  }
+ ],
+ "stage": "news_stage.html"
+}

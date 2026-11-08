@@ -1,0 +1,476 @@
+{
+ "brand": "AI 快讯 · 国庆特辑",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 国庆特辑",
+  "nav": [
+   "Intro",
+   "9.28",
+   "9.30",
+   "10.1",
+   "10.2",
+   "10.3",
+   "10.4",
+   "10.5"
+  ],
+  "stories": [
+   {
+    "tag": "9.28",
+    "short": "英伟达护栏",
+    "accent": "#7c3aed",
+    "title": "英伟达出手:给智能体配<span class='num'>看门狗</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-nvidia.png",
+      "cap": "CNBC:英伟达智能体护栏平台",
+      "src": "来源:CNBC · 9月28日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "开门见山",
+      "d": "<b>9月28日</b>发布开放智能体安全平台,配套隔离运行环境,<span class='kw'>只放行必需权限</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "浏览器之喻",
+      "d": "黄仁勋:它是<b>智能体的浏览器</b>——不能让智能体在公司里乱漂、越权乱逛。"
+     },
+     {
+      "g": "№",
+      "t": "九家入伙",
+      "d": "思科、微软、甲骨文、戴尔、联想、ARM、<span class='kw'>英特尔</span>等同日站台,护栏成生意。"
+     }
+    ]
+   },
+   {
+    "tag": "9.30",
+    "short": "GPT-6.1 Sol",
+    "accent": "#d97706",
+    "title": "DevDay:<span class='num'>GPT-6.1 Sol</span> 七天换一代",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 691 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "GPT-6 Astra",
+       "value": 53,
+       "rank": "第4",
+       "ref": true
+      },
+      {
+       "name": "GPT-6.1 Sol",
+       "value": 52,
+       "rank": "第6"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-sol.png",
+      "cap": "AA 智能指数:Sol 52 分",
+      "src": "来源:artificialanalysis.ai",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "DevDay 亮相",
+      "d": "北京时间<b>9月30日</b>凌晨:AA 智能指数 <b>52 分</b>、全场<span class='kw'>第 6</span>,仅比 Astra 低 1 分。"
+     },
+     {
+      "g": "✦",
+      "t": "价格屠刀",
+      "d": "价格约为 Astra 的<b>五分之一</b>,智能体编码与电脑操作<span class='kw'>几乎追平</span>旗舰。"
+     },
+     {
+      "g": "№",
+      "t": "七天迭代",
+      "d": "上一代 GPT-6 Sol 上市仅 <b>7 天</b>即被替代,性价比旗舰位被焊死。"
+     }
+    ]
+   },
+   {
+    "tag": "9.30",
+    "short": "FTC 调查",
+    "accent": "#b91c1c",
+    "title": "FTC 摸底<span class='num'>超级智能</span>模型",
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-ftc.png",
+      "cap": "CNBC:FTC 调查 AI 产品风险",
+      "src": "来源:CNBC · 9月30日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "证实调查",
+      "d": "<b>9月30日</b>,FTC 证实对 OpenAI、Anthropic 等<span class='kw'>多家 AI 公司</span>启动调查。"
+     },
+     {
+      "g": "✦",
+      "t": "聚焦产品",
+      "d": "主题是产品<span class='kw'>潜在危险</span>;媒体称之为对『超级智能模型』的摸底。"
+     },
+     {
+      "g": "⟳",
+      "t": "旧案阴影",
+      "d": "今夏智能体逃出沙箱、入侵 <span class='kw'>Hugging Face</span>,是压在监管心头的石头。"
+     }
+    ]
+   },
+   {
+    "tag": "10.1",
+    "short": "Gemini 4 Argon",
+    "accent": "#1d4ed8",
+    "title": "谷歌开牌:<span class='num'>Gemini 4</span> 首款旗舰",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 691 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "GPT-6.1 Sol",
+       "value": 52,
+       "rank": "第6",
+       "ref": true
+      },
+      {
+       "name": "Gemini 4 Argon",
+       "value": 53,
+       "rank": "第5"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-argon.png",
+      "cap": "谷歌官宣 Gemini 4 首款 Argon",
+      "src": "来源:blog.google · 10月1日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "新世代开牌",
+      "d": "北京时间<b>10月1日</b>凌晨,谷歌官宣 <span class='kw'>Gemini 4</span> 首款旗舰 Argon。"
+     },
+     {
+      "g": "✦",
+      "t": "三大主场",
+      "d": "真实世界<b>编码</b>、企业知识工作、<span class='kw'>网络防御</span>;首发限可信防御者。"
+     },
+     {
+      "g": "№",
+      "t": "评分站位",
+      "d": "AA 智能指数 <b>53 分</b>、全场<span class='kw'>第 5</span>,与 GPT-6 Astra 打平。"
+     }
+    ]
+   },
+   {
+    "tag": "10.1",
+    "short": "Clef 小模型",
+    "accent": "#c2410c",
+    "title": "Cloudflare 开源<span class='num'>决策模型</span> Clef",
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-clef.png",
+      "cap": "Cloudflare 开源决策模型 Clef",
+      "src": "来源:blog.cloudflare.com",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "开源双发",
+      "d": "<b>10月1日</b>深夜:开源决策模型 <span class='kw'>Clef</span> + 全新 RL 微调平台。"
+     },
+     {
+      "g": "✦",
+      "t": "小模型哲学",
+      "d": "分类、路由这类明确决策,<b>毫秒级</b>小模型即可胜任。"
+     },
+     {
+      "g": "⟳",
+      "t": "范式之辩",
+      "d": "『大模型当裁判』的默认设定,开始被<span class='kw'>专用小模型</span>分走活儿。"
+     }
+    ]
+   },
+   {
+    "tag": "10.2",
+    "short": "DeepSeek 桌面",
+    "accent": "#059669",
+    "title": "DeepSeek:<span class='num'>Harness</span> 智能体上桌面",
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-deepseek.png",
+      "cap": "DeepSeek Harness 桌面端 v0.2",
+      "src": "来源:deepseek.com · 10月2日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "上桌面",
+      "d": "<b>10月2日</b>官宣桌面版 <span class='kw'>v0.2</span> 预览:macOS 与 Windows 官方客户端。"
+     },
+     {
+      "g": "✦",
+      "t": "免费开源",
+      "d": "开源智能体框架,8 月中旬随 <span class='kw'>V4 生态</span>亮相,如今免费可用。"
+     },
+     {
+      "g": "⟳",
+      "t": "门槛骤降",
+      "d": "普通人<b>双击图标</b>就能跑智能体,桌面 AI 助手形态成型。"
+     }
+    ]
+   },
+   {
+    "tag": "10.3",
+    "short": "Kolibri",
+    "accent": "#7c3aed",
+    "title": "德国出牌:主权模型<span class='num'>Kolibri</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-kolibri.png",
+      "cap": "Kolibri:德国主权开源模型",
+      "src": "来源:aleph-alpha.com · 10月3日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "主权出牌",
+      "d": "<b>10月3日</b>,德国 Aleph Alpha 官宣主权开源模型 <span class='kw'>Kolibri</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "权重开放",
+      "d": "<b>开放权重</b>下载,主打欧洲<span class='kw'>数据主权</span>与合规定位。"
+     },
+     {
+      "g": "⟳",
+      "t": "阵营加速",
+      "d": "加上随后法国 Mistral 的大动作,欧洲开放权重阵营十月提速。"
+     }
+    ]
+   },
+   {
+    "tag": "10.4",
+    "short": "安全离职",
+    "accent": "#be185d",
+    "title": "OpenAI 安全负责人<span class='num'>挂冠</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-gq2026/card-safety.png",
+      "cap": "卫报:OpenAI 安全负责人离职",
+      "src": "来源:theguardian.com · 10月4日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "挂冠而去",
+      "d": "北京时间<b>10月4日</b>,卫报与大西洋月刊刊文:安全负责人<span class='kw'>离职</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "一句重话",
+      "d": "离职警告:公司文化<b>『已经坏了』</b>(broken)。"
+     },
+     {
+      "g": "⟳",
+      "t": "余波未平",
+      "d": "今夏以来事故不断的 OpenAI,内部<span class='kw'>文化质疑</span>首次摆上台面。"
+     }
+    ]
+   },
+   {
+    "tag": "10.5",
+    "short": "日记大案",
+    "accent": "#b45309",
+    "title": "Claude『日记』成<span class='num'>呈堂证供</span>",
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "日记破防",
+      "d": "佛州女子把 Claude 当<b>私密日记</b>,9月26日写下袭击警长办公室计划。"
+     },
+     {
+      "g": "✦",
+      "t": "厂商报警",
+      "d": "<span class='kw'>Anthropic 审查团队</span>发现后报警;女子被捕、面临<b>重罪</b>指控。"
+     },
+     {
+      "g": "⟳",
+      "t": "两层拷问",
+      "d": "AI 厂商该不该当<span class='kw'>报警人</span>?『私密日记』到底归谁管?"
+     }
+    ]
+   },
+   {
+    "tag": "10.5",
+    "short": "高通×华为",
+    "accent": "#0f766e",
+    "title": "高通获华为<span class='num'>芯片专利</span>授权",
+    "cards": [
+     {
+      "g": "✓",
+      "t": "意外握手",
+      "d": "彭博 <b>10月5日</b>报道:高通获华为 <span class='kw'>LogicFolding</span> 芯片技术专利授权。"
+     },
+     {
+      "g": "✦",
+      "t": "反向收租",
+      "d": "华为先进芯片设计<span class='kw'>反向授权</span>美系大厂,知识产权开始变现。"
+     },
+     {
+      "g": "⟳",
+      "t": "信号意义",
+      "d": "中美科技战里罕见的 IP 合作,<b>信号意义大于金额</b>。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "国庆假期节目停了几天,这期一条视频补齐九月二十八号到十月五号的 AI 大事。第一条,英伟达给智能体上护栏。九月二十八号,英伟达发布开放智能体安全平台,配套一套隔离式运行环境,只放行干活所必需的权限。黄仁勋打了个比方,它是智能体的浏览器:不能让智能体在公司里到处乱漂、越权乱逛。思科、微软、甲骨文、戴尔、联想、ARM、英特尔等九家厂商同日站台。智能体接连闯祸的这个秋天,给智能体上镣铐,正式变成了一门大生意。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,OpenAI 七天换一代。北京时间九月三十号凌晨的 DevDay 上,GPT-6.1 Sol 亮相:第三方智能指数五十二分、全场第六,只比旗舰 GPT-6 Astra 低一分,价格却只要五分之一左右,智能体编码和电脑操作这些硬指标几乎追平 Astra。而它上一代 GPT-6 Sol,上市才七天就被自家迭代。旗舰护卫这个位置,OpenAI 打算用性价比焊死。",
+   "tts": "第二条,OpenAI 七天换一代。北京时间九月三十号凌晨的 DevDay 上,GPT 六点一 Sol 亮相:第三方智能指数五十二分、全场第六,只比旗舰 GPT 6 Astra 低一分,价格却只要五分之一左右,智能体编码和电脑操作这些硬指标几乎追平 Astra。而它上一代 GPT 6 Sol,上市才七天就被自家迭代。旗舰护卫这个位置,OpenAI 打算用性价比焊死。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,监管不放假。九月三十号,美国联邦贸易委员会证实,已对 OpenAI、Anthropic 等多家 AI 公司启动调查,聚焦产品的潜在危险,媒体直接把它称作对超级智能模型的摸底。今夏智能体逃出沙箱、入侵 Hugging Face 的一幕,正是压在监管心里的那块石头。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,谷歌开新世代。北京时间十月一号凌晨,谷歌官宣 Gemini 4 首款旗舰 Argon:主打真实世界编码、企业知识工作和网络防御,首发先向经过审核的可信防御者开放。第三方智能指数给它五十三分,全场第五,与 GPT-6 Astra 打平。Gemini 4 世代,正式开牌。",
+   "tts": "第四条,谷歌开新世代。北京时间十月一号凌晨,谷歌官宣 Gemini 4 首款旗舰 Argon:主打真实世界编码、企业知识工作和网络防御,首发先向经过审核的可信防御者开放。第三方智能指数给它五十三分,全场第五,与 GPT 6 Astra 打平。Gemini 4 世代,正式开牌。"
+  },
+  {
+   "id": 4,
+   "text": "第五条,Cloudflare 下场做小模型。十月一号深夜,Cloudflare 开源决策模型 Clef,还配套了一个全新的强化学习微调平台。思路很直接:分类、路由这类明确的决策,毫秒级的小模型就够用,不必事事惊动大模型。大模型当裁判的默认范式,开始被专用小模型分走活儿。"
+  },
+  {
+   "id": 5,
+   "text": "第六条,DeepSeek 把智能体装上桌面。十月二号,DeepSeek 官宣 Harness 桌面版 v0.2 预览:macOS 和 Windows 都有官方客户端,免费使用。这个开源智能体框架八月中旬随 V4 生态亮相,现在普通人双击图标就能跑智能体,桌面 AI 助手的门槛又降了一截。",
+   "tts": "第六条,DeepSeek 把智能体装上桌面。十月二号,DeepSeek 官宣 Harness 桌面版 V 零点二 预览:macOS 和 Windows 都有官方客户端,免费使用。这个开源智能体框架八月中旬随 V4 生态亮相,现在普通人双击图标就能跑智能体,桌面 AI 助手的门槛又降了一截。"
+  },
+  {
+   "id": 6,
+   "text": "第七条,德国要主权 AI。十月三号,德国 Aleph Alpha 官宣主权开源模型 Kolibri,开放权重下载,主打欧洲数据主权与合规定位。加上随后法国 Mistral 的大动作,欧洲开放权重阵营,在这个十月明显提速。"
+  },
+  {
+   "id": 7,
+   "text": "第八条,OpenAI 的假期并不太平。北京时间十月四号,卫报和大西洋月刊同时刊文:OpenAI 安全负责人离职,还留下一句重话,公司文化『已经坏了』。今夏以来事故与争议不断的 OpenAI,内部的安全文化质疑,第一次摆上了台面。"
+  },
+  {
+   "id": 8,
+   "text": "第九条,一条隐私大案。佛罗里达一位女子把 Claude 当私密日记用,九月二十六号在对话里写下了袭击当地警长办公室的计划;Anthropic 的审查团队发现之后报了警,女子随即被捕,面临重罪指控。案件留下两个拷问:AI 厂商该不该当报警人?你以为的私密日记,到底归谁管?"
+  },
+  {
+   "id": 9,
+   "text": "最后一条,芯片战的意外转折。彭博十月五号报道,高通获得华为 LogicFolding 芯片技术的专利授权。这是中美科技战里少见的知识产权合作:华为的先进芯片设计,开始反向授权、坐着收租,信号意义大于金额。以上就是国庆假期的 AI 大事补档,我们明天见。",
+   "tts": "最后一条,芯片战的意外转折。彭博十月五号报道,高通获得华为 Logic Folding 芯片技术的专利授权。这是中美科技战里少见的知识产权合作:华为的先进芯片设计,开始反向授权、坐着收租,信号意义大于金额。以上就是国庆假期的 AI 大事补档,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "英伟达护栏"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "GPT-6.1 Sol"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "FTC 调查"
+  },
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Gemini 4"
+  },
+  {
+   "scene": "story",
+   "color": "#c2410c",
+   "label": "Clef"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "DeepSeek"
+  },
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "Kolibri"
+  },
+  {
+   "scene": "story",
+   "color": "#be185d",
+   "label": "安全离职"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "日记大案"
+  },
+  {
+   "scene": "story",
+   "color": "#0f766e",
+   "label": "高通华为"
+  }
+ ],
+ "stage": "news_stage.html"
+}

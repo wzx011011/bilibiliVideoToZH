@@ -1,0 +1,303 @@
+{
+ "brand": "AI 快讯 · 2026年10月25日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月25日",
+  "nav": [
+   "Intro",
+   "模型发布",
+   "安全与隐私",
+   "产品动态",
+   "要闻",
+   "行业风向"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "Kimi K3.1 Pro",
+    "accent": "#1d4ed8",
+    "title": "月之暗面 <span class='num'>K3.1 Pro</span>:55 分 Pareto 线",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 706 模型",
+     "rows": [
+      {
+       "name": "Claude Sonnet 5.5",
+       "value": 56,
+       "rank": "第2",
+       "ref": true
+      },
+      {
+       "name": "DeepSeek V4.1 Flash 1017",
+       "value": 45,
+       "rank": "第12",
+       "ref": true
+      },
+      {
+       "name": "Kimi K3.1 Pro",
+       "value": 55,
+       "rank": "第4"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-1025/card-kimi.png",
+      "cap": "官方博客:K3.1 Pro 与 Highspeed 双版本",
+      "src": "来源:kimi.ai · 10月24日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "双版本",
+      "d": "月之暗面发布 <span class='kw'>K3.1 Pro</span> 与 K3.1 Pro Highspeed 双版本。"
+     },
+     {
+      "g": "✦",
+      "t": "55 分",
+      "d": "AA 智能指数 <b>55 分</b>,登上<span class='kw'>Pareto 前沿线</span>,开源第一梯队。"
+     },
+     {
+      "g": "⟳",
+      "t": "追平闭源",
+      "d": "距 Claude Sonnet 5.5 仅<b>一分</b>,开源追平闭源的速度惊人。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "Dessa",
+    "accent": "#059669",
+    "title": "Block 发布<span class='num'>纯语音训练</span>对话模型 Dessa",
+    "broll": [
+     {
+      "img": "broll/ai-news-1025/card-dessa.png",
+      "cap": "block.xyz:trained only on speech",
+      "src": "来源:block.xyz/dessa · HN 500 分",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "只听不说文字",
+      "d": "Block 发布 <span class='kw'>Dessa</span>:只用语音数据训练的对话模型。"
+     },
+     {
+      "g": "✦",
+      "t": "原生语音",
+      "d": "不经过文字中转,<span class='kw'>天然语音交互</span>,保留语气与停顿。"
+     },
+     {
+      "g": "⟳",
+      "t": "训练哲学",
+      "d": "对话模型的<span class='kw'>另一种训练哲学</span>:绕开文本,直接学声音。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "Gmail 定向",
+    "accent": "#b91c1c",
+    "title": "Google:<span class='num'>Gmail/相册</span>数据或用于广告定向",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-cso.png",
+      "cap": "The Verge:隐私政策更新引争议",
+      "src": "来源:theverge.com · 北京时间10月24日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "政策更新",
+      "d": "Google 隐私政策更新:个人智能功能或用 <span class='kw'>Gmail、相册</span>数据做广告定向。"
+     },
+     {
+      "g": "✦",
+      "t": "边界争议",
+      "d": "『个人智能』与『广告』的<span class='kw'>边界</span>再起争议。"
+     },
+     {
+      "g": "⟳",
+      "t": "隐私狙击",
+      "d": "继手机号关联后,Google 隐私<span class='kw'>连环剧</span>再添一集。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "苹果研究设备",
+    "accent": "#0ea5e9",
+    "title": "Apple 开放<span class='num'>安全研究设备</span>计划",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-anthropic.png",
+      "cap": "security.apple.com:研究设备计划页面",
+      "src": "来源:security.apple.com · HN 171 分",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "发 iPhone 找洞",
+      "d": "Apple 上线<span class='kw'>安全研究设备</span>计划:给研究者发特制 iPhone 找漏洞。"
+     },
+     {
+      "g": "✦",
+      "t": "封闭转众包",
+      "d": "安全从封闭测试走向<span class='kw'>众包</span>,苹果态度明显转变。"
+     },
+     {
+      "g": "⟳",
+      "t": "行业呼应",
+      "d": "与 Google 连环隐私剧同期,<span class='kw'>安全牌</span>成共同选择。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "AI 诊断",
+    "accent": "#b91c1c",
+    "title": "微软:AI 诊断<span class='num'>准确率超医生两倍</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-anthropic.png",
+      "cap": "Gizmodo:Microsoft AI 诊断研究",
+      "src": "来源:gizmodo.com · HN 10/24",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "两倍准确",
+      "d": "微软称其诊断 AI 表现达<span class='kw'>医生两倍以上</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "真实病例",
+      "d": "研究基于真实临床病例验证,<span class='kw'>AI 问诊</span>从辅助走向主诊。"
+     },
+     {
+      "g": "⟳",
+      "t": "争议随行",
+      "d": "准确率之外,<span class='kw'>责任与伦理</span>问题随行。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "省电换算力",
+    "accent": "#d97706",
+    "title": "Google <span class='num'>付钱</span>请你少用电",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-anthropic.png",
+      "cap": "Computerworld:需求响应为数据中心让路",
+      "src": "来源:computerworld.com · 10月23日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "需求响应",
+      "d": "Google 推出需求响应:用户<span class='kw'>省电有补贴</span>,省下的给数据中心。"
+     },
+     {
+      "g": "✦",
+      "t": "与民争电",
+      "d": "算力与民<span class='kw'>争电</span>,开始用钞能力化解。"
+     },
+     {
+      "g": "⟳",
+      "t": "能源新局",
+      "d": "AI 耗电问题,正催生<span class='kw'>能源再分配</span>的新生意。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,月之暗面放大招。Kimi K3.1 Pro 与 K3.1 Pro Highspeed 双版本同日发布,第三方智能指数给到五十五分,登上 Pareto 前沿线,杀进全场前四,距 Claude Sonnet 5.5 只差一分。开源模型追平闭源的速度,已经快到以周为单位了。",
+   "tts": "第一条,月之暗面放大招。Kimi K3.1 Pro 与 K3.1 Pro Highspeed 双版本同日发布,第三方智能指数给到五十五分,登上 Pareto 前沿线,杀进全场前四,距 Claude Sonnet 五点五 只差一分。开源模型追平闭源的速度,已经快到以周为单位了。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,对话模型出了个异类。杰克·多西的 Block 公司发布 Dessa:一个只用语音数据训练的对话模型,完全不经文字中转,天生就会听语气、留停顿。当所有同行都在卷文本,Dessa 选择绕开文字直接学声音,这可能是语音交互的另一种未来。",
+   "tts": "第二条,对话模型出了个异类。杰克·多西的 Block 公司发布 Dessa:一个只用语音数据训练的对话模型,完全不经文字中转,天生就会听语气、留停顿。当所有同行都在卷文本,Dessa 选择绕开文字直接学声音,这可能是语音交互的另一种未来。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,谷歌的隐私连环剧再添一集。The Verge 报道,谷歌更新隐私政策:为个人智能功能引入的数据,可能被用于广告定向——也就是说,Gmail 邮件和相册照片,都可能变成广告投放的依据。继静默关联手机号之后,个人智能与广告的边界,又被谷歌自己往前推了一步。",
+   "tts": "第三条,谷歌的隐私连环剧再添一集。The Verge 报道,谷歌更新隐私政策:为个人智能功能引入的数据,可能被用于广告定向——也就是说,Gmail 邮件和相册照片,都可能变成广告投放的依据。继静默关联手机号之后,个人智能与广告的边界,又被谷歌自己往前推了一步。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,苹果的安全牌也在加码。苹果上线安全研究设备计划:向经过审核的安全研究者发放特制 iPhone,专用于挖掘系统漏洞。从封闭测试到主动众包,苹果的安全策略明显转变,和本周各家密集的隐私动作遥相呼应。",
+   "tts": "第四条,苹果的安全牌也在加码。苹果上线安全研究设备计划:向经过审核的安全研究者发放特制 iPhone,专用于挖掘系统漏洞。从封闭测试到主动众包,苹果的安全策略明显转变,和本周各家密集的隐私动作遥相呼应。"
+  },
+  {
+   "id": 4,
+   "text": "第五条,AI 问诊再进一步。微软称其诊断 AI 在真实临床病例验证中,表现达到医生的两倍以上。AI 问诊从辅助走向主诊,准确率之外,责任归属和伦理边界的问题也随之而来。",
+   "tts": "第五条,AI 问诊再进一步。微软称其诊断 AI 在真实临床病例验证中,表现达到医生的两倍以上。AI 问诊从辅助走向主诊,准确率之外,责任归属和伦理边界的问题也随之而来。"
+  },
+  {
+   "id": 5,
+   "text": "最后一条,算力与民争电,有了新解法。谷歌推出需求响应计划:用户在高峰期少用电就能拿补贴,省下来的电力,留给自家数据中心。AI 的耗电问题,正在催生能源再分配的新生意。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Kimi K3.1 Pro"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "Dessa"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "Gmail 定向"
+  },
+  {
+   "scene": "story",
+   "color": "#0ea5e9",
+   "label": "苹果研究设备"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "AI 诊断"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "省电换算力"
+  }
+ ],
+ "stage": "news_stage.html"
+}

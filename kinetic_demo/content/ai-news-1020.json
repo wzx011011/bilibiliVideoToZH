@@ -1,0 +1,258 @@
+{
+ "brand": "AI 快讯 · 2026年10月20日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月20日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "模型发布",
+   "安全与隐私",
+   "开源生态",
+   "行业风向"
+  ],
+  "stories": [
+   {
+    "tag": "要闻",
+    "short": "Linux 7.3",
+    "accent": "#1d4ed8",
+    "title": "Linux 7.3 <span class='num'>正式发布</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1020/card-linux.png",
+      "cap": "LWN:Linus 签发 7.3 正式版",
+      "src": "来源:lwn.net · 10月19日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "转正",
+      "d": "Linus 签发 7.3 正式版,含上周<span class='kw'>AI 辅助重写</span>的缓存读取改进。"
+     },
+     {
+      "g": "✦",
+      "t": "一周转正",
+      "d": "上周他还在等 7.3-rc7,本周正式版落地。"
+     },
+     {
+      "g": "⟳",
+      "t": "历史性一步",
+      "d": "AI 的 patch 合入主线,只隔了<span class='kw'>一个 rc 周期</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "DS-1017 评分",
+    "accent": "#059669",
+    "title": "V4.1-Flash-1017 评分出炉:<span class='num'>45 分</span>",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 704 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "Qwen3.8 Max",
+       "value": 45,
+       "rank": "第11",
+       "ref": true
+      },
+      {
+       "name": "DeepSeek V4.1 Flash 1017",
+       "value": 45,
+       "rank": "第11"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-1020/card-dsaa.png",
+      "cap": "AA 官方页:45 分,同类 121 模型中第 2",
+      "src": "来源:artificialanalysis.ai · 10月20日读数",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "45 分",
+      "d": "AA 智能指数 <b>45 分</b>,较底座 39 分<span class='kw'>暴涨 6 分</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "追平双雄",
+      "d": "追平 <span class='kw'>Qwen3.8 Max</span> 与 GLM-5.3;同类 121 模型中排<b>第 2</b>。"
+     },
+     {
+      "g": "⟳",
+      "t": "配置豪华",
+      "d": "<b>1M</b> 上下文、MIT 协议、<b>210 tokens/s</b>,主打推理速度。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "智能体军团",
+    "accent": "#b91c1c",
+    "title": "AI 智能体军团<span class='num'>攻入两巨头</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1020/card-jd.png",
+      "cap": "The Verge:自动化侦察、破防、窃取一条龙",
+      "src": "来源:theverge.com · 10月19日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "军团作战",
+      "d": "黑客用一支 <span class='kw'>AI 智能体军团</span>,相继攻入 John Deere 与 SharkNinja。"
+     },
+     {
+      "g": "✦",
+      "t": "全自动",
+      "d": "侦察、破防、窃取<span class='kw'>一条龙</span>,全程自动化完成。"
+     },
+     {
+      "g": "⟳",
+      "t": "性质变了",
+      "d": "上周还说『围栏没扎好』,这周是<span class='kw'>真打进门了</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "开源生态",
+    "short": "去味微调",
+    "accent": "#7c3aed",
+    "title": "Qwen3-4B<span class='num'>『去味』微调</span>走红",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-anthropic.png",
+      "cap": "社区:把 AI 写作腔调训练掉的开源微调",
+      "src": "来源:Hacker News · 10月19日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "把腔调炼掉",
+      "d": "社区微调版把 Qwen3-4B 的 <span class='kw'>AI 写作腔调</span>当训练目标『炼』掉。"
+     },
+     {
+      "g": "✦",
+      "t": "一测便知?",
+      "d": "『这是 AI 写的』一测便知的时代,正被社区<span class='kw'>一点点修掉</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "开源趣味",
+      "d": "不用等官方,社区<span class='kw'>自己动手</span>改模型,已成开源生态日常。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "IPO 信托",
+    "accent": "#d97706",
+    "title": "WSJ:笼罩 Anthropic IPO 的<span class='num'>神秘信托</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1020/card-wsj.png",
+      "cap": "WSJ 调查:特殊信托结构浮出水面",
+      "src": "来源:wsj.com · 10月19日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "WSJ 调查",
+      "d": "WSJ:Anthropic IPO 之前,<span class='kw'>特殊信托结构</span>浮出水面。"
+     },
+     {
+      "g": "✦",
+      "t": "三角关系",
+      "d": "控制权、上市与安全的<span class='kw'>三角关系</span>,硅谷最难解的治理题。"
+     },
+     {
+      "g": "⟳",
+      "t": "连环剧",
+      "d": "窃听案、开除潮之后,Anthropic 的故事<span class='kw'>转入资本篇</span>。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,Linux 7.3 正式发布。上周我们说过,Linus 在等 7.3-rc7 的空档,用 Claude Code 重写了内核的缓存读取逻辑;本周,7.3 正式版落地,那个 AI 辅助重写的补丁,随正式版一起合入了主线。从 AI 起草代码,到合入全球数百万台服务器运行的内核,只隔了一个 rc 周期。开源世界给 AI 递出的第一张正式工牌,就挂在 Linux 门上了。",
+   "tts": "第一条,Linux 7.3 正式发布。上周我们说过,Linus 在等 7.3-rc7 的空档,用 Claude Code 重写了内核的缓存读取逻辑;本周,7.3 正式版落地,那个 AI 辅助重写的补丁,随正式版一起合入了主线。从 AI 起草代码,到合入全球数百万台服务器运行的内核,只隔了一个 rc 周期。开源世界给 AI 递出的第一张正式工牌,就挂在 Linux 门上了。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,评分出了。上周五 DeepSeek 上新的 V4.1-Flash-1017,当时评分还没出;现在第三方智能指数给到四十五分,比底座的三十九分暴涨六分,直接追平 Qwen3.8 Max 和 GLM-5.3,在同类一百二十一个模型里排第二。配置也亮眼:一百万 token 上下文、MIT 协议随便商用、输出速度每秒二百一十个 token。开源赛道的排位赛,越来越像神仙打架。",
+   "tts": "第二条,评分出了。上周五 DeepSeek 上新的 V 四点一 Flash 一零一七,当时评分还没出;现在第三方智能指数给到四十五分,比底座的三十九分暴涨六分,直接追平 Qwen 三点八 Max 和 GLM 五点三,在同类一百二十一个模型里排第二。配置也亮眼:一百万 token 上下文、MIT 协议随便商用、输出速度每秒二百一十个 token。开源赛道的排位赛,越来越像神仙打架。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,智能体军团真的打上门了。The Verge 报道,一名黑客用一支 AI 智能体军团,相继攻入了农机巨头约翰迪尔和消费品公司 SharkNinja,侦察、破防、窃取,全程自动化一条龙。上周安全专家还说,所谓 AI 流氓只是围栏没扎好;这周的剧情升级了——这次是有人主动带着 AI 军团,真打进了两家上市公司的门。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,社区又整活了。一个把 Qwen3-4B 的 AI 写作腔调当训练目标炼掉的开源微调,在黑客新闻走红。那种一眼就能看出这是 AI 写的文风,正在被社区一点点修掉。不等官方出手,开发者自己动手给模型改脾气,已经是开源生态的日常操作。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,华尔街日报把镜头对准了 Anthropic 的钱袋子。在上市传闻甚嚣尘上之际,一个笼罩着 IPO 的特殊信托结构浮出水面:控制权、上市与安全承诺,构成了硅谷最难解的三角关系。从窃听案、开除潮,到如今的资本篇,这家公司的故事,越来越像一部连续剧了。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Linux 7.3"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "DS 评分"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "智能体军团"
+  },
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "去味微调"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "IPO 信托"
+  }
+ ],
+ "stage": "news_stage.html"
+}

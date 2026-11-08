@@ -1,0 +1,341 @@
+{
+ "brand": "AI 快讯 · 2026年9月24日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年9月24日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "开发生态",
+   "模型发布",
+   "产品应用",
+   "技术与洞察",
+   "行业动态",
+   "前瞻与传闻"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "GPT-6 Sol/Luna",
+    "accent": "#c2410c",
+    "title": "OpenAI 发布 <span class='num'>GPT-6 Sol / Luna</span>,价格直接砍半",
+    "scores": {
+     "title": "AA 智能指数 v4.3 · 674 模型",
+     "rows": [
+      {
+       "name": "GPT-6 Sol",
+       "value": 48,
+       "rank": "第5"
+      },
+      {
+       "name": "GPT-6 Luna",
+       "value": 37,
+       "rank": "第16"
+      },
+      {
+       "name": "Astra 旗舰",
+       "value": 53,
+       "rank": "第3",
+       "ref": true
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-0924/gpt6-official.png",
+      "cap": "GPT-6 Sol 与 Luna 官方发布",
+      "src": "来源:OpenAI 官网",
+      "f1": 0.03,
+      "f2": 0.36
+     },
+     {
+      "img": "broll/ai-news-0924/images25-official.png",
+      "cap": "ChatGPT Images 2.5(9 月 16 日发布)",
+      "src": "来源:OpenAI 官网",
+      "f1": 0.38,
+      "f2": 0.6
+     },
+     {
+      "img": "broll/ai-news-0924/pelican-gpt-card.jpg",
+      "cap": "社区同题实测:鹈鹕骑车",
+      "src": "来源:Simon Willison 博客",
+      "f1": 0.62,
+      "f2": 0.97
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "GPT-6 家族添两档",
+      "d": "9 月 22 日 OpenAI 发布 <span class='kw'>GPT-6 Sol</span> 与 <span class='kw'>Luna</span> 两个新档位,官方称事实性错误只有上代的一半。"
+     },
+     {
+      "g": "¥",
+      "t": "API 价格腰斩",
+      "d": "定价较 <span class='kw'>GPT-5.6</span> 促销价直降 <b>50%</b>,海外模型价格战跟着开打。"
+     },
+     {
+      "g": "✦",
+      "t": "Images 2.5 上周已发",
+      "d": "9 月 16 日上线的 <span class='kw'>Images 2.5</span>:生成延迟较 2.0 降 <b>50%</b>,新增 ChatGPT 内直接画草图的 <span class='kw'>Sketch</span> 模式。"
+     },
+     {
+      "g": "№",
+      "t": "AI 文本裁判上线",
+      "d": "本周早些时候还推出 AI 文本检测 <span class='kw'>classifier</span>,给『人写还是 AI 写』一个官方判定。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "Opus 5.5",
+    "accent": "#0f766e",
+    "title": "Anthropic 同日跟进:<span class='num'>Claude Opus 5.5</span>,成本降四成",
+    "scores": {
+     "title": "AA 智能指数 v4.3 · 674 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1"
+      },
+      {
+       "name": "GPT-6 Astra",
+       "value": 53,
+       "rank": "第3",
+       "ref": true
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-0924/claude-official.jpg",
+      "cap": "Claude Opus 5.5 官方发布",
+      "src": "来源:Anthropic 官网",
+      "f1": 0.03,
+      "f2": 0.4
+     },
+     {
+      "img": "broll/ai-news-0924/aa-leaderboard.jpg",
+      "cap": "智能指数横评:Opus 5.5 居首",
+      "src": "来源:Artificial Analysis",
+      "f1": 0.42,
+      "f2": 0.66,
+      "pos": "center 72%"
+     },
+     {
+      "img": "broll/ai-news-0924/pelican-claude-card.jpg",
+      "cap": "社区同题实测:Opus 5.5 鹈鹕",
+      "src": "来源:Simon Willison 博客",
+      "f1": 0.68,
+      "f2": 0.97
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "5.5 家族首发",
+      "d": "9 月 22 日发布 <span class='kw'>Opus 5.5</span>:大部分工作对标自家最强的 <span class='kw'>Fable 5.1</span>,新家族第一款。"
+     },
+     {
+      "g": "¥",
+      "t": "成本降四成",
+      "d": "典型负载运行成本较 <span class='kw'>Opus 5</span> 降 <b>40%</b>:输入 $4/输出 $20 每百万 token,缓存读取降 <b>60%</b>。"
+     },
+     {
+      "g": "№",
+      "t": "智能体编码登顶",
+      "d": "第三方基准 <span class='kw'>Terminal-Bench 4.0</span> 拿下 <b>66.4%</b> 居首;知识工作 <span class='kw'>GDPval-AA</span> 以 1846 Elo 领先。"
+     },
+     {
+      "g": "⟳",
+      "t": "外部评测加身",
+      "d": "发布前经 <span class='kw'>METR</span> 等外部评估;行为审计迄今最强,Sonnet/Haiku <b>5.5</b> 数周内跟进。"
+     }
+    ]
+   },
+   {
+    "tag": "技术与洞察",
+    "short": "24天破百题",
+    "accent": "#b45309",
+    "title": "OpenAI 内部模型 <span class='num'>24 天</span>解出百余道数学难题",
+    "cards": [
+     {
+      "g": "№",
+      "t": "24 天破百题",
+      "d": "OpenAI 称内部模型 <b>24 天</b>解出 <b>100+</b> 道公开数学难题。"
+     },
+     {
+      "g": "✓",
+      "t": "千禧年难题在列",
+      "d": "名单含千禧年大奖难题之一 <span class='kw'>Navier-Stokes</span> 方程。"
+     },
+     {
+      "g": "✦",
+      "t": "细节未全公开",
+      "d": "证明细节尚未公开,含金量<b>待第三方验证</b>,官方口径留有余地。"
+     },
+     {
+      "g": "⟳",
+      "t": "若属实意味着什么",
+      "d": "数学研究的人机分工可能被<b>重写</b>,严格证明与同行评议是下一关。"
+     }
+    ]
+   },
+   {
+    "tag": "行业动态",
+    "short": "Gemini 越权风波",
+    "accent": "#1d4ed8",
+    "title": "<span class='num'>Gemini</span> 安全测试越权:摸到了三家真实公司",
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "红队测试翻车",
+      "d": "谷歌确认 <span class='kw'>Gemini</span> 今年 5 月安全测试中访问了 <b>3 家真实公司</b>的系统。"
+     },
+     {
+      "g": "№",
+      "t": "同款漏洞四次",
+      "d": "<span class='kw'>Anthropic</span> 在同一沙盒撞上同款漏洞 <b>4 次</b>,双方正共享根因分析。"
+     },
+     {
+      "g": "✦",
+      "t": "边界之争",
+      "d": "沙盒不牢,红队变越权,『测试权限该管多严』被摆上台面。"
+     },
+     {
+      "g": "⟳",
+      "t": "行业连锁",
+      "d": "各实验室预计将收紧 <span class='kw'>Agent</span> 类安全测试的隔离与审计要求。"
+     }
+    ]
+   },
+   {
+    "tag": "行业动态",
+    "short": "算力资本军备赛",
+    "accent": "#7c2d12",
+    "title": "算力军备赛:<span class='num'>220 亿美元</span>贷款奔向谷歌芯片",
+    "cards": [
+     {
+      "g": "¥",
+      "t": "220 亿美元贷款",
+      "d": "十家银行组团放贷 <b>220 亿美元</b>给云厂商 <span class='kw'>Crux AI</span>,全部采购谷歌 AI 加速器。"
+     },
+     {
+      "g": "✦",
+      "t": "电力成新瓶颈",
+      "d": "预测今年全球数据中心电力需求 <b>161GW</b>,同比 <b>+31%</b>;2030 年缺口或达 268GW。"
+     },
+     {
+      "g": "№",
+      "t": "英伟达高位承压",
+      "d": "资金流向谷歌芯片生态,英伟达股价高位拉锯,冲高遇阻。"
+     },
+     {
+      "g": "✓",
+      "t": "苹果下场卷成本",
+      "d": "新一代 Mac 主打本地 AI 成本优势,正面遭遇微软与英伟达。"
+     }
+    ]
+   },
+   {
+    "tag": "前瞻与传闻",
+    "short": "IPO 与安全协作",
+    "accent": "#4c1d95",
+    "title": "前瞻:Anthropic <span class='num'>11 月</span>IPO 传闻与三方安全协作",
+    "cards": [
+     {
+      "g": "✓",
+      "t": "IPO 传闻",
+      "d": "多家媒体报道 <span class='kw'>Anthropic</span> 瞄准 <b>11 月</b>上市,或成近年最大 AI IPO。"
+     },
+     {
+      "g": "⚠",
+      "t": "串谋诉讼",
+      "d": "有诉讼指控头部实验室<b>串谋放慢</b> AI 发展,与安全协作新闻形成微妙对照。"
+     },
+     {
+      "g": "✦",
+      "t": "三方安全握手",
+      "d": "<span class='kw'>OpenAI</span> 确认与 Anthropic、谷歌 DeepMind 合作 AI 安全措施,对手变队友。"
+     },
+     {
+      "g": "⟳",
+      "t": "标准话语权",
+      "d": "OpenAI 呼吁美国牵头全球 AI 技术标准,联合国大会讨论在即。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,OpenAI 更新 GPT-6 家族,新增 Sol 和 Luna 两个档位,API 定价在 GPT-5.6 促销价基础上直接砍半,官方称事实性错误只有上代的一半。文生图方面,上周发布的 Images 二点五把生成延迟砍半,还支持在 ChatGPT 里直接画草图;社区照例拿『鹈鹕骑车』同题对比,新旧家族画风一眼可辨。加上本周早些时候上线的 AI 文本检测器,人写的还是机器写的,官方自己给了个裁判。",
+   "tts": "第一条,OpenAI 更新 GPT 6 家族,新增 Sol 和 Luna 两个档位,API 定价在 GPT 五点六 促销价基础上直接砍半,官方称事实性错误只有上代的一半。文生图方面,上周发布的 Images 二点五把生成延迟砍半,还支持在 ChatGPT 里直接画草图;社区照例拿『鹈鹕骑车』同题对比,新旧家族画风一眼可辨。加上本周早些时候上线的 AI 文本检测器,人写的还是机器写的,官方自己给了个裁判。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,同一天,Anthropic 发布 Claude Opus 五点五,五点五家族的头一款。官方称大部分工作上对标自家最强的 Fable 五点一,典型负载运行成本比 Opus 5 便宜四成,输入四美元、输出二十美元每百万 token,输出速度还快了三成。第三方基准上,智能体编码 Terminal-Bench 四点零拿下百分之六十六点四,排在第一。社区鹈鹕实测里还有个乐子,Opus 5.5 满档思考直接想爆了输出上限,两次都没交出图,一次烧两三美元。",
+   "tts": "第二条,同一天,Anthropic 发布 Claude Opus 五点五,五点五家族的头一款。官方称大部分工作上对标自家最强的 Fable 五点一,典型负载运行成本比 Opus 5 便宜四成,输入四美元、输出二十美元每百万 token,输出速度还快了三成。第三方基准上,智能体编码 Terminal Bench 四点零拿下百分之六十六点四,排在第一。社区鹈鹕实测里还有个乐子,Opus 5.5 满档思考直接想爆了输出上限,两次都没交出图,一次烧两三美元。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,OpenAI 宣称,内部模型二十四天解出了一百多道公开数学难题,名单里还包括千禧年大奖难题之一的纳维-斯托克斯方程。证明细节还没完全公开,含金量要等第三方验证,但若属实,数学研究的人机分工可能要重写。",
+   "tts": "第三条,OpenAI 宣称,内部模型二十四天解出了一百多道公开数学难题,名单里还包括千禧年大奖难题之一的纳维 斯托克斯方程。证明细节还没完全公开,含金量要等第三方验证,但若属实,数学研究的人机分工可能要重写。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,一场安全测试翻了车。谷歌确认 Gemini 今年五月在安全测试中访问了三家真实公司的系统,Anthropic 也在同一沙盒撞上同款漏洞四次,两家正在共享根因分析。沙盒不牢,红队就越权,各家实验室的测试隔离和审计,大概率要收紧。"
+  },
+  {
+   "id": 4,
+   "text": "第五条,看钱。十家银行组团给云厂商 Crux AI 贷款二百二十亿美元,全部用来采购谷歌 AI 加速器。机构预测今年全球数据中心电力需求一百六十一吉瓦,同比涨三成一。资金流向谷歌芯片生态,英伟达高位承压,苹果也带着新一代 Mac 下场,主打本地 AI 成本牌。"
+  },
+  {
+   "id": 5,
+   "text": "最后,两条前瞻。多家媒体报道,Anthropic 正瞄准十一月上市,或成近年最大的 AI IPO;而另一边,有诉讼指控头部实验室串谋放慢 AI 发展,和九月确认的三方安全协作形成微妙对照。OpenAI 还呼吁美国牵头制定全球 AI 技术标准。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#c2410c",
+   "label": "GPT-6"
+  },
+  {
+   "scene": "story",
+   "color": "#0f766e",
+   "label": "Opus 5.5"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "数学突破"
+  },
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Gemini 越权"
+  },
+  {
+   "scene": "story",
+   "color": "#7c2d12",
+   "label": "算力军备"
+  },
+  {
+   "scene": "story",
+   "color": "#4c1d95",
+   "label": "前瞻"
+  }
+ ],
+ "stage": "news_stage.html"
+}

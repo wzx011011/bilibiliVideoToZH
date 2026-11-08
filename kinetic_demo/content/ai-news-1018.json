@@ -1,0 +1,165 @@
+{
+ "brand": "AI 快讯 · 2026年10月18日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月18日",
+  "nav": [
+   "Intro",
+   "模型发布",
+   "技术与洞察"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "DS-1017",
+    "accent": "#1d4ed8",
+    "title": "DeepSeek 上新 <span class='num'>V4.1-Flash-1017</span>",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 704 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "DeepSeek V4.1 Flash",
+       "value": 39,
+       "rank": "第18",
+       "ref": true
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-1018/card-ds1017.png",
+      "cap": "Hugging Face 与 OpenRouter 同步上新",
+      "src": "来源:huggingface.co · 10月17日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "周五上新",
+      "d": "10月17日:DeepSeek <span class='kw'>V4.1-Flash-1017</span> 开放权重,HF 与 OpenRouter 同步。"
+     },
+     {
+      "g": "✦",
+      "t": "底座站位",
+      "d": "底座 V4.1 Flash AA <b>39 分</b>、全场<span class='kw'>第 18</span>;1017 更新版评分未出。"
+     },
+     {
+      "g": "⟳",
+      "t": "迭代速度",
+      "d": "评分还没追上,<span class='kw'>版本号</span>先卷起来了;开源赛道拼手速。"
+     }
+    ]
+   },
+   {
+    "tag": "技术与洞察",
+    "short": "ECDSA",
+    "accent": "#b91c1c",
+    "title": "Claude 揭开 <span class='num'>ECDSA</span> 曲线谜团",
+    "broll": [
+     {
+      "img": "broll/ai-news-1018/card-ecdsa.png",
+      "cap": "Anthropic 研究:追查签名曲线常数的真实起源",
+      "src": "来源:anthropic.com · 北京时间10月17日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "翻旧账",
+      "d": "Anthropic 研究:让 Claude 追查 ECDSA 签名曲线<span class='kw'>常数的真实起源</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "身世成谜",
+      "d": "密码学里那些『随便选的数字』,几十年<span class='kw'>没人说得清</span>来历。"
+     },
+     {
+      "g": "⟳",
+      "t": "新同事",
+      "d": "AI 开始替人类<span class='kw'>翻几十年的旧账</span>,连密码学的家底都要盘一遍。"
+     }
+    ]
+   },
+   {
+    "tag": "技术与洞察",
+    "short": "量子电路",
+    "accent": "#059669",
+    "title": "Claude 设计<span class='num'>高效量子电路</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1018/card-quantum.png",
+      "cap": "Anthropic 研究:用 Claude 探索量子电路设计",
+      "src": "来源:anthropic.com · 北京时间10月17日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "量子+AI",
+      "d": "Anthropic 研究:用 Claude 探索<span class='kw'>更高效的量子电路</span>设计。"
+     },
+     {
+      "g": "✦",
+      "t": "AI for Science",
+      "d": "从猜蛋白质到<span class='kw'>量子计算</span>,模型当科研同事成常态。"
+     },
+     {
+      "g": "⟳",
+      "t": "一周三连",
+      "d": "数学证明、曲线考古、量子电路——<span class='kw'>科研副驾</span>全周无休。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,DeepSeek 又上新了。10月17号,DeepSeek V4.1-Flash-1017 开放权重,Hugging Face 和 OpenRouter 同步上线,版本号直接用日期命名。底座 V4.1 Flash 在第三方智能指数上拿三十九分、全场第十八;一千零一十七更新版自己的评分还没出。评分都还没追上,版本号先卷起来了——开源赛道,现在拼的就是手速。",
+   "tts": "第一条,DeepSeek 又上新了。10月17号,DeepSeek V 四点一 Flash 一零一七 开放权重,Hugging Face 和 OpenRouter 同步上线,版本号直接用日期命名。底座 V 四点一 Flash 在第三方智能指数上拿三十九分、全场第十八;一零一七更新版自己的评分还没出。评分都还没追上,版本号先卷起来了——开源赛道,现在拼的就是手速。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,Anthropic 让 Claude 去翻密码学的旧账。新研究让 Claude 追查 ECDSA 数字签名曲线常数的真实起源——密码学里那些号称随便选的数字,几十年来没人说得清来历。让模型去考证这些常数的出身,听着像冷知识,其实是给信任体系做考古。AI 开始替人类翻旧账了,连密码学的家底都要盘一遍。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,Anthropic 同一天还发了另一篇研究:用 Claude 设计更高效的量子电路。从猜蛋白质结构,到考证密码学常数,再到量子电路设计,模型当科研同事这件事,正在成为常态。加上本周陶哲轩们关于 Math 二点零的激辩,科研这个行当,正在被 AI 从工具变成队友。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "DS-1017"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "ECDSA"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "量子电路"
+  }
+ ],
+ "stage": "news_stage.html"
+}

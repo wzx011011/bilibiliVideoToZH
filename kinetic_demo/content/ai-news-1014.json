@@ -1,0 +1,301 @@
+{
+ "brand": "AI 快讯 · 2026年10月14日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月14日",
+  "nav": [
+   "Intro",
+   "模型发布",
+   "要闻",
+   "安全与隐私",
+   "行业风向",
+   "产品动态"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "Muse Wonder",
+    "accent": "#1d4ed8",
+    "title": "Meta 发布 <span class='num'>Muse Wonder</span>:双模型上位",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 699 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "Muse Full",
+       "value": 56,
+       "rank": "第3",
+       "ref": true
+      },
+      {
+       "name": "Muse Wonder",
+       "value": 52,
+       "rank": "第7"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-1014/card-wonder.png",
+      "cap": "research.meta.ai:Wonder 主打个人与职业智能体",
+      "src": "来源:research.meta.ai · 北京时间10月13日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "双模型上岗",
+      "d": "Meta 官宣 <span class='kw'>Muse Wonder</span> 系列:主打个人与职业智能体,自带<span class='kw'>主动记忆/聚焦</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "AA 站位",
+      "d": "Wonder <b>52 分</b>全场<span class='kw'>第 7</span>;更大的 Muse Full <b>56 分</b>,追平 Sonnet 5.5。"
+     },
+     {
+      "g": "⟳",
+      "t": "梯队意义",
+      "d": "Meta 模型第一次<span class='kw'>真正站上第一梯队</span>,个人超级智能的野心写在标题里。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "GLM-Legal",
+    "accent": "#7c3aed",
+    "title": "智谱发布<span class='num'>GLM-Legal</span> 法律模型",
+    "broll": [
+     {
+      "img": "broll/ai-news-1014/card-glmlegal.png",
+      "cap": "z.ai 官宣:基于 GLM-5.3-Flash 的法律行业模型",
+      "src": "来源:z.ai · 10月12日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "法律垂直",
+      "d": "智谱 10月12日 发布 <span class='kw'>GLM-Legal</span>:基于轻量 GLM-5.3-Flash 打造。"
+     },
+     {
+      "g": "✦",
+      "t": "底座不弱",
+      "d": "GLM-5.3-Flash 在 AA 智能指数拿 <b>42 分</b>、全场<span class='kw'>第 14</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "行业下饺子",
+      "d": "通用能力卷完卷行业,法律只是<span class='kw'>下一个切口</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "Character.ai",
+    "accent": "#b91c1c",
+    "title": "Character.ai <span class='num'>申请破产</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1014/card-chai.png",
+      "cap": "官方博客:申请第十一章破产保护",
+      "src": "来源:blog.character.ai · 北京时间10月13日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "走进破产程序",
+      "d": "官方博客确认:申请<span class='kw'>第十一章破产保护</span>,北京时间 10月13日。"
+     },
+     {
+      "g": "✦",
+      "t": "开创者谢幕",
+      "d": "角色扮演赛道<span class='kw'>开创者</span>,核心团队此前已被谷歌收编。"
+     },
+     {
+      "g": "⟳",
+      "t": "商业化之问",
+      "d": "AI 应用的钱到底有多难赚?这份申请就是<span class='kw'>答案</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "守护进程",
+    "accent": "#b45309",
+    "title": "Codex CLI <span class='num'>自装守护进程</span>惹众怒",
+    "broll": [
+     {
+      "img": "broll/ai-news-1014/card-codex.png",
+      "cap": "HN 599 分:常驻自更新守护进程默认开启",
+      "src": "来源:GitHub issue/HN · 10月12-13日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "默认常驻",
+      "d": "用户发现 Codex CLI 从 0.157.0 起默认安装<span class='kw'>常驻守护进程</span>,还会自我更新。"
+     },
+     {
+      "g": "✦",
+      "t": "关都难关",
+      "d": "文档<span class='kw'>没写关闭方法</span>;有人翻出隐藏配置才关掉。"
+     },
+     {
+      "g": "⟳",
+      "t": "12GB 垃圾",
+      "d": "有人被历史版本吃掉 <b>12GB</b> 硬盘;HN <b>599 分</b>、292 条讨论。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "IMF 警告",
+    "accent": "#0f766e",
+    "title": "IMF:<span class='num'>AI 股市崩盘</span>威胁全球金融",
+    "broll": [
+     {
+      "img": "broll/ai-news-1014/card-imf.png",
+      "cap": "卫报:IMF 评估点名 AI 板块集中度风险",
+      "src": "来源:theguardian.com · 10月13日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "IMF 下场",
+      "d": "卫报 10月13日:IMF 评估点名 <span class='kw'>AI 板块集中度</span>,威胁全球金融稳定。"
+     },
+     {
+      "g": "✦",
+      "t": "上周预演",
+      "d": "收入不及预期、芯片股齐跌,<span class='kw'>波动</span>已经预演过一次。"
+     },
+     {
+      "g": "⟳",
+      "t": "狂欢看门",
+      "d": "IMF 都写进报告了,狂欢时刻记得<span class='kw'>看门</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "Intel D270",
+    "accent": "#0ea5e9",
+    "title": "Intel <span class='num'>D 系列数据中心 GPU</span> 上架",
+    "broll": [
+     {
+      "img": "broll/ai-news-1014/card-intel.png",
+      "cap": "Intel 官网:D270 主打大模型推理,最高 480GB",
+      "src": "来源:intel.com · 10月12-13日上线",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "D270 亮相",
+      "d": "Intel 官网上线数据中心 GPU <span class='kw'>D 系列</span>:旗舰 D270 最高 <b>480GB</b> LPDDR5X。"
+     },
+     {
+      "g": "✦",
+      "t": "主打推理",
+      "d": "口号直白:<span class='kw'>扩展推理,而非扩展机房</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "三强变四强",
+      "d": "推理算力市场,英伟达/AMD/谷歌之外,<span class='kw'>英特尔</span>正式入座。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,Meta 半路杀出。Meta 研究院发布 Muse Wonder 系列智能体模型:Wonder 主打个人与职业智能体场景,自带主动记忆和主动聚焦,能记住你在意的事、持续朝目标干活;更大的 Wonder Full 面向订阅用户。第三方智能指数给 Wonder 打出五十二分、全场第七;Full 拿到五十六分,追平 Claude Sonnet 5.5,仅次于 Opus。Meta 的模型,第一次真正站上了第一梯队。",
+   "tts": "第一条,Meta 半路杀出。Meta 研究院发布 Muse Wonder 系列智能体模型:Wonder 主打个人与职业智能体场景,自带主动记忆和主动聚焦,能记住你在意的事、持续朝目标干活;更大的 Wonder Full 面向订阅用户。第三方智能指数给 Wonder 打出五十二分、全场第七;Full 拿到五十六分,追平 Claude Sonnet 五点五,仅次于 Opus。Meta 的模型,第一次真正站上了第一梯队。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,智谱出法律专业模型。10月12号,Z.ai 发布 GLM-Legal,基于轻量的 GLM-5.3-Flash 打造的法律垂直模型;底座本身不弱,在第三方智能指数上拿四十二分、全场第十四。大模型卷完通用能力,开始按行业下饺子,法律只是下一个切口。",
+   "tts": "第二条,智谱出法律专业模型。10月12号,Z AI 发布 GLM Legal,基于轻量的 GLM 五点三 Flash 打造的法律垂直模型;底座本身不弱,在第三方智能指数上拿四十二分、全场第十四。大模型卷完通用能力,开始按行业下饺子,法律只是下一个切口。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,一个时代的注脚。Character.ai 官宣申请第十一章破产保护。这个开创了角色扮演赛道的明星公司,巅峰时风头无两,核心团队此前已被谷歌收编,如今正式走进破产程序。AI 应用的商业化到底有多难,这份破产申请就是答案。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,OpenAI 又惹众怒,这次惹的是工程师。有用户发现,Codex 命令行工具从零点一五七版起,默认在系统里安装一个常驻后台守护进程,还会自我更新,官方文档里连关闭方法都没写;有人翻出隐藏配置才把它关掉,还有人被历史版本吃掉了十二个 GB 的硬盘。问题帖在黑客新闻拿到五百九十九分、近三百条讨论。AI 工具装进用户电脑,边界感同样重要。"
+  },
+  {
+   "id": 4,
+   "text": "第五条,国际货币基金组织下场了。卫报报道,IMF 在最新评估里点名 AI 板块的集中度风险,说 AI 带来的股市崩盘,正在威胁全球金融稳定。上周我们刚说过收入不及预期、芯片股齐跌;现在,连 IMF 都把它写进了金融稳定报告。狂欢时刻,记得看门。"
+  },
+  {
+   "id": 5,
+   "text": "第六条,英特尔入局推理算力。Intel 数据中心 GPU D 系列官网上线,旗舰 D270 最高搭配四百八十 GB 的 LPDDR5X 内存,口号说得直白:扩展推理,而不是扩展机房。AI 推理侧的蛋糕越大,英特尔的算盘也打得越响。今天的 AI 快讯就到这里,我们明天见。",
+   "tts": "第六条,英特尔入局推理算力。Intel 数据中心 GPU D 系列官网上线,旗舰 D 270 最高搭配四百八十 GB 的 LPDDR5X 内存,口号说得直白:扩展推理,而不是扩展机房。AI 推理侧的蛋糕越大,英特尔的算盘也打得越响。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Muse Wonder"
+  },
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "GLM-Legal"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "破产"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "守护进程"
+  },
+  {
+   "scene": "story",
+   "color": "#0f766e",
+   "label": "IMF 警告"
+  },
+  {
+   "scene": "story",
+   "color": "#0ea5e9",
+   "label": "Intel D270"
+  }
+ ],
+ "stage": "news_stage.html"
+}

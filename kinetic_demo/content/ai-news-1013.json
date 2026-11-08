@@ -1,0 +1,191 @@
+{
+ "brand": "AI 快讯 · 2026年10月13日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月13日",
+  "nav": [
+   "Intro",
+   "技术与洞察",
+   "开源生态",
+   "产品动态",
+   "安全与隐私"
+  ],
+  "stories": [
+   {
+    "tag": "技术与洞察",
+    "short": "Karpathy",
+    "accent": "#1d4ed8",
+    "title": "Karpathy:<span class='num'>认知鸿沟</span>在扩大",
+    "broll": [
+     {
+      "img": "broll/ai-news-1013/card-karpathy.png",
+      "cap": "HN 678 分、967 条讨论:认知鸿沟之辩",
+      "src": "来源:Karpathy X 帖 · 北京时间10月12日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "一句话炸锅",
+      "d": "Karpathy 发推:大家对 LLM 能力上限的<span class='kw'>共识鸿沟</span>,正在越拉越大。"
+     },
+     {
+      "g": "✦",
+      "t": "全网激辩",
+      "d": "HN <b>678 分、967 条</b>讨论:乐观派与泼冷水派各说各话。"
+     },
+     {
+      "g": "⟳",
+      "t": "症结",
+      "d": "能力上限没人说得清,<span class='kw'>预期管理</span>失灵,才是行业真风险。"
+     }
+    ]
+   },
+   {
+    "tag": "开源生态",
+    "short": "Linus 上 AI",
+    "accent": "#d97706",
+    "title": "Linus 用 <span class='num'>Claude Code</span> 改内核",
+    "broll": [
+     {
+      "img": "broll/ai-news-1013/card-linus.png",
+      "cap": "Phoronix:AI 起草、Linus 监督的内核补丁",
+      "src": "来源:phoronix.com · 10月12日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "亲手示范",
+      "d": "等 7.3-rc7 期间,Linus 用 <span class='kw'>Claude Code</span> 重写内核缓存读取逻辑。"
+     },
+     {
+      "g": "✦",
+      "t": "分工明确",
+      "d": "代码、测试、审查、提交信全由 <b>AI 起草</b>,他本人监督把关。"
+     },
+     {
+      "g": "⟳",
+      "t": "老黑客态度",
+      "d": "此前他刚演示 AI 清理老代码<span class='kw'>顺手挖出 bug</span>——工具论者的实践课。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "Maia 300",
+    "accent": "#059669",
+    "title": "微软公开 <span class='num'>Maia 300</span> 架构细节",
+    "broll": [
+     {
+      "img": "broll/ai-news-1013/card-maia.png",
+      "cap": "Azure 官方博客:Maia 300 原型芯片",
+      "src": "来源:azure.microsoft.com · 北京时间10月12日晚",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "掀开内页",
+      "d": "Azure 官方博客深潜<span class='kw'>自研芯片</span> Maia 300 的架构细节。"
+     },
+     {
+      "g": "✦",
+      "t": "对标布局",
+      "d": "对标英伟达 GPU 与<span class='kw'>谷歌 TPU</span> 的自研算力,第一次亮底牌。"
+     },
+     {
+      "g": "⟳",
+      "t": "去英伟达化",
+      "d": "云巨头的<span class='kw'>自研算力</span>进行时,议价与自主两手抓。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "牛奶论",
+    "accent": "#b91c1c",
+    "title": "微软总裁:<span class='num'>监管不如牛奶</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1013/card-milk.png",
+      "cap": "卫报:Brad Smith 称 AI 受监管还不如牛奶",
+      "src": "来源:theguardian.com · 10月12日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "牛奶论",
+      "d": "微软总裁 <span class='kw'>Brad Smith</span>:AI 受到的监管,还不如一杯牛奶严格。"
+     },
+     {
+      "g": "✦",
+      "t": "Guardian 刊发",
+      "d": "<b>10月12日</b>卫报长文,呼吁建立真正的安全规则。"
+     },
+     {
+      "g": "⟳",
+      "t": "两天连打",
+      "d": "继纳德拉『假定模型已沦陷』后,微软<span class='kw'>两天连打安全牌</span>。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,Karpathy 又发言了。北京时间昨天凌晨,这位前特斯拉 AI 总监、OpenAI 创始成员发推说:大家对大模型能力上限的共识鸿沟,正在越拉越大。一句话在黑客新闻上炸出六百七十八分、九百多条讨论。乐观派说模型已经能改写数学证明了,泼冷水派说那不过是在刷已有结论。吵到最后其实是一个结论:能力上限没人说得清,预期管理失灵,才是这个行业真正的风险。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,Linus 亲自上手 AI 了。Phoronix 报道,李纳斯在等 Linux 七点三 RC7 的空档,用 Claude Code 重写了内核的缓存文件读取逻辑:代码、测试、审查记录和提交信全由 AI 起草,他本人负责监督把关。而这已经不是他第一次演示,上一次用 AI 清理老代码,还顺手多挖出了几个 bug。三十多年把着内核合并权的老黑客,现在每天的工作变成了给 AI 判卷。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,微软的自研芯片掀开内页。Azure 官方博客发布长文,深潜 Maia 三百的架构细节:这是微软对标英伟达 GPU 和谷歌 TPU 的自研算力底牌。云三巨头里,自研芯片的军备竞赛全面开打,去英伟达化,既是议价筹码,也是自主权保险。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,微软连打两张安全牌。继昨天纳德拉说应该假定所有模型都已被入侵之后,今天卫报刊发微软总裁 Brad Smith 的警告:AI 受到的监管,还不如一杯牛奶严格。一杯牛奶从牧场到货架要过几十道检查,而一个大模型上线,几乎不需要任何前置审查。这话从全球市值前列的公司嘴里说出来,分量不轻。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "认知鸿沟"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "Linus 上 AI"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "Maia 300"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "牛奶论"
+  }
+ ],
+ "stage": "news_stage.html"
+}

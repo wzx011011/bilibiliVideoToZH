@@ -1,0 +1,256 @@
+{
+ "brand": "AI 快讯 · 2026年10月17日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月17日",
+  "nav": [
+   "Intro",
+   "模型发布",
+   "要闻",
+   "产品动态",
+   "行业风向"
+  ],
+  "stories": [
+   {
+    "tag": "模型发布",
+    "short": "Spark Open",
+    "accent": "#1d4ed8",
+    "title": "Meta 开源 <span class='num'>Muse Spark Open</span>",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 704 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "Qwen3.8 Max",
+       "value": 45,
+       "rank": "第11",
+       "ref": true
+      },
+      {
+       "name": "Muse Spark Open",
+       "value": 39,
+       "rank": "第19"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-1017/card-spark.png",
+      "cap": "research.meta.ai:自称美国迄今最强开放权重模型",
+      "src": "来源:research.meta.ai · 北京时间10月16日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "开放权重",
+      "d": "Meta 开源 <span class='kw'>Muse Spark Open</span>,自称美国迄今最强开放权重模型。"
+     },
+     {
+      "g": "✦",
+      "t": "AA 39 分",
+      "d": "全场<span class='kw'>第 19</span>,与 DeepSeek V4.1 Flash 并列。"
+     },
+     {
+      "g": "⟳",
+      "t": "好消息坏消息",
+      "d": "美国开放权重新王登基;但中国阵营<span class='kw'>仍排在它前面</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "PG 延期",
+    "accent": "#b91c1c",
+    "title": "Postgres 19 延期:<span class='num'>AI 审出太多 bug</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1017/card-pg.png",
+      "cap": "The Register:AI 审查员发现的 bug 人类修不过来",
+      "src": "来源:theregister.com · 10月16日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "甜蜜的烦恼",
+      "d": "The Register:AI 审查员在新版里发现的 bug,<span class='kw'>多到人类修不过来</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "正式延期",
+      "d": "<b>Postgres 19</b> 发布延期;全球关键基础设施都在等它。"
+     },
+     {
+      "g": "⟳",
+      "t": "新瓶颈",
+      "d": "AI 找 bug 比人快,<span class='kw'>人修 bug</span> 成了整条流水线的瓶颈。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "Waymo 北上",
+    "accent": "#059669",
+    "title": "Waymo 无人驾驶<span class='num'>开进多伦多</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1017/card-waymo.png",
+      "cap": "官方博客 Hello Toronto!:10月16日 刊发",
+      "src": "来源:waymo.com · 10月16日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "北上加拿大",
+      "d": "Waymo 官宣:在多伦多铺设<span class='kw'>全自动驾驶网约车</span>服务。"
+     },
+     {
+      "g": "✦",
+      "t": "海外第一站",
+      "d": "Hello Toronto! 官方头图 <b>10月16日</b> 刊发。"
+     },
+     {
+      "g": "⟳",
+      "t": "出海信号",
+      "d": "Robotaxi 从北美内部内卷,正式<span class='kw'>卷向全球</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "Meta 抓新闻",
+    "accent": "#7c3aed",
+    "title": "Meta 新条款:<span class='num'>新闻站可被抓取</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-cso.png",
+      "cap": "Nieman Lab:新商业条款将允许抓取新闻网站",
+      "src": "来源:niemanlab.org · 10月16日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "条款开洞",
+      "d": "Nieman Lab:Meta 新商业条款将<span class='kw'>允许抓取新闻网站</span>,专家警告。"
+     },
+     {
+      "g": "✦",
+      "t": "护城河再平",
+      "d": "版权与授权这层<span class='kw'>护城河</span>,被一纸条款抹平。"
+     },
+     {
+      "g": "⟳",
+      "t": "训练数据之争",
+      "d": "AI 的数据饥渴,正在改写<span class='kw'>内容行业</span>的规则。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "AI 广告",
+    "accent": "#d97706",
+    "title": "1.37 亿美元 AI 广告<span class='num'>涌入中期选举</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-anthropic.png",
+      "cap": "NYT:AI 生成广告已工业化量产",
+      "src": "来源:nytimes.com · 10月16日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "1.37 亿",
+      "d": "NYT:价值 <b>1.37 亿美元</b>的 AI 生成广告,已涌入美国中期选举。"
+     },
+     {
+      "g": "✦",
+      "t": "工业化",
+      "d": "AI 造宣传,从<span class='kw'>零星实验</span>到工业化量产。"
+     },
+     {
+      "g": "⟳",
+      "t": "监管追不上",
+      "d": "上周瑞士刚管未成年人画像,<span class='kw'>选举场景</span>还裸奔着。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,Meta 把自家的看家模型开源了。Meta 宣布开放 Muse Spark Open 的权重,自称美国迄今最强的开放权重模型。第三方智能指数给它三十九分、全场第十九,与 DeepSeek V4.1 Flash 并列。注意这个排位:它确实是美国开放权重的新王,但中国的 Qwen3.8 Max、GLM-5.3、Kimi K3 都还在它前面。美国追上了身位,中国阵营依然压着一线。",
+   "tts": "第一条,Meta 把自家的看家模型开源了。Meta 宣布开放 Muse Spark Open 的权重,自称美国迄今最强的开放权重模型。第三方智能指数给它三十九分、全场第十九,与 DeepSeek V 四点一 Flash 并列。注意这个排位:它确实是美国开放权重的新王,但中国的 Qwen 三点八 Max、GLM 五点三、Kimi K3 都还在它前面。美国追上了身位,中国阵营依然压着一线。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,一个甜蜜的烦恼。The Register 报道,Postgres 19 正式延期发布,原因让人哭笑不得:AI 审查员在新代码里发现的 bug,多到人类工程师修不过来。数据库是全球关键基础设施的地基,宁可延期也不敢带病上线。AI 找 bug 的速度超过了人修 bug 的速度,整个软件工程的流水线,瓶颈换位置了。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,无人驾驶出租出海了。Waymo 官宣进军多伦多,要在加拿大铺设全自动驾驶网约车服务,官方头图很简单,一句话:Hello Toronto。这是 Waymo 海外扩张的第一站,Robotaxi 的战争,从北美几个城市的内卷,正式卷向全球市场。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,媒体的护城河又被平掉一层。Nieman Lab 报道,Meta 的新商业条款将允许抓取新闻网站的内容,专家发出警告。版权和授权,原本是内容行业最后的防线;现在,一纸用户条款就能把这道墙抹平。AI 的数据饥渴,正在改写整个内容行业的规则。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,钱多到吓人。纽约时报统计,价值一亿三千七百万美元的 AI 生成广告,已经涌入美国中期选举。AI 造宣传,从零星实验变成了工业化量产。上周瑞士刚禁止向未成年人投放画像广告,而选举场景,还在裸奔。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Spark Open"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "PG 延期"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "Waymo"
+  },
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "Meta 条款"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "AI 广告"
+  }
+ ],
+ "stage": "news_stage.html"
+}

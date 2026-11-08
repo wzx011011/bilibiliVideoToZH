@@ -1,0 +1,237 @@
+{
+ "brand": "AI 快讯 · 2026年11月1日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年11月1日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "行业风向",
+   "安全与隐私",
+   "产品动态"
+  ],
+  "stories": [
+   {
+    "tag": "要闻",
+    "short": "垃圾级评级",
+    "accent": "#1d4ed8",
+    "title": "Blackstone:<span class='num'>Anthropic IPO</span> 或获垃圾级评级",
+    "broll": [
+     {
+      "img": "broll/ai-news-1101/card-junk.png",
+      "cap": "FT:Blackstone 称债券恐难获投资级评级",
+      "src": "来源:ft.com · TechCrunch 10/31",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "垃圾级警告",
+      "d": "Blackstone:Anthropic 上市后债券<span class='kw'>恐难获投资级评级</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "与捷报同框",
+      "d": "上周 Q3 营收 168 亿的<span class='kw'>捷报</span>同框,资本市场依旧冷静。"
+     },
+     {
+      "g": "⟳",
+      "t": "IPO 定价博弈",
+      "d": "AI 史上最大 IPO 的<span class='kw'>定价博弈</span>,正在进行。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "法国下载税",
+    "accent": "#b91c1c",
+    "title": "法国通过 <span class='num'>0.055 欧/GB</span> 下载税",
+    "broll": [
+     {
+      "img": "broll/ai-news-1101/card-france.png",
+      "cap": "国民议会投票通过流量税",
+      "src": "来源:lesnumeriques.com · 10月31日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "0.055 欧/GB",
+      "d": "法国国民议会通过:互联网流量按 <b>0.055 欧/GB</b> 征税。"
+     },
+     {
+      "g": "✦",
+      "t": "全在征收范围",
+      "d": "Netflix、Steam、云服务<span class='kw'>全在征收范围</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "VLC 警告",
+      "d": "VideoLAN 警告:<span class='kw'>非营利组织</span>或被直接压垮。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "科技股大跌",
+    "accent": "#d97706",
+    "title": "AI 烧钱恐慌,<span class='num'>科技股大跌</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1101/card-selloff.png",
+      "cap": "路透:华尔街收盘大跌",
+      "src": "来源:reuters.com · BBC 同日报道",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "恐慌抛售",
+      "d": "华尔街收盘大跌:<span class='kw'>AI 现金消耗</span>恐惧引发科技股抛售。"
+     },
+     {
+      "g": "✦",
+      "t": "财报添柴",
+      "d": "Amazon、Intel 财报<span class='kw'>不及预期</span>添柴。"
+     },
+     {
+      "g": "⟳",
+      "t": "多空拉锯",
+      "d": "与 ASML 订单强劲形成<span class='kw'>一周多空拉锯</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "AI 排富",
+    "accent": "#b91c1c",
+    "title": "恶意软件用 LLM <span class='num'>给受害者排富</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1101/card-talos.png",
+      "cap": "Cisco Talos:AI 模型驱动的受害者优先级",
+      "src": "来源:talosintelligence.com · 10/30-31",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "AI 排富",
+      "d": "Cisco Talos 报告:恶意软件用 <span class='kw'>LLM</span> 按受害者身价排定攻击优先级。"
+     },
+     {
+      "g": "✦",
+      "t": "效率数量级",
+      "d": "『AI 排富』让勒索<span class='kw'>效率数量级提升</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "黑产没缺席",
+      "d": "生成式 AI 军备竞赛,<span class='kw'>黑产没缺席</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "Proton 取消复访",
+    "accent": "#0ea5e9",
+    "title": "Proton CEO <span class='num'>取消 AI 复访</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1101/card-proton.png",
+      "cap": "404media:Proton CEO 取消 AI 复访安排",
+      "src": "来源:404media.co · HN 10/31",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "取消复访",
+      "d": "Proton CEO <span class='kw'>取消</span>备受争议的 AI 复访安排。"
+     },
+     {
+      "g": "✦",
+      "t": "直接回应",
+      "d": "对上周行业事件的<span class='kw'>直接回应</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "逐案检验",
+      "d": "供应商如何对待用户,开始被<span class='kw'>逐案检验</span>。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,Anthropic 的 IPO 还没上会,债市先泼了盆冷水。金融时报报道,黑石集团认为,Anthropic 上市后发行的债券,可能拿不到投资级评级。这和上周三季报营收一百六十八亿的捷报同框出现,资本市场的态度依旧冷静。AI 史上最大 IPO 的定价博弈,正在进行。",
+   "tts": "第一条,Anthropic 的 IPO 还没上会,债市先泼了盆冷水。金融时报报道,黑石集团认为,Anthropic 上市后发行的债券,可能拿不到投资级评级。这和上周三季报营收一百六十八亿的捷报同框出现,资本市场的态度依旧冷静。AI 史上最大 IPO 的定价博弈,正在进行。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,法国对互联网流量动手了。国民议会投票通过:按每 GB 零点零五五欧元的标准征收下载税,Netflix、Steam、云服务全在征收范围。VLC 的母公司 VideoLAN 发出警告:这个税率可能把非营利组织直接压垮。数字服务的跨境征税,欧洲又开了一个先例。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,市场情绪剧烈摆动。华尔街收盘大跌,AI 现金消耗的恐惧引发科技股抛售,亚马逊、英特尔的财报不及预期又添了一把柴。和本周早些时候 ASML 订单强劲的利好放在一起看,这一周,多空双方完成了完整的拉锯。",
+   "tts": "第三条,市场情绪剧烈摆动。华尔街收盘大跌,AI 现金消耗的恐惧引发科技股抛售,亚马逊、英特尔的财报不及预期又添了一把柴。和本周早些时候 ASML 订单强劲的利好放在一起看,这一周,多空双方完成了完整的拉锯。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,黑产也没缺席这场军备竞赛。思科 Talos 报告:新发现的恶意软件开始用大模型给受害者排富——按身价排定攻击的优先级,让勒索的效率数量级提升。生成式 AI 的军备竞赛里,防守方补围栏的速度,得追上进攻方换武器的速度才行。",
+   "tts": "第四条,黑产也没缺席这场军备竞赛。思科 Talos 报告:新发现的恶意软件开始用大模型给受害者排富——按身价排定攻击的优先级,让勒索的效率数量级提升。生成式 AI 的军备竞赛里,防守方补围栏的速度,得追上进攻方换武器的速度才行。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,用户的胜利。Proton 的 CEO 宣布取消备受争议的 AI 复访安排,这是对上周行业事件的直接回应。供应商如何对待用户,正在被逐一检验;而用户用脚投票的力量,也开始被逐一感知。今天的 AI 快讯就到这里,我们明天见。",
+   "tts": "最后一条,用户的胜利。Proton 的 CEO 宣布取消备受争议的 AI 复访安排,这是对上周行业事件的直接回应。供应商如何对待用户,正在被逐一检验;而用户用脚投票的力量,也开始被逐一感知。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "垃圾级评级"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "法国下载税"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "科技股大跌"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "AI 排富"
+  },
+  {
+   "scene": "story",
+   "color": "#0ea5e9",
+   "label": "Proton"
+  }
+ ],
+ "stage": "news_stage.html"
+}

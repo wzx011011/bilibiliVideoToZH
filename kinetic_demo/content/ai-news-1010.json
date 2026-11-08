@@ -1,0 +1,233 @@
+{
+ "brand": "AI 快讯 · 2026年10月10日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月10日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "产品动态",
+   "行业风向",
+   "安全与隐私"
+  ],
+  "stories": [
+   {
+    "tag": "要闻",
+    "short": "CF 收购 Deno",
+    "accent": "#b91c1c",
+    "title": "Cloudflare 收购 <span class='num'>Deno</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1010/card-deno.png",
+      "cap": "Deno 官宣:整体并入 Cloudflare,运行时转入维护期",
+      "src": "来源:deno.com · 10月9日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "官宣并入",
+      "d": "<b>10月9日</b>,Cloudflare 收购 Deno,Node.js 之父 <span class='kw'>Ryan Dahl</span> 团队整体加盟。"
+     },
+     {
+      "g": "✦",
+      "t": "维护倒计时",
+      "d": "Deno 运行时维护约<b>一年</b>后转纯安全修复,<span class='kw'>Deploy</span> 托管服务将关停。"
+     },
+     {
+      "g": "⟳",
+      "t": "保持开源",
+      "d": "代码继续开源;JS 界的<span class='kw'>中立三方运行时</span>,就此谢幕。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "开除研究员",
+    "accent": "#be185d",
+    "title": "OpenAI 开除<span class='num'>三名安全研究员</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1010/card-fired.png",
+      "cap": "TechCrunch:被开除研究员否认不当行为,警告寒蝉效应",
+      "src": "来源:TechCrunch · 10月8日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "走人",
+      "d": "三名安全研究员被指<span class='kw'>『不当处理研究信息』</span>遭开除。"
+     },
+     {
+      "g": "✦",
+      "t": "当事人否认",
+      "d": "称只是向第三方安全机构<span class='kw'>正常同步 AI 风险</span>;联名警告寒蝉效应。"
+     },
+     {
+      "g": "⟳",
+      "t": "连续剧",
+      "d": "上周安全负责人留下『<span class='kw'>文化已坏</span>』离职,本周直接开除人手。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "禁虐条款",
+    "accent": "#1d4ed8",
+    "title": "Anthropic:禁止<span class='num'>『虐待』</span>Claude",
+    "broll": [
+     {
+      "img": "broll/ai-news-1010/card-verge.png",
+      "cap": "The Verge:使用政策新增禁止虐待/残忍对待条款",
+      "src": "来源:theverge.com · 北京时间10月9日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "写进条款",
+      "d": "Anthropic 更新使用政策:禁止对 Claude <span class='kw'>虐待或残忍对待</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "模型福祉",
+      "d": "<span class='kw'>model welfare</span> 首次写进主流厂商条款,BBC 等跟进。"
+     },
+     {
+      "g": "⟳",
+      "t": "新议题",
+      "d": "AI 需不需要被礼貌对待,从玄学讨论变成<span class='kw'>正式规则</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "收入缩水",
+    "accent": "#d97706",
+    "title": "OpenAI 年化收入<span class='num'>少 200 亿</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1010/card-cnbc.png",
+      "cap": "CNBC:年化约 500 亿美元,英伟达甲骨文齐跌",
+      "src": "来源:CNBC · 北京时间10月9日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "500 亿",
+      "d": "CNBC 证实:OpenAI 9 月底<span class='kw'>年化收入</span>约 <b>500 亿美元</b>。"
+     },
+     {
+      "g": "⚠",
+      "t": "少 200 亿",
+      "d": "比此前对外释放的信号<b>少约 200 亿</b>;英伟达、甲骨文、CoreWeave 周四齐跌。"
+     },
+     {
+      "g": "⟳",
+      "t": "定价逻辑",
+      "d": "AI 叙事开始<span class='kw'>按业绩定价</span>,每一份财报都是行业心电图。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "AI 假新闻",
+    "accent": "#0f766e",
+    "title": "ChatGPT 炮制假新闻<span class='num'>上版面</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1010/card-iran.png",
+      "cap": "华盛顿邮报:伊朗影响力行动用 ChatGPT 批量造文",
+      "src": "来源:washingtonpost.com · 10月9日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "假新闻上版",
+      "d": "华盛顿邮报 <b>10月9日</b> 报道:伊朗影响力行动用 ChatGPT <span class='kw'>批量造文</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "投进真媒体",
+      "d": "假新闻成功投进<span class='kw'>真实的美国媒体</span>,不再只蹲社交平台。"
+     },
+     {
+      "g": "⟳",
+      "t": "升级警告",
+      "d": "AI 宣传从<span class='kw'>水军贴</span>升级到主流报头,信源验证成本陡增。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,开发者圈大地震。10月9号,Cloudflare 宣布收购 Deno,Node.js 之父瑞安·达尔创办的第二个运行时整个并入,团队集体加盟。接下来一年,Deno 运行时只做月度维护和安全修复,之后就转入纯安全维护,Deploy 托管服务也会关停;代码继续保持开源。从 Node 到 Deno 再到被收购,瑞安·达尔两次创业都改写了 JavaScript 的历史;这一次,JS 界的中立三方运行时,正式谢幕。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,OpenAI 的安全风波还在发酵。多家媒体证实,OpenAI 开除了三名安全研究员,理由是所谓不当处理研究信息;三名当事人否认,说他们只是向第三方安全机构正常同步 AI 风险,还联名警告,这波开除会给整个行业带来寒蝉效应。上周,安全负责人刚留下公司文化已经坏了的评语离职;这周,直接开除人手。OpenAI 和自家安全团队的关系,跌到了新低点。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,Anthropic 更新使用政策:明确禁止对 Claude 实施虐待或残忍对待。BBC 等媒体跟进后,模型福祉这个词第一次写进了主流厂商的条款。AI 需不需要被礼貌对待,以前是社交网络上的玄学讨论,现在,成了写在合同里的正经规则。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,钱的事。CNBC 证实,OpenAI 向投资人通报:到九月底,年化收入约五百亿美元,比之前对外释放的信号少了大约两百亿。消息一出,英伟达、甲骨文、CoreWeave 周四集体下跌。当 AI 叙事开始按业绩定价,每一份财报,都是整个行业的心电图。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,一条安全警告。华盛顿邮报10月9号报道,一场伊朗影响力行动用 ChatGPT 批量炮制假新闻,而且成功投进了真实的美国媒体。AI 生成的宣传,正在从社交平台的水军贴,升级为主流报头的版面,以后看新闻,信源验证的功夫不能省。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "CF 收 Deno"
+  },
+  {
+   "scene": "story",
+   "color": "#be185d",
+   "label": "开除风波"
+  },
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "禁虐条款"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "收入缩水"
+  },
+  {
+   "scene": "story",
+   "color": "#0f766e",
+   "label": "AI 假新闻"
+  }
+ ],
+ "stage": "news_stage.html"
+}

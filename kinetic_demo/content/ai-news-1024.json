@@ -1,0 +1,237 @@
+{
+ "brand": "AI 快讯 · 2026年10月24日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月24日",
+  "nav": [
+   "Intro",
+   "开源生态",
+   "要闻",
+   "安全与隐私",
+   "行业风向"
+  ],
+  "stories": [
+   {
+    "tag": "开源生态",
+    "short": "OpenShell",
+    "accent": "#1d4ed8",
+    "title": "NVIDIA 开源 <span class='num'>OpenShell</span> 智能体运行时",
+    "broll": [
+     {
+      "img": "broll/ai-news-1024/card-openshell.png",
+      "cap": "GitHub:自主智能体军团的安全私有运行时",
+      "src": "来源:github.com/NVIDIA · HN 489 分",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "军团围栏",
+      "d": "NVIDIA 开源 <span class='kw'>OpenShell</span>:为成建制自主智能体军团提供<span class='kw'>安全私有运行时</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "先造围墙",
+      "d": "『快跑』时代的军火商逻辑:<span class='kw'>先造围墙,再卖引擎</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "企业刚需",
+      "d": "HN <b>489 分</b>:企业级智能体隔离,已经成了<span class='kw'>硬需求</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "瑞典禁令",
+    "accent": "#b91c1c",
+    "title": "瑞典政府办公电脑<span class='num'>封禁 ChatGPT 与 Claude</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1024/card-sweden.png",
+      "cap": "SR:政府办公厅封锁两大模型,推荐改用 Copilot",
+      "src": "来源:sverigesradio.se · 10月23日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "周一 即生效",
+      "d": "瑞典政府办公厅:周一起公务电脑<span class='kw'>无法访问</span> ChatGPT 和 Claude。"
+     },
+     {
+      "g": "✦",
+      "t": "指定 Copilot",
+      "d": "员工被要求改用已批准的<span class='kw'>微软 Copilot</span>,安全审查同步加强。"
+     },
+     {
+      "g": "⟳",
+      "t": "欧洲风向",
+      "d": "从瑞典到 DeepSeek 禁令,<span class='kw'>政府场景</span>成了 AI 地缘的前线。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "eMudhra 三连",
+    "accent": "#b91c1c",
+    "title": "eMudhra <span class='num'>无视 Mozilla 调查死线</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1022/card-emudhra.png",
+      "cap": "Bugzilla:调查死线已过,官方反怪社交媒体",
+      "src": "来源:bugzilla.mozilla.org · 10月23日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "死线已过",
+      "d": "Mozilla 根证书调查<span class='kw'>死线已过</span>,eMudhra 未作回应。"
+     },
+     {
+      "g": "✦",
+      "t": "反怪舆论",
+      "d": "官方反而归咎于<span class='kw'>社交媒体</span>的报道方式。"
+     },
+     {
+      "g": "⟳",
+      "t": "三连剧情",
+      "d": "中间证书被破→<span class='kw'>退出业务</span>→无视调查,CA 沦陷三连完结篇。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "57% 有害",
+    "accent": "#d97706",
+    "title": "民调:57% 美国人认为 <span class='num'>AI 对社会有害</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1020/card-anthropic.png",
+      "cap": "ABC/Ipsos:57% 认为 AI 有害,仅 42% 认为有益",
+      "src": "来源:abcnews.com · HN 10/23 刷屏",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "57% 有害",
+      "d": "ABC/Ipsos 民调:<b>57%</b> 美国人认为 AI 对社会<span class='kw'>有害</span>,仅 42% 认为有益。"
+     },
+     {
+      "g": "✦",
+      "t": "反对建机房",
+      "d": "约<span class='kw'>三分之二</span>的美国人反对在本地新建数据中心。"
+     },
+     {
+      "g": "⟳",
+      "t": "民意先行",
+      "d": "与本周 IMF 风险警告<span class='kw'>同周</span>,民意比机构报告跑得更快。"
+     }
+    ]
+   },
+   {
+    "tag": "行业风向",
+    "short": "Token 见顶",
+    "accent": "#0ea5e9",
+    "title": "OpenRouter:<span class='num'>Token 用量</span>增速见顶",
+    "broll": [
+     {
+      "img": "broll/ai-news-1020/card-dsaa.png",
+      "cap": "OpenRouter 排行页:Token-maxxing 时代落幕",
+      "src": "来源:openrouter.ai/rankings · live",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "增速见顶",
+      "d": "OpenRouter 数据:Token 消耗<span class='kw'>增速见顶</span>,Token-maxxing 落幕。"
+     },
+     {
+      "g": "✦",
+      "t": "精打细算",
+      "d": "从狂刷上下文到<span class='kw'>精打细算</span>,行业开始换挡。"
+     },
+     {
+      "g": "⟳",
+      "t": "新胜负手",
+      "d": "推理成本优化,成了新的<span class='kw'>胜负手</span>。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,NVIDIA 也来给智能体造围栏了。NVIDIA 开源了 OpenShell:一个面向成建制自主智能体军团的安全私有运行时,让一堆 AI 智能体在隔离环境里干活,互不越界、不泄密。项目一上线就在黑客新闻拿了四百八十九分。上周的安全专家刚说围栏没扎好,这周英伟达直接把围墙做成了产品——企业级智能体隔离,已经从选修课变成了必修课。",
+   "tts": "第一条,NVIDIA 也来给智能体造围栏了。NVIDIA 开源了 OpenShell:一个面向成建制自主智能体军团的安全私有运行时,让一堆 AI 智能体在隔离环境里干活,互不越界、不泄密。项目一上线就在黑客新闻拿了四百八十九分。上周的安全专家刚说围栏没扎好,这周英伟达直接把围墙做成了产品——企业级智能体隔离,已经从选修课变成了必修课。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,瑞典政府办公厅宣布:从周一起,公务电脑将无法访问 ChatGPT 和 Claude。员工被要求改用经过安全审查的微软 Copilot。瑞典国家广播电台报道了这一禁令。无独有偶,上周美国也把 DeepSeek 踢出了联邦机构。政府场景成了 AI 地缘的前线,各大模型在办公桌上的攻防,比战场上还热闹。",
+   "tts": "第二条,瑞典政府办公厅宣布:从周一起,公务电脑将无法访问 ChatGPT 和 Claude。员工被要求改用经过安全审查的微软 Copilot。瑞典国家广播电台报道了这一禁令。无独有偶,上周美国也把 DeepSeek 踢出了联邦机构。政府场景成了 AI 地缘的前线,各大模型在办公桌上的攻防,比战场上还热闹。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,证书风暴迎来完结篇。Mozilla 对 eMudhra 根证书的调查死线已经过去,对方不仅没有正面回应,反而把矛头指向了社交媒体的报道方式。至此 CA 沦陷三连更齐了:中间证书被攻破、官宣退出证书业务、无视行业调查。信任链这种东西,建起来要二十年,塌下去只要三集连续剧。",
+   "tts": "第三条,证书风暴迎来完结篇。Mozilla 对 eMudhra 根证书的调查死线已经过去,对方不仅没有正面回应,反而把矛头指向了社交媒体的报道方式。至此 CA 沦陷三连更齐了:中间证书被攻破、官宣退出证书业务、无视行业调查。信任链这种东西,建起来要二十年,塌下去只要三集连续剧。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,一份扎心的民调。ABC 新闻与益普索的最新调查显示:百分之五十七的美国人认为 AI 对社会有害,只有四成二认为有益;大约三分之二的人反对在本地新建数据中心。这份民调和本周 IMF 的风险警告撞在了同一周。机构报告讲逻辑,民间情绪讲体感,两边的方向现在是一致的。",
+   "tts": "第四条,一份扎心的民调。ABC 新闻与益普索的最新调查显示:百分之五十七的美国人认为 AI 对社会有害,只有四成二认为有益;大约三分之二的人反对在本地新建数据中心。这份民调和本周 IMF 的风险警告撞在了同一周。机构报告讲逻辑,民间情绪讲体感,两边的方向现在是一致的。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,行业换挡的信号。OpenRouter 的最新排行显示,Token 消耗增速已经见顶,靠狂刷上下文冲量的 Token-maxxing 时代落幕。当烧 token 不再等于涨能力,推理成本优化就成了新的胜负手。狂飙了一年半的算力军备赛,开始进入精打细算的下半场。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "OpenShell"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "瑞典禁令"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "eMudhra"
+  },
+  {
+   "scene": "story",
+   "color": "#d97706",
+   "label": "57% 有害"
+  },
+  {
+   "scene": "story",
+   "color": "#0ea5e9",
+   "label": "Token 见顶"
+  }
+ ],
+ "stage": "news_stage.html"
+}

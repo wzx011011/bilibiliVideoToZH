@@ -1,0 +1,234 @@
+{
+ "brand": "AI 快讯 · 2026年10月19日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月19日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "产品动态",
+   "安全与隐私",
+   "技术与洞察"
+  ],
+  "stories": [
+   {
+    "tag": "要闻",
+    "short": "OpenCode 被黑",
+    "accent": "#b91c1c",
+    "title": "OpenCode 被黑:<span class='num'>用户凭证泄露</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1019/opencode-hn-raw.png",
+      "cap": "HN 941 分:官方确认入侵,喊话用户吊销密钥",
+      "src": "来源:OpenCode 官方/HN · 北京时间10月18日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "官方确认",
+      "d": "OpenCode 官方证实遭入侵:遗留系统被攻破,<span class='kw'>约 1.4% 用户</span>受影响。"
+     },
+     {
+      "g": "✦",
+      "t": "密钥泄露",
+      "d": "客户的 <span class='kw'>OpenAI/Anthropic/Google</span> API 密钥疑似泄露,被狂刷费用。"
+     },
+     {
+      "g": "⟳",
+      "t": "官方喊话",
+      "d": "受影响用户尽快<span class='kw'>吊销 API 密钥</span>,盯紧各家账单;HN 941 分。"
+     }
+    ]
+   },
+   {
+    "tag": "产品动态",
+    "short": "DS 搜索 API",
+    "accent": "#059669",
+    "title": "DeepSeek 上线<span class='num'>搜索与抓取</span> API",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-cso.png",
+      "cap": "官方文档:每次成功请求 0.75 美元",
+      "src": "来源:api-docs.deepseek.com · 10月18日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "联网开箱",
+      "d": "DeepSeek 上线<span class='kw'>搜索与抓取</span> API:每次成功请求 0.75 美元。"
+     },
+     {
+      "g": "✦",
+      "t": "价格刺客",
+      "d": "对比同类联网检索定价,依然走<span class='kw'>极限性价比</span>路线。"
+     },
+     {
+      "g": "⟳",
+      "t": "Agent 军火",
+      "d": "联网检索是智能体的<span class='kw'>弹药库</span>,DeepSeek 直接把军火铺到了零售。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "亚马逊监控",
+    "accent": "#b91c1c",
+    "title": "Amazon 用 <span class='num'>AI 监控</span>工会风险",
+    "broll": [
+     {
+      "img": "broll/ai-news-1019/card-amazon.png",
+      "cap": "openDemocracy:AI 监控英国仓库工会风险",
+      "src": "来源:opendemocracy.net · 北京时间10月18日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "AI 盯工会",
+      "d": "openDemocracy 调查:Amazon 用 <span class='kw'>AI 监控</span>英国仓库的工会风险。"
+     },
+     {
+      "g": "✦",
+      "t": "劳动者档案",
+      "d": "算法给员工的<span class='kw'>组织倾向</span>打分,工会活动成监控对象。"
+     },
+     {
+      "g": "⟳",
+      "t": "职场监控",
+      "d": "AI 监控从<span class='kw'>效率工具</span>,滑向劳资博弈武器。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "安全法案",
+    "accent": "#b45309",
+    "title": "Anthropic 提议法案:<span class='num'>50 人死亡才触发</span>?",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-anthropic.png",
+      "cap": "Tom's Hardware:提议法案被批门槛高得离谱",
+      "src": "来源:tomshardware.com · 10月18日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "提案内容",
+      "d": "Anthropic 参与提议的 AI 安全法案:<span class='kw'>50 人死亡</span>或 <b>10 亿美元</b>损失才触发。"
+     },
+     {
+      "g": "✦",
+      "t": "舆论炸锅",
+      "d": "门槛被批<span class='kw'>高得离谱</span>:出事前没人管,出事后来不及。"
+     },
+     {
+      "g": "⟳",
+      "t": "利益拷问",
+      "d": "由头部厂商参与起草自己的<span class='kw'>监管红线</span>,公正性遭质疑。"
+     }
+    ]
+   },
+   {
+    "tag": "技术与洞察",
+    "short": "陶哲轩",
+    "accent": "#7c3aed",
+    "title": "陶哲轩:黄金时代还是<span class='num'>黑暗时代</span>?",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-cso.png",
+      "cap": "陶哲轩博客:数学的黄金时代还是黑暗时代",
+      "src": "来源:terrytao.wordpress.com · 10月18日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "连续第四篇",
+      "d": "陶哲轩再发长文:<span class='kw'>黄金时代还是黑暗时代</span>,取决于我们怎么做。"
+     },
+     {
+      "g": "✦",
+      "t": "两幅图景",
+      "d": "AI 辅助数学大爆发 vs 标准崩坏与<span class='kw'>信任塌方</span>,一线之隔。"
+     },
+     {
+      "g": "⟳",
+      "t": "数学连续剧",
+      "d": "从 Lean 到 Math 2.0 再到本篇,<span class='kw'>数学连续剧</span>更新到第四幕。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,编程工具圈也出安全大事了。开源编程智能体 OpenCode 官方证实遭遇入侵:一个遗留系统被攻破,约百分之一点四的用户受影响,客户的 OpenAI、Anthropic、谷歌 API 密钥疑似泄露,还被攻击者狂刷费用。官方喊话受影响用户尽快吊销密钥、盯紧账单。上周它刚热热闹闹发布 2.0,这周就被黑,安全感这东西,发布会的掌声给不了。",
+   "tts": "第一条,编程工具圈也出安全大事了。开源编程智能体 OpenCode 官方证实遭遇入侵:一个遗留系统被攻破,约百分之一点四的用户受影响,客户的 OpenAI、Anthropic、谷歌 API 密钥疑似泄露,还被攻击者狂刷费用。官方喊话受影响用户尽快吊销密钥、盯紧账单。上周它刚热热闹闹发布二点零,这周就被黑,安全感这东西,发布会的掌声给不了。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,DeepSeek 上线搜索与抓取 API:每次成功请求零点七五美元,让模型自己上网查资料、抓网页。价格依然是熟悉的极限性价比打法。联网检索是智能体的弹药库,DeepSeek 直接把军火铺到了零售柜台,同行们的定价部门,今晚可以加班了。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,职场监控的新高度。openDemocracy 调查发现,亚马逊用 AI 监控英国仓库的工会风险:算法给员工的组织倾向打分,工会活动成了被监控的对象。AI 监控正在从效率工具,滑向劳资博弈的武器;打工人关心的不是它准不准,而是它到底在看谁。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,一份引发争议的提案。Anthropic 参与提议的 AI 安全法案被曝光:只有造成五十人死亡、或者十亿美元损失,才会触发监管。门槛被批评高得离谱——按这个标准,出事之前没人管得着,出事之后又来不及。让头部厂商参与起草自己的监管红线,公正性这道题,恐怕比法案本身还难解。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,数学连续剧更新到第四幕。陶哲轩再发长文,标题就是个问题:数学的黄金时代,还是黑暗时代?他的答案是,两者都有可能,取决于我们怎么做——AI 辅助下的大发现,和标准崩坏带来的信任塌方,只有一线之隔。从 Lean 教程到 Math 二点零再到本篇,陶教授这个月,把数学界的方向盘牢牢握在了手里。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "OpenCode 被黑"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "DS 搜索 API"
+  },
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "关门潮"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "安全法案"
+  },
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "陶哲轩"
+  }
+ ],
+ "stage": "news_stage.html"
+}

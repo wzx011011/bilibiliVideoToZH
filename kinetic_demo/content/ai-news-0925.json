@@ -1,0 +1,167 @@
+{
+ "brand": "AI 快讯 · 2026年9月25日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年9月25日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "开发生态",
+   "模型发布",
+   "产品应用",
+   "技术与洞察",
+   "行业动态",
+   "前瞻与传闻"
+  ],
+  "stories": [
+   {
+    "tag": "开发生态",
+    "short": "Sora 退出 API",
+    "accent": "#b91c1c",
+    "title": "OpenAI <span class='num'>Sora</span> 视频模型正式退出 API,替代为零",
+    "broll": [
+     {
+      "img": "broll/ai-news-0925/sora-card.jpg",
+      "cap": "官方弃用页:Sora 2 全系 9 月 24 日关停",
+      "src": "来源:OpenAI 官网 Deprecations",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "半年前就定了",
+      "d": "3 月 24 日 OpenAI 通知开发者:<span class='kw'>Videos API</span> 与 <span class='kw'>Sora 2</span> 将于 9 月 24 日移出 API。"
+     },
+     {
+      "g": "⚠",
+      "t": "替代一栏是『无』",
+      "d": "官方弃用页推荐替代<b>全部为空</b>——API 侧没有后继视频模型,开发者只能自谋出路。"
+     },
+     {
+      "g": "✦",
+      "t": "消费端早已停运",
+      "d": "<span class='kw'>Sora</span> 网页与应用今年 4 月 26 日已下线;视频赛道转向<b>竞品与开源</b>。"
+     },
+     {
+      "g": "⟳",
+      "t": "开发者怎么办",
+      "d": "官方建议关停前取回已生成的 <span class='kw'>MP4</span>、备份任务记录;长线集成需另选视频生成方案。"
+     }
+    ]
+   },
+   {
+    "tag": "产品应用",
+    "short": "Veo 进 Ads",
+    "accent": "#1d4ed8",
+    "title": "谷歌 Ads 接入 <span class='num'>Veo</span>:两张静态图生成视频广告",
+    "broll": [
+     {
+      "img": "broll/ai-news-0925/veo-card.jpg",
+      "cap": "静态图一键生成视频广告",
+      "src": "来源:Google 官方博客 · SEL 实操",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "入口在 Asset Studio",
+      "d": "谷歌把 <span class='kw'>Veo</span> 视频生成搬进 Ads 后台的 <span class='kw'>Asset Studio</span>:选『从图片创建视频』即可开跑。"
+     },
+     {
+      "g": "✦",
+      "t": "5 秒或 10 秒",
+      "d": "两张静态图各动画化成一幕,拼成 <b>5 秒 / 10 秒</b>成片;官方提醒图片<b>不要带人脸</b>。"
+     },
+     {
+      "g": "№",
+      "t": "直接可投",
+      "d": "成片作为 Shorts 素材进 <span class='kw'>PMax</span> 与 <span class='kw'>Demand Gen</span>,缓解素材疲劳。"
+     },
+     {
+      "g": "⟳",
+      "t": "实操指南出炉",
+      "d": "<span class='kw'>Search Engine Land</span> 9 月 24 日发布上手教程:先小流量测<b>互动率</b>,再谈转化。"
+     }
+    ]
+   },
+   {
+    "tag": "行业动态",
+    "short": "Island 融资",
+    "accent": "#0f766e",
+    "title": "企业浏览器 <span class='num'>Island</span> 融资 4 亿美元,估值 64 亿",
+    "broll": [
+     {
+      "img": "broll/ai-news-0925/island-official.png",
+      "cap": "Island × Evolution Equity:F 轮 4 亿美元",
+      "src": "来源:Island 官网新闻稿",
+      "f1": 0.05,
+      "f2": 0.55
+     }
+    ],
+    "cards": [
+     {
+      "g": "¥",
+      "t": "F 轮 4 亿美元",
+      "d": "企业浏览器开创者 <span class='kw'>Island</span> 宣布 <b>4 亿美元</b> F 轮融资,<span class='kw'>Evolution Equity</span> 领投。"
+     },
+     {
+      "g": "№",
+      "t": "估值 64 亿美元",
+      "d": "估值升至 <b>64 亿美元</b>,距上一轮 48 亿只用了一年半;安全赛道钱还在涌。"
+     },
+     {
+      "g": "✦",
+      "t": "押注智能体",
+      "d": "新钱投向 <span class='kw'>AI 浏览器</span>:给『人和 AI 智能体混合办公』做安全控制面。"
+     },
+     {
+      "g": "⟳",
+      "t": "赛道信号",
+      "d": "AI 攻击推高安全支出,浏览器正从上网工具变成企业 <span class='kw'>Agent</span> 治理入口。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,一个时代落幕。OpenAI 的视频模型 Sora,9 月 24 日正式从 API 下线。今年 3 月 24 日 OpenAI 发出通知,Videos API 和 Sora 2 全系模型六个月后移出;昨天期限一到,官方弃用页上,替代模型一栏全部是『无』。消费端的 Sora 网页和应用,今年 4 月也已经停运。曾经带火 AI 视频赛道的名字安静退场,市场交给竞品和开源。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,谷歌 Ads 的 AI 视频广告进入实操阶段。广告主在后台的 Asset Studio 里上传两张静态图,Veo 会把它们分别动画化,拼成五秒或十秒的短视频广告,直接投进 PMax 和 Demand Gen 渠道。Search Engine Land 9 月 24 日放出上手教程,两个提醒:图片不要带人脸;十秒的上限还是紧,先拿小流量测互动率,再谈转化。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,看钱。企业浏览器公司 Island 完成 4 亿美元的 F 轮融资,Evolution Equity 领投,估值来到 64 亿美元。这家公司靠安全浏览器起家,现在把自己定位成企业智能体的控制面,给人和 AI 智能体混合办公做安全治理。AI 带动的安全支出,还在继续往上冲。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "Sora 关停"
+  },
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Veo 广告"
+  },
+  {
+   "scene": "story",
+   "color": "#0f766e",
+   "label": "Island 融资"
+  }
+ ],
+ "stage": "news_stage.html"
+}

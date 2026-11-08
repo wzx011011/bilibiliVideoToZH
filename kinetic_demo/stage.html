@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1920px; overflow:hidden; background:#05070f;
+              font-family:"Microsoft YaHei","PingFang SC",sans-serif; }
+  canvas { position:absolute; inset:0; width:1080px; height:1920px; }
+  #bg { z-index:1; }
+  #fx { z-index:2; }
+
+  /* ── 顶部 ── */
+  #pbar { position:absolute; z-index:5; top:0; left:0; width:1080px; height:6px;
+          background:rgba(255,255,255,.08); }
+  #pfill { height:100%; width:0; background:linear-gradient(90deg,#22d3ee,#f59e0b); }
+  #hdr { position:absolute; z-index:5; top:36px; left:60px; right:60px;
+         display:flex; justify-content:space-between; align-items:center; }
+  #title { font-size:34px; font-weight:700; color:rgba(255,255,255,.88);
+           letter-spacing:2px; }
+  #tag { font-size:22px; color:rgba(255,255,255,.35); letter-spacing:4px;
+         font-family:Consolas,monospace; }
+
+  /* ── 卡拉OK字幕 ── */
+  #badge { position:absolute; z-index:5; top:842px; width:1080px; text-align:center;
+           opacity:0; }
+  #badgeInner { display:inline-flex; align-items:center; gap:14px;
+                padding:12px 34px; border-radius:999px; font-size:32px; font-weight:700;
+                border:2px solid var(--acc,#22d3ee); color:var(--acc,#22d3ee);
+                background:rgba(255,255,255,.05); }
+  #badgeDot { width:16px; height:16px; border-radius:50%; background:var(--acc,#22d3ee);
+              box-shadow:0 0 18px var(--acc,#22d3ee); }
+
+  #subwrap { position:absolute; z-index:5; top:960px; width:1080px; height:560px;
+             display:flex; align-items:flex-start; justify-content:center; }
+  .cue { display:none; text-align:center; font-size:72px; font-weight:700;
+         line-height:1.52; letter-spacing:2px;
+         text-shadow:0 4px 24px rgba(0,0,0,.85); }
+  .kchar { display:inline-block; white-space:pre; color:rgba(255,255,255,.30); }
+  .kchar.past { color:#fff; }
+  .kchar.cur { color:var(--acc,#22d3ee);
+               transform:scale(1.30) translateY(-10px);
+               text-shadow:0 0 30px var(--acc,#22d3ee), 0 0 70px var(--acc,#22d3ee); }
+
+  /* ── 底部 ── */
+  #foot { position:absolute; z-index:5; bottom:44px; width:1080px; text-align:center;
+          font-size:24px; color:rgba(255,255,255,.30); letter-spacing:3px; }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1080" height="1920"></canvas>
+<canvas id="fx" width="1080" height="1920"></canvas>
+<div id="pbar"><div id="pfill"></div></div>
+<div id="hdr">
+  <div id="title">Hinton 医学访谈 · 中文播客</div>
+  <div id="tag">WEB RENDER 60s DEMO</div>
+</div>
+<div id="badge"><div id="badgeInner"><span id="badgeDot"></span><span id="badgeName"></span></div></div>
+<div id="subwrap"></div>
+<div id="foot">逐字字幕 × 实时频谱 × WebGL 背景 — 纯网页技术逐帧渲染</div>
+
+<script>
+window.__DATA__ = __DATA_JSON__;
+</script>
+<script>
+const DATA = window.__DATA__;
+const FPS = DATA.fps, NFR = DATA.n_frames;
+const ACC = [[34,211,238],[245,158,11]];   // A 青 / B 琥珀
+const rgb = (c,a=1)=>`rgba(${c[0]},${c[1]},${c[2]},${a})`;
+
+let spkSm = DATA.speaker_frames[0], beat = 0;
+
+/* ── WebGL 背景 ─────────────────────────────── */
+const bgc = document.getElementById('bg');
+const gl = bgc.getContext('webgl', {antialias:false, preserveDrawingBuffer:true});
+const FRAG = `
+precision highp float;
+uniform vec2 u_res; uniform float u_time; uniform float u_spk; uniform float u_beat;
+uniform vec4 u_e;
+float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7))) * 43758.5453123); }
+float noise(vec2 p){
+  vec2 i = floor(p), f = fract(p);
+  vec2 u = f*f*(3.0-2.0*f);
+  return mix(mix(hash(i), hash(i+vec2(1.,0.)), u.x),
+             mix(hash(i+vec2(0.,1.)), hash(i+vec2(1.,1.)), u.x), u.y);
+}
+float fbm(vec2 p){
+  float v = 0.0, a = 0.5;
+  for(int i=0;i<5;i++){ v += a*noise(p); p = p*2.03 + vec2(11.7,5.3); a *= 0.5; }
+  return v;
+}
+void main(){
+  vec2 uv = gl_FragCoord.xy / u_res;
+  vec2 p = uv * vec2(u_res.x/u_res.y, 1.0);
+  float t = u_time * (0.10 + u_e.x*0.30);
+  vec2 q = vec2(fbm(p*1.5 + vec2(0.0,-t)), fbm(p*1.5 + vec2(t*0.8,4.7)));
+  float n = fbm(p*2.4 + q*(1.2 + u_e.y*2.0) + vec2(3.1,-t*1.3));
+  vec3 baseA = vec3(0.014,0.030,0.072), baseB = vec3(0.052,0.026,0.046);
+  vec3 accA = vec3(0.13,0.83,0.93), accB = vec3(0.96,0.55,0.10);
+  vec3 base = mix(baseA, baseB, u_spk);
+  vec3 acc = mix(accA, accB, u_spk);
+  vec3 col = base + acc * pow(n, 2.4) * (0.45 + u_e.x*1.2);
+  float d = length(uv - vec2(0.5,0.44));
+  float ring = smoothstep(0.028, 0.0, abs(d - (0.22 + u_beat*0.42))) * u_beat;
+  col += acc * ring * 0.32;
+  float spark = step(0.997, hash(gl_FragCoord.xy + floor(u_time*24.0)));
+  col += acc * spark * u_e.w * 0.9;
+  col *= 1.0 - 0.5*pow(length(uv-vec2(0.5,0.5))*1.05, 2.2);
+  gl_FragColor = vec4(col, 1.0);
+}`;
+let u = {};
+function initGL(){
+  if(!gl) return false;
+  const vs = gl.createShader(gl.VERTEX_SHADER);
+  gl.shaderSource(vs, 'attribute vec2 a; void main(){ gl_Position=vec4(a,0.,1.); }');
+  gl.compileShader(vs);
+  const fs = gl.createShader(gl.FRAGMENT_SHADER);
+  gl.shaderSource(fs, FRAG); gl.compileShader(fs);
+  if(!gl.getShaderParameter(fs, gl.COMPILE_STATUS)){
+    console.error('FRAG', gl.getShaderInfoLog(fs)); return false;
+  }
+  const pr = gl.createProgram();
+  gl.attachShader(pr, vs); gl.attachShader(pr, fs); gl.linkProgram(pr);
+  gl.useProgram(pr);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(pr, 'a');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  for(const k of ['u_res','u_time','u_spk','u_beat','u_e']) u[k] = gl.getUniformLocation(pr, k);
+  gl.viewport(0, 0, 1080, 1920);
+  return true;
+}
+const glOK = initGL();
+function drawBG(t, f){
+  if(!glOK){ return; }
+  gl.uniform2f(u.u_res, 1080, 1920);
+  gl.uniform1f(u.u_time, t);
+  gl.uniform1f(u.u_spk, spkSm);
+  gl.uniform1f(u.u_beat, beat);
+  gl.uniform4f(u.u_e, DATA.rms[f], DATA.bass[f], DATA.mid[f], DATA.treble[f]);
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
+}
+
+/* ── 字幕 DOM ─────────────────────────────── */
+const subwrap = document.getElementById('subwrap');
+const badge = document.getElementById('badge');
+const badgeName = document.getElementById('badgeName');
+const cues = DATA.cues.map(c => {
+  const div = document.createElement('div');
+  div.className = 'cue';
+  const spans = [];
+  let ci = 0;
+  for(const line of c.lines){
+    const ld = document.createElement('div');
+    for(const tok of line){
+      const sp = document.createElement('span');
+      sp.className = 'kchar';
+      sp.textContent = tok;
+      const timing = c.chars[ci++];
+      sp._s = timing.s; sp._e = timing.e;
+      ld.appendChild(sp); spans.push(sp);
+    }
+    div.appendChild(ld);
+  }
+  subwrap.appendChild(div);
+  return {div, spans, start:c.start, end:c.end, speaker:c.speaker};
+});
+let lastCue = null;
+function drawText(t){
+  let active = null;
+  for(const c of cues){
+    if(t >= c.start - 0.25 && t <= c.end + 0.30){ active = c; break; }
+  }
+  if(active !== lastCue){
+    if(lastCue) lastCue.div.style.display = 'none';
+    lastCue = active;
+  }
+  if(active){
+    active.div.style.display = 'block';
+    const fadeIn = Math.min(1, (t - active.start + 0.25) / 0.28);
+    const fadeOut = Math.min(1, (active.end + 0.30 - t) / 0.28);
+    active.div.style.opacity = Math.max(0, Math.min(fadeIn, fadeOut)).toFixed(3);
+    for(const sp of active.spans){
+      let cls = 'kchar';
+      if(t >= sp._e) cls += ' past';
+      else if(t >= sp._s) cls += ' cur';
+      if(sp.className !== cls) sp.className = cls;
+    }
+  } else {
+    badge.style.opacity = 0;
+  }
+  if(active){
+    badge.style.opacity = 1;
+    // 颜色统一跟 speaker 平滑值走,与波形环/背景严格同步
+    const c = ACC[0].map((v, i) => Math.round(v + (ACC[1][i] - v) * spkSm));
+    const acc = rgb(c);
+    document.documentElement.style.setProperty('--acc', acc);
+    badgeName.textContent = DATA.speakers[spkSm > 0.5 ? 1 : 0];
+    document.documentElement.style.setProperty('--acc', acc);
+    badge.style.opacity = Math.max(0, Math.min((t-active.start+0.25)/0.3,
+                                               (active.end+0.3-t)/0.3)).toFixed(3);
+  }
+}
+
+/* ── 波形环 ─────────────────────────────── */
+const fxc = document.getElementById('fx').getContext('2d');
+function drawRings(f){
+  fxc.clearRect(0, 0, 1080, 1920);
+  const spec = DATA.spec[f], rms = DATA.rms[f];
+  const active = spkSm > 0.5 ? 1 : 0;
+  const centers = [[300, 330, 0], [780, 330, 1]];
+  for(const [cx, cy, s] of centers){
+    const isA = s === active;
+    const acc = ACC[s];
+    const r = 104 + (isA ? rms * 26 : 4);
+    fxc.save();
+    fxc.translate(cx, cy);
+    // 底环
+    fxc.beginPath();
+    fxc.arc(0, 0, r, 0, Math.PI*2);
+    fxc.strokeStyle = isA ? rgb(acc, .5) : 'rgba(255,255,255,.10)';
+    fxc.lineWidth = 3;
+    fxc.stroke();
+    // 频谱刺条
+    const N = spec.length;
+    for(let i=0;i<N;i++){
+      const v = isA ? spec[i] : spec[i]*0.12;
+      const a = -Math.PI/2 + Math.PI*2*i/N;
+      const len = 16 + v * 96;
+      const c0 = Math.cos(a), s0 = Math.sin(a);
+      fxc.beginPath();
+      fxc.moveTo(c0*(r+8), s0*(r+8));
+      fxc.lineTo(c0*(r+8+len), s0*(r+8+len));
+      fxc.strokeStyle = isA ? rgb(acc, .55 + .45*v) : 'rgba(255,255,255,.10)';
+      fxc.lineWidth = 8;
+      fxc.lineCap = 'round';
+      if(isA){ fxc.shadowColor = rgb(acc, .9); fxc.shadowBlur = 14*v; }
+      else fxc.shadowBlur = 0;
+      fxc.stroke();
+    }
+    fxc.shadowBlur = 0;
+    // 内盘 + 名字
+    fxc.beginPath();
+    fxc.arc(0, 0, r-26, 0, Math.PI*2);
+    fxc.fillStyle = isA ? rgb(acc, .14) : 'rgba(255,255,255,.03)';
+    fxc.fill();
+    if(isA){ fxc.strokeStyle = rgb(acc, .8); fxc.lineWidth = 3; fxc.stroke(); }
+    fxc.font = '700 40px "Microsoft YaHei"';
+    fxc.textAlign = 'center'; fxc.textBaseline = 'middle';
+    fxc.fillStyle = isA ? '#fff' : 'rgba(255,255,255,.35)';
+    fxc.fillText(DATA.speakers[s], 0, 0);
+    fxc.restore();
+  }
+}
+
+/* ── 每帧入口 ─────────────────────────────── */
+const pfill = document.getElementById('pfill');
+window.renderFrame = function(t){
+  const f = Math.max(0, Math.min(NFR-1, Math.round(t*FPS)));
+  const target = DATA.speaker_frames[f];
+  spkSm += (target - spkSm) * 0.09;
+  const bass = DATA.bass[f];
+  beat = bass > beat ? bass : beat*0.86 + bass*0.14;
+  drawBG(t, f);
+  drawRings(f);
+  drawText(t + DATA.t0);
+  pfill.style.width = (t / DATA.duration * 100).toFixed(2) + '%';
+};
+document.fonts.ready.then(()=>{ window.__READY__ = true; });
+renderFrame(0);
+</script>
+</body>
+</html>

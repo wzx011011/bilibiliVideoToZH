@@ -1,0 +1,237 @@
+{
+ "brand": "AI 快讯 · 2026年10月23日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月23日",
+  "nav": [
+   "Intro",
+   "产品发布",
+   "要闻",
+   "安全与隐私",
+   "开源生态"
+  ],
+  "stories": [
+   {
+    "tag": "产品发布",
+    "short": "Claude Duet",
+    "accent": "#1d4ed8",
+    "title": "Anthropic 发布<span class='num'>主动式私人助理</span> Claude Duet",
+    "broll": [
+     {
+      "img": "broll/ai-news-1022/card-duet.png",
+      "cap": "官方页:研究预览版,候补名单开放",
+      "src": "来源:claude.com · HN 545 分",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "主动式助理",
+      "d": "研究预览版开放候补:管收件箱、日历、跟进,你不在时它<span class='kw'>持续干活</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "大事请示",
+      "d": "理解什么需要你关注,<span class='kw'>大事才来请示</span>,小事直接办完。"
+     },
+     {
+      "g": "⟳",
+      "t": "个人 AI 元年",
+      "d": "从聊天框到<span class='kw'>替你上班</span>,Anthropic 版个人智能落地第一站。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "Meta 250 亿",
+    "accent": "#b91c1c",
+    "title": "Meta 被判 <span class='num'>250 亿美元</span>罚单",
+    "broll": [
+     {
+      "img": "broll/ai-news-1022/card-meta25b.png",
+      "cap": "CNBC:新墨西哥州 Cambridge Analytica 案宣判",
+      "src": "来源:cnbc.com · 北京时间10月22日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "250 亿",
+      "d": "新墨西哥州 <span class='kw'>Cambridge Analytica</span> 案宣判:Meta 支付 <b>250 亿美元</b>。"
+     },
+     {
+      "g": "✦",
+      "t": "史上级罚单",
+      "d": "史上最大隐私罚单之一;BBC 标题:<span class='kw'>Meta 为数据谎言付账</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "旧案新账",
+      "d": "八年前的剑桥分析丑闻,罚单<span class='kw'>迟到但到账</span>。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "谷歌辞职潮",
+    "accent": "#7c3aed",
+    "title": "谷歌员工辞职<span class='num'>抗议 AI 军事合同</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1022/card-google.png",
+      "cap": "BBC:员工因军方 AI 合同相继辞职",
+      "src": "来源:bbc.com · 北京时间10月21日晚",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "辞职抗议",
+      "d": "BBC:谷歌员工因公司与军方 <span class='kw'>AI 合同</span>相继辞职,抗议升级。"
+     },
+     {
+      "g": "✦",
+      "t": "不作恶?",
+      "d": "『<span class='kw'>不作恶</span>』的招牌,正在被反复检验。"
+     },
+     {
+      "g": "⟳",
+      "t": "行业缩影",
+      "d": "AI 军事化浪潮下,大厂<span class='kw'>内部良知</span>与订单的拉锯白热化。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "eMudhra 退场",
+    "accent": "#b91c1c",
+    "title": "eMudhra <span class='num'>退出 SSL 证书</span>业务",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-cso.png",
+      "cap": "官方公告:退出全球 SSL/TLS 证书业务",
+      "src": "来源:emudhra.com · 北京时间10月22日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "退场谢幕",
+      "d": "CA 中间证书沦陷事件后:印度证书巨头 eMudhra 官宣<span class='kw'>退出全球 SSL/TLS 业务</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "CVE 入库",
+      "d": "<span class='kw'>CVE-2026-111943</span> 同日正式入库;mitmproxy 都加了专用参数。"
+     },
+     {
+      "g": "⟳",
+      "t": "信任代价",
+      "d": "信任链崩塌的代价:<span class='kw'>直接退场</span>,不带走一张证书。"
+     }
+    ]
+   },
+   {
+    "tag": "开源生态",
+    "short": "No AI 过滤器",
+    "accent": "#059669",
+    "title": "Steam 玩家请愿<span class='num'>『No AI』过滤器</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1016/card-cso.png",
+      "cap": "IGN:Next Fest 被 AI 垃圾游戏淹没",
+      "src": "来源:ign.com · 183 分",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "AI 淹没新品节",
+      "d": "Steam Next Fest 被 <span class='kw'>AI 垃圾游戏</span>淹没,玩家集体请愿加 No-AI 过滤器。"
+     },
+     {
+      "g": "✦",
+      "t": "183 分",
+      "d": "社区对 AI 泛化的反弹,在游戏圈<span class='kw'>集中爆发</span>。"
+     },
+     {
+      "g": "⟳",
+      "t": "V 社未回应",
+      "d": "过滤器要不要做、怎么做,<span class='kw'>V 社还没表态</span>。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,Anthropic 发布了个新玩意:Claude Duet,研究预览版已开放候补名单。它是一个主动式的私人 AI 助理:帮你管收件箱、日历和各种跟进事项,你不在的时候它持续干活,遇到大事才会来请示你。从聊天框到替你上班,个人 AI 助理这条赛道,Anthropic 正式入场了。",
+   "tts": "第一条,Anthropic 发布了个新玩意:Claude Duet,研究预览版已开放候补名单。它是一个主动式的私人 AI 助理:帮你管收件箱、日历和各种跟进事项,你不在的时候它持续干活,遇到大事才会来请示你。从聊天框到替你上班,个人 AI 助理这条赛道,Anthropic 正式入场了。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,一张史诗级罚单落地。CNBC 报道,美国新墨西哥州就剑桥分析丑闻案宣判:Meta 需要支付二百五十亿美元,史上最大隐私罚单之一。BBC 的标题说得更直白:Meta 为数据谎言付账。八年前的老丑闻,罚单迟到,但到账了。",
+   "tts": "第二条,一张史诗级罚单落地。CNBC 报道,美国新墨西哥州就剑桥分析丑闻案宣判:Meta 需要支付二百五十亿美元,史上最大隐私罚单之一。BBC 的标题说得更直白:Meta 为数据谎言付账。八年前的老丑闻,罚单迟到,但到账了。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,谷歌内部又起波澜。BBC 报道,因公司与军方签订 AI 合同,谷歌员工相继辞职抗议,内部反对声音持续升级。不作恶这三个字,正在被反复拿到放大镜下检验。AI 军事化的浪潮里,大厂员工的良知拉锯,成了整个行业的缩影。",
+   "tts": "第三条,谷歌内部又起波澜。BBC 报道,因公司与军方签订 AI 合同,谷歌员工相继辞职抗议,内部反对声音持续升级。不作恶这三个字,正在被反复拿到放大镜下检验。AI 军事化的浪潮里,大厂员工的良知拉锯,成了整个行业的缩影。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,上周的证书风暴有了结局。印度证书巨头 eMudhra 官宣退出全球 SSL/TLS 证书业务,相关漏洞 CVE-2026-111943 同日正式入库,连 mitmproxy 都连夜加了专用参数。信任链崩塌的代价就是这么直接:不罚款、不整改,直接退场谢幕。",
+   "tts": "第四条,上周的证书风暴有了结局。印度证书巨头 eMudhra 官宣退出全球 SSL/TLS 证书业务,相关漏洞 CVE 二零二六一 一一九四三 同日正式入库,连 mitmproxy 都连夜加了专用参数。信任链崩塌的代价就是这么直接:不罚款、不整改,直接退场谢幕。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,游戏圈对 AI 说不。IGN 报道,Steam 新品节被 AI 垃圾游戏淹没,玩家集体请愿平台加一个 No-AI 过滤器,相关帖子已经拿到一百八十三分。V 社还没表态。当 AI 生成内容泛滥成灾,用户开始反过来要求一个没有 AI 的角落,这个信号值得所有内容平台细品。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "Claude Duet"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "250 亿罚单"
+  },
+  {
+   "scene": "story",
+   "color": "#7c3aed",
+   "label": "谷歌辞职"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "证书退场"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "No AI 过滤器"
+  }
+ ],
+ "stage": "news_stage.html"
+}

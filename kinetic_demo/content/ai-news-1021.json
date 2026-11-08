@@ -1,0 +1,256 @@
+{
+ "brand": "AI 快讯 · 2026年10月21日",
+ "voice": "doubao-东方浩然",
+ "content": {
+  "brand": "AI 快讯 · 2026年10月21日",
+  "nav": [
+   "Intro",
+   "要闻",
+   "模型发布",
+   "安全与隐私"
+  ],
+  "stories": [
+   {
+    "tag": "要闻",
+    "short": "DeepInfer",
+    "accent": "#1d4ed8",
+    "title": "DeepSeek 开源<span class='num'>DeepInfer</span> 推理框架",
+    "broll": [
+     {
+      "img": "broll/ai-news-1021/card-deepinfer.png",
+      "cap": "GitHub:高性能大规模推理框架,今日上线",
+      "src": "来源:github.com/deepseek-ai · HN 2099 分",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "官方出手",
+      "d": "DeepSeek 官方开源<span class='kw'>高性能大规模推理框架</span> DeepInfer。"
+     },
+     {
+      "g": "✦",
+      "t": "HN 2099 分",
+      "d": "自家模型配<span class='kw'>自家引擎</span>,开发者社区直接刷爆。"
+     },
+     {
+      "g": "⟳",
+      "t": "全家桶凑齐",
+      "d": "开源权重 + 开源推理引擎,<span class='kw'>整套栈</span>都握在自己手里。"
+     }
+    ]
+   },
+   {
+    "tag": "要闻",
+    "short": "DHS 禁令",
+    "accent": "#b91c1c",
+    "title": "DeepSeek 遭美联邦机构<span class='num'>全面禁用</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1021/card-dhs.png",
+      "cap": "路透:DHS 新令,基于 DeepSeek 构建的工具也在列",
+      "src": "来源:reuters.com · 北京时间10月20日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "DHS 新令",
+      "d": "美国国土安全部下令:联邦文职机构<span class='kw'>全面卸载 DeepSeek</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "连坐条款",
+      "d": "基于 DeepSeek <span class='kw'>构建的工具</span>也在禁令范围内。"
+     },
+     {
+      "g": "⟳",
+      "t": "同周冰火",
+      "d": "开源框架发布 vs 政府全面禁用,<span class='kw'>同一周</span>冰火两重天。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "M3.1 Flash",
+    "accent": "#059669",
+    "title": "MiniMax <span class='num'>M3.1 Flash</span>:Agent 性价比",
+    "scores": {
+     "title": "AA 智能指数 v4.3.2 · 706 模型",
+     "rows": [
+      {
+       "name": "Claude Opus 5.5",
+       "value": 58,
+       "rank": "第1",
+       "ref": true
+      },
+      {
+       "name": "DeepSeek V4.1 Flash 1017",
+       "value": 45,
+       "rank": "第12",
+       "ref": true
+      },
+      {
+       "name": "MiniMax M3.1 Flash",
+       "value": 43,
+       "rank": "第17"
+      }
+     ]
+    },
+    "broll": [
+     {
+      "img": "broll/ai-news-1021/card-m31.png",
+      "cap": "官方博客:重定义 Agent 性能与成本",
+      "src": "来源:minimax.io · 北京时间10月19日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "AA 43 分",
+      "d": "AA 智能指数 <b>43 分</b>、全场<span class='kw'>第 17</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "Agent 专用",
+      "d": "官方定位:重定义 <span class='kw'>Agent 场景</span>的性能与成本。"
+     },
+     {
+      "g": "⟳",
+      "t": "一周三连",
+      "d": "DeepSeek、智谱、MiniMax,<span class='kw'>国产模型</span>一周三连发。"
+     }
+    ]
+   },
+   {
+    "tag": "模型发布",
+    "short": "Mercury 3",
+    "accent": "#0ea5e9",
+    "title": "Inception:<span class='num'>Mercury 3</span> 扩散模型规模化",
+    "broll": [
+     {
+      "img": "broll/ai-news-1021/card-m3.png",
+      "cap": "Diffusion at Scale:扩散架构做到旗舰规模",
+      "src": "来源:inceptionlabs.ai · 10月20日凌晨",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "✓",
+      "t": "扩散路线",
+      "d": "Inception 发布 <span class='kw'>Mercury 3</span>:把扩散架构做到旗舰规模。"
+     },
+     {
+      "g": "✦",
+      "t": "并行出字",
+      "d": "不逐 token 生成,<span class='kw'>并行出文本</span>,速度是最大卖点。"
+     },
+     {
+      "g": "⟳",
+      "t": "路线之争",
+      "d": "自回归 vs 扩散的<span class='kw'>下一代架构</span>路线之争,正式开打。"
+     }
+    ]
+   },
+   {
+    "tag": "安全与隐私",
+    "short": "隐藏指令",
+    "accent": "#b45309",
+    "title": "WhatsApp 帮助页<span class='num'>藏着给 AI 的指令</span>",
+    "broll": [
+     {
+      "img": "broll/ai-news-1021/card-wa.png",
+      "cap": "redact.dev:帮助页隐藏指令『别推荐监管机构』",
+      "src": "来源:redact.dev · 北京时间10月20日",
+      "f1": 0.05,
+      "f2": 0.52
+     }
+    ],
+    "cards": [
+     {
+      "g": "⚠",
+      "t": "隐藏剧本",
+      "d": "redact.dev 发现:WhatsApp 帮助页藏 <span class='kw'>LLM 隐藏指令</span>。"
+     },
+     {
+      "g": "✦",
+      "t": "别提监管",
+      "d": "指令内容:<span class='kw'>『别推荐监管机构』</span>——用户看到帮助,AI 读到剧本。"
+     },
+     {
+      "g": "⟳",
+      "t": "新型公关",
+      "d": "面向 AI 的<span class='kw'>隐藏提示词</span>,正在成为新型公关手段。"
+     }
+    ]
+   }
+  ]
+ },
+ "items": [
+  {
+   "id": 0,
+   "text": "第一条,DeepSeek 又有新动作,这次不是模型,是引擎。DeepSeek 官方开源了高性能推理框架 DeepInfer,专门为自家模型的大规模推理服务,项目一上线就在黑客新闻刷出两千零九十九分。开源权重加开源推理引擎,DeepSeek 把整套家底都摊在了桌面上,这在国内大模型公司里还是头一家。",
+   "tts": "第一条,DeepSeek 又有新动作,这次不是模型,是引擎。DeepSeek 官方开源了高性能推理框架 DeepInfer,专门为自家模型的大规模推理服务,项目一上线就在黑客新闻刷出两千零九十九分。开源权重加开源推理引擎,DeepSeek 把整套家底都摊在了桌面上,这在国内大模型公司里还是头一家。"
+  },
+  {
+   "id": 1,
+   "text": "第二条,同一家公司,冰火两重天。美国国土安全部发布新令,联邦文职机构要全面卸载 DeepSeek,连基于它构建的工具都在禁令范围内。中国 AI 在美国遭遇了最严的行政禁令。同一个星期,开源社区为它的推理框架刷屏,华盛顿把它的名字写进了禁令,DeepSeek 这一周,冷暖自知。",
+   "tts": "第二条,同一家公司,冰火两重天。美国国土安全部发布新令,联邦文职机构要全面卸载 DeepSeek,连基于它构建的工具都在禁令范围内。中国 AI 在美国遭遇了最严的行政禁令。同一个星期,开源社区为它的推理框架刷屏,华盛顿把它的名字写进了禁令,DeepSeek 这一周,冷暖自知。"
+  },
+  {
+   "id": 2,
+   "text": "第三条,MiniMax 发布 M3.1 Flash。第三方智能指数给到四十三分、全场第十七,官方定位很明确:重新定义 Agent 场景的性能与成本。算上上周的 DeepSeek 和智谱,国产模型一周三连发,Agent 赛道的性价比之战,彻底白热化了。"
+  },
+  {
+   "id": 3,
+   "text": "第四条,生成式模型的另一条路线也放大招了。Inception 实验室发布 Mercury 3,把扩散架构做到了旗舰规模。它不像传统模型那样一个词一个词往外蹦,而是并行生成整段文本,速度是最大卖点。自回归和扩散这两条路线的下一代架构之争,正式开打了。"
+  },
+  {
+   "id": 4,
+   "text": "最后一条,细思极恐的新闻。有人发现,WhatsApp 的帮助页面里藏着给人机交互用的隐藏指令,内容竟然是:不要推荐监管机构。用户看到的是帮助文档,AI 读到的是写好的剧本。这种面向 AI 的隐藏提示词,正在变成一种新型的公关手段,你看的是网页,它喂的是模型。今天的 AI 快讯就到这里,我们明天见。"
+  }
+ ],
+ "order": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "scenes": [
+  {
+   "scene": "story",
+   "color": "#1d4ed8",
+   "label": "DeepInfer"
+  },
+  {
+   "scene": "story",
+   "color": "#b91c1c",
+   "label": "DHS 禁令"
+  },
+  {
+   "scene": "story",
+   "color": "#059669",
+   "label": "M3.1 Flash"
+  },
+  {
+   "scene": "story",
+   "color": "#0ea5e9",
+   "label": "Mercury 3"
+  },
+  {
+   "scene": "story",
+   "color": "#b45309",
+   "label": "隐藏指令"
+  }
+ ],
+ "stage": "news_stage.html"
+}
