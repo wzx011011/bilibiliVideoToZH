@@ -1,0 +1,307 @@
+[
+ {
+  "out": "work/broll/zq-11-jiangxiang/s1_0.png",
+  "seed": 2286,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:和氏璧之约主题场景:前283年,赵惠文王得到和氏璧,秦昭王开价十五城求换。给,怕被白嫖;不给,怕挨打…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s1_1.png",
+  "seed": 2287,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:和氏璧之约主题场景:前283年,赵惠文王得到和氏璧,秦昭王开价十五城求换。给,怕被白嫖;不给,怕挨打…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s1_2.png",
+  "seed": 2288,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:和氏璧之约主题场景:前283年,赵惠文王得到和氏璧,秦昭王开价十五城求换。给,怕被白嫖;不给,怕挨打…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s1_3.png",
+  "seed": 2289,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:和氏璧之约主题场景:前283年,赵惠文王得到和氏璧,秦昭王开价十五城求换。给,怕被白嫖;不给,怕挨打…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s1_bg.png",
+  "seed": 2340,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s2_0.png",
+  "seed": 2291,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:章台见璧,秦王只顾传看,绝口不提城池。相如上前:璧有微瑕,请指示王。拿回璧后,他…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「蔺相如」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "蔺相如"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s2_1.png",
+  "seed": 2292,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:章台见璧,秦王只顾传看,绝口不提城池。相如上前:璧有微瑕,请指示王。拿回璧后,他…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s2_2.png",
+  "seed": 2293,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:章台见璧,秦王只顾传看,绝口不提城池。相如上前:璧有微瑕,请指示王。拿回璧后,他…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s2_3.png",
+  "seed": 2294,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:章台见璧,秦王只顾传看,绝口不提城池。相如上前:璧有微瑕,请指示王。拿回璧后,他…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s2_bg.png",
+  "seed": 2345,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s3_0.png",
+  "seed": 2296,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:相如暗遣随从怀璧潜逃,归赵。秦王想杀了相如又怕失信于天下,只得放行。完璧归赵四个…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s3_1.png",
+  "seed": 2297,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:相如暗遣随从怀璧潜逃,归赵。秦王想杀了相如又怕失信于天下,只得放行。完璧归赵四个…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s3_2.png",
+  "seed": 2298,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:相如暗遣随从怀璧潜逃,归赵。秦王想杀了相如又怕失信于天下,只得放行。完璧归赵四个…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s3_3.png",
+  "seed": 2299,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:完璧归赵主题场景:相如暗遣随从怀璧潜逃,归赵。秦王想杀了相如又怕失信于天下,只得放行。完璧归赵四个…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s3_bg.png",
+  "seed": 2350,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s4_0.png",
+  "seed": 2301,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:渑池之会主题场景:前279年,秦王约赵王渑池相会。宴上秦王请赵王鼓瑟,赵王鼓之——秦国史官当场记录…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「蔺相如」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "蔺相如"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s4_1.png",
+  "seed": 2302,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:渑池之会主题场景:前279年,秦王约赵王渑池相会。宴上秦王请赵王鼓瑟,赵王鼓之——秦国史官当场记录…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s4_2.png",
+  "seed": 2303,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:渑池之会主题场景:前279年,秦王约赵王渑池相会。宴上秦王请赵王鼓瑟,赵王鼓之——秦国史官当场记录…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s4_3.png",
+  "seed": 2304,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:渑池之会主题场景:前279年,秦王约赵王渑池相会。宴上秦王请赵王鼓瑟,赵王鼓之——秦国史官当场记录…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s4_bg.png",
+  "seed": 2355,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s5_0.png",
+  "seed": 2306,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:位居廉颇上主题场景:渑池归来,相如拜上卿,位居廉颇之上。老将军怒了:我攻城野战之功,不如一个靠嘴皮子…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s5_1.png",
+  "seed": 2307,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:位居廉颇上主题场景:渑池归来,相如拜上卿,位居廉颇之上。老将军怒了:我攻城野战之功,不如一个靠嘴皮子…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s5_2.png",
+  "seed": 2308,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:位居廉颇上主题场景:渑池归来,相如拜上卿,位居廉颇之上。老将军怒了:我攻城野战之功,不如一个靠嘴皮子…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s5_3.png",
+  "seed": 2309,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:位居廉颇上主题场景:渑池归来,相如拜上卿,位居廉颇之上。老将军怒了:我攻城野战之功,不如一个靠嘴皮子…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s5_bg.png",
+  "seed": 2360,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s6_0.png",
+  "seed": 2311,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:先国后私主题场景:门客不解,相如道破天机:强秦不敢加兵于赵,正因将相和睦。两虎相斗,必有一伤——吾…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「蔺相如」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "蔺相如"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s6_1.png",
+  "seed": 2312,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:先国后私主题场景:门客不解,相如道破天机:强秦不敢加兵于赵,正因将相和睦。两虎相斗,必有一伤——吾…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s6_2.png",
+  "seed": 2313,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:先国后私主题场景:门客不解,相如道破天机:强秦不敢加兵于赵,正因将相和睦。两虎相斗,必有一伤——吾…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s6_3.png",
+  "seed": 2314,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:先国后私主题场景:门客不解,相如道破天机:强秦不敢加兵于赵,正因将相和睦。两虎相斗,必有一伤——吾…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s6_bg.png",
+  "seed": 2365,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s7_0.png",
+  "seed": 2316,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:刎颈之交主题场景:将相和好,誓同生死,史称刎颈之交。此后赵国将相同心,秦军多年不敢犯境。一个国家最…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「廉颇」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "廉颇"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s7_1.png",
+  "seed": 2317,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:刎颈之交主题场景:将相和好,誓同生死,史称刎颈之交。此后赵国将相同心,秦军多年不敢犯境。一个国家最…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s7_2.png",
+  "seed": 2318,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:刎颈之交主题场景:将相和好,誓同生死,史称刎颈之交。此后赵国将相同心,秦军多年不敢犯境。一个国家最…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s7_3.png",
+  "seed": 2319,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:刎颈之交主题场景:将相和好,誓同生死,史称刎颈之交。此后赵国将相同心,秦军多年不敢犯境。一个国家最…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s7_bg.png",
+  "seed": 2370,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s8_0.png",
+  "seed": 2321,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:战国美谈的终章主题场景:可惜将相和的佳话没能救赵国于长平:廉颇被换、相如病重,人和的资产在权力交接中耗散…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s8_1.png",
+  "seed": 2322,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:战国美谈的终章主题场景:可惜将相和的佳话没能救赵国于长平:廉颇被换、相如病重,人和的资产在权力交接中耗散…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s8_2.png",
+  "seed": 2323,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:战国美谈的终章主题场景:可惜将相和的佳话没能救赵国于长平:廉颇被换、相如病重,人和的资产在权力交接中耗散…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s8_3.png",
+  "seed": 2324,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:战国美谈的终章主题场景:可惜将相和的佳话没能救赵国于长平:廉颇被换、相如病重,人和的资产在权力交接中耗散…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s8_bg.png",
+  "seed": 2375,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s9_0.png",
+  "seed": 2326,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:尾声·趣闻主题场景:明朝王世贞写过一篇翻案文章《蔺相如完璧归赵论》,观点扎心:璧最终留在了秦国。相如…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s9_1.png",
+  "seed": 2327,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:尾声·趣闻主题场景:明朝王世贞写过一篇翻案文章《蔺相如完璧归赵论》,观点扎心:璧最终留在了秦国。相如…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-11-jiangxiang/s9_bg.png",
+  "seed": 2378,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ }
+]

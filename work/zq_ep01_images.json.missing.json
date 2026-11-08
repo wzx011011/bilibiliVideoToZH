@@ -1,0 +1,303 @@
+[
+ {
+  "out": "work/broll/zq-01-shewangjian/s1_1.png",
+  "seed": 1201,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:洛邑城门:疲惫的天子车驾入城,诸侯仪仗观望,新都狭小局促,寄人篱下的开始。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s1_2.png",
+  "seed": 1202,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:洛邑王城全景:宫室规格缩小的王都,四周诸侯疆域环伺,小朝廷的窘迫一目了然。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s1_3.png",
+  "seed": 1203,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:朝堂之上:年幼天子坐于高台,强藩大臣昂立阶前,君臣易势的沉默张力。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s1_bg.png",
+  "seed": 1254,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s2_1.png",
+  "seed": 1206,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:父子相继:郑武公郑庄公两代国君的传承画面,朝服威严,背景王室卿士任命的简册。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s2_2.png",
+  "seed": 1207,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:郑国都城繁华:市井商旅,兵车操练,小国练成强国的新型国家场景。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s2_3.png",
+  "seed": 1208,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:王室朝会:郑庄公以卿士身份号令百官,周天子形同虚设的尴尬。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s2_bg.png",
+  "seed": 1259,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s3_1.png",
+  "seed": 1211,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:交换人质:王子狐登车去郑,公子忽入周,两队仪仗在道中交错,礼崩的标志性画面。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s3_2.png",
+  "seed": 1212,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:质子生活:年少的王子狐在郑国宫中孤独身影,隔窗遥望西方,思乡的压抑。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s3_3.png",
+  "seed": 1213,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:史官记事:史官在竹简上郑重写下周郑交质四字,笔锋沉重。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s3_bg.png",
+  "seed": 1264,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s4_1.png",
+  "seed": 1216,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:鱼丽之阵:郑军战车冲锋,步兵如鱼群般紧密随行,阵法之妙冲垮联军。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s4_2.png",
+  "seed": 1217,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:箭中王肩瞬间:郑将弯弓瞄准,天子车驾上桓王中箭按肩,历史性一刻的定格。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s4_3.png",
+  "seed": 1218,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:王师溃败:联军四散奔逃,郑军追击的扬尘,天子战车在乱军中踉跄。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s4_bg.png",
+  "seed": 1269,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s5_1.png",
+  "seed": 1221,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:夜遣使者:郑国使者提灯捧帛,星夜赶往王营慰问伤者,政治分寸的高明。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s5_2.png",
+  "seed": 1222,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:天子营帐:负伤的桓王倚榻,接过慰问礼物面色复杂,愤怒与无奈交织。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s5_3.png",
+  "seed": 1223,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:战后列国:各国宫廷交换眼神窃语,天子威信崩塌的消息传遍诸侯。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s5_bg.png",
+  "seed": 1274,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s6_1.png",
+  "seed": 1226,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:楚国练兵:汉水之滨战车奔驰,甲士操练,北上中原的野心。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s6_2.png",
+  "seed": 1227,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:南北对望:北方周室王城与南方楚国军阵隔中原大地对峙的意象。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s6_3.png",
+  "seed": 1228,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:楚使北上:楚国使者乘车赴洛邑,傲然观望王城,试探与不逊。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s6_bg.png",
+  "seed": 1279,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s7_1.png",
+  "seed": 1231,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:管仲改革市井:临淄鱼盐市集繁荣,商旅辐辏,富国强兵的经济底子。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s7_2.png",
+  "seed": 1232,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:会盟台意象:高台上盟主身影,诸侯环列,尊王攘夷的旗帜招展。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s7_3.png",
+  "seed": 1233,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:边关告急:蛮族入侵的烽烟与诸侯联军出兵救援的队列。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s7_bg.png",
+  "seed": 1284,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s8_1.png",
+  "seed": 1236,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:竹简开篇:史官笔落,春秋时代开篇,墨迹淋漓。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s8_2.png",
+  "seed": 1237,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:诸侯棋局:列国君侯各怀心思的会盟圆桌,权力棋局。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s8_3.png",
+  "seed": 1238,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:王城暮色:夕阳下的天子宫阙,威严犹在而实质已空。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s8_bg.png",
+  "seed": 1289,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s9_0.png",
+  "seed": 1290,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:决裂之门:郑庄公下令把母亲迁出城外的决绝身影,誓言悬于画面。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s9_1.png",
+  "seed": 1291,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:隧道相见:挖出泉水的地道中母子相向而行,烛光温暖,土木工程式的团圆。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s9_bg.png",
+  "seed": 1299,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s1_0.png",
+  "seed": 1200,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:骊山烽火余烬:残破宫室烟柱未熄,戎人骑兵呼啸掠过,山下队伍仓皇东行,王朝落幕的苍凉。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s2_0.png",
+  "seed": 1205,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:郑国宫室议政:雄心勃勃的郑庄公与谋臣议事,案上郑国疆域扩张,权臣气象。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s3_0.png",
+  "seed": 1210,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:殿中对峙:周平王与郑庄公面色各异的谈判,群臣屏息,君臣裂痕公开化。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s4_0.png",
+  "seed": 1215,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:繻葛战场全景:王师联军与郑军列阵对峙,旌旗猎猎,大战一触即发。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s5_0.png",
+  "seed": 1220,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:鸣金收兵:主帅勒马止住追击,诸将不解,大战方酣却收兵,克制的智慧。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s6_0.png",
+  "seed": 1225,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:楚国宫室:熊通昂然自立为王,群臣朝贺,南方之国的僭越气魄。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s7_0.png",
+  "seed": 1230,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:齐国朝堂:年轻的齐桓公与管仲对坐畅谈,霸业蓝图展开,君臣相得。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-01-shewangjian/s8_0.png",
+  "seed": 1235,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国春秋时代(约两千五百年前,礼崩乐坏的争霸岁月)。场景:繻葛黄昏:箭落之后的寂静战场,弃旗断戈,夕阳如血,时代转折的肃穆。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ }
+]

@@ -1,0 +1,165 @@
+{
+  "title": "Hinton 访谈 · 中文播客(豆包翻译版) · 上半部",
+  "chapters": [
+    {
+      "id": 0,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 0,
+      "end": 28.28,
+      "text": "能有机会和杰弗里·辛顿对话，我真的特别开心。我关注他的研究很多年了，但这是我们第一次真正碰面。所以对我来说，这期《事实本源》播客算得上一大亮点。欢迎你，杰夫。\n\n非常感谢。对我而言，这同样是难得的机会",
+      "audioFile": "audio_doubao/0000.wav"
+    },
+    {
+      "id": 1,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 28.58,
+      "end": 37.98,
+      "text": "对我来说这同样是个难得的机会。你擅长一个领域，我精通另一个领域，能碰面交流非常好。这恰恰是关键所在。",
+      "audioFile": "audio_doubao/0001.wav"
+    },
+    {
+      "id": 2,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 38.28,
+      "end": 78.64,
+      "text": "要说融合，这就是最典型的例子。我想先聊聊，你最近频频登上新闻。不过，真正让我想要和你对话的，是你在《60分钟》节目里和斯科特·佩尔的访谈。你当时提到，医疗领域显然能收获巨大益处。人工智能解读医学影像的",
+      "audioFile": "audio_doubao/0002.wav"
+    },
+    {
+      "id": 3,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 78.94,
+      "end": 111.18,
+      "text": "要说交汇点，这再合适不过了。我想就从这里切入。当然，你最近频繁登上新闻版面，但真正促使我想要和你交流的，是你做客《60分钟》，与斯科特·佩尔的那期访谈。你当时提到，医疗领域显然能收获巨大效益。人工智能",
+      "audioFile": "audio_doubao/0003.wav"
+    },
+    {
+      "id": 4,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 111.48,
+      "end": 121.56,
+      "text": "多年以来，一直都有定量构效关系这门学科。该学科主要用于预测某种化学物质能否和目标靶点结合，而基本上，他直接颠覆了这个领域。",
+      "audioFile": "audio_doubao/0004.wav"
+    },
+    {
+      "id": 5,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 121.86,
+      "end": 164.22,
+      "text": "有意思的是，医疗、医药以及生命科学领域，在当下Transformer模型的人工智能浪潮里，走出了一条相对独立的发展道路。当然，这一切还要追溯到你当年推动深度学习、深度神经网络发展的那些里程碑式研究。不",
+      "audioFile": "audio_doubao/0005.wav"
+    },
+    {
+      "id": 6,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 164.52,
+      "end": 177.64,
+      "text": "当然还有另一个例子，来自你的同事德米斯·哈萨比斯以及谷歌深度思维团队的其他人，这项技术带来的影响要更为",
+      "audioFile": "audio_doubao/0006.wav"
+    },
+    {
+      "id": 7,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 177.94,
+      "end": 188.38,
+      "text": "这又是一个典型案例，出自你的同行，谷歌深度思维的德米斯·哈萨比斯等人之手，这项成果展现出的前景要更加",
+      "audioFile": "audio_doubao/0007.wav"
+    },
+    {
+      "id": 8,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 188.68,
+      "end": 233.0,
+      "text": "更优秀的家庭医生。这点确实值得重视，由此我们聊到一篇昨天刚发布的预印本论文。有意思的是，发布这篇文章的预印本平台阿克西夫，通常并不大量刊载医学预印本。论文出自谷歌团队，他们后来告诉我，研究使用的是一款",
+      "audioFile": "audio_doubao/0008.wav"
+    },
+    {
+      "id": 9,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 233.3,
+      "end": 284.62,
+      "text": "更出色的家庭医生。这一点非常关键，由此我们聊到昨天刚发布的一篇预印本论文。论文发布在预印本平台阿克西夫，有意思的是，这个平台平时很少刊发医学类预印本。研究由谷歌团队完成。他们后来告诉我，实验用的是一款",
+      "audioFile": "audio_doubao/0009.wav"
+    },
+    {
+      "id": 10,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 284.92,
+      "end": 323.72,
+      "text": "说回这份报告，2016年我做过一个大胆但错误的预测：五年之内，神经网络解读医学影像的能力会超越放射科医生。这句话有时会被断章取义。我的本意是解读影像，而不是包揽放射科医生的全部工作。我当时确实预估错了",
+      "audioFile": "audio_doubao/0010.wav"
+    },
+    {
+      "id": 11,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 324.02,
+      "end": 346.34,
+      "text": "经过微调的模型。我记得它的微调方式和医帕姆2略有区别。单看大语言模型本身，表现似乎已经优于内科医生。但更有意思的是，内科医生借助大语言模型之后，诊疗水平会大幅提升。如果我没记错，使用大语言模型时，医生",
+      "audioFile": "audio_doubao/0011.wav"
+    },
+    {
+      "id": 12,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 346.64,
+      "end": 378.8,
+      "text": "模型，之后又做了微调。我记得它的微调方式和医疗帕姆2略有区别。单看大语言模型本身，表现已经优于内科医生。但更有意思的是，内科医生借助大模型之后，自身的诊疗水平也大幅提升。我印象里，医生使用大模型时，诊",
+      "audioFile": "audio_doubao/0012.wav"
+    },
+    {
+      "id": 13,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 379.1,
+      "end": 389.3,
+      "text": "想必你也清楚，即便到现在，它已经能够大致预判病情预后情况。我还了解到一点",
+      "audioFile": "audio_doubao/0013.wav"
+    },
+    {
+      "id": 14,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 389.6,
+      "end": 398.48,
+      "text": "想必你也清楚，虽然没能在五年内实现，但如今的发展态势已经和你当年的预测相当接近。我从中悟出一点",
+      "audioFile": "audio_doubao/0014.wav"
+    },
+    {
+      "id": 15,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 398.78,
+      "end": 441.34,
+      "text": "风险就会很高。如果训练数据没有经过严谨管控，医生过度信任这类模型会相当危险。\n\n说回这份新报告，大语言模型表现如此出色，会不会是因为《新英格兰医学杂志》里的部分病例，本身就被纳入了预训练数据集？这一直",
+      "audioFile": "audio_doubao/0015.wav"
+    }
+  ]
+}

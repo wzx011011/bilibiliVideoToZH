@@ -1,0 +1,1385 @@
+{
+ "title": "Dianne Penn 谈 Anthropic · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 0.0,
+   "end": 29.869,
+   "text": "今天，我的嘉宾是黛安·彭，Anthropic AI研究与实验室团队的产品负责人。三年前加入时，她是首位技术产品经理。 AI领域漫长岁月，产品团队仅五人。她主导了Anthropic从Claude 2到Fable所有模型发布。 她还推动了计算机使用、工具使用和推理等核心能力的开发。 能与AI和产品管理领域核心人物对话，总是一种令人兴奋的体验。",
+   "audioFile": "audio-dianne-penn-anthropic/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 30.319,
+   "end": 58.941,
+   "text": "很难想象还有谁比Anthropic产品负责人更了解AI发展方向。开始前请访问伦尼的产品通行证网站。 订阅Lenny通讯的读者可免费体验全球最前沿AI产品一年，仅限订阅者。 现在有请黛安·彭。 感谢Diane参加播客，谢谢Lenny，很高兴重逢。 我想回到Anthropic初创时期，记得他们刚推出时，这应该是第一代模型。",
+   "audioFile": "audio-dianne-penn-anthropic/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 59.391,
+   "end": 86.026,
+   "text": "三年前，我感觉他们根本没有机会，OpenAI领先太多了。 他们简直不敢相信，怎么做到的？OpenAI已领先，现在太晚了。 我看到的最新数据是，Anthropic的年度经常性收入已达500亿美元，这曾是公司上市的标准门槛。 像非常成功的企业以500亿美元估值上市，Anthropic据说每年达此目标。你作为最早期产品经理加入。",
+   "audioFile": "audio-dianne-penn-anthropic/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 86.476,
+   "end": 116.168,
+   "text": "你加入时公司只有五名工程师，模型尚未发布。安特罗皮克早期发展是怎样的？ 有哪些关于初创时期可能让人意外的细节？ Anthropic今日的成功很大程度源于早期奠定的基础，我2023年加入。 正如你所说，我们当时有五名产品工程师，其中一名负责整个API业务。 我认为很大一部分原因在于公司文化强大。这也是我向关注公司的人强调的重点。",
+   "audioFile": "audio-dianne-penn-anthropic/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 116.618,
+   "end": 140.077,
+   "text": "团队真正践行使命、文化和价值观，充满初创公司的活力。你说得对。 我们早期一直在探索自身定位。技术固然重要，但如何通过技术创造价值？ 如何为用户和社会带来价值？早期阶段我们通过不同方式探索这些问题。 我们从Claude.ai聊天机器人起步，逐步拓展至工具使用等功能。",
+   "audioFile": "audio-dianne-penn-anthropic/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 140.527,
+   "end": 168.877,
+   "text": "我认为我们真正找到节奏的时刻之一，是推出金门克劳德这样的产品。你可能不记得了？不。 这个产品上线时间只有大约24小时。 我们在2024年初刚刚发表了早期的一项可解释性研究。 其中有一个例子是，模型各层中存在所谓的特征表达。 这些特征能够表达特定的主题类型。 研究人员识别出的主题包括：比如项目符号写作，还有人物与地点。",
+   "audioFile": "audio-dianne-penn-anthropic/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 169.327,
+   "end": 196.63,
+   "text": "而频繁出现且引发共鸣的一个主题是金门大桥。 当您启用该功能，Claude会沉迷于金门大桥。 这意味着每个回应都会反复提及金门大桥。 比如让你提供意大利面食谱时，它会说：这是食谱。 并提到橙色是金门大桥标志性的国际红色，这种设定非常奇特。 当时我们希望让更多用户，尤其是刚开始使用Claude的人了解。",
+   "audioFile": "audio-dianne-penn-anthropic/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 197.08,
+   "end": 227.298,
+   "text": "整个体验在24小时内通过官网上线。 这需要工程、产品设计和研究团队通力合作，我们为此感到非常自豪。 老实说，可能只有2000人使用过。 但它让我们意识到，我们真的可以创造全新的用户体验，以独特且真实的方式展示我们的研究成果。 而且是以一种非常初创公司式的节奏进行的。对我来说，这就像一个隐藏的转折点，标志着我们开始找到自己的定位。",
+   "audioFile": "audio-dianne-penn-anthropic/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 227.748,
+   "end": 255.064,
+   "text": "我们能够打造与竞争对手已有产品截然不同的产品和体验。 显然，比如实验室、云端代码等。 我们开始思考，我们是否真的应该重新定义世界对AI的认知，如何将AI更贴近公众。 但当时是自下而上的文化。整个体验都是自下而上的。我看到工程师和设计师都在主动投入时间参与。 因此，我总是用这个例子来说明早期的氛围。",
+   "audioFile": "audio-dianne-penn-anthropic/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 255.514,
+   "end": 288.499,
+   "text": "但自初创时期以来，文化和价值观始终如一。本集由本季度冠名赞助商沃克奥斯呈现。 OpenAI、Anthropic、Cursor等数百家公司有何共同点？WorkOS。 如果你正在为企业开发产品，你一定经历过整合单点登录、基于角色的访问控制、审计日志等大型企业所需功能的痛苦。 WorkOS通过专为企业SaaS打造的现代开发者平台，将交易障碍转化为即插即用API。",
+   "audioFile": "audio-dianne-penn-anthropic/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 288.949,
+   "end": 322.717,
+   "text": "我投资的每家向上扩展的初创公司最终都与WorkOS合作，因为它们最优秀。 无论你是种子轮初创公司还是寻求全球扩张的独角兽企业，WorkOS都是实现企业级能力、消除增长障碍的最快路径。 这相当于企业版Stripe。访问WorkOS官网或联系Slack，工程师随时解答。 WorkOS通过愉悦API、全面文档和流畅开发体验，助你加速构建。访问官网，让应用具备企业级能力。",
+   "audioFile": "audio-dianne-penn-anthropic/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 323.167,
+   "end": 350.516,
+   "text": "Anthropic从初创实验室发展到如今规模的过程中，除了与OpenAI竞争，还有哪些关键转折点？ 有哪些令人印象深刻的时刻，比如奥普斯3的训练和测试，真的改变了局面？ 我认为那时公司人数还不到200人。 当时我们明确需要打造前沿模型，这对触达用户、消费者以及展示研究成果至关重要。",
+   "audioFile": "audio-dianne-penn-anthropic/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 350.966,
+   "end": 368.018,
+   "text": "我们寻找为何选择Claude的原因，这成为核心问题。 这正是早期经常被问到的核心问题。 奥普斯3于2024年3月上线，但此前数月，推理、研究、微调、预训练等多个团队在不同阶段通力协作，共同推进目标。",
+   "audioFile": "audio-dianne-penn-anthropic/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 368.718,
+   "end": 399.019,
+   "text": "我认为所有参与人员都为此感到非常自豪。 我记得当时作为产品经理，我和研究负责人团队一起，大约在12月时，大家都各自待在父母家中，看到每个人童年房间的背景。 每个人都非常努力地思考，我们究竟在训练这个模型做什么？它是否以正确的方式呈现？ 我认为这在建立信任方面非常关键。 从那时起，许多研究负责人现在都负责强化学习、角色工作和对齐工作。",
+   "audioFile": "audio-dianne-penn-anthropic/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 399.469,
+   "end": 424.451,
+   "text": "这种基础信任帮助我们在产品和研究团队之间高效协作，因为早期我们曾深入一线共同工作。 我认为当时还意识到编程非常重要。 2023年我刚加入时，没人会把Anthropic、云端代码和编程放在一起说。 当时竞品模型如GPT-4虽然也用于编程，但只是众多应用场景之一。",
+   "audioFile": "audio-dianne-penn-anthropic/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 424.901,
+   "end": 440.834,
+   "text": "我注意到人们开始用这些模型编写完整代码，而不仅是代码补全。 这并不是我们训练奥普斯3的绝佳机会。 从训练角度看这只是一个较小的改动，但帮助我们在早期竞争中脱颖而出，吸引了大量早期云端开发者。",
+   "audioFile": "audio-dianne-penn-anthropic/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 441.284,
+   "end": 474.543,
+   "text": "你提到奥普斯3，那已经是很久以前的事了。很难想象当时是重大转折点，听你这么说才知道这在内部是重要里程碑。 你们建立的这种信心几乎让人觉得，我们真的能够推出一个前沿模型，但如今与我们现在的成果相比，这个模型其实并不出色。 我一直在想的是奥普斯4.5，有趣的是，它是在一年后，也就是大家寒假在家时，我们还能继续开发。这算不算另一个重要里程碑？ 没错，奥普斯4.5确实是一个重要的里程碑。",
+   "audioFile": "audio-dianne-penn-anthropic/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 474.993,
+   "end": 495.841,
+   "text": "我认为奥普斯4.5的神奇之处在于，我们不仅有了模型，还打造了像云端代码这样优秀的产品体验载体。 我们团队经常强调，要拥有前沿产品才能实现前沿模型，让用户体验到前沿模型的魔力。 在那之前，我们已经体验到云端代码的魔力很多个月了。",
+   "audioFile": "audio-dianne-penn-anthropic/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 496.291,
+   "end": 530.102,
+   "text": "但事实是，模型达到了一个智能水平，用户能在各种新场景中体验前沿智能，并通过自主运行方式实现端到端操作。 我认为这就是转折点。实际上，如果没有云端代码这样的产品，奥普斯4.5不可能达到这个高度。 同样，如果没有奥普斯4.5，云端代码的普及速度也不会这么快。 说到这个话题，达里奥的预测很有趣。回顾他所有预测，他一直认为编程问题很快就能被解决。",
+   "audioFile": "audio-dianne-penn-anthropic/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 530.552,
+   "end": 567.643,
+   "text": "他预计一年内就能实现，还常说AI会替我们完成所有代码编写。当时大家都觉得这不可能，太复杂了。 人类做这件事如此复杂，AI怎么可能真正擅长？当时我们都认为这要人类做很久。但他完全正确。 他常提到我们现在正处于指数增长曲线，用这种方式描述我们正处在曲线上。记得不久之前，新模型发布时，大家曾认为已到顶点，无发展空间。 现在情况完全相反。现在我们正处于指数曲线的内部，就像你想象的指数曲线，我们正处在曲线的内部。",
+   "audioFile": "audio-dianne-penn-anthropic/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 568.093,
+   "end": 597.787,
+   "text": "按定义，每次改进都是巨大飞跃，因为我们正处指数增长曲线的拐点阶段。 身处这个AI飞速发展的历史性时刻，感觉如何？如此多的可能性正在被解锁。 这种感觉如何？人们该如何为即将到来的AI加速改进做准备？ 我常对团队说，当时我们大多数人还未参与互联网普及的进程。 这感觉就像人类正在经历类似的转变。",
+   "audioFile": "audio-dianne-penn-anthropic/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 598.237,
+   "end": 623.981,
+   "text": "我认为类比很有帮助，比如这个类比包含几个方面。 首先，适应能力变得非常重要。我们有评估机制。 在安全方面有安全测试、红队演练；能力方面有云端代码等新产品。 但很难预测具体时刻或具体模型的出现。 当面对新信息时，如何做出更好决策而非固守原计划？这种敏捷性至关重要。",
+   "audioFile": "audio-dianne-penn-anthropic/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 624.431,
+   "end": 654.064,
+   "text": "我认为另一个关键点在于，如何真正从第一性原理出发，推导出下一步的行动？这背后的意义是什么？ 我们如何投资新产品？又该如何向用户解释这些产品的差异？ 我认为，身处这种指数级增长的环境中，很多经验都表明。 要理解如何运作并做出更优决策，然后率先应用这些原则。 从第一性原理出发，制定一个数月后才可能实现的计划，这需要我们提前规划",
+   "audioFile": "audio-dianne-penn-anthropic/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 654.514,
+   "end": 688.025,
+   "text": "但现在模型已经能够实际执行这些功能并带给用户价值，比如协作、技能标签等功能。 这其实是一个非常积极的自我强化循环。我认为其中很重要的一点是彼此之间的信任。 确保我们做出正确的决策判断，让团队成员共同参与。有些团队可能更早感知到这种指数级增长。 那么我们如何以包容的心态，让不断成长的组织与公司共同适应这种变化？我听到的意思是，每次模型更新都可能带来意想不到的可能性",
+   "audioFile": "audio-dianne-penn-anthropic/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 688.475,
+   "end": 730.768,
+   "text": "因此最重要的就是保持适应能力，随时应对新出现的机遇。 正如你所说，产品本身必须不断进化以匹配技术可能性。虽然模型能实现很多功能，但用户可能尚未理解如何使用。 所以让产品使用变得简单，甚至直接告诉用户'你可以尝试这个功能'，这似乎就是你描述的重点。 我认为原始的扩展定律论文中有一些非常有趣的图表。 我认为大家对扩展定律都很熟悉，尤其是在增加计算资源和数据的情况下。 随着计算资源和数据的增加，所称的损失值，即下一个词预测的损失值会下降。",
+   "audioFile": "audio-dianne-penn-anthropic/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 731.218,
+   "end": 761.056,
+   "text": "因此，模型随着规模扩大而变得更智能，呈现出非常平滑的线性曲线。 但论文中更有趣的是，还存在这些截然不同的能力演进图表。 例如，当增加数据并用更多计算资源训练模型时。 你会看到这些能力出现断点式跃迁。模型从无法计算'1+1'到能可靠计算'1+1'。 这些能力的出现具有某种可预测性，但并非所有人都能准确预知具体时刻",
+   "audioFile": "audio-dianne-penn-anthropic/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 761.506,
+   "end": 783.557,
+   "text": "需要评估体系来检测这些变化，这一直是该技术的固有特性。 这也是安全挑战的来源，因为没有评估体系就无法发现这些能力跃迁。 这太有趣了，你可能已经开发出能做些你甚至没意识到的事的AI大脑。 我们的工作之一就是发现这些能力，比如'哇，它在这个领域变得非常出色'",
+   "audioFile": "audio-dianne-penn-anthropic/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 784.007,
+   "end": 811.43,
+   "text": "即使在当今的模型上，语言处理仍有很大提升空间。我们目前的奥普斯系列模型仍有大量探索空间。 以Fable为例，这种发现实际上是Anthropic早期DNA的另一部分。 这种探索精神至今仍是产品、实验室和研究部门运作的核心要素。 这让我想到YC总裁加里·谭的一个观点：若现在愿每年花10万美元购买算力",
+   "audioFile": "audio-dianne-penn-anthropic/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 811.88,
+   "end": 825.344,
+   "text": "你实际上正在体验2028年人们的生活方式，因为那时算力成本将大幅降低。 现在正是把握先机、疯狂投入算力消耗的窗口期，这为快速学习和构建未来提供了巨大机会",
+   "audioFile": "audio-dianne-penn-anthropic/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 826.044,
+   "end": 856.39,
+   "text": "关于算力极限使用的价值，我认为应从产品视角来看待。算力消耗更像是输入端的资源投入。 而真正的价值体现在输出端的实验探索。如果以实验为导向设定目标。 我认为这样能更清晰地定义成果，从而探索更多实现路径。 从内部来看，最具创造力的原型设计者，确实会投入大量时间使用克劳德。 他们会反复测试每个新版本的研究模型",
+   "audioFile": "audio-dianne-penn-anthropic/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 856.84,
+   "end": 878.843,
+   "text": "通过持续使用模型，才能不断产生更优质的想法和方案。 在技术发展如此迅速的情况下，不接触技术就很难制定出完美的策略。 同时，我认为我们还可以做其他事情。 例如，我们经常在公开场合和公司内部进行协作。 在早期产品形态较少时，我们有一个斯拉克频道。",
+   "audioFile": "audio-dianne-penn-anthropic/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 879.293,
+   "end": 904.061,
+   "text": "几乎全员都在测试克劳德早期版本，尝试不同应用场景。 人们当时不叫它应用场景，可能是让你修改论文或构思邮件内容。 虽然形式各异，但我们都公开进行这些尝试。 随后你会看到不同用户或团队成员提出创意。 其他人则会尝试这个创意的不同变体。 大约10次尝试后，就会出现令人惊喜的应用场景。",
+   "audioFile": "audio-dianne-penn-anthropic/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 904.511,
+   "end": 938.656,
+   "text": "我认为这不仅仅是个人摸索技术使用方式。 我们在实验过程中可以更注重集体探索的协同效应。 实验并不总是个人行为。这很有趣。我们不确定这个技术能做什么，或者能用它实现什么。 需要不断尝试和探索，通过交流了解他人正在尝试什么，才能发现可能性。这真是个有趣的科技领域。 我们就像在说：我发现了可以做到这件事。你打算怎么用这个？从宏观主题来看，我们清楚模型能写好文章或长篇内容，但",
+   "audioFile": "audio-dianne-penn-anthropic/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "B",
+   "speakerName": "Dianne Penn",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-B.jpg",
+   "start": 939.106,
+   "end": 961.724,
+   "text": "具体到实际能解决什么问题，并让用户真正可用，这需要更多探索和实验。 你负责实验室团队的产品管理工作，这听起来非常酷。 我们曾邀请本·曼和迈克·克里格做播客，他们现在都在实验室团队工作。请谈谈实验室团队。 他们如何运作，才能产生这些超越核心产品团队的创新想法？",
+   "audioFile": "audio-dianne-penn-anthropic/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 962.424,
+   "end": 989.465,
+   "text": "实验室团队的核心理念是识别并深入挖掘那些非连续性重大机遇。 这些机遇可能不在核心路线图中，我们需要判断这些机会是否真实存在。 更重要的是，这些机会能带来10倍、100倍甚至1000倍的突破吗？ 比如云端代码，我听说过这个项目。 如云端代码、技能，以及最新推出的云端设计和MCP。",
+   "audioFile": "audio-dianne-penn-anthropic/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 989.915,
+   "end": 1017.751,
+   "text": "我们团队真正强调的是，尤其是在现在，有如此多的事情可以构建。那么，拥有一个非连续性投资意味着什么？ 我认为今年我采取的方法是，可以对某个主题或领域持有非常坚定的观点。 但对具体原型的设想则可以相对宽松。因此，团队形成了注重实验的文化。 很多基层工程师都具备很强的自主性，会主动尝试各种新想法",
+   "audioFile": "audio-dianne-penn-anthropic/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1018.201,
+   "end": 1046.961,
+   "text": "有时我们会提出某种假设，但可能暂时行不通。这时可能需要一到两个模型迭代后重新审视。 这些虽然暂时无法直接落地的原型，其实也能帮助我们获得宝贵的经验。 因此，这种机制让实验室孵化和使命加速，帮助Anthropic更广泛预见未来。 在Anthropic内部设立实验室的想法很有趣，公司本就创新不断，疯狂推出产品，仍能创造价值。",
+   "audioFile": "audio-dianne-penn-anthropic/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1047.411,
+   "end": 1074.175,
+   "text": "Anthropic内部的实验室团队。是什么让实验室团队运作如此成功？你已列出这么多产品，那Anthropic还推出了哪些其他成果？ 感觉这些成果几乎都是重大突破。当然还有许多我此刻没想起来的。 在大型公司内部建立成功实验室团队的核心要素是什么？ 我认为本制定了非凡的愿景，并推动人们思考这个想法的十倍、百倍。",
+   "audioFile": "audio-dianne-penn-anthropic/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1074.625,
+   "end": 1094.737,
+   "text": "实验室内的团队和小组规模较小，有时这些想法最初只由一名工程师提出。 当有大量团队追求模糊且宏大的想法时，。 反而会因此进展缓慢，所以我认为这关乎文化。 我们实际上也在挑选那些真正愿意进行从零到一实验的人，这并不容易。",
+   "audioFile": "audio-dianne-penn-anthropic/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1095.187,
+   "end": 1121.064,
+   "text": "我们会拒绝或搁置很多项目，也许未来会重新审视它们，但这个过程很艰难。 倾注心血时很艰难，你像创始人押注项目，但尚未成功。 因此我们需要挑选具有这种特质的人，他们对从零到一的探索充满热情且深入。 很多人对研究工作和研究人员的职责有大致了解，但可能并不完全理解AI实验室中这些宝贵人才的真正价值。",
+   "audioFile": "audio-dianne-penn-anthropic/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1121.514,
+   "end": 1149.47,
+   "text": "我认为研究人员每天的工作是：他们有一个改进模型的假设，寻找数据，调整算法，修改训练方式，然后进行测试。 他们不断迭代，尝试各种方法来提升模型性能，这个描述大致准确吗？ 请帮我们理解研究人员的日常工作，这可能更偏向日常操作层面。 我认为研究人员和像Anthropic这样的机构，也对更广泛的未来愿景有所贡献。",
+   "audioFile": "audio-dianne-penn-anthropic/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1149.92,
+   "end": 1176.355,
+   "text": "比如公司初创时，研究人员就讨论如何让Claude与计算机交互。 如何让AI操作屏幕？我认为研究人员身上有一种非常创始人式的能量，他们非常大胆且有远见。 我们在Anthropic拥有大量研究人员，他们对这项技术的未来有愿景。 另一方面，当这项技术或克劳德真正被用户使用后，我们如何在当下改进它？",
+   "audioFile": "audio-dianne-penn-anthropic/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1176.805,
+   "end": 1203.874,
+   "text": "我们需要从中期到长期思考未来的发展方向，同时也要关注短期可实现的改进领域。 你提到的是如何对Claude不同版本进行迭代优化。 我的团队与研究人员合作方式是深度嵌入，特别是在对用户体验影响显著的领域。 比如视觉能力、计算机操作、代码编写、智能编码、工具使用、测试环境计算等直接影响用户的场景。",
+   "audioFile": "audio-dianne-penn-anthropic/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1204.324,
+   "end": 1224.209,
+   "text": "我们需要找到将用户反馈转化为研究人员可理解且可执行的改进方案。 这第二部分工作其实占了很大比重，有时也最具挑战性。 反馈Claude出现幻觉，描述模糊。 直接要求研究人员解决Claude的幻觉问题，缺乏可操作性。",
+   "audioFile": "audio-dianne-penn-anthropic/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1224.659,
+   "end": 1250.185,
+   "text": "团队需要理解用户反馈的背景和原因，这需要获得用户的明确同意。 我们需要分析在那个时刻克劳德本应调用哪些工具。 比如模型使用了正确的知识库却引用了错误的事实，这种情况属于工具调用失败。 如果是搜索或知识插入环节出错，可能涉及对齐性问题。 研究人员需要判断这个问题是否足够重要，值得投入资源解决。",
+   "audioFile": "audio-dianne-penn-anthropic/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1250.635,
+   "end": 1272.441,
+   "text": "通过评估体系明确改进方向，这些就是研究人员日常工作的核心内容。 我们致力于在用户反馈与模型训练之间建立可操作的闭环机制。 我最近和某人讨论时提到，如今人工智能研究领域可能是实现人生成功的关键所在。 但要成为顶尖研究者需要什么特质？并非所有人都适合这个领域。",
+   "audioFile": "audio-dianne-penn-anthropic/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1272.891,
+   "end": 1300.37,
+   "text": "从你的观察来看，研究者通常需要同时具备研究和产品管理能力。 但研究人员与产品经理的协作同样重要，顶尖人才正被各大公司激烈争夺。 虽然你不是研究者，但根据你的观察，这个领域需要哪些特质？ 我认为Anthropic最成功研究人员和领导者，都是擅长用第一性原理思考问题的人。 他们能够深入分析问题并找到解决方案。",
+   "audioFile": "audio-dianne-penn-anthropic/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1300.82,
+   "end": 1328.339,
+   "text": "这些研究人员对各自领域充满热情，并且能清晰描绘出该领域未来可能的发展图景。 同时他们也十分关注技术细节。 例如我们的领导层、首席科学家，以及微调和强化学习团队负责人，都会亲自参与模型训练过程。 他们会实时监控训练进度，分析评估结果和底层数据。 保持对技术细节的深入关注并从中获得启发，我认为这是优秀研究人员的重要特质。",
+   "audioFile": "audio-dianne-penn-anthropic/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1328.789,
+   "end": 1358.759,
+   "text": "此外，他们还需要具备长期规划能力，敢于提出宏大的目标。 达里奥提出，我们能够彻底改变软件工程领域，这种探索过程能带来巨大收获。 要成为成功的研究人员，必须敢于在多个领域追求卓越的愿景。 现在经常出现'要更雄心勃勃'这样的说法，但真正做到这一点非常困难。 因为人工智能技术正在帮助我们突破这种限制，实现更大的抱负。",
+   "audioFile": "audio-dianne-penn-anthropic/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1359.209,
+   "end": 1384.167,
+   "text": "我认为需要先从头到尾思考一两次，然后在关键领域保持坚持，而在具体方法上则可以更灵活。 这是我们经常自我挑战的问题，但技术发展速度实在太快了。 那么，如何确保你正在构建的东西真正具备前瞻性兼容性？ 这实际上也是产品开发核心循环的一部分，需要有前瞻性思维。",
+   "audioFile": "audio-dianne-penn-anthropic/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1384.617,
+   "end": 1412.139,
+   "text": "我常问团队：开发产品时，比如Claude 8推出，你们会如何思考？ 用户行为会发生哪些变化？这些变化又意味着今天的产品开发应该如何调整？是否能与未来体验兼容？ 因此，我认为雄心壮志需要具体化，要通过某种方式来描述和界定。 同时，所有方向必须保持协调一致，而不是盲目追求不同方向的宏大目标。",
+   "audioFile": "audio-dianne-penn-anthropic/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1412.589,
+   "end": 1446.361,
+   "text": "谈到雄心与克劳德8，寓言与神话最近似乎突破了一个全新临界点，过去只要有一个出色模型就直接发布。 大家好，奥普斯4.5已发布，人人可用。米索斯选择了不同方向，我们受阻，面临诸多质疑和担忧。 所有公司都必须确保这些模型不会入侵其系统。 现在每个模型都会面临更严格的审查，使用权限也会受到更多限制，这将产生重大影响。 你怎么看待这个问题？这会如何改变你们的运营方式？",
+   "audioFile": "audio-dianne-penn-anthropic/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1446.811,
+   "end": 1466.929,
+   "text": "我可能暂时把政策和专家控制方面的工作放一放，专注于这个领域。 我认为产品层面的问题以及我们如何与这些模型内部互动，正如你提到的，随着前沿模型能力提升，安全防护措施、红队测试方式以及预发布流程也需要快速进化以应对挑战。",
+   "audioFile": "audio-dianne-penn-anthropic/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1467.379,
+   "end": 1489.441,
+   "text": "以Fable模型为例，此前我们缺乏备用用户体验系统，因为目标是确保技术不对称优势，同时降低潜在风险。 因此我们最终构建了备用系统，确保用户能立即获得奥普斯4.8的优质响应。 随着我们持续改进安全系统，如何继续提供卓越用户体验是一个关键问题。",
+   "audioFile": "audio-dianne-penn-anthropic/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1489.891,
+   "end": 1522.961,
+   "text": "我认为双方都有更多可以改进的空间。 未来几周和几个月，我们会持续创新，不断完善我们目前称为模型安全防护套件的方案。 真正有趣的是，这种机制为Anthropic带来优势，使其能接触最前沿技术，每个实验室将持续优化改进。 这种优势使实验室内部能独占最佳技术，而外部无法获取，我们希望所有人都能使用这些技术。 这种新型反馈循环将带来二阶效应，先进模型仅对特定公司开放，这将是令人意外的新局面。",
+   "audioFile": "audio-dianne-penn-anthropic/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1523.411,
+   "end": 1559.223,
+   "text": "我们的目标是让这些系统和模型尽可能包容开放。 我们的目标是避免这种情况发生在通用技术上，同时让这些技术更易于使用。 这目前是我们最重要的优先事项之一，旨在减少我们看到的问题。确实如此，我猜你希望尽可能多的客户和用户使用这项技术。 本集由Mercury赞助。超过30万名企业家喜爱的银行，现已推出指令功能。我使用Mercury已逾六年。 我从未想过离开。水星是产品人而非银行家打造的银行。",
+   "audioFile": "audio-dianne-penn-anthropic/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1559.673,
+   "end": 1588.969,
+   "text": "他们让发送发票、转账、为团队成员设置虚拟卡变得如此简单，甚至可以说有趣。 你的银行有接口、命令行或AI就绪的服务器吗？我想没有。 他们最近推出了指令，集成在水星中，作为财务操作员。 我用指令功能转账，确定主要支出类别并分析现金流。 今天我用它查询了过去一年来自某赞助商的收入，只需问'过去一年从X赚了多少钱？'十秒后就得到答案。",
+   "audioFile": "audio-dianne-penn-anthropic/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1589.419,
+   "end": 1616.544,
+   "text": "这实在太酷了！访问官网，几分钟内在线申请。Mercury是金融科技公司，非联邦存款保险公司承保的银行。 银行服务由相关机构提供。 我想谈谈产品角色如何变化，以及在这个AI成为生活核心的新世界中，哪些人正在脱颖而出。 在招聘产品经理和产品团队时，您会关注哪些特质？您最看重什么？",
+   "audioFile": "audio-dianne-penn-anthropic/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1616.994,
+   "end": 1641.001,
+   "text": "哪些能力正在变得重要，哪些正在减弱？我们团队三年来一直沿用相同的招聘流程。 我们主要考察通用能力，比如产品经理的综合素质评估方式。 产品经理和研究人员的评估标准始终如一，首要看重第一性原理思维。 这不同于以往在消费产品或企业级SaaS中采用的模式匹配。",
+   "audioFile": "audio-dianne-penn-anthropic/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1641.451,
+   "end": 1667.903,
+   "text": "能否举例说明第一性原理思维？很多人听到这个概念时会说：我懂了，我擅长这个。 能否举个具体案例说明某人真正展现了这种思维？ 比如产品经理应主导产品战略并实现用户价值。 日常通过撰写产品需求文档或产品愿景文档来体现。 对研究型产品经理而言，挖掘用户反馈是创造用户价值的关键。",
+   "audioFile": "audio-dianne-penn-anthropic/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1668.353,
+   "end": 1693.365,
+   "text": "通过评估将用户需求具象化为可执行方案。 我们撰写产品文档，但团队有句口头禅：评估就是新时代的产品需求文档。 要实现用户价值，不再依赖过去一到二十年间人们常用的特定文档，而是采用全新的工作方式。 第一性原理思维意味着：先明确实现目标所需的具体行动，。 而不是简单重复过去完成的一系列活动。",
+   "audioFile": "audio-dianne-penn-anthropic/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1693.815,
+   "end": 1723.878,
+   "text": "传统流程是形成想法，撰写产品需求文档，与团队统一计划，设计开发，发布产品，观察效果并迭代。 我听到的反馈通常是：这里存在某个问题或改进机会。 第一步用评估定义工作内容，而非依赖产品需求文档。 第一步可能是理解用户痛点，而获取这些洞察的方式本身就有差异。 过去我们可能通过用户访谈，甚至要求用户演示完整操作流程。",
+   "audioFile": "audio-dianne-penn-anthropic/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1724.328,
+   "end": 1753.102,
+   "text": "现在需像关注像素一样精打细算每个标记。 团队的一项工作是分析对话记录，深入追踪失败案例的轨迹，判断是模型幻觉还是过度自信导致的错误。 这些失败案例背后往往隐藏着复杂的模式和细微差别。 通过这些分析，可以构建出对用户痛点持续且深入的描述。 这可能需要纳入新的评估体系。评估是否覆盖了分布情况，对吗？",
+   "audioFile": "audio-dianne-penn-anthropic/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1753.552,
+   "end": 1780.441,
+   "text": "它是否同时涵盖了系统失效的正面案例，以及那些本不应失效的情况？ 随后将这些反馈带回研究环节，以便我们进行改进并实际评估质量。例如，当推出奥普斯5.5时，这一领域是否有所提升？ Claude现在能识别文档正确位置并提取正确综合信息？ 核心在于提升可操作性，缩短利益相关方和研究团队采取行动的路径。",
+   "audioFile": "audio-dianne-penn-anthropic/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1780.891,
+   "end": 1809.026,
+   "text": "能否举个例子，比如你发现某个问题或机会后如何编写评估？通常的评估框架是怎样的？人们想象中的评估是什么样子？ 他们想象的是什么？我们在Anthropic首创这一概念。 早期Claude模型在遵循特定结构化数据格式等要求时表现欠佳。 现在这正是Claude成为优秀代理的关键，对吧？ 若无法输出特定格式，就无法访问API或调用工具。",
+   "audioFile": "audio-dianne-penn-anthropic/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1809.476,
+   "end": 1833.842,
+   "text": "最初的端到端测试围绕克劳德2版本的用户反馈展开。 Claude在遵循指令方面表现不佳。因此，与用户深入探讨时，您指的是哪些具体场景导致Claude无法良好执行指令？请说明这些情况。 哪一段？问了什么？Claude怎么回应的？需要那么详细吗？ 我看到早期80%的失败案例，Claude无法生成正确JSON。",
+   "audioFile": "audio-dianne-penn-anthropic/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1834.292,
+   "end": 1851.621,
+   "text": "于是，先生成30到40个Claude未能正确执行任务的示例。 这些示例就构成了你的评估数据集，本质上包含提示语和响应结果。 如果系统无法生成预期的黄金答案，说明评估机制有效识别了持续存在的痛点。 随后我们将这套评估方案纳入了代码仓库。",
+   "audioFile": "audio-dianne-penn-anthropic/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1852.071,
+   "end": 1884.836,
+   "text": "发布Claude新版本时，我们运行评估，准确率始终为100%或99.9%。 如今这已不再是痛点，但早期阶段需要从用户反馈中梳理核心问题：能否复现？是否具有可一致性？ 需要判断问题严重性，并找到可标准化的解决方案供研究人员使用。 如今产品经理的世界就是测试驱动开发，先写测试用例。这是否已成为Anthropic产品管理的核心工作？",
+   "audioFile": "audio-dianne-penn-anthropic/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1885.286,
+   "end": 1915.36,
+   "text": "我认为是的，我也和其他公司的产品经理讨论过类似实践。 这种能力正成为更广泛的产品技能，因为当前构建的很多产品都涉及模型、工具链和用户群体的复杂交互。 拥有评估机制实际上不仅有助于模型开发人员，也能让整个产品团队更有效地提升用户体验。 你无法改进无法衡量的事物。目前很多工作仍依赖触觉判断，而非数据驱动。因此必须深入细节才能把握本质。",
+   "audioFile": "audio-dianne-penn-anthropic/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1915.81,
+   "end": 1949.561,
+   "text": "此外系统具有高度非确定性，这是关键难点。就像它不会每次都给出相同答案，因此需要更宽泛的描述而非精确匹配。 这种变化非常有趣，产品开发现在更依赖评估文档而非传统产品需求文档。你们还使用产品需求文档吗？是否仍有简要说明问题？ 或者说是重播？现在你点头表示同意。我们确实还在使用评估，当问题明确时，这可能成为快捷方式。 我认为在其他情况下，产品需求文档确实很有价值。",
+   "audioFile": "audio-dianne-penn-anthropic/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1950.011,
+   "end": 1972.236,
+   "text": "产品需求文档是让大量人员就用户体验目标达成共识的重要对齐工具。 每当推出新模型时，我们都会为每个模型制定产品需求文档。虽然研究人员可能不需要，但工程团队、法律和安全等部门需要这份统一依据，明确各方目标，确保不同团队能协同推进。",
+   "audioFile": "audio-dianne-penn-anthropic/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1972.686,
+   "end": 1992.647,
+   "text": "在模糊的问题和机会中，产品需求文档同样有价值。 比如在尚未推出电脑使用功能时，我们未必能明确用户的具体痛点。 产品需求文档中的产品愿景部分有助于探索技术潜力，即使技术尚未普及，也能先让特定群体受益，验证价值并形成可落地的解决方案。",
+   "audioFile": "audio-dianne-penn-anthropic/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 1993.097,
+   "end": 2024.517,
+   "text": "我们确实有产品需求文档，但应用场景已不同。 我刚和Andrew聊过，他是OpenAI代码应用负责人，你们观点一致。PRD仍具价值，适用于特定项目。 很好。PRD已经完成，但仍在发挥作用。我们一直在探讨产品人员正在涌现的新技能。 在AI时代，产品管理者和团队成员在工作模式上是否有其他显著变化？ 是否还有其他需要特别关注的转变或人才特质？",
+   "audioFile": "audio-dianne-penn-anthropic/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2024.967,
+   "end": 2049.164,
+   "text": "我认为这尤其适用于中层管理者或拥有产品领导经验的人群。 我坚信，要成为优秀的团队管理者和AI产品经理，必须亲自深入技术实践，不仅要花时间钻研，更要实际推动技术落地。 再次强调，管理者需与产品经理、工程师及团队共同深入细节，关注每个环节的优化。",
+   "audioFile": "audio-dianne-penn-anthropic/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2049.614,
+   "end": 2065.844,
+   "text": "即使是拥有丰富经验的产品经理，入职培训计划也与初级员工完全一致。 培训重点在于理解用户，阅读用户反馈，与客户直接沟通。 我认为关键在于能够明确目标方向，并通过实际操作形成清晰的产品愿景。",
+   "audioFile": "audio-dianne-penn-anthropic/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2066.294,
+   "end": 2080.817,
+   "text": "如果从未亲自参与过AI产品的开发，很难判断什么是优秀或卓越的AI产品或功能。 因此，我认为管理者必须亲力亲为，要投入时间实际推动项目，并真正体验团队的工作状态。",
+   "audioFile": "audio-dianne-penn-anthropic/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2081.267,
+   "end": 2107.206,
+   "text": "我总是会抽出一部分时间，亲自负责一到两个工作流。当模型处于开发阶段时，这有助于我保持对模型进展和改进速度的感知。 这样我才能帮助团队做出更明智的决策。 我听到的意思是，无论你在公司处于哪个层级，不主动构建东西，不与克劳德或代码库互动，就难以成功。 与技术合作应享受乐趣，这也是关键。",
+   "audioFile": "audio-dianne-penn-anthropic/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2107.656,
+   "end": 2137.128,
+   "text": "我认为无论层级高低，最成功的人都是那些热爱AI、积极探索、留出时间进行实验，并且真正动手完成端到端项目的人。获取用户反馈对每个人来说都是基础性的。 我完全理解你的意思。就像我坐在自己的通讯稿和播客里，谈论这些事情，听起来确实很棒。 每次我真正构建东西并摆弄各种小项目时，你就会明白发生了什么，收获也会更多。",
+   "audioFile": "audio-dianne-penn-anthropic/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2137.578,
+   "end": 2169.085,
+   "text": "很难准确描述实际操作模型和构建东西时的体验，但那就像进入了一个全新世界——你终于明白他们谈论的计算机使用方式。 你终于理解了这种用户体验限制的具体含义。 你提到的'必须享受其中'这点非常有趣，但对很多人来说并不容易，因为他们被迫使用AI或不知道该如何使用。 对于那些觉得'这太烦人了，我不得不做'或'我讨厌这个该死的东西，为什么必须用它'的人，他们可能正因技术变化太快而感到疲惫。",
+   "audioFile": "audio-dianne-penn-anthropic/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2169.535,
+   "end": 2189.914,
+   "text": "关于如何帮助人们找到这份工作的乐趣，我想重申之前提到的观点：实验不是个人行为，需要团队协作。 我曾接触过20多个生产模型版本，几乎涵盖了所有研究模型版本。 看到其他人发现新用例时的喜悦，也是工作中的乐趣之一。",
+   "audioFile": "audio-dianne-penn-anthropic/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2190.364,
+   "end": 2212.507,
+   "text": "或许可以找一个同样充满热情的人，共同探索你关心的用例，而不是独自寻找完美用例。 与他人合作往往充满乐趣，我们是否能创造更多机会让其他人参与其中？ 公司内部经常有同事好奇，提出新原型想法，吸引很多同事惊讶发现，原来现在用Claude就能实现。",
+   "audioFile": "audio-dianne-penn-anthropic/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2212.957,
+   "end": 2241.658,
+   "text": "这种良性循环正是技术带来持续愉悦的方式，这点非常关键。 看到他人分享成果能激发灵感，同时分享自己的成果也很有趣。 所以关键在于找到志同道合的人一起探索用例。 常听到的建议是，找到生活或工作中的问题，直接使用Claude或云端代码工具。 仅凭模糊的问题描述，就能实现令人惊讶的成果，但选择太多时反而容易迷失。",
+   "audioFile": "audio-dianne-penn-anthropic/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2242.108,
+   "end": 2267.756,
+   "text": "因此要聚焦于与充满热情的人合作，或找到能立即创造价值的方向。 这两种方式都能帮助深入探索，而非泛泛而谈多个方向。 我发现自己很难跟上目前市场上原型和产品的数量。 因此我一直在思考，如何自己深入钻研其中一两个产品。你这么说真有意思，因为这正是关键所在。",
+   "audioFile": "audio-dianne-penn-anthropic/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2268.206,
+   "end": 2296.312,
+   "text": "我们刚完成一项调查，我和同事诺姆一起询问读者，他们对当前科技和AI领域的发展感受如何。 最有趣的发现是，幸福感确实来自于专注深耕少数几个领域，而非试图同时处理大量琐碎事务。 这种幸福感源于人们终于找到让AI真正改善生活的途径，而非面对一堆半成品的混乱状态。 是的，问题在于如何从单纯完成任务的层面突破。",
+   "audioFile": "audio-dianne-penn-anthropic/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2296.762,
+   "end": 2319.219,
+   "text": "作为产品经理，这本质上是对时间和精力进行产品优先级的分配练习。 如果目标是通过实验获得愉悦感，那么需要哪些关键输入？ 但关键在于Anthropic的文化，以及人们工作方式的本质，还有公开进行实验。 通过这种方式，关键在于如何带动其他人共同参与，这最终会带来巨大价值。",
+   "audioFile": "audio-dianne-penn-anthropic/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2319.669,
+   "end": 2345.517,
+   "text": "是的，我多次听到实验室的人说，没人能确切知道这些技术最终会如何应用。 很多时候就是尽早推出产品，观察用户使用方式，探索可能性，再据此优化产品方向。 我很好奇，在AI助力工作生活方面，作为产品经理，您最近有尝试用Claude做些有趣的事吗？ 我认为有很多项目，如Fable和Tag。",
+   "audioFile": "audio-dianne-penn-anthropic/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2345.967,
+   "end": 2363.584,
+   "text": "我认为在标签的早期阶段，关键在于如何通过一种不同范式，让代理自主执行任务后，将产品体验反馈给你。 我认为其中一个领域，虽然不是最近的突破，但我和团队经常讨论的是如何更好地利用AI来提升团队沟通效率，成为更优秀的管理者。",
+   "audioFile": "audio-dianne-penn-anthropic/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2364.034,
+   "end": 2387.39,
+   "text": "我认为这不仅仅是提升我们构建体验的智能水平，我也经常用它来准备关键对话中的应对策略。 所以我很喜欢这本书。实际上我开发了一个技能，帮助我判断自己是否在当前情境中达到了合适的细节深度，从而成为更好的管理者和团队支持者。 对于团队中的管理者来说，这实际上是我在与他们分享的一个重点。",
+   "audioFile": "audio-dianne-penn-anthropic/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2387.84,
+   "end": 2416.022,
+   "text": "如何实际使用Claude提升教练能力？因为精准表达不易，而模型能提供大量恰当措辞。 我认为他能在情商层面为我们提供补充，这在某种程度上是超越单纯技术能力的。 那里有很多有趣的内容。为理解您的工作，您创建了一个技能，让Claude从《关键对话》书中提取要点。 您无需提供内容，用此技能与Claude对话：'我将与同事进行艰难谈话，求建议。'",
+   "audioFile": "audio-dianne-penn-anthropic/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2416.472,
+   "end": 2438.09,
+   "text": "是的，这几乎就像一对一的个性化辅导，专门帮助您提升沟通技巧。 我们整天频繁切换上下文，Claude协助协作。虽偶有忽略建议，但总体激发灵感。 我是否以正确的方式思考反应？如何更深入、更快地建立信任，更直接地表达？",
+   "audioFile": "audio-dianne-penn-anthropic/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2438.54,
+   "end": 2468.882,
+   "text": "是的，我有很多问题。这非常有趣。其中一个担忧是，人们因为频繁与AI交流，可能会开始用AI的写作风格说话。 黛安，不是这个，而是那个，我知道你不会这么做，但这是人们普遍担心的问题。让我问一下，你是否担心这种情况？人们常说现在过度依赖AI会导致大脑退化。 我们停止了学习和思考，过度依赖AI。对此你怎么看？毕竟你一直深度参与AI的开发和应用。",
+   "audioFile": "audio-dianne-penn-anthropic/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2469.332,
+   "end": 2483.197,
+   "text": "对我来说，思考和写作紧密相连。我认为Claude能辅助思考，但必须确保它不完全取代我的思考。 根据具体情况，若希望保留更多个人判断，我可能先形成观点，再与Claude协作。",
+   "audioFile": "audio-dianne-penn-anthropic/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2483.647,
+   "end": 2505.554,
+   "text": "同时要确保我能保持自己的语气和风格。另外还有更新类工作，比如我们每月都有业务回顾会议。 在这些情况下，我更希望内容标准化，信息能以清晰精准的方式呈现。 也许我们正在提升相关技能，但最终我希望月度业务回顾的写作价值能被思考过程超越。",
+   "audioFile": "audio-dianne-penn-anthropic/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2506.004,
+   "end": 2531.647,
+   "text": "如何让这部分交由Claude处理？我负责审核和验证。 这取决于你使用Claude的用途和传达的内容。 将更多任务交给Claude是否有对称价值？ 我听到的第一个建议很好，先形成观点，再用Claude作为对手推敲和完善想法。 我认为这正是我们对齐研究和安全研究发挥作用的地方。你当然不希望AI只是附和你，对吧？",
+   "audioFile": "audio-dianne-penn-anthropic/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2532.097,
+   "end": 2560.231,
+   "text": "你真正需要的是让技术辅助推动，达成更好结果。有时Claude的质疑让我进步。 这非常棒。就像同事一样，当我的想法尚未成熟时，我希望能有人提出质疑。 我听说本·曼在播客中提到Claude内置宪法。 他谈到安全与对齐工作如何非直观地融入克劳德的架构，以及那份描述克劳德应如何思考和运作的宪法文件。",
+   "audioFile": "audio-dianne-penn-anthropic/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2560.681,
+   "end": 2587.904,
+   "text": "你可能认为这会限制Claude的能力，但事实相反，Claude是最有趣的人格。 我常听到这种说法。我更喜欢用Claude，毕竟Open Claw曾基于Claude开发，后来用户被迫切换。 我们被迫改用Chappie T，用户抱怨系统彻底改变。这说明有趣现象，我想探讨原因。 专注对齐和安全，明确宪法准则，为何让Claude更有趣？",
+   "audioFile": "audio-dianne-penn-anthropic/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2588.354,
+   "end": 2612.483,
+   "text": "为使Claude更智能，我们设计其在关键点提出质疑并补充信息，这种是或否的互动有助于用户得出更优结论。 我曾用Claude协助判断，如下一个版本的定价决策是否合理。 这有点自反性，但使用奥普斯的研究版本，让它自己判断定价方式，最终实现更优的结果，这是我们的终极目标。",
+   "audioFile": "audio-dianne-penn-anthropic/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2612.933,
+   "end": 2638.032,
+   "text": "让AI不仅是助手，不仅是执行者，而是通过判断是否做对了事来自主决策。 这实际上与知道何时反驳密切相关，这正是主动性的体现。 主动性并非总是执行既定任务，而是知道何时提出新想法。 为了让Claude更实用，关键在于适时提出异议。 这是模型核心特性的组成部分，这一点非常有趣。",
+   "audioFile": "audio-dianne-penn-anthropic/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2638.482,
+   "end": 2667.795,
+   "text": "令人着迷的是，这种不那么顺从的特质反而让它更实用，因为我们需要这种能力。 很多人告诉我AI肯定了我的判断，而我希望能让更多人体验这种感觉，这又回到了我们之前关于思维的讨论。 如何保护自己的思维？真正的思考伙伴不应一味附和，而应为你的想法增值。 最终应带着更优想法离开，这才是与Claude合作的真正目标，而非仅提升10%。",
+   "audioFile": "audio-dianne-penn-anthropic/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2668.245,
+   "end": 2702.06,
+   "text": "没错，我特别喜欢这个想法。过去创始人常问'我们能否将这个想法放大十倍？'。 我最喜欢的问题是：如何将这个想法扩大千倍？最雄心勃勃的版本？ 频繁与Claude对话时，我一直在思考：AI生成内容仍易被识别，尤其在大型语言模型中更为明显。 你想想，它最擅长写作。但有趣的是，目前尚无AI能写出令人信服的内容，AI生成的痕迹总是明显。 你认为未来会不会出现无法分辨AI生成内容的阶段？",
+   "audioFile": "audio-dianne-penn-anthropic/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2702.51,
+   "end": 2727.39,
+   "text": "我认为这取决于你了解或不了解AI生成内容的目的是什么。你想要的评估标准是什么？ 我确实认为Claude写作能力有提升空间。 我和研究团队正大力改进Claude的写作能力。 我认为应该明确区分由你、尤莱尼还是我（黛安）主导提出的想法。 我认为这取决于写作的具体目标是什么。",
+   "audioFile": "audio-dianne-penn-anthropic/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2727.84,
+   "end": 2757.503,
+   "text": "比如月度商业回顾，我其实希望Claude能全程完成。 显然，我们不希望它看起来像人类写的。你提出的这个观点非常有趣：我们真的需要知道这是AI生成的吗？ 但另一个角度可能更关注可验证性，即谁来验证这些输出内容的真实性。 关键在于谁在审核批准内容。相比谁在撰写，我们更应关注谁在验证和批准。这比谁在写更重要。",
+   "audioFile": "audio-dianne-penn-anthropic/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2757.953,
+   "end": 2792.511,
+   "text": "你认为AI为何不擅长写作？我的猜测是它已经研究过人类历史上所有优秀作品。 它已经掌握了最佳写作方式。实际上，写作方式就那么多。我们逐渐认识到，AI本来就是这么工作的。 它使用套路，这是否是核心问题？是否还有其他因素阻碍其成为优秀写作者？讽刺的是，作为大型语言模型，本应特别擅长语言。 我认为我们还需要在训练改进上投入更多资源，让AI在写作等领域的表现持续增强。",
+   "audioFile": "audio-dianne-penn-anthropic/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2792.961,
+   "end": 2829.04,
+   "text": "技术本身存在尖锐的缺陷，正如我们之前提到的。 当模型写作能力出色但缺乏自主性时，我们的核心问题是：如何让模型更自主，或调用合适的工具？ 随着自主性有所提升，其他方面的缺陷反而变得更明显。 因此我认为我们正面临一个关键节点，需要集中精力优先训练模型在特定领域达到卓越水平。 这正是我们目前重点投入的领域。正如你所说，这很有趣。我很高兴你提到这点。当AI变得如此强大时，情况会很有趣。",
+   "audioFile": "audio-dianne-penn-anthropic/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2829.49,
+   "end": 2867.02,
+   "text": "有时不知作者。但有时希望确认AI生成。这很有趣，我从未这么想过。 另一个有趣的点是，有位喜剧演员开玩笑说，我们就像在飞机上，Wi-Fi断了，却对着袜子大喊：'这飞机的Wi-Fi怎么不工作？袜子，你太放肆了！'。 当你像在天空中的管道里像鸟一样飞行时，怎么敢抱怨Wi-Fi不好用？你的观点是，有如此多的进步和力量。 我们无法解决所有问题，也无法让一切都达到最佳状态。因此，AI写作一直不是优先事项，但感觉那里正在增加投资。",
+   "audioFile": "audio-dianne-penn-anthropic/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2867.47,
+   "end": 2894.933,
+   "text": "是的，我认为语气和角色是优先事项。我认为技术的进步仍处于进行中。 因此，我们看到了代理行为的飞跃或出现，这已成为新常态。 然后这些其他能力需要继续改进。 改进写作、语气和角色后，我们会问：如何让Claude更主动？ 主动性是一个机会。这是人性使然。我们想让自己变得更好，也想让这项技术变得更好。",
+   "audioFile": "audio-dianne-penn-anthropic/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2895.383,
+   "end": 2932.37,
+   "text": "所以，我认为我们将其应用于人工智能，这是正确的事情。我们应该让它更好。 我想问你几个问题，这些问题我想问那些正在未来中心工作的人。 第一个问题是，你认为在未来的岁月里，人类大脑将在哪些方面继续最有价值？ 我知道Anthropic使命是达成通用人工智能。未来或许人类不再需要大脑。 接近该时间点时，人类大脑在哪些领域仍最具价值？ 过去一年，我们开始讨论如何提升Claude和模型的判断能力。",
+   "audioFile": "audio-dianne-penn-anthropic/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2932.82,
+   "end": 2957.639,
+   "text": "我认为判断力是需要积累大量细微差别和丰富经验的领域。 而这些系统所经历的远不及人类。 因此，我认为这种通过长期积累获得的判断力，是产品经理需要关注的领域，未来也将持续关键。 AI能构建的东西很多，但像实验室这样的组织应该专注哪些？这需要人类的判断力。 坚持，也就是主动性。",
+   "audioFile": "audio-dianne-penn-anthropic/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2958.089,
+   "end": 2982.581,
+   "text": "这些特质超越了通用能力，涉及行为和性格层面，比如如何找到最佳解决方案。 如何创造最佳体验？我认为这些特质是直接影响用户体验的关键因素。 同时，我认为在专业能力和领域知识方面仍有很大提升空间。 我认为软件工程已因AI发生巨变，生物学和生命科学等领域也是如此。",
+   "audioFile": "audio-dianne-penn-anthropic/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 2983.031,
+   "end": 3009.013,
+   "text": "我们正站在这些领域指数级增长的起点，软件工程可能在其他领域已进入指数级增长阶段。 但目前尚未完全到达。 因此，我认为你们会看到我们在云科学等领域推出产品并加大投资，因为这些领域正是将这项技术带给社会并产生积极影响的关键所在。 还有更多空间。 另一个我想问的问题是，作为有孩子的家长，您认为应该鼓励他们学习什么？",
+   "audioFile": "audio-dianne-penn-anthropic/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3009.463,
+   "end": 3042.034,
+   "text": "您认为在我们即将进入的这个新世界中，要如何引导他们取得成功？ 我认为很多核心素质与我们这代人成长时培养的特质相似，比如对学习的好奇心、坚持不懈的精神，以及相信并发展自己的内在声音。 我有四岁和八岁的孩子，帮助他们培养内在声音的责任在于我们，也在于我。 无论是形成鲜明观点还是坚持立场，培养这些能力对未来发展都至关重要。我认为这类技能组合将变得越来越重要。",
+   "audioFile": "audio-dianne-penn-anthropic/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3042.484,
+   "end": 3083.155,
+   "text": "我很欣赏他们能保持独特的个人声音。 这非常有趣，与您之前关于如何避免过度依赖AI导致思维退化的问题回答高度相关——核心在于保持独立思考，先坚持自己的观点和视角。 您提到的在孩子身上培养这些能力非常重要。这种将判断力、坚持精神与独立视角相结合的思路令人着迷。 这不仅适用于孩子，对成年人同样重要。您觉得在什么时机该让他们接触AI相关工具？ 我有三岁的孩子，现在还太小。但您知道吗？如何引导这么小的孩子适应这个疯狂的新世界呢？",
+   "audioFile": "audio-dianne-penn-anthropic/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3083.605,
+   "end": 3115.369,
+   "text": "我最近参加活动，不少家长讨论如何在孩子中应用人工智能。 有个人提出了一个很有趣的思路，就是让孩子们使用早期模型，这样他们仍需努力思考，而不是立刻得到所有答案。 我觉得这个想法挺有意思，比如开源本地模型，不是Fable。 本·曼的回答让我印象深刻，他提到好奇心，推崇蒙特梭利教育，这也是我鼓励孩子的方式。 方菲昂最近在播客中提到，建议我问你一个问题。",
+   "audioFile": "audio-dianne-penn-anthropic/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3115.819,
+   "end": 3143.095,
+   "text": "作为母亲，身处AI领域中心，如何保持精力充沛而不被烧尽？ 作为一位母亲，在Anthropic工作，我们见证研究进展。 我们正经历前所未有的时期，在Anthropic之外已令人惊叹，更不用说内部了。 在AI风暴中心，你如何避免倦怠，保持清醒？ 2024年，我们全年发布了四代模型，仅今年第二季度的产量就超过这个数字。",
+   "audioFile": "audio-dianne-penn-anthropic/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3143.545,
+   "end": 3173.538,
+   "text": "我很幸运能组建起优秀的团队，包括研究领域的利益相关者。 以及我们的研究产品管理团队。 我认为，处理所有这些事情最神奇的地方之一在于，这并非一项个人运动。 这里有一种彻底的归属感和团队协作精神，我认为有时这种感觉就像一项高性能运动，因为你们需要做出非常关键的决策。 有关用户的新信息、训练数据，必须快速做出推荐、判断和决策。",
+   "audioFile": "audio-dianne-penn-anthropic/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3173.988,
+   "end": 3199.588,
+   "text": "没有人能独自持续完成这些工作。 因此，拥有一个出色的团队至关重要，他们彼此照应，即使不是某个模型的核心负责人，在发布前的夜晚也会主动协助负责人审阅博客文章。 他们会反复修改，设计更优质的演示方案，彼此成为对方的得力助手。 如果独自承担所有变革，很容易感到孤立无援，觉得自己必须事事亲力亲为。",
+   "audioFile": "audio-dianne-penn-anthropic/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3200.038,
+   "end": 3225.49,
+   "text": "Anthropic的神奇之处在于，我们能发现彼此支持的机会，推动思维融合。 我们称之为进入群体智慧状态。有一篇相关文章提到，这种机制能让团队得到充分休整。 这并非单纯休假后工作量翻三倍，而是休假后团队能妥善处理事务。 我们能确信团队会做出正确决策，彼此之间也能互相照应。",
+   "audioFile": "audio-dianne-penn-anthropic/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3225.94,
+   "end": 3258.381,
+   "text": "我个人非常幸运，我的伴侣也给予了极大支持。 这是我从事AI的第六年，先后在亚马逊和Anthropic任职。他能感受到我对技术的热爱及潜力。 这对我个人来说也很有帮助。我特别喜欢这些答案之间的关联性。 我听到的核心是协作的重要性——与他人共事、依靠他人、在困难时刻互相支持。 这与你之前提到的如何在工作中找到乐趣的答案相似，都是通过观察他人、被他人启发、携手合作实现的。",
+   "audioFile": "audio-dianne-penn-anthropic/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3258.831,
+   "end": 3296.919,
+   "text": "是的，有趣的是，我最近问Fiona软件工程领域有哪些变化。 她指出现在工作更孤独了，因为我们现在与AI代理协作，而非与人类同事。团队规模更小，人们要不断与各种AI系统交互。 这提醒我们，身边有真实的人类同事是多么重要。 我们被要求处理重大决策，因为技术带来了更大的规模，对吧？ 我认为组建团队时，寻找能与你产生思维共鸣的成员非常重要。 不一定每个细节，但需要在第一性原理和基本假设层面达成共识。",
+   "audioFile": "audio-dianne-penn-anthropic/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3297.369,
+   "end": 3323.795,
+   "text": "这样他们就能在关键时刻支持你的决策，帮助你完善思考。 因此在团队建设、招聘时，我特别注重寻找这样的人才。 这个人更关注自我利益与组建大团队，还是更关注为Anthropic公司及团队影响力做贡献？ 还是更倾向于选择谦逊且注重团队合作的人？ 我认为这是可持续发展的关键，文化建设和招聘始终是核心因素。",
+   "audioFile": "audio-dianne-penn-anthropic/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3324.245,
+   "end": 3348.335,
+   "text": "我记得Anthropic公司曾达到过每天都有产品发布的速度，整个团队对此感到震惊。 因为所有人都高度认同使命和价值观，这让决策变得非常高效。 在进入激动人心的闪电问答前，丹还有其他想补充的吗？ 你的问题让我重新梳理了思路，我就是个真实的笨蛋。",
+   "audioFile": "audio-dianne-penn-anthropic/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3348.785,
+   "end": 3364.833,
+   "text": "我想强调的是工作方式的改进和技术创新带来的成长。 同时也要享受使用这项技术过程中的乐趣。 如果你现在感觉不到这种初始的快乐，。 如何找到那些对此领域充满热情的人？ 我认为需要培养从第一性原理思考等技能。",
+   "audioFile": "audio-dianne-penn-anthropic/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3365.283,
+   "end": 3398.25,
+   "text": "关于你们解决的问题，我认为从根本上来说，虽然你没问过我，但社区在讨论：是否还需要产品经理？ 当模型仍然具备能力，工程师也积极参与时？ 我认为以用户为中心的人，需要深入理解用户试图实现的目标，并以可操作的方式将这些信息反馈上来，这种不懈的努力正是产品经理的核心能力。 对我来说，这种持续推动产品改进的执着精神，正是优秀产品经理的精髓所在。 我们需要更多这类产品经理。",
+   "audioFile": "audio-dianne-penn-anthropic/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3398.7,
+   "end": 3436.415,
+   "text": "我认为我们正在变得越来越技术驱动，要让技术产生真正影响，就必须深入钻研。 你必须保持好奇心，亲力亲为。这些特质对产品开发起到了关键作用。 从产品开发和模型研发的角度来看，这些特质也塑造了我们的企业文化，希望对其他团队也有借鉴价值。 没错，我一直强调，构建变得容易了。 真正困难的是判断该构建什么，以及我们构建的东西是否正确、有价值，值得投入资源。这正是产品经理的职责所在。",
+   "audioFile": "audio-dianne-penn-anthropic/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3436.865,
+   "end": 3468.89,
+   "text": "嗯，深入用户细节，共情很重要。产品经理会成功，产品需求文档未过时。 这里有很多重要的启示。黛安，那么我们进入激动人心的闪电问答环节吧。我有五个问题要问你，准备好了吗？准备好了。 第一个问题，您最常推荐给别人的两到三本书是什么？一本个人成长类的书，我特别喜欢《如何培养成年人》。 我是个妈妈，经常思考希望在孩子身上培养哪些品质。",
+   "audioFile": "audio-dianne-penn-anthropic/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3469.34,
+   "end": 3497.943,
+   "text": "这本书很有帮助，它指出我们不是在培养孩子，而是在培养成年人。这种定位的转变意味着什么？ 我们希望在孩子身上培养和强化哪些特质？ 最近在Audible上听的另一本书是埃里克·莱斯的《不可纠正》。 他是最近的一位播客嘉宾，我认为如何打造优秀公司是个重要议题。 我个人最着迷的是如何让优秀团队和公司持续发展。",
+   "audioFile": "audio-dianne-penn-anthropic/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3498.393,
+   "end": 3524.695,
+   "text": "他重新定义问题的方式很有趣，特别是关于文化指标的案例。 如果只用收入作为衡量标准，就会把目标局限在营收上。 但若用其他更有效的指标，反而能更好地维系你重视的价值观。 我一直在思考如何将这种理念应用到团队层面，更清晰地表达我们的规范。 大家不妨听听埃里克·莱斯的那期播客，非常精彩。他的新书《不可腐蚀》也刚刚出版。",
+   "audioFile": "audio-dianne-penn-anthropic/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3525.145,
+   "end": 3560.813,
+   "text": "我认为这本书曾登上《纽约时报》畅销榜，实际表现非常出色，看到这一点我真的很高兴。接下来的问题，最近喜欢的电影或电视剧是什么？ 你很喜欢。Anthropic大多数人没时间看剧，但你愿意回答吗？ 上个月休假时，我一口气在亚马逊Prime看了《辐射》系列。 这其实是款改编自同名游戏的剧集，你听说过吗？对，就是那款游戏改编的。 我觉得它既幽默风趣，又充满动作场面，非常推荐。好的，下一个问题。",
+   "audioFile": "audio-dianne-penn-anthropic/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3561.263,
+   "end": 3595.452,
+   "text": "你最近有没有特别喜欢的新产品？我觉得云端代码在产品体验上很有意思。 我们在Anthropic内部有多个版本，确实是一个非常强大的工具。 有些人觉得没什么大不了，但Anthropic全员都在热烈讨论，说明这里确实有重要进展。 我正在尝试在付费订阅者专属Slack社区中让它运行，这该多酷？确实。 我正在研究如何在非企业场景下，让陌生人之间也能有效使用它。我们正在尝试。还有两个问题。",
+   "audioFile": "audio-dianne-penn-anthropic/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3595.902,
+   "end": 3618.607,
+   "text": "你最常用来指导工作和生活的座右铭是什么？我前十年是由祖父母带大的。 我的父母是移民，来美国后先读完大学又攻读硕士。哦，真厉害。 我祖父常说，无论走多远，总会遇到新的层次。 我认为这是描述他人生或哲学的一种非常有力的方式，尽管方式相当激烈。",
+   "audioFile": "audio-dianne-penn-anthropic/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3619.057,
+   "end": 3654.769,
+   "text": "每当遇到前所未有的新事物时，我总会想起这句话。今年上半年就有很多这样的经历。 我们一直在学习新东西，我本人也在不断学习。总感觉前方还有另一座山，还有新的攀登机会。 不够好，丹。我们必须做得更好、更大。这让我想起本·曼在播客里说过的话：'这将是它最正常的时候。'。 情况只会越来越奇怪和疯狂。对，对。天哪。最后一个问题，我在你的领英上看到你曾是高收益债券交易员。 职业生涯早期在摩根大通工作。",
+   "audioFile": "audio-dianne-penn-anthropic/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3655.219,
+   "end": 3684.015,
+   "text": "你曾管理过一个隐去金额的1亿美元交易组合。 那段经历让你学到什么？有没有什么疯狂的故事？那是你人生中四年时光。 我在摩根大通学到的很多内容，后来都应用在Anthropic及其他工作中。 在摩根大通交易大厅，你可以想象那种充满华尔街氛围的墙壁，这与现在完全不同。 大多数交易员都在电脑前分析数据，但这个行业依然以男性为主。",
+   "audioFile": "audio-dianne-penn-anthropic/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3684.465,
+   "end": 3705.032,
+   "text": "当时我是唯一一位女性，也是交易台唯一拥有我这种背景的人。 我学会了这是一个培养真实自我意识的好环境。 其次，即使我是最资历浅的成员，即使看起来与其他人不同，只要拥有最佳想法并坚定地相信这些想法，。 无论其他因素如何，坚定的信念才是最重要的。",
+   "audioFile": "audio-dianne-penn-anthropic/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3705.482,
+   "end": 3733.024,
+   "text": "因此我在工作中更倾向于展现真实的自我，对团队非常坦诚和开放。 我会确保无论员工职级或任职时长如何，只要他们有好想法，就帮助他们推进并给予支持。 所以要敢于提出想法，坚定地相信它，跟进执行，完成那些琐碎但关键的工作。 这些是在交易工作中学到的经验，我认为在很多工作中都适用，这非常美好。",
+   "audioFile": "audio-dianne-penn-anthropic/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3733.474,
+   "end": 3760.445,
+   "text": "如果听众想关注我，应该去哪里？他们如何能对我有帮助？我在社交媒体上没有太多存在感。 了解我和团队工作最好的方式是查阅安特罗皮克的博客。 当我们发布新模型或新产品体验时，对我最有帮助的是听众的反馈。 比如在产品界面上点赞或点踩，或通过销售代表向我反馈模型使用体验，这些都会直接传达给我。",
+   "audioFile": "audio-dianne-penn-anthropic/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3760.895,
+   "end": 3788.296,
+   "text": "实际上，每当我们进行研究模型时，我都能深入了解用户的好感度和反馈。 这些反馈帮助改进Claude，指出不足，推动优化。 如果你在人脉中有类似我刚才提到的这类人才，我们正在扩大团队，欢迎加入。 我们真正需要的是热爱这项技术、充满好奇心、善于从第一性原理思考、敢于质疑假设，并且具备动手能力和黑客精神的人才。",
+   "audioFile": "audio-dianne-penn-anthropic/0135.wav"
+  },
+  {
+   "id": 136,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3788.746,
+   "end": 3821.573,
+   "text": "哇，这简直是梦想工作。开放产品经理职位，加入研究团队。通过官网职业页面申请。天哪。 好了，开始吧。欢迎你们即将收到的简历洪流。感谢你，Lenny。黛安，非常感谢你的参与和邀请。 感谢你提出这些富有洞察力的问题，帮助我理清了我们如何运作、这项技术如何整合，以及作为产品经理在其中的角色。 我真的很感激。但黛安，真心感谢你。好吧，大家再见，非常感谢大家的聆听。",
+   "audioFile": "audio-dianne-penn-anthropic/0136.wav"
+  },
+  {
+   "id": 137,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/dianne-penn-anthropic/speaker-A.jpg",
+   "start": 3822.023,
+   "end": 3838.69,
+   "text": "若觉得有价值，可订阅苹果播客、斯波蒂菲或你常用的播客应用。 此外，请评分或留言，这有助于听众找到播客。访问lennyspodcast.com了解节目详情或过往内容。 我们下期再见。",
+   "audioFile": "audio-dianne-penn-anthropic/0137.wav"
+  }
+ ]
+}

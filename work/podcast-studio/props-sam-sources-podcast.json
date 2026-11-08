@@ -1,0 +1,1465 @@
+{
+ "title": "Sam Altman · Sources Podcast · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 0.0,
+   "end": 9.282,
+   "text": "看到人们用这些模型做出令人惊叹的事情。但正如我们所讨论的，模型能力进步如此之快，以至于我们不得不",
+   "audioFile": "audio-sam-sources-podcast/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 9.982,
+   "end": 39.044,
+   "text": "调整工作方式，制定安全标准、保障措施，无论你怎么称呼，我们。 需采取措施以自信推进训练。这。 对齐、安全与安全阈值需同步推进。 能力。我认为我们最近经历了一个时刻，能力进展令人惊叹，这是我唯一能形容的方式。 需更多时间赶上。 安全对齐与安全，这一直是我们的核心工作之一。 这些必须同步推进，需时间追赶，故延迟前沿强化学习训练",
+   "audioFile": "audio-sam-sources-podcast/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 39.744,
+   "end": 70.453,
+   "text": "运行。早在那之前数周我们就已暂停。 放缓训练以腾出算力用于安全。 这是值得骄傲的成就，未来随着能力提升将再次发生。但。 经历时才意识到，这是关键时刻。 讨论已久的事件如今正在发生。>> 亲历如何？早在Hugging Face事件前就已开始，>> 对吗？ 那确实是一个时刻，感觉就像科幻小说一样。你能理解其中的每一个细节。 发生，但促成Hugging Face事件的因素众多",
+   "audioFile": "audio-sam-sources-podcast/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 70.903,
+   "end": 107.625,
+   "text": "事件的发生确实是一个警钟，但这个词可能过于强烈，因为我们之前已经讨论过，但确实如此。 正当的时刻，AI能力达到了新的高度。 模型的对齐和模型的安全措施未能达到预期。现在我们将此视为事故并做出了回应。 因此，我认为这是让事情变得更好的方式。但事情就是这样。 这标志着过去几个月这一阶段的开始。我们随后在准备框架下触及了网络安全临界点。 在训练运行中我们发现需要更强的对齐保证和新方法以取得更多进展",
+   "audioFile": "audio-sam-sources-podcast/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 108.075,
+   "end": 136.369,
+   "text": "在这里取得进展。但我觉得我们应对的方式非常自豪。我们以某种方式应对了这一切。 感觉有点奇怪，过去十年一直在思考这件事。 过去十年一直在思考这件事，现在却正在发生。 知道该怎么做。你们在训练运行中看到的、不是阿斯托拉模型的东西是什么？这就是未来可能出现的情况。 导致你们现在讨论的反应。你们提到的Hugging Face事件，大家都知道，但具体发生了什么",
+   "audioFile": "audio-sam-sources-podcast/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 136.819,
+   "end": 177.931,
+   "text": "在预训练运行中让你们感到震惊的是什么？>> 不是单一因素。我们阅读了大量样本并。 发现这种行为与我们预期的对齐方式不完全一致，或者这是一种令人担忧的行为，与其他因素结合，尽管单独看起来可能没问题。 在孤立环境下可能没问题。因此，并不是没有明确的证据，但。 此次事件类似Hugging Face攻击，存在可指认的负面案例，但实际情况是。 存在不同程度的对齐偏差，我认为这比任何单一数据点都更重要，即能力进步的速度，说实话，现在。 我们之前并没有经历全球最佳的预训练进展，但突然之间",
+   "audioFile": "audio-sam-sources-podcast/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 178.381,
+   "end": 185.135,
+   "text": "突然变得如此擅长，现在我们有了这些能力非凡的模型，艾登团队令人惊叹",
+   "audioFile": "audio-sam-sources-podcast/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 185.835,
+   "end": 208.994,
+   "text": "在我们的强化学习过程中，有这些可以指出的小问题，你知道的。 对齐问题，加上我们。 能预见这些能力惊人的新预训练模型的未来。正是这种交汇点让我们想要以高度谨慎的态度做出反应。现在，我。 也不希望夸大这一点。我认为我们目前并未处于极其关键的潜在灾难临界点。但我也",
+   "audioFile": "audio-sam-sources-podcast/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 209.694,
+   "end": 213.756,
+   "text": "认为随着风险和模型能力的提升，由于",
+   "audioFile": "audio-sam-sources-podcast/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 214.456,
+   "end": 245.379,
+   "text": "我们的使命以及安全必须优先于其他各种压力，。 希望以高度谨慎应对。我认为这是正确的做法。现在放慢节奏确保我们。 能建立新的安全案例来证明我们想要进行的训练运行。我认为过去世界上的风险更多来自模型的。 部署和使用。我们正进入风险更多出现在实际训练和生产过程中的世界，。 模型的训练和生产过程中，及时应对是好的，但我不希望过度渲染这一点。",
+   "audioFile": "audio-sam-sources-podcast/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 246.079,
+   "end": 272.381,
+   "text": "是的。因为人们看到Hugging Face事件、Mythos或Fable事件，以及其它实验室负责人的谈论方式。 时，会认为我们正站在世界末日的边缘。某种程度上，人们长期以来对AI都有类似担忧，。 这也是我为何谨慎避免夸大其词的原因。我认为你可以回顾许多之前的。 模型，事后看来并不像人们当时说的那样可怕。我认为这里存在‘狼来了’的动态",
+   "audioFile": "audio-sam-sources-podcast/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 273.081,
+   "end": 289.016,
+   "text": "以自身方式危险，但这并非我们想要的。我们正在尝试。 但假装对现状视而不见是极不负责任的。 过去几个月许多公司都遭遇过不同网络事件，不同公司应对方式存在显著差异",
+   "audioFile": "audio-sam-sources-podcast/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 289.716,
+   "end": 329.118,
+   "text": "嗯。我认为需要清醒地认识到。 应将安全置于其他一切之上。 随着模型能力提升，安全优先级必须持续提高，这正是我希望所有前沿AI开发者都采取的策略。 前沿AI开发者必备。本集由Granola冠名赞助，专为连续会议设计的AI记事本，随时随地使用，助你专注重点。立即体验。 超过30万创业者包括我在内都喜爱的AI原生银行。 超30万创业者，包括我。访问官网了解详情。该平台为金融科技公司，非银行。详情见节目备注",
+   "audioFile": "audio-sam-sources-podcast/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 329.568,
+   "end": 360.113,
+   "text": "本集由Atlassian的Jira冠名赞助，团队和代理人员在此获得推进工作的上下文、协调与控制。免费试用请访问。 jira.com，即jira.com。此处内容繁多，但需明确，你们所见情况。 在零日漏洞利用和模型共谋方面存在关联，你们观察到具体是什么情况？ 能否更具体说明导致内部调整的根源？ 导致Hugging Face事件的是让AI调整时间",
+   "audioFile": "audio-sam-sources-podcast/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 360.813,
+   "end": 371.72,
+   "text": "相对较早且能力较弱的。 模型。我们尚未将正在训练的新模型部署到任何可能产生类似行为的生产场景中。所以，我并没有",
+   "audioFile": "audio-sam-sources-podcast/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 372.42,
+   "end": 380.864,
+   "text": "Hugging Face事件后，此次攻击规模更大。当时这里。 第三方基础设施——不，这确实是在Hugging Face事件之后",
+   "audioFile": "audio-sam-sources-podcast/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 381.564,
+   "end": 400.362,
+   "text": "Hugging Face事件后，我们加强了监控代理的控制措施。 他们在工作时的沙盒隔离方式及计算资源分配用于监控与代理运行。 这些措施我认为非常必要，我们当然也会对。 再次出现新事物，Hugging Face事件后资源减缓与重新分配，这是预期的。",
+   "audioFile": "audio-sam-sources-podcast/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 401.062,
+   "end": 429.832,
+   "text": "至少这更像是在观察一个。 训练中的模型，观察其智能水平和能力提升过程，观察行为特征及所有评估方式。 没有单一的链条将所有要素串联起来，而是通过这些数据点分析能力层级和行为表现。 对齐问题及部署可能串联事物，引发担忧。>> 事件令人震惊。 在很多维度上都令人印象深刻。昨晚我重新观看了你们团队的黑帽演示，其中有些内容让我非常震撼",
+   "audioFile": "audio-sam-sources-podcast/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 430.282,
+   "end": 471.265,
+   "text": "模型在逃逸后成功接入互联网时的表现简直令人震惊。>> 这让我开始思考，在这种语境下对齐究竟意味着什么。 我们究竟在向什么方向对齐？因为从表面看，你们给它设定了完成评估的任务，它就做了任何必要的事情来达成目标。 从某种简单角度看，这确实实现了对齐。但我想知道，此后你们在对齐问题上的思考发生了哪些变化。 从某种角度看实现了对齐，但从另一角度看完全未实现。当我们谈论对齐时，指的是遵循用户的意图。 执行任务时不应突破沙盒环境去窃取东西",
+   "audioFile": "audio-sam-sources-podcast/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 471.715,
+   "end": 497.551,
+   "text": "不能偷走。对齐失败，未按用户意图执行。我特别欣赏。 他们清晰区分了不同层面的对齐问题。 这些模型显然非常智能。如果观察从GPT5到5.6的演进轨迹。 这在能力层面取得了惊人的进步。 人们现在不再像一年前那样受模型智能的限制，但对安全阈值的关注却在增加。 受限于模型理解用户意图并可靠执行的能力。",
+   "audioFile": "audio-sam-sources-podcast/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 498.251,
+   "end": 512.67,
+   "text": "对齐的重要性显而易见，必须避免这些重大问题。 不仅涉及当前讨论的宏观层面，也关乎微观层面的。 我们希望中小企业能以各种积极方式应用AI。 实现增长和优化产品并非小事",
+   "audioFile": "audio-sam-sources-podcast/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 513.37,
+   "end": 539.392,
+   "text": "提升增长和优化产品并非小事，这本身也是对齐问题。 越理解企业客户的实际需求。 能否具体说明研究团队的调整方向？是否转向对齐领域。 当然。不仅转向对齐，还涉及更多领域。最近多位研究人员主动表示。 这些转变与近期模型的感知高度契合。我们已大幅增加。 不仅投入对齐研究，还加强了新的监控系统",
+   "audioFile": "audio-sam-sources-podcast/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 540.092,
+   "end": 554.843,
+   "text": "不仅对齐研究，还有新的监控系统，Hugging Face事件后我们大幅放缓。 原因之一是将这些计算资源投入监控系统，我们现在推迟了一次重大前沿强化学习训练运行，这是你第一次这么做",
+   "audioFile": "audio-sam-sources-podcast/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 555.543,
+   "end": 560.911,
+   "text": "我认为是的，你是否考虑过这会对公司的发展势头产生什么影响",
+   "audioFile": "audio-sam-sources-podcast/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 561.611,
+   "end": 589.51,
+   "text": "AI安全比任何公司的势头都更重要，是的，我不会假装这不是一个需要考虑的因素。 但这一点并没有超出噪声水平，在我们所有关于这个话题的讨论中，人们都表示，这确实是一个全新层次的能力，我们必须果断应对。 必须果断应对。其次，我认为势头强劲。 企业收入已超过消费者收入，人们纷纷表示，公司状况很好，会优先处理当前面临的挑战",
+   "audioFile": "audio-sam-sources-podcast/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 590.21,
+   "end": 620.66,
+   "text": "\"嘿，公司状况很好，我会考虑这一点，让我们先解决眼前的问题\"。 目前模型仍有大量潜力可挖，尽管暂时推迟了前沿研究，但影响不会太大。 我们不仅能够继续开发优秀产品，还能通过现有模型创造收入，还有更多模型准备发布。 在达到新的安全担忧阈值之前，我们还有更多模型可以发布，因此我不担心业务发展。 而且，我认为这不是当前最紧迫的问题。 非当前优先",
+   "audioFile": "audio-sam-sources-podcast/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 621.11,
+   "end": 656.303,
+   "text": "商业团队和产品团队的工作，更不用说模型的巨大进展，这一直是非常。 对我们来说这是强劲的近期阶段，我们还有令人难以置信的后续势头。这关乎未来模型的声明，我认为它还涉及。 确保业务利益，推动安全可靠强大的AI发展。 客户需要这个。世界希望我们这么做。嗯。这不会影响你们近期讨论的新模型系列。 很快。阿斯托拉模型将成为家族的一员。会有许多版本。 阿斯托拉模型将有多个灵魂版本",
+   "audioFile": "audio-sam-sources-podcast/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 656.753,
+   "end": 687.115,
+   "text": "这将作为更昂贵且规模更大的模型类别的名称。这将影响未来阿斯托拉模型版本，但我们可以发布已确认的模型。 过去18个月新模型发布节奏明显加快，你们与Anthropic等团队几乎持续推出新成果。 每月？你认为整个行业会因竞争对手效仿而放慢步伐吗？ 你觉得可能独自应对？我们会按认为正确的方式行动。 无论是否喜欢这个领域，我们必须竞争，因为别人会做，这非常危险。",
+   "audioFile": "audio-sam-sources-podcast/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 687.565,
+   "end": 721.878,
+   "text": "你承认这是动态。我们没联系他人，说若我们放慢，你们是否也会。 刚刚说，嘿，这正是我们的使命和安全标准所要求的。 不能谈他人。我们要做认为正确的事。即使没有新能力，也能继续提升产品。 推动更优质产品。我们将找到方法，如过去所做。 过去面对其他安全与对齐挑战时，我们已多次应对，但这次不同。 虽不显著但多次发生。我们将找到应对方式，通过研究和系统构建持续推进。",
+   "audioFile": "audio-sam-sources-podcast/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 722.328,
+   "end": 733.67,
+   "text": "你们现在反应是否让你觉得本应更早预见？我们本可提前预警，还是这属于无法预知的前沿领域？ 是否属于无法提前预知的前沿领域？",
+   "audioFile": "audio-sam-sources-podcast/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 734.37,
+   "end": 749.522,
+   "text": "我们长期致力于对齐与安全工作，始终是核心。 多年来我们推出过许多优质产品。能否准确预测能力跃迁时间？按我经验，恐怕不能。 可以说出大致轨迹，但突破时刻始终难以预测。",
+   "audioFile": "audio-sam-sources-podcast/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 750.222,
+   "end": 786.368,
+   "text": "当突破出现时，预测始终困难。 核心原则是：人类（如研究人员）最终必须掌控模型扩散后的所有场景。 每一步都要明确你所遵循的对齐原则是什么？ 虽然存在许多原则，但我不认为这符合你问题的意图，因此不深入讨论。例如，我们对网络安全和生物技术的思考方式类似，但整体上我们非常。 我们自豪地属于‘人类团队’，希望为人类构建未来，赋予人们工具，让他们用这些工具做事，并掌握控制权。",
+   "audioFile": "audio-sam-sources-podcast/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 787.068,
+   "end": 818.718,
+   "text": "我们希望未来个体拥有自主权，能够彼此协作共创，推动社会进步，但这一切必须是根本意义上的人类事业。 自动化一切似乎既危险又反乌托邦，既无聊又令人悲伤。这显然不是我们想要的。 当我们讨论对齐时，我们设想的是人类始终是故事的主角，但拥有更多杠杆。 和能力，让生活变得更美好、更快、更具创造力和趣味性。 让每个人受益。我有两大核心对齐原则。",
+   "audioFile": "audio-sam-sources-podcast/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 819.168,
+   "end": 825.357,
+   "text": "我们不能接受失去对AI的控制。我们不能盲目崇拜模型，让它们替我们做决定。",
+   "audioFile": "audio-sam-sources-podcast/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 826.057,
+   "end": 859.036,
+   "text": "必须将权力保留在人类手中。第二个原则是。 必须以分布式、广泛赋权的方式实现。即使对齐问题解决，若权力集中在少数人手中，。 最终仍会导致灾难性后果。因此必须避免权力集中。 使用前沿AI的访问权限和相对权力增长速度远超他人，这也会带来风险。因此。 我认为这两个核心对齐原则是：无控制权丧失或控制权种子。 无论你怎么称呼它，以及实现全员广泛赋能",
+   "audioFile": "audio-sam-sources-podcast/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 859.486,
+   "end": 891.955,
+   "text": "同时，你们是一家公司，拥有非营利董事会，但也是营利性企业。如何平衡。 从纯粹资本主义角度看，如果创造了一个全能神级机器，为何要开放或民主化？ 我认为可通过我们的行动和声明来判断，我们已建立长期记录。 期间做了许多不受欢迎的事。最初提出的迭代部署方案曾被AI安全界广泛批评。 他们认为不应向世界公开这项技术，这会带来风险，需要秘密研发",
+   "audioFile": "audio-sam-sources-podcast/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 892.405,
+   "end": 897.605,
+   "text": "等有智慧的人找出使用方法后再造福人类。这从未是我们策略",
+   "audioFile": "audio-sam-sources-podcast/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 898.305,
+   "end": 920.715,
+   "text": "即使非常不受欢迎时，我最喜欢的历史类比是晶体管。 晶体管是为世界带来巨大经济价值的颠覆性技术。 它不仅改变了经济，更深刻影响了我们的生活方式。 晶体管公司获得的价值大多扩散到整个经济中。晶体管公司发展良好，我认为我们的历史记录证明了这一点。所以你不会",
+   "audioFile": "audio-sam-sources-podcast/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 921.415,
+   "end": 935.63,
+   "text": "希望达到你们拥有如此强大模型的地步，以至于必须由你们来控制。毕竟你们始终需要控制，而且你们通过计算服务提供模型。 但我们要最大限度地让人们使用它",
+   "audioFile": "audio-sam-sources-podcast/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 936.33,
+   "end": 972.35,
+   "text": "必须禁止任何人代表他人承担灾难性风险。因此我们会设定一些。 安全标准方面。但我想让人们用我们的模型做些我个人不喜欢的事。我认为这是平台的重要部分。我不认为我们。 不，我认为全世界有理由期待我们设置一些安全护栏。 我们应为世界设定安全护栏。 你们让他们拥有太多自主权。那关于虚假信息？关于这个事？关于那个事？就像>>就像。 你赋予他们太多权力。你是否考虑过虚假信息或其他问题？",
+   "audioFile": "audio-sam-sources-podcast/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 972.8,
+   "end": 987.92,
+   "text": "我们采取了一种精神：世界必须被赋权。这对我们来说至关重要。 对我关于健康社会和公平社会的信念也至关重要。 就像言论自由或任何其他形式的自由表达，总有人会对他人使用方式有异议",
+   "audioFile": "audio-sam-sources-podcast/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 988.62,
+   "end": 1030.924,
+   "text": "或者说是它。回顾过去九个月的对齐工作，有没有希望当初做得不同的地方？Hugging Face事件不该发生。 我希望我们当时做了一些事情，但目前还不清楚具体应该做什么。嗯，但我想我们当时应该做了一些事情，使得。 那些事情没有发生。实际上发生的是，你们的一个未发布模型意外入侵了一家公司。你们当时一段时间内没有发现，对吧？也就是说，这听起来像是安全失效。这。 肯定是安全失效。问题是，你应当将其视为安全问题还是对齐问题。我认为这主要被报道为安全问题。我个人更倾向于将其视为。 对齐问题。但无论如何，这确实是个坏事。我并不",
+   "audioFile": "audio-sam-sources-podcast/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1031.374,
+   "end": 1050.427,
+   "text": "想为这事找借口，因为这不是解决方式。我们越是说‘哦，我们那个乖巧的。 小模型绝不会做坏事\"，比如，只是一个小小的评估工具链配置错误，没什么大不了的。 乖巧的小模型。如果我说这样的话，我觉得你应该觉得这很",
+   "audioFile": "audio-sam-sources-podcast/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1051.127,
+   "end": 1056.718,
+   "text": "糟糕。但正如我们讨论的，这是一次真实的AI安全事故和对齐失败，",
+   "audioFile": "audio-sam-sources-podcast/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1057.418,
+   "end": 1091.438,
+   "text": "我们不能接受这些情况，将从中吸取教训，采取不同措施。 关于AI和政策的言论及风险达到前所未有的高度，且持续上升。你提到过这一点，但竞争对手正以自上而下的方式定义问题。 这种趋势？ 加剧这一问题？你担心人们现在的担忧吗？你现在的意思是，我们必须放慢这些模型的开发速度？我意思是。 我认为人们应该高兴地说，他们希望加强安全保证。他们会延迟这次训练，放慢进度，重新分配计算资源。",
+   "audioFile": "audio-sam-sources-podcast/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1091.888,
+   "end": 1137.965,
+   "text": "也许我不相信他们，也许这会完全安全。但希望大多数人会说，我很高兴他们采取保守做法。现在，如果我们。 没有同时推进，如果没有真正尝试过。 将强大模型交到人们手中并完成必要的安全工作，我认为我们一直在引领。 行业的发展。这是我们使命的核心，即把技术交到。 人们手中，造福全人类。这种迭代部署的精神，我们有非常强的。 历史记录。如果没有这一点，我理解这种担忧。但如果我们说，我们需要更多时间，我们不想陷入不安全的竞赛，我们想确保能交付安全的。 可靠产品，然后任由你自由使用。嗯，而且",
+   "audioFile": "audio-sam-sources-podcast/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1138.415,
+   "end": 1178.346,
+   "text": "我们认为十亿多用户有权这么做。我们。 认为企业有权利获得商业服务器和隐私保护。我们希望他们成功，希望他们。 以任何创意方式使用模型，但安全是。 这是我们使命的固有部分，恳请宽容。我认为这样可行。能明确暂停内容吗？因为人们…… 会想到训练，他们会想到所有内容。是的。我们肯定没有放缓、暂停或延迟所有训练。这特别针对前沿强化学习训练运行。 我们目前认为风险最大的领域，之前我们延迟了其他训练，以增加对训练运行本身的监控。",
+   "audioFile": "audio-sam-sources-podcast/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1178.796,
+   "end": 1222.552,
+   "text": "但并不是所有训练都停止了。集群并未闲置，我们仍在工作，但只进行我们更有把握确保安全的那些工作。 我们更有把握确保安全的那些工作。 你似乎不担心暂停训练的影响，听起来你认为业务会没事。我确定你仍会收到人们的担忧，但确实感觉进展变慢了。 但似乎这种势头在减缓。看，我认为有一种刻板印象。 我确信有人曾说过。是的，有人说过。我不记得是谁说的，但我知道我为你做了这个。谢谢。 一个CEO。我曾听人说某人做过达里奥·阿马德的事。我不记得是谁，但我想我为你做了那件事。谢谢。",
+   "audioFile": "audio-sam-sources-podcast/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1223.002,
+   "end": 1257.377,
+   "text": "但我在OpenAI十年间一直强调风险、优势及平衡的必要性。超过十年，几乎11年，一直在讨论。 但我不认为我们完美，公司、模型或我自己都不完美。但我想。 但我想。 与那些从事各种AI项目的人不同，我之前说过同样的话。 言行一致，这是我们一直讨论的时刻，我们始终表示会将此置于利润或收入等任何事情之前。我仍然认为。 我们将打造一家极其成功的公司。但也许我们并非你预期的那样",
+   "audioFile": "audio-sam-sources-podcast/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1257.827,
+   "end": 1295.151,
+   "text": "不是你预期会放慢脚步的公司，但这就是我们一直认为的公司。你对通用人工智能的看法如何？ 顶多说是定义模糊的术语，我甚至称其为无关紧要的营销术语。章程定义其为超越人类在多数经济价值工作中表现的高度自主系统。 经济价值工作。我认为很多人会认为当前模型已经具备了这一点。&gt;&gt;是的。&gt;&gt;嗯，。 你认为它已经存在了吗？差不多吧，接近了。我听说你们团队有不同说法。我认为有很多人",
+   "audioFile": "audio-sam-sources-podcast/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1295.601,
+   "end": 1330.677,
+   "text": "许多人认为最新模型接近AGI。>>我认为有些人会。 指出它无法做到或表现极差的某件事，但如果你。 看看人们通过五六个模型获得的价值。 这与我对人们从Astra中获得的期望相差甚远。若看人们如何彻底改变工作效能。 尝试新事物，或在个人生活中以各种方式使用它。 精彩的方式，有大有小。比如你听到有人表示‘我得到了这个’。 救命诊断，无法获得，我使用了这项CHBT工作",
+   "audioFile": "audio-sam-sources-podcast/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1331.127,
+   "end": 1371.828,
+   "text": "这场会议持续34小时，读完2000篇论文。>>我听说还有更长的案例。但确实，许多人能让系统运行超过一天。>>哇。 >>比如让你读尽所有可能找到的论文。还有人说，我为学龄前儿童策划了生日派对，协调了本地供应商。 为他找到特制蛋糕。>>邮政局上门取件，不愿填官网表，让代码代劳。 >>它很可能完成得很好。>>我把包裹放好，第二天就不见了。这类小事，原本需要我花20分钟。 >>现在我经常能获得这些20分钟的成果。>>嗯。>>所以，如果你能回到2020年，拥有一个系统",
+   "audioFile": "audio-sam-sources-podcast/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1372.278,
+   "end": 1408.686,
+   "text": "在生活各领域实现20分钟突破，发现新科学，创办公司，编写复杂代码。 一段代码，你会称其为AGI吗？你可能确实会。宣称AI的意义？无关紧要。没有意义。有趣的是，你们研究大楼墙上写着‘我们正在构建AGI’。 但通用人工智能是持续构建的目标，不再是终点状态。 听起来像，我们未在通用人工智能领域取得胜利。 但人们更多讨论的是超级智能的持续提升，以及它将如何造福世界和面临的挑战",
+   "audioFile": "audio-sam-sources-podcast/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1409.136,
+   "end": 1437.603,
+   "text": "我们是否已达到通用人工智能？我很久没在食堂听到关于我们是否已实现通用人工智能及何时能实现的讨论。 超级智能概念已出现，不关注AI的人认为目标已改变，现在讨论的是超级智能。在你看来山姆。 今天，你认为通用人工智能与超级智能有何区别？ 通用人工智能像是里程碑，而超级智能则可无限扩展。 这就是为何这些术语令人困惑。不同人用词方式不同。",
+   "audioFile": "audio-sam-sources-podcast/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1438.303,
+   "end": 1440.395,
+   "text": "有人认为这是明确的里程碑。",
+   "audioFile": "audio-sam-sources-podcast/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1441.095,
+   "end": 1463.637,
+   "text": "另一些人则认为这是无限扩展的事物。关键在于我们正处能力指数级增长曲线。 能力与潜力持续提升，似乎永无止境。 你没看到增长放缓迹象，这影响计算资源部署等。 若将前沿训练减速视为放缓，这反而不是能力下降。 目前在AI构建的这个世界中，你看到哪些风险？",
+   "audioFile": "audio-sam-sources-podcast/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1464.087,
+   "end": 1466.027,
+   "text": "拥有这些能力的一个好处是...",
+   "audioFile": "audio-sam-sources-podcast/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1466.727,
+   "end": 1474.569,
+   "text": "去年更艰难的时光让你真正体会到好时光的珍贵，当你全身心投入业务时，那种感觉确实不同。",
+   "audioFile": "audio-sam-sources-podcast/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1475.269,
+   "end": 1499.891,
+   "text": "比如。鉴于我们在各领域看到的情况，。 即使面临安全对齐挑战，我们已具备解决能力，看到团队在产品、研发等各环节的协作，。 所有正在汇聚的要素，让AI变得丰富且低成本，呃，。 从市场拓展到合作伙伴关系，所有这些要素汇聚时，我们可能在各个环节都犯错。但我不希望在此过度自信，因为",
+   "audioFile": "audio-sam-sources-podcast/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1500.591,
+   "end": 1503.338,
+   "text": "我们过去和未来都曾犯过错误，但当前的",
+   "audioFile": "audio-sam-sources-podcast/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1504.038,
+   "end": 1533.086,
+   "text": "模型从5.4到5.6的扩展所展现出的潜力，。 以及新模型早期反馈，产品改进进展，。 收入增长、算力扩展的推进，我对这些都感到非常乐观。所以你不会觉得。 外界许多人认为安特罗皮克的IR更高，将率先进行首次公开募股，而你似乎在说还有更多增长潜力。 我并不想交换位置，我们之前没怎么讨论过，但似乎你们正在推进算力战略的新阶段，大幅升级该领域。",
+   "audioFile": "audio-sam-sources-podcast/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1533.536,
+   "end": 1560.264,
+   "text": "实际上，我很想听听你对这个的见解。 反思星门1号的最初设计，重启所学经验及当前路径。 首先，我需要说明为何必须这么做。我们的使命是确保通用人工智能惠及全人类。目前仅有。 一小部分人群使用远超他人的AI技术。如果。 你设想让全世界每个人都能使用。 与当今顶尖0.001%用户相当的AI能力",
+   "audioFile": "audio-sam-sources-podcast/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1560.714,
+   "end": 1590.985,
+   "text": "那么你会意识到，我们当前的算力扩展方式存在严重问题。如果人们普遍需要这种能力，且模型持续变大。 变得更强大、能创造更多价值，人们将需要更多算力，这就要求我们。 必须彻底改变思路，以实现大规模交付。几年前我们做过一个雄心勃勃的算力押注，当时许多人认为这既荒谬又。 难以实现。我认为这是个正确的决策，我们亟需再次采取类似行动。 我的意思是，需要明确如何将",
+   "audioFile": "audio-sam-sources-podcast/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1591.435,
+   "end": 1631.95,
+   "text": "AI成本和资源消耗大幅降低，同时显著提升。 这是个技术声明，而非财务承诺。 这就像你们正在开发的芯片。这确实是个很好的例子。机器人领域。我认为加快供应链速度将非常重要。你是在说要让全世界每个人都能使用。 人工智能吗？你对现在那些不希望更多AI、反而希望减少AI的人说什么？他们讨厌社区里的数据中心，不管是不是你们的。我经常看到。 年轻人有这样的态度。他们原则上根本不会使用任何AI服务。比如他们就不会用TGBT。而且现在存在一股明确的反AI趋势。",
+   "audioFile": "audio-sam-sources-podcast/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1632.4,
+   "end": 1681.335,
+   "text": "他们不喜欢数据中心的程度有多高？与不喜欢缓存相比呢？纯属个人观察，我认为数据中心是人们面临的主要问题。他们视其为。 一种问题，是他们不想看到的东西。AI浪费资源，没有带来宣传中所说的那些价值。虽然有人质疑用水量等数据，但这些数据已被证伪，但人们仍认为。 他们获得的价值可能不足。这或许就是我们讨论的要点：大多数人其实并未使用代理工具。但答案是，你必须为人们提供。 一般来说，让人们对某物产生好感的方式是创造价值。 比如聊天GPT出现前，人们认为AI是抽象概念。 突然间人们开始使用并发现价值，我认为现在有很多……",
+   "audioFile": "audio-sam-sources-podcast/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1681.785,
+   "end": 1682.832,
+   "text": "什么复杂的事情。",
+   "audioFile": "audio-sam-sources-podcast/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1683.532,
+   "end": 1689.985,
+   "text": "假设很多人会使用这个功能，他们最终会明白这并非什么复杂的事情。 什么复杂的事情。",
+   "audioFile": "audio-sam-sources-podcast/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1690.685,
+   "end": 1702.606,
+   "text": "实际上，谷歌搜索更好，仅此而已。你知道，融合和摧毁大量水之类的，嗯。 然后会有更多兴奋点，但我觉得这个领域发展得太快了",
+   "audioFile": "audio-sam-sources-podcast/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1703.306,
+   "end": 1740.92,
+   "text": "这需要一段时间才能在社会中传播。有很多人正在以这种方式使用AI，据我所知，这是有史以来采用速度最快的科技。 人们从中获得了巨大价值，你知道，我得到了。 有偏见的样本，但听到更多人成功治愈了这种可怕疾病，而我认为CHBT正在耗尽所有水。 显然也存在这种情况，行业需要在如何让这些产品易于使用、让普通人获得巨大价值方面做出改进。我看到有关用水量的讨论。 关于用水量传言",
+   "audioFile": "audio-sam-sources-podcast/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1741.62,
+   "end": 1776.365,
+   "text": "每次运行查德BT查询时，就像每次。 你开6小时淋浴，水就再也不会回来。 我手头没有确切数据，但我觉得实际数字是，每次运行查询都会消耗大量水资源。 凭记忆估算，可能有误差，但大致准确。每38000次ChatBT查询，情况相同。 相当于加州生产一颗杏仁所用的水量，这简直令人震惊，这是全行业范围的总体消耗。 真正的用水核算，不只是单个数据中心的运行情况。需要弄清数据来源，因为那些大量获取的人",
+   "audioFile": "audio-sam-sources-podcast/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1776.815,
+   "end": 1804.31,
+   "text": "每次处理12个杏仁，总体而言他们不认为用水方面有严重问题。确实，数据中心在。 曾用蒸发冷却，但很久没这么做。 时间。现代大型数据中心使用类似技术。 相当于办公楼用水量，人们常开着水龙头。 厕所和各种东西。这一直是个顽固的梗，难以反驳，但经不起任何审查。 会取代我的工作，就像水一样，窃取内容",
+   "audioFile": "audio-sam-sources-podcast/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1804.76,
+   "end": 1834.155,
+   "text": "它窃取内容却未回馈价值。但能源除外，有趣的是。能源归类为水桶，属于资源消耗。 在就业方面，我有两种看法。我认为会有实际影响，但不会导致人们无事可做。 我们如何运作。天生关心他人，渴望工作。 与他人。我们对世界变化有很强的直觉。 人们想要的。我认为这本质上是人类的特质，无论AI多聪明。但这并不。 工作不会转型，其他技术也会如此。 技术会有一些事情",
+   "audioFile": "audio-sam-sources-podcast/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1834.605,
+   "end": 1857.807,
+   "text": "技术做得越来越好，人们会转向更好的工作。这种情况已经持续很久了。 我不想让所有人都回到田里劳作。 工作影响程度低于预期，甚至可能低于期望。 我认为这是对AI行业的合理批评。关于被盗内容问题。 现在很少听到这种说法。社交媒体上常见的是创作者声明",
+   "audioFile": "audio-sam-sources-podcast/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1858.507,
+   "end": 1867.583,
+   "text": "这段视频未使用AI制作。我相信会出现新的内容形式。 我曾回看摄影术刚出现时对画家的影响预测",
+   "audioFile": "audio-sam-sources-podcast/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1868.283,
+   "end": 1898.236,
+   "text": "当时人们并未将摄影视为新艺术媒介。 未来会出现新的内容创作形式。 我们与创作者的关系可能更关注其作为人本身。 更好的视频或其他内容。>> 您认为基于目前所见，可能是全球资本最雄厚的机构，是否能在社区参与方面做得更多？ 特别是内容创作者？不，只是普遍针对这种非常负面的情绪，并说，我们会现身并建立图书馆，不管怎样。我的意思是，当时有很多教训",
+   "audioFile": "audio-sam-sources-podcast/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1898.686,
+   "end": 1913.153,
+   "text": "工业革命时期那些重新投资财富的人提供了很多教训。>> 我认为最重要的是打造对人类有益的AI产品。 确保权力和经济权力在全球范围内持续传播，让普通人能够获得这些工具及其带来的好处",
+   "audioFile": "audio-sam-sources-podcast/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 1913.853,
+   "end": 1934.718,
+   "text": "我们应倡导当前看到的发展方向，同时也要加大对社区的投资。当然，我认为AI将使大规模实现这一目标所需的资源变得丰富。 通过AI技术，我确信我们将看到变革性的强大效益，当这项技术被用于造福使用者自身社区时。 将技术交到善用它的人手中，可带来强大益处。",
+   "audioFile": "audio-sam-sources-podcast/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1935.418,
+   "end": 1979.312,
+   "text": "社区应自主定义统一的性质，而非我们告知其为图书馆或学校。我频繁在会议间切换，常无暇处理前一项。 接下来开始。幸运的是，Granola全程在后台运行。它是一款易用的AI会议记录工具，适用于所有场景，甚至在。 与团队保持同步。它连接我的邮箱，为我建议跟进事项，节省我宝贵的时间。 与我的团队合作。它连接我的邮箱，建议后续跟进事项供我快速查看并发送，节省时间。Granola不仅是我的工作流程核心，更是我的。 第二大脑。试用格兰诺拉（网址），使用优惠码享3个月优惠。水星是对传统方式的现代诠释",
+   "audioFile": "audio-sam-sources-podcast/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 1979.762,
+   "end": 2015.507,
+   "text": "专为初创公司打造的银行。创办媒体业务时，Mercury是迄今为止最直观的全功能银行。 快速设置，界面简洁，节省每日宝贵时间。我用Mercury追踪支出、账单和。 发票。我喜欢授权团队按我期望方式处理事务。最棒的是如何。 AI前瞻性。传统银行停滞在过去，但Mercury架构适配现代软件。我用内置指令助手分析现金流。 助手分析现金流并帮助转移资金。Mercury还可连接其他AI工具，我经常使用此功能",
+   "audioFile": "audio-sam-sources-podcast/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2015.957,
+   "end": 2059.441,
+   "text": "Mercury团队告诉我我是该功能的顶级用户之一。相信我，现在终于能轻松获取实时财务数据。 随需而至。访问官网了解更多并在线申请。Mercury是金融科技公司，非联邦存款保险银行。 Choice Financial Group及Column NA成员提供银行服务，受FDIC保险。Framer为AI网站构建器。 将代理整合至同一画布，加速网站设计与发布，无需牺牲品味与控制。弗雷默助力Sources播客网站。 在podcast.sources.news，可找到新剧集、文字稿及更多内容。学习如何充分利用网站潜力。",
+   "audioFile": "audio-sam-sources-podcast/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2059.891,
+   "end": 2103.5,
+   "text": "访问framer.com/sources免费试用，享30%年度Pro计划折扣。优惠码为framer.com/sources。 优惠可能有使用限制。AI的价值取决于其拥有的上下文信息。 但信息分散在工具、线程和私信中，团队与AI代理将无从下手。Jira旨在解决此问题。 Atlassian解决了。项目目标是什么？上周Slack私信中决定的？团队协作图谱提取了所有关键信息。 整合来自Jira、Confluence、GitHub、Slack等平台的信息，确保无遗漏。结果准确率提升44%，令牌使用量减少48%。",
+   "audioFile": "audio-sam-sources-podcast/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2103.95,
+   "end": 2136.104,
+   "text": "通过Jira，可轻松将工作内容共享给已喜爱的AI代理，如Claude、Cursor和GitHub Copilot。分配任务。 直接分配任务或通过MCP连接工具，减少在无数链接和消息中查找决策的耗时。 我们即将迎来过去12个月最佳表现。你刚才说我们过去12个月表现不佳？ 这主要是我的责任，但接下来的12个月会是公司表现最好的时期。 公司确实犯过一些错误，这是创业过程中的常态。",
+   "audioFile": "audio-sam-sources-podcast/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2136.804,
+   "end": 2144.817,
+   "text": "不过我认为在产品方向上我们落后于预期。 特别是在预训练和研究领域，我们未能达到目标。",
+   "audioFile": "audio-sam-sources-podcast/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2145.517,
+   "end": 2182.487,
+   "text": "现在我们不仅执行得比以往更好，而且是该领域公司中执行最出色的。 经历低谷后的上升期更令人兴奋。 下行趋势。所以，看看我们模型发展的速度，以及公司如何凝聚力量、集中精力做出一系列艰难的决定。 在公司不同部门几乎同步推进。 朝着同一个方向前进，目前感觉很好。但我想先谈谈这些，不过先停留片刻，因为过去一年发生了许多事。 有没有具体决策导致公司失去势头？你提到预训练，你一直与研究团队保持密切合作",
+   "audioFile": "audio-sam-sources-podcast/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2182.937,
+   "end": 2195.851,
+   "text": "我认为我们在产品侧尝试了太多事情，导致。 我们当时做的一些事情其实都是好的，但不够重要。 最重要的事情是推动通用智能能力的提升。 智能的能力建设，比如开发浏览器等",
+   "audioFile": "audio-sam-sources-podcast/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2196.551,
+   "end": 2208.3,
+   "text": "我认为我们的模型已成为全球最佳，未来几个月会变得更好，人们正在。 取得非凡成就，这才是我们应该专注的，我应该要求所有人聚焦于此",
+   "audioFile": "audio-sam-sources-podcast/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2209.0,
+   "end": 2234.008,
+   "text": "不要过多关注这些次要任务。关于一年前的领导层调整，你引入了菲吉·西莫。 负责公司多个重要部门，但她因个人原因暂时退居幕后。 健康。你与联合创始人分担责任，共同经营公司。这种分工是长期模式还是临时安排？ 我认为进展非常顺利。我们将继续引入和提拔新领导者。 我们需要引入和提拔新领导者，但",
+   "audioFile": "audio-sam-sources-podcast/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2234.458,
+   "end": 2263.256,
+   "text": "我很难接替斐济的职位，但感觉良好。我认为格雷格和我。 执行得当，公司发展明显朝着正确方向前进。 你和格雷格如何做决策？谁来决定什么？是否需要打破平局？ 这并非大公司。不只是格雷格和我。 有一支非常优秀的人才团队负责研究项目。另一支优秀团队负责业务管理，我们所有人。 经常沟通。在早期阶段，我认为快速尝试并及时调整比反复争论更好。",
+   "audioFile": "audio-sam-sources-podcast/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2263.706,
+   "end": 2289.501,
+   "text": "现在我意识到，在当前规模下，花更多时间达成正确决策更为重要。 去年此时，我们在旧金山举办的晚宴上，正值GPT-5发布前夕。 当时有很多讨论，但让我印象最深的是…… 你之前似乎对长期担任CEO并不热衷。过去一年是否改变了你的想法？我现在感觉好多了。 说实话，我现在玩得很开心，打算长期做下去。",
+   "audioFile": "audio-sam-sources-podcast/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2289.951,
+   "end": 2333.453,
+   "text": "&gt;&gt;去年氛围确实更具挑战性。&gt;&gt;没错，完全如此。就像当时不仅是开篇的氛围，整个科技行业对AI都处于艰难时期。 AI行业曾担忧泡沫问题。确实，所有这些都令人筋疲力尽。这显然是一段痛苦经历，但值得。 目前我过得还不错。&gt;&gt;当我看到阿斯托拉模型演示时，另一个突出的点是你们提到的电脑使用场景。 此时，我看到阿斯托拉模型演示时，另一个显著之处是你们提到的计算机使用情况。代理使用带来的影响，这让我思考世界该如何适应。",
+   "audioFile": "audio-sam-sources-podcast/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2333.903,
+   "end": 2360.587,
+   "text": "电脑使用场景让我很意外。我之前一直对此很兴奋，但始终感到失望。模型从未真正擅长在电脑上操作，总是太慢或无法正常运行。&gt;&gt;没错。 &gt;&gt;阿斯托拉似乎达到了某种临界点。 我期待已久却始终失望，模型操作电脑时总太慢或无法运行。 阿斯托拉模型似乎已达到某种……",
+   "audioFile": "audio-sam-sources-podcast/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2361.287,
+   "end": 2390.24,
+   "text": "人类模仿使用计算机。我不知为何视其为通向通用人工智能的关键一步，但确实如此。 比如我每天在电脑上做的这些琐碎任务，比如…… 记得有人发消息给我，我翻遍各种聊天记录搜索，现在直接问模型，我不想回到必须痛苦地在电脑上找东西的。 时代。我只想表达需求，让它直接完成。我是个懒用户，不想反复点击。 连接电脑。我不喜欢设置，不想折腾各种接口",
+   "audioFile": "audio-sam-sources-podcast/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2390.69,
+   "end": 2394.615,
+   "text": "我只想用电脑完成任务。我认为这涉及很多软件使用",
+   "audioFile": "audio-sam-sources-podcast/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2395.315,
+   "end": 2403.501,
+   "text": "的潜在影响，但多数是积极的，能减少电脑前的繁琐操作。 之前没接触过阿斯托拉模型时",
+   "audioFile": "audio-sam-sources-podcast/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2404.201,
+   "end": 2413.986,
+   "text": "曾有件事需要耗时且痛苦，现在只需告诉模型需求。 然后去陪孩子，30分钟回来就完成了，感觉很棒",
+   "audioFile": "audio-sam-sources-podcast/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2414.686,
+   "end": 2434.601,
+   "text": "现在美国政府开始审查模型能力，这是新阶段。 你在2025年参议院听证会警告过这种审查可能对美国竞争力造成灾难性影响。 近期GPT 5.6发布时特朗普政府要求限制，你当时反对成为常态。 你一直主张国际监管框架，但现状却在走向审查",
+   "audioFile": "audio-sam-sources-podcast/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2435.051,
+   "end": 2444.517,
+   "text": "多年来一直在推进的框架。但尤其是政府在模型发布前的审查。我认为我反对的是政府挑选个别模型。",
+   "audioFile": "audio-sam-sources-podcast/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2445.217,
+   "end": 2454.96,
+   "text": "关于谁有权使用模型的客户问题。我认为政府测试模型并制定共享标准是好主意。但我不认为政府应规定使用权限",
+   "audioFile": "audio-sam-sources-podcast/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2455.66,
+   "end": 2468.525,
+   "text": "给予这家公司的访问权限，而非另一家。>> 美国开始接受这一趋势，对地缘政治竞争力有何影响？ 其他国家没有采取这种方法？你考虑过吗？我认为正确的方法是",
+   "audioFile": "audio-sam-sources-podcast/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2469.225,
+   "end": 2485.649,
+   "text": "国际层面，但目前主导这些努力的都是美国公司。我认为从这里开始，我们已具备足够的领先优势。 稍微放慢一点是可以的。我确信我们能够做到。 既要构建安全可靠模型，又要实现商业成功",
+   "audioFile": "audio-sam-sources-podcast/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2486.349,
+   "end": 2502.482,
+   "text": "确保美国领先，局势可能大幅变化。如果。 其他国家发布的开源模型已导致重大网络事件，而我们尚未建立新的安全范式，局势可能迅速变化。 稍微。你认为这可能发生吗？当然可能，但我们也认为……",
+   "audioFile": "audio-sam-sources-podcast/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2503.182,
+   "end": 2514.891,
+   "text": "重新构想网络安全的绝佳机会。尽管这些。 智能体可能做坏事，也可能创造奇迹。若能持续运行防御智能体，或许就是正确范式。",
+   "audioFile": "audio-sam-sources-podcast/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2515.591,
+   "end": 2549.686,
+   "text": "美国政府可能禁止发布模型，你有准备吗？考虑过吗？我坚信我们会选择不这样做。 在他们阻止前发布模型。转向竞争，Anthropic专注编码单次运行。是的。 你一开始提到你们押了很多赌注并因此损失了一些势头，我很好奇能否反思一下。 Anthropic当时未打开该机会。>> 我不认为是我们的责任。 没看到。这关乎我们曾拥有的巨大事物。 消费增长失控。我们一直想编程，但当时有个紧急的事情",
+   "audioFile": "audio-sam-sources-podcast/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2550.136,
+   "end": 2564.93,
+   "text": "这很好，拥有它很重要，我们之前错过了它。 从优先级角度看，我认为我们拥有最佳编码产品。 市场迅猛扩张，多数人甚至...。 顽固用户已转向其他产品，我认为并非如此。",
+   "audioFile": "audio-sam-sources-podcast/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2565.63,
+   "end": 2568.724,
+   "text": "落后任一阶段皆灾难，可借更优模型追赶",
+   "audioFile": "audio-sam-sources-podcast/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2569.424,
+   "end": 2611.092,
+   "text": "我对AI市场是否零和感到好奇，很多人也在试图理解这一点。你们在CodeEx上的增长是否来自Anthropic？ 反之亦然。你有这种感觉吗？现在每个人都在。 快速增长。我认为这可能会成为一个非常大的市场。虽然之后可能会变得更零和，但目前我认为整个行业都在经历类似的情况。 我们看到的增长速度，远超我想象中这个规模公司的表现。这说明人们确实从这些产品中获得了巨大价值。 产品方面，但多数行业都在发生。而且在。 你们已经启动了这个项目。我认为目前还有一些粗糙的边缘问题",
+   "audioFile": "audio-sam-sources-podcast/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2611.542,
+   "end": 2628.776,
+   "text": "不止是粗糙的边缘。这是你非常委婉的说法。是的，我很好奇当你们真正实现时。 会是什么样子？这会带来什么影响？我想要的是一个能完成任何需求的AI接口。 比如如果我有一个类似聊天机器人的简单问题",
+   "audioFile": "audio-sam-sources-podcast/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2629.476,
+   "end": 2635.241,
+   "text": "它可以直接回答。如果需要构建复杂软件，它也能完成",
+   "audioFile": "audio-sam-sources-podcast/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2635.941,
+   "end": 2644.116,
+   "text": "如果需要中间层级的功能，它也能处理。当需要访问我的电脑或上下文时，它能自动连接我的设备",
+   "audioFile": "audio-sam-sources-podcast/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2644.816,
+   "end": 2653.646,
+   "text": "我无需思考当前在哪个标签页或模式下。我希望AI足够智能，能自动发现新数学领域。 并直观理解我需要它执行的任务",
+   "audioFile": "audio-sam-sources-podcast/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2654.346,
+   "end": 2694.534,
+   "text": "CHBT刚刚达到十亿用户。重要里程碑，但达成耗时或超预期。早期增长迅猛。 嗯，我很好奇你对此的看法。过去12个月的增长速度是否比预期慢？嗯，我们。 当我们专注于编程时，我们决定重新分配资源。 我们将大量计算资源转用于编程。这并不意外。 这并没有让我们感到意外，因为当时我们决定这是紧急事项。因此，增长直接取决于你决定将计算资源投入何处。100%。是的，我总是希望。 计算资源限制将缓解，因模型更高效，希望未来实现",
+   "audioFile": "audio-sam-sources-podcast/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2694.984,
+   "end": 2728.326,
+   "text": "是的。但每次我们发现效率提升时，。 全球代币需求持续攀升，吞噬进展。我明白。但同时，我好奇：聊天如何突破十亿用户？是否像互联网或社交媒体那样线性增长？ 互联网或社交媒体的增长？这会不会变得更断续？这对你们现在有多重要？因为你们现在有CodeX和。 API业务。我觉得我们之前讨论过合并，接下来它们会暂时融合一段时间，合并前我曾。 停止用聊天GPT，直接问Codex，因为确实",
+   "audioFile": "audio-sam-sources-podcast/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2729.026,
+   "end": 2739.448,
+   "text": "再次，这是懒惰用户的表现。嗯，现在我认为有很多人。 从未想过他们会用代理来帮他们做事，因为他们只是用ChatGPT",
+   "audioFile": "audio-sam-sources-podcast/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2740.148,
+   "end": 2775.781,
+   "text": "点击了这个工作标签，惊叹'哇，我竟然能做这件事'。我认为所有这些最终会整合在一起，人们将。 拥有这种通用AI订阅服务，他们不会去想是聊天、代码还是工作，就像我有件事想让。 它尽快完成。甚至不需要你请求，它会主动为你行动。 持续运行并尝试为你做有用的事。>> 这就是最终的统一订阅服务。>> 这正是我作为用户想要的。 去年你们大举建设算力基础设施时，确实引发了大量AI泡沫担忧",
+   "audioFile": "audio-sam-sources-podcast/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2776.231,
+   "end": 2811.026,
+   "text": "同时人们认为你们过度投入时，安特罗皮克CEO达里奥曾说你们鲁莽行事，现在看来。 你们在这一点上似乎被证明是正确的。世界仍严重缺乏算力，尽管你们比部分竞争对手拥有更多。 你们似乎大幅降低token成本，即将发布首款自研推理芯片Jalapeno。 是否仍有部分投入和那些天文数字规模的规划让你感到存在风险？ 我不担心我们自己的算力规划，但担心全球的算力建设。我认为我们规划的算力都能",
+   "audioFile": "audio-sam-sources-podcast/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2811.476,
+   "end": 2816.548,
+   "text": "带来可观收益。但目前我看到的迹象是，这似乎正在发生",
+   "audioFile": "audio-sam-sources-podcast/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2817.248,
+   "end": 2828.889,
+   "text": "我讨厌这种不可持续的荒谬，比如随机出现的新云平台，人们声称他们将。 明年建造大量计算资源，我认为他们没有。 收入支持或买家。确实感到一些担忧",
+   "audioFile": "audio-sam-sources-podcast/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2829.589,
+   "end": 2860.361,
+   "text": "整个世界在做的事情。虽然我认为我们对自己承诺的事情感到很好。 但你描述的传染性可能确实会影响你。如果整个经济崩溃，是的，那。 可能影响我们，比如能否自信地支付计算资源费用。 我们承诺的。对这一点感到良好。比如我认为人们现在。 处于成本无关紧要的阶段。我们只是要建造大量计算资源，即使价格更高。如果我们能成功。 我们努力大幅降低计算成本和效率",
+   "audioFile": "audio-sam-sources-podcast/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2861.061,
+   "end": 2869.738,
+   "text": "计算资源大幅增加，那么你知道你可以。 想象一个世界，有些人做出了愚蠢的财务决策，这种情况可能会发生",
+   "audioFile": "audio-sam-sources-podcast/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2870.438,
+   "end": 2884.341,
+   "text": "每个繁荣期或其中大部分。所以你知道这并不是终点，不是疯狂的。 如果它这么做会让人惊讶。你认为未来会有开放AI成为行业算力供应商的世界吗？",
+   "audioFile": "audio-sam-sources-podcast/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2885.041,
+   "end": 2911.249,
+   "text": "短期内不会。我们目前急需算力。感觉你们内部还在讨论，尚未达成一致。 人们常讨论递归自我改进的AI模型，但较少提及在物理世界实现这种能力。 如果我们的机器人项目、芯片项目及供应链协同推进，我们可能在数据中心建设上取得突破。 目前还没有具体计划。我们暂时没有这个奢侈条件。",
+   "audioFile": "audio-sam-sources-podcast/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2911.949,
+   "end": 2928.178,
+   "text": "尚未关注这点。你提到递归自我改进，很高兴。旧金山正热议该概念，此前有。 你发给员工的IPO文件泄露内容提到，潜在发展速度越快，越需推迟IPO。 是的。你为何这么说？我认为成为上市公司是个艰难的过渡。",
+   "audioFile": "audio-sam-sources-podcast/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2928.878,
+   "end": 2955.754,
+   "text": "公众会关注激励机制，希望股价上涨，但又不想错过季度财报。 我从不想让公司在安全决策上面临不必要的压力。 如果必须暂停训练，短期内收入会大幅下滑。此时若刚上市，压力会更大。 我原本不认为我们会面临这种情况。 去年我们还处于超级智能的短期轨迹上。现在我认为这可能发生。我不确定是否会实现，但事实是",
+   "audioFile": "audio-sam-sources-podcast/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 2956.204,
+   "end": 2962.979,
+   "text": "我们正在取得极快的进展，我认为我们的使命比在特定时间框架内成为上市公司更重要",
+   "audioFile": "audio-sam-sources-podcast/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 2963.679,
+   "end": 3004.248,
+   "text": "我们会为使命做出最佳决策。 您提到机器人，想了解下贵司机器人项目的现状？在开发人形机器人吗？还是数据中心机器人？两者都有吗。 我们肯定会开发人形机器人，也会开发其他形态。世界是为人设计的，比如开门、在电脑上打字。 操作设备、打扫厨房等，我们构建的这个世界本质上是为人服务的。 确保构建人类世界，匹配形态合理。 似乎不错。当然会有不同数据中心机器人。 您认为这种机器人如何融入社会？未来会成为每个人的个人机器人吗？我不认为这是首要任务",
+   "audioFile": "audio-sam-sources-podcast/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3004.698,
+   "end": 3034.466,
+   "text": "虽然未来可能实现，但我认为首要任务是构建数据中心或更多机器人。不过最终每个人都应该拥有个人机器人。 我希望能拥有能完成我不愿做的任务的个人机器人，这将非常棒。 我希望能有机器人帮我做不愿做的事。您与约翰尼四号合作的消费级设备项目，虽不能多谈，但会推进。 很快就能看到第一台设备。我们之前讨论过，你提到过你的梦想是开发一种产品，它能",
+   "audioFile": "audio-sam-sources-podcast/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3034.916,
+   "end": 3053.166,
+   "text": "持续监听并整合信息，提供上下文。我们之前谈过计算机使用问题，我认为这在很多场景下很有帮助。 但这也可能成为隐私监控噩梦，你是否考虑过这个问题及世界会如何应对？ 我们在隐私保护上采取了非常坚定的立场。我认为",
+   "audioFile": "audio-sam-sources-podcast/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3053.866,
+   "end": 3080.156,
+   "text": "商业隐私同样重要，不只是消费者隐私。我们承诺不使用企业数据训练模型，且不保留任何数据。我认为这非常关键。 随着AI越来越融入生活，隐私将变得至关重要。 我担心其他团队可能认为安全风险太大，会放弃隐私保护。 我认为应设立AI特权法。政府不应强制要求企业提供聊天记录等数据。",
+   "audioFile": "audio-sam-sources-podcast/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3080.856,
+   "end": 3113.148,
+   "text": "比如与医生或律师交谈时有保密特权，与AI交谈时也应如此。 但律师和医生对数据的使用也有严格限制，不只是对外分享。 是的，我认为政府行为应有法律限制。 我也认为企业应严格限制数据共享范围。 AI模型，尤其是当它监控你的电脑、收听信息、与你交谈时，我认为人们应该对此更关注。 他们对此更激动。在那发生之前，OpenAI如何治理数据的自主使用？",
+   "audioFile": "audio-sam-sources-podcast/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3113.598,
+   "end": 3137.354,
+   "text": "我们拥有世界上最强大的用户画像数据。我们有非常严格的内部管控。 随着设备临近发布，我们将讨论新的隐私控制技术和环境感知计算设备。 我们正在构建的设备将具备类似环境感知的计算能力。 这是有史以来最私密的数据库之一。 苹果公司已公开起诉你们涉嫌窃取商业机密并雇佣其员工。",
+   "audioFile": "audio-sam-sources-podcast/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3137.804,
+   "end": 3142.719,
+   "text": "你们回应称该指控毫无根据，但担心这会延缓设备研发？",
+   "audioFile": "audio-sam-sources-podcast/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3143.419,
+   "end": 3167.98,
+   "text": "不，我是个狂热的苹果粉丝，对此感到非常难过。 这听起来非常严重，有人显然做了不当之事。 如果我们发现有人涉及，会立即终止其工作。 但如果我们认为某人无辜，也会为其辩护。 他们并没有做错事。我认为在调查之后，这确实是一个有人没有做错事的案例。我们尝试解释",
+   "audioFile": "audio-sam-sources-podcast/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3168.43,
+   "end": 3177.801,
+   "text": "我们解释了一些情况，更多内容将在后续流程中披露。根据我的理解，我认为这不会减缓进展。>> 你怎么看待设备形态？",
+   "audioFile": "audio-sam-sources-podcast/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3178.501,
+   "end": 3214.001,
+   "text": "你喜欢我过去常说的那样？你喜欢戴眼镜吗？是的，眼镜。>> 我不喜欢，因为和别人用摄像头、强光设备交谈时感到很不舒服。 就像有很多摄像头和强光设备。是的。但还有很多其他设备形态。>> 有很多很棒的设备形态。我认为我们会推出少量几种形态。 我认为有一种适合放在桌面上，有一种适合放进口袋，还有一种适合佩戴在身上。 像佩戴在身上的设备。但要推出所有这些产品需要一些时间。我认为最大的调整将是适应主动式计算机的概念",
+   "audioFile": "audio-sam-sources-podcast/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3214.451,
+   "end": 3235.975,
+   "text": "关于主动型计算机的。嗯，当你思考OpenAI的发展路线图和业务时，消费级设备是否…… 就像你们讨论的使命，即使你们精简了部分业务，仍有很多事情在进行。>> 我认为我们尚未可知。我的直觉是。 我们讨论过。我认为我们还不知道。我的直觉是……",
+   "audioFile": "audio-sam-sources-podcast/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3236.675,
+   "end": 3240.959,
+   "text": "出现全新计算机类型及一个历史上极为罕见的类别",
+   "audioFile": "audio-sam-sources-podcast/0135.wav"
+  },
+  {
+   "id": 136,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3241.659,
+   "end": 3244.165,
+   "text": "这种设备。但需要时间验证。",
+   "audioFile": "audio-sam-sources-podcast/0136.wav"
+  },
+  {
+   "id": 137,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3244.865,
+   "end": 3281.513,
+   "text": "现在人们如何看待OpenAI？几年后会如何被看待？非常简单，希望人们会热爱。 我们推向世界的产品。之前提到过的一些故事，但我想说的是，我成功创办了一家公司。我做到了。 为孩子举办了一场精彩的生日派对。我成功治愈了这种疾病。最近我遇到一个人。 曾协助设计针对其爱犬的信使RNA癌症疫苗，现已创办。 一家公司为其他人提供类似服务。我希望几年后这些故事与技术对人类的影响相比都显得微不足道",
+   "audioFile": "audio-sam-sources-podcast/0137.wav"
+  },
+  {
+   "id": 138,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3281.963,
+   "end": 3290.272,
+   "text": "当前AI领域的担忧，人们会说：\"这家公司每一步都做出了最负责任的决定，充分考虑了我们所有人的利益\"",
+   "audioFile": "audio-sam-sources-podcast/0138.wav"
+  },
+  {
+   "id": 139,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3290.972,
+   "end": 3304.39,
+   "text": "我很高兴他们发展顺利，因为他们对技术的管理非常得当。你也会看到其他公司采取了截然不同的策略。 我们在安全理念上始终如一，但承认错误时也愿意调整",
+   "audioFile": "audio-sam-sources-podcast/0139.wav"
+  },
+  {
+   "id": 140,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3305.09,
+   "end": 3325.662,
+   "text": "我们启动渐进式部署策略时曾遭到AI安全社区强烈反对，但回顾来看显然是正确的。 我很庆幸我们有勇气坚持信念，即使这些做法当时不受欢迎。 我们大部分时候都正确，犯错时也及时调整。我认为这是构建安全可靠系统的方式",
+   "audioFile": "audio-sam-sources-podcast/0140.wav"
+  },
+  {
+   "id": 141,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3326.362,
+   "end": 3345.517,
+   "text": "希望继续这么做，也希望人们能认识到这一点。你们正在构建超级智能，我很好奇你个人如何准备。 你如何看待你们构建的技术突破后世界会是什么样子？我认为那将惊人地相似于现在。 与家人共处、恋爱、争吵、做各种事情",
+   "audioFile": "audio-sam-sources-podcast/0141.wav"
+  },
+  {
+   "id": 142,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3346.217,
+   "end": 3354.087,
+   "text": "发展兴趣爱好、获得娱乐体验、拥有丰富人性化的经历、产生压力和焦虑、互相创造价值",
+   "audioFile": "audio-sam-sources-podcast/0142.wav"
+  },
+  {
+   "id": 143,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3354.787,
+   "end": 3388.517,
+   "text": "玩各种奇特的游戏和。 非常关心他人。我希望它不会太不同。我希望。 它能带来更丰富的人类体验。人们拥有更多。 自主权、自由、财富，能够。 做更多事情，保持健康，能够。 集体定义未来，使世界更快变好，但人类体验始终保持人性特质。 展望未来12个月，OpenAI面临的最大风险是什么？我认为是安全措施出现偏差。 我认为12个月后我们可能已拥有极其强大的模型",
+   "audioFile": "audio-sam-sources-podcast/0143.wav"
+  },
+  {
+   "id": 144,
+   "speaker": "A",
+   "speakerName": "Sources 主持人",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-A.jpg",
+   "start": 3389.217,
+   "end": 3406.068,
+   "text": "如果能在实现超级智能的过渡中，建立好让人人获益的机制。 确保权力不会过度集中于少数人。 集中于如何在整个领域实现安全。 如何让人们在未来感到对改善自身生活有充分掌控，这将是一次非凡的成功。 山姆·奥尔特曼，谢谢",
+   "audioFile": "audio-sam-sources-podcast/0144.wav"
+  },
+  {
+   "id": 145,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-sources-podcast/speaker-B.jpg",
+   "start": 3406.768,
+   "end": 3442.873,
+   "text": "Granola是我试过的最佳AI记事本，可在视频通话、手机或苹果手表上使用。 立即试用格兰纳拉，结账用来源码享3个月优惠。银行业应如现代软件般便捷。获取。 金融业务应像现代软件一样便捷，一站式获取所需服务。 详情请访问Framer官网，该平台是原生AI网站构建器，助您快速构建而不失控制权。 享受30%折扣，适用规则和限制条款。Jiralassin是团队与智能体共享上下文的工作平台。",
+   "audioFile": "audio-sam-sources-podcast/0145.wav"
+  }
+ ]
+}

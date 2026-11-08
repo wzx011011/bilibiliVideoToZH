@@ -1,0 +1,184 @@
+[
+ {
+  "out": "work/broll/sy-02-erlitou/s3_2.png",
+  "seed": 1012,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:成排青铜礼器:爵斝鼎在案架上陈列,铜绿温润,礼器之美,权力的语言。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s3_3.png",
+  "seed": 1013,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:贵族宴飨:厅堂中青铜爵斟满,乐师击鼓,贵族举爵相敬,礼制化的宴饮场景。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s3_bg.png",
+  "seed": 1064,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s4_1.png",
+  "seed": 1016,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:绿松石龙特写构图:七十厘米长龙横贯画面,龙眼白玉温润,片片鳞甲微光,神秘图腾之美。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s4_2.png",
+  "seed": 1017,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:龙与墓主人:贵族遗体上龙形器安放于肩,随葬铜铃与漆器,幽暗墓室中的仪式感。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s4_3.png",
+  "seed": 1018,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:上古巫师怀抱龙形器起舞:篝火旁,图腾高举,族众跪拜,龙信仰的起源之夜。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s4_bg.png",
+  "seed": 1069,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s5_1.png",
+  "seed": 1021,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:双轮车特写:木轮深深压出车辙,驭手牵牛前行,路面辙迹蜿蜒,早期车辆的实证感。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s5_2.png",
+  "seed": 1022,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:大道旁的驿站场景:旅人歇脚饮水,车辆检修,货物码放,长途交通的中转生活。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s5_3.png",
+  "seed": 1023,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:雨天大道:泥泞路面车辙积水成镜,行人踏泥而行,远处宫城朦胧,真实的古代城市日常。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s5_bg.png",
+  "seed": 1074,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s6_1.png",
+  "seed": 1026,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:文献与地层对照:一侧竹简古籍,一侧考古地层剖面,中间一枚空白甲骨,无声的悬案意象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s6_2.png",
+  "seed": 1027,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:深夜书房:老考古学家独对孤灯,墙上挂满二里头照片,烟灰缸满溢,半个世纪的执念。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s6_3.png",
+  "seed": 1028,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:挖掘现场的两代考古人:白发导师与年轻队员在探方边交接手铲,薪火相传。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s6_bg.png",
+  "seed": 1079,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s7_1.png",
+  "seed": 1031,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:四方来朝:各地使团衣着各异,携方物沿大道而来,王都宫门迎接,天下之中的气派。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s7_2.png",
+  "seed": 1032,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:边境聚落中的二里头风格陶爵:远方族群首领把玩来自王都的礼器,艳羡与仰望。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s7_3.png",
+  "seed": 1033,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:地图意象:中原大地如棋盘,王都如枢纽,商路如脉络延伸至燕山长江,最早的中国版图感。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s7_bg.png",
+  "seed": 1084,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s8_1.png",
+  "seed": 1036,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:夕阳下的二里头遗址公园:今人漫步于复原的宫殿基址间,古今重叠,文明长河。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s8_2.png",
+  "seed": 1037,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:博物馆展柜:绿松石龙与青铜爵并列展出,观众驻足,灯光下的国宝无言。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s8_3.png",
+  "seed": 1038,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:星空下的夯土台基:三千七百年的地基轮廓在星光中沉默,与银河对话,历史纵深。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s8_bg.png",
+  "seed": 1089,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s9_0.png",
+  "seed": 1090,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:首次踏勘:老人俯身拾起陶片端详,镜片后目光如炬,夕阳镀金,历史性的一刻。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s9_1.png",
+  "seed": 1091,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国夏商之际(约三千七百年前,洛河平原的早期王都)。场景:旧照意象:黑白年代感画面,考察队推自行车站在二里头村口合影,一个时代的考古开创者。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-02-erlitou/s9_bg.png",
+  "seed": 1092,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ }
+]

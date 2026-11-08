@@ -1,0 +1,95 @@
+{
+ "title": "Sam Altman 谈 GPT-5 · 中文播客(预览)",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-A.jpg",
+   "start": 0.0,
+   "end": 14.667,
+   "text": "此刻，这一切正发生在你我身边。本期节目，我将与Sam Altman穿越至他所构建的未来。 看看未来会是什么样子，让我们真正理解即将到来的变化。欢迎收听《重大对话》。",
+   "audioFile": "audio-samgpt5-mini/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-B.jpg",
+   "start": 15.367,
+   "end": 17.984,
+   "text": "感谢你参与这次对话。当然。",
+   "audioFile": "audio-samgpt5-mini/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-A.jpg",
+   "start": 18.684,
+   "end": 77.026,
+   "text": "在深入之前，我想告诉你我的目标。我不会问你关于估值、AI人才争夺战或融资之类的问题。这些内容其他地方已有详尽讨论。 我们节目的主要目标是探讨如何利用科学和技术让未来变得更好。 我们之所以这么做，是因为我们坚信当人们看到更美好的未来时，就能参与其中共同建设。 我的目标是尽最大努力与你们一起穿越到未来，看看你们正在构建的未来景象。 精彩。令人惊叹。先从你刚宣布的内容开始。你最近出人意料地表示，GPT-4将是你们未来再也无需使用的最不智能模型。 但GPT-4在学术能力评估测试、法学院入学考试和研究生入学考试中已超越90%的人类，还能通过编程考试、品酒师考试和医学执照考试。",
+   "audioFile": "audio-samgpt5-mini/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-B.jpg",
+   "start": 77.726,
+   "end": 140.866,
+   "text": "现在你刚推出了GPT-5。GPT-5能做哪些GPT-4做不到的事？首先重要的一点是，你可以拥有一个能完成上述所有惊人任务的AI系统。 它显然无法复制人类擅长的诸多能力，这让我开始思考SAT考试及其他评估方式的价值所在。 但如果你回到GPT-4发布那天，我们告诉你GPT-4在这些领域的表现，你可能会觉得这将对许多职业产生巨大影响，甚至带来一些负面效应。 你知道，这些你可能预测到的积极影响，至今尚未实现。 这些模型虽然在某些方面表现出色，但未能涵盖我们希望人们去做或关心的许多其他方面。 我怀疑GPT-5也会出现类似情况。人们将对它的能力感到震撼，它在许多方面表现非常出色。 随后他们会发现需要它完成更多任务。人们会用它来做各种令人惊叹的事情。 它将改变大量知识型工作，改变我们的学习和创造方式。",
+   "audioFile": "audio-samgpt5-mini/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-B.jpg",
+   "start": 141.316,
+   "end": 181.696,
+   "text": "但人类社会会随着工具进步，对更优的解决方案产生更高期待。 所以，我觉得这个模型在很多方面都很出色，但在其他方面也存在局限。 但令人惊叹的是，你口袋里装着一款软件，它能完成三分钟、五分钟甚至一小时的任务——这些可能是某个领域专家能胜任或可能难以应对的。 我认为人类历史上从未出现过技术进步如此迅速且显著的时期。 我们现在正亲历这一工具的诞生，并逐步适应。但若回到五到十年前，被告知这一切即将发生，我们大概率会表示怀疑。",
+   "audioFile": "audio-samgpt5-mini/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-A.jpg",
+   "start": 182.396,
+   "end": 189.822,
+   "text": "假设人们没看过新闻，你最兴奋的核心具体是什么？以及你提出警告的那些它可能无法做到的事。",
+   "audioFile": "audio-samgpt5-mini/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-B.jpg",
+   "start": 190.522,
+   "end": 250.224,
+   "text": "我最兴奋的是，这是首个让我能提出复杂科学或技术问题并获得较佳答案的模型。 我来举个有趣的例子。实际上，我上初中时，大概是九年级，得到了一台TI-83计算器，这是一款老式的图形计算器。 我花了很多时间制作了一款叫贪吃蛇的游戏。没错，当时在学校里，这款游戏在孩子们中非常流行。 当时我心想，等完成时大概会很痛苦，因为在TI-83上编程极其繁琐耗时，调试过程特别困难。 后来我一时兴起，用早期的GPT-5版本尝试了一下，心想它是否能生成类似TI-83风格的贪吃蛇游戏。结果它仅用七秒就完美完成了。 接着我思考，我现在的11岁自己会认为这很酷吗？或者会不会觉得少了什么？ 我愣了三秒，纠结这究竟是好事还是坏事。但很快我就意识到，现在反而怀念这款游戏了。我有个疯狂的新功能点子，得赶紧记下来。",
+   "audioFile": "audio-samgpt5-mini/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-B.jpg",
+   "start": 250.674,
+   "end": 301.545,
+   "text": "它实现了。游戏实时更新，心想其实希望如此。其实想这么做。 我当时有种特别的感觉，这种体验让我想起11岁时再次编程的时光，那时我只想尝试，现在我有了这个想法。 但完成速度却如此之快，我能够即时表达想法、尝试新事物并实时互动。 我突然意识到，我曾一度担心孩子们会错过这种原始的、笨拙的学习编程过程。 但现在我为他们感到兴奋，因为这些新工具将让人们以惊人的速度将创意变为现实。 因此，GPT-5不仅能回答各种难题，还能按需即时生成软件。 我认为这将是GPT-5时代的一个决定性因素，而这一点在GPT-4时代并不存在。",
+   "audioFile": "audio-samgpt5-mini/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5-mini/speaker-A.jpg",
+   "start": 302.245,
+   "end": 305.92,
+   "text": "谈到这个概念时，我想到举重中的持续张力时间。",
+   "audioFile": "audio-samgpt5-mini/0008.wav"
+  }
+ ]
+}

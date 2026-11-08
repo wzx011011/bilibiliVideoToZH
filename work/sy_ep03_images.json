@@ -1,0 +1,303 @@
+[
+ {
+  "out": "work/broll/sy-03-jiaguwen/s1_0.png",
+  "seed": 2000,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:黄昏洹水:商王车驾渡河,部族车队绵延,盘庚迁殷的宏大迁徙,暮色苍茫。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s1_1.png",
+  "seed": 2001,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:殷都奠基:夯土台基上立柱,工匠聚集,新城轮廓初现,百废待兴。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s1_2.png",
+  "seed": 2002,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:宫廷议迁:老臣与新贵争论,盘庚居中决断,烛火映照凝重面孔。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s1_3.png",
+  "seed": 2003,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:洹水两岸新都全景:宫室连绵,作坊烟火,居民区扩展,扎根的气象。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s1_bg.png",
+  "seed": 2054,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s2_0.png",
+  "seed": 2005,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:殷墟宫殿区复现:重檐大殿,宗庙巍峨,祭司出入,王都威仪。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s2_1.png",
+  "seed": 2006,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:作坊区百业:铸铜炉火、制骨作坊、玉器雕琢,工匠川流,工业城区繁华。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s2_2.png",
+  "seed": 2007,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:王陵营建:墓道深掘,椁室宏大,殉葬队列肃穆,王权的身后事。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s2_3.png",
+  "seed": 2008,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:洹水市井:货郎担担,陶市交易,孩童嬉闹,十万人口大都会日常。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s2_bg.png",
+  "seed": 2059,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s3_0.png",
+  "seed": 2010,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:贞人占卜:商王与贞人围炉灼龟,裂纹乍现,青烟袅袅,问天的仪式。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s3_1.png",
+  "seed": 2011,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:刻辞现场:贞人执刀在甲骨上细刻卜辞,神态虔诚,记录天意。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s3_2.png",
+  "seed": 2012,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:卜辞意象:成堆甲骨藏于窖穴,像国家档案库层层码放。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s3_3.png",
+  "seed": 2013,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:商王夜梦:王榻惊梦,侍者掌灯,次日晨占梦的宫廷场景。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s3_bg.png",
+  "seed": 2064,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s4_0.png",
+  "seed": 2015,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:1899年老药铺:老先生手持龙骨对光细看,药戥与药柜之间,历史转折的静默瞬间。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s4_1.png",
+  "seed": 2016,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:书房辨认:王懿荣铺纸摹写甲骨刻痕,烛光放大镜,发现之夜的兴奋。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s4_2.png",
+  "seed": 2017,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:古董市场:商贾兜售龙骨,学者们争相抢购,金石界震动。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s4_3.png",
+  "seed": 2018,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:拓片题跋:甲骨拓本装裱,学人传阅题字,一门新学问诞生。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s4_bg.png",
+  "seed": 2069,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s5_0.png",
+  "seed": 2020,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:1976年考古现场:女考古学家执铲站在探方边坚持加深,队员半信半疑。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s5_1.png",
+  "seed": 2021,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:墓室开启:漆棺朱痕,随葬玉器铜器铺陈,千年女将安卧。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s5_2.png",
+  "seed": 2022,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:妇好戎装想象:披甲执钺的女将在阵前,战车列队,飒爽英姿。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s5_3.png",
+  "seed": 2023,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:武丁与妇好:王与后在殿中对话,情深意重,甲骨卜辞问其生育疾病。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s5_bg.png",
+  "seed": 2074,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s6_0.png",
+  "seed": 2025,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:铸鼎场景:多坩埚铜液齐浇巨鼎,火光冲天,百工号子,国之重器诞生。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s6_1.png",
+  "seed": 2026,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:后母戊鼎陈列:巨鼎巍峨,纹饰狞厉之美,观者仰视。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s6_2.png",
+  "seed": 2027,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:商王祭典:大鼎陈列宗庙,牺牲陈案,祭司祝祷,国祭的庄严。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s6_3.png",
+  "seed": 2028,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:出土搬运:1939年村民夜里掘出巨鼎,木质支架与绳索,乡野护宝。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s6_bg.png",
+  "seed": 2079,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s7_0.png",
+  "seed": 2030,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:宗庙大祭:列祖列宗神主牌位,牺牲成列,烟火缭绕,商人敬祖的隆重。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s7_1.png",
+  "seed": 2031,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:神权意象:上帝与祖先居于云端俯瞰,人间祭祀如林,天人沟通的想象。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s7_2.png",
+  "seed": 2032,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:疲惫的殷都:宫殿依旧但色彩转灰,朝臣倦容,民力凋敝,暮气渐生。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s7_3.png",
+  "seed": 2033,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:末代君臣:纣王高坐,臣子忧愤进谏,殿柱阴影重重,危机四伏。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s7_bg.png",
+  "seed": 2084,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s8_0.png",
+  "seed": 2035,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:牧野战场:周军战车冲锋,商军倒戈溃散,朝歌城方向烟起,鼎革时刻。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s8_1.png",
+  "seed": 2036,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:鹿台火起:纣王自焚,火光冲天,一座王朝的落幕,悲壮苍凉。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s8_2.png",
+  "seed": 2037,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:周师入殷:武王车驾入城,安抚殷民,礼葬忠臣,新秩序的温和开场。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s8_3.png",
+  "seed": 2038,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:甲骨档案封存:窖穴中甲骨沉默入土,等待三千年后重见天日。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s8_bg.png",
+  "seed": 2089,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s9_0.png",
+  "seed": 2090,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:商王牙疼的日常:王按腮蹙眉,贞人疾步赶来,侍从捧龟甲,如临大敌。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s9_1.png",
+  "seed": 2091,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以青铜绿、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国晚商时代(三千三百年前,洹水边的殷都)。场景:占牙卜辞:灼龟裂纹,贞人俯身解读,王与后紧张围观,王齿唯有害乎。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-03-jiaguwen/s9_bg.png",
+  "seed": 2099,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ }
+]

@@ -1,0 +1,1085 @@
+{
+ "title": "OpenAI 设计负责人谈 AI 界面 · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 0.0,
+   "end": 34.668,
+   "text": "今天，我的嘉宾是伊恩·西尔伯，OpenAI产品设计负责人，任职三年，在AI领域已算漫长。 此前在阿特费克特公司任职，这是伊格拉姆创始人开发的新闻应用，我非常喜欢。此前在伊格拉姆任职八年。 当前设计领域正处于非常有趣的阶段，伊恩对产品设计未来的发展有独特且深刻的见解。 他对日常AI工具的未来形态有独到见解。感谢萨莱奥和乔尔·洛文斯坦提供话题建议。",
+   "audioFile": "audio-ian-silber-openai/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 35.118,
+   "end": 66.288,
+   "text": "开始前访问Lenny'sProductPass.com，订阅者可免费获取全球最前沿AI产品一年。 现在有请伊恩·西尔伯。 伊恩，非常感谢你接受访谈。我非常期待这次对话，感谢你的参与，我更加兴奋。 过去两年我一直在做科技从业者情绪调研。 这是同类最大规模的调研，我们调查科技从业者对职业、工作、角色的感受，特别是过去一年AI兴起带来的影响。",
+   "audioFile": "audio-ian-silber-openai/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 66.738,
+   "end": 94.586,
+   "text": "令人意外的是，设计师和用户体验研究员在所有维度都是最不满意的群体。 他们最感到压力最大、焦虑最严重、最不乐观、最担忧、最疲惫。 他们也是最不愿意向新入行者推荐自己职业的群体。 我很好奇你在设计界是否也观察到类似现象。如果确实如此，你认为背后的原因是什么？首先，这是一项令人印象深刻的调查。",
+   "audioFile": "audio-ian-silber-openai/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 95.286,
+   "end": 123.255,
+   "text": "这对整个行业来说都是非常有价值的信息，我认为我们需要深入分析。坦白说，我确实看到了不同的声音。 我认为在设计领域，大多数设计师都表现出乐观和兴奋的情绪。 幸运的是，在我的观察中确实能看到很多这样的积极案例。 但我完全理解为什么有些人会感到不确定，对吧？因为关于设计师角色是否会发生变化的讨论非常多。",
+   "audioFile": "audio-ian-silber-openai/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 123.705,
+   "end": 154.755,
+   "text": "我的期望是否应该不同？我是否需要做X、Y、Z？我是否需要每天发布代码？ 比如那些接受过传统培训的设计师，现在可能会感到天哪，我需要彻底改变一切。 对我来说，这种不确定性我完全理解，对吧？因为作为工程师，我认为人们已经经历了这种转变。 比如我们看到工程师的工作方式完全不同。此外，我在团队中经常发现，当我们进行内部类似调查时，这个问题经常被提及。",
+   "audioFile": "audio-ian-silber-openai/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 155.205,
+   "end": 184.063,
+   "text": "其中一个主要问题是，我们看到工程师的。 生产力提升了10倍甚至100倍，但我们的设计团队却没有，对吧？因为设计过程仍然需要时间。 设计过程中有时需要尝试很多方案并舍弃，而与编码代理合作时，你只需让它完成二进制任务，现在它通常能很好地完成。 设计过程仍然非常混乱且灵活，你可能有一个好主意，尝试后却发现效果不佳，再试一次还是不尽如人意",
+   "audioFile": "audio-ian-silber-openai/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 184.513,
+   "end": 213.856,
+   "text": "将其交给用户或获取内部反馈后，结果可能仍然错误，你仍需经历这个虽然繁琐且混乱但充满乐趣的过程。 但这一过程并未消失，虽然现在能更快地产生更多想法，但完整的反馈循环仍是必需的。 在大型公司中，协调众多人员参与仍存在大量管理成本。 关键问题是，目前我们对设计师的职责仍不明确。 这种模糊性可能导致一些人的担忧或不安",
+   "audioFile": "audio-ian-silber-openai/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 214.306,
+   "end": 240.729,
+   "text": "但另一方面，我看到设计师在OpenAI这样的实验性公司有很多机会。 我们以研究为核心，将公司视为研究实验室，并完全接受这一理念。 这正是我后来真正学到并热爱OpenAI的地方——它起源于研究实验室，这种基因已深深融入每个环节。 作为设计师，我们寻找的并非AI背景的人，而是对工具及其应用充满好奇的人",
+   "audioFile": "audio-ian-silber-openai/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 241.179,
+   "end": 265.948,
+   "text": "我们发现，只要支持这种探索热情，人们就会感到压力减轻。 关键不在于改变工作方式，而是鼓励探索。 当我们完成这些工作后，我分别与公司内资深设计师和初级设计师交流时，他们都感到非常兴奋，因为。 我之前特意找了一些人征求意见，他们普遍认为设计师现在拥有更多发挥创造力和表达自我的空间",
+   "audioFile": "audio-ian-silber-openai/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 266.398,
+   "end": 297.122,
+   "text": "可以大胆尝试失败的创意并快速舍弃，这种模式让团队能高效探索各种方案并实现创新突破。 从团队表现来看，创意质量明显提升，思维深度随着工具使用频率增加而持续增强。 那些开始接受AI工具的设计师们，正在感受到前所未有的创作自主权和影响力。 设计师现在拥有更强能力，产生深远影响。本集由WorkOS赞助",
+   "audioFile": "audio-ian-silber-openai/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 297.822,
+   "end": 327.336,
+   "text": "OpenAI、Anthropic等数百家获奖公司有何共同点？它们都由WorkOS支持。 当您为企业级产品开发时，是否经历过集成单点登录、数据审计等企业强制要求的痛苦过程。 WorkOS通过现代开发者平台，将障碍转化为即插即用API，专为企业级SaaS打造。 我投资的初创公司一旦拓展上市场，最终都与WorkOS合作，因它们最优秀。",
+   "audioFile": "audio-ian-silber-openai/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 327.786,
+   "end": 368.802,
+   "text": "无论您是寻求首个企业客户的种子轮初创公司，还是需要全球化扩展的独角兽企业。 WorkOS是企业级功能的最快捷方案，堪称企业服务领域的标杆。访问WorkOS.com或联系Slack团队，工程师随时解答问题。 WorkOS通过优质接口、全面文档和流畅开发体验，助您加快开发。访问WorkOS官网，让应用快速具备企业级功能。 我希望借此对话帮助那些正面临困境的人。正如你所说，我们在调查中发现，约有一半受访者表示现状令人沮丧且进展不顺。",
+   "audioFile": "audio-ian-silber-openai/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 369.252,
+   "end": 400.538,
+   "text": "而另一半受访者却正处于职业生涯最精彩阶段，充满乐趣和乐观，对未来充满期待。 正如你所说，感到工作被AI增强的群体，最强烈的相关性在于他们认为AI让自己变得更优秀。 正如你描述的工程师群体，他们现在真切感受到这一点。天哪，我竟能完成这么多事情。 那些表现优异者普遍感到被AI增强，充满好奇心，有时间探索，认为自己更具创造力。",
+   "audioFile": "audio-ian-silber-openai/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 400.988,
+   "end": 409.297,
+   "text": "是否还有其他类似特征？比如那些真正享受工作的人，他们的行为模式是否能为处境艰难者提供借鉴？",
+   "audioFile": "audio-ian-silber-openai/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 409.997,
+   "end": 439.082,
+   "text": "他们会在每个环节使用AI辅助。我们设计师社区也在共同尝试这些方法。 如果能找到这样的协作方式，整个社区都应该更重视如何互相帮助。 但我觉得学习不同的工作方式很重要。比如，我有了这个想法。 不妨直接输入代码库或云端工具，或者交给AI代理协助思考。 让AI帮助你快速原型设计，尝试不同的工作方式。这未必就是唯一正确的方式。",
+   "audioFile": "audio-ian-silber-openai/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 439.532,
+   "end": 471.024,
+   "text": "我认为我们发现，真正适应这种变化的人，都是那些具备适应能力的人。虽然‘适应力’这个词现在被频繁提及，但它的价值确实不容忽视。 关键在于意识到这些技术变化得非常快，昨天行不通的方法，今天可能就有效了。 事实上，仅在六个月之内，整个行业就已经发生了巨大转变。 去年年底我休产假期间，还参与了一些个人项目。 我尝试了一些代码代理工具，但总是遇到各种问题。",
+   "audioFile": "audio-ian-silber-openai/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 471.474,
+   "end": 507.784,
+   "text": "一个月后代码库发布，我再次尝试时发现，哦天哪，现在一切都能顺利运行了。我认为这彻底改变了设计流程，因为现在只要你有想法，就能立即实现。 就可以直接把它输入系统进行测试。归根结底，关键在于不要害怕尝试。 我认为我们目前还处于这场变革的早期阶段，整个行业才刚刚开始进入进化初期。 虽然感觉变化已经很大，但其实我们才刚刚开始这场转型。 但好消息是，无论你是刚入行还是资深设计师，",
+   "audioFile": "audio-ian-silber-openai/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 508.234,
+   "end": 534.061,
+   "text": "无论你是否真正做过设计，只要对设计感兴趣，我们都在边探索边学习。 没有人能给出设计流程的完美答案，这需要所有人共同摸索前进。 今天认为有效的设计，未来很可能再次改变。 令人鼓舞的是，没人应该觉得自己现在落后。 如果你今天开始，实际上会比大多数人领先一步。关键在于如何创造出优秀的作品。",
+   "audioFile": "audio-ian-silber-openai/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 534.511,
+   "end": 555.675,
+   "text": "我们有大量机会改变工作方式，创造卓越成果。 今天认为前沿的技术，一年后可能显得过时。 我在开放广告公司工作了三年，一直在思考我们最初参与的项目。 记得曾演示过尚未发布的早期语音模式。 当时功能极不稳定，如今却已成为设计流程的核心工具。",
+   "audioFile": "audio-ian-silber-openai/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 556.125,
+   "end": 577.121,
+   "text": "我们同时使用这两项工具开发软件。总之，关键在于变化速度极快。 我们都在这个进程的早期阶段，没人真正掌握规律。 我认为这是历史上最适合设计师的时代。 我刚入行时正值青少年时期。 我当时觉得，学习新东西的时候，就像……我有点不知所措。",
+   "audioFile": "audio-ian-silber-openai/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 577.571,
+   "end": 609.002,
+   "text": "学习设计和编程，通过查看HTML网页源代码了解构建方式，这几乎是当时的学习方法。 比如像‘梦想编织者’这样的工具，当时确实非常实用且酷。 但若将这些工具与今天对比，如果现在刚入行设计领域，你会发现…… 现在只需几分钟就能将想法快速转化为可用版本，学习效率大幅提升。 设计表达变得前所未有的自由，我认为任何人都可以成为设计师。",
+   "audioFile": "audio-ian-silber-openai/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 609.452,
+   "end": 638.344,
+   "text": "随着越来越多软件和产品的诞生，设计的人文价值将愈发凸显。 我始终认为，拥有卓越设计能力的公司，才能在竞争中脱颖而出。 当所有人都能制作产品时，真正理解用户需求并创造愉悦体验的能力，将成为最重要的产品维度。 这种能力将成为人们评价产品最关键的指标之一。 那些能深刻理解用户并创造愉悦体验的产品，将在未来竞争中占据优势。",
+   "audioFile": "audio-ian-silber-openai/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 638.794,
+   "end": 662.335,
+   "text": "当人人皆可创造时，这种对用户理解的深度将成为产品最重要的评价维度。 我认为设计师的核心职责就是我们的本职工作。对吧。 而且我认为设计师现在拥有更多权力。 我跟一些朋友讨论过他们正在考虑。 创办公司时谈到设计与工程师的比例问题，初创公司可能情况完全不同。",
+   "audioFile": "audio-ian-silber-openai/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 662.785,
+   "end": 687.011,
+   "text": "可能像我见过的初创公司那样，一个设计师搭配十五个工程师。 但他们提出可能需要两名设计师加一名工程师，这名工程师要确保产品。 从工程角度看足够稳固，同时需要两名富有创造力的人负责产品构建。 因此我认为设计师正面临巨大的机遇。 我们内部看到越来越多设计师",
+   "audioFile": "audio-ian-silber-openai/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 687.461,
+   "end": 722.576,
+   "text": "被授权将创意概念转化为用户真正需要的产品。 解决客户的未满足需求，这就是设计师的职责。 也许越来越多的人开始认同自己是设计师，无论如何，我认为现在是设计师最好的时代。 沿着这个思路，当马克·安德森在播客上谈到时，他用一种非常有趣的方式描述了当前产品部门的状况。 他形容说，目前产品经理、工程师和设计师之间形成了三方对峙的局面。他们各自认为其他角色终将消失，最终胜利者只会是自己。",
+   "audioFile": "audio-ian-silber-openai/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 723.026,
+   "end": 765.522,
+   "text": "因此，那种大家互相指责的蜘蛛侠梗已经不那么常见了。我很好奇，因为我认为每个角色都有可能成为主导力量。 我完全同意你的看法，随着各种工具的推出，出现了大量产品上线的爆炸式增长。 现在有无数值得关注的事物，你本以为设计领域会成为脱颖而出的差异化机会。 但目前尚未看到设计招聘加速的迹象，正如你所说，设计师数量甚至还没达到工程师的两倍。你认为这种情况会改变吗？ 你认为为什么至今尚未出现这种变化？是否如你所说，目前还处于早期阶段，人们尚未意识到需要大量增加设计师？",
+   "audioFile": "audio-ian-silber-openai/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 765.972,
+   "end": 800.042,
+   "text": "或者更可能的是，工程师们开始更关注设计领域。我认为设计师的生产力正在显著提升。 这并不意味着设计师的产出能直接达到工程师十倍的水平。 但确实可以看到，设计师现在能够完成更多工作，不过。 我认为这是我们一直在思考并持续演进的方向。另外我还想谈谈产品经理、工程师和设计师之间的差异是否正在模糊。 我的观点是，它们确实正在融合。据我观察，这种重叠现象一直存在。",
+   "audioFile": "audio-ian-silber-openai/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 800.492,
+   "end": 826.09,
+   "text": "我见过一些设计师，他们既是优秀的产品经理，也能胜任设计工作。 也见过一些设计师，他们擅长打磨细节，像工程师一样精益求精。 但我觉得，这些单一职能的定义其实并不合理。 在大公司里，你必须建立明确的职级体系来组织团队。 但现实中，团队里的人往往具备不同优势，承担不同角色。",
+   "audioFile": "audio-ian-silber-openai/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 826.54,
+   "end": 848.505,
+   "text": "我一直认为这些职责划分本就模糊，现在更是越来越模糊了。 不过从大公司的角度来说，我认为仍然需要有人承担特定责任。 如果一个人既要设计，又要凝聚团队，还要协调公司资源。 比如产品经理的工作，同时还要负责设计和工程实现，这可能很难找到全能型人才。",
+   "audioFile": "audio-ian-silber-openai/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 848.955,
+   "end": 873.343,
+   "text": "因此我仍然认为，拥有优秀的项目经理很有价值。 他们能整合多个团队，明确问题方向。 还能协助资源调配，解决各种实际问题。 我认为这些角色仍然会具有价值，人们会专注于项目或产品构建的不同部分。 这并不意味着人们可以在不同角色间自由流动，但需要有人总体负责这些事务，或者有",
+   "audioFile": "audio-ian-silber-openai/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 873.793,
+   "end": 914.424,
+   "text": "一位工程师确保输出结果完全可靠，并且能够与整体系统有效衔接。 我完全同意。所以为了确认我理解正确，你是在说所有角色都在模糊化？也许我们都会成为全能的建造者，什么都做？ 你是在说这种情况不会发生？我想象的是产品设计与工程的韦恩图，它们在。 交汇，但你认为这些角色会保持独立。会有产品经理设计师工程师，但每个人都能承担更多其他角色。我认为这个观点正确。 我认为这并非绝对，因为创业公司的情况完全不同。",
+   "audioFile": "audio-ian-silber-openai/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 914.874,
+   "end": 937.388,
+   "text": "如果我现在要创业，我会雇佣最优秀的通才，他们能在不同领域灵活切换。 但可能这一直就是事实。但在大公司，我确实看到设计师需要。 一位产品经理帮助他们梳理思路。 完善他们的思维方式和工作流程，以及整体运作。 我的观点是，这些差异本质上是将人从流程中抽离的结果。",
+   "audioFile": "audio-ian-silber-openai/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 937.838,
+   "end": 973.942,
+   "text": "我认为要构建优秀的软件，需要扮演不同的角色。我认为这些角色将继续发挥重要作用。 那么问题来了，你认为AI会成为极好的产品设计师吗？有趣的是问你这个问题，因为一方面你可能认为。 比如，哦对，打开它，Chat GPT将无所不能。但作为设计负责人，很难说设计将完全由AI完成。我很好奇你的看法。 听起来很疯狂，但工程师们以前从未想过AI能像现在这样编写代码。所以你怎么看AI能发展到什么程度？",
+   "audioFile": "audio-ian-silber-openai/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 974.392,
+   "end": 1004.118,
+   "text": "也许可以这样理解，我认为AI现在已经是出色的产品设计师，事实上它已经非常优秀了。 它的优势在于每个人都能使用，它是一种任何人都能使用的工具，我认为它确实很好。 但这并不意味着它是最好的视觉设计师，或者在。 信息层级、排版，甚至用户体验和交互设计方面都最擅长。 它未必在这些方面最优秀。很难预测未来会怎样，正如我之前说的，三年间变化已经很大，",
+   "audioFile": "audio-ian-silber-openai/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1004.568,
+   "end": 1034.941,
+   "text": "它们会继续进步。但我们的思路是，我认为我们正在。 构建工具，帮助人们更富有创造力，做更多事，创造更多价值。 所以它已经是优秀的设计师，但需要你亲自掌握如何使用它，如何发挥它的最大潜力。 随着AI在产品设计领域变得越来越出色，您认为人类大脑在哪些方面仍将最具价值？我们还有哪些领域可以继续发挥作用？ 真正理解用户需求，以及人类反馈循环的作用",
+   "audioFile": "audio-ian-silber-openai/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1035.391,
+   "end": 1061.64,
+   "text": "观察人们使用产品并从中理解需求，以及发明新事物的能力。 还有纯粹的人类特质，比如独特的视角和判断。 比如有人创造这个产品时的立场和观点，我认为这种特质会越来越重要，设计师需要着重培养。 明确自己的立场：我在为谁设计？为什么要设计这个？ 当AI越来越强大时，如何进一步突破创新边界？",
+   "audioFile": "audio-ian-silber-openai/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1062.09,
+   "end": 1085.947,
+   "text": "这涉及我与代码产品负责人的对话，他问为何AI在设计上表现不佳。 那次对话后AI能力已有所提升，他提到优秀设计需要创造新事物。 如今最有趣的网站已趋于同质化，另外AI研究者本身并不擅长设计。 他们可能不了解如何训练模型才能真正做好设计，您认为需要什么突破？",
+   "audioFile": "audio-ian-silber-openai/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1086.397,
+   "end": 1112.478,
+   "text": "创新本身就很有趣，因为我们的所有工作都是在设计前所未有的事物。 如果你看看过去十年、二十年甚至更久以来出现的优秀产品，你会发现它们往往都开创了全新的交互方式。 突然之间，iPhone的多点触控设计开启全新交互方式，但当时毫无训练数据。 你必须努力理解这种新事物。而Instagram则积极拥抱这种类型。",
+   "audioFile": "audio-ian-silber-openai/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1112.928,
+   "end": 1130.071,
+   "text": "快拍是优秀设计案例，颠覆了传统沟通方式。 真正理解人们未被满足的需求，并以独特方式解决问题。 现在有了AI，我们要设计如何用语音与AI交互，或者如何让智能体帮你完成任务。 这些领域目前都缺乏先例可循。",
+   "audioFile": "audio-ian-silber-openai/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1130.521,
+   "end": 1146.029,
+   "text": "人类在评估什么是好设计方面有独特优势。 通过不断尝试和与用户共同学习来优化方案。 所有这些技术变化都发生得非常迅速。 我认为保持人类在设计闭环中的核心地位至关重要。 在招聘设计师时更要注重这种能力。",
+   "audioFile": "audio-ian-silber-openai/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1146.479,
+   "end": 1187.711,
+   "text": "如今，您在寻找什么方面有上升趋势？您认为在当今能够取得成功的设计者身上，哪些因素变得越来越重要，尤其是在初创公司，哪些方面则在下降？ 这可能得益于团队规模稍大，但小公司情况不同。 即使在初创公司或小型企业，我认为这一原则依然适用。我坚信应组建一支能力全面、具备多种优势的团队。 因此，我认为团队中需要有一定数量的通才，或者保持合适的通才与专才比例，这些通才能够胜任多种工作。 但我们也需要招聘顶尖的视觉设计师，或者拥有非常出色的品牌团队。",
+   "audioFile": "audio-ian-silber-openai/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1188.161,
+   "end": 1220.017,
+   "text": "这支品牌团队能帮助我们塑造品牌在产品内外的表达方式。 我们还需要优秀的原型设计师，或者那些能够深入思考产品设计的战略型人才。 我认为，组建这样多元化的团队，或者拥有那些对行业前沿趋势充满热情的人才，是非常重要的。 我还没有发现有哪位设计师能同时满足所有这些要求。 人们天生会对某些领域更感兴趣，而组建团队时接纳这种差异，实际上是一种优势。",
+   "audioFile": "audio-ian-silber-openai/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1220.467,
+   "end": 1250.087,
+   "text": "如果您有这个条件，这种多元化组合会带来巨大价值。那么，关于我们的招聘标准，我需要说明的是——。 我总是告诉应聘者，我们不期待您具备人工智能背景，但期待您对AI领域保持高度好奇心。 首先，我们需要具备快速上手并掌握使用方式的能力。 关键在于理解工具如何融入工作流程，以及如何通过工具让更多人高效使用它",
+   "audioFile": "audio-ian-silber-openai/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1250.537,
+   "end": 1266.098,
+   "text": "我们非常重视好奇心这一特质。 原型设计始终是我职业生涯中重视的环节。 如今原型设计已变得越来越普及，这也是我们面试时特别看重的素质。 对技术发展方向保持独立见解非常重要",
+   "audioFile": "audio-ian-silber-openai/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1266.548,
+   "end": 1285.816,
+   "text": "系统化思维能力正变得越来越关键。 在我们构建超级智能的领域。 我们正在打造具备多项能力的超级智能。 需要思考如何构建可相互支撑的基础模块。 诺顿早期通过构建基础模块，实现了组件化组合，使各部分可灵活组合。",
+   "audioFile": "audio-ian-silber-openai/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1286.266,
+   "end": 1309.8,
+   "text": "我们不希望重复开发孤立的封闭体验。 我们希望构建能够相互叠加的系统，让用户在使用产品时感受到整体统一、简洁的体验。 模型能够整合这些元素，这种深入理解系统并进行系统性思考的能力变得越来越重要。 这已经是连续第五次播客提到系统思维，这种能力正变得越来越受关注。",
+   "audioFile": "audio-ian-silber-openai/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1310.25,
+   "end": 1340.509,
+   "text": "这实在太有趣了，我真需要一张系统思维的宾果卡，但这也完全合乎逻辑。 从设计师视角来看，这种趋势尤其合理。目前设计师感到压力和挫败的原因，正是设计时间被大幅压缩了。 传统设计流程正在加速，工程师每天要提交5000个代码变更。因此构建模块化设计系统语言的平台，对大家来说至关重要。 这确实非常困难，但确实如此，这种说法听起来有些滑稽。",
+   "audioFile": "audio-ian-silber-openai/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1340.959,
+   "end": 1374.141,
+   "text": "我们曾多次讨论过，我的建议始终是：少做些。 如果不需要重新设计，就不要设计。也许已有现成的系统组件可供使用，或者根本不需要这个功能。 实际上我们只需要对现有功能进行扩展，我认为这是非常重要的。 这需要突破当前工作的边界，从全局视角思考问题，这种能力正变得越来越关键。 速度的提升无疑是当前最重要的因素，这种趋势确实预示着设计领域的重大变革。",
+   "audioFile": "audio-ian-silber-openai/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1374.591,
+   "end": 1414.991,
+   "text": "以前做过播客，Jenny当时是设计俱乐部负责人，她谈到这个话题，让很多人意外。 传统的产品设计流程是先做原型、模拟测试、用户调研，然后迭代优化。确认无误后交给工程团队开发，再迭代最终上线。 但现在根本没有时间这么做了。在她看来，设计师的角色应该转向宏观规划，引导团队朝正确方向前进。这种转变有共鸣吗？ 对设计师来说，这种变化有多大？我认为我们百分之百采用这种方式，具体情况因项目而异。 对我们来说，这取决于你所处的阶段，",
+   "audioFile": "audio-ian-silber-openai/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1415.441,
+   "end": 1441.653,
+   "text": "比如处于研发流程的哪个环节，或者产品开发的成熟度。 在ChatGPT的某些功能上，我们会投入大量时间反复尝试，测试过上千种方案，最终只上线了一个。 比如那些每天都在变化的编曲功能，我们尝试过很多方案但大多被舍弃。 在ChatGPT的很多功能模块上，我们都会采取这种试错方式。 还有其他类似Codex的项目，但我不确定。",
+   "audioFile": "audio-ian-silber-openai/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1442.103,
+   "end": 1476.686,
+   "text": "超级应用就是一个典型案例，我们倾向于快速尝试各种方案。我们非常重视公开开发这种工作方式。 当你逐渐适应这种模式后，会发现能快速获得内外部的即时反馈，这种体验其实非常令人满足。 但确实，技术发展速度非常快，这取决于具体情况，对吧？ 正如我之前说的，某些方面我们非常注重细节，会进行测试、A/B测试和用户调研。 通过不断迭代优化产品，而有些方面则采取大胆尝试并快速学习的策略",
+   "audioFile": "audio-ian-silber-openai/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1477.136,
+   "end": 1498.025,
+   "text": "但说实话，我认为最关键的是要接受技术可能在一个月内发生巨变。 比如某些交互方式或使用场景可能突然变得不再需要。 或者突然需要全新的功能，又或者延迟特性发生改变。 当这些能力或智能水平发生改变时，必须迅速调整应对策略",
+   "audioFile": "audio-ian-silber-openai/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1498.475,
+   "end": 1517.821,
+   "text": "在产品成型前要保持灵活，等技术趋于稳定后再精细化打磨。 所以我们正在深入思考如何让ChatGPT深度融入个人生活。 思考这款应用应该呈现出怎样的使用体验。 这不是可以一蹴而就的设计，我们正在尝试多种方案",
+   "audioFile": "audio-ian-silber-openai/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1518.271,
+   "end": 1553.626,
+   "text": "我们通过白板讨论、在菲格玛进行设计并制作原型。 我们可能会在产品上线前就尝试各种不同的想法，甚至内部使用。不过，这可能是个更大的项目，对吧？ 还有些事情，我们能在四小时内就将想法变成产品。这都合情合理。 我听到的意思是，要选择重点发力，把设计资源集中在那些持久不变的环节上。完全正确。 但很难判断哪些是持久不变的。本集由默丘里赞助，拥有30万创业者用户。",
+   "audioFile": "audio-ian-silber-openai/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 1554.326,
+   "end": 1587.228,
+   "text": "现在有了命令功能，我作为Mercury的客户已用六年，从未想过离开。 Mercury是产品人而非银行家打造的银行，使用更便捷。 甚至让发发票、转账、为团队成员设置虚拟卡变得有趣。 你的银行有接口、原生终端命令行或AI就绪的主控服务器吗？我想没有。 他们刚推出指令功能，集成于水星的对话式界面，充当财务操作员。 我通过转账功能分析支出类别和现金流，找出主要消费领域。",
+   "audioFile": "audio-ian-silber-openai/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 1587.678,
+   "end": 1627.153,
+   "text": "今天我用它查询了过去一年来自某位赞助商的收入，只用问：'过去一年从X那里赚了多少钱？'十秒后就得到答案。 这太酷了！访问水星官网，几分钟在线申请。水星是金融科技公司，非联邦存款保险公司认证银行。 选择集团和列NA成员提供的银行服务由联邦存款保险承保。我问了很多人，了解你后该聊什么。 而乔尔·洛文斯坦恰好是安特罗皮克设计部门负责人，他也是你的好朋友，这让我很欣喜。 他说他认为你工作中最难的部分，就是平衡",
+   "audioFile": "audio-ian-silber-openai/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 1627.603,
+   "end": 1638.082,
+   "text": "现有数亿ChatGPT月活跃用户的需求，与创新、推进、迭代和发明的需求。所以我想知道你是怎么思考这个问题的。",
+   "audioFile": "audio-ian-silber-openai/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1638.782,
+   "end": 1665.225,
+   "text": "如何在兼顾双方需求的前提下找到平衡？这是个好问题，也是我们工作方式中特别有趣的部分。 我认为我们的用户群体差异非常大，这是我从未经历过的广泛用户群体。 在Instagram工作八年，当时用户可能有十亿，但具体数字不确定。 我们曾考虑过创作者和有特殊需求的大账户，但远不及现在这种多样性。",
+   "audioFile": "audio-ian-silber-openai/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1665.675,
+   "end": 1687.593,
+   "text": "比如有人用它来想今晚吃什么菜的配方，。 或者头脑风暴下一次理发的造型。 还有人用它来彻底改变自己的农业方式，。 比如在日本帮助自动化农场经营。这真是覆盖范围最广的用户光谱。 总体而言，我们观察到一个现象，即我们相信这种能力冗余的概念。",
+   "audioFile": "audio-ian-silber-openai/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1688.043,
+   "end": 1711.262,
+   "text": "产品中绝大多数用户只能获得瓶中真正价值的一小部分。 这未必是坏事，他们仍然获得了大量价值。 但我们始终坚持为多数人打造极其简洁流畅的体验。 然后我们会把所有前沿技术都放在那里。 我们也会确保这些技术对真正关注的人足够易用。挑战在于避免过度堆砌。",
+   "audioFile": "audio-ian-silber-openai/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1711.712,
+   "end": 1740.097,
+   "text": "避免把人们可能不理解的东西推给十亿用户。但通常我们可以在早期与真正关注的人群进行实验。 我们有桌面应用和代码库。现在ChatGPT的工作正在触达更广泛的用户群体，这让我们非常兴奋。 最终我们希望实现真正面向数十亿用户的产品。 当用户无需切换模式或进行任何操作时。我们深知最终必须将这些功能整合到核心体验中。",
+   "audioFile": "audio-ian-silber-openai/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1740.547,
+   "end": 1773.798,
+   "text": "从每天使用免费版本的用户到支付数百美元的用户，需要平衡各种需求。 作为设计师，这确实增加了复杂度，必须对各类用户保持同理心。 这确实让事情变得有趣。你关于ChatGPT和Codex使用范围的讨论令人震撼，我之前从未这样思考过。 有没有产品能像它这样覆盖如此广泛的应用场景？从手指上的皮疹到组建销售团队，跨度之大令人惊讶。",
+   "audioFile": "audio-ian-silber-openai/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1774.248,
+   "end": 1804.906,
+   "text": "这让设计变得异常困难。我们一直在思考一个核心挑战——空白盒问题。这个概念大家经常讨论。 人们总在问：聊天界面是否是终极前沿？它本质上就是一个升级版的终端。这种批评观点值得深思。 那么，如何设计一个能灵活适配各种场景的产品？ 比如有人来体验图像生成，或出于兴趣。 打造这种高度可适应的交互界面，是当前非常有趣的设计难题。",
+   "audioFile": "audio-ian-silber-openai/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1805.356,
+   "end": 1835.911,
+   "text": "这种可变形的特性使它成为一片未开垦的领域。 它能呈现如此多样的功能形态，如何有效展示这些特性是个挑战。 我们特别关注新手用户，那些初次接触该产品的体验者。 我们需要帮助他们理解这个工具如何为生活或工作带来价值。 无论他们是以何种身份使用这个产品，都要能清晰传达其价值。 我们还希望让那些每天使用这款工具的用户真正发挥其作为核心工作工具的潜力，而不是成为障碍。",
+   "audioFile": "audio-ian-silber-openai/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1836.361,
+   "end": 1868.712,
+   "text": "因此，我们需要深入思考如何设计覆盖这一广泛需求谱系的产品。毕竟，这个世界本就充满各种光谱。 前首席产品官凯文·惠尔在播客中提到，人们常贬低这种想法，认为它就像个聊天框。 为什么它从未改变过？尽管已经进化，但本质上仍像个聊天机器人。他指出，真正优秀的界面应该具备广泛智能光谱。 实际上，人类交流对象的智商跨度极大，从低到高无所不包。这种交流本身就是一个绝佳的界面。",
+   "audioFile": "audio-ian-silber-openai/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1869.162,
+   "end": 1899.21,
+   "text": "它能很好地承载越来越智能的功能。我们最近推出的特性就体现了这一点。 对我们来说，最有趣的设计空间体现在两个方面：。 第一，如何帮助用户更精准地表达意图？我们不希望用户必须成为完美的提示工程师。 第二，如何让用户明白模型能协助完成哪些任务？以及如何准确理解用户真实需求？ 例如，当用户提出开放性问题时，系统会通过可点击的选项引导用户逐步回答。",
+   "audioFile": "audio-ian-silber-openai/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1899.66,
+   "end": 1929.92,
+   "text": "又比如当用户要求执行操作时，对话记录不再局限于纯文本形式。 从ChatGPT刚推出时的纯文本，到现在已发展出多种交互形态。 它不再只是一个单纯的聊天机器人，实际上具备许多功能。例如我们所说的写作模块。 你让它帮你写一封信或一封邮件。 现在它包含完整的邮件内容，以及一个可以直接操作的模块，你可以用它打字、头脑风暴并编辑部分内容。",
+   "audioFile": "audio-ian-silber-openai/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1930.37,
+   "end": 1962.252,
+   "text": "你可以只复制这部分内容。这种交互方式显著改善了体验，图像生成领域也出现了类似的专业工具。 我认为UI设计将朝此方向持续进化，设计师如Chatsby T应如何应对？ 在外观或交互方式上做出明显区分。 或者你是数据科学家，用它来管理家庭生活和个人事务。 它可能需要完全不同的交互方式。因此根据使用场景提供差异化交互设计，是我们正在重点思考的问题。",
+   "audioFile": "audio-ian-silber-openai/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1962.702,
+   "end": 1990.673,
+   "text": "关于Chatsby T 码本的未来愿景，虽然领域持续演变，但您是否感受到明确方向？ 您提到过语音交互和个性化助理的概念，您如何设想这项技术的长期发展？ 我认为它将越来越适应您生活的全场景。 我们认为主动式交互是尚未充分开发的重要体验领域，这让我们非常兴奋。 我们开始在Chatsby T项目中看到这种现象，它已具备",
+   "audioFile": "audio-ian-silber-openai/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 1991.123,
+   "end": 2022.575,
+   "text": "基于日历、Slack等输入和外部上下文，它现在能提供不错的建议。 我认为这种能力会变得越来越重要，进而改变你使用它的整个方式。 我认为语音交互方面，我们刚刚经历了模型的一次重大飞跃，感觉自然度显著提升。 可以预见的是，两三年后这种体验只会变得越来越好。 我觉得人们特别喜欢用查茨比T进行语音交互，尤其是在需要快速表达想法时。",
+   "audioFile": "audio-ian-silber-openai/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2023.025,
+   "end": 2050.768,
+   "text": "更重要的是，它不再局限于回答问题，而是能主动帮你完成任务，这种能力将带来根本性改变。 随着我们不断优化，这些功能应该会越来越简单。说到超级应用概念，我们最终设想的是。 针对广大消费者群体，我们希望打造一个统一的交互入口，它能根据需求判断是需要快速回答。 还是需要闲聊式对话，或者需要主动执行任务。这正是我们期待实现的重大突破",
+   "audioFile": "audio-ian-silber-openai/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2051.218,
+   "end": 2083.07,
+   "text": "让用户体验无需思考底层机制，不必在意使用的是什么模型或运行速度。 这又回到了平衡不同用户画像和需求的课题上。 当然，我们要让合适的人看到这些内容，但同时也要确保大多数人都能获得良好的默认体验。我认为这需要非常主动的策略。 我认为通过语音交互和更丰富的视觉输出，我们将获得更深入的用户输入，这些输出也将更具互动性。 我认为未来人们会建立更持久的工作流程，可以反复使用ChatGPT来完成各种任务。",
+   "audioFile": "audio-ian-silber-openai/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2083.52,
+   "end": 2115.441,
+   "text": "很多时候感觉每次都要从头开始，我们希望打造一款能持续帮助用户完成各类任务的工具。 这一切听起来都很美好。让我稍微拉远一点视角，我想再和设计师们讨论一下，你现在正处于一个关键角色中。 我猜你加入开放人工智能公司并担任这个角色时，一定遇到许多意外。你最希望第一天就告诉伊恩·西尔伯什么建议？ 有太多需要知道的事。首先需要意识到我们还处于早期阶段，而我",
+   "audioFile": "audio-ian-silber-openai/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2115.891,
+   "end": 2141.254,
+   "text": "说实话，刚加入开放人工智能公司时我确实很紧张。记得当时正在面试。 糟了，我必须了解GPT-4刚发布的情况，当时我对这些技术完全不了解。 虽然我在使用这些工具，但并没有真正理解其原理。坦白说，我还有很多需要学习的地方。 这种'我们正在探索早期阶段'的认知，是我希望当时能听到的",
+   "audioFile": "audio-ian-silber-openai/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2141.704,
+   "end": 2171.145,
+   "text": "另一个让我个人感触很深的是，我进入了一个完全不同的角色，这与AI本身关系不大。 我的职业生涯大部分时间都在管理，但从未经历过如此快速扩张的规模。 后来加入了一家截然不同的公司，每天都有新的挑战，角色每天都在变化。 很长一段时间，我都觉得自己不太擅长，甚至不知道该怎么做。 于是我去找了一些曾领导过大型设计团队、或经历过类似转型的朋友交流。",
+   "audioFile": "audio-ian-silber-openai/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2171.595,
+   "end": 2196.723,
+   "text": "他们也都感到同样的困惑，遇到的问题并不独特。 在职业生涯的任何阶段，都会有这种自我怀疑的感觉，觉得自己不知道在做什么。 找到正在经历类似困境的人交流，你会发现大家通常面临相似的挑战和困难。 无论是导师还是无利益关系的伙伴，这种交流对我帮助很大。 所以，理解这一切都还很新且发展迅速非常重要。",
+   "audioFile": "audio-ian-silber-openai/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2197.173,
+   "end": 2223.396,
+   "text": "听到埃琳娜·维尔纳的精彩帖子，她现在正处于快速成长期。 她写了一篇名为《停止AI自信表演》的文章，批评人们过度宣传AI带来的改变。 实际上，真正有效且出色的案例非常少，这种虚假的完美形象应该停止。 我觉得保持谦逊态度更好，就像哇，是的，我不知道，情况变化很快，我只能接受并看看会怎样。",
+   "audioFile": "audio-ian-silber-openai/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2223.846,
+   "end": 2254.716,
+   "text": "这与你提到的当前表现优异人群的核心特质相关——他们充满好奇心，不断尝试各种方法，即使之前失败过也继续尝试。 现在确实完全奏效了，每个模型、每个新功能都如此。 那些在边缘领域探索的人正玩得不亦乐乎，这还关联到另一件事。 开放人工智能公司前首席产品官凯文·惠尔在播客中提到，当前模型将是历史上最差的版本。",
+   "audioFile": "audio-ian-silber-openai/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2255.166,
+   "end": 2284.536,
+   "text": "这让我想起每周甚至每天都有新模型问世，各实验室的进展速度令人目不暇接。 如果算上所有实验室，技术迭代速度之快令人难以跟上，每个人都变得更强。 我常提醒自己，这就像早期计算机发展时期，硬件组件快速演进并出现跨越式突破。 当遇到技术瓶颈时，突然间这些限制就会消失，我认为这正是当前的状况。",
+   "audioFile": "audio-ian-silber-openai/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2284.986,
+   "end": 2308.619,
+   "text": "昨天还完全失效的功能，今天竟然开始正常运作了。 那么如果设计师听到这些感到不知所措、焦虑挣扎，该如何应对？ 你有什么建议能帮助他们走出这种状态，进入更积极的状态？ 现在是一个完全理性的感觉，也是一个很好的时机，可以尝试探索和看看如果我尝试工作会怎样",
+   "audioFile": "audio-ian-silber-openai/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2309.069,
+   "end": 2336.283,
+   "text": "尝试重新思考工具的使用方式，或者干脆接受自己可能需要多做原型测试。 让我尝试使用这些工具，但再次强调，听到这样的建议确实有帮助。 我认为我们所有人都还处于早期阶段，一切仍在变化，不妨以开放心态享受这个过程。 我想强调的是，要始终关注最终成果和产出。 归根结底，我们不是来建立工具流程的",
+   "audioFile": "audio-ian-silber-openai/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2336.733,
+   "end": 2362.692,
+   "text": "我们不是来开发某种工具，而是要打造人们喜爱的优秀软件或产品。 但这就是关键所在，如果你专注于这个目标，就会发现这些工具能助你一臂之力。 作为主持人，我将带大家进入节目几个常规环节，首先是AI应用环节。 第一个专区是AI专区。问题是，您在工作中发现AI在哪方面特别有用？",
+   "audioFile": "audio-ian-silber-openai/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2363.142,
+   "end": 2386.523,
+   "text": "作为一名设计师，如今我花在像素细节上的时间更少了。 但我确实用它来帮助自己思考更宏观的创意方向。 有时晚上我会突然有个想法，然后快速输入并生成原型。 这能让我与团队讨论，帮助可视化设计。这是设计流程中初步构思或头脑风暴的环节。",
+   "audioFile": "audio-ian-silber-openai/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2386.973,
+   "end": 2413.178,
+   "text": "我发现无论是杰比特还是科迪克斯，都能帮助我更好地可视化这些想法，这一直是个很有趣的过程。 在操作层面，比如跟进重要消息，系统会提前总结并提供上下文，方便会议或招聘流程。 我用这些工具辅助工作，比如在原型设计阶段提供建议。 我用它来增强工作，原型阶段用它给他人操作建议很实用。",
+   "audioFile": "audio-ian-silber-openai/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2413.628,
+   "end": 2442.67,
+   "text": "你是不是在手机上直接发送，像发送代码线那样？这个操作机制是怎样的？聊天功能对日常工作的帮助非常大，因为它现在完全在云端运行。 对，关键在于你可以随时随地与聊天机器人对话，。 有时我会有一些想快速可视化的创意，先尝试探索可行性，再深入推进。 这种随时能用的便捷性太棒了，即使我不在电脑前也能灵活操作。",
+   "audioFile": "audio-ian-silber-openai/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2443.12,
+   "end": 2466.549,
+   "text": "即使我不在电脑前也能灵活操作。 这种随时能用的便捷性太棒了，即使我不在电脑前也能灵活操作。 我带大家去看看另一个角落，失败的角落。我这么做是因为很多人，包括像你这样优秀的人。 参加播客时，大家听到的都是他们取得的成就和成功，却很少听到失败的经历",
+   "audioFile": "audio-ian-silber-openai/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2466.999,
+   "end": 2489.235,
+   "text": "我认为人们有必要了解这些。成功并非一帆风顺。能分享一次职业失败经历及学到的教训吗。 这样的经历太多了。 在OpenAI，我一路都在不断学习，每个阶段都需要适应和掌握新技能。 刚加入时，甚至不清楚如何组建设计团队。 不了解招聘方法，也不懂如何组建团队",
+   "audioFile": "audio-ian-silber-openai/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2489.685,
+   "end": 2510.489,
+   "text": "当时感觉每天都在失败，但快速调整和学习。 这可能是个逃避回答，但确实每天都在边做边学。 我的整个职业生涯都是这样，从未真正规划过任何一步。 通过快速从错误中学习，我推出过很多失败的产品。 也推出过成功的产品，但",
+   "audioFile": "audio-ian-silber-openai/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2510.939,
+   "end": 2540.86,
+   "text": "很多时候，我尝试过一些项目，结果却以失败告终。 Instagram曾推出失败产品，如IGTV，那是个巨大失败。 后来我们推出了短视频，这其实是个很好的例子。当时我们错误地预设了一些条件，并固守了某些限制。 但很快我们从失败中吸取了教训，决定做出改变，重新设计后，这个产品最终取得了成功。 我见过很多类似的情况，这让我对",
+   "audioFile": "audio-ian-silber-openai/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2541.31,
+   "end": 2568.248,
+   "text": "这种批判和反馈有了更强的适应力，因为有时候你确实会犯错。 有时候尝试某件事，就必须把它推向市场，通过实践获取反馈并不断迭代。 更重要的是，比起一次性的发布成果，如何应对问题、如何持续改进、如何倾听用户反馈才是关键。 在这个领域，人们的职业生涯往往伴随着大量失败。我确实这么认为。",
+   "audioFile": "audio-ian-silber-openai/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2568.698,
+   "end": 2603.839,
+   "text": "所以我认为这能给人们带来启发。在进入激动人心的闪电问答环节前，还有其他想补充的吗？ 如果用一句话总结，我希望这是一个充满乐趣的创造时代。 希望设计师们能保持高度适应性，专注于打造真正有价值的产品。 非常有趣，能创造出非常出色的作品。我认为设计师们就像充满希望一样，他们一直在努力。 优秀的企业都在寻找设计师和优质设计。我发现这确实非常真实。那些未能转型的企业可能会被远远甩在后面。",
+   "audioFile": "audio-ian-silber-openai/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2604.289,
+   "end": 2631.841,
+   "text": "但我认为仍有大量空间容纳卓越设计。未来这种情况会更加明显。我完全同意，我对设计充满信心。 好了伊恩，我们进入激动人心的闪电问答环节。我有五个问题要问你，准备好了吗？好的，开始吧。 你最常推荐给别人的书有哪些？说实话，我并不是那种热衷于推荐书籍的人。 当人们问我推荐设计类书籍时，我发现自己并没有特别钟爱的纯设计类书籍。",
+   "audioFile": "audio-ian-silber-openai/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2632.291,
+   "end": 2661.12,
+   "text": "不过我必须提到《设计心理学》。这是一本经典著作，它探讨了我们如何思考设计的问题。 虽然这不是特别独特的推荐，但如果你从事科技行业，这本书是必读的。 太棒了，还有其他推荐吗？如果没有，我们继续下一个问题。最近特别喜欢的电影或电视剧是什么？ 我最近在纽约看了百老汇剧目《也许幸福的结局》，这并不是电影或电视剧。",
+   "audioFile": "audio-ian-silber-openai/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2661.57,
+   "end": 2687.537,
+   "text": "我看过这部剧，非常喜欢。哦，你也看了？确实非常独特。 当然，这部剧让我很有共鸣，因为它讲述的是超级智能人形机器人的话题。 但制作非常出色，舞台设计和整体表现都极具独特性。 我认为这确实非常精彩，如果有机会一定要去看看。 我还看到了邀请函，设计非常简洁但效果很好，你看过吗？是的，我也很喜欢。",
+   "audioFile": "audio-ian-silber-openai/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2687.987,
+   "end": 2714.317,
+   "text": "我最喜欢的是它的简洁，就像一部戏剧，只有四个人在一个场景中。 整个公寓的布景设计令人惊叹，剧本和表演都堪称完美。 这是一场令人目不暇接的体验，即使完全不了解背景也能感受到震撼。 邀请函刚刚上映，现在正在影院热映。下一个问题，最近发现并特别喜欢的产品是什么？ 我感觉自己像个典型的硅谷人，要推荐这个产品。",
+   "audioFile": "audio-ian-silber-openai/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2714.767,
+   "end": 2735.263,
+   "text": "但最终我还是换成了电动车，此前一直使用传统汽车。 我入手了里维安，虽然说不上具体原因，但他们的设计确实让我很钦佩。 他们重新定义了汽车操作逻辑，比如特斯拉可能也有类似设计。 你只需走近车辆它就会自动解锁，无需反复开关车门。",
+   "audioFile": "audio-ian-silber-openai/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2735.713,
+   "end": 2765.952,
+   "text": "看到这种演变令人兴奋。当然，我最喜欢的是，如果我现在能拥有一家韦莫，那将是世界上最神奇的体验。 我迫不及待地希望这项技术能普及到每个人。 你有没有一个在工作或生活中反复回归的生活模型？或者说，我试图总结自己对……的感受？ 所有这些都应该是，尽情享受，大胆尝试。 我认为，我从未觉得你必须符合某种特定的……",
+   "audioFile": "audio-ian-silber-openai/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2766.402,
+   "end": 2803.256,
+   "text": "要知道，以灵活的方式工作是完全没问题的。 或者你思考问题的方式，要灵活适应。但说实话，这不是什么人生格言，更像是一种尝试享受的氛围。 它并构建出色的作品。我应该把这个问题转给你，什么氛围对你有帮助？因为我觉得这非常符合山姆·奥尔特曼的风格，就是你可以直接构建东西。没错。 是的。最后一个问题。你的LinkedIn显示，你曾是某组织的设计团队成员，现负责中央超级智能的设计。",
+   "audioFile": "audio-ian-silber-openai/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2803.706,
+   "end": 2826.314,
+   "text": "你在群组公司学到的、对如今构建超级智能AI有帮助的是什么？我喜欢这一点。群组公司是一家非常有趣的公司。 安德鲁·梅森作为CEO非常出色，他给团队带来了独特的个性，。 对产品。你知道，它更像是一个以品牌为导向的产品。 我们当时有一个喜剧团队，但具体是怎样的呢？",
+   "audioFile": "audio-ian-silber-openai/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2826.764,
+   "end": 2851.34,
+   "text": "当时有一个编剧团队，但基本上都是喜剧演员。早期的几年里，产品本身并不太严肃。 它不把自己当回事，品牌很突出，加入Groupon，日常优惠确实很棒。 你获得的商品能打五折，但人们喜欢那封邮件，因为它写得非常好，幽默又富有个性。 我认为公司早期在品牌建设方面做得非常出色，充分接纳了这种风格。",
+   "audioFile": "audio-ian-silber-openai/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2851.79,
+   "end": 2877.271,
+   "text": "另外，我发现每个公司都有独特的基因。 你工作的模式会根据这种基因略有不同。 曾参与某公司运营，后加入Instagram，这家以设计和创意为核心的公司。 凯文·西斯特罗姆是一位非常出色的设计师，他与我们合作的方式非常棒。 这创造了一种不同的工作方式。而山姆·奥尔特曼的运作方式则完全不同。",
+   "audioFile": "audio-ian-silber-openai/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2877.721,
+   "end": 2904.134,
+   "text": "他曾在研究实验室工作。了解不同公司有截然不同的基因，并学会如何利用这些特点。 如何借助这些特点来增强自身优势，这是我学到的重要经验。 在不同公司工作过，也让我意识到你无法改变已有的文化。你无法一进来就改变这种文化。 因为这非常困难，尤其是创始人主导时。关键在于找到方法，比如在OpenAI。",
+   "audioFile": "audio-ian-silber-openai/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2904.584,
+   "end": 2930.139,
+   "text": "我们在Instagram投入更多时间，推进节奏更慢。改动产品较少，效果更佳。 这适用于Instagram的多数阶段，但当前OpenAI的阶段和工作方式可能不适用。 我对此贡献良多。在Instagram，我们坚持先做简单的方案，这一原则一直沿用。 我们非常认同这一点，并将其融入OpenAI的产品设计中。",
+   "audioFile": "audio-ian-silber-openai/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2930.589,
+   "end": 2959.201,
+   "text": "但这种方法并非唯一途径，有时我们需要摒弃一些仍在试验中的想法。 我发现保持灵活性很重要，不必刻意改变，而是尝试完善现有的方案。 伊恩，你现在所处的位置真是令人惊叹，能参与如此前沿的技术研发。 很幸运你能抽空与我们分享见解，最后有两个问题想请教。 如果要推荐资源，听众如何参与其中？你希望引导大家去哪些地方？",
+   "audioFile": "audio-ian-silber-openai/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2959.651,
+   "end": 2987.076,
+   "text": "我的意思是，请大家尽情享受这个过程，与AI共同探索。 我们正用ChatGPT和Codex开发中，欢迎反馈想法。我在推特。 我喜欢和设计师讨论各种阶段，或者不仅仅是设计师，还有工程师、产品经理等。 这可能就是我最易接触和获取信息的地方。 我认为要再次发挥作用，关键在于人们展示他们工作方式的变化，这让我很感兴趣。",
+   "audioFile": "audio-ian-silber-openai/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 2987.526,
+   "end": 3010.836,
+   "text": "这有助于我们在OpenAI内部优化产品，并为设计社区提供展示机会。 现在我们的工作流程变得有些模糊，分享这些信息对社区来说是一种馈赠。 我建议大家多关注我的网站，现在网站上的配色非常夸张。 访问伊恩·西尔伯的个人网站，即可查看他过往所有作品的详细展示。",
+   "audioFile": "audio-ian-silber-openai/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "A",
+   "speakerName": "Lenny Rachitsky",
+   "avatarFile": "avatars/ian-silber-openai/speaker-A.jpg",
+   "start": 3011.286,
+   "end": 3022.898,
+   "text": "网站里还藏着一个彩蛋游戏，试试看能否打破最高分纪录。 有人发现了作弊代码。伊恩，非常感谢你接受采访，这次交流非常精彩。",
+   "audioFile": "audio-ian-silber-openai/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "B",
+   "speakerName": "Ian Silber",
+   "avatarFile": "avatars/ian-silber-openai/speaker-B.jpg",
+   "start": 3023.598,
+   "end": 3043.672,
+   "text": "感谢收听，觉得有价值可订阅苹果播客、Spotify或你喜欢的播客应用。 也请考虑给我们评分或留言，这有助于其他听众发现这个播客。 您可访问伦尼播客网查看往期节目或了解更多信息，下期再见。",
+   "audioFile": "audio-ian-silber-openai/0107.wav"
+  }
+ ]
+}

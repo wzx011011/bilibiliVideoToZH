@@ -1,0 +1,915 @@
+{
+ "title": "tibo-interview-pod · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 0.0,
+   "end": 27.908,
+   "text": "我们能独特地做好什么？我们的价值观是什么？如何最大限度地加速实现目标？可能一两年后这些速度会变得...。 非常接近默认设置。看看Luna的成本，对吧？非常惊人。技术会随着时间变得非常高效。我们非常重视广泛接入和。 我们注重直接实用性。听说现在有实体按钮。>>是的，德里斯。>>我给你看。它非常...",
+   "audioFile": "audio-tibo-interview-pod/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 28.608,
+   "end": 55.476,
+   "text": ">>蒂博，非常感谢你加入我。 当然，很高兴来到这里。很兴奋与你对话。我想从你在谷歌的经历开始，你曾参与DeepMind。 谷歌曾有个叫LM chat的项目，你推文称其过于谨慎。 发布它。DeepMind被阻止推出可能颠覆谷歌的产品。我经常思考这件事。当时你在开发这些产品时...。 那时还远在ChatGPT真正改变世界之前。",
+   "audioFile": "audio-tibo-interview-pod/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 55.926,
+   "end": 71.04,
+   "text": ">>那是个非常激动人心的时期。DeepMind是个充满创造力的地方。我主要专注于基础设施和产品...。 加速研究。显然有团队在开发语言模型并进行扩展。他们取得了不错的结果，然后自然想到...",
+   "audioFile": "audio-tibo-interview-pod/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 71.74,
+   "end": 93.631,
+   "text": "结果自然而然地让人思考，能否将其转化为可聊天的工具？ 当时是内部项目，然后有志于...。 将其变为公开可用工具。>> 是哪一年？>> 大概在查特拉前一年。>> 好的。>> 对。 我们当时还在开发许多其他项目，但我不打算谈论那些。那是一个非常有创造力的地方。然后就是深度",
+   "audioFile": "audio-tibo-interview-pod/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 94.081,
+   "end": 123.081,
+   "text": "当时没打算推出产品。OpenAI在这一点上截然不同。我们只专注研究与产品协作。 紧密协作。我们共同构思，共同设计许多东西。我们有很强的推出产品倾向，以及。 让工具为人所用的倾向，这点我非常喜欢。这正是吸引我来这里的原因，使命、团队、人才密度。 你当时参与语言模型聊天时，是否意识到这是个特别的项目，或者后来才意识到它的特别之处？",
+   "audioFile": "audio-tibo-interview-pod/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 123.531,
+   "end": 156.005,
+   "text": "感觉非常特别，模型让你第一次意识到能生成连贯文本并获得有用信息。 起初更有趣而非实用，后来逐渐变得越来越实用。 你说你经常思考这个问题，我理解。我认为在很多方面Google陷入了困境。 你在Google学到的教训，带到了OpenAI？ 是的，我常思考团队文化和OpenAI自身文化。 保留积极部分，避免问题。OpenAI有自下而上的文化，赋权团队",
+   "audioFile": "audio-tibo-interview-pod/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 156.455,
+   "end": 184.885,
+   "text": "能想出各种点子并迅速推出产品，整体上新事物的阻力很小。 产品创意令人兴奋且有趣，核心是用积极方式影响世界。 另一重点是避免杂乱无章，不能让功能碎片化。 需保持整体方向一致，同时注重简洁性与品质自豪感。 关于产品质量，我认为Chat GBT iOS应用是顶尖应用之一，我们希望保持。",
+   "audioFile": "audio-tibo-interview-pod/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 185.335,
+   "end": 190.344,
+   "text": "我们正投入大量资源提升性能、效率、简洁性等核心原则。",
+   "audioFile": "audio-tibo-interview-pod/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 191.044,
+   "end": 200.888,
+   "text": "若要给创始人关于培养这种文化的建议，哪些具体实践值得参考？ 我认为保持信念并快速迭代用户反馈至关重要。",
+   "audioFile": "audio-tibo-interview-pod/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 201.588,
+   "end": 229.095,
+   "text": "同时要敢于自我颠覆，这对初创公司可能不适用。 像我们这样持续产生新研究的公司，需判断何时投入新方向。 尽管可能需要从核心业务重新调配资源，这非常关键。 虽然困难，但能灵活调整资源分配至关重要。 是的，这正是你在谷歌描述的情况。他们当时似乎没能做到这一点。这很棒，我的意思是，他们有计划保持公平。这就像",
+   "audioFile": "audio-tibo-interview-pod/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 229.545,
+   "end": 234.981,
+   "text": "你知道，这其实都是一个大计划的一部分。但对我来说，它并不是",
+   "audioFile": "audio-tibo-interview-pod/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 235.681,
+   "end": 250.876,
+   "text": "这不是合适的位置。当OpenAI或任何公司成熟后，保持这种文化是否会更难？ 发布产品和自我颠覆意愿，尤其当拥有盈利现金奶牛，同时有其他新事物。 我们是非常非常",
+   "audioFile": "audio-tibo-interview-pod/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 251.576,
+   "end": 277.303,
+   "text": "面向未来的，人工智能的未来以及它将如何发展。 以及人类如何受益，其实并不在意你过去一个月或三个月在这里建立的任何东西。因此，我认为必须积极应对。 保持开放和清醒的视角，弄清楚自己该如何定位。这样你才能。 抓住这股浪潮。即使OpenAI，训练模型后会发现它们",
+   "audioFile": "audio-tibo-interview-pod/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 277.753,
+   "end": 317.144,
+   "text": "具备一些基准测试无法完全展现的能力。我们必须大量试用模型本身，才能意识到比如我们可能从未想过。 以这种方式利用它，或者哦，它还能做这个。这时你会突然意识到，这改变了我们对产品的思考方式。 比如，现在我们刚推出的新语音功能，它。 和它交谈非常愉快。现在交互非常自然，还能使用工具。>>是的。>>这改变了我的使用方式，现在我花更多时间直接和它对话。 我经常用它来语音输入，因为识别质量极高，比手动输入提示词高效得多。",
+   "audioFile": "audio-tibo-interview-pod/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 317.594,
+   "end": 325.986,
+   "text": "早上我只需拿着手机坐那儿，随口说几句，比如‘该充电了’之类的，然后它就自动去做了。",
+   "audioFile": "audio-tibo-interview-pod/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 326.686,
+   "end": 353.492,
+   "text": "它能访问我所有的工具。>>是的。>>以前没有高质量语音模型时，这种体验根本不可能实现，这彻底改变了产品的使用方式。 新模型、新工具。几周前从你的推文开始，这些都很精彩。两到三个月后，代码模型将显得原始，我们即将经历另一次重大升级。 下一代模型需要超越笔记本电脑的算力。先说工具部分，哪些领域仍有创新空间？",
+   "audioFile": "audio-tibo-interview-pod/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 354.192,
+   "end": 383.345,
+   "text": "目前模型能力提升后，哪些领域仍有创新空间？ 语音交互是其中之一，目前如果你是Codex的高级用户，应该已经习惯了某些不足。 你得管理技能文件，这就像在教它新知识，但长期维护起来相当困难。 记忆功能有一定作用，但不会记住所有内容。如果有子工具，还需要额外维护这些子工具。 它会构建某种网络结构，但交互时这种结构会在不同节点间断裂。",
+   "audioFile": "audio-tibo-interview-pod/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 383.795,
+   "end": 416.653,
+   "text": "你真正需要的是一个能直接完成任务的系统，而不是这种复杂架构。 深刻理解你、你的目标、日常事务，以及你了解团队正在做的事情。然后，它会以最优的方式做出反应并提供帮助。 主动且在日常工作中提供帮助，不会打破你拥有这个完美小助手的错觉，这就是我们努力的方向。 当你拥有非常强大的模型时，你会发现笔记本电脑反而成了限制因素。 笔记本电脑本身的设计是为了适应人类的工作节奏",
+   "audioFile": "audio-tibo-interview-pod/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 417.103,
+   "end": 437.236,
+   "text": "它被设计成能处理人类打字速度和思考速度的负荷。 比如模型可以同时完美处理100个应用程序的开启。 未来模型显然需要超越笔记本电脑的资源限制。 未来的模型需要的资源将超出笔记本电脑的范围。你是说……",
+   "audioFile": "audio-tibo-interview-pod/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 437.936,
+   "end": 458.991,
+   "text": "猜测你提到的是云代理，突然之间，当使用UltraAST这类工具时，令牌处理速度会显著提升。 我认为官方公布的数字是10到14倍速度提升，带宽变化。 工具调用和网络请求成为系统瓶颈。 但你可以通过优化堆栈结构来弥补这些限制",
+   "audioFile": "audio-tibo-interview-pod/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 459.691,
+   "end": 468.244,
+   "text": "同时处理多项任务。你可以设想，比如可能有。 一边探索，一边编写测试代码、编译、测试",
+   "audioFile": "audio-tibo-interview-pod/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 468.944,
+   "end": 484.063,
+   "text": "一次性提出新假设。这样一来，瓶颈不再固定。 模型能高效快速地处理这些任务。 当前token处理速度迫使同时启动10至15个代理，带来显著认知负担。 频繁切换上下文，持续不断地启动任务",
+   "audioFile": "audio-tibo-interview-pod/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 484.763,
+   "end": 508.851,
+   "text": "这种工作流程将发生显著变化，我不认为自己能同时管理。 时间。你如何看待单人开发者的工作流程随时间的变化。 是的。我认为管理注意力，更友好地对待注意力。 我们非常重视这一点。毕竟，我们致力于为人类构建技术。 围绕你的多任务处理能力进行构建，你希望如何管理注意力",
+   "audioFile": "audio-tibo-interview-pod/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 509.301,
+   "end": 533.315,
+   "text": "当超高速处理与语音结合时，突然你会发现。 如果速度不比你快，你就能保持专注，进行头脑风暴，看到原型，比如你可以像现实中那样制作小型报告。 在真实时间里进行这些操作，这种感觉真的很棒。突然你会发现，之前同时处理10个任务的多任务处理方式",
+   "audioFile": "audio-tibo-interview-pod/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 534.015,
+   "end": 557.635,
+   "text": "代理，我真不想回到那种状态。对，我们正试图打造一种体验。 既自然又为你量身定制，你无需适应它。 技术会适应你。过去几个月讨论过不少智能编码技术，循环结构曾很流行，现在又出现图结构。 这些技术都是为了让单打独斗的开发者更高效地管理注意力？ 你用的这个表述我很喜欢",
+   "audioFile": "audio-tibo-interview-pod/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 558.335,
+   "end": 578.266,
+   "text": "我认为存在两类问题。第一类是构建最优秀的个人通用人工智能。 它能与你保持同步，主动提出重要新想法，在适当时候采取行动。 无论技术难题还是研究咨询，都能高效完成你交代的所有任务。 它对你的理解非常深入，能精准把握你作为独特个体的需求",
+   "audioFile": "audio-tibo-interview-pod/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 578.716,
+   "end": 592.563,
+   "text": "这是非常重要且根植于对人类个体深刻认知的领域，我们正在全力推进。 全自动化。你正在构建能够处理非常复杂流程的智能系统。 比如需要智能处理的复杂任务。例如查看生产日志并",
+   "audioFile": "audio-tibo-interview-pod/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 593.263,
+   "end": 599.567,
+   "text": "自动执行性能优化或检测回归并自动修复。在网络安全领域也是如此",
+   "audioFile": "audio-tibo-interview-pod/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 600.267,
+   "end": 607.376,
+   "text": "比如你有扫描器发现漏洞后能否自动修复并缩短。 存在该漏洞的时间窗口几乎为零",
+   "audioFile": "audio-tibo-interview-pod/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 608.076,
+   "end": 613.62,
+   "text": "\"> 在这些流程中没有人工参与\"> 没有人工参与或仅需极少人工",
+   "audioFile": "audio-tibo-interview-pod/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 614.32,
+   "end": 621.307,
+   "text": "你只需批准高风险操作，系统基本实现自动化，但也不需要你直接控制。 \"> 好的。",
+   "audioFile": "audio-tibo-interview-pod/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 622.007,
+   "end": 632.208,
+   "text": "我想换个话题，ChatGPT和Codex正在合并路径上。 \"> 我想先问问你们进展如何？内部感觉怎样？客户反馈如何？",
+   "audioFile": "audio-tibo-interview-pod/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 632.908,
+   "end": 660.275,
+   "text": "\"> 这对我们的业务是重大利好。最初用户质疑为什么要合并。 \"> 因为未来模型需要合并，所以我们决定直接推进。 因为这是正确且简单的事。我们正在构建一个非常个性化的超级智能代理，能以各种方式帮助你。这。 是同样的技术原理。这是相同的框架，相同的思维方式。它高度。 多模态，以语音交互为主，超级高效。无论你是否在编程，这个代理都能应对",
+   "audioFile": "audio-tibo-interview-pod/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 660.725,
+   "end": 688.142,
+   "text": "所有任务。它在这方面效率最高。你想要的界面应该根据你的需求自动适配。 比如你不是技术人员，就不需要代码界面。我们给不同人群贴上软件工程师、设计师等标签。 这些只是人类为处理复杂现实而发明的抽象概念。但每个人都有自己独特的定位。 我们正尝试打造能适配所有人的完美界面。无论你是否具备技术背景",
+   "audioFile": "audio-tibo-interview-pod/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 688.842,
+   "end": 719.648,
+   "text": "它都会根据你的个性自动调整。这就是我们这么做原因。 但这是否意味着最终会统一成单一界面？不会，用户不会在不同产品间手动切换。 想象我妈可能使用和我完全相同的界面，但系统会根据我的需求进行定制。 从事更复杂的工作。你设想的最终状态是什么？ 没错，是同一系统。你和妈妈将使用同一系统，这会是你的个人AGI，你将拥有非常",
+   "audioFile": "audio-tibo-interview-pod/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 720.098,
+   "end": 748.563,
+   "text": "多种任务和实用功能，连接生活中的各类工具，激发多样化的创意。 需求。然后它会继续调整自身以最大程度地帮助你。好。>> 它还会与你的朋友及其他人一起这么做。>> 所以我想回到你之前提到的某个问题。 你多次提到‘幻觉’这个词，那种最终状态下的完美幻觉是什么？ 典型用户？比如，几年后，AI与人类的互动会是什么样子？",
+   "audioFile": "audio-tibo-interview-pod/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 749.263,
+   "end": 776.469,
+   "text": "对我来说，这非常贴合人类需求。 这正是大语言模型成功的原因。它就像自然语言，像人类。 概念，对吧？我们习惯交谈，比如明天你写信，我就能读。 我们已经相当熟悉了，所以大概能察觉到一些情绪，也许一点点。 若给我写信，信中字里行间蕴含的细微之处。这一切都深深体现了人性。我们构建的技术正是扎根于",
+   "audioFile": "audio-tibo-interview-pod/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 776.919,
+   "end": 794.562,
+   "text": "植根于人类沟通与完成事务的方式，不应存在…… 你可能认为，我误解了你，因为没抓住语气中的细微差别，或者没完全理解。 文本，正如我原意。这正是我们试图避免的情况，因此我们非常努力地避免让你",
+   "audioFile": "audio-tibo-interview-pod/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 795.262,
+   "end": 826.659,
+   "text": "适应，但要有像被完美创造出来的技术。 成为人类现有行为方式的自然延伸。 谈到人类之间的交流，大部分是非语言的。比如我如何移动双手、面部动作，以及这些有多少。 你未来看到的这些会被人工智能通过视觉感知或读取吗？这重要吗？ 你现在描述的只是文本。对我们这些在线长大的人来说，我们习惯通过文本交流，并在文本中添加细微差别来传达真实意图",
+   "audioFile": "audio-tibo-interview-pod/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 827.109,
+   "end": 836.489,
+   "text": "语气。但人工智能是否仍需要识别我们的面部表情、手势等？ 我认为重要。我设想的未来产品会非常自然地融入环境",
+   "audioFile": "audio-tibo-interview-pod/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 837.189,
+   "end": 863.152,
+   "text": "比如明天我去办公室在白板上写想法时，它应该也能在那里并理解。 我可以对它说嘿，就像刚才说的，关于这个东西，然后我们通过语音自然对话。 自推出新语音聊天功能以来，用户通过语音与LGBT互动数量激增。 每次向更自然的方向靠拢时，用户都会选择最便捷的路径。 比如在小键盘上打字",
+   "audioFile": "audio-tibo-interview-pod/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 863.602,
+   "end": 877.855,
+   "text": "盒子，你知道，对某些人来说很自然，但对每个人来说未必。当你得到一个稍微容易一点的东西时，确实会倾向于直接使用它。 更好，你倾向于直接使用它。对，好的。首先，我……",
+   "audioFile": "audio-tibo-interview-pod/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 878.555,
+   "end": 904.631,
+   "text": "祝贺你，今早发的。Codex用户达2000万。图表显示，之前平稳，突然飙升。 突然变得垂直。祝贺。我想谈谈与Anthropic的竞争，因为很多人认为OpenAI和Anthropic是主要竞争对手。 目前行业两大主要竞争对手，有一段时间Anthropic几乎垄断了整个市场。 首先，你对目前市场怎么看？",
+   "audioFile": "audio-tibo-interview-pod/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 905.331,
+   "end": 939.833,
+   "text": "目前我们专注于构建能力最强的模型，构建高度高效的模型。 高效，为所有人打造产品感到自豪。我认为这一点。 OpenAI做得很好的是关心世界，关注如何将这项强大技术交到更多人手中。合并Codex与ChatGPT正是初衷。 我们拥有这项技术，我们可以让它更安全，更容易被所有人使用。无论是产品经理、设计师还是销售、市场人员…… 你知道，无论你是产品经理、设计师还是销售、市场人员，都应该能够……",
+   "audioFile": "audio-tibo-interview-pod/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 940.283,
+   "end": 953.112,
+   "text": "都应该能够…… 充分利用它，然后迅速通过充电方式分发，就像我们拥有大量用户的地方。 已经，因此这一直是推动你提到的地球增长的重要因素，以及我",
+   "audioFile": "audio-tibo-interview-pod/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 953.812,
+   "end": 978.121,
+   "text": "我不太关注竞争，更关注我们能独特做好什么，以及我们的价值观。 我想再深入探讨，知道你不太关注人类的。 他们思考的是，相信哪个产品值得我投入2200美元。 当看到OpenAI的市场定位、品牌调性及与开发者互动方式时。 针对更广泛受众，如何与Anthropic的处理方式相比？",
+   "audioFile": "audio-tibo-interview-pod/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 978.571,
+   "end": 982.18,
+   "text": "我认为社区建设至关重要，要让所有人共同参与",
+   "audioFile": "audio-tibo-interview-pod/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 982.88,
+   "end": 1000.464,
+   "text": "你能感受到我们对社区意见的极度透明度。 这非常有趣，因为社区也为我们带来巨大能量。 我们不是仅为自身开发技术，而是为整个世界加速。 这种使命感让我们充满能量，一切因此变得扎实而有趣",
+   "audioFile": "audio-tibo-interview-pod/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1000.914,
+   "end": 1007.68,
+   "text": "好吧，我们先谈谈那些积极的事情。重置功能某种程度上就像大家一直在关注你的每条推文",
+   "audioFile": "audio-tibo-interview-pod/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1008.38,
+   "end": 1027.235,
+   "text": "由于这点，特别是再次观察代码模型的增长曲线，这可能是个愚蠢的问题。这些重置对。 营销和增长的推动作用有多大？还是仅仅对开发者社区有好感？ 这可能有些反直觉，但OpenAI是一个可以自由做事的地方",
+   "audioFile": "audio-tibo-interview-pod/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1027.935,
+   "end": 1054.669,
+   "text": "最初补偿时感觉很自然。 在迭代和破坏功能时，或者配置错误导致效果不佳时，我们会说谢谢你的尝试。 我们正在努力构建这个产品，目前还处于早期阶段。因为你们碰巧。 让产品中断30分钟，我们理解这非常重要且依赖它。感谢你们作为用户。 这就是重置功能的起源。即使体验不佳且原因不明，我们也会补偿",
+   "audioFile": "audio-tibo-interview-pod/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1055.119,
+   "end": 1076.68,
+   "text": "重置使用限制。后来显然发展成一个大功能，现在有了重置按钮。 但并没有经过市场或财务部门的严格审查。我随时可以按按钮。 当觉得合适时就会重置。我们有这些机制。 我们试图建立一些令人惊叹的东西，但当它不是时，就像你知道的那样，我们",
+   "audioFile": "audio-tibo-interview-pod/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1077.38,
+   "end": 1113.328,
+   "text": "会弥补。是的，我认为其中有一部分确实为社区建立了大量善意，可能至少在一定程度上促进了增长。我。 认为关心用户确实能带来很多好处，对吧？所以，我认为你可以只是口头说关心，或者你。 知道，我们真的关心，若出问题，真的很抱歉。 知道，这就是我们如何弥补。这让我想起了亚马逊的退货政策，如果你不满意，可以直接退掉。 你正在塑造OpenAI的相同文化与认知。就像：犯错时，直接使用这些令牌",
+   "audioFile": "audio-tibo-interview-pod/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1113.778,
+   "end": 1138.51,
+   "text": "再次使用，这里有新令牌批次。感谢，所以，。 然后还有，你知道，一些美好的时刻，我们想庆祝并标记这个时刻。但其实我们没有什么可以给予的，比这更有意义的东西。 嗯，你知道，有时候我们总是发布新功能。我们会尽可能广泛地发布它们。但有一些东西要与整个社区分享。它是",
+   "audioFile": "audio-tibo-interview-pod/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1139.21,
+   "end": 1145.205,
+   "text": "嘿，去探索这个新东西，就像你还没用过Ultra一样，这里有",
+   "audioFile": "audio-tibo-interview-pod/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1145.905,
+   "end": 1184.855,
+   "text": "一些额外的使用，比如你知道，试试看。然后，我听说现在有一个实际的物理按钮。是的，有。是的。好的，你得在之后给我看。 我会给你看。它非常酷。但所有这些重置，你真的只能在你做过之后才能这样做。 需要大量计算资源规划。你必须确保有足够的算力来支持所有这些重置操作。我想稍微谈谈自我提升，因为。 说到算力，几周前你发布了一篇文章，当时。 表示索尔优化了露娜的效率。你将露娜价格降低了80%。还有一次价格下跌。",
+   "audioFile": "audio-tibo-interview-pod/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1185.305,
+   "end": 1205.413,
+   "text": "在露娜上你实现了多少效率提升？其中有多少是算法优化，又有多少是算力规划？ 我们只是做了出色的算力规划，利润率很高，我们仍然希望人们使用它。所以。 其中有多少是算法优化，有多少是战略规划？我们",
+   "audioFile": "audio-tibo-interview-pod/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1206.113,
+   "end": 1213.085,
+   "text": "我们提前规划了算力。如果回顾两年前，OpenAI曾被质疑为何投入这么多算力",
+   "audioFile": "audio-tibo-interview-pod/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1213.785,
+   "end": 1216.731,
+   "text": "人们质疑为什么当时要投入这么多算力",
+   "audioFile": "audio-tibo-interview-pod/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1217.431,
+   "end": 1242.68,
+   "text": ">> 这是一个疯狂的成功赌注。>> 是的，现在我们非常庆幸。 我们目前将很大一部分计算资源用于研究，投资于未来，不断优化模型。 当我们将最先进模型的能力推向新高度时，令人惊叹的是。 我们能够快速利用这些模型找到方法，从而实现。 我们重构技术栈，以显著提升效率或性能。这不仅仅是改进，还有……",
+   "audioFile": "audio-tibo-interview-pod/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1243.13,
+   "end": 1271.117,
+   "text": "我们也将发布。我们不仅提升了成本效率，还提升了速度效率。除UltraAST外，其他功能随时间推移显著提速。 如果绘制图表，现在速度比三个月前快了约60%。这说明。 就像我们正在全面布局整个技术栈，并确保每个环节都精心设计。 针对我们任务类型进行最优工程设计。我们最强大的模型就是…… 这让我们用很小的团队就能做到。而大部分的……",
+   "audioFile": "audio-tibo-interview-pod/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1271.567,
+   "end": 1283.025,
+   "text": "当实现显著效率提升和成本节约时，我们的承诺是保持现状。 性能成本的前沿，还有就是，不仅仅是口袋里的有趣收益",
+   "audioFile": "audio-tibo-interview-pod/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1283.725,
+   "end": 1295.835,
+   "text": "并确保与客户和用户共享，我们确实这样做了。 与Luna。内部讨论如何分配计算资源用于新研究？ 模型的效率提升，推理方面，这种内部矛盾具体表现如何？",
+   "audioFile": "audio-tibo-interview-pod/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1296.535,
+   "end": 1321.784,
+   "text": "我们通常从第一性原理出发。 我们在研究方面有预算分配，在产品方面也有预算分配，而在产品内部我们会做出不同类型的权衡，但这一点。 其中一个几乎算不上权衡，因为效率提升已经存在。我们当时确实非常。 几乎能够利用相同的计算资源，从而实现吞吐量的显著提升",
+   "audioFile": "audio-tibo-interview-pod/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1322.484,
+   "end": 1341.288,
+   "text": "是的。几个月前我看到你们在降价博客发布前的一篇博客，当时你们提到一个模型训练另一个模型。 优化下一模型，通过观察Luna运行实现效率提升。 在我看来，这似乎属于递归自我改进的早期阶段。你认为这是正在发生的事情吗？",
+   "audioFile": "audio-tibo-interview-pod/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1341.988,
+   "end": 1373.598,
+   "text": "是的，我认为递归自我改进显然是当前一个巨大话题，它通常应用于研究。 和模型开发其他模型，但我们现在看到大量成功案例的是。 利用这些模型开发基础设施，这些基础设施是使用这些模型的关键路径，这也是一种递归。 自我改进。整个系统是一个整体。推理堆栈，比如更底层的优化，如计算内核。 开发新产品和更高效交互模型的方式。你提到过云代理，如果我们真正突破云代理技术",
+   "audioFile": "audio-tibo-interview-pod/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1374.048,
+   "end": 1394.613,
+   "text": "就会突然变得更具生产力。这算不算一种递归自我改进？因为此时你具备了更强的能力。 要从中获得效用。我认为在某种程度上是这样，但更多是基础设施，然后能够反向应用。>> 是的。 当然，我们正在这么做，若不这么做，我认为很愚蠢。",
+   "audioFile": "audio-tibo-interview-pod/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1395.313,
+   "end": 1410.338,
+   "text": "能谈谈递归自我改进？OpenAI山姆·奥尔特曼提到暂停绝对...。 我认为现在正处于强化学习的前沿。能谈谈这个决定吗？我们之前简要提到了Hugging Face事件，但具体发生了什么。 那次决策？会怎样？讨论如何？",
+   "audioFile": "audio-tibo-interview-pod/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1411.038,
+   "end": 1434.626,
+   "text": "这确实属于研究领域，OpenAI一直致力于。 能将资源投入最关键处。随着我们增加…… 模型能力显然，对齐和安全方面越来越重要，因此需要...。 在那方面投入巨额资金，对OpenAI来说是自然而然且非常致力于的事情。因此。 我们正看到投资激增，还有",
+   "audioFile": "audio-tibo-interview-pod/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1435.076,
+   "end": 1448.353,
+   "text": "暂停是必要的，让团队和个人理解。 强化系统各部分，确保能重启训练，使用完整指令。 这是OpenAI会始终坚持的做法，必要时会这么做。我还没见过",
+   "audioFile": "audio-tibo-interview-pod/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1449.053,
+   "end": 1472.301,
+   "text": "我还没见过我们在内部无法高效做出这类决策。 有没有设定明确的目标，必须达到某个点才能恢复暂停？ 它，我们看到时就知道了。这确实是一件。 这属于安全团队的职责范围，他们对此。 这是一个持续争论和探索的过程。但后来他们确实达成了一些明确原则。 当达到这些原则时，我们知道已经处于良好位置",
+   "audioFile": "audio-tibo-interview-pod/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1472.751,
+   "end": 1485.899,
+   "text": "我想回到超高速模式，人们可能低估了这种速度带来的可能性，我们先从。 你们内部哪些应用场景，此前因每秒处理能力不足无法实现？ 我们在高风险场景中使用很多，比如",
+   "audioFile": "audio-tibo-interview-pod/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1486.599,
+   "end": 1506.179,
+   "text": "发生故障时，事件指挥官和响应团队会获得超高速权限，因为每一秒都至关重要。 高风险场景中，之前几乎不会使用超高速模式。 快速。此外这其实是个有趣的现象，那些团队…… 无论是处理关键任务还是自认为在处理关键任务的团队，都会要求超快速。>> 宠物属于这种情况吗？>> 宠物。",
+   "audioFile": "audio-tibo-interview-pod/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1506.629,
+   "end": 1534.447,
+   "text": ">> 是的，宠物。宠物并不属于超高优先级，但我很爱我的宠物，它总在我的屏幕上。 当你四处走动时，总能看到人们宠物的影像，视频通话时也总是这样……每次看到都让我很开心。 目前宠物还不属于关键任务，但我们确实在维护它，我们很照顾我们的宠物。 比如有人在推进一个新想法，他们可能会说：嘿，我觉得这可能是个特别的东西，我们必须尝试。",
+   "audioFile": "audio-tibo-interview-pod/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1534.897,
+   "end": 1552.252,
+   "text": "但周一必须决定是否在开发日包含这个功能，这时候就会说：当然请使用超快速。 人们在是否偏好单线程还是多任务处理上有不同倾向，对于喜欢多任务处理的人…… 超高速工具对他们的帮助有限。>> 但有些人>> 不喜欢频繁切换上下文。",
+   "audioFile": "audio-tibo-interview-pod/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1552.952,
+   "end": 1567.959,
+   "text": "我有ADHD，所以常切换上下文。 这很有趣，我也有ADHD，但不想频繁切换上下文，对我来说很难。 我想专注在两到三个任务上，这就是我为什么对超快速感到兴奋。",
+   "audioFile": "audio-tibo-interview-pod/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1568.659,
+   "end": 1593.734,
+   "text": "我擅长在不同任务间切换并做出大量小决定。但有时我也想专注于一件事。 超高速模式令人愉悦，因为它能让你始终保持在流畅状态。 当工具调用不多或需要大量上下文生成时，效果特别好。比如。 你尝试快速原型设计网站或游戏时，它能迅速生成大量代码。 如果涉及大量工具调用，速度提升可能只有3到4倍",
+   "audioFile": "audio-tibo-interview-pod/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1594.184,
+   "end": 1618.52,
+   "text": "你只会感觉快了3到4倍，无法达到四倍速度。 完整14倍。我了解OpenAI员工有无限令牌，若我拥有无限令牌，我会始终…… 当成本不是首要考虑时，我会直接开启最大参数设置。 内部是这样运作的吗？我们不会向所有人开放超高速模式。 我们保留大量算力给外部用户和客户",
+   "audioFile": "audio-tibo-interview-pod/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1618.97,
+   "end": 1643.454,
+   "text": "OpenAI员工确实有能力消耗全部资源，对吧？ 我们所有生产GPU和超高速算力都将被使用。 某种程度上，我们限制了它，比如我们会考虑对我们来说合理程度。 是的。我们使用它来理解产品，持续改进，实现递归自我优化，但大部分资源都保留给客户。 大部分资源保留给客户。",
+   "audioFile": "audio-tibo-interview-pod/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1644.154,
+   "end": 1652.199,
+   "text": "好的，谢谢。除了OpenAI之外，你们最兴奋的低延迟应用场景是什么？ 这种速度能解锁哪些应用场景？",
+   "audioFile": "audio-tibo-interview-pod/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1652.899,
+   "end": 1676.681,
+   "text": "有趣的是，我特别兴奋的是非文本交互。 你们能在共享画布上操作吗？能创造东西吗？ 能生成想法、图片，选择其中一个，就像选择你的冒险。 快速生成原型草图，实时通过语音或文字调整，立即看到效果。 这种速度让创意过程更流畅，工程师可以快速验证设计。",
+   "audioFile": "audio-tibo-interview-pod/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1677.131,
+   "end": 1691.46,
+   "text": "有时需要思考系统权衡，但可能一分钟就能创建并测试。 这种速度让工程师更深入参与设计流程。 假设超高速服务的价格会比普通速度高很多，你觉得超高速服务会",
+   "audioFile": "audio-tibo-interview-pod/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1692.16,
+   "end": 1695.133,
+   "text": "成为标准配置，还是始终需要支付溢价？",
+   "audioFile": "audio-tibo-interview-pod/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1695.833,
+   "end": 1717.215,
+   "text": "这很有趣。我认为技术发展通常会变得更普及，随着时间推移。 可及性会越来越广。代理完成任务的速度会持续提升，。 我们每月都能看到显著进步。这不仅是推理速度的提升，。 比Terra的token效率更高。下一模型将比Soul显著更高效，正如你所料。我们始终",
+   "audioFile": "audio-tibo-interview-pod/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1717.665,
+   "end": 1740.919,
+   "text": "持续推进，随着时间推移，效率提升。推理硬件方面，我们持续创新。 随着时间推移，事情会变得更快。推理硬件方面，我们持续创新，。 速度也会不断提升。我认为一两年内这些速度会非常接近默认标准，。 但我也认为总会存在一个更高级别，你可以投入更多硬件，",
+   "audioFile": "audio-tibo-interview-pod/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "Matthew Berman",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-A.jpg",
+   "start": 1741.619,
+   "end": 1757.653,
+   "text": "获得额外的性能，但需要付出更高成本。这就像获得一些额外的。 对AI感到担忧的人很多，无论是就业自动化、环境影响，还是这种正在发生的技术发展。它。 这感觉很陌生。您会向更广泛的观众传达哪些鼓励的话语？",
+   "audioFile": "audio-tibo-interview-pod/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1758.353,
+   "end": 1777.897,
+   "text": "我们为全球用户打造产品，与查特里合作，我们非常。 非常重视其效率，这与我们提供的广泛实用性直接相关。 成本越低，您在生活中就能越充分地利用它，获得越多收益。 日常生活中效率极高，比如Luna模型，更小但效率高。",
+   "audioFile": "audio-tibo-interview-pod/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1778.347,
+   "end": 1796.945,
+   "text": "Luna的成本非常低，甚至可以说是极其低廉。 这简直令人震惊。就像你们现在用回复免费提供的功能。他们现在正处于这种免费模式下。 这种无与伦比的智能访问将变得无处不在。 只有通过持续提升效率，才能实现这一目标。",
+   "audioFile": "audio-tibo-interview-pod/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1797.395,
+   "end": 1830.907,
+   "text": "现在处于前沿的技术，六个月后运行成本会大幅降低。 技术会随着时间变得越来越高效，我们专注于广泛普及。 我们直接优化您从中获得的实用价值。你觉得呢。 对于那些甚至第一次尝试AI就感到不安的人，你们会告诉他们什么？如何描绘AI未来帮助世界的愿景？ AI如何帮助世界的未来图景？ 是的，你不需要找得太远，比如Judge PT以非常个人化和深入的方式帮助人们。",
+   "audioFile": "audio-tibo-interview-pod/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1831.357,
+   "end": 1856.483,
+   "text": "很多用户使用它来写作，也用于个人建议或医疗建议，我们推出了健康和财务相关功能。 我经常使用这些工具，感觉获得了很多原本难以获取的支持。 比如让我看病时更有信息量。你无需走太远就能看到它的实用价值。 通过观察他人使用案例获得启发，是了解其价值的好方式。 也许可以开始思考它如何为你带来帮助",
+   "audioFile": "audio-tibo-interview-pod/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "B",
+   "speakerName": "Tibo Sottiaux",
+   "avatarFile": "avatars/tibo-interview-pod/speaker-B.jpg",
+   "start": 1856.933,
+   "end": 1859.973,
+   "text": "考虑如何受益。蒂博，非常感谢。",
+   "audioFile": "audio-tibo-interview-pod/0090.wav"
+  }
+ ]
+}

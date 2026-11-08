@@ -1,0 +1,2355 @@
+{
+ "title": "Jensen Huang:英伟达与 AI 革命 · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 0.0,
+   "end": 30.141,
+   "text": "人类文明史上最具影响力的公司之一。NVIDIA是人工智能革命的引擎。 人工智能革命的引擎，其成功很大程度上归功于黄仁勋的个人意志力。 作为领导者、工程师和创新者的诸多英明决策。这。 是莱克斯·弗里德曼播客，现在，亲爱的朋友们，有请黄仁勋。 你将NVIDIA带入AI新纪元，超越芯片级设计。 转向机架级设计。NVIDIA的成功曾长期依赖",
+   "audioFile": "audio-jensen-huang-nvidia/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 30.591,
+   "end": 51.79,
+   "text": "关于打造最顶尖的GPU，你们至今仍然如此。但如今已扩展了这一极端。 协同设计涵盖图形处理器、中央处理器、内存、网络、存储、电源、散热、软件及机架本身。 机架本身、你们宣布的机柜系统，甚至数据中心。那么让我们谈谈极端协同设计",
+   "audioFile": "audio-jensen-huang-nvidia/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 52.49,
+   "end": 80.728,
+   "text": "没错，感谢这个问题。首先极端协同设计之所以必要。 因为问题已无法通过单台计算机和单块图形处理器加速。 你试图解决的问题是希望计算速度超越计算机数量的限制。 你添加的计算机数量。比如你添加了1万台计算机，但希望速度提升百万倍。 突然需要拆分算法，重新设计算法结构。 需要重构算法，对流水线和数据进行分片处理",
+   "audioFile": "audio-jensen-huang-nvidia/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 81.178,
+   "end": 111.588,
+   "text": "需对模型分片。当以这种方式分布问题时，不仅涉及扩展，更需重新分布问题本身。 这就是阿姆达尔定律的问题，某部分的加速效果取决于其在整体工作负载中的占比。 如果计算占整体问题的50%，即使将计算速度提升至无限次。 整体工作负载的加速效果也仅能提升两倍。 突然发现不仅要分布计算，还需要对流水线进行分片。 同时必须解决网络传输问题",
+   "audioFile": "audio-jensen-huang-nvidia/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 112.038,
+   "end": 145.639,
+   "text": "因为所有计算机都相互连接，大规模分布式计算中。 这些计算机都相互连接。因此，我们在如此大规模的分布式计算中。 这些都成为系统设计的瓶颈。 将工作负载分配到所有这些计算机上是个问题。这只是一个大规模的问题。 这是一个复杂的计算机科学问题。因此我们必须动用所有技术手段。否则。 我们只能线性扩展，或基于摩尔定律的性能扩展。但摩尔定律因登纳德缩放定律的放缓而大幅减速",
+   "audioFile": "audio-jensen-huang-nvidia/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 146.089,
+   "end": 175.632,
+   "text": "这里涉及完全不同的学科领域。我敢肯定每个领域都有专家。 高带宽内存、网络、NVLink、网卡、光模块、铜缆、供电、散热，各领域均有世界级专家。 如何让这些专家齐聚一堂共同解决？这就是为什么我的团队规模如此庞大。 比如如何将这些组件整合到机架中？这个设计整合过程是怎样的？ 第一个问题是：什么是极端协同设计？您需要在整个技术栈中进行优化",
+   "audioFile": "audio-jensen-huang-nvidia/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 176.082,
+   "end": 205.675,
+   "text": "从架构到芯片、系统、系统软件、算法、应用的全栈软件层面。 其次我们讨论的范畴已超越CPU、GPU、网络芯片和交换机。 当然还必须包含供电和散热系统。因为这些计算机的功耗极高。 它们执行大量计算却非常节能。 但总体来看，它们仍然消耗大量电力。因此，第一个问题是：这是什么？第二个问题是：为什么会这样？我们刚刚讨论了原因，",
+   "audioFile": "audio-jensen-huang-nvidia/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 206.125,
+   "end": 237.866,
+   "text": "你希望分配工作负载，以超越单纯增加计算机数量带来的效益。 第三个问题是：如何实现？这正是这家公司的奇迹所在。 当你设计计算机时，需要考虑计算机的操作系统。而当你设计公司时，首先应思考公司要生产什么。 我见过很多公司的组织架构图，看起来都一样，无论是汉堡店、软件公司还是汽车制造商。 这对我来说毫无意义。公司的目标是成为生产输出的机器和系统。",
+   "audioFile": "audio-jensen-huang-nvidia/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 238.316,
+   "end": 270.14,
+   "text": "而这个输出就是我们希望创造的产品。公司的架构设计也应反映其生存的环境。 它几乎直接说明了你应该如何组织公司。我的直属团队有60人。 我无法与他们一一单独沟通，因为这不可能实现。 如果你要完成工作，不可能同时管理60人。 你仍然有60份报告，甚至更多。 大多数明星员工至少都这样认为。 几乎所有员工都有工程背景，涵盖内存和CPU专家",
+   "audioFile": "audio-jensen-huang-nvidia/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 270.59,
+   "end": 274.769,
+   "text": "有光学专家、图形处理器架构师、算法设计师等。",
+   "audioFile": "audio-jensen-huang-nvidia/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 275.469,
+   "end": 287.916,
+   "text": "你们必须时刻关注整个技术栈的设计，进行深入讨论。任何对话都不只是一个人参与，这就是原因。 我不做一对一沟通。我们提出问题后，所有人一起攻关",
+   "audioFile": "audio-jensen-huang-nvidia/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 288.616,
+   "end": 317.138,
+   "text": "我们正在实践极端协同设计。公司始终在进行这种极端协同设计。 即使讨论某个具体组件，比如散热或网络，所有人都会参与并提出意见。 谁觉得无关可随时退出。但那些该参与却未参与的人。 我会公开指出。比如：嘿，快进来参与讨论。 我得指出这一点。正如你所说，NVIDIA是一家适应环境变化的公司。请问具体是指哪个方面？",
+   "audioFile": "audio-jensen-huang-nvidia/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 317.588,
+   "end": 353.406,
+   "text": "能否说明环境何时发生变化，并在早期阶段开始秘密适应？ 从游戏显卡转向深度学习革命，现在开始思考。 将其视为AI工厂。NVIDIA所做的就是生产AI，让我们建立制造AI的工厂。我可以系统推理出这一点，我们已启动。 作为一家加速器公司起步，但加速器的问题在于其应用领域。 过于狭窄。它的好处是能针对特定任务进行极致优化。 任何专家都有这种优势。但过度专业化的问题在于市场覆盖范围必然变窄",
+   "audioFile": "audio-jensen-huang-nvidia/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 353.856,
+   "end": 379.035,
+   "text": "但这是可以接受的。真正的问题在于市场规模决定了研发能力。 而研发能力最终决定了你在计算领域能产生的影响力。 我们最初在Excel中作为特定加速器起步时，始终清楚这将是我们的首个。 这只是一个起点。我们必须找到成为加速计算平台的路径。 但当你转型为计算公司时，通用性会削弱专业优势",
+   "audioFile": "audio-jensen-huang-nvidia/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 379.485,
+   "end": 409.689,
+   "text": "我刻意将两个存在根本矛盾的词组合在一起：计算能力越强。 作为专业领域的深度就越弱，整体计算能力反而受限。 因此我特意将这两个词并置，说明企业必须找到。 一条渐进扩展计算范畴的窄径，同时不放弃专业深度。 我们最重要的专长之一。我们采取的第一步是。 超越加速的下一步是发明了可编程像素着色器，这标志着我们迈向",
+   "audioFile": "audio-jensen-huang-nvidia/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 410.139,
+   "end": 437.251,
+   "text": "可编程性。这是我们首次迈向计算领域的第一步。 第二步，我们为着色器引入了FP32浮点运算单元。 单精度浮点数的引入是计算领域的重要一步，这正是。 所有从事流处理器及其他类型数据流处理器开发的工程师开始关注我们。 他们发现我们的GPU能作为超高算力的计算设备使用，且符合IEEE标准",
+   "audioFile": "audio-jensen-huang-nvidia/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 437.701,
+   "end": 462.976,
+   "text": "我之前在CPU上开发的软件，现在可以迁移到图形处理器上运行。 这促使我们创建CG，将C置于FP32之上，该路径引导我们走向。 最终，CUDA逐步推进。我们将其部署到G Force平台，。 这是一项极具挑战的战略决策，当时导致公司利润大幅下降，但我们仍坚持推进，因为",
+   "audioFile": "audio-jensen-huang-nvidia/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 463.426,
+   "end": 489.867,
+   "text": "我们要成为一家计算公司。计算架构必须兼容所有芯片。 请带我回顾那个决策。当时将CUDA部署在GForce上难以承担，为何仍坚持这么做？能否说明这个决策的考量？ 很好。这可以说是第一个，我认为这是第一个，嗯，。 接近生死存亡的战略决策。 对不了解的人来说，剧透一下，这最终成为公司历史上最出色的决策之一。",
+   "audioFile": "audio-jensen-huang-nvidia/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 490.567,
+   "end": 511.235,
+   "text": "公司做出的最英明决策之一。因此，CUDA最终成为一项不可思议的基石。 你正在设定背景，这个决策最终证明是正确的。 没错。这个决策最终是正确的。当时的情况是，我们发明了。 CUDA拓展了我们加速器能支持的应用场景广度。",
+   "audioFile": "audio-jensen-huang-nvidia/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 511.935,
+   "end": 540.591,
+   "text": "用我们的加速器加速。问题是，我们如何吸引开发者使用CUDA？ 因为计算平台的核心是开发者，开发者不会仅仅因为平台能完成有趣的事情就选择它。 开发者选择平台是因为有庞大的用户基础，。 就像任何人一样，开发者也希望自己的作品能被广泛使用。 软件需要触达大量用户。安装基数实际上是架构中最重要的部分。 架构可能面临巨大批评。例如，",
+   "audioFile": "audio-jensen-huang-nvidia/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 541.041,
+   "end": 569.748,
+   "text": "没有哪个架构像x86那样饱受批评，它被公认为不够优雅的架构。 但正是这个架构定义了当今的计算标准。它证明了这样一个事实：。 许多设计精美的风险架构，。 尽管由顶尖计算机科学家设计，却大多以失败告终。 一个优雅，一个近乎丑陋。但x86架构却存活了下来。 安装基数决定一切。安装基数定义了架构的成败。",
+   "audioFile": "audio-jensen-huang-nvidia/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 570.198,
+   "end": 598.987,
+   "text": "其他架构包括CUDA、OpenCL及多个竞争者。 我们做出的正确决策是：。 最终一切都取决于安装基数。如何才能让新的计算架构普及开来？ 如何将计算架构带入世界？到那时，GeForce已成功。我们当时。 每年销售数百万GeForce显卡，必须将CUDA应用其中。 安装到每台个人电脑中，不管用户是否使用，作为培养用户基础的起点",
+   "audioFile": "audio-jensen-huang-nvidia/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 599.437,
+   "end": 630.984,
+   "text": "培养安装基础的起点。同时，我们还将吸引开发者等。 最终人们会发现。当时个人电脑是主要计算工具，没有云服务。 我们能为每位研究人员、科学家、每所工学院学生配备超级计算机。 你知道，每所大学、每位学生。最终会实现惊人突破。 令人惊叹的事情会发生。问题是，CUDA增加了这款消费级显卡的成本。 导致公司毛利被完全消耗殆尽",
+   "audioFile": "audio-jensen-huang-nvidia/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 631.434,
+   "end": 658.194,
+   "text": "当时公司估值大概80亿美元左右。 后来估值跌至15亿美元，我们陷入低谷。 我意识到CUDA会增加很多成本，但这是我们坚信的。 市值一度跌至15亿美元，我们陷入低谷。 有一段时间，我们艰难恢复，但依靠G-Force推动CUDA发展。我常说。 NVIDIA是G-Force缔造的公司，正是G-Force让CUDA普及",
+   "audioFile": "audio-jensen-huang-nvidia/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 658.644,
+   "end": 692.221,
+   "text": "研究人员和科学家们在G-Force上发现CUDA，因为当时他们都。 本身就是游戏玩家。而且很多人在大学实验室里本就自行组装PC。 他们甚至自己用PC组件搭建集群。正是这种自发的实践，逐渐形成了深度学习革命的平台基础。 那也是个关键的转折时刻。你还记得当时那些会议讨论吗？当公司决定孤注一掷时。 我必须向董事会清晰阐明我们的目标。管理层清楚知道我们的毛利将被压缩",
+   "audioFile": "audio-jensen-huang-nvidia/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 692.671,
+   "end": 721.558,
+   "text": "当时管理团队意识到，我们的毛利率将面临巨大压力。可以想象一个场景。 利润率将被压榨，G-Force或将独自承担CUDA的全部成本。 他们只愿支付特定价格，与成本无关。因此我们决定。 将成本提升50%，而当时我们是35%毛利率的公司。 这确实是个艰难的决定，但可以预见未来这将应用于工作站和超级计算机，以及在那些领域中发挥重要作用。",
+   "audioFile": "audio-jensen-huang-nvidia/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 722.008,
+   "end": 733.247,
+   "text": "通过细分市场，我们或许能获取更多利润。但要真正负担得起，需要十年时间。 但这需要与董事会进行说服性对话，从心理层面让他们信服。",
+   "audioFile": "audio-jensen-huang-nvidia/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 733.947,
+   "end": 747.558,
+   "text": "因为NVIDIA持续押注未来，尤其在关键领域。 现在某种程度上，我们正在定义未来。我几乎想了解你们是如何做出这些决策的，让公司敢于如此跨越式发展。",
+   "audioFile": "audio-jensen-huang-nvidia/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 748.258,
+   "end": 778.838,
+   "text": "首先，我受好奇心驱动。在某个时刻，会出现一个说服我的推理系统。 这个系统会清晰地告诉我，某种结果必然会发生。 当我确信这一点时，就会在脑海中构建出那个未来。 你知道，当你真正相信某个未来时，它就会变得极具说服力。 它必然会发生，中间必然充满痛苦，但你必须坚持自己的信念。 因此你先构想未来，然后从工程角度将其具现化。",
+   "audioFile": "audio-jensen-huang-nvidia/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 779.288,
+   "end": 807.959,
+   "text": "是的，你还要推理如何实现目标，论证为何必须存在这样的技术。 我们都在进行这样的推理，管理团队也会反复推敲论证。 关于所有我们花了很多时间思考的人。接下来的部分可能涉及技能，领导层通常会…… 领导层通常保持沉默，或者他们了解某些事情后会发布宣言，仿佛是新的一年。到了年底，我们又会有一个全新的计划…… 全新计划、大规模裁员、组织大调整、新使命",
+   "audioFile": "audio-jensen-huang-nvidia/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 808.409,
+   "end": 833.396,
+   "text": "全新标志。这类事情我们从不做，我从不这样行事。 当我了解某事并开始影响我的思考方式时，我会让它变得非常…… 让周围的人都清楚，这很有趣，这将带来影响。 这将产生影响。我逐步推理，虽然我通常已有决定，但我会抓住每一个机会。 外部信息、新见解、新发现、新工程、新启示",
+   "audioFile": "audio-jensen-huang-nvidia/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 833.846,
+   "end": 860.816,
+   "text": "新里程碑出现。我会利用这些机会塑造他人的信念。 系统。我每天都在这么做，与董事会、管理层、员工一起。 与管理层、员工一起，我试图塑造他们的信念体系。 当我提出收购Mellanox时，所有人都觉得显而易见。 我们绝对应该在那天，当我对大家说，伙计们，让我们全力投入。 深度学习领域。让我告诉你们为什么，我早已在公司内部",
+   "audioFile": "audio-jensen-huang-nvidia/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 861.266,
+   "end": 887.37,
+   "text": "各个部门铺设了基础，每个部门、每个人，许多人可能已经。 听到了一些信息。公司大部分员工都听到了，当然只是零散的片段。 当我宣布时，大家基本都认同了其中的许多内容。在很多方面，我喜欢。 在宣布这些事情时，我想象员工们可能会说，你知道的，。 黄仁勋，你为什么这么晚才宣布？事实上，我早已在塑造他们的信念系统",
+   "audioFile": "audio-jensen-huang-nvidia/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 887.82,
+   "end": 921.816,
+   "text": "以及领导层。有时看起来你是在幕后领导，但你早已塑造了他们的信念，直到我宣布时获得百分之百的支持，。 这正是你想要的。你希望所有人达成共识，否则当我们宣布全力投入深度学习时，大家会说，你到底在说什么？ 当你宣布全力投入某件事时，你的管理团队、董事会、员工、客户都会疑惑，这到底从哪来的？ 这简直疯狂。GTC实际上，若回溯过往，那些主题演讲，。 我也在塑造行业合作伙伴的信念系统，并利用这些来推动",
+   "audioFile": "audio-jensen-huang-nvidia/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 922.266,
+   "end": 940.41,
+   "text": "员工的信念体系。宣布时。 比如我们刚发布Grok，迟到了。 两年半来一直在讨论关键步骤。 你们会说他们讨论了两年半。 我们不制造计算机也不构建云。 我们是计算平台公司没人能从我们这里买东西",
+   "audioFile": "audio-jensen-huang-nvidia/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 940.86,
+   "end": 956.941,
+   "text": "我们垂直设计整合优化但随后。 在每一层开放平台供其他公司集成。 产品、服务、云、超级计算机及原始设备制造商电脑。 我必须先说服他们才能实现目标。 当我的产品准备就绪时他们会问",
+   "audioFile": "audio-jensen-huang-nvidia/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 957.391,
+   "end": 989.508,
+   "text": "你长期坚信扩展定律这个信念还存在吗。 是的。我们有更多扩展定律。你已列出四个，含预训练。 后训练阶段、测试阶段和智能体扩展。当你思考未来时，你认为。 在长期未来和短期未来中，你最担心的阻碍因素是什么？这些是你必须克服的，才能持续扩展。 我们可以回顾人们曾认为的阻碍因素。起初我们。 是第一个扩展定律，即预训练阶段。人们当时认为，数据量会限制AI的智能水平",
+   "audioFile": "audio-jensen-huang-nvidia/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 989.958,
+   "end": 1018.694,
+   "text": "这个扩展定律非常重要。模型越大，所需数据越多，AI就越智能。 这就是预训练阶段。伊利亚·苏斯科弗曾说，预训练阶段的数据已经用尽。 行业一度恐慌，认为这是AI的终点。 当然，这显然不正确。我们将继续增加训练数据量。 其中很多数据可能是合成数据。这同样让很多人困惑。 人们没有意识到，他们已经忘记了一个事实",
+   "audioFile": "audio-jensen-huang-nvidia/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1019.144,
+   "end": 1052.69,
+   "text": "我们训练模型时所使用的数据，大部分是教给每个。 其他方面，它们通过合成数据相互告知。你知道，我之所以说是合成的，是因为它并非自然产生。 它源于人工创造。我正在使用它，对其进行修改、增强，并重新生成。其他人也会使用它。 因此，我们现在达到一个阶段，AI能够基于真实数据进行增强，合成生成大量数据。 这一阶段属于训练后阶段，数据量持续扩大。",
+   "audioFile": "audio-jensen-huang-nvidia/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1053.14,
+   "end": 1080.441,
+   "text": "未来可用于训练模型的人类生成数据将越来越少。 我们用于训练模型的数据量将不断增长，直至突破限制。 当数据主要来自合成时，训练瓶颈将从数据转向算力。 接下来是测试阶段。我仍记得人们曾告诉我，推理很简单。 预训练很困难，这些巨型系统需要处理。推理必须简单，因此推理芯片会很小。",
+   "audioFile": "audio-jensen-huang-nvidia/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1080.891,
+   "end": 1106.332,
+   "text": "它们不像NVIDIA的芯片，那些会很复杂昂贵。未来推理将...。 每个人都能自行制造芯片，这在逻辑上始终说不通。 因为推理本质上是...。 思考。我认为思考很难，比阅读困难得多。预训练是。 仅仅是记忆和泛化，寻找关系中的模式。你，。 你在反复阅读与思考、推理、解决问题之间徘徊",
+   "audioFile": "audio-jensen-huang-nvidia/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1106.782,
+   "end": 1131.677,
+   "text": "未探索经验、新经验，及分解为…… 可解决的模块，我们通过第一性原理推理或其它方法处理。 通过以往案例、经验，或仅凭直觉。 探索、搜索并尝试不同方法，整个过程的后续步骤。 测试时间扩展，推理关乎思考与推理。它。 涉及规划、搜索，如何实现计算轻量？",
+   "audioFile": "audio-jensen-huang-nvidia/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1132.127,
+   "end": 1158.639,
+   "text": "我们当时完全正确。测试时间扩展计算密集度极高，现在进入推理阶段，测试时间扩展问题是什么？ 除此之外？显然，我们已创建一个自主个体，还有…… 一个自主代理拥有我们现已开发的大语言模型。 但测试期间，该智能体系统会进行研究，频繁访问数据库并继续执行。 并使用工具。其中最重要的是生成并衍生出",
+   "audioFile": "audio-jensen-huang-nvidia/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1159.089,
+   "end": 1187.898,
+   "text": "大量子代理，组建大型团队，扩展更易。 英伟达通过雇佣更多员工实现扩展，而非自身扩展。下一个扩展定律是代理型扩展。 扩展定律。这类似于持续复制AI。我们能快速生成代理，速度之快。 您想分离代理。我有四项扩展定律。 使用智能体系统，将生成大量数据。 经历。部分令人惊叹，值得记忆。那些数据",
+   "audioFile": "audio-jensen-huang-nvidia/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1188.348,
+   "end": 1214.303,
+   "text": "回到预训练，我们记忆、泛化并优化。 将其微调回训练后阶段，通过测试时进一步增强。 并将代理、自主系统应用于行业。因此这一循环。 这个周期将持续下去。归根结底，智能的发展。 扩展依赖于计算。但其中有个棘手之处需要预判和。 预测，某些组件需要不同硬件才能高效实现",
+   "audioFile": "audio-jensen-huang-nvidia/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1214.753,
+   "end": 1241.486,
+   "text": "必须预判AI创新方向。例如专家混合与稀疏性。完美。 硬件无法临时转向。必须预判未来形态。这非常困难，对吗？ 例如，AI模型架构每六个月就会出现重大革新，。 对吗？系统架构和硬件架构则每三年更新一次。 需预判两到三年后趋势。可采取多种方式，首先我们可内部研究",
+   "audioFile": "audio-jensen-huang-nvidia/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1241.936,
+   "end": 1272.586,
+   "text": "开展基础研究和应用研究。我们自主构建模型，拥有实践经验。这是协同设计的一部分。 我们是唯一与全球所有AI公司合作的AI公司。我们努力了解行业面临的挑战。 你听到行业里的低语了吗？广告实验室？ 没错。必须向所有人学习。最后一点是。 架构需灵活，能随趋势调整。其中一点是。 CUDA的优势在于，一方面它是强大的加速器，另一方面",
+   "audioFile": "audio-jensen-huang-nvidia/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1273.036,
+   "end": 1298.3,
+   "text": "确实非常灵活。这种平衡，专业化与...之间的惊人平衡。 否则无法提升CPU加速以适应变化。 算法。这非常关键。CUDA的韧性正源于此。 一方面，持续改进。当前CUDA 13.2，持续演进。 架构速度足够快，能够跟上现代艺术算法。 例如，当专家混合出现时，这就是我们有...的原因",
+   "audioFile": "audio-jensen-huang-nvidia/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1298.75,
+   "end": 1328.01,
+   "text": "改用NVLink 72而非8，现在可以承载4万亿到10万亿参数的模型。 将其置于单一计算域，如同运行于一块GPU。人们可能未意识到。 注意，我之前提过，但如果你观察格蕾丝·布莱克韦尔机架的架构，它完全是。 专注于处理大语言模型，一年后突然发现一个…… 维拉·鲁宾机架配备存储加速器，搭载全新CPU维拉。",
+   "audioFile": "audio-jensen-huang-nvidia/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1328.46,
+   "end": 1354.044,
+   "text": "配备VeraRubin和NVLink 72运行大语言模型，新增GROC机架系统。 整个机架系统与上一代完全不同。它配备了。 大量全新组件。原因在于上一代系统设计用于运行。 MOE、大语言模型推理。这一代用于运行智能体并直接调用工具。 显然，系统设计必须在某些项目之前完成。",
+   "audioFile": "audio-jensen-huang-nvidia/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1354.494,
+   "end": 1392.274,
+   "text": "所以本质上你们是在预见未来？这种预见来自什么？来自行业动向的洞察？ 不，这比那容易。你只需进行推理。首先，你只需推理。 无论发生什么，要让大语言模型成为数字员工，。 让我们用这个比喻。假设我们希望LLM成为数字员工。它需要具备哪些能力？ 它必须访问真实数据。这就是我们的文件系统。它需要能够进行研究。 它不可能知道所有知识。我不想等到AI通晓过去、现在和未来所有知识才让它投入使用。",
+   "audioFile": "audio-jensen-huang-nvidia/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1392.724,
+   "end": 1423.692,
+   "text": "因此，我还不如直接让它。 去做研究。显然，若想助我，得用我的工具。很多人会。 人工智能将彻底颠覆软件。我们不再需要软件，也不需要工具。 不再。荒谬。用思想实验。你就可以。 坐在那里，喝杯威士忌，思考这些事。它将变得…… 完全显而易见。例如如果我要创造最出色的智能体，我们能。 设想未来十年，假设是人类或机器人。若其要成为",
+   "audioFile": "audio-jensen-huang-nvidia/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1424.142,
+   "end": 1453.573,
+   "text": "创建后，人类还是机器人更可能进入我家使用我的工具？ 它能否完成所需工作？还是说这只手在某个瞬间变成了十磅重的锤子？ 另一场景成手术刀，煮水用微波。 它是否更可能直接使用微波炉？首次接触微波炉时可能不会使用，但没关系，设备已联网。 连接到互联网。它读取微波炉说明书，立刻成为专家。",
+   "audioFile": "audio-jensen-huang-nvidia/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1454.023,
+   "end": 1482.939,
+   "text": "因此它确实如此使用。我认为我刚才描述的，几乎涵盖了所有。 OpenClaw特性：使用工具访问文件。 它能够进行研究，拥有IO子系统。当你完成推理后。 通过这种方式对它进行推理后，你会惊觉对未来计算的影响。 深具颠覆性。原因在于我认为我们刚刚重新发明了计算机。 那么，我们何时开始思考这个问题？何时开始思考？",
+   "audioFile": "audio-jensen-huang-nvidia/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1483.389,
+   "end": 1512.246,
+   "text": "如果查看我在GTC展示的OpenClaw原理图，会发现两年前就已存在。 两年前在GTC，我曾讨论过与今日欧朋克拉完全契合的智能体系统。 当然，诸多条件必须同时满足。首先，。 我们需要这些模型，包括爪、GPT等，达到一定能力水平。 因此它们的创新突破和持续进步至关重要。 当然，必须有人创建一个足够稳健的开源项目。",
+   "audioFile": "audio-jensen-huang-nvidia/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1512.696,
+   "end": 1541.769,
+   "text": "足够完整，使我们都能将其应用于实际场景。 投入应用。我认为OpenClaw对智能体系统所做的，就像ChatGPT对生成系统所做的。这确实是个重大突破。 确实是个特殊时刻。我不确定为何引起全球关注，但它超越了云代码等工具，因为消费者可直接使用。 当然。但其中也有许多氛围因素，彼得，我和他做过播客，",
+   "audioFile": "audio-jensen-huang-nvidia/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 1542.469,
+   "end": 1571.472,
+   "text": "他是个非常优秀的人。部分原因在于代表这项技术的人本身，也与网络迷因有关，毕竟我们都在探索中。 当拥有如此强大技术时，如何安全地共享数据是个严肃且复杂的问题。 作为文明和个体，我们正在寻找平衡。我们立刻采取行动，派出大量安全专家协助。 这个叫OpenShell的工具已整合进开放爪。NVIDIA还推出了尼莫爪，确实如此。",
+   "audioFile": "audio-jensen-huang-nvidia/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1572.172,
+   "end": 1595.471,
+   "text": "安装非常简单，确保安全。我们只授予智能体系统三项权限中的两项。 系统可执行代码并进行外部通信。若仅保留两项能力，就能保障安全。 在两项能力中，我们还根据企业授予的权限进行访问控制。 然后连接到企业已有的策略引擎。 尽力帮助OpenClaw变得更强大。",
+   "audioFile": "audio-jensen-huang-nvidia/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1595.921,
+   "end": 1630.016,
+   "text": "你刚才解释了我们过去长期面临的障碍，认为难以解决，但已克服。展望未来，你认为可能遇到的障碍是什么？ 显然，我们需要算力。那么，算力扩展的主要障碍会是什么？ 电力是关键，但并非唯一挑战，这正是我们大力推动极端协同设计的原因。 通过极端协同设计，我们每年都能将每瓦特秒的令牌处理量提升数量级。 过去十年，摩尔定律使计算能力提升了约100倍。",
+   "audioFile": "audio-jensen-huang-nvidia/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1630.466,
+   "end": 1655.477,
+   "text": "但我们实际上将计算能力提升了百万倍。我们将继续通过极端协同设计实现这一目标。 能效比直接影响公司营收，也影响工厂营收。 我们将把能效比推向极限，以尽可能快速降低令牌成本。 我们的计算机价格在上涨，但令牌生成效率提升速度更快。 令牌成本每年下降一个数量级，这是显而易见的趋势。",
+   "audioFile": "audio-jensen-huang-nvidia/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1655.927,
+   "end": 1661.788,
+   "text": "电力是关键挑战。突破电力瓶颈的方法是提升每秒每瓦特的令牌处理效率。",
+   "audioFile": "audio-jensen-huang-nvidia/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 1662.488,
+   "end": 1683.136,
+   "text": "如何获取更多电力也是一个复杂问题。你曾提到小型模块化核能发电厂，这确实是个难题。 各种能源创意。这会让你夜不能寐吗？人工智能供应链瓶颈，如ASML的极紫外光刻机。 台积电先进封装技术，如COOS和SK海力士高带宽内存。",
+   "audioFile": "audio-jensen-huang-nvidia/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1683.836,
+   "end": 1713.373,
+   "text": "一直如此。我们一直在努力解决。历史上没有任何公司能以我们这样的规模增长。 以我们当前速度加速增长。这令人难以置信。 在人工智能计算领域，人们甚至难以理解这一现象。我们正在扩大市场份额。 因此上下游供应链对我们至关重要。 我花了很多时间向合作的CEO说明，哪些动态因素正在发生。 让增长持续甚至加速，这也是邀请众多CEO参会的原因之一。",
+   "audioFile": "audio-jensen-huang-nvidia/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1713.823,
+   "end": 1739.375,
+   "text": "我方右侧几乎全是上游IT产业及下游的CEO。 整个下游基础设施行业，当时有数百位CEO。 我从未见过如此规模的CEO参会场面。部分原因在于。 现在我向他们阐述增长驱动因素。 不久的将来会发生什么。我同时描述了下一步方向，以便他们。 能利用这些信息和动态来指导投资决策",
+   "audioFile": "audio-jensen-huang-nvidia/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1739.825,
+   "end": 1767.966,
+   "text": "我以告知员工的方式向他们说明。随后我会亲自前往。 告知他们本季度、明年、后年将发生的事情。 明年，这些事将发生。如果观察的话，。 全球第一大DRAM曾用于数据中心CPU的DDR内存。 三年前说服多位CEO，尽管当时高带宽内存。 仅被超级计算机少量使用，但未来将成为数据中心主流内存",
+   "audioFile": "audio-jensen-huang-nvidia/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1768.416,
+   "end": 1795.766,
+   "text": "这将成为未来数据中心的主流内存。起初听起来荒谬，但几位CEO相信我，决定投资生产高带宽内存。 另一种适合数据中心的内存是手机用的低功耗内存。 我们希望将其用于数据中心超级计算机，他们却坚持用手机内存。 我向他们解释这两种内存的差异。 LPDDR5、HBM4出货量惊人，三者均创历史纪录。",
+   "audioFile": "audio-jensen-huang-nvidia/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1796.216,
+   "end": 1822.655,
+   "text": "这些是拥有45年历史的公司。我的职责之一就是。 传递信息、塑造认知、激发灵感。 你不仅在勾勒未来、激励英伟达不同部门的。 工程师，更在构建未来供应链。你与台积电、阿斯麦展开上下游对话。 上下游协作。通用电气、卡特彼勒就是我们的下游客户。 没错。整个半导体行业充满令人难以置信的",
+   "audioFile": "audio-jensen-huang-nvidia/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1823.105,
+   "end": 1851.443,
+   "text": "复杂工程。供应链的精密程度令人胆战心惊。 但不可思议的是，它却能正常运转。 深奥的科学、精密的工程、惊人的制造工艺。 制造环节已高度自动化。我们有数百家供应商为。 130万组件机架提供技术支持。每架重达1.3吨。 数百万组件，薇拉·鲁宾机架有200家供应商。你没将此列为夜不能寐的问题，很有趣。",
+   "audioFile": "audio-jensen-huang-nvidia/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1851.893,
+   "end": 1883.121,
+   "text": "但已消除所有障碍，检查无误后可安心入睡。 我说，好吧。我可睡，但得想想。分析下，什么重要。 对我们而言？让我们分析。因系统架构已从原始设计改变。 DGX1通过MVLink实现72机架规模计算。这是什么意思？ 转向软件？这对工程意味着什么？这对我们的设计和测试方式又意味着什么？还有。 这是否影响供应链？其中一点是，我们转向了超级",
+   "audioFile": "audio-jensen-huang-nvidia/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1883.571,
+   "end": 1907.688,
+   "text": "数据中心计算机集成至超级计算机制造。 供应链。如果你这么做，也必须意识到你要转移一个。而且，。 假设你要建设的数据中心总占地面积。 你希望同时运行50十亿瓦的超级计算机。 制造这50吉瓦超算需要一周时间。然后每周在。 供应链方面，超级计算机需要10亿瓦的电力。因此，我们需要",
+   "audioFile": "audio-jensen-huang-nvidia/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1908.138,
+   "end": 1940.093,
+   "text": "供应链需要提升其电力，以用于构建和测试超级计算机。 MVLink 72在供应链中构建超级计算机，我发货前就已就绪。 每次每机架运输两到三吨。过去它们以零部件形式运输。 我们曾在数据中心内组装，但如今MVLink 72密度太高。 我需要亲自走访供应链，与合作伙伴沟通。 我告诉他们，过去我们这样建DGX，现在继续用这种方式，效果会更好。",
+   "audioFile": "audio-jensen-huang-nvidia/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1940.543,
+   "end": 1963.0,
+   "text": "因为推理市场即将迎来拐点，这将是一个巨大市场。 我先向他们说明情况，解释为何会发生这些变化。 要求他们各自进行数十亿美元的资本投资。 我尊重他们，给予充分机会质疑我，用第一性原理进行推理。 通过第一性原理进行推理，最终达成共识，建立共同的未来愿景",
+   "audioFile": "audio-jensen-huang-nvidia/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 1963.45,
+   "end": 1974.027,
+   "text": "是的。不过，您是否担心某些瓶颈？供应链中最大的瓶颈是什么？您担心吗？阿斯麦设备、电动汽车工具？您……",
+   "audioFile": "audio-jensen-huang-nvidia/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 1974.727,
+   "end": 2008.977,
+   "text": "担心台积电封装技术扩展速度吗？ 正如你所说，你们不仅增长极快，还在加速。因此，供应链每个环节显然都是瓶颈，必须…… 扩大规模。你们和他们讨论过吗？比如，如何更快地扩大？你们担心吗？不，因为已经告诉他们我的需求。 他们明白我的需求，告诉我他们会怎么做。我相信他们所说的。有趣。是的。很高兴听到。所以也许如果我们能。 多关注能源问题，您对解决它有什么期望？",
+   "audioFile": "audio-jensen-huang-nvidia/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2009.677,
+   "end": 2032.715,
+   "text": "我想讨论的一个领域，我们深入探讨并了解...。 消息发出。我们的电网设计用于最坏情况条件，一些...。 余量。嗯，99%时间远未达最坏情况，因最坏情况。 条件涵盖冬季数日、夏季数日及极端天气，大部分时间。 我们远未达到最坏情况，可能运行在峰值的60%左右。",
+   "audioFile": "audio-jensen-huang-nvidia/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2033.165,
+   "end": 2057.776,
+   "text": "因此，99%时间电网有冗余电力却闲置。 保持待命状态，以防万一需要时，医院、基础设施和机场等必须正常运行。 因此，我有个问题，我们是否能帮助他们理解并制定。 合同协议并设计计算机架构系统、数据中心，使得。 当社会基础设施需要最大功率时，数据中心会减少负载",
+   "audioFile": "audio-jensen-huang-nvidia/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2058.226,
+   "end": 2081.92,
+   "text": "但这种情况非常罕见。此时我们或启动备用发电机，或让计算机转移至其他任务。 或直接降低运行速度。我们可降低性能，减少功耗。 以换取略微增加的延迟响应，当有人需要答案时。 这种使用计算机的方式，这种构建数据中心的方式。 而非追求100%持续运行和严苛的合同条款",
+   "audioFile": "audio-jensen-huang-nvidia/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2082.37,
+   "end": 2105.766,
+   "text": "正在给电网带来巨大压力，迫使它们突破当前最大负荷。 这点讨论得太少。那么是什么阻碍了这一进程？是法规还是官僚主义？ 我认为是贯穿整个链条的问题，始于终端客户。 对数据中心提出要求，必须始终可用。好的，所以最终。 客户期望完美。现在，要实现这种完美，需要结合备用",
+   "audioFile": "audio-jensen-huang-nvidia/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2106.216,
+   "end": 2145.521,
+   "text": "发电机和电网供应商来实现完美。因此，每个人都需要达到六个九。 六个九。嗯，我认为，首先，现在我们应当让每个人都明白，当客户。 客户提出这些需求时，数据中心运营团队有人与首席执行官脱节。我敢打赌首席执行官并不知情。我将与所有首席执行官沟通。 首席执行官们可能没注意合同。因此，每个人都。 都想签最好的合同，当然，他们会去云服务提供商那里。 合同，两位合同谈判者，我现在就能想象他们正在谈判",
+   "audioFile": "audio-jensen-huang-nvidia/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2145.971,
+   "end": 2185.002,
+   "text": "这些多年合同，双方都想要最好的合同。结果，云服务提供商就必须。 去和公用事业公司谈判，并期望九个九，六个九。因此，我认为。 第一件事就是确保所有客户CEO意识到他们所要求的。 他们要求的是什么。现在，第二件事是我们必须建造能够优雅降级的数据中心。因此，如果电力，如果电网的公用事业告诉我们，听着，我们必须支持你。 降低到约80%。我们说这完全没问题，我们只需调整。 工作负载。确保数据不丢失，同时减少计算速度和能耗",
+   "audioFile": "audio-jensen-huang-nvidia/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2185.452,
+   "end": 2209.668,
+   "text": "关键任务负载的服务质量会略有下降。 立即转移到其他地方。所以任何仍保持100%运行的数据中心。 工程难题是数据中心智能动态分配电力。 只要遵循物理基本定律就能实现。 我认为没问题。你刚才提到的第三点是什么？第二点是数据中心。 第三点是能源公司也要认识到这是个机会",
+   "audioFile": "audio-jensen-huang-nvidia/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2210.118,
+   "end": 2228.297,
+   "text": "与其说需要五年提升电网能力。 如果你愿意接受这种电力保障等级。 我下个月就能以这个价格提供电力。 如果能源公司能提供更多电力承诺段。 是的，但目前电网浪费严重，必须解决。你曾高度评价埃隆和XAI在孟菲斯的成就。",
+   "audioFile": "audio-jensen-huang-nvidia/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2228.997,
+   "end": 2244.846,
+   "text": "科洛苏斯超级计算机可能仅用四个月建成，现拥有20万块图形处理器。 且增长迅速。是否有可谈及的，以理解他。 这种方法对所有数据中心创建者都有指导意义，能够启用。 这种成就，他的工程方法，整体管理方式",
+   "audioFile": "audio-jensen-huang-nvidia/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2245.546,
+   "end": 2266.573,
+   "text": "建设方面，一切。首先，埃隆涉足众多领域，但他在…… 也是一位出色的系统架构师。他能够跨学科思考，。 他显然推动一切，质疑他们领先之处是否必要？ 第二点，必须这样做吗？数据是否有，是否有？ 为何这么久？他拥有质疑一切的能力。",
+   "audioFile": "audio-jensen-huang-nvidia/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2267.023,
+   "end": 2293.445,
+   "text": "简化至必要最小，无法再。 还有其他东西被释放出来。然而，必要能力。 产品保留了这一点？他极其极简主义，几乎到了极致。他确实。 在系统层面实现。我也很欣赏他始终亲自参与，。 他始终出现在行动一线。你知道，只要有问题，。 他就会直接到现场，你把问题指给他看。当你把所有这些结合起来",
+   "audioFile": "audio-jensen-huang-nvidia/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2293.895,
+   "end": 2324.246,
+   "text": "就能克服很多过去的问题，这就是我们一贯的做法。说实话，。 我一直在等他们。大家都有很多借口，然后。 当你以如此紧迫感亲自行动时，会带动所有人同步紧迫，每个供应商都有大量客户在跟进。 每个供应商都有大量项目在进行，而他让这些项目都。 将自己列为所有其他项目的最高优先级。他通过实际行动证明这一点。我参加过很多这样的会议，",
+   "audioFile": "audio-jensen-huang-nvidia/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2324.946,
+   "end": 2351.761,
+   "text": "很少有人会问：这个过程能否大幅加速？为什么必须这么耗时？ 这往往变成一个工程问题。我记得有一次和他在一起时，。 他亲自动手全程参与，教工程师如何将线缆插入机架，还和现场工程师一起实操。 试图理解这一过程是怎样的？通过每个环节逐步建立直觉，从而减少错误。 数据中心，你立刻能直观感受到详细规模，然后在……",
+   "audioFile": "audio-jensen-huang-nvidia/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2352.211,
+   "end": 2366.28,
+   "text": "系统规模的低效之处。逐步提升效率。还有强力手段，彻底执行。 不同。消除所有障碍。NVIDIA极端系统协同设计方法，是否与埃隆的系统方法有相似之处？",
+   "audioFile": "audio-jensen-huang-nvidia/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2366.98,
+   "end": 2393.007,
+   "text": "工程？协同设计是终极系统工程问题。我们以此为原则开展工作，其他方面。 我们做的事，这是一套哲学、思想与状态。 我想，这是30年前我开始的方法，称为速度。 光速不仅关乎其本身，可能只是简写。 物理能做什么的极限，以及一切。 我们将其与光速、内存速度、计算速度进行对比",
+   "audioFile": "audio-jensen-huang-nvidia/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2393.457,
+   "end": 2421.525,
+   "text": "算力、成本、时间、人力、制造周期。以及，当您。 考虑延迟与吞吐量，当权衡成本与吞吐量时，成本。 与容量相比，所有这些因素，你都要以光速为基准进行测试，以实现。 分别测试这些不同限制。但当你综合考虑时，你会发现。 你必须做出妥协，因为实现极低延迟的系统与低成本、高吞吐量的系统在架构上存在根本差异",
+   "audioFile": "audio-jensen-huang-nvidia/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2421.975,
+   "end": 2456.438,
+   "text": "但你更想知道，实现高吞吐量的系统的光速限制是多少。 实现低延迟系统的光速限制是多少。当考虑整体系统时，你可以做出权衡。因此我要求所有人。 思考第一性原理，思考物理极限，思考这些基本限制。 在采取任何行动之前，先明确所有事物的物理极限。然后我们。 将所有测试都基于这些极限进行。这种思维方式非常有效。 我不喜欢另一种方法，即持续改进。持续改进的问题在于",
+   "audioFile": "audio-jensen-huang-nvidia/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2456.888,
+   "end": 2484.678,
+   "text": "首先应以光速思维为基准，从第一性原理出发进行设计，仅受物理定律限制。 在此之后，当然可以随时间改进。但我不喜欢。 有人告诉你：现在需要74天完成，我们能帮你缩短到72天。我宁愿将所有内容重新从零开始。 首先，告诉我为什么最初是74天。让我们先了解当前的可行性。如果我要从零开始构建它，",
+   "audioFile": "audio-jensen-huang-nvidia/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2485.128,
+   "end": 2515.721,
+   "text": "需要多长时间？通常你可能会惊讶，答案可能是六天。剩下的。 从六天到74天的差距可以通过合理妥协、成本削减等来解释，。 各种因素，但至少你知道这些因素。现在你已经了解。 一旦确认六天可行，从74天到六天的讨论会出乎意料地高效。 面对如此复杂的系统，有时简单反而是有效的策略。 启发式方法去尝试。如果我能直接使用，你那个特别的鲁本舱。",
+   "audioFile": "audio-jensen-huang-nvidia/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2516.421,
+   "end": 2550.299,
+   "text": "宣布的内容令人震撼，七种芯片、七种类型、五种定制用途。 构建40种机架，1.2千万亿晶体管，近2万块NVIDIA芯片，1100个Ruben。 60百亿亿次浮点运算、每秒10PB带宽。这只是一个单元。 这只是一个单元。没错，这只是一个单元。也就是说，你还有…… 1300块芯片，4000磅重量被压缩进机架中。 一个19英寸机柜。Lex，我们大概能生产200个这样的机柜",
+   "audioFile": "audio-jensen-huang-nvidia/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2550.749,
+   "end": 2560.921,
+   "text": "仅从数量上看，不同组件的种类就令人咋舌，但简单化似乎难以实现。 但这是不是你们在设计时会参考的指标？",
+   "audioFile": "audio-jensen-huang-nvidia/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2561.621,
+   "end": 2587.479,
+   "text": "我最常说的是：我们需要尽可能复杂，但也要尽可能简单。 但所有这些复杂性是否都是必要的？我们需要测试和挑战这一点。 而之后的所有额外复杂性，都是不必要的，但半导体行业…… 半导体行业整体而言，但NVIDIA正在做的，是其中一些最伟大的工程。 这些系统是工程奇迹，是全球最复杂的计算机。工程团队堪称史上最强。",
+   "audioFile": "audio-jensen-huang-nvidia/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2587.929,
+   "end": 2603.368,
+   "text": "竞争激烈，但不确定是否像工程团队的奥运会。TSMC的工程能力令人惊叹，ASML在各规模上表现卓越，但NVIDIA将迎战。 这些顶尖团队如同奥运冠军齐聚一堂，必须直接向您汇报。",
+   "audioFile": "audio-jensen-huang-nvidia/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2604.068,
+   "end": 2631.126,
+   "text": "您最近访问了中国。中国在技术领域取得巨大成功，您认为原因是什么？ 您最近访问了中国。中国在技术领域取得巨大成功，您认为原因是什么？ 了解过去十年中国如何建成如此多世界级的。 世界级公司、顶尖工程团队以及孕育众多创新产品的技术生态系统。 如此多令人惊叹的产品？有很多原因，首先让我们从",
+   "audioFile": "audio-jensen-huang-nvidia/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2631.826,
+   "end": 2664.071,
+   "text": "先看一些数据：全球50%的AI研究人员来自中国（误差约±5%），且主要在中国。 虽然许多人才已来到这里，但中国仍保留着顶尖的研究力量。 他们的科技产业恰好在移动云时代崛起，通过软件开发方式实现技术突破。 这个国家拥有卓越的科学数学教育体系，培养出大量高素质人才。 其科技产业诞生于软件黄金时代，对现代软件开发高度适应",
+   "audioFile": "audio-jensen-huang-nvidia/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2664.521,
+   "end": 2688.262,
+   "text": "中国并非单一经济体，而是由众多省份城市组成的竞争网络。 各地市长相互竞争催生了大量电动汽车和AI企业，几乎每个领域都有众多公司。 他们不断涌现新企业，这种内部激烈竞争最终。 淬炼出令人惊叹的顶尖企业。 他们还有一个以家庭为先、朋友次之、公司最后的社会文化",
+   "audioFile": "audio-jensen-huang-nvidia/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2688.712,
+   "end": 2719.935,
+   "text": "第三。因此，他们之间频繁的交流往来。 他们一直在开源。因此，他们对开源贡献更多是情理之中的事。 因为他们保护的是什么？你知道，我的工程师，他们的兄弟在那家公司。他们的朋友也在那家公司，他们都是校友。 概念是，你知道，一个校友，就是你一辈子的兄弟。因此，他们，他们。 他们非常迅速地分享知识。因此，没有必要隐藏技术。你",
+   "audioFile": "audio-jensen-huang-nvidia/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2720.385,
+   "end": 2756.603,
+   "text": "不如将其开源。因此，开源社区随后放大并加速了。 创新过程。因此，你获得了快速、不可思议的杰出人才和快速创新，这都得益于开源。 开源，以及你知道的，朋友之间的本质，以及公司内部疯狂的竞争。 公司内部的竞争，从而涌现出不可思议的成果。因此，这是当今世界上创新最快的。 创新国家。这正是我之前所说的，拥有所有一切。 所说的一切都是孩子们成长方式的基础。他们拥有优秀的教育",
+   "audioFile": "audio-jensen-huang-nvidia/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2757.053,
+   "end": 2791.129,
+   "text": "他们希望孩子在学校表现好，他们的文化本就如此。这些都是他们国家的特性。他们恰好出现在。 技术呈指数级发展的关键时期。从文化角度看，成为工程师非常酷，能连接所有组件。 这是一个建造者之国。是的，这是一个建造者之国。我们的国家领导人非常杰出，。 但他们的国家领导人大多是律师。因为我们正在努力。 保障安全、维护法治，他们的国家是从贫困中建立起来的。因此",
+   "audioFile": "audio-jensen-huang-nvidia/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2791.579,
+   "end": 2812.069,
+   "text": "大部分领导人都是杰出工程师，一些最聪明的头脑（暂且离题）。 你提到开源，我必须提到Perplexity，你长期关注的。 时间。我喜欢。感谢开源内莫特隆3超级模型。 现在可在Perplexity中使用，这是一个1200亿参数模型。",
+   "audioFile": "audio-jensen-huang-nvidia/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2812.769,
+   "end": 2834.573,
+   "text": "开源权重的MOE模型。你对开源的愿景是什么？你提到中国时，。 深求、最小最大等公司正大力推动开源发展。 AI浪潮中，NVIDIA在接近前沿的开源领域引领行业。 大语言模型。你们的愿景是什么？首先，如果我们要成为一家伟大的AI计算公司，就必须",
+   "audioFile": "audio-jensen-huang-nvidia/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2835.273,
+   "end": 2860.601,
+   "text": "理解AI模型的演变。我特别喜欢神经元三号的一点是。 它不仅是纯变压器模型，还结合了状态空间模型。我们早期参与了。 开发条件生成对抗网络，逐步推进渐进式模型。 我们在模型架构和不同领域开展基础研究。 使我们能预判未来模型需要的计算系统。 这属于我们的极端协同设计战略。第二",
+   "audioFile": "audio-jensen-huang-nvidia/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2861.051,
+   "end": 2883.431,
+   "text": "我们认为一方面要打造世界级模型作为专有产品。 另一方面也要让AI渗透到每个行业和国家。 如果所有技术都专有化，将难以开展研究和创新。 在现有基础上开展研究和创新都极具挑战。因此，开源成为关键。 可以同时推进专有技术与开源生态的平衡",
+   "audioFile": "audio-jensen-huang-nvidia/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2883.881,
+   "end": 2907.282,
+   "text": "我们不仅拥有技能、规模和动力去构建并持续构建这些AI模型。 这些AI模型将伴随我们一生，因此必须推进。 可激活每个行业、每位研究者、每个国家参与AI革命。 第三个原因是认识到AI不仅是语言模型。 这些AI将使用其他模态训练的工具和子代理",
+   "audioFile": "audio-jensen-huang-nvidia/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2907.732,
+   "end": 2929.939,
+   "text": "可能是生物、化学、物理定律或流体力学等非语言信息。 需确保天气预测、生物AI、物理AI等技术达到极限。 我们不制造汽车，但要确保每家车企都能使用优质模型。 我们不研发药物，但要确保礼来拥有顶尖生物AI系统。 用于新药研发的AI系统必须由专业机构构建",
+   "audioFile": "audio-jensen-huang-nvidia/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2930.389,
+   "end": 2956.013,
+   "text": "基于AI不仅是语言，且应用领域极其广泛这三大原因。 我们希望所有人都能参与AI世界的建设。 AI协同设计。我再次感谢你们彻底开源Nevatron 3，也感谢你们开源了模型。 我们开源了权重，开源了数据，开源了创建方法。确实令人惊叹。 你原本来自台湾，与台积电关系密切。",
+   "audioFile": "audio-jensen-huang-nvidia/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 2956.713,
+   "end": 2968.099,
+   "text": "台积电在工程团队方面也是传奇公司。 他们做了惊人的工程工作。你如何理解台积电文化？ 他们如何实现半导体领域无与伦比的成功？",
+   "audioFile": "audio-jensen-huang-nvidia/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2968.799,
+   "end": 2991.193,
+   "text": "对台积电最大的误解是认为他们的技术就是全部。 他们拥有出色的晶体管。如果有人推出另一种晶体管。 那技术就过时了。当然，我指的不仅是晶体管。 还有金属化系统、封装、3D封装、硅光子学等技术。 这些技术让公司与众不同。但更重要的是他们能协调。",
+   "audioFile": "audio-jensen-huang-nvidia/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 2991.643,
+   "end": 3015.769,
+   "text": "全球数百家公司动态需求的能力。 向上移动、向外转移、增加、减少、推动、向外推动、向内拉取。 客户间的变化，启动与停止的方式，紧急应对方式。 启动机制，世界复杂性的动态变化，世界不断重塑。 同时，他们运营着高吞吐量、高良率、极低成本的工厂",
+   "audioFile": "audio-jensen-huang-nvidia/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3016.219,
+   "end": 3036.311,
+   "text": "他们认真对待承诺，当晶圆按承诺送达时，您就能妥善运营公司。 其制造系统堪称奇迹般的高效可靠。 其次，他们的文化兼具双重特质。 一方面专注技术突破，另一方面注重客户服务。 许多公司虽重视客户服务，却缺乏技术卓越",
+   "audioFile": "audio-jensen-huang-nvidia/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3036.761,
+   "end": 3063.58,
+   "text": "技术前沿企业往往服务体验欠佳，而服务优秀企业未必技术领先。 他们完美平衡了这两极，堪称全球顶尖。 最后，我最看重的是他们拥有的核心技术。 他们创造的是一种无形的东西，叫信任。我相信他们能把我公司放在他们之上。这非常关键。 他们之间建立了紧密关系，信任源于多年表现及人际关系。",
+   "audioFile": "audio-jensen-huang-nvidia/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3064.03,
+   "end": 3094.313,
+   "text": "三十年来，我们通过他们完成了数十亿甚至数百亿美元的业务，却无合同。这非常难得。 2013年有个故事，台积电创始人张忠谋曾邀请你担任…… 故事属实。我并未拒绝，而是深感荣幸。 当时我就深知台积电是历史上最重要的企业之一。 张忠谋是我职业生涯中最重要的高管之一，也是挚友。 他向我发出邀请时，我感到无比谦卑与荣幸。",
+   "audioFile": "audio-jensen-huang-nvidia/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3094.763,
+   "end": 3117.27,
+   "text": "一位重要的商业与私人朋友，我一生中曾拥有过。他提出…… 这真的非常关键。 这里所做的非常重要。我曾在脑海中看到过一些方式。 这真的非常关键。 重要工作。这完全是我的责任，我必须确保此事成真。 我拒绝了，不是因为这个机会不难得，而是我无法接受。",
+   "audioFile": "audio-jensen-huang-nvidia/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3117.72,
+   "end": 3121.004,
+   "text": "这是个难以置信的提议。但我实在无法接受。",
+   "audioFile": "audio-jensen-huang-nvidia/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3121.704,
+   "end": 3148.249,
+   "text": "我认为NVIDIA和台积电都是人类文明史上最伟大的公司，管理其中任何一家都是极其复杂的工程，。 必须全员全力以赴，各层级皆需全情投入，方能应对这种复杂度。 现在我能帮两家公司。英伟达如今是全球最有价值的公司，我必须问，。 科技界认为英伟达最大护城河是什么？你们有哪些竞争对手难以复制的优势？",
+   "audioFile": "audio-jensen-huang-nvidia/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3148.949,
+   "end": 3174.205,
+   "text": "我们最重要的资产是计算平台的安装基础，目前CUDA的安装基础就是最核心的资产。 20年前当然没有安装基础，但真正决定成败的。 现在，之所以20年前，当然当时没有安装基础，但真正关键的是，。 对现有生态不会产生任何影响。原因很简单，。 这从来就不仅仅是技术问题。",
+   "audioFile": "audio-jensen-huang-nvidia/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3174.655,
+   "end": 3205.032,
+   "text": "这项技术当然令人惊叹且具有前瞻性。但关键在于公司对它的专注与坚持。 坚持投入，拓展影响力。CUDA的成功非三个人之功。 而是43,000名员工的共同努力。以及数百万相信我们的开发者。 他们信任我们持续推出CUDA 1至13版本的决策。 移植并专用于其上的软件堆栈，庞大的软件堆栈。因此。 用户基数是最重要的优势。当用我们的执行速度放大",
+   "audioFile": "audio-jensen-huang-nvidia/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3205.482,
+   "end": 3230.866,
+   "text": "达到这个规模的执行速度，历史上没有公司。 能构建如此复杂系统的工程能力。每年更新一次更是不可能。 这种速度与用户基数在开发者认知中。 这将从开发者的视角，让开发者关注CUDA支持。 平均只需等待六个月性能就提升十倍。 若基于计算统一设备架构开发，可触达数亿台设备，我存在于每朵云中。",
+   "audioFile": "audio-jensen-huang-nvidia/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3231.316,
+   "end": 3262.448,
+   "text": "每家计算机公司、每个行业、每个国家都有我的身影。 若我先将开源包部署在CUDA上，即可同时获得这两项特性。 同时。我100%确信NVIDIA会持续保留并优化CUDA生态。 持续维护、优化库，直至它们的生命周期结束。 这几乎是板上钉钉的事实。而信任，正是最后的关键要素。 若我是开发者，首选CUDA，且主要针对CUDA。这就是",
+   "audioFile": "audio-jensen-huang-nvidia/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3262.898,
+   "end": 3295.299,
+   "text": "这正是我认为的首要核心优势，也是我们的第一大优势。 第二大优势是我们的生态系统。我们垂直整合了这个极其复杂的系统。 但又横向整合进每家公司的计算机。我们进驻了Google云。 Cloud。我们在Amazon和Azure。目前正全力推进AWS部署。 我们进入CoreWeave、Scale等新公司，以及 Lilly的超算系统。 企业级电脑、基站、汽车、机器人、卫星等各类系统。",
+   "audioFile": "audio-jensen-huang-nvidia/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3295.749,
+   "end": 3331.441,
+   "text": "我们身处太空。生态系统中存在这种统一架构的事实非常。 广泛。它几乎覆盖全球所有行业。那么，计算统一设备架构。 的安装基础如何在人工智能工厂的护城河中演进？你认为未来。 未来NVIDIA是否将聚焦人工智能工厂？计算单元的。 对我们而言曾是GPU，后成为计算机，再成为集群。如今是完整的AI系统。 整个AI工厂。当我看到过去NVIDIA构建的计算机时，发布新产品时，我会先想象芯片，再推出新一代产品。",
+   "audioFile": "audio-jensen-huang-nvidia/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3331.891,
+   "end": 3361.717,
+   "text": "各位，今天发布Ampere。我拿起芯片，是的，那是我的想法。 我拿起芯片。这曾是我对产品发布的思维模型。但如今。 拿起芯片已显得可爱而幼稚，不再是我的思维模型。我。 这是连接电网的吉瓦级巨型发电系统。 功率级系统，配备冷却系统和网络架构。你知道，有10000。 人参与安装，数百名网络工程师，数千名工程师为其供能",
+   "audioFile": "audio-jensen-huang-nvidia/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3362.167,
+   "end": 3397.623,
+   "text": "这不是某个人在行动，而是全面启动。需要数千人参与才能启动。因此，当你思考单个计算单元时，实际上你脑海中想到的是整个机架集群。 当你晚上入睡时，想到的是机架集群，而非单个芯片。整个基础设施。我希望下次思考的是构建行星级规模的计算机。 行星级规模。这将是下一步的突破。你如何看待埃隆提出的太空计算构想？ 解决扩展过程中的能源问题？冷却问题并不容易。",
+   "audioFile": "audio-jensen-huang-nvidia/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3398.323,
+   "end": 3403.813,
+   "text": "冷却。涉及大量工程复杂性。NVIDIA已宣布正在考虑相关方案。",
+   "audioFile": "audio-jensen-huang-nvidia/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3404.513,
+   "end": 3433.153,
+   "text": "我们已经实现了。NVIDIA GPU是首个进入太空的GPU。我没想到它竟如此。 我本以为会宣布。我们在太空，穿着微型宇航服。 我们已在太空。这是进行大量成像的合适场所。 因为这些卫星配备超高分辨率成像系统。 它们持续扫描地球。你想要厘米级精度。 持续进行全球厘米级精度成像。这样你将获得实时遥测数据。",
+   "audioFile": "audio-jensen-huang-nvidia/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3433.603,
+   "end": 3461.079,
+   "text": "你不想将这些数据传回地球。 海量数据需要在边缘端直接处理，舍弃无用信息。之前的做法并未改变，只是保留了。 所需内容。因此AI应在边缘端完成。显然，若部署在极地，我们需要。 全天候太阳能供电。但极地缺乏传导和对流，仅剩辐射散热。 太空广阔，我们只需部署巨型散热器即可。",
+   "audioFile": "audio-jensen-huang-nvidia/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3461.779,
+   "end": 3469.844,
+   "text": "你认为这个想法有多疯狂？5年、10年还是20年后才能实现？这涉及AI扩展的障碍。",
+   "audioFile": "audio-jensen-huang-nvidia/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3470.544,
+   "end": 3494.099,
+   "text": "我优先寻找下一个机会领域。同时，。 我们正在培养太空能力。已派工程师研究问题，正在学习如何实现辐射散热。 如何处理性能退化？如何应对持续测试与认证？ 如何处理缺陷冗余？如何实现优雅降级？我们可从软件层面入手，。 如何设计软件以应对太空中的冗余与性能？",
+   "audioFile": "audio-jensen-huang-nvidia/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3494.549,
+   "end": 3521.074,
+   "text": "让计算机永不宕机，仅逐渐变慢？ 我们可提前开展大量工程探索，但目前我的重点是。 我最喜欢的答案是消除浪费。我们有很多闲置的算力。我想。 尽快释放这些算力。是的，地球上有很多低垂的果实，。 我们可以利用这些来加速AI扩展。稍等30秒。感谢我们的。 赞助商。在描述中查看他们的信息。这是支持播客的最佳方式。",
+   "audioFile": "audio-jensen-huang-nvidia/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3521.774,
+   "end": 3548.542,
+   "text": "访问lexfriedman.com/sponsors。我们有困惑度用于好奇心驱动知识。 Shopify在线销售，元素电解质补充，鳍客户服务，。 AI代理，Quo用于电话系统，如通话、短信、联系人管理。请明智选择。 现在回到与黄仁勋的对话。 您认为NVIDIA未来可能估值达10万亿美元？换个方式问，",
+   "audioFile": "audio-jensen-huang-nvidia/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3548.992,
+   "end": 3554.799,
+   "text": "当世界呈现怎样的面貌时，这一估值才成立？我认为NVIDIA的增长",
+   "audioFile": "audio-jensen-huang-nvidia/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3555.499,
+   "end": 3585.647,
+   "text": "极有可能且不可避免。让我解释，我们是历史上最大的计算机公司。 仅凭这一点就值得发问：为什么？原因显而易见，。 两点原因。首先，基础技术原因。第一个是计算领域的发展。 从基于检索的文件检索系统。几乎所有内容都是文件。我们预先编写。 我们预录内容，绘制素材，上传网络或存入文件。同时使用推荐系统和智能过滤器筛选内容",
+   "audioFile": "audio-jensen-huang-nvidia/0135.wav"
+  },
+  {
+   "id": 136,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3586.097,
+   "end": 3618.327,
+   "text": "为您检索。我们曾是预录制、人工预录制及文件检索系统。 这正是计算机的本质。如今，AI计算机具备情境感知能力，这意味着。 必须实时处理生成令牌，因此从基于检索转向。 从传统计算系统转向生成式计算系统，我们需要更多处理能力。 新世界比旧世界更需要。旧世界需要大量存储，新世界更需要。 新世界中的计算。这就是第一部分。我们彻底改变了。 计算方式。唯一导致其倒退的因素",
+   "audioFile": "audio-jensen-huang-nvidia/0136.wav"
+  },
+  {
+   "id": 137,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3618.777,
+   "end": 3650.818,
+   "text": "如果这种计算方式，生成上下文相关的信息。 相关且情境感知，基于新洞察生成信息前。 这种计算密集型的计算方式只有在无效时才会被放弃。所以如果在。 过去10到15年深度学习工作中，如果在任何时刻我得出。 结论：这行不通，是死胡同，无法扩展，无法解决这种模态，无法用于。 这个应用，那我会对此有完全不同的看法。但过去五年比前十年",
+   "audioFile": "audio-jensen-huang-nvidia/0137.wav"
+  },
+  {
+   "id": 138,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3651.268,
+   "end": 3681.532,
+   "text": "给了我更多信心。第二个想法是计算机，因为它曾是存储系统，基本上是仓库。我们现在在建工厂。 仓库赚不了多少钱，而工厂直接关联公司收入。 计算机做了两件事：不仅改变了运作方式，其在世界中的定位也改变了。 它不再是计算机，而是工厂。工厂用于生成收入。现在我们看到这个工厂不仅生产。 世界变了。它不再是计算机，而是一个用于生成的工厂。",
+   "audioFile": "audio-jensen-huang-nvidia/0138.wav"
+  },
+  {
+   "id": 139,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3681.982,
+   "end": 3711.715,
+   "text": "收入。现在不仅这家工厂在生产产品、人们想要的商品。 用于消耗。我们看到这些商品极具价值，令人着迷，因此被众多不同...。 受众开始按iPhone方式分段，您拥有免费令牌。 您拥有高级代币和中间的多个代币。智能随着其发展。 它是一款可扩展的产品。存在极高智能的产品，这些代币。 可用于特定用途。人们愿意支付，这个想法",
+   "audioFile": "audio-jensen-huang-nvidia/0139.wav"
+  },
+  {
+   "id": 140,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3712.165,
+   "end": 3739.288,
+   "text": "有人愿意为每百万代币支付一千美元，这即将到来。但并非。 如果，只有当。现在我们看到这家工厂生产的商品实际上是。 具有价值，能产生收入和利润。现在问题是，有多少。 世界需要多少这样的工厂？世界需要多少代币？社会愿意支付多少。 愿意为这些代币支付多少？如果生产力提高，世界经济会发生什么",
+   "audioFile": "audio-jensen-huang-nvidia/0140.wav"
+  },
+  {
+   "id": 141,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3739.738,
+   "end": 3766.554,
+   "text": "大幅提高？会发生什么？我们会发现新药物吗。 新产品、新服务？因此，当这些因素结合时，我确信。 世界GDP将加速增长。我确信该GDP中...的百分比。 用于计算的百分比将是过去的百倍，因为它不再是存储。 单元。这是一个产品生成单元。因此，当你从这个角度看待它，并倒推回去，考虑",
+   "audioFile": "audio-jensen-huang-nvidia/0141.wav"
+  },
+  {
+   "id": 142,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3767.004,
+   "end": 3796.309,
+   "text": "NVIDIA的业务范围是什么？NVIDIA具体从事哪些领域？以及这些新经济模式和新行业所占的比例有多少？ 需要我们从中获益？我认为我们会变得非常庞大。至于其余部分。 对我来说，问题是：NVIDIA能否成为3万亿美元营收公司？ 答案当然是肯定的。原因在于它不受任何物理限制。 我看不到任何迹象表明，3万亿美元是不可能实现的目标。",
+   "audioFile": "audio-jensen-huang-nvidia/0142.wav"
+  },
+  {
+   "id": 143,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3796.759,
+   "end": 3825.045,
+   "text": "可能。事实上，NVIDIA的供应链负担由200家公司共同承担。 凭借这个生态系统合作伙伴关系，我们实现了规模扩展。 问题是，我们是否有足够的能量去实现？我们当然会有。 所有这些因素加在一起，这个数字只是一个数字而已。我至今记得。 英伟达首次突破十亿美元营收时，我突然想起…… \"黄仁勋，理论上不可能有如此出色的半导体公司。\"",
+   "audioFile": "audio-jensen-huang-nvidia/0143.wav"
+  },
+  {
+   "id": 144,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3825.495,
+   "end": 3859.931,
+   "text": "公司营收将突破十亿美元。我就不赘述原因了，但结果是…… 这种说法不合逻辑，证据显示我们并非如此。后来有人告诉我。 黄仁勋，你永远不可能超过250亿美元，因为有其他公司存在。有人告诉我，你…… 永远不可能，因为……这些观点并非基于第一性原理。 简单来说，我们需要思考的是：我们制造的是什么？我们能创造的市场机会有多大？ 我们能创造的机会有多大？NVIDIA不追求市场份额。",
+   "audioFile": "audio-jensen-huang-nvidia/0144.wav"
+  },
+  {
+   "id": 145,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3860.381,
+   "end": 3890.108,
+   "text": "我刚才提到的几乎所有东西都还不存在。这才是最难的部分。 若NVIDIA只是十亿美元公司，试图夺取其市场份额…… 股东们很容易想到，只要能拿下10%的份额…… 他们就能变得如此庞大，但人们很难想象我们能有多大。 因为没有人能从我这里夺走份额，对吧？因此，我认为这正是…… 全球挑战之一是对未来的想象力。我有时间持续思考并讨论，每次GTC都会……",
+   "audioFile": "audio-jensen-huang-nvidia/0145.wav"
+  },
+  {
+   "id": 146,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 3890.558,
+   "end": 3917.284,
+   "text": "变得越来越现实，人们开始广泛讨论。终有一天，我们必将实现，我对此充满信心。 这种观点认为，本质上是每秒每瓦特的令牌数量。 每个标记都有价值，能为不同人带来不同种类和数量的价值。这才是真正的。 产品可粗略视为令牌。诸多令牌因素使未来设想简单。从第一性原理出发，想象AI潜力下的未来。",
+   "audioFile": "audio-jensen-huang-nvidia/0146.wav"
+  },
+  {
+   "id": 147,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3917.984,
+   "end": 3953.983,
+   "text": "解决这个问题需要指数级更多的标记工厂。是的。而什么是。 很有意思，我兴奋是因为令牌版iPhone来了。叫什么？等等，你是说开放条款iPhone吗？ 确实，这很有趣。代理，尤其是通用代理。令牌的‘iPhone’问世，历史上增长最快的应运而生，直接…… 直线上升。这说明了问题。开放爪就是iPhone。 标记。嗯，正在发生真正特别的事情。 大约从12月开始，人们真正意识到爪码、代码库和开放爪的威力。",
+   "audioFile": "audio-jensen-huang-nvidia/0147.wav"
+  },
+  {
+   "id": 148,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3954.433,
+   "end": 3989.236,
+   "text": "我不好意思承认来机场路上。 这是我第一次公开这样做。我通过说话来编程。 到我的笔记本电脑上。我当时感到尴尬，因为我假装在和一位人类同事交谈。我不确定自己对未来的感受，那时每个人都在四处走动，和。 他们的AI交谈，但这是完成任务的高效方式。而且，更有可能的是。 你的AI会一直打扰你。原因在于它完成任务的速度太快。是的，它会向你报告：我完成了。你知道，接下来你想要我",
+   "audioFile": "audio-jensen-huang-nvidia/0148.wav"
+  },
+  {
+   "id": 149,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 3989.686,
+   "end": 4032.18,
+   "text": "做什么？你知道，我认为大多数人没有意识到的是，最常与他们聊天、发短信的将是他们的…… 龙虾。多么不可思议的未来。我读到你将很多成功归功于你的。 超常努力和承受痛苦的能力。我们可以说很多相关的事，比如处理失败、。 我们反复提到的工程难题，还有人际关系、不确定性、责任、疲惫、尴尬，。 以及你提到的公司濒临死亡的时刻。但如今作为这家被各国各地区战略规划。 您提到的公司濒临绝境的时刻，以及如今作为CEO所承受的压力。",
+   "audioFile": "audio-jensen-huang-nvidia/0149.wav"
+  },
+  {
+   "id": 150,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4032.63,
+   "end": 4045.727,
+   "text": "当这么多国家和人民依赖你时，你如何应对这种压力？我意识到一个事实，即。 ……如何应对这种压力？是什么给予你力量？ 我意识到一个事实，即……",
+   "audioFile": "audio-jensen-huang-nvidia/0150.wav"
+  },
+  {
+   "id": 151,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4046.427,
+   "end": 4068.275,
+   "text": "NVIDIA的成功对美国至关重要，我们创造了巨额税收。 我们为国家建立了技术领导地位。技术领导力关系到国家安全的方方面面。 国家越繁荣，就越能更好地制定国内政策。 并能通过再工业化提升社会福利。 我们正在创造大量就业机会，推动制造业回流美国。",
+   "audioFile": "audio-jensen-huang-nvidia/0151.wav"
+  },
+  {
+   "id": 152,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4068.725,
+   "end": 4089.619,
+   "text": "从芯片、计算机到这些制造商，都在美国本土生产。 我深知主流投资者、教师、警察等群体。 真正的天赋，与主流投资者、教师、警察等，出于某种原因。 比如看了吉姆·克莱默的节目买入股票。 现在这些人成了百万富翁。",
+   "audioFile": "audio-jensen-huang-nvidia/0152.wav"
+  },
+  {
+   "id": 153,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4090.069,
+   "end": 4109.395,
+   "text": "NVIDIA在我们背后庞大的生态系统合作伙伴网络中处于核心地位。 我们背后有庞大的合作伙伴网络。 我们正在做什么？这会导致什么影响？ 其他人受益，无论是正面的，甚至通过巨大负担，例如。 供应链。因此，你打算怎么办？",
+   "audioFile": "audio-jensen-huang-nvidia/0153.wav"
+  },
+  {
+   "id": 154,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4109.845,
+   "end": 4130.526,
+   "text": "我几乎会把所有事情拆解。我思考，当前处境如何？ 什么发生了变化？什么困难？我该怎么做？ 分解问题，将这些处境拆解成可管理的。 事务。之后我能做的唯一事情是，你做了吗？ 是你自己做，还是让别人做？如果你既没做也没让别人做，就别抱怨",
+   "audioFile": "audio-jensen-huang-nvidia/0154.wav"
+  },
+  {
+   "id": 155,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4130.976,
+   "end": 4150.69,
+   "text": "了。我对自己要求很严格，但。 我会拆解问题，避免恐慌。因为。 我列出了所有待办事项。确保所有可能。 危及公司、合作伙伴和行业的事项都已处理。 告知某人所有可能危害他人的事。我已告知某人，我。 被告知有人能处理，我已释怀或正在处理",
+   "audioFile": "audio-jensen-huang-nvidia/0155.wav"
+  },
+  {
+   "id": 156,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4151.14,
+   "end": 4172.362,
+   "text": "关于它。之后，Lex，还能做什么？鉴于疯狂和紧张。 建立NVIDIA过程中的艰辛程度，你是否经历过心理低谷？ 当然，一直如此。将问题拆解成小块，看看如何解决。 部分原因在于遗忘，这是最重要的因素之一。 AI学习的属性，系统性遗忘。需知何时...",
+   "audioFile": "audio-jensen-huang-nvidia/0156.wav"
+  },
+  {
+   "id": 157,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4172.812,
+   "end": 4205.156,
+   "text": "有些事情必须遗忘。无法记住所有信息，也不必事事铭记。我擅长快速处理其中一部分。 我分解问题、分析问题，并与之分担负担。当我告诉所有人时，实际上是在尽可能快速地分担这一负担。 有担忧就告诉别人，别自己憋着，分解问题，别拖延。 震撼他们。将问题分解为更小部分，激励人们去。 能够采取行动。但其中一部分只是遗忘，很多情况下你必须对自己严格。来吧，别再为此哭泣了。让我们开始",
+   "audioFile": "audio-jensen-huang-nvidia/0157.wav"
+  },
+  {
+   "id": 158,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4205.606,
+   "end": 4238.366,
+   "text": "起床后，另一部分是，你被下一个闪亮的灯光吸引。 被下一个未来、下一个机会吸引，把过去的事放下，专注接下来的事。这需要很多精力，我认为你观看这些内容时会非常投入。 运动员只关注下一个得分点，上一个得分点已经过去。 尴尬、挫折，以及因为我的工作大部分公开进行。 Lex，你的工作也有不少公开内容，我也是如此。 我公开表达了很多当时看似合理或有趣的观点",
+   "audioFile": "audio-jensen-huang-nvidia/0158.wav"
+  },
+  {
+   "id": 159,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4238.816,
+   "end": 4253.089,
+   "text": "当时对我来说只是有趣，但事后回想会发现其实并不那么有趣。但相信我，你基本上允许自己被未来的光芒牵引。 忘记过去，继续前进。你确实提到过一个著名的观点",
+   "audioFile": "audio-jensen-huang-nvidia/0159.wav"
+  },
+  {
+   "id": 160,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4253.789,
+   "end": 4266.098,
+   "text": "你曾说，若知建NVIDIA之难，或许不会选择。 结果发现比预期难一百万倍，对吗？ 但事实上，听到这句话时，我觉得所有值得做的事都是如此",
+   "audioFile": "audio-jensen-huang-nvidia/0160.wav"
+  },
+  {
+   "id": 161,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4266.798,
+   "end": 4286.633,
+   "text": "没错，我正想解释的是，存在某种。 拥有孩童般的心智，这是一项不可思议的超能力。 你知道吗？我常常看着某样东西，几乎觉得。 一切都很简单。我的第一反应是，能有多难？ 当你进入这种心态时，能有多难？没人做过，看起来规模巨大。",
+   "audioFile": "audio-jensen-huang-nvidia/0161.wav"
+  },
+  {
+   "id": 162,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4287.083,
+   "end": 4305.86,
+   "text": "要投入数百亿美元，但你只是想，是的，能有多难？ 不要提前模拟所有挫折和困难，不要预知这些。 你希望以完美的心态开启新体验，认为它会很精彩。 在过程中，你需要坚韧和毅力，当挫折来临时",
+   "audioFile": "audio-jensen-huang-nvidia/0162.wav"
+  },
+  {
+   "id": 163,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4306.31,
+   "end": 4331.393,
+   "text": "失望不会让你意外，尴尬和羞辱却会。你不能让这些。 现在要切换心态，忘记它，继续前进。 只要我对未来的假设和推动力足够坚定。 这些假设和输入足够清晰明确。 若无实质性变化，输出应保持不变。因此。 我的未来模拟输出仍会发生。若仍会发生",
+   "audioFile": "audio-jensen-huang-nvidia/0163.wav"
+  },
+  {
+   "id": 164,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4331.843,
+   "end": 4348.152,
+   "text": "我仍会追求它。我相信它会，因此有某种组合。 具备进入体验时的全新思维能力。 遗忘挫折的能力，相信自我的能力。 坚持信念并不断重新评估这三到五项特质。 我认为这四到五项特质对韧性至关重要",
+   "audioFile": "audio-jensen-huang-nvidia/0164.wav"
+  },
+  {
+   "id": 165,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4348.602,
+   "end": 4362.743,
+   "text": "我始终好奇，始终在向每个人学习。 我总是谦逊地向所有人请教。 惊叹于他人做得如此精彩。 我通过模拟观察对象来理解他们。 对观察到的一切保持共情与尊重",
+   "audioFile": "audio-jensen-huang-nvidia/0165.wav"
+  },
+  {
+   "id": 166,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4363.443,
+   "end": 4390.501,
+   "text": "你现在是地球上最富有的人之一，也是最成功的人之一。 金钱、权力和名声是否让你更难保持谦卑，是否让你感到这些因素的影响？ 是否让你更难在内心承认错误，从而听取与自己意见相左的人的观点并从中学习？ 他人意见不同时，能否学习？ 出人意料的是，没有。我反而会更进一步，因为我的工作大多公开进行。",
+   "audioFile": "audio-jensen-huang-nvidia/0166.wav"
+  },
+  {
+   "id": 167,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4390.951,
+   "end": 4404.629,
+   "text": "当我在公开场合犯错时，几乎所有人都能看到。当事情没有按预期发展时，。 大多数情况下，我公开表达的观点都经过深思熟虑。因为这些观点会影响他人。",
+   "audioFile": "audio-jensen-huang-nvidia/0167.wav"
+  },
+  {
+   "id": 168,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4405.329,
+   "end": 4436.96,
+   "text": "我对此非常谨慎。对于会议中我进行推理的内容，很多事可能结果不同。 但这不会阻止我以特定方式管理团队。我经常在众人面前进行推理。 即使现在与你对话，你也能看到我在思考。我需要确保你理解我的观点。 不是因为我谦卑，而是因为我希望你看到我的推理过程。我始终展示思考步骤。 通过展示步骤，让你理解我的观点。这并非出于谦卑，而是为了清晰传达。",
+   "audioFile": "audio-jensen-huang-nvidia/0168.wav"
+  },
+  {
+   "id": 169,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4437.41,
+   "end": 4471.941,
+   "text": "我到达那里后，你可以决定是否相信我说的话。我整天都在与员工开会时这么做，一直在进行推理。 让我告诉你，我是如何思考这个问题的。我经过了深入的推理，这让每个人都有机会提出异议，指出我哪里不对。 通过推理并让人参与讨论的好处在于，他们不必反对你的结论。 他们可以质疑你的推理步骤，并可能引导我向不同方向思考。 然后我们能继续向前推理。因此，我们某种程度上采用了一种集体路径搜索方法",
+   "audioFile": "audio-jensen-huang-nvidia/0169.wav"
+  },
+  {
+   "id": 170,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4472.391,
+   "end": 4500.038,
+   "text": "这真的非常棒。当你解释事情时，我能感受到你在现场进行实时推理，始终保持开放心态。 我能感觉到自己似乎能引导你的思考。是的，这确实很难得。 在经历了这么多年成功与挫折后，你仍能保持这种开放性，这非常美好。我认为有时挫折会让人变得封闭。 是的，我认为保持对尴尬的容忍度很重要。这确实是一种重要的能力",
+   "audioFile": "audio-jensen-huang-nvidia/0170.wav"
+  },
+  {
+   "id": 171,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4500.488,
+   "end": 4528.018,
+   "text": "在这么多年让自己尴尬的会议中，当提出一个想法被证明错误时，能够承认错误并从中成长。 这在人性层面非常困难。是的，他们知道我最近第一份工作是清洁工。 很高兴你保持了Denny's的那份精神。从Denny's起步到现在的整个历程都非常美好。 这是一款出色的产品。让我问你关于电子游戏的事。我是个游戏爱好者。",
+   "audioFile": "audio-jensen-huang-nvidia/0171.wav"
+  },
+  {
+   "id": 172,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4528.468,
+   "end": 4555.765,
+   "text": "多年来，NVIDIA提供了令人惊叹的图形效果。G Force至今仍是我们的主打产品。 我们的首要营销策略，没错？人们在青少年时期就已了解NVIDIA。 他们上大学后便知晓NVIDIA，起初仅玩《使命召唤》《堡垒之夜》，随后开始使用CUDA。 使用CUDA，之后他们使用NVIDIA、Blender、达索和欧特克。",
+   "audioFile": "audio-jensen-huang-nvidia/0172.wav"
+  },
+  {
+   "id": 173,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4556.465,
+   "end": 4579.612,
+   "text": "我跟朋友提起在和你交谈，他说，。 确实，他们制造了出色的电竞显卡。不过，这不仅仅是游戏。 但人们确实为之着迷，带来了许多欢乐。硬件让虚拟世界栩栩如生，曾引发争议。 DLSS五引发争议，能解释其中的争议吗？ 玩家担心这会让游戏看起来像AI生成的劣质内容。",
+   "audioFile": "audio-jensen-huang-nvidia/0173.wav"
+  },
+  {
+   "id": 174,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4580.062,
+   "end": 4584.78,
+   "text": "我认为他们的担忧有道理，我自己也不喜欢AI生成的劣质内容。",
+   "audioFile": "audio-jensen-huang-nvidia/0174.wav"
+  },
+  {
+   "id": 175,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4585.48,
+   "end": 4612.883,
+   "text": "所有AI生成的内容，。 生成内容越来越相似，而且都很精美。我能够…… 我能理解他们的想法，但DLSS五代并非如此。 它尝试实现的是3D条件化、3D引导的超采样。 它是基于真实数据、结构化数据引导的。艺术家决定了几何形状，我们。 完全忠实于几何结构。每一帧都由纹理和艺术家的创作条件化",
+   "audioFile": "audio-jensen-huang-nvidia/0175.wav"
+  },
+  {
+   "id": 176,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4613.333,
+   "end": 4638.978,
+   "text": "每一帧都会增强细节，但不会改变原有内容。 现在的问题是关于DLSS五代增强的，因为它是。 你可以训练自己的模型进行决策，未来甚至可以提示它。 我想让它成为可调节的着色器，呈现出这种风格。 你甚至可以给它示例，它会以一致的风格生成内容。 所有内容都符合艺术家的创作意图、风格和表现力",
+   "audioFile": "audio-jensen-huang-nvidia/0176.wav"
+  },
+  {
+   "id": 177,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4639.428,
+   "end": 4668.3,
+   "text": "所有这些设计都是为了帮助艺术家创作更精美的作品。 他们想要的，我认为他们觉得游戏会以这种方式发布。 就像他们发货的方式一样，然后我们会进行后期处理。 这并非DLSS的初衷。DLSS与艺术家集成，因此。 这是赋予艺术家AI工具，特别是生成式AI工具。他们可以选择不用。 我认为人们非常在意人类面部。现在正是一个敏感的时刻",
+   "audioFile": "audio-jensen-huang-nvidia/0177.wav"
+  },
+  {
+   "id": 178,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4668.75,
+   "end": 4694.24,
+   "text": "它让我们意识到所追求的是不完美。我们追求的。 有时并非完美画面。它帮助我们理解在创造的世界中什么令人着迷。 这很美。只要这些工具能帮助我们创造世界，就是正确的。 这又是另一种工具。他们希望生成模型生成与照片相反的效果。 也会做到。这又是另一种工具。我认为玩家可能也会欣赏",
+   "audioFile": "audio-jensen-huang-nvidia/0178.wav"
+  },
+  {
+   "id": 179,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4694.69,
+   "end": 4725.708,
+   "text": "过去几年我们向游戏开发者引入了皮肤着色器。 许多游戏的皮肤着色器包含次表面散射等技术。 皮肤看起来更像真实皮肤。因此，各行各业的游戏开发者正在寻找越来越多的工具来表达他们的艺术。 这又是一个新的工具。我认为这是个荒谬的问题。你认为有史以来最伟大或最有影响力的游戏是什么？ 《毁灭战士》。毫无疑问，那是3D时代的开端。",
+   "audioFile": "audio-jensen-huang-nvidia/0179.wav"
+  },
+  {
+   "id": 180,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4726.158,
+   "end": 4752.545,
+   "text": "从文化影响与行业交汇的角度来看，。 将PC转变为游戏设备。这是一个非常重要的时刻。 飞行模拟公司在此之前就存在，但它们并没有达到《毁灭战士》的流行程度。 将PC从办公自动化工具转变为家庭和个人电脑。 从实际游戏技术角度看，虚拟格斗游戏。我们与两者都是好朋友。 最近的游戏，比如《赛博朋克2077》，",
+   "audioFile": "audio-jensen-huang-nvidia/0180.wav"
+  },
+  {
+   "id": 181,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4752.995,
+   "end": 4779.974,
+   "text": "全光线追踪，全光线追踪。此外，我个人很喜欢。 我是个《上古卷轴》系列的超级粉丝，。 玩家发布了模组，他们创造出了这些内容，这简直就像。 完全不同的游戏，让我反复重玩，这种体验。 让你以全新方式重新体验已爱上的世界。 一直如此。最爱在《上古卷轴5》中走动。我们开发了RTX模组工具，允许社区注入",
+   "audioFile": "audio-jensen-huang-nvidia/0181.wav"
+  },
+  {
+   "id": 182,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4780.424,
+   "end": 4793.448,
+   "text": "让社区将最新技术注入老游戏。当然，优秀游戏不止靠画面。 还有故事和角色塑造，但精美画面能增强沉浸感。 让你感觉置身于另一个世界",
+   "audioFile": "audio-jensen-huang-nvidia/0182.wav"
+  },
+  {
+   "id": 183,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4794.148,
+   "end": 4808.867,
+   "text": "被传送到。你刚才准确地说到了通用人工智能时间线问题。 让我问你关于可能时间线的看法。 或者用荒谬定义：能胜任你工作的AI系统。 能创办并运营成功科技公司。 这公司价值必须超过十亿美元",
+   "audioFile": "audio-jensen-huang-nvidia/0183.wav"
+  },
+  {
+   "id": 184,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4809.317,
+   "end": 4841.918,
+   "text": "你知道做到这些有多难。 组件。那么我们距离实现这一点还有多远？我们正在谈论的是开放爪，它能够处理所有这些。 极其复杂的任务，首先是创新，找到客户。 向他们销售，进行管理，组建由一些代理和人类组成的团队，所有这些事情。 这需要五到二十年？我认为现在已实现通用人工智能。你觉得能有公司由这样的人工智能系统运营吗？ 可能。原因在于，你说了一万亿，但没有说永远",
+   "audioFile": "audio-jensen-huang-nvidia/0184.wav"
+  },
+  {
+   "id": 185,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 4842.368,
+   "end": 4851.059,
+   "text": "例如，爪子可能创建了一个网络服务，一个有趣的小应用，突然之间，数亿人用它来花费50",
+   "audioFile": "audio-jensen-huang-nvidia/0185.wav"
+  },
+  {
+   "id": 186,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4851.759,
+   "end": 4885.152,
+   "text": "服务，一个有趣的小应用，突然之间，数亿人用它来花费50美分。然后不久之后，它又倒闭了。 美分。随后公司再次倒闭。我们后来看到很多类似的情况。 实现病毒式传播并从中获利。是的。我不知道具体是什么，但当时我也没能预测到这些公司中的任何一个。 你知道，这句话会让很多人兴奋。就像，你是什么意思？我可以，我可以，呃，启动一个代理，呃，赚很多钱",
+   "audioFile": "audio-jensen-huang-nvidia/0186.wav"
+  },
+  {
+   "id": 187,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4885.602,
+   "end": 4909.254,
+   "text": "顺便说一句，这正在发生。你知道，当你去中国。 你会看到，你会看到，呃，很多人，呃，在教他们的爪子去寻找工作，做事情，赚钱。 而且，我并不惊讶，若某些社交事件发生，或有人创建了可爱的数字网红。 或某个社交应用，能让你的电子宠物养成游戏获得即时成功。",
+   "audioFile": "audio-jensen-huang-nvidia/0187.wav"
+  },
+  {
+   "id": 188,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4909.704,
+   "end": 4930.483,
+   "text": "很多人使用几个月后，热度便逐渐消退。 概率消逝。如今，十万名代理中构建……的概率…… 我唯一不会做的事是，我不会，我不会。 我想确保我们所有人都认识到，人们确实担心自己的工作。 我想提醒他们，工作的目的与使用的工具并非同一回事。",
+   "audioFile": "audio-jensen-huang-nvidia/0188.wav"
+  },
+  {
+   "id": 189,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4930.933,
+   "end": 4962.379,
+   "text": "你用于工作的工具相关但不同。我从事这份工作33年了，我是…… 过去34年，我工作所用的工具持续变化。 有时短短两三年内就会发生巨大变化。 我想确保每个人听到的故事是，计算机最初的工作。 每台计算机最初的工作都是。 科学家曾预测，AI将取代放射科，因计算机视觉技术。 确实达到超人类水平，计算机视觉已超越人类",
+   "audioFile": "audio-jensen-huang-nvidia/0189.wav"
+  },
+  {
+   "id": 190,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4962.829,
+   "end": 4985.949,
+   "text": "2019年或2020年左右，计算机视觉已超越人类。 计算机视觉已超越人类，预测放射科医生将消失。 AI将取代放射科医生，但事实并非如此。 目前所有放射科平台和软件均由AI驱动。 但放射科医生数量却在增长，这引发疑问",
+   "audioFile": "audio-jensen-huang-nvidia/0190.wav"
+  },
+  {
+   "id": 191,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 4986.399,
+   "end": 5008.051,
+   "text": "全球面临放射科医生短缺，过度警告吓退了从业者。 这一职业对社会至关重要，过度警告造成了伤害。 放射科医生的职责是诊断疾病，协助医生和患者。 如今研究扫描速度大幅提升，可分析更多扫描。 诊断更精准，但为何医生数量却在增加？",
+   "audioFile": "audio-jensen-huang-nvidia/0191.wav"
+  },
+  {
+   "id": 192,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5008.501,
+   "end": 5038.244,
+   "text": "更快。能更清楚地看到人群，医院收入增加，患者数量在。 医院。你需要更多放射科医生。令人惊讶的是，这显然会...。 将增长，而非减少。原因在于。 这是因为软件工程师的职责与编写代码的任务。 相关但不同。我让软件工程师解决问题，不关心多少行代码。 他们写的代码，但职责未变，解决问题。 团队协作，诊断问题，评估结果，寻找新问题解决。",
+   "audioFile": "audio-jensen-huang-nvidia/0192.wav"
+  },
+  {
+   "id": 193,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5038.694,
+   "end": 5068.114,
+   "text": "创新、串联点，这些都不会消失。你认为，即使以编程为例，是否可能？你认为程序员数量。 世界范围内的编码可能增加？是的。原因在于，编码的定义是什么？我认为。 目前编程的定义就是制定规范，或许还有其他需求。 甚至可以赋予其年度软件架构。 想写。问题是，多少人能做到？描述规范。 计算机告诉计算机该建造什么。多少人？我认为我们刚从30",
+   "audioFile": "audio-jensen-huang-nvidia/0193.wav"
+  },
+  {
+   "id": 194,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5068.564,
+   "end": 5097.517,
+   "text": "百万级到大概十亿级。未来每个木匠都会成为程序员，除了。 配备AI的木匠同时还是建筑师。他们能为客户创造的价值大幅提升。 他们的艺术造诣将极大提升。我相信每个会计师同时是。 你的财务分析师和顾问。所有职业都因此升级。如果我是木匠。 看到AI，我会彻底兴奋。作为水管工也一样。目前的程序员",
+   "audioFile": "audio-jensen-huang-nvidia/0194.wav"
+  },
+  {
+   "id": 195,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5097.967,
+   "end": 5103.369,
+   "text": "和软件工程师，我认为他们正处在直观理解如何用自然语言",
+   "audioFile": "audio-jensen-huang-nvidia/0195.wav"
+  },
+  {
+   "id": 196,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5104.069,
+   "end": 5127.66,
+   "text": "与智能体沟通以设计最佳软件的临界点。没错。随着时间推移。 他们会趋于融合，但我认为学习编程仍然有价值。 比如学习编程语言的本质，传统编程方式。 编程的最佳实践是什么？编程语言的设计原则。 编程语言的设计原则是什么？针对大型软件系统，Lex，我想对观众说明原因。",
+   "audioFile": "audio-jensen-huang-nvidia/0196.wav"
+  },
+  {
+   "id": 197,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5128.36,
+   "end": 5147.969,
+   "text": "规范的目标、规范的艺术，目标与艺术的统一。 这取决于你要解决的问题。 当我在思考为公司制定战略和确立企业方向时。 我会描述到足够具体的层面，使人们普遍理解方向并可执行。 他们能据此采取行动，但我会有意保留一定模糊度",
+   "audioFile": "audio-jensen-huang-nvidia/0197.wav"
+  },
+  {
+   "id": 198,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5148.419,
+   "end": 5166.127,
+   "text": "让43000名优秀员工将其做得比我想象的更好。 当我与工程师们合作时，我会思考。 我试图解决什么问题？我与谁合作？ 规范的层级与架构定义的深度与此相关。 每个人都需要学习在代码光谱中定位自己的位置",
+   "audioFile": "audio-jensen-huang-nvidia/0198.wav"
+  },
+  {
+   "id": 199,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5166.577,
+   "end": 5182.989,
+   "text": "你可能选择高度规定性方案，因为目标非常明确。 你可能选择更开放的探索方式，与AI反复互动。 创造力的边界。你在光谱中的位置，这种艺术性就是未来。 编程领域。但抛开编程来说，我认为很多人确实",
+   "audioFile": "audio-jensen-huang-nvidia/0199.wav"
+  },
+  {
+   "id": 200,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5183.689,
+   "end": 5205.415,
+   "text": "担心工作，尤其在白领领域，这种焦虑很普遍。 到来时，我们都不知所措。每当自动化和新技术。 首先，我认为我们都需要有同理心，承担起。 感受到个人和家庭失业后的痛苦。当出现像人工智能这样的。 变革性技术时，必然伴随阵痛，我对此无能为力",
+   "audioFile": "audio-jensen-huang-nvidia/0200.wav"
+  },
+  {
+   "id": 201,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5205.865,
+   "end": 5221.117,
+   "text": "希望这些阵痛能创造更多机会，让工具进化。 提升生产力和趣味性。就像编程让我前所未有地享受。 自动化枯燥部分，保留人类负责的创造性工作。 但痛苦和苦难仍会存在。我之前建议应对焦虑的方法",
+   "audioFile": "audio-jensen-huang-nvidia/0201.wav"
+  },
+  {
+   "id": 202,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5221.817,
+   "end": 5243.755,
+   "text": "正如我们之前讨论的，对未来的巨大焦虑。 对压力和不确定性的巨大焦虑。我先分解问题。 然后我会告诉自己，有些事情可以应对，有些则无能为力。但对能掌控的部分，我们。 理性思考，立即行动。如果今天要招聘应届生。 在两者之间，我会选择熟悉AI的应聘者",
+   "audioFile": "audio-jensen-huang-nvidia/0202.wav"
+  },
+  {
+   "id": 203,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5244.205,
+   "end": 5263.213,
+   "text": "如果我要招聘会计、市场人员。 在供应链、客服、销售、业务开发、律师中。 我会选择精通AI应用的候选人。因此我建议。 所有大学生、教师都应鼓励学生使用AI。 每个大学生毕业都应成为AI专家。无论你是木匠",
+   "audioFile": "audio-jensen-huang-nvidia/0203.wav"
+  },
+  {
+   "id": 204,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5263.663,
+   "end": 5293.277,
+   "text": "比如电工，去使用AI。看看它如何改变你的工作，提升。 自己。如果我是农民，会绝对使用AI。 我想看看它如何提升我的工作，让我成为。 我要亲自革新这个产业。那么，我首先要做的事情就是。 然后，我也会帮助他们。技术会取代并消除许多任务，因为它会实现自动化。 如果你的工作就是执行这些任务，那么你将面临高度的冲击",
+   "audioFile": "audio-jensen-huang-nvidia/0204.wav"
+  },
+  {
+   "id": 205,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5293.727,
+   "end": 5317.758,
+   "text": "如果你的工作包含某些任务，那么你必须学习如何用AI来自动化这些任务。 而在两者之间还有中间地带。 顺便说，AI的美妙之处在于聊天机器人版本可以帮你分解焦虑。 你可以通过对话把它拆解开来。就像我最近经历的。 你真的可以思考人生问题，我指的是实际问题而非治疗问题",
+   "audioFile": "audio-jensen-huang-nvidia/0205.wav"
+  },
+  {
+   "id": 206,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5318.208,
+   "end": 5347.474,
+   "text": "比如我担心工作，需要哪些技能？该采取什么步骤？如何提升AI能力？ 你完全可以逐条询问，它会给出具体方案。这简直是绝佳的人生教练。 我不会用AI时，AI会说：让我来教你。这非常元宇宙，但确实令人惊叹。 Excel，你完成了。AI消除了初次使用工具的摩擦，我可直接提问。 任何单一事物。我需要采取的第一步是什么？没错。还有，那些手把手的指导",
+   "audioFile": "audio-jensen-huang-nvidia/0206.wav"
+  },
+  {
+   "id": 207,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5348.174,
+   "end": 5362.467,
+   "text": "消除世界所提供的一切体验中的摩擦，你知道的。 就像我之前和你线下提到的，你提到要前往中国和台湾。太棒了，真为你感到兴奋。我该去哪儿？我该怎么做？我该怎样？所有这些问题",
+   "audioFile": "audio-jensen-huang-nvidia/0207.wav"
+  },
+  {
+   "id": 208,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5363.167,
+   "end": 5388.377,
+   "text": "立即得到回答。这很美妙。当你去台湾时，直接问AI：黄仁勋在台湾的最爱餐厅是哪些？对，它真的会告诉你。 哦对，准确吗？对，对。好吧，台湾到处都是。你在那边可是摇滚明星。我们之前也提到过，也许我们的路径会。 交汇，那将非常美妙。台北国际电脑展、NVIDIA、GTC、台湾。你觉得",
+   "audioFile": "audio-jensen-huang-nvidia/0208.wav"
+  },
+  {
+   "id": 209,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5389.077,
+   "end": 5399.75,
+   "text": "人类本性、人类意识中某些本质上无法被计算的东西。 也许某种东西，无论芯片多强大，都无法复制？我不知道芯片",
+   "audioFile": "audio-jensen-huang-nvidia/0209.wav"
+  },
+  {
+   "id": 210,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5400.45,
+   "end": 5423.128,
+   "text": "会感到紧张。当然，导致焦虑或紧张等情绪的条件。 AI将能够识别这些并理解这些情绪。 我不认为我的芯片会感受到这些。因此，这种焦虑。 这种感觉、这种兴奋、这些情绪，如何在其中体现。 人类表现，例如令人惊叹的人类表现，运动员表现，",
+   "audioFile": "audio-jensen-huang-nvidia/0210.wav"
+  },
+  {
+   "id": 211,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5423.578,
+   "end": 5447.77,
+   "text": "平均或低于平均水平，整个范围的人类表现。 在完全相同的情况下，不同人产生不同结果，。 表现为不同水平。我认为我们所构建的任何东西。 两台不同计算机在完全相同情境下运行时。 当然会产生统计学差异，但不是因为感知不同。 主观体验中存在着真正独特的东西",
+   "audioFile": "audio-jensen-huang-nvidia/0211.wav"
+  },
+  {
+   "id": 212,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5448.47,
+   "end": 5482.185,
+   "text": "人类感受到的主观体验非常特别。正如我之前说的。 与你交谈时我感到很紧张。我曾提到过希望、恐惧、焦虑。 生命的丰富性，一切多么令人惊叹，我们如何深陷爱中。 心碎的深度，对死亡的恐惧，至亲离世时的痛苦。 所有这些，整个体验。我知道让AI理解这些非常困难。 计算设备能够做到这一点，但其中仍有诸多未解之谜。 我们尚未揭开的谜团之多，我愿意保持开放心态接受惊喜",
+   "audioFile": "audio-jensen-huang-nvidia/0212.wav"
+  },
+  {
+   "id": 213,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5482.635,
+   "end": 5495.792,
+   "text": "过去数月和数年里我经历了许多惊喜，扩展定律能在智能领域创造奇迹。 见证这一过程实在令人叹为观止，保持开放心态至关重要",
+   "audioFile": "audio-jensen-huang-nvidia/0213.wav"
+  },
+  {
+   "id": 214,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5496.492,
+   "end": 5522.847,
+   "text": "我们需要拆解'智能'这个我们频繁使用的概念。 这不是神秘概念，智能有其明确含义，是一个包含系统。 包含感知、理解、推理和规划能力的系统。 那个循环本质上就是智能的核心，智能不是等同于人类的单一概念。 区分这两个概念非常重要，我们有两组不同表述。 我不过度幻想也不过度浪漫化智能这个概念",
+   "audioFile": "audio-jensen-huang-nvidia/0214.wav"
+  },
+  {
+   "id": 215,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5523.297,
+   "end": 5547.669,
+   "text": "我曾说过智能本质上是一种商品。 我身边都是聪明人，我被聪明人包围着。 在各自领域比我更聪明的人。然而。 我在其中扮演角色。挺有趣的。他们比我更受过教育。 他们上的学校比我好。他们在各自领域造诣更深。 全部，我有60个，对我来说都是超人，不知为何我正坐在",
+   "audioFile": "audio-jensen-huang-nvidia/0215.wav"
+  },
+  {
+   "id": 216,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5548.119,
+   "end": 5575.988,
+   "text": "中间协调所有60个。因此你必须问自己，关于一个。 让洗碗机置身于超人中间？这合理吗？ 因此，我的观点是，智能是一种功能性事物。 人性无法用功能定义，而是一个更宏大的概念。我们的生活…… 经验、忍痛能力、决心，这些是智能中的不同表达。 我想帮助观众理解一件事，若只能传达一个核心观点",
+   "audioFile": "audio-jensen-huang-nvidia/0216.wav"
+  },
+  {
+   "id": 217,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5576.438,
+   "end": 5605.086,
+   "text": "智能这个词，我们已将其提升到极高的层次。真正需要提升的，是人性。 品格、人性、同情心、慷慨，以及你所说的种种。 刚才，我认为这些是超人力量。智能将被商品化。 因为我们已讨论过。教育最重要。即使他们说教育最关键，上学时还有更多。 不仅仅是你获得的知识。但不幸的是，我们的社会已将一切",
+   "audioFile": "audio-jensen-huang-nvidia/0217.wav"
+  },
+  {
+   "id": 218,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5605.536,
+   "end": 5626.388,
+   "text": "浓缩成一个词，但生命不止一个词。我只想告诉你，我的人生经历表明。 虽然在智能曲线上的位置低于周围所有人，但这并不改变我…… 最成功的。我认为这正是我试图实现的目标。 激励所有人，防止智能民主化和商品化。 智能带来的焦虑，应激发你的灵感。",
+   "audioFile": "audio-jensen-huang-nvidia/0218.wav"
+  },
+  {
+   "id": 219,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5627.088,
+   "end": 5655.239,
+   "text": "是的。AI将助我们更彰显人性。我确信。 以人为本，人类优先。让世界不可思议的是人类的永恒。 会是这样。AI是使我们更高效的强大工具，完全正确。 更强大。完全正确。NVIDIA的成功和人们的生活在很大程度上依赖于…… 我提到的数百万人依赖你，但你只是一个人，我们。 提到，凡人，比如我们。你考虑过死亡吗？害怕吗？",
+   "audioFile": "audio-jensen-huang-nvidia/0219.wav"
+  },
+  {
+   "id": 220,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5655.689,
+   "end": 5663.931,
+   "text": "我不愿死去，拥有美好人生与家庭，我…… 重要工作。这并非千载难逢的机会，表明这一点",
+   "audioFile": "audio-jensen-huang-nvidia/0220.wav"
+  },
+  {
+   "id": 221,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5664.631,
+   "end": 5690.662,
+   "text": "许多人经历过，但不是一个人。这是人类前所未有的经历。 我正在经历的。英伟达是历史上最具影响力的科技公司之一。 我们正在开展至关重要的工作，我对此高度重视。还有其中一些。 当然，这些是实际问题，比如如何考虑继任。 规划？我以不认同继任规划而闻名。 原因并非永生。嗯，",
+   "audioFile": "audio-jensen-huang-nvidia/0221.wav"
+  },
+  {
+   "id": 222,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5691.112,
+   "end": 5723.75,
+   "text": "如果你担心继任规划带来的焦虑，那该怎么办？那就必须彻底打破它。 今天最重要的是：若关心公司未来，应回到最初。 你的职责是尽可能频繁且持续地传递知识、信息、见解、技能和经验。 尽可能做到这一点，这就是为什么我在团队面前不断思考一切。 每一次会议都是关于推理的会议。我在公司里的每一刻。 在公司外的时间都是尽可能快速地将知识传递给他人。我学到的任何东西",
+   "audioFile": "audio-jensen-huang-nvidia/0222.wav"
+  },
+  {
+   "id": 223,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5724.2,
+   "end": 5760.12,
+   "text": "在我桌上停留的时间超过一秒钟。我现在正在传递这些信息，。 天哪，这太酷了。在我甚至还没完全自己学会之前，我就已经把它指给其他人了。快上车，这太酷了。你一定会想，你一定会想。 学习这个。因此，我不断传递知识，赋能他人，提升他们的能力。 我周围每个人，以便，嗯，我所追求、所希望的结果是我死在。 工作上，你知道，希望我立刻死在工作岗位上。是的。没有漫长的痛苦期",
+   "audioFile": "audio-jensen-huang-nvidia/0223.wav"
+  },
+  {
+   "id": 224,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5760.57,
+   "end": 5787.563,
+   "text": "的痛苦，你知道，从粉丝的角度来看，嗯，鉴于你的，你的，嗯，嗯，极其。 你对文明的巨大积极影响。当然，我希望你继续前进，但同时这也是。 观看你所做的事情很有趣。你知道，这只是创新的速度，我是个超级粉丝。 工程奇迹。NVIDIA持续进行令人惊叹的工程创新，令人着迷。这是对人类、卓越建造者的礼赞，对",
+   "audioFile": "audio-jensen-huang-nvidia/0224.wav"
+  },
+  {
+   "id": 225,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5788.263,
+   "end": 5816.191,
+   "text": "卓越的工程。这象征着非凡的意义。希望你和NVIDIA继续前行。 继续前进。关于人类未来、关于人类命运的这场宏大叙事，是什么让你充满希望？当你展望未来，思考10年、20年、。 50年甚至100年后的世界，是什么让你保持信心？我始终坚信。 人类的善良、慷慨、同情心和潜能。这种信念有时甚至超出了应有的程度。",
+   "audioFile": "audio-jensen-huang-nvidia/0225.wav"
+  },
+  {
+   "id": 226,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5816.641,
+   "end": 5821.625,
+   "text": "我对此始终抱有极大信心，这种信心有时甚至过于强烈。",
+   "audioFile": "audio-jensen-huang-nvidia/0226.wav"
+  },
+  {
+   "id": 227,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5822.325,
+   "end": 5842.339,
+   "text": "我常被利用，但这从未动摇我的信念。 我始终相信人们内心渴望行善，渴望帮助他人。 而事实一次次证明我正确，甚至常常超出我的预期。 因此我对人类潜能充满绝对信心。我认为。 让我充满希望的是，当我推演当前可能实现的事物时，",
+   "audioFile": "audio-jensen-huang-nvidia/0227.wav"
+  },
+  {
+   "id": 228,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5842.789,
+   "end": 5863.663,
+   "text": "基于现有事物进行推演时所看到的前景。 我们正在做的事情，很可能会发生。我们有很多想要解决的问题。 我们有很多问题要解决，有很多东西要构建。 我们有很多好事要做，现在都触手可及。 在我的有生之年，这一切都触手可及。你不可能不为之激动",
+   "audioFile": "audio-jensen-huang-nvidia/0228.wav"
+  },
+  {
+   "id": 229,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5864.113,
+   "end": 5885.463,
+   "text": "你怎么可能不为之激动？事实是，我们有理由期待疾病终结。 有理由期待污染大幅减少。 有理由期待光速旅行成为现实。 虽然不是长途，但短途旅行，你知道，人们问我，很快我会把类人机器人送上飞船。 很快我会把类人机器人送上飞船，它会随行，尽快发射",
+   "audioFile": "audio-jensen-huang-nvidia/0229.wav"
+  },
+  {
+   "id": 230,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5885.913,
+   "end": 5909.205,
+   "text": "在飞行中持续改进，当时候选人意识已上传至互联网。 我的意识已上传至互联网，收集所有邮件和行为。 所有数据都在积累，逐渐形成完整的自我。 我的AI。到时候，我们会以光速发送它，追上我的机器人。 哦，这太棒了。但对我来说，这更偏向应用层面，",
+   "audioFile": "audio-jensen-huang-nvidia/0230.wav"
+  },
+  {
+   "id": 231,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5909.655,
+   "end": 5946.884,
+   "text": "但对我而言，还有好奇心驱动的视角，所有这些谜题，。 其中蕴含着大量令人着迷的科学问题。理解生物机器，可能只需五年，而非十年。然后是你的生物。 机器，人类大脑，破解理论物理。解释意识，这将非常震撼。而这一切都在我们的能力范围内。 黄仁勋，感谢你多年来所做的贡献。感谢你为世界所做的一切。感谢你的本真，我看得出你是个伟大的人。 祝你今年取得非凡成功。作为粉丝，我迫不及待想看",
+   "audioFile": "audio-jensen-huang-nvidia/0231.wav"
+  },
+  {
+   "id": 232,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5947.334,
+   "end": 5972.704,
+   "text": "你接下来会做什么？期待在台湾见面。感谢接受采访，Lex。很高兴。 最后再补充一点，感谢你所做的所有采访，。 你投入的深度与尊重，以及你所做的研究，。 让我们得以认识这些年你采访的杰出人物，我非常享受这些采访。 作为创新者，你创造了这种长篇幅的访谈形式，令人难以置信。",
+   "audioFile": "audio-jensen-huang-nvidia/0232.wav"
+  },
+  {
+   "id": 233,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-A.jpg",
+   "start": 5973.154,
+   "end": 5987.196,
+   "text": "感谢收听与黄仁勋的对话。支持本播客，请查看描述中的赞助商信息。 请查看描述中的赞助商信息，还可找到联系我的链接。 提问、反馈等。现在请允许我用艾伦·凯的话结束。",
+   "audioFile": "audio-jensen-huang-nvidia/0233.wav"
+  },
+  {
+   "id": 234,
+   "speaker": "B",
+   "speakerName": "Jensen Huang",
+   "avatarFile": "avatars/jensen-huang-nvidia/speaker-B.jpg",
+   "start": 5987.896,
+   "end": 5993.263,
+   "text": "预测未来的最好方式是创造它。感谢收听，期待下次再见。 谢谢。",
+   "audioFile": "audio-jensen-huang-nvidia/0234.wav"
+  }
+ ]
+}

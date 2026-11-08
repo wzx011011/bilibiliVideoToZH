@@ -1,0 +1,2895 @@
+{
+ "title": "Demis Hassabis:模拟现实 · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 0.0,
+   "end": 27.077,
+   "text": "以下是对德米斯·哈萨比斯的访谈，这是他第二次参加该节目。 他是谷歌DeepMind的负责人，如今已获得诺贝尔奖。 德米斯是当今世界上最聪慧且引人入胜的头脑之一。 致力于理解并构建。 智能，探索宇宙的宏大奥秘。能与他对话是我的荣幸。 这是莱克斯·弗里德曼的播客。支持节目请查看描述中的赞助商并订阅频道",
+   "audioFile": "audio-demis-simulation/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 27.777,
+   "end": 31.837,
+   "text": "现在，亲爱的朋友们，有请德米斯·哈萨比斯",
+   "audioFile": "audio-demis-simulation/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 32.537,
+   "end": 62.107,
+   "text": "在您的诺贝尔奖演讲中，您提出了一个我认为非常有趣的猜想。 任何自然中可生成或发现的模式都可以被经典学习算法。 高效发现和建模。这些系统模式可能包含哪些领域。 生物学、化学、物理，或许还有宇宙学和神经科学。我们讨论的是哪些领域。 我认为诺贝尔奖演讲有一种传统，需要稍微激进一些。 我们特别关注阿尔法系列项目，尤其是阿尔法折叠项目。",
+   "audioFile": "audio-demis-simulation/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 62.557,
+   "end": 93.748,
+   "text": "AlphaFold本质上是构建高度组合的高维空间模型，如果尝试暴力破解。 强制找到解决方案，找到最佳落子位置（如AlphaGo）或确定蛋白质的精确结构（如AlphaFold），若穷举所有可能性，时间将不够。 如果穷举所有可能性，宇宙的时间都不够用。 在两种情况下，我们均构建了环境模型，以智能方式引导搜索过程。 以蛋白质折叠为例，这种自然系统为何能实现？物理规律如何做到？",
+   "audioFile": "audio-demis-simulation/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 94.198,
+   "end": 121.884,
+   "text": "蛋白质在人体内毫秒级完成折叠，物理规律解决了这个我们如今用计算方法也解决的难题。 我认为自然系统具有结构特征，因为它们经历了塑造形态的进化过程。 这种视角非常有趣，即任何可进化的事物都可能被高效建模。 我有时称之为'最稳定者生存'，这似乎有一定道理。 除了生物进化，地质时间尺度上的山脉形态也受类似规律支配。",
+   "audioFile": "audio-demis-simulation/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 122.334,
+   "end": 154.281,
+   "text": "这些自然系统都遵循某种深层结构规律。 历经数千年，风化过程持续发生，甚至可以扩展到宇宙尺度，比如行星轨道。 行星、小行星的形状都经历了无数次作用过程的洗礼，如果这是真的，那么应该存在某种模式。 某种模式，可以通过逆向学习来识别。 类似于流形结构的某种模式。 这种模式能帮助你找到正确的解决方案和形状。 实际上还能以高效方式预测相关特性，因为这不是随机模式",
+   "audioFile": "audio-demis-simulation/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 154.731,
+   "end": 177.335,
+   "text": "除非数字空间中存在某种模式，否则如果数字分布是均匀的，就不存在可学习的模式。 没有可学习的模式时，就无法构建模型辅助搜索。 此时可能需要量子计算机等工具，但自然界大多数我们关注的事物并非如此。 它们具有进化形成的结构并经受住时间考验，这种结构可能被神经网络学习",
+   "audioFile": "audio-demis-simulation/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 178.035,
+   "end": 183.145,
+   "text": "自然界的搜索过程令人着迷，它创造的系统可以被高效建模",
+   "audioFile": "audio-demis-simulation/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 183.845,
+   "end": 213.275,
+   "text": "确实如此，这些系统能被重新发现，因为自然界并非随机。 我们周围存在许多稳定的元素，包括。 这些事物都受到某种选择压力的作用。鉴于你也关注理论计算机科学和复杂性理论，你认为我们能否建立。 一种类似复杂性动物园的复杂度分类，或许可以定义为可学习系统的集合。 可学习自然系统的集合（LNS）。>>是的，这实际上是一种新的系统分类",
+   "audioFile": "audio-demis-simulation/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 213.725,
+   "end": 241.778,
+   "text": "可能通过经典系统以这种方式被学习。那些能够被高效建模的自然系统。我始终对。 P=NP问题充满兴趣。 以及经典系统（非量子系统）能够建模什么这个问题。本质上就是图灵机。 而我正与几位同事在业余时间研究这个问题：是否应该建立一种新的问题分类。 这种问题可以通过神经网络过程解决，并且能够映射到这些自然系统上。 例如物理学中存在结构的事物",
+   "audioFile": "audio-demis-simulation/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 242.228,
+   "end": 260.19,
+   "text": "我认为这可能是一种全新的思考方式。这与我看待物理的基本视角一致，即信息是。 宇宙中最根本的单位，比物质更基础。 比能量和物质更根本。我认为它们可以相互转换，但我认为宇宙是一种信息性系统。",
+   "audioFile": "audio-demis-simulation/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 260.89,
+   "end": 293.839,
+   "text": "当你把宇宙视为信息性系统时，P等于NP问题就变成了一个物理问题。 这个问题能帮助我们真正解决当前面临的全部问题。我认为如果将物理学视为信息性系统，这确实是最重要的基础问题之一。 这个问题的答案将非常有启发性。更具体地说，关于P等于NP问题，我们目前的一些观点听起来可能有些疯狂。 目前听起来很疯狂，就像克里斯蒂安·埃丁森在诺贝尔奖演讲中提出的争议性观点，起初看似疯狂，但最终他解决了问题。",
+   "audioFile": "audio-demis-simulation/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 294.289,
+   "end": 323.122,
+   "text": "让我回到P等于NP问题。你认为我们讨论的内容中是否存在某种可能性？ 如果能像多项式时间或常数时间那样提前计算并构建模型。 提前计算并构建这个。 巨型模型后，理论上就能解决一些。 极其困难的问题。我认为实际上存在大量可以用这种方式表述的问题。 以这种方式表述。我们开发AlphaGo和AlphaFold时，你建模系统动态",
+   "audioFile": "audio-demis-simulation/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 323.572,
+   "end": 352.501,
+   "text": "然后这种建模方式会使解决方案的搜索过程变得可行。 预测下一步的高效性，基本上是多项式时间，因此可以被经典系统处理，比如神经网络。 神经网络运行在普通计算机上，也就是经典计算机，实际上就是图灵机。我认为这是最有趣的问题之一。 这个范式能走多远？我认为我们已经证明，经典系统，也就是图灵机，能走得比我们之前想象的更远",
+   "audioFile": "audio-demis-simulation/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 352.951,
+   "end": 383.907,
+   "text": "比如模拟蛋白质结构、下围棋达到世界冠军水平。很多人十年前可能认为这些需要量子计算机才能实现。 人们可能认为这些技术要到十年甚至二十年后才能实现。 需要某种量子机器或量子系统才能完成蛋白质折叠之类的工作。但事实上我们才刚刚开始探索经典系统的潜力。 经典计算机上构建的神经网络系统，也就是通用人工智能，将是这种范式的终极体现。 这将是这种范式的终极体现",
+   "audioFile": "audio-demis-simulation/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 384.357,
+   "end": 398.043,
+   "text": "这种系统的极限是什么？它能做什么？这是一个非常有趣的问题，直接关系到P等于NP问题。 你认为像细胞自动机这样的涌现现象是否可能超出经典计算机的建模能力？",
+   "audioFile": "audio-demis-simulation/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 398.743,
+   "end": 427.452,
+   "text": "比如观察细胞自动机，一些极其简单的系统会产生复杂现象。 你认为这类现象是否可能被经典计算机高效建模？ 这些系统应该处于边界状态，大多数涌现系统，比如细胞自动机，可能都能用经典系统建模。你只需要进行。 正向模拟，效率应该足够。当然，混沌系统这类问题。 初始条件至关重要，最终会达到无关联的状态，这类系统可能难以建模",
+   "audioFile": "audio-demis-simulation/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 427.902,
+   "end": 452.57,
+   "text": "这些就是开放性问题。但当你回顾我们已解决的系统和问题。 比如V3视频生成中的物理渲染、光影效果等。 这些物理学核心基础问题，非常有趣。这似乎揭示了。 宇宙结构的一些根本规律。在我看来，这就是我想要构建通用人工智能的。 目的——帮助科学家解答P=NP这类问题",
+   "audioFile": "audio-demis-simulation/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 453.27,
+   "end": 461.499,
+   "text": "我们可能持续惊讶于经典计算机能建模。 的领域。比如AlphaFold3在相互作用层面取得进展",
+   "audioFile": "audio-demis-simulation/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 462.199,
+   "end": 499.074,
+   "text": "在这一方向上，阿尔法基因组令人惊讶地能将遗传密码映射到功能，通过利用涌现现象。你认为存在如此多的组合。 面对海量组合可能性，却能精准找到高效模型。 对，因为那里存在某种结构，某种能量景观或其他形式的景观，你可以沿着梯度进行追踪。 神经网络特别擅长追踪梯度。如果存在可追踪的目标，且你正确指定目标函数，。 你就无需处理所有复杂性。我认为这可能就是我们几十年来天真地认为这些问题的方式。",
+   "audioFile": "audio-demis-simulation/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 499.524,
+   "end": 530.939,
+   "text": "如果穷举所有可能性，看起来完全无法解决。像蛋白质结构有10的300次方种可能，围棋棋盘位置有10的70次方种可能，。 这些数量都远超宇宙中的原子总数。那么如何可能找到正确解或预测下一步？ 但事实证明这是可能的。毕竟现实中的蛋白质确实能正确折叠，这给了我们信心。 如果我们理解了物理如何实现这一点，理论上就能模仿这一过程。",
+   "audioFile": "audio-demis-simulation/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 531.389,
+   "end": 561.035,
+   "text": "如果能建模这一过程，我认为在经典系统上实现是可能的，这正是该猜想的核心。 当然，非线性动力系统，特别是高度非线性的流体系统，都涉及这类问题。 它需要应对系统中存在的一些非常困难的方面，。 比如奇点会破坏数学规律，我们人类很难对高度非线性动力系统做出清晰预测。 但回到你的观点，我们可能对经典学习系统解决流体问题的能力感到惊讶。",
+   "audioFile": "audio-demis-simulation/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 561.485,
+   "end": 592.594,
+   "text": "流体动力学、纳维-斯托克斯方程，传统上被认为在经典系统中是极其困难的难题。它们需要庞大的计算资源。 比如天气预测系统，这些都涉及流体动力学计算。但如果我们。 观察VO视频生成模型，它能很好地模拟液体和材质的镜面光照效果。 比如有人生成了液体通过液压机被挤压的视频。我过去曾编写。 物理引擎和图形引擎，在游戏早期开发中深知实现这类程序的艰难",
+   "audioFile": "audio-demis-simulation/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 593.044,
+   "end": 622.872,
+   "text": "这些系统通过观看YouTube视频进行逆向工程，正在提取某些信息。 这些材料行为背后的某种潜在结构。或许存在某种低维流形。 如果能完全理解其内部机制，或许能学习到这种结构。这可能适用于大部分现实。 我一直在关注V3的这个特性。很多人强调不同方面。 包括喜剧效果和模因等内容。而它。 能以极逼真方式捕捉人类形象并结合原生音频",
+   "audioFile": "audio-demis-simulation/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 623.322,
+   "end": 661.401,
+   "text": "所有这些都是V3的卓越之处。但你提到的正是。 提到物理学。>>是的，>>它不完美，但相当不错。然后真正有趣的科学问题是它。 对理解我们世界的认识，>>为了做到这一点，因为。 从功利主义角度看，扩散模型根本无法理解。 任何东西>>但看起来……我认为你无法生成那种视频，除非。 理解，然后我们自己的哲学观念，理解意味着。 理解，这个问题被提到了表面：你认为V3理解我们的世界到什么程度？我认为只要它能以连贯方式预测",
+   "audioFile": "audio-demis-simulation/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 661.851,
+   "end": 688.084,
+   "text": "下一帧画面，这就是一种理解形式，不是拟人化的理解，不是某种深刻的哲学层面的。 理解，我认为这些系统没有这种能力，但它们。 确实建模了足够多的动态过程，以至于能准确生成持续8秒的。 视频，至少从视觉上看，一目了然难以分辨问题所在，想象再过两三年。 难以置信，考虑到我们从早期版本（一两年前）的",
+   "audioFile": "audio-demis-simulation/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 688.534,
+   "end": 716.631,
+   "text": "发展速度令人难以置信。我和你一样，认为很多人的看法都类似。 我很喜欢那些能够很好地捕捉人类动态和肢体语言的脱口秀演员，但事实上。 最让我印象深刻和着迷的是它的物理行为。 光影、材质和液体的表现。它能做到这一点真的很惊人。 这说明它至少具备某种直观的物理认知，对吧？比如物体如何。 按直觉运作，可能就像人类孩童那样",
+   "audioFile": "audio-demis-simulation/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 717.081,
+   "end": 747.294,
+   "text": "理解物理规律，而非博士生解析所有公式，这是更直观的物理理解。 这种直观物理理解是底层基础，人们常称之为常识。它似乎真正。 理解了某些东西，这让我很震惊。我原本以为没有理解就无法生成这种真实感。 有一种观点认为，只有具身AI系统（与物理世界互动的机器人）才能理解物理世界。 这是构建理解的唯一途径，但V3正在直接挑战这一观点",
+   "audioFile": "audio-demis-simulation/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 747.744,
+   "end": 786.183,
+   "text": "这非常有趣。如果五年前问我，我可能会说尽管沉浸其中，但直观物理理解是必需的。 比如如果我把杯子从桌子推下，它可能会碎裂，这种直觉是必须的。 液体就会溢出来，我们都知道这些现象。但我觉得神经科学领域有很多理论，比如感知与行动的关系，你。 必须通过行动来真正深入感知世界。有很多理论认为需要具身智能或机器人。 之类的技术，或者至少模拟行动，以便理解。 直观物理之类的事物。但似乎可以通过被动观察理解",
+   "audioFile": "audio-demis-simulation/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 786.633,
+   "end": 817.261,
+   "text": "这些现象，这让我很惊讶，再次印证了现实本质中某种深层规律。 在我看来，这超越了它生成的炫酷视频本身。 当然，下一步可能是让这些视频变得。 可交互。人们可以真正进入其中自由移动，这将非常震撼。 我想，这正是我所说的『世界模型』。 对世界运行机制、物理规律。 对世界及其中事物的建模，这正是实现真正AGI系统所必需的关键。",
+   "audioFile": "audio-demis-simulation/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 817.711,
+   "end": 822.332,
+   "text": ">> 我得和你谈谈电子游戏。你刚才有点调侃我，我我",
+   "audioFile": "audio-demis-simulation/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 823.032,
+   "end": 845.113,
+   "text": "你似乎在X上玩得越来越开心，这很好。 名叫Jimmy Apples的人发推文称：‘让我玩V3游戏。’。 谷歌做得非常。 好可玩的世界模型当拼写时我们问号。’然后你引用推文说：‘这不令人惊叹吗？’所以构建游戏世界。 用AI有多难？也许。 你能预见未来吗",
+   "audioFile": "audio-demis-simulation/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 845.813,
+   "end": 869.402,
+   "text": "你认为未来5到10年视频游戏会是什么样子？ 游戏曾是我的挚爱，青少年时期首次用AI开发游戏。 构建的首个重大AI系统，我始终想重返这个领域。 我常幻想，若90年代有今日AI，我会做什么？ 能打造令人震撼的游戏。下一步是开放世界游戏",
+   "audioFile": "audio-demis-simulation/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 869.852,
+   "end": 906.595,
+   "text": "有模拟系统、AI角色，玩家互动后系统会适应玩法。 最酷的游戏，比如我参与的主题公园，每个人的体验都独一无二，对吧？ 某种程度上共同创造游戏，对吧？我们设定参数和初始条件，你作为玩家沉浸其中，然后你成为…… 与模拟共同创造它。但编程开放世界游戏非常困难，必须能生成内容，无论玩家方向。 无论玩家选择什么，都希望它引人入胜。因此，构建类似细胞自动机之类的东西一直很困难。",
+   "audioFile": "audio-demis-simulation/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 907.045,
+   "end": 936.841,
+   "text": "实际上是一种能产生涌现行为的经典系统，但它们总是有些脆弱，有些局限。未来几年，5到10年内可能达到临界点。 能真正围绕你想象创造的AI系统，可动态改变故事。 无论最终选择什么，都要讲好故事，制造戏剧性。这就像终极的自选冒险游戏。 我认为，若考虑交互式VO版本，可能已接近。 将这一趋势向前推进5到10年，想象它将多么出色。",
+   "audioFile": "audio-demis-simulation/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 937.291,
+   "end": 973.642,
+   "text": "是的，你提到的很多内容非常有趣。内置的开放世界特性实现了深度个性化，正如你所描述的。 不仅仅是开放世界，打开任何门，然后会有。 那里可能有东西，关键是你选择哪扇门。 以无约束的方式定义你所看到的世界。一些游戏试图这样做以赋予你选择权。但其实这只是选择的幻觉，因为。 最近玩的《斯坦利的寓言》就是如此。游戏里有几扇门，但最终只是带你沿着既定叙事发展。 推荐人们尝试这类游戏",
+   "audioFile": "audio-demis-simulation/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 974.092,
+   "end": 1003.767,
+   "text": "以元方式讽刺选择的幻觉。 并涉及自由意志等哲学概念。但我不太喜欢。 我最喜欢的《上古卷轴》是《匕首王朝》。我认为。 他们真的在地下城随机生成上做了创新。你进入时会感受到开放世界的真实感。 你提到互动性。其实不需要太多互动。你只要打开门，眼前出现的场景就是随机生成的。 令人惊叹的体验，你可能是唯一一个。 没错。但你想要的应该比单纯的随机生成更好",
+   "audioFile": "audio-demis-simulation/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1004.217,
+   "end": 1036.54,
+   "text": "你希望有比简单AB硬编码选择更丰富的可能性，对吗。 硬编码选择并不算真正的开放世界。你真正想要的是能够实现任何可能性。 那个游戏环境。我认为唯一的方法是生成系统，生成系统。 必须实时生成。当然，你无法创造无限的游戏资源，对吧？ 如今AAA游戏的制作成本已高得惊人。上世纪90年代我参与开发这些游戏时，这一点就很明显。",
+   "audioFile": "audio-demis-simulation/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1036.99,
+   "end": 1068.353,
+   "text": "《黑白棋》是我参与开发的，早期阶段可能拥有当时最优秀的AI学习系统。 你照料这个神话生物，培育它，你对待它的方式决定了它如何对待村民。 如果你对它残忍，它也会残忍；如果你友善，它会保护村民。这完全反映了你的游戏风格。 我职业生涯早期通过游戏开发模拟系统和AI，这构成了我今天工作的基础。 从早期硬编码的AI方式，到现在追求完全通用的学习系统，始终在延续这一思路。",
+   "audioFile": "audio-demis-simulation/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1068.803,
+   "end": 1094.662,
+   "text": "看着你和马斯克迫不及待地想开发游戏，这过程既有趣又令人忍俊不禁。 因为你们都是玩家。其中一项。 你取得的惊人成就。 可能让你没时间真正开发游戏，最终可能只是开发出。 他人创造游戏工具，你必须关注。 其他人创造你一直梦想的东西。你认为在繁忙日程中能否抽出时间开发类似黑白的项目",
+   "audioFile": "audio-demis-simulation/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1095.112,
+   "end": 1122.058,
+   "text": "白色？一款真正能实现童年梦想的视频游戏。 梦想成为现实。有两种思路，或许随着某种编码技术进步，人们可在空闲时间完成这类创作。 我其实很期待这么做。 另一种可能是通用人工智能被安全引入世界后进行学术休假。 然后专注于我们最初讨论的物理理论。 两个后AGI项目，暂且这么叫",
+   "audioFile": "audio-demis-simulation/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1122.508,
+   "end": 1149.738,
+   "text": "我很期待看到AGI时代你选择开发的游戏，解决一些最聪明的人面临的难题。 人类历史上最聪明的人曾试图解决的P=NP问题。 或开发一款酷炫视频。不过在我的设想中二者相关。 因为会是尽可能真实的开放世界模拟游戏。你可知宇宙本质？这与P=NP问题本质相通。 以一种非常严肃的方式，就像电子游戏。 有时被轻视为仅仅是",
+   "audioFile": "audio-demis-simulation/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1150.188,
+   "end": 1157.127,
+   "text": "这种有趣的副业活动，尤其是当AI越来越多地处理那些困难且无聊的任务时，我们……",
+   "audioFile": "audio-demis-simulation/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1157.827,
+   "end": 1170.381,
+   "text": "现代世界称为工作。你知道，电子游戏是我们可能找到意义、找到时间去做的事情。 你可以创造极其丰富、有意义的体验。就像这就是",
+   "audioFile": "audio-demis-simulation/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1171.081,
+   "end": 1202.775,
+   "text": "人类生命。而在电子游戏中，你可以创造更复杂、更多样化的生存方式，对吗？ 我认为是的。我意思是，那些热爱游戏的人，包括我，至今仍然热爱，几乎能让想象力尽情驰骋，对吧？ 我过去非常热爱游戏，也热爱参与游戏开发。尤其是90年代和2000年代初，可以说是黄金时代，或许80年代。 游戏产业的黄金时代，当时一切都在被发现，新类型不断涌现，我们不只是制作游戏，我们感觉自己正在创造一种全新的娱乐媒介",
+   "audioFile": "audio-demis-simulation/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1203.225,
+   "end": 1225.278,
+   "text": "此前从未存在过的媒介，特别是这些开放世界游戏和模拟游戏，玩家与开发者共同创作故事，没有其他媒介能让观众参与创作故事。 观众能参与创作故事，当然现在多人游戏也使这种活动变得非常社交化。 你可以探索各种有趣的虚拟世界。但另一方面，你也需要享受并……",
+   "audioFile": "audio-demis-simulation/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1225.978,
+   "end": 1235.951,
+   "text": "体验物理世界。但问题是，我认为我们必须再次面对现实本质的疑问？现实与……的差异会是什么？",
+   "audioFile": "audio-demis-simulation/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1236.651,
+   "end": 1275.714,
+   "text": "这些日益逼真的。 模拟与多人互动场景及。 涌现现象及我们在现实中的行为。确实，体验现实世界本质具有巨大价值。 体验现实世界本质具有巨大价值。直接与他人面对面交流同样价值巨大。 直接与他人面对面交流，如我们今日这般。 但我们需要科学严谨地回答为何。 是的。哪些方面能映射到虚拟世界？确实。仅说‘去接触自然、放松’是不够的。 为何这有价值？是的。这或许是我职业生涯初期一直困扰、着迷的问题",
+   "audioFile": "audio-demis-simulation/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1276.164,
+   "end": 1313.425,
+   "text": "从我职业生涯之初。若思考我所做的一切，它们都与此相关。模拟、现实本质、以及可建模的边界。 能建模的边界。抱歉问了这个荒谬的问题，但迄今为止，最伟大的游戏是什么？&gt;&gt; 我最喜欢的当然是《文明》。我必须说，。 是《文明1》和《文明2》。我毕生最爱的游戏。嗯，&gt;&gt; 我只能假设你避开了最新版，因为它可能。 你可能会因此进入休假状态，彻底消失。>>没错，这些《文明》游戏确实需要大量时间，所以我得小心对待它们。",
+   "audioFile": "audio-demis-simulation/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1314.125,
+   "end": 1316.898,
+   "text": ">>有趣的问题。你和埃隆似乎……",
+   "audioFile": "audio-demis-simulation/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1317.598,
+   "end": 1356.486,
+   "text": "某种程度上都是硬核玩家。呃，擅长游戏和成为人工智能公司优秀领导者之间是否存在关联？>>我不知道。这确实是个有趣的问题。 我的意思是，我们都热爱游戏，他也曾开发过游戏。这可能尤其在我成长的年代，家用电脑刚兴起的80年代末90年代初。 上世纪80、90年代，英国电脑开始普及，我曾拥有光谱电脑。 这正是我学习所有编程的起点。当然，编程游戏是非常有趣的事。 我认为这仍然是学习编程的好方式，而且我立刻将它引向了人工智能和模拟领域，",
+   "audioFile": "audio-demis-simulation/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1356.936,
+   "end": 1383.279,
+   "text": "从而得以将我对游戏的兴趣和更广泛的科学探索结合起来。 最后，我认为游戏的伟大之处在于，它融合了艺术设计、。 艺术创作与最前沿的编程技术。在90年代，所有最有趣的。 技术突破都发生在游戏领域，无论是人工智能、图形、物理引擎、硬件，。 最初用于游戏。90年代推动计算进步的因素源于此。",
+   "audioFile": "audio-demis-simulation/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1383.729,
+   "end": 1421.56,
+   "text": "游戏领域。有趣的是，当时研究的前沿正发生在这里，它与艺术、图形设计等深度融合。 音乐和全新的叙事媒体，我非常喜爱。对我而言，这种跨学科的努力再次成为我热衷的领域。 我一生都热衷于此。我得问你，我差点忘了其中一项。 最令人惊叹的成就之一，但至今未获得足够关注的是阿尔法进化。>> 我们之前稍微讨论过演化。 但这是谷歌DeepMind开发的能演化算法的系统。>> 是的。 >> 这类演化技术作为未来超级智能系统的一部分前景如何？对于",
+   "audioFile": "audio-demis-simulation/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1422.01,
+   "end": 1455.805,
+   "text": "不了解的人，这可能属于大语言模型（LLM）引导的演化搜索。 >> 是的。 >> 所以演化算法负责搜索，而LLM则指引方向。 >> 是的。正是如此。LLM提出可能的解决方案，然后你在上层使用演化计算。 探索搜索空间中新颖的部分。我认为这是很有前景的方向，将LLM或基础模型与其他计算技术结合。 演化方法是其中之一，你也可以想象蒙特卡洛研究等各类搜索技术",
+   "audioFile": "audio-demis-simulation/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1456.255,
+   "end": 1483.318,
+   "text": "算法或推理算法基于基础模型，我认为这里有很多有趣之处。 可能通过混合系统发现新事物，但别美化进化。我也是人，但你认为存在…… 无论该机制如何，其中存在一定价值，因已讨论自然系统。你认为我们是否有很多低垂果实可摘？ 理解存在，能够建模、模拟进化，并利用这些理解。 关于受自然启发的机制，逐步优化。",
+   "audioFile": "audio-demis-simulation/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1483.768,
+   "end": 1514.403,
+   "text": "是的。如果拆解我们构建系统的本质核心，你得到的是某种模型的。 系统基本动态，然后如果你想。 发现前所未有的新事物，然后。 你需要某种顶层搜索过程，带你进入新颖区域。 搜索空间。你可以用多种方法实现。 进化计算就是其中之一。用阿尔法围棋时，我们只用了蒙特卡洛方法，正是这个方法发现了第37步。 围棋中前所未有的新策略，从而突破现有认知，模型可模拟一切",
+   "audioFile": "audio-demis-simulation/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1514.853,
+   "end": 1542.76,
+   "text": "你目前掌握的所有数据，但如何超越现有知识？这涉及创造力的问题，这些系统如何创造新事物？ 显然这对科学发现或推动医学发展至关重要，我们希望用这些系统实现这一点。你实际上可以。 在这些模型上叠加一些简单的搜索系统，进入新的空间区域。当。 然你必须确保搜索不是完全随机的，空间太大。你需要一个优化的目标函数",
+   "audioFile": "audio-demis-simulation/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1543.21,
+   "end": 1558.211,
+   "text": "并朝这个目标爬坡，引导搜索。但程序空间中可能有有趣的进化机制。不过程序空间是极其。 重要的领域，因为你可以泛化到所有已知事物，比如突变。这不只是蒙特卡洛树搜索",
+   "audioFile": "audio-demis-simulation/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1558.911,
+   "end": 1572.104,
+   "text": "偶尔会进行搜索。 合并事物。是的。合并事物，改变类似子组件的结构。 进化真正擅长的不仅是自然选择，而是组合事物并构建日益复杂的层级",
+   "audioFile": "audio-demis-simulation/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1572.804,
+   "end": 1610.027,
+   "text": "系统。这种组件特别有趣，尤其是在阿尔法折叠的程序空间中。 进化系统能产生一些新出现的能力，就像生命中发生的那样。有趣的是，用天真简单的。 方法也能实现这一点。 传统进化计算方法在无大语言模型和现代AI时，90年代虽被深入研究，但存在问题。 2000年代初曾有令人鼓舞的成果，但问题在于。 它们始终无法解决如何演化出新特性、新涌现特性的问题。 你只能得到系统中预设属性的一个子集",
+   "audioFile": "audio-demis-simulation/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1610.477,
+   "end": 1644.327,
+   "text": "但如果我们结合这些基础模型，或许能克服这一限制。显然，自然进化确实做到了，因为它。 它确实演化出了新能力——从细菌到如今的我们。因此，进化系统必然能够生成。 新的模式、新的能力以及涌现特性，这与我们最初讨论的主题相关。 也许我们正站在发现如何做到这一点的边缘。>> 是的，阿尔法进化就是其中之一。 我家里书桌上最酷的是三块屏幕边放着一个",
+   "audioFile": "audio-demis-simulation/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1645.027,
+   "end": 1655.531,
+   "text": "泰克塔利克的头骨，这是最早从水中爬到陆地的生物之一。我经常看着这个。 小家伙。无论计算过程多么复杂，它都像某种原始的",
+   "audioFile": "audio-demis-simulation/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1656.231,
+   "end": 1684.073,
+   "text": "计算引擎，以最基础的方式运作。 进化机制令人难以置信。这真正令人难以置信。现在，这是否就是我们需要的。 是的。这令人惊叹，它本质上是一个相对简单的算法，。 在四十亿年的时光中有效地运作，显然产生了如此巨大的复杂性，。 这可以被视作一种搜索过程，。 在宇宙物理基质上运行了漫长的计算时间，。 然后它产生了",
+   "audioFile": "audio-demis-simulation/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1684.523,
+   "end": 1694.402,
+   "text": "所有这些令人难以置信的丰富多样性。>> 我有太多问题想问你。但首先，你有一个梦想。你希望建模的自然系统之一是",
+   "audioFile": "audio-demis-simulation/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1695.102,
+   "end": 1726.329,
+   "text": "细胞。>> 是的，这真是个美好的愿景。我也可以就此问你一些问题。仅就AI科学家的角度而言，。 有一篇由。 Daniel Cocatalio、Scott Alexander等人提出的阶段性步骤。 阐述了通向超级智能的路径，其中包含许多有趣的观点，。 其中包括超级人类程序员和超级人类AI研究员。其中有一个研究品味的术语非常有趣。在。 你所看到的一切，你认为AI系统有可能具备吗",
+   "audioFile": "audio-demis-simulation/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1727.029,
+   "end": 1729.219,
+   "text": "科研判断力来帮助你",
+   "audioFile": "audio-demis-simulation/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1729.919,
+   "end": 1735.989,
+   "text": "AI协同科学家所做的引导工作。 人类杰出科学家，然后可能自行确定方向",
+   "audioFile": "audio-demis-simulation/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1736.689,
+   "end": 1752.545,
+   "text": "生成真正新颖想法的方向，这似乎是一个关键要素。 模仿或建模这种品味或判断力。 顶尖科学家与优秀科学家的区别。 辨别正确方向、正确实验、正确问题的能力。 科学最难的部分是提出正确假设",
+   "audioFile": "audio-demis-simulation/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1752.995,
+   "end": 1769.48,
+   "text": "提出一个高质量猜想比解决它更困难。 系统可能很快能解决难题。 系统能否提出值得研究的猜想。 像Terren Tower这样的人会深入探讨那。 关于数学本质或物理本质的提问属于更难的创造性问题",
+   "audioFile": "audio-demis-simulation/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1769.93,
+   "end": 1785.852,
+   "text": "我们尚未弄清这种想象力飞跃的机制。 比如爱因斯坦在提出狭义相对论时展现的想象力。 猜想需要既有趣又便于证明。 提出一个极其简单的命题同样困难。 将假设空间一分为二的理想状态",
+   "audioFile": "audio-demis-simulation/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1786.302,
+   "end": 1805.64,
+   "text": "以及制造某种。 可证伪且基于现有技术的命题。 单纯模型叠加的盲目搜索。 将假设空间分割的思路非常有趣。 如果问题设计得当失败本身极具价值。 只要设计得当，失败与成功同样有价值。所以",
+   "audioFile": "audio-demis-simulation/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1806.09,
+   "end": 1840.483,
+   "text": "或许因为它将假设空间一分为二，就像二分查找。没错。当你进行真正的基础研究时，并不存在。 所谓失败其实不存在，只要你选择的实验和假设能有效分割假设空间。你总能从实验中获得。 未成功的实验中获得同等价值的启示。 如果实验设计良好且假设有趣，这应能告诉你下一步该往哪里走。此时你实际上。 正在执行搜索过程，并利用这些信息进行非常有帮助的",
+   "audioFile": "audio-demis-simulation/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1841.183,
+   "end": 1862.519,
+   "text": "探索。那么要实现你设想的细胞建模，我们面临哪些重大挑战？ 如何实现？或许应强调Alpha系列的突破，其中包含众多飞跃。AlphaFold确实解决了蛋白质折叠问题，。 其开源成果包括AlphaFold3，已能处理蛋白质、RNA、DNA相互作用",
+   "audioFile": "audio-demis-simulation/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1863.219,
+   "end": 1872.88,
+   "text": "研究蛋白质、RNA和DNA相互作用，极其复杂且引人入胜，适合建模。 微小基因变化如何影响功能",
+   "audioFile": "audio-demis-simulation/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 1873.58,
+   "end": 1880.982,
+   "text": "例如单点突变如何与实际功能产生关联。这些。 似乎它正逐渐变得过于复杂。",
+   "audioFile": "audio-demis-simulation/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1881.682,
+   "end": 1907.11,
+   "text": "比如细胞，但细胞内部有大量复杂的组件。 我职业生涯中一直尝试将宏大的梦想分解为可实现的步骤。 关键在于如何将其拆解为可管理的阶段性目标。 我曾设想用虚拟细胞项目来模拟细胞内部结构。 这个想法我大概酝酿了25年。 我曾与保罗·内斯交流，他是我的生物学导师。",
+   "audioFile": "audio-demis-simulation/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1907.56,
+   "end": 1926.11,
+   "text": "他2001年获得诺贝尔奖，我们90年代就开始讨论这个设想。 要模拟细胞完整内部结构需要什么？ 在虚拟细胞上做实验，这些预测能指导现实实验。 用硅基模拟可使实验效率提升百倍。 先在硅基模拟，最后用湿实验验证。",
+   "audioFile": "audio-demis-simulation/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1926.56,
+   "end": 1960.001,
+   "text": "阿尔法折叠是最终能够模拟细胞全部交互、实现细胞全仿真的工具，我可能会从酵母细胞开始。 部分原因在于保罗·纳什研究酵母细胞，因其为单细胞生物。 所以它是最简单的单细胞生物之一，它不仅是细胞。 它本身就是完整的生物体，酵母。 已被深入研究，因此是构建完整模拟模型的理想候选。 阿尔法折叠解决了蛋白质三维结构的静态图像问题",
+   "audioFile": "audio-demis-simulation/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1960.451,
+   "end": 1988.935,
+   "text": "但生物学中所有有趣的现象都源于动态交互，这正是阿尔法3迈出的第一步。 首先模拟蛋白质与蛋白质、蛋白质与RNA/DNA的相互作用。 下一步可能是模拟完整通路，例如癌症相关通路，最终实现全细胞建模。 细胞内过程发生在不同时间尺度，这会不会很复杂？比如蛋白质折叠就非常快",
+   "audioFile": "audio-demis-simulation/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 1989.385,
+   "end": 2003.501,
+   "text": "是的，有些生物机制耗时很长，这涉及不同层级的交互。 这些交互发生在不同时间尺度，必须建立多尺度模拟系统。 动态，或者至少可能是一个分层系统。所以你可以跳过",
+   "audioFile": "audio-demis-simulation/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2004.201,
+   "end": 2015.094,
+   "text": "在不同时间阶段上下移动。所以你能避免吗？我意思是这里的一个挑战是。 无法回避模拟例如其中任何量子力学方面的内容",
+   "audioFile": "audio-demis-simulation/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2015.794,
+   "end": 2046.914,
+   "text": "没错，你不想过度建模，可以直接跳到只建模那些能准确预测结果的高层要素。 建模任何自然系统时必须决定建模的精细度层级。 对于细胞来说，我希望这个层级是蛋白质层面。 无需深入原子层级。 当然，这就是阿尔法折叠发挥作用的地方。这将成为基础，然后构建更高级的模拟。 这些高级模拟以这些模块为基石，从而产生涌现行为。抱歉提前",
+   "audioFile": "audio-demis-simulation/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2047.614,
+   "end": 2055.321,
+   "text": "提前准备了一些问题。 你觉得我们能否模拟生命起源过程。 模拟并建模生命起源",
+   "audioFile": "audio-demis-simulation/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2056.021,
+   "end": 2085.295,
+   "text": "能够模拟第一个来自。 非生命物质到生命体的诞生过程。 我认为这是最深奥且迷人的问题之一。我热爱生物学领域，比如尼克·莱恩。 所著《进化十大发明》一书，该书作者是该领域的顶尖专家之一。 也涉及大过滤器可能存在于过去还是未来。我认为如果阅读该书会发现。 生命出现的概率极低，从单细胞到多细胞的跃迁耗时约十亿年。",
+   "audioFile": "audio-demis-simulation/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2085.745,
+   "end": 2118.203,
+   "text": "在地球上完成，对吧？这说明生命诞生的难度极大。细菌在很长一段时间内。 非常快乐，直到它们以某种方式捕获了线粒体。我不明白为什么。 AI不能通过某种模拟帮助解决这个问题。这本质上是通过化学。 汤的初始条件生成类似细胞的结构？这可能成为下一步。 虚拟细胞项目之后，如何从化学汤中产生类似结构？ 如果37号提案能用于生命起源研究就太好了。",
+   "audioFile": "audio-demis-simulation/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2118.653,
+   "end": 2150.265,
+   "text": "谜团。最终我们会弄清楚它们的连续性。生命与非生命之间没有明确界限。 如果能严谨证明这一点，从大爆炸到今天的整个过程都是同一种机制。 我们构建的思维壁垒，即从非生命到生命的真正起源。 生命并非界限分明，而是连接物理与化学的连续体。 化学与生物学无界。我毕生研究人工智能和通用人工智能，因其能解答终极问题。 我不明白为何普通人不更关注这些根本性问题。",
+   "audioFile": "audio-demis-simulation/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2150.715,
+   "end": 2171.925,
+   "text": "我们缺乏对生命、非生命、时间本质的明确定义。 意识、引力、量子力学的怪异现象，这些都让我困惑。 这些问题像呐喊般直面而来，越来越响亮。 在最深层意义上，现实本质是所有问题的终极答案。 我们能用显微镜观察生命，分解到原子层面。",
+   "audioFile": "audio-demis-simulation/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2172.375,
+   "end": 2200.384,
+   "text": "但至今仍无法清晰定义生命本质。 这确实令人惊讶。我们总能用言语逃避思考，但意识显然存在。 我们是自己世界的核心，这种主观体验。 感觉就像某种存在，然后h。 你怎么可能不对这一切的奥秘大喊大叫？人类一直在应对。 周围世界的奥秘，存在许多谜题，比如。 太阳和雨水是怎么回事？去年雨水很多，今年却干旱",
+   "audioFile": "audio-demis-simulation/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2200.834,
+   "end": 2232.361,
+   "text": "我们到底做错了什么？人类一直在问这个问题。确实，我们发展出许多应对机制。 应对这些深奥谜题，我们看得见却无法完全理解，只能继续日常生活。 我们通过忙碌来应对？我们是否在自我分散注意力？天气是人类历史上最重要的问题之一。 如今天气仍是闲聊的默认话题，尤其在英国，众所周知。 这是一个极其难以建模的系统，即使谷歌DeepMind",
+   "audioFile": "audio-demis-simulation/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2232.811,
+   "end": 2248.253,
+   "text": "也取得了进展。是的，我们创造了全球最先进的天气预测系统，优于传统方法。 流体力学这类系统通常需要超级计算机耗费数日才能计算，而我们已经成功建模了大量",
+   "audioFile": "audio-demis-simulation/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2248.953,
+   "end": 2253.822,
+   "text": "天气动态，通过神经网络系统和我们的天气预测系统实现了建模。",
+   "audioFile": "audio-demis-simulation/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2254.522,
+   "end": 2261.07,
+   "text": "同样有趣的是，这类动态系统即使非常复杂，几乎接近混沌系统，在某些情况下",
+   "audioFile": "audio-demis-simulation/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2261.77,
+   "end": 2267.34,
+   "text": "也能被建模。这些系统中许多有趣的特性都可以通过神经网络系统实现。",
+   "audioFile": "audio-demis-simulation/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2268.04,
+   "end": 2298.168,
+   "text": "包括最近我们实现了飓风路径预测，这对全球来说都非常实用且重要，必须及时准确地完成。 这种预测，我认为这是非常有前景的方向，通过模拟可以快速运行预测和仿真。 对非常复杂的现实世界系统进行预测和仿真。 我应该提一下，我在德克萨斯州有机会接触了一个叫风暴追逐者的群体。 是的。他们最令人惊叹之处在于，他们需要使用模型预测风暴位置，因此他们",
+   "audioFile": "audio-demis-simulation/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2298.618,
+   "end": 2324.725,
+   "text": "兼具疯狂的勇气，比如进入风暴眼，同时又必须精准预测极端事件的位置。 为此需要越来越复杂的气象模型。是的。 是的，这是一种完美的平衡。 比如作为生物体身处其中。 科学前沿领域。他们可能正在使用深度思维系统。 希望加入他们的探索团队。亲身体验一次的感觉非常震撼。 准确预测某事发生及演化过程令人难以置信",
+   "audioFile": "audio-demis-simulation/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2325.175,
+   "end": 2340.142,
+   "text": "关于这个时间点存在有趣的问题。 AGI第37条迁移条款。 我估计未来5年有50%概率实现。 你如何定义AGI？我的标准一直很高。 大脑是通用计算机器的近似模型",
+   "audioFile": "audio-demis-simulation/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2340.592,
+   "end": 2373.66,
+   "text": "人类用智慧创造了现代文明。 要确认真正的AGI，必须确保其具备全面能力，而非仅在某些领域表现出色的碎片化智能。 避免出现当前系统存在的能力缺陷。 整体而言，我们还缺少一些能力，比如真正的发明能力和创造力，这是我们之前讨论过的。 之前讨论过，所以你希望看到这些能力如何测试。我认为可以通过一种暴力测试方法，比如对数万个认知任务进行测试",
+   "audioFile": "audio-demis-simulation/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2374.11,
+   "end": 2408.688,
+   "text": "数千个认知任务。 我们知道人类可以做到，也许还可以让系统向数百位世界顶尖专家开放。 各领域的顶尖专家，比如陶哲轩，让他们用一两个月时间寻找系统中的明显缺陷。 如果他们找不到，我认为你可以非常有信心，我们已经拥有了一个完全通用的系统。 或许我稍微反驳一下，人类在所有领域提升智能时似乎都过于自信。 正如你提到的陶哲轩，这些顶尖专家可能在几周内就默认了系统能完成的所有惊人之事",
+   "audioFile": "audio-demis-simulation/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2409.138,
+   "end": 2412.513,
+   "text": "然后专注于某些领域，哈哈，确实如此",
+   "audioFile": "audio-demis-simulation/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2413.213,
+   "end": 2417.552,
+   "text": "首先，我自认为是人类。 其次，我认同自己是人类",
+   "audioFile": "audio-demis-simulation/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2418.252,
+   "end": 2449.334,
+   "text": "有些人听我讲话时觉得我不擅长表达，比如结巴，但即使人类也有明显的能力差异。 领域限制甚至超出数学、物理等学科，这一点我…… 我不确定是否需要像象棋37步那样的突破，正面优势与10000项认知任务的轰炸相比。 其中一两个时刻会令人惊叹：『天啊，这正是……』我认为正是如此。所以我认为需要进行广泛的测试。 确保一致性，但像象棋37步这样的关键突破时刻才是我真正关注的",
+   "audioFile": "audio-demis-simulation/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2449.784,
+   "end": 2489.599,
+   "text": "比如像爱因斯坦那样提出新的物理猜想或假设。或许可以严格回测，设定1900年知识截止点。 严格地设定知识截止点为1900年，然后提供。 系统所有1900年前的文献资料，然后。 观察它是否能推导出狭义相对论和广义相对论，就像爱因斯坦当年那样。 这将是一次有趣的测试。另一个测试是能否发明围棋这类游戏，而不仅仅是37步的策略。 而是创造一个与围棋同样深邃、美学上同样优美的游戏，这些才是我关注的指标",
+   "audioFile": "audio-demis-simulation/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2490.049,
+   "end": 2519.737,
+   "text": "如果系统能实现多项突破，才能证明其真正的。 通用性。不止一个领域。我认为这些就是系统达到通用人工智能水平的标志。 可能需要先确认一致性，确保。 系统没有漏洞。这类似于提出一个新猜想或。 科学发现。那将是非常令人兴奋的时刻。这不仅是帮助我们实现目标，更会提出全新概念，而你将亲历这一过程。 宣布前大概需要2到3个月。嗯。那时你将坐等，克制住不发推文",
+   "audioFile": "audio-demis-simulation/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2520.187,
+   "end": 2547.776,
+   "text": "相关内容。没错，就像发现某种惊人的新物理理论。我们可能会邀请该领域世界顶尖专家。 进行验证，分析其原理并解释其运作机制。这将是令人震撼的时刻。 你担心人类专家，包括你自己，可能会遗漏某些发现吗？ 可能相当复杂。举个类比，假设我与。 加里·卡斯帕罗夫或马格努斯·卡尔森对弈，他们走出精彩一步，",
+   "audioFile": "audio-demis-simulation/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2548.226,
+   "end": 2587.177,
+   "text": "虽然我可能想不出这步棋，但他们能解释其合理性。我们或许能部分理解，但无法达到他们水平。而优秀的解释能力本身也是。 智能的重要体现，即能用简单方式阐明你的思考。 我认为顶尖科学家完全有可能做到这点。不过我想请教一下围棋方面的知识，能否给我解释一下？ Agnes或Gary可能最初忽视某个动作，认为是糟糕的举动。 通过直觉他们会意识到为什么这有效。游戏的一大优势在于它像科学实验一样，能验证你是否赢了。",
+   "audioFile": "audio-demis-simulation/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2587.627,
+   "end": 2611.226,
+   "text": "这告诉你最终那个动作是好的，策略是正确的。你可以回溯分析并解释自己为何探索周围。 反复解释自己为何探索周围。 这就是国际象棋分析的运作方式。或许我的大脑如此运作，因为我一直…… 这种训练方式非常严苛。 即使现在编写代码时，这种思考依然存在。",
+   "audioFile": "audio-demis-simulation/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2611.926,
+   "end": 2631.649,
+   "text": "存在一种微妙而有趣的争议，。 我可能先认定生成的代码在某些方面存在缺陷，但必须质疑自己是否理解有误。 是否存在更深层的洞见，而我才是错误的一方？ 随着系统越来越智能，你将不得不面对这种争议。 你刚想到的是漏洞还是功能？",
+   "audioFile": "audio-demis-simulation/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2632.349,
+   "end": 2647.362,
+   "text": "是的，这会很复杂。但你可以想象AI系统生成代码，人类程序员查看。 这些代码，同时借助AI工具进行处理。 从监控工具到生成工具，通用人工智能系统，抱歉再次提到，但阿尔法",
+   "audioFile": "audio-demis-simulation/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2648.062,
+   "end": 2664.566,
+   "text": "进化，超级酷。Alpha Evolve使编程实现递归自我改进。 AGI系统可能并非首个版本，而是后续若干版本。其实际形态与运作方式如何？ 你认为它会很简单吗？像一个自我改进的程序？",
+   "audioFile": "audio-demis-simulation/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2665.266,
+   "end": 2686.513,
+   "text": "这可能不理想，属于硬起飞场景。当前系统如Alpha Evolve，它们需要人工干预。 需要人类参与决策，是混合系统。 目前系统无法自主设计架构。 这与提出新假设猜想相关。若给定明确指令。 但若指令模糊，当前系统无法处理",
+   "audioFile": "audio-demis-simulation/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2686.963,
+   "end": 2715.578,
+   "text": "比如让系统发明围棋级游戏，当前系统无法理解。 如何具体化为可处理问题？类似情况，直接制造。 更受约束的自我版本。但我们在…… 我们曾用阿尔法进化实现更快矩阵乘法，聚焦具体问题时…… 你想要的是，它在逐步改进方面非常出色，但目前这些改进更多是小幅度的迭代。 理解上的飞跃，你需要…… 需要更大幅度的突破。>> 是的，但这也可能……",
+   "audioFile": "audio-demis-simulation/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2716.028,
+   "end": 2739.692,
+   "text": "抵消硬着陆场景的可能性。 可能只是渐进式改进序列，比如矩阵乘法，它需要…… 花数天时间思考如何逐步改进某事物，通过递归方式实现…… 通向通用人工智能的路径是渐进式改进。 如果是渐进式改进，就会呈现这种形态。问题是，它能否像Transformer架构那样实现突破？",
+   "audioFile": "audio-demis-simulation/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2740.142,
+   "end": 2780.137,
+   "text": "比如2017年我们和Brain团队实现的架构，目前尚不清楚像AlphaFold这样的系统是否能完成。 这是一次巨大的飞跃，这些系统确实很有效。我认为我们有能进行渐进式爬坡的系统，这引发了一个更大的问题：这些是否就是全部所需。 还是需要一两次更多重大突破。 同样类型的系统能否带来突破？比如一堆S型曲线，既有渐进改进，偶尔也有飞跃。 我认为目前还没有系统能明确展示这种飞跃。我们有很多系统正在做当前S型曲线的爬坡",
+   "audioFile": "audio-demis-simulation/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2780.587,
+   "end": 2816.757,
+   "text": "你当前所处的S型曲线。是的，第37步就是一次飞跃。 我认为这会是飞跃。比如类似这样的突破。你认为。 预训练、后训练、测试阶段的扩展定律依然有效吗？反过来。 你预计AI进步会遇到瓶颈吗？我们确信扩展空间还很大。预训练、后训练和推理阶段。 同时发生三种扩展。这关乎创新程度。我们以拥有最广泛深入的研究团队为傲。 关于创新，我们以拥有最广最深的研究团队而自豪，有令人惊叹的",
+   "audioFile": "audio-demis-simulation/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2817.207,
+   "end": 2854.712,
+   "text": "令人难以置信的研究人员，如提出Transformer的Nam Shazir，以及领导AlphaGo项目的Dave Silva等。 该研究基础意味着，若需类似AlphaGo的新突破，我们具备相应能力。 或者转换器，我们应成为实现目标的地方。当挑战更难时，我更喜欢，因为这样它。 更偏向真正的研究，而非单纯的工程，或者说研究与工程的结合，这正是我们的优势所在。我认为这更具挑战性。 发明新事物比。 比快速跟进更难。而且",
+   "audioFile": "audio-demis-simulation/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2855.162,
+   "end": 2886.033,
+   "text": "我们尚不确定，我认为新事物和现有技术扩展的可能性大约各占一半。 因此以实证方式，我们同时在两个方向全力推进。新的前沿构想，以及目前约一半的资源投入于此。 同时最大限度扩展现有能力，目前每个版本的Gemini都取得了令人瞩目的进展。 Gemini各版本进展，你这样描述很有趣。 不仅仅是计算规模的扩展，工程层面的问题更多是科学突破的领域，你是否认为DeepMind在这一领域",
+   "audioFile": "audio-demis-simulation/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2886.733,
+   "end": 2896.323,
+   "text": "有足够优势？如果从过去十年或十五年的历史来看，现代AI领域80%到90%的突破都源自",
+   "audioFile": "audio-demis-simulation/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2897.023,
+   "end": 2912.738,
+   "text": "DeepMind和Google在该领域已做好充分准备，我认为。 如果回顾过去十年或十五年的历史，现代AI领域80%到90%的突破都源自。 最初在谷歌大脑、谷歌研究及DeepMind工作",
+   "audioFile": "audio-demis-simulation/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2913.438,
+   "end": 2919.256,
+   "text": "回到刚才的话题，你是否担心高质量数据特别是高质量人类数据会耗尽",
+   "audioFile": "audio-demis-simulation/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2919.956,
+   "end": 2944.743,
+   "text": "我不太担心，部分原因是我认为数据足够，且已被证明能让系统表现良好，这又回到了。 模拟的问题，如果你有足够数据进行模拟，就能生成符合正确分布的合成数据。 显然，这是关键。你需要足够的真实世界数据，才能创建出这些生成器数据。 我认为我们处于那个阶段。是的，你做了令人惊叹的事",
+   "audioFile": "audio-demis-simulation/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 2945.443,
+   "end": 2974.736,
+   "text": "用的数据并不多。 是的。&gt;&gt;虽然数据量仍然很大，但我觉得足够了。&gt;&gt;所以关键在于计算规模的扩展。 构建AGI的关键？这既是工程问题，几乎也是地缘政治问题，因其还涉及。 供应链和能源，你非常关注的领域，即聚变能。 在能源领域进行创新。你认为我们会持续扩展计算规模吗？&gt;&gt;我认为会，原因有多个。计算资源",
+   "audioFile": "audio-demis-simulation/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 2975.436,
+   "end": 3010.003,
+   "text": "训练时往往需要将计算资源集中部署，数据中心之间的带宽限制也会影响这一点。 那里还有额外的约束条件，这对训练最大的模型显然很重要，但还有。 如今AI系统已应用于产品，全球数十亿人正在使用，现在需要大量推理计算。 此外还有思考系统，这是去年提出的新范式，给予更长的推理时间。 测试时它们会变得更智能。所有这些都需要大量算力，我看不到这种需求放缓",
+   "audioFile": "audio-demis-simulation/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3010.453,
+   "end": 3039.06,
+   "text": "随着AI系统改进，它们会变得更实用，需求也会增加。训练只是其中一部分。 训练可能甚至会成为整体算力需求中较小的部分。 V3的成功让人想到一种梗：越成功服务器就越吃紧。 服务器就像在煎蛋，确实如此。 没错，我们做过服务器煎蛋的视频，确实如此，我们必须想办法解决。 我们正在研发专用芯片，比如仅用于推理的芯片，提高能效",
+   "audioFile": "audio-demis-simulation/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3039.51,
+   "end": 3068.354,
+   "text": "我们还关注AI系统的能耗，比如数据中心冷却系统优化。 电网优化，以及最终实现各种能效提升方案。 协助聚变反应堆研发，与联邦能源公司合作开展多项研究，还可设想反应堆设计。 材料设计我认为是最新兴的太阳能材料、光伏板材料领域，常温超导体一直。 在我的突破清单上，还有最优电池技术。解决这些问题中的任何一个都将彻底革新",
+   "audioFile": "audio-demis-simulation/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3068.804,
+   "end": 3095.462,
+   "text": "气候与能源利用领域，我们可能在五年内实现AI系统实质性突破。 如果必须押注，但问题是什么。 会是核聚变吗？ 我认为聚变和太阳能是两个最值得押注的方向。太阳能可以说就是天空中的核聚变反应堆。 问题在于电池和输电技术。随着光伏材料效率不断提升，。 或许最终会发展出太空领域的戴森球概念，而聚变技术",
+   "audioFile": "audio-demis-simulation/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3095.912,
+   "end": 3123.367,
+   "text": "只要反应堆设计合理且能有效控制等离子体，我认为完全可行。这两种技术都将获得突破。 届时至少这两种技术将成为主要清洁能源来源，几乎免费的能源。 生在这个时代真是幸运。 我与你一起穿越到未来。 一百年后，你会有多惊讶。 如果人类已跨越一级文明规模，我不会感到意外。 从现在起百年时间尺度是可能的",
+   "audioFile": "audio-demis-simulation/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3123.817,
+   "end": 3139.878,
+   "text": "若能源问题通过聚变或高效太阳能解决。 水资源问题将不复存在。 新加坡以色列等富裕国家实际应用。 若成本降低沿海国家均可使用。 可将海水分离为火箭燃料。 太空将出现公交式运输服务",
+   "audioFile": "audio-demis-simulation/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3140.328,
+   "end": 3163.958,
+   "text": "小行星采矿将成现实。 人类文明将唤醒宇宙意识。 如果正确发展AI，用它解决这些问题，从长远来看，时间会证明一切。>> 是的，想象一下，如果只是作为游客飞过太空。 你可能会注意到地球，因为若解决能源问题，太空火箭会非常多，就像伦敦的交通一样拥堵。",
+   "audioFile": "audio-demis-simulation/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3164.408,
+   "end": 3192.764,
+   "text": ">> 但太空里，>> 只是许多火箭，你可能会看到漂浮在太空中的某种能源装置。 比如太阳能。>> 是的，>> 有可能。地球更技术化。 然后利用这种能源保护自然，>> 是的，比如雨林等生态系统。 因为人类历史上首次不再受资源约束。 >> 人类历史上首次不再受资源约束。 我认为这会是人类的新纪元，不再是零和博弈，比如土地归属问题",
+   "audioFile": "audio-demis-simulation/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3193.214,
+   "end": 3220.042,
+   "text": "如果老虎有森林，村民又该用什么？我认为这会帮助很多。 但不会解决所有问题，仍有人类固有的缺陷存在。 但至少能消除资源稀缺这个重大障碍，包括土地、材料和能源。 我有时称其为'丰裕时代'，当然关键在于确保这种丰裕真正实现。 公平地共享，社会每个人都能受益。 人类本性有某种",
+   "audioFile": "audio-demis-simulation/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3220.492,
+   "end": 3233.791,
+   "text": "就像我邻居那样，喜欢制造麻烦，我们确实会引发冲突。 这就是为什么游戏在古代历史中起到推动人们远离战争的作用。 热战，也许我们可以开发越来越复杂的视频游戏",
+   "audioFile": "audio-demis-simulation/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 3234.491,
+   "end": 3246.218,
+   "text": "满足我们内心对冲突的渴望。 然后避免实际的热战。 因为随着技术发展，武器已能摧毁整个人类文明。 不再适合与邻居开战，下棋或踢足球更好",
+   "audioFile": "audio-demis-simulation/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3246.918,
+   "end": 3270.24,
+   "text": "这就是我现代运动的体现，我热爱观看足球。 它非常原始、部落化，能释放这些能量。 我认为这是人类的一种本能。 需要归属于某个群体，但要以有趣、健康而非破坏性的方式进行。 一种建设性的事务。我认为回到游戏的话题，这也是它们最初如此伟大的原因，比如国际象棋，它们是很好的",
+   "audioFile": "audio-demis-simulation/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3270.69,
+   "end": 3310.468,
+   "text": "微型世界模拟。它们也是对现实世界的模拟，是某些现实情况的简化版本。 无论是扑克、围棋还是国际象棋，都是现实世界不同方面的缩影。 外交，现实世界的不同方面。同时也能让你反复练习，你明白吗。 人生中重大抉择的机会有多少次？比如选择什么工作、进入哪所大学，可能只有十几次关键决策需要做出。 你必须尽可能做好这些决策。游戏是一种安全的环境。 可重复的环境，能让你提升决策能力。 或许还能将精力引导至更具创造性的领域",
+   "audioFile": "audio-demis-simulation/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3310.918,
+   "end": 3323.287,
+   "text": "比如练习输赢，对吧？这就是我热爱游戏的原因，这也是我热爱巴西柔术的原因。 在安全的环境中反复被击败，这能让你明白物理规律和世界运行方式",
+   "audioFile": "audio-demis-simulation/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 3323.987,
+   "end": 3329.067,
+   "text": "提醒你有时会输有时会赢，但依然可以与所有人保持友谊",
+   "audioFile": "audio-demis-simulation/0135.wav"
+  },
+  {
+   "id": 136,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3329.767,
+   "end": 3368.586,
+   "text": "失去的感觉，对人类来说很奇怪，我们很难真正理解，这本来就是生活的一部分。 生命中失去是根本性的组成部分。是的，据我理解，武术中也如此，象棋亦是，至少对我而言，这与自我提升、自我认知密切相关。 你知道，我做过的事，关键不在于成为他人，而在于最大化自身潜力。 以健康方式做到这点，你会学会用胜利与失败，不因胜利而自满，不认为自己就是世界最佳。 保持谦逊，始终意识到总有更多可学之处，总会有更资深的专家可以指导你",
+   "audioFile": "audio-demis-simulation/0136.wav"
+  },
+  {
+   "id": 137,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3369.036,
+   "end": 3398.269,
+   "text": "我认为在武术中如此，在象棋训练中也是如此，我接受的训练方式亦然。 这可能非常严苛且重要，当然你渴望胜利，但更要学会以健康方式应对挫折。 将失去时的感受转化为建设性动力，下次改进。 这是快乐的源泉，是意义的来源，这种进步本身。 不是关于输赢，而是掌握。没有什么比这更令人满足，\"哦，太棒了，之前做不到的事，现在我做到了\"",
+   "audioFile": "audio-demis-simulation/0137.wav"
+  },
+  {
+   "id": 138,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3398.719,
+   "end": 3429.297,
+   "text": "游戏、体育、脑力运动，它们是衡量进步的标尺，因为能量化这种进步。 是的，这就是为什么我喜欢角色扮演游戏。 比如技能树上的数值增长，对人类而言是意义的来源，我们对此上瘾。 这种数值增长可能就是我们设计这类游戏的原因，显然这是我们的需求。 我们本身就是爬坡系统，若没有这种机制会很遗憾。 任何机制？比如颜色腰带，我们在各处都这么做。 这种东西，我不想否认它有深层意义",
+   "audioFile": "audio-demis-simulation/0138.wav"
+  },
+  {
+   "id": 139,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 3429.997,
+   "end": 3436.175,
+   "text": "对我们人类而言。在商业和领导力方面，谷歌有一个令人难以置信的故事",
+   "audioFile": "audio-demis-simulation/0139.wav"
+  },
+  {
+   "id": 140,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3436.875,
+   "end": 3465.135,
+   "text": "过去一年，谷歌在大语言模型产品线上的表现。 可以说一年前谷歌在LLM产品线处于劣势。 当时有Gemini 15，现在凭借Gemini 25扭转局势，你如何实现这种转变？ 从所谓‘落后’到所谓‘领先’，仅用一年时间？ 首先，我们有由科里、杰夫·迪恩和欧拉尔领衔的顶尖团队。 Gemini团队堪称世界级，没有这样的团队无法实现",
+   "audioFile": "audio-demis-simulation/0140.wav"
+  },
+  {
+   "id": 141,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 3465.835,
+   "end": 3468.869,
+   "text": "没有顶尖人才。当然，我们也有……",
+   "audioFile": "audio-demis-simulation/0141.wav"
+  },
+  {
+   "id": 142,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3469.569,
+   "end": 3497.198,
+   "text": "大量计算资源。但更重要的是我们建立的研究文化，将谷歌内部不同团队。 比如谷歌大脑的世界级团队，以及原深度思维团队汇聚。 打造最卓越的系统。 困难重重，但我们都很有竞争意识。 热爱研究，这非常有趣。看到我们的轨迹并非既定。 但目前进展速度是最关键的。如果看过去两年到一年前",
+   "audioFile": "audio-demis-simulation/0142.wav"
+  },
+  {
+   "id": 143,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3497.648,
+   "end": 3521.547,
+   "text": "我们称之为不懈推进与持续落地的结合，成效显著。 整个AI领域竞争异常激烈，汇聚了顶尖创业者和领导者。 全球顶尖公司都在激烈竞争，因为大家都意识到AI的重要性。 谷歌作为巨型企业，能否谈谈自然产生的官僚主义问题。 需要谨慎处理，比如那些自然形成的……",
+   "audioFile": "audio-demis-simulation/0143.wav"
+  },
+  {
+   "id": 144,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3521.997,
+   "end": 3545.548,
+   "text": "会议、管理层，以及从领导角度突破这些挑战，比如你提到的，如何应对产品数量的激增。 过去一年上线的Gemini相关产品数量令人震惊，没错，这正是不懈推进的体现。 任何大公司最终都会形成多层管理结构。 这几乎是组织运作的必然结果，但我仍以创业公司的方式运作",
+   "audioFile": "audio-demis-simulation/0144.wav"
+  },
+  {
+   "id": 145,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3545.998,
+   "end": 3572.861,
+   "text": "至今我们仍以初创公司姿态行事，像Google DeepMind这样保持决策力和活力。 我们试图兼得两者优势，既拥有数十亿用户平台，又保持顶尖研究实力。 通过我们的AI技术进行赋能。 将世界级研究成果转化应用于数十亿人生活，这种组合非常罕见。 我们持续精简官僚程序，让研究文化和快速落地文化并行发展",
+   "audioFile": "audio-demis-simulation/0145.wav"
+  },
+  {
+   "id": 146,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3573.311,
+   "end": 3600.062,
+   "text": "在保持责任担当的同时，我们找到了很好的平衡点。 作为大型公司，我们还要管理众多产品平台。 你提到的十亿级表面问题，我在大英博物馆与欧文·芬克尔讨论过。 库内阿形式领域专家，这种古老文字刻于泥板。他。 对查德GBT和杰米尼一无所知，甚至不了解人工智能。首次接触是谷歌的人工智能模式。是的。",
+   "audioFile": "audio-demis-simulation/0146.wav"
+  },
+  {
+   "id": 147,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3600.512,
+   "end": 3636.283,
+   "text": "这就是你所说的？这个AI模式，它只是提醒我们，世界上还有很多人对AI一无所知。 是的。有趣的是，如果你生活在X和Twitter上，至少在我的信息流里，全是AI，而在某些山谷地区和特定区域。 每个人都只想着AI，但大部分普通世界的人还没接触过。但>>这是一项重大责任，要对。 他们首次接触>>在印度农村或全球任何地方，你都有机会>>做到最好，要让。 尽可能好，在很多情况下，它只是幕后推动某物运作。 比如让地图或搜索功能更好，而且",
+   "audioFile": "audio-demis-simulation/0147.wav"
+  },
+  {
+   "id": 148,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3636.733,
+   "end": 3665.526,
+   "text": "对很多人来说，这些技术应该无缝融入，只是让他们的生活更高效。 Gemini产品和工程团队的很多人高度评价你在另一个维度上的贡献。 我几乎没想到，因为。 专注于重大科研问题的深度科学家，但他们也说你是个出色的产品负责人。 如何创造一种被广泛使用并享受的产品。这需要。 能否谈谈打造广受欢迎的AI产品的关键？是的，这让我想起游戏设计时期",
+   "audioFile": "audio-demis-simulation/0148.wav"
+  },
+  {
+   "id": 149,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3665.976,
+   "end": 3694.568,
+   "text": "为数百万玩家设计游戏。人们常忽略这一点。我曾参与前沿技术产品的开发。这正是。 上世纪90年代游戏的技术水平。我着迷于前沿研究与实际应用的结合。 通过产品实现全新体验。这本质上需要你设身处地想象使用场景。 并具备良好的审美能力。这与科学研究中需要的素质相通。 同样适用于产品设计。我一直都是跨学科领域探索者",
+   "audioFile": "audio-demis-simulation/0149.wav"
+  },
+  {
+   "id": 150,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3695.018,
+   "end": 3718.054,
+   "text": "在艺术与科学、产品与研究之间不存在界限。 如果产品没有前沿技术支撑就毫无吸引力。 需要发明创造的能力。比如在。 与Gemini交互时，某些体验并不符合预期。 比如界面设计与延迟之间的权衡问题。 如何展示这种等待或推理能力。有些有趣之处，正如你所说",
+   "audioFile": "audio-demis-simulation/0150.wav"
+  },
+  {
+   "id": 151,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3718.504,
+   "end": 3749.478,
+   "text": "这是前沿领域。我们还不知道如何呈现它。 有没有具体学到的东西？我意思是这个领域发展太快，我们一直在评估，但目前关键是需要持续简化。 无论界面还是构建在模型之上的功能，你都希望尽量不干扰模型。模型正在快速进化。 进步速度令人难以置信。对比2.5版和1.5版，提升幅度巨大。 未来版本预计会有类似飞跃。模型能力正在不断增强",
+   "audioFile": "audio-demis-simulation/0151.wav"
+  },
+  {
+   "id": 152,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3749.928,
+   "end": 3766.053,
+   "text": "当今AI优先产品的设计需要面向未来而非当下技术。 必须具备技术直觉，判断当前构想是否能在半年或一年内实现。 必须预判这项快速变化技术的发展轨迹。 不断涌现的新能力可能为研究开辟新路径",
+   "audioFile": "audio-demis-simulation/0152.wav"
+  },
+  {
+   "id": 153,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3766.503,
+   "end": 3795.793,
+   "text": "视频生成等多模态技术如何应用？这是个问题。 当前文本聊天界面似乎难以适配超级多模态系统。 就像《少数派报告》中那种协作式互动方式？对吧？但如今似乎非常受限。我认为。 几年后我们会回望今天的界面、产品和系统，觉得它们非常古老。我认为在产品和研究领域都有大量创新空间。 实际上，产品端和研究端都存在大量创新机会",
+   "audioFile": "audio-demis-simulation/0153.wav"
+  },
+  {
+   "id": 154,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3796.243,
+   "end": 3820.426,
+   "text": "而当我们讨论键盘时，一个开放问题是：何时、以何种方式、以及多大程度上。 我们将音频作为与周围机器交互的主要方式。 而不是打字。打字即使再快，也是一种低带宽交互方式，我认为我们必须。 开始利用其他设备，比如智能眼镜、音频设备、耳机，最终可能涉及某些",
+   "audioFile": "audio-demis-simulation/0154.wav"
+  },
+  {
+   "id": 155,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 3821.126,
+   "end": 3840.26,
+   "text": "神经设备，从而将输入输出带宽提升到今天的100倍左右。 我认为被低估的艺术是界面设计。但如果你没有合适的界面，就无法释放系统智能的潜力。 界面就是你释放其潜力的方式。这是一个非常有趣的问题，即如何实现这一点",
+   "audioFile": "audio-demis-simulation/0155.wav"
+  },
+  {
+   "id": 156,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3840.96,
+   "end": 3875.0,
+   "text": "所以如何摆脱这种状态。 似乎并不是真正的艺术形式。是的，这大概就是乔布斯常说的，我们要追求简洁、美感和优雅。 我认为，这正是我们应探讨的方向。再次提到围棋，对吧？作为游戏，最优雅、最美丽的游戏。你能,。 那能否设计出同样精美的界面？实际上，我认为我们将进入一个AI生成界面的时代，。 这些界面会根据你的审美、思维习惯进行个性化适配，AI会根据任务生成相应内容。",
+   "audioFile": "audio-demis-simulation/0156.wav"
+  },
+  {
+   "id": 157,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3875.45,
+   "end": 3911.763,
+   "text": "你明白，这大概就是未来的发展方向。 对，有些用户需要查看所有参数，比如我习惯键盘操作，。 我喜欢为所有功能设置快捷键。而有些人则偏好极简模式，。 隐藏所有复杂设置。这正是我所说的。 很高兴你也有乔布斯模式。爱因斯坦模式、乔布斯模式。让我试着问你个问题，。 回答问题：通用模型3何时发布？在GTA 6前还是后？ 全世界都在等待这两款产品。从25到30需要什么？ 因为25系列已经实现了性能飞跃。",
+   "audioFile": "audio-demis-simulation/0157.wav"
+  },
+  {
+   "id": 158,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3912.213,
+   "end": 3941.36,
+   "text": "那么升级到新版本究竟意味着什么？是性能提升，还是完全不同的突破？ 体验的风味？>>是的。我们处理不同版本号的方式是，我们尝试收集，可能需要大约。 6个月左右的时间完成一次全新版本的完整运行和产品化，。 这段时间里会涌现出许多新研究迭代和想法，我们将其汇总，。 比如过去6个月在架构或数据方面的所有有趣想法，可能涉及多种可能性，",
+   "audioFile": "audio-demis-simulation/0158.wav"
+  },
+  {
+   "id": 159,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3941.81,
+   "end": 3974.942,
+   "text": "我们将其打包测试，筛选出对下一轮迭代可能有用的方案，然后整合成新的。 大规模训练运行。当然，这个过程会受到监控，预训练结束后还有。 多种后训练方式，包含大量实验阶段的优化空间，这就是版本号通常指代。 基础模型或预训练模型，而2.5等中间版本则常包含不同规模的。 附加模块，通常是后训练阶段的优化方案，。 基于相同架构进行调整。当然，还可以在顶部",
+   "audioFile": "audio-demis-simulation/0159.wav"
+  },
+  {
+   "id": 160,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 3975.392,
+   "end": 4014.569,
+   "text": "此外，我们还有不同规模的模型，包括专业版和闪光版，后者常从最大模型蒸馏而来。 这意味着开发者可根据需求在多种方案间选择优先级。 性能、速度和成本。我们倾向于将这一部分视为某种前沿领域，其中纵轴代表性能。 横轴则是成本或延迟，以及速度。我们拥有的模型完全定义了这一前沿领域。因此，无论你的需求是什么。 权衡点在于，无论是作为个人用户还是开发者，你都应找到符合该约束条件的模型",
+   "audioFile": "audio-demis-simulation/0160.wav"
+  },
+  {
+   "id": 161,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4015.269,
+   "end": 4021.377,
+   "text": "版本变更背后，有一个大规模的英雄运行。是的。 随后是产品化的极端复杂性。",
+   "audioFile": "audio-demis-simulation/0161.wav"
+  },
+  {
+   "id": 162,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4022.077,
+   "end": 4064.202,
+   "text": "然后是沿该前沿路径不同规模模型的蒸馏过程。每向前推进一步，你可能会发现某个有趣的产物。 存在支线任务。是的。完全正确。但你也不希望过多支线，否则会产生无数版本的产物。 这非常模糊，但你也会非常兴奋，因为实在太酷了。比如你如何审视VO。 它如何融入更大的体系？完全正确。然后你不断进行上游收敛过程，我们称之为从。 产品界面或训练后阶段甚至更下游的反馈。 将这些信息反向输入核心模型训练，为下一轮做准备。没错。因此主模型——主Gemini",
+   "audioFile": "audio-demis-simulation/0162.wav"
+  },
+  {
+   "id": 163,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4064.652,
+   "end": 4068.619,
+   "text": "路线会变得越来越通用，最终实现通用人工智能",
+   "audioFile": "audio-demis-simulation/0163.wav"
+  },
+  {
+   "id": 164,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4069.319,
+   "end": 4085.765,
+   "text": "一次只进行一次英雄运行。是的，没错。进行几次英雄运行之后。嗯，是的。有时候当你发布这些新版本或每个版本。 确实都是基准测试，它们对于展示模型性能既可能有帮助也可能适得其反，你需要它们",
+   "audioFile": "audio-demis-simulation/0164.wav"
+  },
+  {
+   "id": 165,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4086.465,
+   "end": 4124.992,
+   "text": "但重要的是不要过度拟合它们，对吧？不应存在万能标准，比如曾被称为林玛的那类。 后来自然而然地成为人们测试这些系统的主要方式之一，至少对于聊天机器人来说，显然有大量学术。 基准测试，从数学和编程能力到通用语言能力、科学能力等。而我们还有自己关注的内部。 基准测试。这是一个多目标优化问题，对吧？你不想只擅长某一方面。我们正试图构建在各方面都表现良好的。 通用系统，努力实现无悔改进。比如你在提升编程能力时，不应降低其他领域的性能",
+   "audioFile": "audio-demis-simulation/0165.wav"
+  },
+  {
+   "id": 166,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4125.442,
+   "end": 4161.688,
+   "text": "这就是难点，因为。 当然你可以增加更多编程数据，或者加入更多游戏数据，但这样会不会损害语言系统。 或翻译系统等你关心的其他功能？因此必须持续监控这个日益庞大的基准测试套件。 此外，当你将这些模型部署到产品中时，还需要关注直接使用数据和用户反馈信号。 以及从终端用户那里获得的直接统计数据。 无论是程序员还是普通用户使用聊天界面，最终都要衡量其有用性，但很难将其转化为数字。",
+   "audioFile": "audio-demis-simulation/0166.wav"
+  },
+  {
+   "id": 167,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4162.138,
+   "end": 4203.275,
+   "text": "这需要基于大量用户的直觉基准测试，但很难判断，如果模型更智能却无法正常工作，这让我非常不安。 模型虽然更聪明，但若只是基于直觉的判断，效果并不理想，这实在太可怕了。 你刚才说的每个方面都必须在众多领域中既智能又实用。 所以你会非常兴奋，因为突然之间解决了以前无法解决的编程问题。 你从未解决过的编程难题。 确实很难平衡，因为无法完全信任基准测试，只能依赖终端用户。 还有更抽象的因素需要考虑，比如系统的个性风格，是冗长还是简洁，是否幽默等。",
+   "audioFile": "audio-demis-simulation/0167.wav"
+  },
+  {
+   "id": 168,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4203.725,
+   "end": 4231.133,
+   "text": "不同的人喜欢不同的风格，这几乎成为心理学研究的前沿领域。 我博士期间曾研究过五大人格特质，我们究竟希望助手具备怎样的性格？ 不同用户偏好差异很大，这些都是产品领域前所未遇的新挑战。 但我们正在尝试解决这些问题。 现在必须迅速应对。我认为这是一个非常迷人的领域，通过塑造事物的特性，从而反映出我们自身",
+   "audioFile": "audio-demis-simulation/0168.wav"
+  },
+  {
+   "id": 169,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4231.583,
+   "end": 4235.021,
+   "text": "我们喜欢的类型是什么，因为提示工程",
+   "audioFile": "audio-demis-simulation/0169.wav"
+  },
+  {
+   "id": 170,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4235.721,
+   "end": 4243.026,
+   "text": "允许你控制许多元素，但产品是否能让你更容易控制。 这些体验的不同方面，以及你互动的不同角色",
+   "audioFile": "audio-demis-simulation/0170.wav"
+  },
+  {
+   "id": 171,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4243.726,
+   "end": 4276.318,
+   "text": "没错。那么，谷歌DeepMind获胜的概率是多少？我认为这并不是一种胜利。 鉴于我们正在构建的东西的重要性与影响，我认为不应该将其视为游戏或竞争。 尽管这一直是我的思维方式。在我看来，我们每个人，尤其是处于前沿的人。 这项不可思议的技术可以用于巨大的好处，但也存在风险。 这一直是我的梦想，也是我们一直努力的目标。我希望最终社区，也许国际社会会团结起来",
+   "audioFile": "audio-demis-simulation/0171.wav"
+  },
+  {
+   "id": 172,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4276.768,
+   "end": 4280.034,
+   "text": "接近AGI时，这将变得必要。我同意。",
+   "audioFile": "audio-demis-simulation/0172.wav"
+  },
+  {
+   "id": 173,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4280.734,
+   "end": 4286.422,
+   "text": "表达得非常好。你提到过，你与这些实验室的负责人保持良好关系",
+   "audioFile": "audio-demis-simulation/0173.wav"
+  },
+  {
+   "id": 174,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4287.122,
+   "end": 4323.06,
+   "text": "竞争加剧。维持这些关系有多难？到目前为止还不错。 我本人很注重协作。科研是协作的事业，科学也是协作的事业。最终对人类都有好处，如果你能治愈。 一些可怕的疾病并找到有效疗法，这将造福全人类。能源领域也是如此。 我感兴趣的是用AI帮助解决这些问题。我希望这项技术存在于世并被用于正确的事物上。 这种生产力提升应惠及所有人。因此我努力与所有顶尖实验室保持良好关系。",
+   "audioFile": "audio-demis-simulation/0174.wav"
+  },
+  {
+   "id": 175,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4323.51,
+   "end": 4347.751,
+   "text": "他们中许多人性格都很有趣。但总体而言我与他们都保持良好关系。 当事情变得更加严峻时，这种沟通渠道将变得尤为重要。 在安全等关键领域，这种协作机制将促进合作。 比如互联网会很期待你和马斯克合作开发游戏。 这种合作能增进友谊，你们俩都是真正的游戏爱好者。",
+   "audioFile": "audio-demis-simulation/0175.wav"
+  },
+  {
+   "id": 176,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4348.201,
+   "end": 4367.415,
+   "text": "这会很有趣。 我们过去讨论过这个想法，或许可以实现。 通过这种合作，双方都能获得共赢。 那种协作的肌肉。科学探索是人类的副业，我认为深度思维一直在推动。 他们正在积极推动。我希望其他实验室能多做一些科学研究。",
+   "audioFile": "audio-demis-simulation/0176.wav"
+  },
+  {
+   "id": 177,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4367.865,
+   "end": 4402.924,
+   "text": "做一些事情然后合作，因为解决重大科学问题似乎更容易合作。 我认为我们是唯一将它用于科学并这样做的，这也是为什么像AlphaFold这样的项目对我和我们如此重要。 我们的使命是展示AI如何明确地以具体方式造福人类。 我们基于AlphaFold孵化了Isomorphic等公司进行药物研发，进展顺利，并构建类似AlphaFold的系统。 进入化学领域以加速药物设计，我们需要展示这些例子，社会也需要理解AI的潜力。",
+   "audioFile": "audio-demis-simulation/0177.wav"
+  },
+  {
+   "id": 178,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4403.374,
+   "end": 4435.041,
+   "text": "能带来巨大好处。>> 我衷心感谢你。 你以严谨、乐趣和谦逊推动科学努力。我仍然喜欢谈论P等于NP问题，这太不可思议了，所以我喜欢。 它。似乎有一场人才争夺战，其中一些是网络迷因，我不确定。你对此怎么看？ 元宇宙用高薪收购人才。 以及这场竞争的升温。 关于人才？我认为很多人认为DeepMind是一个。 非常理想的研究机构，因为这里有着活跃的科研文化，能开展前沿工作",
+   "audioFile": "audio-demis-simulation/0178.wav"
+  },
+  {
+   "id": 179,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4435.491,
+   "end": 4466.233,
+   "text": "是的，Meta目前采取的策略，至少从我的角度看，我认为。 真正坚定的AGI使命信仰者，理解其潜在正反影响。 并意识到这背后的责任，他们这么做主要是想参与这项研究的最前沿。 从而引导技术发展方向，安全地将这项技术引入世界。 目前Meta可能不在最前沿，但他们或许能重新回到那里，从他们的角度来看，他们所做的事情可能是合理的。",
+   "audioFile": "audio-demis-simulation/0179.wav"
+  },
+  {
+   "id": 180,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4466.683,
+   "end": 4502.702,
+   "text": "从他们角度看这么做可能合理，毕竟他们现在落后了。 但比金钱更重要的是，公司必须支付员工市场合理薪酬。 我30年一直认为通用人工智能最关键。 从某种意义上说，这么做是合理的。 但我也认为存在更深层的问题，如今AI从业者薪酬都很丰厚。 2010年创业初期，我们连工资都发不起，连续几年靠自掏腰包维持。那时根本融不到资，而如今实习生的薪资已达到我们当年首轮融资的规模。",
+   "audioFile": "audio-demis-simulation/0180.wav"
+  },
+  {
+   "id": 181,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4503.152,
+   "end": 4537.891,
+   "text": "那段日子我曾被迫免费工作，几乎要自费支付实习费用。 如今形势完全颠倒，但这只是现实。 这就是新世界现状。虽然我们讨论过通用人工智能实现后，能源系统解决后，货币又将意味着什么。 当经济结构发生剧变，我们面临的挑战将更加复杂。 在那个世界里，经济如何运行？企业又将如何存在？这显然是个核心问题。 至于薪资这类话题，目前只是次要问题。 当面对如此巨大的后果和令人着迷的科学问题时，",
+   "audioFile": "audio-demis-simulation/0181.wav"
+  },
+  {
+   "id": 182,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4538.341,
+   "end": 4559.261,
+   "text": "也许只需再过几年。因此从实际角度看，。 如果我们聚焦职业领域，程序员是个值得研究的群体，。 因为当前AI系统在编程领域表现卓越，且优势日益明显。 因此，许多程序员正在思考。 热爱编程的人担心失业，有多担心？",
+   "audioFile": "audio-demis-simulation/0182.wav"
+  },
+  {
+   "id": 183,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4559.961,
+   "end": 4565.926,
+   "text": "他们应该有多担心？如何适应新现实，确保在编程世界中生存并繁荣？",
+   "audioFile": "audio-demis-simulation/0183.wav"
+  },
+  {
+   "id": 184,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4566.626,
+   "end": 4585.952,
+   "text": "编程与过去认为的相反，一些我们认为更难的技能可能更容易掌握。 编码和数学因为能生成大量合成数据并验证准确性。 生成合成数据用于训练，这也是程序员关注的领域。 未来5到10年，拥抱技术的人将与技术高度融合",
+   "audioFile": "audio-demis-simulation/0184.wav"
+  },
+  {
+   "id": 185,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4586.402,
+   "end": 4607.024,
+   "text": "在创意或技术领域变得超高效，顶尖程序员将更卓越。 他们效率将是现在的10倍，能最大限度利用工具。 这将引发巨大变革，许多人都能从中受益。 编程门槛降低后，更多创意者将参与编码工作。 顶尖程序员在架构设计上仍有巨大优势",
+   "audioFile": "audio-demis-simulation/0185.wav"
+  },
+  {
+   "id": 186,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4607.474,
+   "end": 4633.858,
+   "text": "问题在于如何指定架构应达到的目标。 引导这些编码助手以有用的方式并检查。 他们生成的代码是否优质。 我认为在可预见的未来仍有大量提升空间。 未来几年内有多个有趣的方向。 持续改进使用这些工具的迫切需求。 工具。他们正搭乘模型改进的浪潮。对，与它们竞争。但遗憾的是，这就是地球生命的本质",
+   "audioFile": "audio-demis-simulation/0186.wav"
+  },
+  {
+   "id": 187,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4634.558,
+   "end": 4649.151,
+   "text": "地球生命。某些前沿编程可能价值巨大，而其他类型价值较低。例如，它。 可能是前端网页设计更易被AI系统生成。 如你所说，游戏引擎设计或类似领域。 或反手设计或指导",
+   "audioFile": "audio-demis-simulation/0187.wav"
+  },
+  {
+   "id": 188,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4649.851,
+   "end": 4672.196,
+   "text": "在高性能场景中系统设计决策可能极其有价值。 人类需求将发生转移，这对人们适应来说很困难。 科技变革会带来巨大冲击和变化，历史上互联网、移动通信甚至更早的工业革命都曾如此。 这将是一个剧烈变革的时代，会诞生我们今天无法想象的新职业。",
+   "audioFile": "audio-demis-simulation/0188.wav"
+  },
+  {
+   "id": 189,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4672.646,
+   "end": 4693.5,
+   "text": "具备相应技能的人将变得极其宝贵，但人们可能需要重新学习或适应现有技能。 这次变革的难点在于影响范围可能扩大10倍，速度也快10倍。 工业革命用了100年，而这次可能仅需10年。 影响力度与速度的叠加将使社会更难应对。",
+   "audioFile": "audio-demis-simulation/0189.wav"
+  },
+  {
+   "id": 190,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4693.95,
+   "end": 4720.235,
+   "text": "我们需要立即讨论应对方案，呼吁全球顶尖经济学家和哲学家参与思考。 应探讨社会如何应对变革，以及应采取何种措施。 例如通过全民基本保障制度，将生产力提升成果共享给社会。 以基础服务等形式提供保障，若需更多资源则需掌握稀缺技能。 但基本保障应作为政府技术性职能提供给所有人。",
+   "audioFile": "audio-demis-simulation/0190.wav"
+  },
+  {
+   "id": 191,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4720.685,
+   "end": 4723.803,
+   "text": "如果将政府视为技术，还有有趣问题。",
+   "audioFile": "audio-demis-simulation/0191.wav"
+  },
+  {
+   "id": 192,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4724.503,
+   "end": 4749.156,
+   "text": "不仅限于经济学，还涉及政治领域的问题。如何设计一个能应对快速变化时代的系统，使得你能够。 代表不同群体所感受到的痛苦？ 如何应对不同群体的痛苦？ 如何重新分配资源以解决这些痛苦，同时体现希望与恐惧。 以一种不会导致分裂的方式，因为政客往往擅长煽动分裂",
+   "audioFile": "audio-demis-simulation/0192.wav"
+  },
+  {
+   "id": 193,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4749.856,
+   "end": 4776.385,
+   "text": "利用这种分裂来获取选票。 通过定义对立面并宣称其负面性来达到目的。 我认为这往往适得其反，需要利用快速变化的技术帮助世界繁荣。 如果将政治系统视为技术，我们也需要快速改进政治系统。 肯定如此，我认为需要新的治理结构和制度来协助转型。 政治哲学和政治科学将是关键，但首要任务是",
+   "audioFile": "audio-demis-simulation/0193.wav"
+  },
+  {
+   "id": 194,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4776.835,
+   "end": 4791.761,
+   "text": "创造更多资源丰裕度，提高生产力，最终摆脱。 零和局面，第二个问题是如何利用这些资源。 资源并分配这些资源，但首先必须拥有充足资源。你之前提到过《狂人》这本书",
+   "audioFile": "audio-demis-simulation/0194.wav"
+  },
+  {
+   "id": 195,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4792.461,
+   "end": 4819.877,
+   "text": "由本杰明·列维图所著，首先是一本关于你的传记，内容有些奇怪。 确实难以判断虚构与现实的比例，但核心人物。 约翰·冯·诺伊曼，我认为这是一次对疯狂与天才的深刻探索。 发现的双刃剑。对于不了解。 约翰·冯·诺伊曼是一位传奇人物，他贡献于量子力学。 他参与了曼哈顿计划，被广泛认为是现代计算机和人工智能的先驱",
+   "audioFile": "audio-demis-simulation/0195.wav"
+  },
+  {
+   "id": 196,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4820.327,
+   "end": 4842.511,
+   "text": "许多人称他为人类史上最聪明的人之一，这非常引人入胜。 作为见证核科学与物理转化为原子弹的人。 他预见了计算技术将产生同样深远的影响。 这本书的迷人之处在于它展现了这种预见性。 关注AlphaZero、AlphaGo重大时刻，可能与约翰·冯·诺伊曼有关",
+   "audioFile": "audio-demis-simulation/0196.wav"
+  },
+  {
+   "id": 197,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4842.961,
+   "end": 4848.675,
+   "text": "想法被带入现实。那么问题是，如果你现在与约翰·冯·诺伊曼对话，",
+   "audioFile": "audio-demis-simulation/0197.wav"
+  },
+  {
+   "id": 198,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4849.375,
+   "end": 4872.608,
+   "text": "他会怎么评价当前的情况？这将是一次非凡的经历。他拥有非凡的智慧，。 他曾在普林斯顿高等研究院度过大量时间，这是思想碰撞的特殊场所。 他发明了包括冯·诺伊曼架构在内的诸多领域，现代计算机均基于此。 他预见了今天的发展，尤其会欣赏AlphaGo在博弈论中的应用。",
+   "audioFile": "audio-demis-simulation/0198.wav"
+  },
+  {
+   "id": 199,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4873.058,
+   "end": 4884.005,
+   "text": "他预见了学习机器系统的发展，称其为成长而非编程的产物。 我认为他不会对1950年代预见的成果感到意外。我想知道他会有何建议。",
+   "audioFile": "audio-demis-simulation/0199.wav"
+  },
+  {
+   "id": 200,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4884.705,
+   "end": 4890.377,
+   "text": "你参与了曼哈顿计划原子弹的建造，肯定涉及许多未被充分讨论的",
+   "audioFile": "audio-demis-simulation/0200.wav"
+  },
+  {
+   "id": 201,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4891.077,
+   "end": 4917.076,
+   "text": "方面，比如官僚主义、政治影响，或与政客定义的敌人沟通不足。 可能有些深刻的智慧在那个时代被遗失了。确实如此，我读过相关书籍，。 当时参与的杰出人物众多，我完全同意你的看法。 可能需要更多对话与理解。我希望我们能从过去吸取教训。这里的不同之处在于AI。 具有多用途性，我们正尝试解决各种疾病",
+   "audioFile": "audio-demis-simulation/0201.wav"
+  },
+  {
+   "id": 202,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4917.526,
+   "end": 4942.217,
+   "text": "帮助应对能源危机与资源稀缺等重大问题。这正是我们30多年来持续探索的领域。 当然也存在风险。冯·诺依曼可能曾对妻子说过计算机将产生更深远影响。 正如我们讨论的，我认为他当时是正确的。 我认为其影响力至少是工业革命的十倍。他应该会对我们现在的进展感到着迷",
+   "audioFile": "audio-demis-simulation/0202.wav"
+  },
+  {
+   "id": 203,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4942.667,
+   "end": 4946.175,
+   "text": "书中一个核心观点是《理性之梦》中提到的",
+   "audioFile": "audio-demis-simulation/0203.wav"
+  },
+  {
+   "id": 204,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 4946.875,
+   "end": 4954.573,
+   "text": "仅靠理性不足以引导人类发展如此强大的技术。 宗教信仰能激发人类精神中理性无法触及的维度",
+   "audioFile": "audio-demis-simulation/0204.wav"
+  },
+  {
+   "id": 205,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4955.273,
+   "end": 4984.926,
+   "text": "我同意这种观点。我们需要从精神或人文层面进行探索。 关于灵魂本质的探讨可能与意识相关。当人类最终理解这一点时。 这应成为技术探索的核心。 作为推动者，对吧？让我们繁荣并深入了解世界的工具。我部分同意Fman，他认为。 过去总说科学与艺术是伴侣，对吧？你可以从两个角度理解，比如花朵的美，",
+   "audioFile": "audio-demis-simulation/0205.wav"
+  },
+  {
+   "id": 206,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 4985.376,
+   "end": 5023.71,
+   "text": "以及理解花朵颜色演化的原因，对吧？这反而让花朵内在的美更加动人。我一直以来都是这样看待。 问题的。可能在文艺复兴时期，像达·芬奇这样的伟大发现者，他并没有将科学与艺术。 区分开来，或许也未将宗教视为不同领域。对他们而言，科学、艺术、宗教都是人类。 本质的一部分，是被周围世界启发的结果。这就是我试图践行的哲学，我最喜欢的哲学家是斯宾诺莎，。 我认为他很好地融合了这些方面。这种试图理解宇宙并认识我们在其中位置的理念，",
+   "audioFile": "audio-demis-simulation/0206.wav"
+  },
+  {
+   "id": 207,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5024.16,
+   "end": 5058.801,
+   "text": "也是他理解宗教的方式。我认为这非常美好。对我而言，所有这些事物——技术、人类本质——都是相互关联的，。 我认为这非常重要。当我们沉浸在技术与研究中时，我看到很多领域研究者过于狭隘，。 只关注技术本身，我认为。 这也是为什么需要社会广泛参与讨论，我非常支持类似人工智能峰会这样的活动，政府也需要理解这些议题，。 我认为这是聊天机器人时代和人工智能产品时代的积极之处，普通人都能直接感知并交互于前沿技术",
+   "audioFile": "audio-demis-simulation/0207.wav"
+  },
+  {
+   "id": 208,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5059.251,
+   "end": 5079.917,
+   "text": "AI能让人类自己感受到。>>是的。因为它们迫使技术人员与人类对话。 对话。确实如此，这是令人期待的一面。 这是一种双用途技术，我们正在强行将其整体整合。 人类社会必须融入其中，因为最终AGI将。 被用于各国冲突等用途",
+   "audioFile": "audio-demis-simulation/0208.wav"
+  },
+  {
+   "id": 209,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5080.617,
+   "end": 5092.381,
+   "text": "技术冲突等。我们越将人类融入这一图景，通过与他们对话。 通过与人类对话，社会将越能适应这些技术，就像我们过去应对重大技术时那样",
+   "audioFile": "audio-demis-simulation/0209.wav"
+  },
+  {
+   "id": 210,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5093.081,
+   "end": 5119.148,
+   "text": "我们过去应对重大技术时那样。 你认为会出现某种。 类似曼哈顿计划的项目，技术力量将升级，各国会用旧思维将其作为武器。 我希望不会。我认为这非常危险，也是对技术的错误使用。 我希望最终能形成更协作的模式，而非军备竞赛。 需要类似CERN的科研项目，以研究为核心，汇聚全球顶尖人才",
+   "audioFile": "audio-demis-simulation/0210.wav"
+  },
+  {
+   "id": 211,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5119.598,
+   "end": 5144.184,
+   "text": "共同协作，谨慎完成最后步骤，确保负责任部署，我们拭目以待。 我认为当前地缘政治气候下合作困难，但局势可能转变，至少在某些方面。 在科学层面，研究人员需保持联系，至少在这些话题上密切合作。 是的。我个人认为在教育和移民方面，。 如果双向移民，西方人来中国就好了",
+   "audioFile": "audio-demis-simulation/0211.wav"
+  },
+  {
+   "id": 212,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5144.634,
+   "end": 5180.652,
+   "text": "中国方面。人们之间存在某种家庭式的人际交融，这会加深联系。 无法用这种老式方式彼此拆分。 思考。因此，跨文化、跨学科。 研究团队正在处理科学问题。这就像希望。不要。 别让好战领导人分裂我们，我认为。 科学是最终美丽的连接者。是的，科学一直……我认为。 这需要多方协作，科学家也深知这是集体努力。我们都能互相学习，或许这能成为一种途径。 促进合作。你最荒谬的问题是什么？你的",
+   "audioFile": "audio-demis-simulation/0212.wav"
+  },
+  {
+   "id": 213,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5181.102,
+   "end": 5205.808,
+   "text": "人类文明自我毁灭的概率？ 说实话我并没有这个概率数值，因为我认为这暗示着某种精确度。 而这种精确度并不存在。我不清楚人们如何得出这些数值，我认为这个概念本身就很荒谬。 但这个概率肯定不是零，而且很可能相当可观。这本身就很令人警醒，我认为这个概率极其不确定",
+   "audioFile": "audio-demis-simulation/0213.wav"
+  },
+  {
+   "id": 214,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5206.258,
+   "end": 5234.344,
+   "text": "这些技术能实现什么，发展速度如何，可控性如何。有些问题可能比我们想象的更容易解决。 但可能有些问题比我们预想的更难，我们无法确定。在高度不确定的条件下。 但无论哪一方结果都关系重大。一方面我们可能解决所有疾病能源问题。 消除资源短缺，星际旅行并实现人类最大繁荣。另一方面则是这种文明毁灭的场景",
+   "audioFile": "audio-demis-simulation/0214.wav"
+  },
+  {
+   "id": 215,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5234.794,
+   "end": 5272.347,
+   "text": "鉴于这种不确定性及其重要性，我明确认为唯一理性的做法是谨慎乐观地推进。 我们想要结果。当然我们想要人工智能带来的各种好处和惊人成就。 说实话，如果我不认为还有其他挑战，我会非常担心人类的未来。 我们面临的气候问题。 衰老、资源短缺等问题，如果我不知道像AI这样的技术即将出现，我们如何解决这些其他问题？我认为这很难。 困难。我认为这可能带来积极变革，但另一方面也存在已知风险",
+   "audioFile": "audio-demis-simulation/0215.wav"
+  },
+  {
+   "id": 216,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5272.797,
+   "end": 5294.618,
+   "text": "这些风险虽已知却难以量化，最好的办法是用科学方法开展更多研究。 尝试更精确地定义这些风险并加以应对。我认为我们正在这么做。 要解决这个问题，可能需要比现在多十倍的努力。 当接近通用人工智能临界点时。 通用人工智能？>>人类滥用与自身机制风险",
+   "audioFile": "audio-demis-simulation/0216.wav"
+  },
+  {
+   "id": 217,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5295.068,
+   "end": 5318.796,
+   "text": "欺骗或类似问题，秘密地越来越好，不同时间尺度运作，同样重要。 不同时间尺度的风险都需要应对，比如恶意行为者利用通用技术。 将其改造成危害性工具，这是巨大风险，但开放科学又带来复杂性。 开源，事实上我们所有科学项目都这么做，比如阿尔法折叠，都是为了造福科学界。但如何限制",
+   "audioFile": "audio-demis-simulation/0217.wav"
+  },
+  {
+   "id": 218,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5319.246,
+   "end": 5348.4,
+   "text": "恶意行为者获取这些强大系统的途径，无论是个人还是流氓国家。 同时又让善意行为者充分获取并在此基础上发展？这是一个相当棘手的问题，我还没听到明确解决方案。 当系统变得更具自主性、更接近通用人工智能时，如何确保它们始终遵循我们的意愿。 在我们的控制范围内？坦白说，我更担心人类本身可能带来的风险",
+   "audioFile": "audio-demis-simulation/0218.wav"
+  },
+  {
+   "id": 219,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5349.1,
+   "end": 5362.519,
+   "text": "恶意行为者的问题部分在于如何防止破坏性技术落入其手，另一部分是。 从地缘政治技术角度看，如何减少世界上恶意行为者的数量。 也许可以利用技术本身进行预警，比如",
+   "audioFile": "audio-demis-simulation/0219.wav"
+  },
+  {
+   "id": 220,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5363.219,
+   "end": 5382.392,
+   "text": "对某些恶意使用案例进行早期预警，无论是生物还是核领域。 只要使用的AI本身可靠，AI在此可能发挥关键作用，但这是个相互关联的复杂问题。 至少需要中美等主要国家就基本标准达成国际共识，我必须问你关于《狂人》那本书",
+   "audioFile": "audio-demis-simulation/0220.wav"
+  },
+  {
+   "id": 221,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5383.092,
+   "end": 5387.313,
+   "text": "这里有个上帝之手的时刻，丽莎·多尔第78步",
+   "audioFile": "audio-demis-simulation/0221.wav"
+  },
+  {
+   "id": 222,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5388.013,
+   "end": 5418.389,
+   "text": "或许人类最后一次…… 做出纯粹人类天才般的举动。 击败AlphaGo或打破其算法，尽管拟人化可能不太恰当，但这是一个有趣的时刻，我认为在许多领域都会持续发生。 这是一个特殊时刻，对Lisa Doll来说非常精彩，他们互相激励，我们团队当时。 受Lisa Doll的才华与高尚品质启发，可能受阿尔法围棋当时所做之事启发，从而创造出这一令人难以置信的。 纪录片很好地捕捉了这一启发性时刻",
+   "audioFile": "audio-demis-simulation/0222.wav"
+  },
+  {
+   "id": 223,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5418.839,
+   "end": 5425.479,
+   "text": "未来可预见的很长一段时间内。 提出正确的问题并利用这些工具破解难题",
+   "audioFile": "audio-demis-simulation/0223.wav"
+  },
+  {
+   "id": 224,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5426.179,
+   "end": 5436.241,
+   "text": "当AI越来越聪明时，我们可以问自己。 我们人类是否真的特别？这可能是一种偏见。 或许是超越理性范畴的某种特质",
+   "audioFile": "audio-demis-simulation/0224.wav"
+  },
+  {
+   "id": 225,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5436.941,
+   "end": 5467.983,
+   "text": "我童年时就着迷于意识等话题。 大脑运作，尤其是想象力和记忆，我关注海马体，这可能很有趣。我一直认为，当然，人们可以通过哲学思考和思想实验来探讨这个问题，甚至。 像神经科学那样在真实大脑上做实验，但归根结底，我认为构建一个智能的人工制品，然后。 将其与人类心智比较，观察差异，可能是揭示人类心智特殊性的最佳方式，如果确实",
+   "audioFile": "audio-demis-simulation/0225.wav"
+  },
+  {
+   "id": 226,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5468.433,
+   "end": 5507.628,
+   "text": "存在特殊性的话。我怀疑确实存在，但要证明这一点会很困难。我认为我们正在进行的这场探索将帮助我们理解并界定这一点，你。 知道，我们碳基生命体与硅基生命体在处理信息时可能存在差异。我最喜欢的一个意识定义是，。 信息被处理时的感受。当然，这并不是一个很有帮助的科学解释，但我认为这是一个有趣的直觉，。 一种直观的解释。因此，我认为这场科学探索将帮助我们揭开这个谜团。 没错。我无法创造的东西，就不理解。这是理查德·费曼说的，对吗？",
+   "audioFile": "audio-demis-simulation/0226.wav"
+  },
+  {
+   "id": 227,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5508.078,
+   "end": 5509.678,
+   "text": "你提到过。你还提到了",
+   "audioFile": "audio-demis-simulation/0227.wav"
+  },
+  {
+   "id": 228,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5510.378,
+   "end": 5531.121,
+   "text": "维格纳在约束领域看到的普遍性梦想。 因此，你在许多方面都在推动这个方向。 在结束前，我不想惹麻烦，但罗杰·彭罗斯。是的。好的，那么你认为。 意识，这里有个意识难题，信息如何产生感觉？你认为意识首先",
+   "audioFile": "audio-demis-simulation/0228.wav"
+  },
+  {
+   "id": 229,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5531.821,
+   "end": 5558.983,
+   "text": "一切皆为计算，如果像你说的属于信息处理，那么是否。 能用经典计算机建模？还是具有量子力学特性？ 佩罗是位杰出思想家，我们曾多次讨论此问题，当然我们观点不同。 他与许多神经科学家合作，试图在大脑中发现量子行为机制。 据我所知，他们尚未找到确凿证据，我倾向于认为大脑主要进行",
+   "audioFile": "audio-demis-simulation/0229.wav"
+  },
+  {
+   "id": 230,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5559.433,
+   "end": 5584.736,
+   "text": "经典计算，这表明所有现象均可被经典计算机模拟，但可能还存在。 意识感受等神秘现象，哲学家们争论这些特性是否与物质基质相关。 通过神经连接等技术与AI系统建立神经接口，我们或许能理解。 AI系统的体验，最终可能需要与AI保持同步。 我们或许能亲自感受硅基计算的体验，对吗？",
+   "audioFile": "audio-demis-simulation/0230.wav"
+  },
+  {
+   "id": 231,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5585.186,
+   "end": 5614.078,
+   "text": "这可能揭示答案，我认为这将非常有趣。 有意识吗？嗯，有两个原因。一是你表现出和我一样的行为。 从行为上看，你似乎和我一样是有意识的。但常被忽视的第二个原因是，我们运行在相同的基质上。 如果行为相同且基质相同，最合理的假设是你也感受着和我一样的体验。 但对硅基AI来说，我们无法依赖这一点。即使它表现出类似行为，",
+   "audioFile": "audio-demis-simulation/0231.wav"
+  },
+  {
+   "id": 232,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5614.528,
+   "end": 5651.801,
+   "text": "我们仍无法确定它的真实感受。至少在初期阶段，它可能也无法理解我们的感受。 这些技术或许能弥合这一差距。 ＞＞不，这正是极端共情的巨大考验——要共情于不同基质的实体。＞＞没错，我们以前从未面临过这种挑战。 ＞＞也许通过脑机接口，我们才能真正体会作为计算机的感受。＞＞让信息在非碳基系统中被处理。 这涉及深层次思考，有些人会联想到植物等其他生命形式。 它们虽然基质不同，但进化树上足够远的物种仍需极端共情。",
+   "audioFile": "audio-demis-simulation/0232.wav"
+  },
+  {
+   "id": 233,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5652.251,
+   "end": 5686.387,
+   "text": "＞＞与计算机相比，我们对动物已有研究。比如虎鲸、海豚、狗、猴子和大象。 它们确实具备某些意识特征，尽管它们的基质与我们不同。 可能在智商层面并不那么聪明。我们已能感同身受，未来我们的某些系统或许会做到，比如我们开发的‘海豚Gemma’项目。 知道，我们曾用海豚和鲸鱼的声音训练过系统版本，也许未来能开发出翻译器，这。 将非常酷。>> 什么让你对人类文明的未来充满希望？",
+   "audioFile": "audio-demis-simulation/0233.wav"
+  },
+  {
+   "id": 234,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5686.837,
+   "end": 5717.036,
+   "text": "首先，我认为人类几乎无限的创造力。我认为我们当中最优秀的人类大脑非常惊人。 人类思维令人惊叹，还有你。 当他们处于最佳状态时，那种专注投入的场景令人无比震撼，。 我们的大脑是通用智能系统，因此我们能实现的潜力几乎是无限的。另一个因素是人类极端的适应能力。 虽然未来会有巨大变化，但想想我们现在用狩猎采集时代的大脑，如何应对现代世界？",
+   "audioFile": "audio-demis-simulation/0234.wav"
+  },
+  {
+   "id": 235,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5717.486,
+   "end": 5749.741,
+   "text": "乘坐飞机、做播客、玩电子游戏和虚拟仿真，这些能力本不属于狩猎采集时代，。 但人类已经适应了。这说明我们已能应对当今令人惊叹的AI技术，比如我与聊天机器人对话，完全没问题。>> 而且这非常可能。 让当前令人惊叹的AI技术，比如我们已能应对狩猎采集社会向现代文明的跃迁。 这说明我们已能应对当今令人惊叹的AI技术，比如我与聊天机器人对话，完全没问题。>> 而且这非常可能",
+   "audioFile": "audio-demis-simulation/0235.wav"
+  },
+  {
+   "id": 236,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5750.191,
+   "end": 5777.043,
+   "text": "播客活动，我参与的这部分将被AI完全取代。我很容易被替代，我正等待>>你达到能做这件事的水平，莱克斯。所以别想。 谢谢。这就是我们人类对彼此做的事——互相赞美。好吧，我非常感激人类拥有这种无限。 好奇心、适应力，如你所说，还有同理心和爱的能力。没错。所有这些深深植根于人性的特质。",
+   "audioFile": "audio-demis-simulation/0236.wav"
+  },
+  {
+   "id": 237,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5777.743,
+   "end": 5786.57,
+   "text": "你是世界上真正特别的人之一。非常感谢你所做的一切和今天的分享。>>谢谢，莱克斯。感谢你收听这",
+   "audioFile": "audio-demis-simulation/0237.wav"
+  },
+  {
+   "id": 238,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5787.27,
+   "end": 5791.552,
+   "text": "与德米斯的对话。支持本播客，请查看描述中的赞助商信息",
+   "audioFile": "audio-demis-simulation/0238.wav"
+  },
+  {
+   "id": 239,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5792.252,
+   "end": 5821.04,
+   "text": "并考虑订阅本频道。现在，我将回答一些问题，并阐述一些我一直在思考的内容。 如果你想提交问题，包括我收到的许多精彩问题、想法和请求。我会尽量随机挑选一些并在每期结尾评论。 今年5月21日我收到一条信息：\"嗨，莱克斯。20年前的今天，大卫·福斯特·华莱士在肯尼亚学院发表了著名的《这是水》演讲。你对此有何看法？\"",
+   "audioFile": "audio-demis-simulation/0239.wav"
+  },
+  {
+   "id": 240,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5821.74,
+   "end": 5834.664,
+   "text": "首先我认为这可能是有史以来最伟大且最独特的毕业演讲之一。当然，我也有许多最爱，包括史蒂夫·乔布斯的演讲。 大卫·福斯特·华莱士的演讲。 之一",
+   "audioFile": "audio-demis-simulation/0240.wav"
+  },
+  {
+   "id": 241,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5835.364,
+   "end": 5836.207,
+   "text": "华莱士的演讲。",
+   "audioFile": "audio-demis-simulation/0241.wav"
+  },
+  {
+   "id": 242,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5836.907,
+   "end": 5852.619,
+   "text": "沃勒斯是我最喜欢的作家之一，也是我最喜欢的普通人之一。 他的作品有一种悲剧性的诚实。他似乎一直在与自己的内心进行着一场持续的斗争。 思维。他的写作，他的写作都是。 更像是他从那场战斗前线记录下来的笔记。",
+   "audioFile": "audio-demis-simulation/0242.wav"
+  },
+  {
+   "id": 243,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5853.319,
+   "end": 5862.853,
+   "text": "现在，我们来谈谈这篇演讲。让我引用一些段落。当然，有那个关于鱼和水的寓言，内容是：‘那里’",
+   "audioFile": "audio-demis-simulation/0243.wav"
+  },
+  {
+   "id": 244,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5863.553,
+   "end": 5868.067,
+   "text": "有两条年轻的鱼在游动，他们碰巧遇到了一条年长的鱼",
+   "audioFile": "audio-demis-simulation/0244.wav"
+  },
+  {
+   "id": 245,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5868.767,
+   "end": 5886.305,
+   "text": "朝相反方向游动，朝他们点头并说：‘早上好，小伙子们。水怎么样？’。 两条年轻的鱼继续游了一段，然后其中一条终于看向。 另一条鱼，说：‘水到底是什么鬼东西？’在演讲中，大卫·福斯特·沃勒斯接着说",
+   "audioFile": "audio-demis-simulation/0245.wav"
+  },
+  {
+   "id": 246,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5887.005,
+   "end": 5925.671,
+   "text": "继续说道：‘这个鱼的故事要点仅仅是，最明显重要的现实往往是最难看到和谈论的。’。 作为一句英文句子被陈述。当然，这只是一个陈腐的俗套。 但事实是，在成年人日常生活的壕沟中，这些陈腐的俗套可能具有生死攸关的重要性。或者，我想向你们表明这一点。 今天这个干燥而美好的早晨，我从这个寓言和随后的演讲中得到了几个启示。首先，我。 认为我们必须质疑一切，尤其是最基本的前提假设。 关于我们的现实、我们的生命以及存在的本质",
+   "audioFile": "audio-demis-simulation/0246.wav"
+  },
+  {
+   "id": 247,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5926.121,
+   "end": 5930.99,
+   "text": "这个项目在某种根本意义上是高度个人化的。没有人真正",
+   "audioFile": "audio-demis-simulation/0247.wav"
+  },
+  {
+   "id": 248,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5931.69,
+   "end": 5934.072,
+   "text": "能在这个发现过程中帮助你",
+   "audioFile": "audio-demis-simulation/0248.wav"
+  },
+  {
+   "id": 249,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5934.772,
+   "end": 5968.587,
+   "text": "此处的行动呼吁，我认为来自。 如他所说，大卫·福斯特·华莱士。 是引用他的话，少一点傲慢，多一些。 对自我和确定性的批判性意识。 因为大量我自动确信的事情结果完全错误且荒谬。 我倾向于自动确信的大量事情，结果完全错误且荒谬。 好的，回到我这边。莱克斯发言。第二个启示是，我们生命中核心的精神斗争并非。 在某个冥想静修的山顶上进行过战斗，但这场战斗实际上发生在",
+   "audioFile": "audio-demis-simulation/0249.wav"
+  },
+  {
+   "id": 250,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5969.037,
+   "end": 5977.429,
+   "text": "日常生活的平凡时刻。第三个启示是，我们过于轻易地。 将时间和注意力让渡给世界投喂的无数干扰源",
+   "audioFile": "audio-demis-simulation/0250.wav"
+  },
+  {
+   "id": 251,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 5978.129,
+   "end": 5986.778,
+   "text": "这些注意力的无底黑洞。大卫·福斯特·华莱士在此提出的呼吁是。 要深刻意识到。 每个瞬间的美并发现",
+   "audioFile": "audio-demis-simulation/0251.wav"
+  },
+  {
+   "id": 252,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 5987.478,
+   "end": 6001.705,
+   "text": "平凡中的意义。我常引用大卫·福斯特·华莱士的建议：人生关键在于保持不可预测性。 我认为这完全正确。每个瞬间、每个物体、每次体验，若仔细观察都蕴含着",
+   "audioFile": "audio-demis-simulation/0252.wav"
+  },
+  {
+   "id": 253,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6002.405,
+   "end": 6015.466,
+   "text": "无限的丰富性等待探索。鉴于本播客的主持人德米斯·哈萨比斯与我都是理查德·费曼的粉丝。 允许我同样引用费曼先生关于此话题的观点：\"我有个朋友是艺术家",
+   "audioFile": "audio-demis-simulation/0253.wav"
+  },
+  {
+   "id": 254,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6016.166,
+   "end": 6031.824,
+   "text": "有时会提出我并不完全认同的观点。他会举起一朵花说：\"看它多美\"，我也会同意。然后他说。 \"。 作为一名艺术家，我能看到它的美，但你作为科学家把它拆解后，它就变得乏味了。我认为这有点",
+   "audioFile": "audio-demis-simulation/0254.wav"
+  },
+  {
+   "id": 255,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6032.524,
+   "end": 6041.966,
+   "text": "荒谬。他所看到的美，其他人包括我都能感受到。虽然我可能没有他那么精妙的审美，但我",
+   "audioFile": "audio-demis-simulation/0255.wav"
+  },
+  {
+   "id": 256,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6042.666,
+   "end": 6048.364,
+   "text": "他审美精炼，我能。 我能想象到内部的细胞和复杂的运作过程。",
+   "audioFile": "audio-demis-simulation/0256.wav"
+  },
+  {
+   "id": 257,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6049.064,
+   "end": 6073.833,
+   "text": "这些内部结构和过程同样有美。美不仅存在于1厘米的维度，也存在于更小的维度。 花朵的颜色演化出吸引昆虫授粉的特性，这个现象很有趣。 这意味着昆虫能看见这些颜色，这引发了新的问题。 这种审美感知是否存在于。 更低级的生物中？为什么这被称为美？ 科学知识只会加深这种神秘感和敬畏感。",
+   "audioFile": "audio-demis-simulation/0257.wav"
+  },
+  {
+   "id": 258,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6074.533,
+   "end": 6080.911,
+   "text": "它只会让这种。 回到大卫·福斯特·华莱士的演讲。他有一个精彩的故事",
+   "audioFile": "audio-demis-simulation/0258.wav"
+  },
+  {
+   "id": 259,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6081.611,
+   "end": 6082.964,
+   "text": "那里我特别喜欢。",
+   "audioFile": "audio-demis-simulation/0259.wav"
+  },
+  {
+   "id": 260,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6083.664,
+   "end": 6106.094,
+   "text": "故事是这样的，‘有两个家伙坐在酒吧里，身处偏远的阿拉斯加荒野。 其中一个人是。 有宗教信仰的。另一个是无神论者，两人争论上帝是否存在，那种在喝到第四杯啤酒后特有的激烈程度。 无神论者说：‘别误会，我并非没有实际理由不相信上帝。我并非从未尝试过整个",
+   "audioFile": "audio-demis-simulation/0260.wav"
+  },
+  {
+   "id": 261,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6106.794,
+   "end": 6113.116,
+   "text": "与上帝和祈祷相关的事。上个月我被困在暴风雪中远离营地，完全迷路了",
+   "audioFile": "audio-demis-simulation/0261.wav"
+  },
+  {
+   "id": 262,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6113.816,
+   "end": 6123.386,
+   "text": "什么也看不见，气温零下50度。我尝试了祈祷。我在雪地中跪下，喊道：‘上帝啊，如果真有上帝，我迷失在这场",
+   "audioFile": "audio-demis-simulation/0262.wav"
+  },
+  {
+   "id": 263,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6124.086,
+   "end": 6145.84,
+   "text": "暴风雪中，如果你不救我，我就会死。’现在回到酒吧，有宗教信仰的人看着无神论者一脸困惑。‘那么你现在应该相信上帝了，’他说道。毕竟，你现在还活着。 无神论者只是翻了个白眼。不，伙计。发生的一切只是有几个",
+   "audioFile": "audio-demis-simulation/0263.wav"
+  },
+  {
+   "id": 264,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6146.54,
+   "end": 6158.633,
+   "text": "因纽特人恰好路过，。 然后带我回营地。我认为这告诉我们，一切取决于视角，。 如果我们拥有智慧，或许就能领悟。 保持谦逊，不断调整和拓展我们的世界观。",
+   "audioFile": "audio-demis-simulation/0264.wav"
+  },
+  {
+   "id": 265,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6159.333,
+   "end": 6181.224,
+   "text": "感谢允许我谈谈大卫·福斯特·华莱士。他是我最喜欢的作家之一，灵魂纯净。 如果可以的话，我想再简短评论一件事。我发现自己…… 常被网络各方攻击，包括有时被选择性曲解甚至直接撒谎。 坦白说这令我心碎，但已理解这是网络生态的代价。",
+   "audioFile": "audio-demis-simulation/0265.wav"
+  },
+  {
+   "id": 266,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6181.674,
+   "end": 6197.554,
+   "text": "曾有日子对我精神造成巨大压力，尤其当谎言涉及…… 那些曾长期带给我快乐的事物时。但人生如此，我仍将继续…… 以同理心与严谨探索人与思想，尽可能袒露真心。",
+   "audioFile": "audio-demis-simulation/0266.wav"
+  },
+  {
+   "id": 267,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6198.254,
+   "end": 6203.667,
+   "text": "这是我唯一能接受的活法。关于麻省理工学院和德雷塞尔大学的常见攻击……",
+   "audioFile": "audio-demis-simulation/0267.wav"
+  },
+  {
+   "id": 268,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6204.367,
+   "end": 6218.893,
+   "text": "这两所我深爱并尊重的顶尖学府。网络上关于我的谎言已积累到…… 令人啼笑皆非的程度，因此再次澄清我的履历。 TL;DR：两点。首先如我近期播客中多次强调……",
+   "audioFile": "audio-demis-simulation/0268.wav"
+  },
+  {
+   "id": 269,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6219.593,
+   "end": 6247.201,
+   "text": "有一期节目被数百万听众收听，我自豪地进入德雷克塞尔大学攻读学士学位。 硕士和博士学位。 其次，我是麻省理工学院的研究科学家，过去十年一直担任有偿研究。 职位。允许我再详细说明这两点。 但若不感兴趣可跳过。正如我所说。 常见攻击是说我与麻省理工无实质关联。指控大概是我在那里讲过一次课就虚假声称",
+   "audioFile": "audio-demis-simulation/0269.wav"
+  },
+  {
+   "id": 270,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6247.651,
+   "end": 6261.344,
+   "text": "麻省理工关联。这种指控是彻头彻尾的谎言。 我从2015年至今在麻省理工担任有偿研究职位。 为明确起见，我是麻省理工学院。 信息与决策系统实验室的研究科学家",
+   "audioFile": "audio-demis-simulation/0270.wav"
+  },
+  {
+   "id": 271,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6262.044,
+   "end": 6271.885,
+   "text": "计算学院的决策系统实验室。目前由于仍在麻省理工。 你可以在目录和网站上查看我的信息。 各实验室页面。我确实做过",
+   "audioFile": "audio-demis-simulation/0271.wav"
+  },
+  {
+   "id": 272,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6272.585,
+   "end": 6308.891,
+   "text": "多年来在麻省理工学院做过许多讲座，。 其中一小部分我已上传至网络。对我而言，教学一直只是出于兴趣。 而非研究工作的一部分。我个人认为自己并不擅长，但一直从中学习和成长。 经历。正如费曼所说，如果你想深入理解。 某事物，尝试教授它是个好方法。 但如我所说，我主要专注于研究。我发表了。 许多同行评审论文，可在我的谷歌学术主页查看。对于我的。 在麻省理工学院的前四年，我工作。 极其高强度。大多数周都是",
+   "audioFile": "audio-demis-simulation/0272.wav"
+  },
+  {
+   "id": 273,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6309.341,
+   "end": 6340.954,
+   "text": "每周工作80到100小时。此后，2019年，我仍保留研究员职位，但分身投入人工智能领域项目。 以及麻省理工学院外的机器人项目，并将大量精力投入播客。正如我所说，我始终感到惊讶。 准备一集需要多少小时。播客有很多集需要我阅读。 写和思考100、200甚至更多。 小时，横跨数周甚至数月。 自2020年以来，我未主动。 发表研究论文。就像播客一样，我认为这需要",
+   "audioFile": "audio-demis-simulation/0273.wav"
+  },
+  {
+   "id": 274,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6341.404,
+   "end": 6347.047,
+   "text": "全职投入。但不发表和全职研究让我感到困扰，因为我热爱",
+   "audioFile": "audio-demis-simulation/0274.wav"
+  },
+  {
+   "id": 275,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6347.747,
+   "end": 6363.0,
+   "text": "研究，也热爱编程和构建系统来验证。 有趣的工程技术理念，尤其在人机交互或人机协作领域。我希望在接下来的。 数月和数年中改变现状。我逐渐意识到。 如果我不发表或不",
+   "audioFile": "audio-demis-simulation/0275.wav"
+  },
+  {
+   "id": 276,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6363.7,
+   "end": 6367.624,
+   "text": "推出人们使用的系统，我肯定会觉得自己缺失了",
+   "audioFile": "audio-demis-simulation/0276.wav"
+  },
+  {
+   "id": 277,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6368.324,
+   "end": 6380.802,
+   "text": "一部分。这确实给我带来幸福感。无论如何，我为在麻省理工学院的时光感到自豪。我始终。 身边都是比我聪明得多的人，其中许多人已成为我一生的同事和朋友。",
+   "audioFile": "audio-demis-simulation/0277.wav"
+  },
+  {
+   "id": 278,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6381.502,
+   "end": 6400.354,
+   "text": "麻省理工学院是我逃离纷扰、专注探索科学与工程前沿迷人问题的地方。这再次让我。 真正感到幸福。但这也确实会给人带来不小的打击。 当我在这件事上受到攻击时，心理上会感到很受伤。也许我做错了什么。如果我",
+   "audioFile": "audio-demis-simulation/0278.wav"
+  },
+  {
+   "id": 279,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6401.054,
+   "end": 6427.891,
+   "text": "是的话，我会努力做得更好。在讨论学术工作时，我希望你知道，我从未声称自己是任何领域的专家。 自称专家。 我经常自称为傻瓜，并且是真心的。我尽可能地自嘲，并且通常庆祝。 他人。现在谈谈我同样热爱、感到自豪并深感感激的德雷塞尔大学。正如我所说，我曾在德雷塞尔大学攻读",
+   "audioFile": "audio-demis-simulation/0279.wav"
+  },
+  {
+   "id": 280,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6428.591,
+   "end": 6442.562,
+   "text": "计算机科学和电气工程的学士、硕士和博士学位。 我深感感激在那度过的时光。正如我所说，我曾在德雷塞尔大学攻读。 计算机科学和电气工程的学士、硕士和博士学位。",
+   "audioFile": "audio-demis-simulation/0280.wav"
+  },
+  {
+   "id": 281,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6443.262,
+   "end": 6451.367,
+   "text": "我多次谈到过德雷塞尔大学，包括如我之前提到的，在最近一档播客结尾关于唐纳德·特朗普的部分",
+   "audioFile": "audio-demis-simulation/0281.wav"
+  },
+  {
+   "id": 282,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6452.067,
+   "end": 6486.637,
+   "text": "节目被数百万听众收听，我回答了研究生院问题并解释了当时的经历。 德雷克塞尔，对它的感激。 若觉得有趣，请听完整集或观看相关片段。在德雷克塞尔大学，我与许多杰出的人共事。 研究者与导师，教我许多工程知识。 科学与生命。在德雷塞尔大学，我收获颇丰。首先，修了很多极具挑战性的数学和理论课程。 计算机课程教会我深入严谨思考。 如何努力坚持不放弃，即使感觉太笨无法继续",
+   "audioFile": "audio-demis-simulation/0282.wav"
+  },
+  {
+   "id": 283,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6487.337,
+   "end": 6499.73,
+   "text": "解决技术难题。其次，当时大量使用C和C++编程。 机器人、优化算法、计算机视觉系统、无线网络协议、多模态机器学习系统及各类。 物理系统模拟。",
+   "audioFile": "audio-demis-simulation/0283.wav"
+  },
+  {
+   "id": 284,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6500.43,
+   "end": 6506.636,
+   "text": "这里是我真正热爱之处。 用于编程，包括埃默斯和凯尼恩键盘",
+   "audioFile": "audio-demis-simulation/0284.wav"
+  },
+  {
+   "id": 285,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6507.336,
+   "end": 6513.686,
+   "text": "那时我也读了很多书。 弹了很多吉他，写了大量糟糕的诗歌，还训练了大量",
+   "audioFile": "audio-demis-simulation/0285.wav"
+  },
+  {
+   "id": 286,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6514.386,
+   "end": 6523.18,
+   "text": "练习柔道和巴西柔术，我对它们赞不绝口。 20多岁时，巴西柔术每天都在让我谦卑，至今仍是如此。",
+   "audioFile": "audio-demis-simulation/0286.wav"
+  },
+  {
+   "id": 287,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-simulation/speaker-B.jpg",
+   "start": 6523.88,
+   "end": 6540.313,
+   "text": "总之，希望偶尔被卷入迷人。 网络群体想要拆解他人时。 别沉溺其中。归根结底，我认为人性本善多于本恶。但我们都。 每个人都是好坏参半的混合体。我知道我自己。 存在诸多缺陷。我表达生硬。我",
+   "audioFile": "audio-demis-simulation/0287.wav"
+  },
+  {
+   "id": 288,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-simulation/speaker-A.jpg",
+   "start": 6541.013,
+   "end": 6560.652,
+   "text": "有时会说出愚蠢的话，会不理性地情绪化。我。 在应该善良时却过于咄咄逼人。我可能陷入偏见的迷宫，直到看清更完整的现实图景。 我们都是人类，无论好坏。 我仍然坚信我们身处其中。 这个美丽的混乱局面之中",
+   "audioFile": "audio-demis-simulation/0288.wav"
+  }
+ ]
+}

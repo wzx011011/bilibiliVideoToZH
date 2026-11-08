@@ -1,0 +1,250 @@
+{
+  "s1_bg": {
+    "fp": "2dfe0132ce0446f6",
+    "bytes": 136423,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. southern capital palace under uneasy amber dusk, complacent amber wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s1_0": {
+    "fp": "642c0c9682774197",
+    "bytes": 194522,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Courtiers crowning a reluctant noble in a southern capital hall, half an empire's desperate hope",
+    "at": 0.0,
+    "hold": 0.33
+  },
+  "s1_1": {
+    "fp": "73d4d239488ca0e7",
+    "bytes": 237849,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Officials drafting a peace letter toward the north while ignoring military maps, delusive diplomacy",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s1_2": {
+    "fp": "448fee59d276667c",
+    "bytes": 205489,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Factions of officials arguing in a grand hall while the frontier burns outside, factional strife",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s2_1": {
+    "fp": "d275bf42bfe81e2d",
+    "bytes": 236115,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Street fighting and fallen banners inside a breached walled city, fierce last resistance",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s2_2": {
+    "fp": "28a8accc7f5917b2",
+    "bytes": 222684,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A solitary tomb mound on a plum-covered ridge under falling petals, mourning without a body",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s2_bg": {
+    "fp": "0f1f670d5382ae9a",
+    "bytes": 170957,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. besieged yangzhou walls under dark rain clouds, tragic ink-grey wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s2_0": {
+    "fp": "6b187ac428c1f1b6",
+    "bytes": 186646,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no letters, no watermark.. A lone general in dark armor at the center on a besieged city wall writing a farewell letter by torchlight, doomed resolve. a small rectangular parchment paper slip pinned beside the center figure with the Chinese characters \"史可法\" written on it in clear legible regular script (kaishu) black ink. These name slips are the ONLY text in the image; render the Chinese characters 史可法 accurately and completely.",
+    "at": 0.0,
+    "hold": 0.33,
+    "cast": [
+      "史可法"
+    ],
+    "cast_check": {
+      "ok": true
+    }
+  },
+  "s3_bg": {
+    "fp": "b404003c8b4354ed",
+    "bytes": 172458,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. coastal capital harbor with war junks and betrayal shadows, ambivalent teal wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s3_1": {
+    "fp": "38544cc32fba4b47",
+    "bytes": 219686,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A merchant-admiral weighing silver coins on one hand and military orders on the other, profiteering broker",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s3_0": {
+    "fp": "681454851903314c",
+    "bytes": 222371,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A determined emperor in a coastal capital reviewing troops with burning resolve, ambitious reformer",
+    "at": 0.0,
+    "hold": 0.33
+  },
+  "s3_2": {
+    "fp": "33e2c14efa38c61a",
+    "bytes": 195122,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. An emperor's small escort surrounded in mountain mist, betrayed and out of options",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s4_bg": {
+    "fp": "e90664e030f73008",
+    "bytes": 162348,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. southern mountains with war elephants at dawn, meteoric crimson wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s4_1": {
+    "fp": "29046e46015ede64",
+    "bytes": 246159,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A burning princely mansion and a fallen enemy commander's banner after a storming assault, dynasty's pride broken",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s4_2": {
+    "fp": "9143bde0d49cdbd7",
+    "bytes": 196938,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Two allied generals facing off coldly across a divided camp, alliance cracking into civil strife",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s4_0": {
+    "fp": "8f2c4c4ee0dcc5fc",
+    "bytes": 236076,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no letters, no watermark.. A young general in bright armor at the center leading an elephant-mounted charge through a city gate, meteoric triumph. a small rectangular parchment paper slip pinned beside the center figure with the Chinese characters \"李定国\" written on it in clear legible regular script (kaishu) black ink. These name slips are the ONLY text in the image; render the Chinese characters 李定国 accurately and completely.",
+    "at": 0.0,
+    "hold": 0.33,
+    "cast": [
+      "李定国"
+    ],
+    "cast_check": {
+      "ok": true
+    }
+  },
+  "s5_0": {
+    "fp": "0c75face06aab47c",
+    "bytes": 246005,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no letters, no watermark.. A commanding young admiral at the prow of a flagship with a vast junk fleet behind him, sea-born army. a small rectangular parchment paper slip pinned beside the center figure with the Chinese characters \"郑成功\" written on it in clear legible regular script (kaishu) black ink. These name slips are the ONLY text in the image; render the Chinese characters 郑成功 accurately and completely.",
+    "at": 0.0,
+    "hold": 0.33,
+    "cast": [
+      "郑成功"
+    ],
+    "cast_check": {
+      "ok": true
+    }
+  },
+  "s5_1": {
+    "fp": "72966e1babded9b4",
+    "bytes": 233911,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A mighty fleet sailing up a great river toward a walled capital, the offensive at its peak",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s5_2": {
+    "fp": "e15e73befe9fcd08",
+    "bytes": 239088,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Landing boats storming a green island shore under fortress cannon fire, amphibious assault across the sea",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s5_bg": {
+    "fp": "12b0febc5c6705b9",
+    "bytes": 165280,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. great sailing junk fleet on open sea at dawn, azure-gold naval wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s6_2": {
+    "fp": "9caff4ec7f3d216c",
+    "bytes": 221697,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A dying general in camp at the jungle frontier gripping a sword, unyielding to the end",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s6_0": {
+    "fp": "f59baec77f6931ad",
+    "bytes": 217384,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no letters, no watermark.. A fleeing emperor's small cortege crossing a jungle river at dusk into foreign land, exile and fear. a small rectangular parchment paper slip pinned beside the center figure with the Chinese characters \"朱由榔\" written on it in clear legible regular script (kaishu) black ink. These name slips are the ONLY text in the image; render the Chinese characters 朱由榔 accurately and completely.",
+    "at": 0.0,
+    "hold": 0.33,
+    "cast": [
+      "朱由榔"
+    ],
+    "cast_check": {
+      "ok": true
+    }
+  },
+  "s6_1": {
+    "fp": "0b04c994a8c2d083",
+    "bytes": 174073,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A bound captive emperor delivered to enemy generals under cold torchlight, last betrayal",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s6_bg": {
+    "fp": "795c8e3558336223",
+    "bytes": 149523,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. jungle frontier river at dusk with a fleeing cortege, funereal violet wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s7_0": {
+    "fp": "3d5707a9655c11df",
+    "bytes": 205938,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A lone prince in plain robes standing before his own prepared grave on an island cliff, final dignity",
+    "at": 0.0,
+    "hold": 0.33
+  },
+  "s7_bg": {
+    "fp": "90bea9ac08876b61",
+    "bytes": 119806,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. island fortress at fading sunset, wistful indigo-teal wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s7_1": {
+    "fp": "c474400eae59a095",
+    "bytes": 247625,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. War junks storming island harbor defenses under cannon smoke, last stronghold falling",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s7_2": {
+    "fp": "44e63c1ba41ca993",
+    "bytes": 179732,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A fading sunset over an island fortress lowering its banner, the last light of a dynasty",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s8_2": {
+    "fp": "8ed56628bdc2f48a",
+    "bytes": 158721,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A row of resolute historical figures' silhouettes under a vast sky with the final page turning, epic farewell frame",
+    "at": 0.66,
+    "hold": 0.34
+  },
+  "s8_1": {
+    "fp": "72a61e6c2a4cd7ba",
+    "bytes": 228067,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A sweeping panorama of the dynasty's rise and fall across mountains rivers and city walls, three centuries in one frame",
+    "at": 0.33,
+    "hold": 0.33
+  },
+  "s8_bg": {
+    "fp": "c7975133a93e1950",
+    "bytes": 148404,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. Extremely subtle low-contrast background plate, pale and quiet, background texture only, no focal subject, no figures, no action. vast sky over mountains and a turning final page, farewell gold-dusk wash",
+    "at": 0,
+    "hold": 1
+  },
+  "s8_0": {
+    "fp": "0a2f5a01364836a9",
+    "bytes": 260840,
+    "prompt": "Dramatic horizontal illustration in flat vector picture-book style on warm aged parchment paper, Ming dynasty China, vermilion red, imperial yellow, indigo blue and cream parchment palette, clean bold shapes, subtle paper grain, cinematic lighting, no text, no letters, no watermark.. A golden age montage of a grand capital with foreign envoys arriving, dynasty at its zenith",
+    "at": 0.0,
+    "hold": 0.33
+  }
+}

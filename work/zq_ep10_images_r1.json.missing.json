@@ -1,0 +1,250 @@
+[
+ {
+  "out": "work/broll/zq-10-hezong/s2_bg.png",
+  "seed": 2302,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s3_0.png",
+  "seed": 2253,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:张仪连横主题场景:秦国这边,张仪推行连横:各国与秦 individually 结好,瓦解合纵。他的…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「张仪」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "张仪"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s3_1.png",
+  "seed": 2254,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:张仪连横主题场景:秦国这边,张仪推行连横:各国与秦 individually 结好,瓦解合纵。他的…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s3_2.png",
+  "seed": 2255,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:张仪连横主题场景:秦国这边,张仪推行连横:各国与秦 individually 结好,瓦解合纵。他的…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s3_3.png",
+  "seed": 2256,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:张仪连横主题场景:秦国这边,张仪推行连横:各国与秦 individually 结好,瓦解合纵。他的…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s3_bg.png",
+  "seed": 2307,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s4_0.png",
+  "seed": 2258,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:商於六百里主题场景:前313年,张仪对楚怀王开出天价:绝齐之交,献商於六百里。怀王贪地绝齐,张仪却改…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「张仪」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "张仪"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s4_1.png",
+  "seed": 2259,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:商於六百里主题场景:前313年,张仪对楚怀王开出天价:绝齐之交,献商於六百里。怀王贪地绝齐,张仪却改…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s4_2.png",
+  "seed": 2260,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:商於六百里主题场景:前313年,张仪对楚怀王开出天价:绝齐之交,献商於六百里。怀王贪地绝齐,张仪却改…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s4_3.png",
+  "seed": 2261,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:商於六百里主题场景:前313年,张仪对楚怀王开出天价:绝齐之交,献商於六百里。怀王贪地绝齐,张仪却改…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s4_bg.png",
+  "seed": 2312,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s5_0.png",
+  "seed": 2263,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:怀王之死主题场景:前299年,秦昭王邀怀王会盟武关,屈原苦谏不去。怀王去了,被扣秦国,三年后客死异…氛围场景,无具体文字。旗面一律为素色,不写任何字。 画面中唯一允许的文字,是主角身旁写着「楚怀王」两个大字的竖式签条;除此之外不出现任何文字与水印。",
+  "cast": "楚怀王"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s5_1.png",
+  "seed": 2264,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:怀王之死主题场景:前299年,秦昭王邀怀王会盟武关,屈原苦谏不去。怀王去了,被扣秦国,三年后客死异…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s5_2.png",
+  "seed": 2265,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:怀王之死主题场景:前299年,秦昭王邀怀王会盟武关,屈原苦谏不去。怀王去了,被扣秦国,三年后客死异…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s5_3.png",
+  "seed": 2266,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:怀王之死主题场景:前299年,秦昭王邀怀王会盟武关,屈原苦谏不去。怀王去了,被扣秦国,三年后客死异…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s5_bg.png",
+  "seed": 2317,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s6_0.png",
+  "seed": 2268,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:纵横的规则主题场景:纵横家没有立场:昨日的合纵领袖,今日可为连横奔走。他们贩卖的不是忠诚,是解决方案…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s6_1.png",
+  "seed": 2269,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:纵横的规则主题场景:纵横家没有立场:昨日的合纵领袖,今日可为连横奔走。他们贩卖的不是忠诚,是解决方案…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s6_2.png",
+  "seed": 2270,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:纵横的规则主题场景:纵横家没有立场:昨日的合纵领袖,今日可为连横奔走。他们贩卖的不是忠诚,是解决方案…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s6_3.png",
+  "seed": 2271,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:纵横的规则主题场景:纵横家没有立场:昨日的合纵领袖,今日可为连横奔走。他们贩卖的不是忠诚,是解决方案…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s6_bg.png",
+  "seed": 2322,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s7_0.png",
+  "seed": 2273,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:嘴的黄昏主题场景:纵横家再能说,也改变不了硬实力的差距。秦国的国力碾压成型后,外交技巧成了杯水车薪…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s7_1.png",
+  "seed": 2274,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:嘴的黄昏主题场景:纵横家再能说,也改变不了硬实力的差距。秦国的国力碾压成型后,外交技巧成了杯水车薪…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s7_2.png",
+  "seed": 2275,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:嘴的黄昏主题场景:纵横家再能说,也改变不了硬实力的差距。秦国的国力碾压成型后,外交技巧成了杯水车薪…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s7_3.png",
+  "seed": 2276,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:嘴的黄昏主题场景:纵横家再能说,也改变不了硬实力的差距。秦国的国力碾压成型后,外交技巧成了杯水车薪…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s7_bg.png",
+  "seed": 2327,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s8_0.png",
+  "seed": 2278,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:一张嘴的遗产主题场景:纵横家留下的是一套外交思维:利益计算、联盟制衡、信息不对称。这些原则至今写在外交…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s8_1.png",
+  "seed": 2279,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:一张嘴的遗产主题场景:纵横家留下的是一套外交思维:利益计算、联盟制衡、信息不对称。这些原则至今写在外交…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s8_2.png",
+  "seed": 2280,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:一张嘴的遗产主题场景:纵横家留下的是一套外交思维:利益计算、联盟制衡、信息不对称。这些原则至今写在外交…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s8_3.png",
+  "seed": 2281,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:一张嘴的遗产主题场景:纵横家留下的是一套外交思维:利益计算、联盟制衡、信息不对称。这些原则至今写在外交…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s8_bg.png",
+  "seed": 2332,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s9_0.png",
+  "seed": 2283,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:尾声·趣闻主题场景:苏秦张仪谁先谁后?史记说二人是同门师兄弟,一纵一横唱双簧。但1973年马王堆帛书…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s9_1.png",
+  "seed": 2284,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:尾声·趣闻主题场景:苏秦张仪谁先谁后?史记说二人是同门师兄弟,一纵一横唱双簧。但1973年马王堆帛书…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s9_bg.png",
+  "seed": 2335,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-10-hezong/s1_0.png",
+  "seed": 2243,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前)。场景:舌头的时代主题场景:战国中期,战争之外多了一个新战场:外交。一介布衣凭三寸不烂之舌,可以挂六国相印;…氛围场景,无具体文字。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ }
+]

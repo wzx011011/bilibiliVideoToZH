@@ -1,0 +1,2535 @@
+{
+ "title": "Dario Amodei:指数尽头 · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 0.0,
+   "end": 29.423,
+   "text": "三年前我们聊过一次。我想知道，在您看来，过去三年最重要的进展是什么？现在与三年前相比，最大的变化是什么？ 整体技术发展速度大致符合预期。 但具体时间上存在±一两年的误差，我无法准确预测具体方向。 不过从技术指数级增长的角度来看，模型能力的演进基本符合预期。 模型能力从高中生水平逐步提升至大学生、博士生乃至专业领域。",
+   "audioFile": "audio-dario-exponential/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 29.873,
+   "end": 57.634,
+   "text": "技术前沿的进展并不完全均衡，但总体符合预期。不过最让我意外的是。 公众对技术临界点的认知严重不足。 令人震惊的是，无论圈内还是圈外，人们仍在讨论那些老生常谈的政治议题。 当技术发展已接近指数曲线末端时，人们却还在纠缠这些陈旧话题。 我想了解当前指数曲线的具体形态。三年前您谈到扩展性时，我问过",
+   "audioFile": "audio-dario-exponential/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 58.084,
+   "end": 86.495,
+   "text": "规模扩展如何运作？现在我仍有类似疑问，但问题变得更复杂了。 至少从公众视角看，三年前人们讨论的那些问题。 众所周知，随着计算资源呈数量级增长，可以观察到损失函数的改善趋势。但目前强化学习扩展领域尚无公开的扩展定律。 甚至不清楚强化学习扩展的具体内涵：是教授模型技能？还是元学习？当前的扩展假设究竟是什么？",
+   "audioFile": "audio-dario-exponential/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 87.195,
+   "end": 126.595,
+   "text": "我早在2017年就提出过相同假设，当时我撰写了一篇名为《计算资源大块假设》的文档。 该假设并非特指语言模型扩展，当时GPT-1刚发布，计算资源的扩展涉及多个领域。 当时GPT-1刚发布，这不过是众多尝试之一。那时还有机器人技术，人们正试图将推理能力与语言模型结合。 该文档作为通用性文件撰写，明确指出所有技巧和新方法的重要性远不及少数关键因素。 理查德·萨顿后来提出的'苦涩教训'与此假设本质相同，核心观点如下",
+   "audioFile": "audio-dario-exponential/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 127.045,
+   "end": 160.112,
+   "text": "影响模型效果的首要因素是原始计算资源规模，其次是数据量，第三是数据质量和分布特性。 几年后，我们得出苦涩教训，但当时假设。 基本上相同。因此，它所表达的是所有聪明才智，所有。 我列举了七个关键因素，其中计算资源、数据量、数据质量分布是前三项。 我列举了七个关键因素，其中计算资源、数据量、数据质量分布是前三项。 需要广泛的数据分布。第四点是",
+   "audioFile": "audio-dario-exponential/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 160.562,
+   "end": 184.335,
+   "text": "要考虑训练时长。第五点需要能无限扩展的目标函数。 预训练目标函数就是这样的函数。另一种是强化学习的目标函数。 设定目标并完成任务。其中包含数学编码中的客观奖励。 还有来自人类反馈的主观奖励及更高层次版本。 第六七点涉及归一化和条件控制等技术",
+   "audioFile": "audio-dario-exponential/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 184.785,
+   "end": 197.647,
+   "text": "确保数值稳定性使计算有序流动。 这个假设至今仍然成立。 我尚未看到与之矛盾的证据。 扩展定律就是典型例证。 预训练持续带来收益",
+   "audioFile": "audio-dario-exponential/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 198.347,
+   "end": 231.586,
+   "text": "现在强化学习也呈现相同趋势。 我们看到了预训练阶段，随后又出现了强化学习阶段。 强化学习阶段的进展其实与其他公司发布的成果类似，他们也在一些发布中提到过。 他们在部分发布中提到，‘我们训练模型参加了数学竞赛，例如美国数学邀请赛’。 模型的表现与训练时长呈对数线性关系。 而训练时长越长，模型表现越好。这种现象不仅限于数学竞赛，还出现在各种强化学习任务中",
+   "audioFile": "audio-dario-exponential/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 232.036,
+   "end": 267.695,
+   "text": "我们在强化学习中看到了与预训练阶段相同的扩展规律。你提到理查德·萨顿的'苦涩教训'观点。 他实际上对LLM的路线持怀疑态度。如果可以这样概括他的观点。 真正掌握人类学习核心本质的系统，不需要耗费数十亿美元的数据和算力。 不需要专门设计环境来学习使用Excel或PowerPoint，也不需要专门训练网页浏览技能。 而我们必须依赖这些强化学习环境来培养这些技能，恰恰说明我们缺乏这种核心能力",
+   "audioFile": "audio-dario-exponential/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 268.395,
+   "end": 306.703,
+   "text": "这说明我们正在错误地扩展方向。如果确实存在某种具备人类级即时学习能力的系统。 那么这些强化学习的扩展尝试就显得意义重大。 我认为这里确实存在一个谜题，但可能并不重要。事实上，我猜测它可能并不重要。 其实并不重要。让我们暂时抛开强化学习（RL），因为我认为说强化学习与预训练有任何不同，其实是个误导。 如果我们观察预训练和扩展，2017年亚历克·拉德福德开发GPT-1时非常有趣。",
+   "audioFile": "audio-dario-exponential/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 307.153,
+   "end": 340.721,
+   "text": "在GPT-1之前，模型训练的数据集并未涵盖广泛的语言分布。 当时只有标准的语言建模基准数据，比如一些特定领域的文本。 GPT-1本身训练的数据是网络小说，属于文学类文本，这类文本仅占互联网文本的极小部分。 当时的数据量仅约十亿词，属于小规模数据集，且分布范围狭窄。 它只能反映现实世界中非常有限的语言分布。 这种狭窄的分布导致模型泛化能力较差。",
+   "audioFile": "audio-dario-exponential/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 341.171,
+   "end": 370.154,
+   "text": "如果模型在特定任务上表现更好，比如网络小说语料库。 它在其他任务上的泛化能力并不理想。我们当时评估了模型在各种任务中的表现。 直到我们用互联网全量数据训练模型，通过大规模网络爬取实现泛化能力突破。 对吧？比如从通用爬虫或抓取链接开始。 我们当时在GPT-2中就是这样做的。只有这样做才能开始实现泛化能力",
+   "audioFile": "audio-dario-exponential/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 370.604,
+   "end": 398.597,
+   "text": "在强化学习领域也是一样，我们从数学竞赛等简单任务开始训练。 然后逐步扩展到代码等更广泛的任务类型。 我认为我们会越来越接近泛化能力。这说明预训练和强化学习存在关联。 预训练阶段，我们使用了万亿级词元，而人类接触的词汇量远不及此。 这显示出样本效率存在本质差异。模型需要从零开始进行大量训练",
+   "audioFile": "audio-dario-exponential/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 399.047,
+   "end": 420.239,
+   "text": "但一旦训练完成，给予百万级上下文长度后。 它们在该长度范围内表现出色的学习适应能力。 我不确定具体原因，但预训练过程介于人类学习与进化之间。 人类获得许多先验知识来自进化。而语言模型几乎是一张白纸",
+   "audioFile": "audio-dario-exponential/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 420.689,
+   "end": 455.369,
+   "text": "它们实际上是从随机参数开始的。 权重。相比之下，人脑一开始就有这些区域，并连接到各种输入和输出。也许我们应该认为。 预训练，以及强化学习，它们存在于人类进化与即时学习之间的中间地带。 进化与人类即时学习之间。而模型的上下文学习则介于长期和短期人类学习之间。 这是一种介于长期人类学习和短期人类学习之间的状态。 所以存在这样一个层次结构：进化、长期学习、短期学习以及人类反应",
+   "audioFile": "audio-dario-exponential/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 456.069,
+   "end": 491.657,
+   "text": "大语言模型的各个阶段沿着这个光谱分布，但不一定恰好位于相同位置。 某些人类学习模式在LLM中没有对应物，它们更像是处于这些层次之间的状态，这样理解对吗。 是的，不过有些地方仍令人困惑。比如如果类比进化，那么样本效率不高是合理的。 如果我们能通过上下文学习获得超高效的样本学习代理。 为何还要投入资源开发强化学习环境？他们似乎只是在教模型使用API、Slack等工具",
+   "audioFile": "audio-dario-exponential/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 492.107,
+   "end": 501.614,
+   "text": "如果能即时学习的代理已经出现或即将出现，为何还要如此强调这些。 是的，我无法代表他人说明这种强调的原因",
+   "audioFile": "audio-dario-exponential/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 502.314,
+   "end": 537.057,
+   "text": "目标不是在强化学习中教会模型所有可能的技能，正如我们在预训练中也不会这样做。 在预训练中，我们并不是试图让模型接触到所有可能的词语组合方式，对吧？ 我们更希望模型通过大量数据训练，最终实现预训练阶段的泛化能力。 我曾近距离观察到GPT-1到GPT-2的转变，模型达到某个临界点时，。 我曾多次目睹这样的场景：只要给模型一组数据，比如房屋价格和面积，",
+   "audioFile": "audio-dario-exponential/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 537.507,
+   "end": 562.825,
+   "text": "模型就能完成线性回归任务，虽然效果一般，但确实能完成。 它从未见过这种具体的数据模式。 因此，当我们构建强化学习环境时，。 目标与五到十年前预训练阶段的目标非常相似，都是为了实现泛化。 我们收集大量数据不是为了覆盖特定文档或技能，。 而是为了实现模型的泛化能力。",
+   "audioFile": "audio-dario-exponential/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 563.525,
+   "end": 603.891,
+   "text": "我认为你提出的框架显然有道理，我们正在向AGI迈进。关键点在于，目前没有人会不同意这一点。 我们将在本世纪实现AGI。关键在于你认为我们已触及指数增长终点，而其他人则认为。 哦，是的，我们一直在进步。自2012年以来持续进步，预计2035年将实现类人AGI。我想了解你观察到哪些迹象让你如此认为。 显然我们看到的这些模型中包含了进化或人类在一生中学习的类似机制。为什么你认为它只有一年时间而非十年？ >> 我认为这其实可以分为两种",
+   "audioFile": "audio-dario-exponential/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 604.341,
+   "end": 614.496,
+   "text": "这里其实可以提出两种观点或两种主张。 一种更强，一种更弱。先从较弱的主张开始，当我第一次看到",
+   "audioFile": "audio-dario-exponential/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 615.196,
+   "end": 639.074,
+   "text": "2019年那次规模扩展时，我当时并不确定。这就像50%的概率，我认为我看到了。 某种可能性，我的观点是这比任何人想象的都更可能发生。这非常疯狂，其他人甚至不会考虑。也许有50%的可能性。 在你提出的假设中，10年内实现的可能性",
+   "audioFile": "audio-dario-exponential/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 639.774,
+   "end": 641.671,
+   "text": "你所说的，比如在10年内达到",
+   "audioFile": "audio-dario-exponential/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 642.371,
+   "end": 676.266,
+   "text": "我称之为数据中心里的天才国度，我对这个可能性有90%的把握。很难超过90%因为世界太。 不可预测。如果达到95%的把握，可能会涉及一些未知领域，比如。 多家公司内部动荡却毫无进展，直到台湾被入侵，所有工厂都被导弹摧毁。 被导弹击中摧毁，你现在正在喝Astoria。设想一个概率为5%的场景。 其中事情可能因各种原因延迟十年。这或许有5%的可能性。",
+   "audioFile": "audio-dario-exponential/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 676.716,
+   "end": 704.185,
+   "text": "还有5%的可能性，我对可验证任务非常有信心。 在编程方面，除了不可消除的不确定性，我认为我们将在一两年内实现。 十年内绝对能实现端到端编程，这是毫无疑问的。 唯一长期存在的根本性不确定性是那些不可验证的任务。 涉及无法验证的任务，例如规划火星任务，或进行类似CRISPR这样的基础科学发现。",
+   "audioFile": "audio-dario-exponential/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 704.635,
+   "end": 718.159,
+   "text": "这些任务难以验证，但我几乎确信我们有可靠路径。 如果存在些许不确定性，它就存在。因此在十年时间线，。 我有90%的把握，这已经是能拥有的最大确定性。",
+   "audioFile": "audio-dario-exponential/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 718.859,
+   "end": 749.457,
+   "text": "我认为到2035年不会实现的说法是疯狂的，在理性世界这应属主流之外。 强调验证的必要性，暗示着对这些模型泛化能力的不信任。如果考虑人类，我们擅长处理能获得可验证奖励的事物，以及无法获得奖励的事物。 我们既擅长有明确奖励的事物，也擅长无明确奖励的领域，必须放弃无法验证的领域。 我们已经看到从可验证领域到不可验证领域的显著泛化，这种现象已经出现。",
+   "audioFile": "audio-dario-exponential/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 750.157,
+   "end": 789.725,
+   "text": "没错。但你似乎强调这是一个光谱，不同领域会呈现不同进展。但人类能力的提升似乎并非如此。 在我们无法实现的领域，世界是那个我们只处理可验证事务的世界。 他们虽然能部分泛化，但无法完全实现。我们无法彻底完成所有任务。 这不是非黑即白的问题。但即使泛化能力较弱，仅限于可验证领域，我仍不清楚如何实现软件工程自动化。 某种程度上，你就是软件工程师。但软件工程师需要撰写关于宏大愿景的长篇备忘录。",
+   "audioFile": "audio-dario-exponential/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 790.175,
+   "end": 813.297,
+   "text": "成为软件工程师的一部分就是撰写这些长篇备忘录。 软件工程师的职责包括设计文档等。模型在编写注释方面已经表现不错。 我在此处的主张远比我认为的要弱。我试图区分两种情况。 从什么标准来看？有一个标准是软件工程师的胜任程度。",
+   "audioFile": "audio-dario-exponential/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 813.997,
+   "end": 832.339,
+   "text": "AI编写了多少行代码？如果考虑软件工程史上其他生产力提升，编译器已经写了所有软件代码。但问题在于。 代码行数与生产力提升幅度存在差异。我们真正需要关注的是生产力提升的幅度，而非单纯代码行数",
+   "audioFile": "audio-dario-exponential/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 833.039,
+   "end": 870.798,
+   "text": "我完全同意你的观点。我曾做过一系列关于软件工程中代码发展的预测，但人们反复误解了我的意思。 让我梳理一下这个光谱。大约八九个月前我说过，AI模型将在三到六个月内写出90%的代码。 我之前提到过，AI模型将在三到六个月内自动生成90%的代码行数，这已在部分领域实现，如人类等下游用户。 但这个标准其实很弱。人们误以为我在说不需要90%的软件工程师，这两者差距极大",
+   "audioFile": "audio-dario-exponential/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 871.248,
+   "end": 912.718,
+   "text": "我认为光谱应分为两个阶段：90%代码由模型编写，以及100%代码由模型编写，这代表不同的生产力提升。 90%的端到端软件工程任务，包括编译、环境搭建、功能测试、撰写备忘录等。 今天所有软件工程任务都已由模型完成。即使实现这一点，软件工程师也不会失业。 他们可以转向更高层次的管理工作。更进一步，软件工程师需求将减少90%，但这属于光谱的不同阶段。 即使发生这种情况，并不意味着软件工程师会失业。他们可以从事更高层次的工作，例如管理",
+   "audioFile": "audio-dario-exponential/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 913.168,
+   "end": 937.44,
+   "text": "光谱另一端的需求会减少90%，我认为这会发生，但这是一个连续光谱。 我曾在技术发展的早期阶段写过相关内容，当时我经历了与农业相关的这种演变过程。因此，我完全同意你的观点。 你们在这一点上意见一致。这些基准彼此差异很大，但我们正在以极快的速度推进",
+   "audioFile": "audio-dario-exponential/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 938.14,
+   "end": 968.497,
+   "text": "看起来你的愿景部分认为从90%到100%的进展会很快发生，而且这种突破将带来巨大的生产力提升。 在新项目中人们开始使用Claude代码等工具，但报告称启动了大量项目。 我好奇现实世界是否因此出现软件复兴，产生大量原本不存在的新功能？至少到目前为止似乎并未出现这种现象。 即使不干预克劳德代码，现实世界复杂，工作充满挑战",
+   "audioFile": "audio-dario-exponential/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 969.197,
+   "end": 996.578,
+   "text": "无论是编写软件还是其他封闭系统，我们能从中获得多少更广泛的收益？ 这或许让我们应该重新评估天才群体的规模。 我同时认同你的观点，这正是这些进展未能立即发生的原因。 但与此同时，我认为这种影响将会非常迅速。比如可能存在两种极端情况。 一种观点认为AI进展缓慢，需要很长时间才能在经济中普及",
+   "audioFile": "audio-dario-exponential/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 997.028,
+   "end": 1037.379,
+   "text": "经济扩散已成为阻碍AI进步的流行说法之一，而另一种观点则认为。 实现递归自我改进，对吧？你只需要在曲线上画一条指数增长线。 在曲线上？我们即将拥有太阳周围的戴森球，还有更多突破。 我知道，在递归之后的许多纳秒之后，我在这里夸张地描绘了这种观点，但至少从...来看，我们看到了两种极端情况。 这两端是极端，但Anthropic从一开始就在内部观察到这种年增长十倍的现象。 我们看到收入每年增长十倍。对吧？",
+   "audioFile": "audio-dario-exponential/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1037.829,
+   "end": 1067.626,
+   "text": "2023年从0增长到1亿美元，2024年从1亿增长到10亿美元。 2025年从10亿增长到90亿或100亿。 90亿至100亿。买下10亿美元产品，清理100亿收入。 今年第一个月，这条指数曲线本应放缓，但实际上却继续增长。 我们在1月又增加了数10亿美元的收入。 显然这条曲线不可能无限持续下去，因为GDP规模有限，我甚至猜不到具体数值",
+   "audioFile": "audio-dario-exponential/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1068.076,
+   "end": 1099.522,
+   "text": "我认为今年这条曲线会开始弯曲，但仍然是条非常陡峭的曲线。 我敢打赌，即使规模扩展到整个经济，它仍然会保持相当快的速度。因此，我认为我们应该关注这个中间领域，这里的事务。 速度极快，但并非瞬间完成。 由于经济扩散和需要闭环，它们需要时间，比如这种繁琐的调整，我必须进行更改。 比如我在企业内部需要调整安全权限，才能让系统真正运行起来",
+   "audioFile": "audio-dario-exponential/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1099.972,
+   "end": 1138.79,
+   "text": "比如我之前有一套旧软件，会在模型编译前进行检查，现在我必须重写它。 虽然模型能完成这个任务，但需要我明确指令，这个过程需要时间。 到目前为止的所有现象都符合这样的观点：模型本身能力呈指数级提升，而模型向经济领域渗透的速度也是指数级的。 这种渗透速度并非瞬间完成，但比任何之前的技术都要快得多，且存在局限性。 并非进展缓慢。比以往任何技术都快得多，但存在局限性。这正是我们所看到的。",
+   "audioFile": "audio-dario-exponential/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1139.24,
+   "end": 1149.781,
+   "text": "快速采纳，但并非无限快速。 我能尝试一个大胆的观点吗？我觉得人们常说的'扩散问题'其实是回避责任的托词",
+   "audioFile": "audio-dario-exponential/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1150.481,
+   "end": 1181.918,
+   "text": "当模型无法完成某事时，人们会说这是扩散问题，但应该用人类似比来衡量。 AI会让扩散模型对新AI入职比新员工更容易掌握。AI可在几分钟内读取你的协作平台和云存储内容。 AI能共享同类型实例的全部知识，招聘AI时不存在逆向选择问题，因为可以直接复制已验证的模型。 招聘人类却要耗费更多精力，我们每年支付人类50万亿美元工资，尽管这存在诸多问题。",
+   "audioFile": "audio-dario-exponential/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1182.618,
+   "end": 1209.644,
+   "text": "原则上AI融入经济比招聘人类容易得多，但扩散现象似乎无法解释这一差异。 我认为扩散现象真实存在，不完全取决于AI模型的局限性。 有些人用扩散作为噱头，声称这不是重大问题，但我不这么认为。 AI的扩散速度将远超以往技术。 之前的技术并非无限快速。举个例子，比如Claude代码。",
+   "audioFile": "audio-dario-exponential/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1210.094,
+   "end": 1249.719,
+   "text": "开发者只需简单设置即可使用Claude Code。如果是开发者，几乎可以立即开始使用。大型企业开发者没有理由不迅速采纳。 大型企业不应像个人开发者或小型企业那样快速采用Claude Code。 我们尽最大努力推广，对吧？我们向企业及大企业销售克劳德代码，例如您知道的那些大型公司。 金融公司和大型制药企业等，采用代码模型的速度远超其他企业。 通常会采用新技术，对吧？但再次强调，这确实需要时间。比如任何特定功能或产品，像Claude Code这样的产品。",
+   "audioFile": "audio-dario-exponential/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1250.169,
+   "end": 1279.82,
+   "text": "协作工具将被频繁在Twitter活跃的个人开发者采用。 A轮初创公司往往比大型食品销售企业早数月就采用这类产品。 存在诸多因素需要考虑，比如必须通过法律审查、为全员部署、满足安全合规要求等。 远离AI革命的公司高管虽然具有前瞻性，但必须说服自己。 投入5000万值得，这就是Claude Code的价值，能提升公司效率",
+   "audioFile": "audio-dario-exponential/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1280.27,
+   "end": 1307.423,
+   "text": "\"我们有3000名开发者，这是向他们推广的具体方案\"，我们每天都在进行这类对话。 我们正竭尽全力让Anthropic的收入年增长20到30倍，而不是10倍。 许多企业表示\"这项技术如此高效，我们将在采购流程中采取捷径\"。 他们采用Claude Code的速度远超我们之前推广普通API时的状况，因其更具吸引力。",
+   "audioFile": "audio-dario-exponential/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1307.873,
+   "end": 1322.594,
+   "text": "Claude Code并非完美产品，即使AGI或天才团队在数据中心也难以做到无限迷人。 即便在数百亿美元规模下实现3到10倍年增长也极其困难，此前从未有人做到",
+   "audioFile": "audio-dario-exponential/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1323.294,
+   "end": 1341.936,
+   "text": "历史上虽有类似情况，但不可能无限快速。我认同这会带来轻微减速。但有时人们会说，这些能力已经存在。 但由于融合，否则我们基本上已经实现了人工通用智能。 但我不认为我们已经接近人工通用智能。如果一个国家拥有",
+   "audioFile": "audio-dario-exponential/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1342.636,
+   "end": 1354.483,
+   "text": "如果你们公司没有在数据中心聚集天才团队，你们就会知道。 在数据中心，我们早就知道了。在座各位以及华盛顿的每个人都会知道。比如你",
+   "audioFile": "audio-dario-exponential/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1355.183,
+   "end": 1400.026,
+   "text": "知道，农村地区的人可能不知道。但事实上。 我们确实知道。现在我们还没有做到这一点，这一点非常明确。正如达里奥所暗示的，要实现通用性，需要在各种真实任务和环境中进行训练。 例如销售代理，最难的不是教它在Salesforce特定数据库中点击按钮，而是训练其在模糊情境中的判断力。 如何从数千条线索中筛选出潜在客户？如何实际联系他们？当被无视时该怎么办？当某AI实验室想训练。 Labelbox邀请了数十位财富500强销售专家，构建了多种强化学习环境，创建了数千种场景，让销售代理必须",
+   "audioFile": "audio-dario-exponential/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1400.476,
+   "end": 1436.968,
+   "text": "与潜在客户互动，客户由另一个AI扮演。Labelbox确保该客户AI具备不同人设，因为。 冷打电话时你永远不知道对方是谁。需应对各种可能，标签盒销售专家逐轮监控对话。 调整角色扮演代理，确保其行为与真实客户一致。Labelbox的迭代速度行业领先，这点至关重要，因为强化学习属于实证科学。 （音乐）这不是软件问题。Labelbox拥有实时监控代理性能的工具，使专家持续生成任务，确保模型处于正确分布范围。",
+   "audioFile": "audio-dario-exponential/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1437.418,
+   "end": 1476.911,
+   "text": "在训练期间难以获得最佳奖励信号。Labelbox几乎在所有领域都能做到，涵盖基金经理、放射科医生，甚至航空飞行员。 无论你做什么，Labelbox都能帮助。了解更多请访问。 回到具体预测，我认为由于存在许多需要澄清的方面，我们很容易在讨论能力时产生误解。 例如，三年前我采访你时，曾询问过三年后的预期。我认为你当时的判断是正确的。 我们应期待这样的系统：与其交谈一小时后，很难与受过良好教育的普通人区分开来。是的，我认为你当时是正确的。",
+   "audioFile": "audio-dario-exponential/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1477.361,
+   "end": 1510.895,
+   "text": "但精神上我感到不满，因为我的预期是这类系统能自动化大量白领工作。因此，。 或许更有效的方式是讨论你实际期望的系统能力。因此，我将直接说明我的观点。 我将告诉你我认为我们目前所处的位置。 因此，我想问你一个具体问题，以便明确我们应期待哪些能力。或许我可以结合一个我熟悉的岗位来提问。 比如视频编辑师。我之所以选择这个岗位，不是因为它最相关，而是因为我能评估相关说法。",
+   "audioFile": "audio-dario-exponential/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1511.345,
+   "end": 1526.999,
+   "text": "编辑的工作之一是了解受众的偏好，包括我的喜好和品味，以及我们在不同取舍上的考量，这一过程可能需要数月时间。 六个月后，他们具备的技能和能力，相当于一个能迅速在工作中掌握这些技能的模型。",
+   "audioFile": "audio-dario-exponential/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1527.699,
+   "end": 1562.251,
+   "text": "这种AI系统何时会出现？我认为你指的是，比如我们进行了三小时的访谈，之后会有编辑进来处理内容。 他们会说，比如达里奥挠了挠头，我们可能需要删掉这部分内容。 然后放大这段内容，之前有一段冗长的讨论，大家觉得没那么有趣，后来又出现了更有趣的内容。 所以让我们做这个编辑。我认为数据中心里的天才们能够完成这项工作。 他们将能完全掌控电脑屏幕，你可以输入内容，它也能利用屏幕上网。",
+   "audioFile": "audio-dario-exponential/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1562.701,
+   "end": 1592.699,
+   "text": "它能查看你之前的访谈，浏览推特上人们对访谈的评论。 它能与你对话、提问，与你的团队沟通，分析你过往的编辑记录。 然后基于这些信息完成工作。这取决于多个因素，其中之一是模型能否真正精通电脑操作。 我们看到基准测试成绩在提升，但基准测试始终是不完美的衡量标准。 操作系统领域曾从5%的水平起步，我记得我们首次重新发布时...",
+   "audioFile": "audio-dario-exponential/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1593.149,
+   "end": 1600.25,
+   "text": "大约一年零三个月前，计算机使用率可能只有15%左右，但我们现在",
+   "audioFile": "audio-dario-exponential/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1600.95,
+   "end": 1637.136,
+   "text": "已提升至65%到70%。虽然还有更精确的衡量方式，但我认为。 计算机使用必须达到可靠性临界点。在您继续下一个话题前，能否问个跟进问题？多年来我一直在尝试构建内部大语言模型。 工具，我经常需要处理文本输入输出任务，这应该是这些模型的核心能力之一。 但至今仍要雇佣人类完成，比如从转录稿中挑选最佳片段，他们可能完成70%的工作。 但无法像与人类员工互动那样持续指导他们改进，这种能力缺失导致",
+   "audioFile": "audio-dario-exponential/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1637.586,
+   "end": 1641.939,
+   "text": "即使解决计算机使用问题，仍会阻碍我将任务外包给它们",
+   "audioFile": "audio-dario-exponential/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1642.639,
+   "end": 1670.385,
+   "text": "这又回到我们之前讨论的在岗学习问题，非常有趣。我认为。 对于代码代理来说，人们不会认为在岗学习是阻碍它们端到端完成任务的。 Anthropic有工程师从不编写代码，他们通过端到端的方式不断改进，当我看到他们的生产力时。 有人曾说，过去我得亲自编写这个GPU内核和芯片，现在只需让Claude完成",
+   "audioFile": "audio-dario-exponential/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1670.835,
+   "end": 1698.343,
+   "text": "让Claude来做，生产力提升显著，看到Claude编写的代码时，对代码的熟悉度很高。 代码库或模型在公司一年未发挥作用，这并不是投诉的高优先级问题。 我看到的情况是，我们正在走一条不同的道路。 代码库中存在外部记忆结构，这可能使编码工作变得更快。 进步正是因为它拥有其他经济活动不具备的独特优势。",
+   "audioFile": "audio-dario-exponential/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1698.793,
+   "end": 1730.666,
+   "text": "但你这样说意味着，通过将代码库纳入上下文，我就能掌握工作中所需的一切。 无论信息是否书面化、是否可获取，只要上下文窗口包含所需全部信息，就属于这种情况。 就像人们常说的，'我入职后需要6个月才能理解代码库'，而模型在上下文中直接完成了学习。 我实在不知道该如何理解这种现象，因为有开发者明确表示他们通过模型提升了效率。",
+   "audioFile": "audio-dario-exponential/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1731.366,
+   "end": 1751.41,
+   "text": "去年有一项研究显示，经验丰富的开发者使用模型后确实感到更高效。 但数据显示，他们实际合并的代码量反而减少了20%。 我试图解释这种主观感受与客观数据之间的矛盾。 在宏观层面，软件领域为何没有出现预期的复兴？",
+   "audioFile": "audio-dario-exponential/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1752.11,
+   "end": 1781.334,
+   "text": "为什么没有看到预期的生产效益？Anthropic内部情况明确，面临巨大商业压力。 我们给自己制造了更多困难，因为我们做的安全措施比其他公司更多。 比如，我们。 在保持经济生存的同时坚持价值观的压力是难以想象的，我们正努力维持十倍收入增长曲线。 当我们没有取得进展时，根本没有时间感到自己是高效的，这些工具让我们效率大幅提升",
+   "audioFile": "audio-dario-exponential/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1781.784,
+   "end": 1806.75,
+   "text": "这就是为什么我们担心竞争对手使用这些工具，因为我们认为自己领先于竞争对手。 如果这些工具真的降低了我们的效率，我们不会经历这么多麻烦。 每几个月我们都能看到效率提升的成果，比如模型发布，对此无需自我欺骗。 这些模型确实能提升你的效率",
+   "audioFile": "audio-dario-exponential/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1807.45,
+   "end": 1815.135,
+   "text": "一方面，人们感到高效的状态符合相关研究预测；另一方面，显然你们团队取得了快速进展",
+   "audioFile": "audio-dario-exponential/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1815.835,
+   "end": 1844.11,
+   "text": "原本设想通过递归自我改进，即更好的AI帮助构建更优的下一代AI。 但实际情况是，我看到OpenAI和DeepMind每隔几个月就更换负责人。 因为无论你赢了什么，但为什么拥有最佳编码模型的人没有持续的优势，如果确实存在这些巨大的生产力提升的话？ 不，不，不。我认为我的情境模型是存在某种逐渐增长的优势。",
+   "audioFile": "audio-dario-exponential/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1844.56,
+   "end": 1872.992,
+   "text": "比如我现在认为，编码模型可能提供了大约15%的总要素速度提升。 就像六个月前只有5%的速度提升，那时并不起眼。 现在它才刚刚成为多个关键因素之一。 这种趋势将持续加速。 六个月前，多家公司都处于相似阶段，因为当时这并非显著因素。 但我认为这种情况正在加速，而且我认为有多个公司。",
+   "audioFile": "audio-dario-exponential/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1873.442,
+   "end": 1902.156,
+   "text": "编写用于代码的模型，而我们并不能完全阻止其他公司。 使用我们的模型进行内部开发。 我们看到的一切都符合这种滚雪球效应。 我的核心观点始终是这种逐渐增长的优势。 所有这些都属于渐进式发展，类似于平滑的指数增长，尽管这些指数增长相对陡峭。我们正看到这种雪球效应逐渐加速，目前大约是10%",
+   "audioFile": "audio-dario-exponential/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1902.606,
+   "end": 1915.234,
+   "text": "20%、25%，甚至40%。根据阿姆达尔定律，你必须消除所有阻碍你完成任务的因素。 这是Anthropic的核心任务之一",
+   "audioFile": "audio-dario-exponential/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 1915.934,
+   "end": 1939.221,
+   "text": "我认为我们需要退一步思考，之前在技术栈中讨论过，什么时候才能实现工作中的学习？ 你在编程领域提到的观点很有启发性，实际上我们不需要工作中的学习。通过AI就能实现巨大的生产力提升。 甚至可能为AI公司创造数万亿美元的收入，而无需人类最基本的学习能力",
+   "audioFile": "audio-dario-exponential/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1939.921,
+   "end": 1981.218,
+   "text": "但在大多数经济领域，人们常说：\"我雇佣的人起初几个月作用不大，但随着时间推移逐渐掌握了情境理解\"。 他们最终变得非常强大，对我们来说价值极高。如果AI无法实现这种即时学习能力。 我很难想象世界会发生巨大改变。我认为这里存在两个层面的问题。 当前技术状态分为两个阶段：预训练和强化学习阶段。我们向模型输入大量数据和任务，然后让它们进行泛化学习。 这种学习来自更多数据，而非单个人类或单个模型的生命周期内学习",
+   "audioFile": "audio-dario-exponential/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 1981.668,
+   "end": 2009.278,
+   "text": "再次强调，这种学习模式与人类学习存在本质差异。 介于进化与人类学习之间。但一旦掌握这些技能，就永远拥有了。就像预训练一样，。 模型掌握的知识远超人类。比如，预训练模型对日本武士历史的了解程度远胜于我，。 对棒球的了解也远超我。它甚至对电子学中的低通滤波器知识都比你全面。 模型的知识广度远超人类。我认为仅凭这一点，",
+   "audioFile": "audio-dario-exponential/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2009.728,
+   "end": 2033.701,
+   "text": "模型可能在各方面都表现更优。通过扩展现有架构，我们还拥有上下文学习能力，。 这种能力类似人类在职学习，但强度较弱且持续时间较短。当你给模型大量示例时，。 它确实能理解。上下文中的学习是真实发生的，百万个标记的处理量相当于人类数天的学习。",
+   "audioFile": "audio-dario-exponential/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2034.401,
+   "end": 2039.653,
+   "text": "如果让人类重读百万字内容，至少需要数天甚至数周时间。",
+   "audioFile": "audio-dario-exponential/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2040.353,
+   "end": 2077.554,
+   "text": "在现有框架下，这两项能力或许已足够在数据中心实现国家级智慧。 虽然可能存在知识缺口，但按现状发展，这已足以创造万亿美元营收。 第二点是持续学习，即单个模型在工作过程中不断学习的能力。 第一点是单一模型在实际工作中持续学习的构想。第二点则是持续学习的概念，即单一模型在工作中不断学习。 我认为我们也在做这件事，而且我认为在接下来的一两年内，我们很可能也会实现这一点。",
+   "audioFile": "audio-dario-exponential/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2078.004,
+   "end": 2119.42,
+   "text": "解决这个问题。我认为即使没有它，你也能完成大部分工作。我认为每年数万亿美元的市场…… 每年数万亿美元的市场…… 市场，也许所有国家安全和安全影响，正如我在技术青春期中所写的那样，即使没有它也可能发生，但我认为我们…… 我认为其他人也在研究这个问题。我认为在接下来的一两年内，我们有很大机会实现这一点。有很多想法，我不会一一详细说明…… 但其中一个是让上下文更长。没有任何东西阻止更长的上下文发挥作用。你只需要在更长的上下文中进行训练……",
+   "audioFile": "audio-dario-exponential/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2119.87,
+   "end": 2140.729,
+   "text": "然后在推理时学会处理它们。这两个都是我们正在解决的工程问题，我认为其他人也在做类似的工作。是的，所以上下文长度的增加…… 2020至2023年，GPT-3到GPT-4 Turbo上下文长度从2000增至12.8万。你觉得接下来两三年……",
+   "audioFile": "audio-dario-exponential/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2141.429,
+   "end": 2171.231,
+   "text": "从那以后的两三年里，我们是否还在类似的范围内？是的。当模型的上下文长度远超过这个数值时，人们报告称模型在处理完整上下文方面的能力出现质的下降…… 考虑完整上下文。所以我想知道你们内部…… 看到这些让人想到，1000万上下文、1亿上下文甚至十亿上下文，才需达到人类6个月的学习效果。这不是研究问题，而是工程和推理问题。",
+   "audioFile": "audio-dario-exponential/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2171.931,
+   "end": 2187.512,
+   "text": "对吧？如果你想处理长上下文，就必须存储整个KV缓存，你必须……这确实是一个工程问题…… 在GPU上存储并管理所有内存非常困难，现在这些细节已复杂到我无法理解。",
+   "audioFile": "audio-dario-exponential/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2188.212,
+   "end": 2224.908,
+   "text": "虽然在GPT-3时代，我记得那时需要存储这些权重和激活值。但现在情况完全变了，因为我们有了。 MoE模型及相关技术。不过你提到的性能下降问题，暂且不谈具体细节，我想问个问题。 有两个关键点：一个是训练时的上下文长度，另一个是服务时的上下文长度。如果训练时使用短上下文，但服务时用长上下文。 可能会出现性能下降。虽然不如理想状态，但仍然可以提供服务。而且在长上下文训练上可能更难实现。",
+   "audioFile": "audio-dario-exponential/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2225.358,
+   "end": 2252.594,
+   "text": "我想顺便问个问题：如果必须训练更长的上下文，是否意味着在相同算力下能获取的样本更少？ 不过也许暂时不必深入探讨这个。我想先了解一个宏观问题：。 我并不觉得，一个为我工作半年的人类编辑，会比一个为我工作半年的AI更好。你预测什么时候会出现这种情况？ 你预测这种情况会在哪一年出现？我的猜测是",
+   "audioFile": "audio-dario-exponential/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2253.294,
+   "end": 2297.253,
+   "text": "当数据中心汇聚了大量天才时，我们才能实现这些目标。我的预估是大约1到2年，可能1到3年。 如果让我猜测，我认为大概需要1到2年，甚至1到3年。这真的很难说。我有95%的把握认为。 所有这些进展最终都会发生，但具体时间难以确定。 十年内会发生。我认为这几乎是稳操胜券。不过，我有个猜测，这更像是五五开的事情，可能会更。 可能是一到两年，甚至更可能是三到四年。所以，一到三年内。'天才国家'项目提到，在视频编辑这类经济价值稍低的任务中",
+   "audioFile": "audio-dario-exponential/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2297.703,
+   "end": 2311.152,
+   "text": "这在经济上非常有价值，我告诉你。类似的应用场景还有很多，对吧？ 有很多相似案例。因此，你预测一到三年内就能实现。Anthropic曾预测2026年底或2027年初。",
+   "audioFile": "audio-dario-exponential/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2311.852,
+   "end": 2345.117,
+   "text": "我们将拥有能操作人类数字工作界面、智力能力可比肩或超越诺贝尔奖得主、并能与物理世界交互的AI系统。 两个月前接受DealBook采访时，你强调公司采取更负责任的扩展策略，以及与诺贝尔奖得主合作、连接物理世界的能力。 如果真如你所说要打造'天才国家'，那就应该尽可能建设最大规模的数据中心。 诺贝尔奖得主的潜在市场价值可达数万亿美元。因此，我试图调和这种保守立场与你对AI发展的激进观点",
+   "audioFile": "audio-dario-exponential/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2345.567,
+   "end": 2378.526,
+   "text": "这种保守态度在时间线较为温和的假设下似乎合理，但与你对AI进步的激进观点存在矛盾。 其实这些观点完全一致。我们回到'扩散速度有限但很快'的假设。假设我们以这个速度持续进步。 技术正以这个速度进步。我非常确信，我们将在几年内实现目标。 我有个直觉，我们很快就能实现这个目标。 一两年内。技术方面存在一些不确定性，但可以非常有信心地认为不会偏离太多。",
+   "audioFile": "audio-dario-exponential/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2378.976,
+   "end": 2396.193,
+   "text": "我更不确定的是经济扩散方面。我确实相信我们可能实现…… 一到两年内，我们可能在数据中心拥有一个天才国家的模型。但有一个问题。 问题是，之后需要多少年才能实现数千亿美元的收入？",
+   "audioFile": "audio-dario-exponential/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2396.893,
+   "end": 2426.803,
+   "text": "数千亿美元的收入开始涌入。我不认为这会立即发生。我知道…… 我认为可能是一年，也可能是两年，甚至…… 甚至可能延长到五年，尽管我对这一点持怀疑态度。因此，我们存在这种不确定性。 即使技术发展速度如我所预期，我们也不清楚它能多快推动收入增长。 如果时间估算有几年误差，这可能带来灾难性后果。就像我在《机器的温柔》中写的那样",
+   "audioFile": "audio-dario-exponential/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2427.253,
+   "end": 2467.655,
+   "text": "我们可能在数据中心获得这个强大AI，即这个天才国家。 《机器的温柔》。我说过：‘我们可能在2026年或2027年实现这一点’。 这正是会发生的事。这是起跑线。治愈所有疾病需要多长时间？这正是其中之一。 AI技术如何驱动巨大的经济价值？例如，如果治愈所有疾病，制药公司能获得多少收益？ 但消费者剩余巨大，因为我认为所有人都能获得这些治疗，这对我来说非常重要。我们治愈所有这些疾病，需要多长时间？",
+   "audioFile": "audio-dario-exponential/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2468.105,
+   "end": 2503.515,
+   "text": "需要多长时间？你必须先完成生物发现，然后制造新药，还要。 经历监管流程。比如新冠疫苗，我们迅速将疫苗分发给所有人，但耗时半年。 对吧？我的问题是，从AI首次在实验室诞生到真正治愈所有疾病，需要多长时间？ 理论上能为所有人发明解决方案的AI，从诞生到实现全民治愈需要多久？ 比如脊髓灰质炎疫苗已有50年历史，但非洲最偏远地区仍在努力根除。",
+   "audioFile": "audio-dario-exponential/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2503.965,
+   "end": 2526.979,
+   "text": "比尔及梅琳达·盖茨基金会和其他组织都在全力以赴，但难度极大。 经济扩散难度不会像这个案例那么高。 这是最困难的情况。但这里存在真正的困境，我认为其速度将远超以往任何技术。 但仍然存在局限性。因此当我们采购数据中心时，我关注的曲线显示。 我们已经",
+   "audioFile": "audio-dario-exponential/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2527.429,
+   "end": 2557.715,
+   "text": "过去每年收入都增长10倍。今年年初，我们预计年化收入将达到100亿美元。 今年年初，我们必须决定购买多少计算资源。实际上，建设数据中心需要一到两年时间。 要预留数据中心空间。因此我问，2027年我能获得多少算力？我可能需要假设收入会继续以每年10倍的速度增长。 到2026年底收入将达到1000亿美元，2027年底将达到1万亿美元。",
+   "audioFile": "audio-dario-exponential/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2558.165,
+   "end": 2586.328,
+   "text": "如果按这个速度，我需要购买价值5万亿美元的算力。因为这意味着每年1万亿美元的投入持续五年。 如果到2027年底收入只有800亿美元，世界上没有任何力量能阻止我破产。 如果我购买了这么多算力，没有任何对冲手段能让我避免破产。 即使我的大脑怀疑增长速度是否能保持每年10倍，。 我也无法在2027年购买每年1万亿美元的算力。",
+   "audioFile": "audio-dario-exponential/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2586.778,
+   "end": 2612.329,
+   "text": "如果增长速度只是每年5倍而非10倍，。 那么你就会破产。 最终你只能支撑数百亿美元而非万亿美元的投入。 你必须接受存在风险，即需求太大导致无法支撑收入，同时还要接受可能出错且进展缓慢的风险。 当我谈到负责任的行为时，实际上指的是投入的相对规模，而非绝对数值。",
+   "audioFile": "audio-dario-exponential/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2612.779,
+   "end": 2639.617,
+   "text": "我们确实在某些方面投入较少，但关键在于我们是否认真考虑过这些投入。 我们是否像野蛮人一样盲目喊着要投入数百亿美元？我感觉其他公司可能还没真正理清风险。 他们只是因为听起来酷就盲目行动，而我们则认真思考过这些风险。 我们是企业业务，因此。 相比消费级市场，我们更能依赖收入稳定性，且利润率更高，能缓冲过度采购的风险。",
+   "audioFile": "audio-dario-exponential/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2640.317,
+   "end": 2665.887,
+   "text": "我们采购的规模足以在乐观情景中获得强劲回报，但不足以实现每年10倍增长。 除非出现极端不利情况，否则我们不会面临财务困境。这正是我所说的负责任决策。 看来我们对\"数据中心里的天才国家\"定义可能不同。当我想到真正的天才时。 如果能用5万亿美元算力运行一个真正的天才国家，我愿意购买。",
+   "audioFile": "audio-dario-exponential/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2666.337,
+   "end": 2709.898,
+   "text": "若摩根大通或Moderna不采用，这些天才仍会创业。若受临床试验限制，仍会另寻出路。 需要指出的是，大多数临床试验会失败，因为药物无效，没有疗效，对吗？ 这正是《爱与优雅的机器》中的观点。临床试验进展将远超预期，但不会瞬间完成。 假设临床试验需要一年时间才能完成，从而获得收入并继续研发新药。 你拥有一个充满天才的国家，身处人工智能实验室，可以聘用更多人工智能研究员。 你还认为聪明人从事人工智能技术工作会产生自我强化的收益。",
+   "audioFile": "audio-dario-exponential/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2710.348,
+   "end": 2716.699,
+   "text": "比如，你可以让数据中心专门用于人工智能技术进步，从而获得更大的收益。",
+   "audioFile": "audio-dario-exponential/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2717.399,
+   "end": 2752.269,
+   "text": "每年投入万亿美元的计算资源，与每年投入3000亿美元相比？ 确实有万亿级投入，但收益有限，后续仍有挑战。 如果估算误差仅有一年，就可能自我毁灭。这就是平衡点。 我们正在大量采购计算资源，投入规模非常巨大。 我们采购的规模与业内顶尖企业相当。但如果你问为什么我们没有在2027年年中开始采购10万亿美元的计算资源。 首先，这些资源根本无法生产，世界上根本不存在这么多计算资源。",
+   "audioFile": "audio-dario-exponential/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2752.719,
+   "end": 2761.61,
+   "text": "但假设‘天才国家’在2028年中旬而非2027年中旬出现，会发生什么？",
+   "audioFile": "audio-dario-exponential/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2762.31,
+   "end": 2780.942,
+   "text": "如果预测是1到3年，那么到2027年，你应该已经拥有10万亿美元的计算资源。 2029年。2020年，也许2025年。我的意思是，像…… 但问题是，即使在你提到的最长的时间线版本中，你计划构建的计算资源似乎也不足以……这让你得出什么结论？",
+   "audioFile": "audio-dario-exponential/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2781.642,
+   "end": 2814.281,
+   "text": "正如你所说，你希望拥有10万亿美元，假设人类工资。 每年约50万亿美元。如果……我不特别提及Anthropic，但整个行业…… 行业今年构建的计算资源可能在……我…… 不知道，非常低的十位数，你可以说10到15吉瓦。明年，它每年增长约3倍，所以下一年的…… 30或40吉瓦，2028年可能是100，2029年可能达到……",
+   "audioFile": "audio-dario-exponential/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2814.981,
+   "end": 2849.131,
+   "text": "300吉瓦，每吉瓦成本大约10……我在心里计算，但每吉瓦的成本…… 可能100亿美元，每年大约10到150亿美元。所以，你……你把所有这些加起来，你得到的…… 正如所述，到2028/2029年，年收入将达数万亿美元。 你得到的正是你预测的结果。这适用于行业。假设Anthropic计算能力年增3倍。 到27或28年时，你将拥有10吉瓦的计算能力。然后乘以你所说的100亿，就是每年1000亿美元",
+   "audioFile": "audio-dario-exponential/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2849.581,
+   "end": 2894.505,
+   "text": "按你所说乘以100亿，每年就达到1000亿。但你提到到2028、2029年时的市场规模，不过我不想透露具体数字。 但这些数字太小。我参与的Jane Street谜题项目帮助他们雇佣了很多人。 他们仍在招聘，刚发新谜题。这次耗时2万GPU小时，向三个模型植入后门。 不同语言模型隐藏着触发不同行为的提示词，找到触发点即可激活。这尤其令人着迷，因为发现后门是前沿AI研究的开放性问题。 但他们在构建时已知触发词。而这里你无法检查所有可能触发短语的激活情况",
+   "audioFile": "audio-dario-exponential/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2894.955,
+   "end": 2926.471,
+   "text": "在残差流中设置简单分类器，检测后门触发时刻。但因自行构建触发器，早已掌握触发条件。 此处无法检查所有可能触发短语的激活情况。与之前播客中的其他谜题不同，Jane Street公司甚至…… 这个谜题肯定有解。他们为最佳尝试和分析文章预留了5万美元，目前在janestreet.com/twarcash上线，接受投稿直到...。 这将解锁所有进步、医学和健康领域的突破",
+   "audioFile": "audio-dario-exponential/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 2926.921,
+   "end": 2930.071,
+   "text": "我们或将成为推动这些领域发展的关键力量",
+   "audioFile": "audio-dario-exponential/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2930.771,
+   "end": 2970.239,
+   "text": "等等，还有新技术。这难道不是重新投资业务、扩大规模的最佳时机吗？ 扩大国家规模以促进更多发现？不过，盈利能力在这一领域并不如人们想象的重要。 这个领域里，盈利其实并不是衡量投入产出比的指标。我不认为在这个领域，盈利能力是真正的衡量标准。 比如，我们假设一半的算力用于训练，另一半用于推理。推理部分的毛利率通常超过50%。 当低估需求时，盈利能力才会出现；而高估需求导致的损失，是因为提前购买了数据中心。",
+   "audioFile": "audio-dario-exponential/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 2970.689,
+   "end": 3007.029,
+   "text": "理想情况下，如果能准确预知需求，你就会建造数据中心。这些数据都是理论模型，不涉及具体数字。 假设一半算力用于训练，另一半用于推理，推理部分的毛利率超过50%。 如果处于稳定状态，你建造数据中心时，若能准确预知需求，就能获得相应收入。 比如每年支付1000亿美元用于算力，其中500亿美元用于支撑1500亿美元的营收。 另外500亿美元用于训练。这样你每年能获得500亿美元的利润。",
+   "audioFile": "audio-dario-exponential/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3007.479,
+   "end": 3036.339,
+   "text": "这正是当前行业盈利模式的现实情况。 这正是我们当前所处的行业经济模式。 如果未来一两年内需求低于500亿，那么情况就不同了。 如果超过50%的数据中心用于研究，但此时仍无法盈利。所以虽然你们训练了更强的模型，但依然无法盈利。 如果需求超出预期，研究资源会被压缩，但你们仍能支持更多推理任务。",
+   "audioFile": "audio-dario-exponential/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3036.789,
+   "end": 3077.806,
+   "text": "能够支持更多推理任务，从而提高盈利能力。不过我可能解释得不够清楚，我的意思是，首先由你们决定计算资源的投入。 但最终由需求决定，而非由你们自行决定。 我听到的是，你们预测盈利的原因是系统性低估了计算资源投入。 对吧？因为如果实际情况并非如此，我是在说，预测这些事情（比如2028年）非常困难，这是我们。 这是我们对投资者的最佳努力。所有这些都充满不确定性，源于‘不确定性锥’。若收入增长迅速，可能2026年盈利。",
+   "audioFile": "audio-dario-exponential/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3078.256,
+   "end": 3093.333,
+   "text": "但如果我们高估或低估了明年的情况，结果可能会大幅波动。 我想表达的是，你们脑海中有一个模型，认为企业会不断投资，。 不断投资，达到规模后变得盈利。但我觉得这个行业的经济模式并非如此。",
+   "audioFile": "audio-dario-exponential/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3094.033,
+   "end": 3119.795,
+   "text": "方式。我明白了。所以如果我理解正确，你是在说，由于我们应获得的计算资源与实际获得的资源存在差距，我们当时。 我们被迫追求盈利，但这并不意味着会持续盈利。我们会将利润重新投入，因为现在AI技术已取得巨大进展，而。 我们渴望汇聚更多天才，从而形成更强大的国家实力。",
+   "audioFile": "audio-dario-exponential/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3120.495,
+   "end": 3149.368,
+   "text": "收入虽高，但亏损同样严重。如果我们每年都能精准预测需求，就能每年盈利。 因为如果将50%的算力投入研究，再加上高于50%的毛利，。 准确的需求预测将带来利润。这就是我认为存在的盈利商业模式，。 但这一模式被提前建设与预测误差所掩盖。 你似乎将50%视为固定常数，但事实上如果AI进步迅速，",
+   "audioFile": "audio-dario-exponential/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3149.818,
+   "end": 3178.517,
+   "text": "通过扩大规模提升进展速度，投入超过50%也能实现进步。 规模效应回归时，70%的投入仅能通过1.4倍的规模获得微小模型提升。 那额外的200亿美元投入，由于线性规模效应，每美元价值都大幅降低。 因此可能更明智的是将这200亿美元投入推理服务或。 雇佣更高效能的工程师。这就是我提出50%阈值的原因。",
+   "audioFile": "audio-dario-exponential/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3178.967,
+   "end": 3205.478,
+   "text": "并非我们的目标。不会精确达到50%，会随时间波动。我所说的是一种类似线性的定律。 这会导致你投入大约十分之一的业务资源，对吧？比如不是5%也不是95%。 随后因所谓‘定律’，边际效益递减。比如要说服Dario相信AI进展，但你…… 不投资研究因效益递减，而投资其他方面。",
+   "audioFile": "audio-dario-exponential/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3206.178,
+   "end": 3227.214,
+   "text": "再次强调，我们讨论的是边际效益递减。当你每年投入500亿美元后，对吧？这一点我…… 你肯定能理解，但对天才的边际效益递减可能很高。更一般地说，市场经济中的利润是什么？ 利润本质上意味着市场上的其他公司能做更多",
+   "audioFile": "audio-dario-exponential/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3227.914,
+   "end": 3266.834,
+   "text": "用这笔钱做更多我做不到的事。我之所以用这些简化数字，是因为不想透露Anthropic的信息。 让我们推导一下行业的均衡状态，对吧？我认为……为什么大家不把100%的资源都投入…… 如果他们不获得任何收入，就无法融资、无法进行计算交易、无法在下一年购买更多计算资源。 因此，行业将达到一个均衡点，每家公司用于训练的资源都少于100%，用于推理的资源也少于100%",
+   "audioFile": "audio-dario-exponential/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3267.284,
+   "end": 3304.895,
+   "text": "显然，你不能只提供现有模型而不继续训练新模型，否则会失去需求并落后于竞争对手。因此…… 某种平衡状态。不会是10%，也不会是90%。假设典型事实是50%。这就是我想表达的。我认为我们将处于一个位置。 这种平衡状态下，训练投入占比将低于整体利润率。 你们能够从计算资源中获得的毛利更高。 底层经济模型本身是盈利的。问题在于预测需求时存在巨大不确定性",
+   "audioFile": "audio-dario-exponential/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3305.345,
+   "end": 3318.028,
+   "text": "当你预购明年计算资源时，可能低估导致利润丰厚但无研究资源，或高估导致亏损却拥有全部研究资源。 这种情况下是否合理？",
+   "audioFile": "audio-dario-exponential/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3318.728,
+   "end": 3338.409,
+   "text": "这只是对行业动态的建模。我并非说两年后会出现天才国家从而值得投资计算资源。 你得出的结论很有道理，但因为你认为天才国家的出现仍需漫长过程。 我试图表达的是，你的世界观与认为这需要十年的人观点一致",
+   "audioFile": "audio-dario-exponential/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3339.109,
+   "end": 3367.207,
+   "text": "比如要等到能产生万亿美元价值的世界。 我的预测是到2030年前实现万亿美元营收是大概率事件。 我设想可能需要3年时间就能实现这一目标。 我认为到2028年，数据中心将真正拥有天才团队，这将是可能的终点。 到2028年，收入可能达到数百亿美元。 天才团队将加速增长至数千亿美元。",
+   "audioFile": "audio-dario-exponential/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3367.657,
+   "end": 3399.934,
+   "text": "我们正处于扩散过程的缓慢阶段，需要两年时间才能达到数千亿美元。 这将是直到2030年的世界。 我怀疑技术指数和扩散指数在2030年前就能达到。 Anthropic能盈利，因我们处于计算资源受限的世界，但最终会持续增加计算资源。不，我认为盈利方式。 让我们简化整个行业，想象成经济学教科书中的场景。 每家公司只能投入有限资金用于研发。",
+   "audioFile": "audio-dario-exponential/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3400.384,
+   "end": 3429.786,
+   "text": "由于推理效率高，这些边际成本的利润率非常高。 虽然存在竞争，但模型仍有差异化。 少数公司会竞相提高研发投入，但竞争者数量有限。 古诺均衡？我认为这就是少数企业均衡的情况。关键在于它不会达到完全竞争。 零边际利润的竞争。如果存在三家公司在经济中，它们都…… 若经济有三家企业，均非零利润",
+   "audioFile": "audio-dario-exponential/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3430.486,
+   "end": 3441.087,
+   "text": "独立理性行为不会趋于零。 帮我理解这一点，因为现在我们确实有三家领先的公司，它们并没有盈利。那是什么原因呢？",
+   "audioFile": "audio-dario-exponential/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3441.787,
+   "end": 3469.119,
+   "text": "是的，什么在改变？是的，目前毛利率非常积极。正在发生的是两件事的结合。 我们仍处于计算能力指数级扩展阶段。是的。这意味着我们正在训练一个模型，。 训练一个模型需要花费，比如说，去年训练一个模型花了十亿美元。然后。 今年它产生了40亿美元营收，但训练成本是10亿美元。",
+   "audioFile": "audio-dario-exponential/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3469.569,
+   "end": 3504.825,
+   "text": "用于推理的费用是10亿美元。我这里用的是简化数字，但毛利率会达到75%。 这25%是税。所以这个模型整体盈利20亿美元。但与此同时，。 我们正在花费100亿美元训练下一个模型，因为…… 存在指数级扩展。公司整体亏损，但每个模型本身盈利。 我所说的平衡状态是：数据中心里有天才国家，但模型训练规模已趋于平衡。 这种模型训练规模扩展可能仍在继续，我们仍在预测需求。",
+   "audioFile": "audio-dario-exponential/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3505.275,
+   "end": 3511.354,
+   "text": "当前世界中，你提到的每个模型作为独立公司盈利是正确的。",
+   "audioFile": "audio-dario-exponential/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3512.054,
+   "end": 3527.171,
+   "text": "前沿实验室的核心职能是训练下一代模型。 如果不这么做，仅能维持两个月盈利，之后利润会下降。 当前系统最多只能维持两个月盈利，之后利润会下降。 训练下一代模型的投入与当前模型相当。",
+   "audioFile": "audio-dario-exponential/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3527.871,
+   "end": 3551.778,
+   "text": "这种平衡依赖于经济中的资金限制。 经济中的劳动力总量是固定的。 这是人工智能将加速经济增长的又一例证。 计算机目前尚未达到这种增长速度。 每年增长3倍。我认为经济不可能每年增长300%。正如我在《有爱的机器》中提到的，我们可能只会看到...",
+   "audioFile": "audio-dario-exponential/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3552.228,
+   "end": 3571.165,
+   "text": "经济年增长率可能达到10%到20%，但不可能达到300%。因此我认为，如果计算能力成为经济产出的主要部分，它最终会被限制。 如果计算能力成为经济产出的主要部分，它最终会被限制。",
+   "audioFile": "audio-dario-exponential/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3571.865,
+   "end": 3592.707,
+   "text": "假设计算能力保持上限，那么前沿实验室盈利的世界是他们能持续快速进步的世界，因为本质上。 你的利润受限于替代方案的优劣。你之所以能盈利，是因为拥有前沿模型。如果没有前沿模型，你就无法盈利。 这种模型要求永远不存在稳定状态。",
+   "audioFile": "audio-dario-exponential/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3593.407,
+   "end": 3634.888,
+   "text": "你永远能取得更多算法进步。我认为这是真的。我觉得这就像经济学课堂上讨论的那样。 这就像经济学课堂，泰勒·科文的课程？我们一直在讨论经济学。 我们一直在讨论经济学。但存在一些世界，在这些世界中，我认为这个领域不会形成垄断。 我的律师从不希望我使用'垄断'这个词。但我不认为这个领域会形成垄断，但你会看到一些行业只有少数几家竞争者。 参与方数量，不是一家而是少数几家。通常像脸书或元宇宙这样的企业通过网络效应形成垄断。",
+   "audioFile": "audio-dario-exponential/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3635.338,
+   "end": 3662.639,
+   "text": "在这些行业中，通过网络效应，你会看到只有少数几家竞争者。 云计算领域玩家数量极少，进入门槛极高，对吧？ 云计算是这方面的典型案例，目前只有三到四家主要参与者。我认为AI领域也是如此。 门槛高，需专业和资本。 门槛高，需专业知识和资本投入。 运营云计算公司需要巨额资金，还需要具备大量专业技能。",
+   "audioFile": "audio-dario-exponential/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3663.089,
+   "end": 3695.433,
+   "text": "比如你对某人说，我想颠覆这个产业，我有1000亿美元。 比如你对某人说，我有1000亿美元。 你投入1000亿美元，同时还要证明你能做到这些事情，这样行业利润就会下降。 经济中经常出现这种均衡状态，少数企业占据市场，利润和利润率虽高但非天文数字。 云计算产品差异性很小，而AI模型之间的差异性远高于云计算。 与云服务不同，对吧？大家都知道Claude就是Claude。",
+   "audioFile": "audio-dario-exponential/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3695.883,
+   "end": 3737.331,
+   "text": "不同模型擅长不同领域，GPT和Gemini各有专长。 不仅Claude擅长编程，GPT在数学和推理上也表现突出，但情况比表面更微妙，模型差异更大。 它们擅长不同类型的编程，模型风格各异。我认为这些模型之间的差异其实相当大，因此预计会出现更多分化。 这种分化程度远超你在云计算中看到的。现在，实际上存在一个。 不过，有一个反论。这个反论认为，如果所有模型的生产过程都能由AI自行完成，那么这可能会在整个经济中扩散。",
+   "audioFile": "audio-dario-exponential/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3737.781,
+   "end": 3781.715,
+   "text": "但将AI模型商品化并非这个论点的结论。这更像是在说要一次性将整个经济商品化。 我不清楚在那个世界里会发生什么，那个世界里任何人都能做任何事，任何人都能建造任何东西，没有任何护城河。 也许我们正期待这样的世界。也许这就是最终状态。当AI模型能做所有事，且解决了所有安全和安保问题时，。 这可能是经济再次扁平化的机制之一。但这种说法更像是天才们在数据中心之后的未来。 安全与安全隐患，例如其中之一。 这可能涉及模型扩展的机制，但更像是天才们在数据中心之后的未来。",
+   "audioFile": "audio-dario-exponential/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3782.165,
+   "end": 3821.401,
+   "text": "经济再次扁平化，但这种说法更像是某种后……的。 这可能是经济再次扁平化的机制之一。但这种说法更像是天才们在数据中心之后的未来。 看起来AI研究特别依赖原始智力力量，这种力量在人工通用智能世界中将特别丰富。 其次，如果观察当今世界，几乎没有其他技术像AI算法进步一样快速扩散。 这表明该行业具有结构性扩散特征。 我认为编程发展迅速，但AI研究是编程的超集。 其中某些方面进展并不快。",
+   "audioFile": "audio-dario-exponential/0135.wav"
+  },
+  {
+   "id": 136,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3821.851,
+   "end": 3846.251,
+   "text": "但一旦掌握编程，一旦AI模型开始快速发展，AI的能力就会加速提升。 当AI模型开始构建下一代AI模型和所有其他事物时，整个经济将同步加速。 不过，我担心地理层面的不均衡。 我担心靠近AI、了解AI可能成为关键差异因素。",
+   "audioFile": "audio-dario-exponential/0136.wav"
+  },
+  {
+   "id": 137,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3846.701,
+   "end": 3882.373,
+   "text": "比如10%或20%的增长率，我的担忧是硅谷可能达到50%增长。 与硅谷有社会联系的地区可能比其他地方快不了多少。 这将导致非常失衡的世界。我经常思考如何避免这种情况。 随后，机器人领域的一个大问题是，人类可以学习如何远程操作现有硬件，但当前AI模型却无法做到这一点，至少无法高效地实现。 如果模型具备类似人类的学习能力，是否能立即解决机器人问题？",
+   "audioFile": "audio-dario-exponential/0137.wav"
+  },
+  {
+   "id": 138,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3882.823,
+   "end": 3925.631,
+   "text": "我不认为这必须依赖人类式的学习。它可能通过不同方式实现。例如，我们可以让模型在许多不同视频游戏中训练，。 这些游戏可能模拟机器人控制或多种机器人环境，或者让模型学习控制计算机屏幕并实现泛化。这终将实现。 这不一定依赖人类式学习。如果模型像人类一样思考：\"我拿起机器人，不知道如何使用，但能学会\"，这种情况也可能发生。 这可能源于我们发现了持续学习机制，也可能源于模型在多种环境中训练后实现泛化，或者通过上下文长度学习。",
+   "audioFile": "audio-dario-exponential/0138.wav"
+  },
+  {
+   "id": 139,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 3926.081,
+   "end": 3948.8,
+   "text": "无论哪种方式，回到我们一小时前讨论的内容，这类事情都可以通过多种途径实现。 但我想强调，无论模型通过何种方式获得这些能力，机器人领域都将被彻底革新。 机器人设计将因模型远超人类的能力而改变，同时机器人控制能力也将大幅提升。",
+   "audioFile": "audio-dario-exponential/0139.wav"
+  },
+  {
+   "id": 140,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3949.5,
+   "end": 3982.825,
+   "text": "我们在物理硬件构建和机器人制造方面将变得更好，控制技术也会同步进步。 这是否意味着机器人行业将产生数千亿美元营收？我的回答是肯定的，但。 这一变革将非常迅速但不会无限快。机器人领域将被革新，可能再需一到两年时间。 嗯，我的想法就是这样的。 对极快速度进展普遍持怀疑态度。我的观点是，无论通过何种方式，持续学习问题可能在几年内得到解决。",
+   "audioFile": "audio-dario-exponential/0140.wav"
+  },
+  {
+   "id": 141,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 3983.275,
+   "end": 4005.629,
+   "text": "几年前人们还没讨论持续学习，后来我们意识到：\"这些模型明明通过了图灵测试，又精通诸多领域，为何实用性却不足？\"。 我们解决这个问题后发现，人类智能还有另一项能力，这是当前模型无法实现的。 既然存在这种差异，为何不认为还会出现更多类似情况？我认为事实确实如此。",
+   "audioFile": "audio-dario-exponential/0141.wav"
+  },
+  {
+   "id": 142,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4006.329,
+   "end": 4037.963,
+   "text": "我们已经找到了人类智能的组成部分。 如我之前所说，持续学习可能根本不是障碍。通过预训练和强化学习的泛化能力或许就能解决。 我认为根本不存在这种问题。 事实上，机器学习历史上曾出现过许多被计算能力突破的所谓障碍。 人们曾讨论过模型如何区分名词和动词，如何理解语义而非仅统计关联。 模型能理解句法结构，却无法真正理解语义。",
+   "audioFile": "audio-dario-exponential/0142.wav"
+  },
+  {
+   "id": 143,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4038.413,
+   "end": 4077.951,
+   "text": "你可以理解一段文字，也能理解单个词语的含义。 推理能力曾被认为无法实现，但模型却在代码和数学上表现优异。我认为这些进展虽看似重大，但后续可能逐渐消退。 这些技术突破往往先被高估，随后又逐渐被证明并不如预期重要。但其中一些确实具有现实意义。 数据需求是真实存在的。持续学习可能也是真实存在的，但我觉得我们应该以代码为例作为基准。 我认为一两年内模型可能达到一个阶段，能够独立完成端到端的任务。这将涵盖人类活动的整个领域。",
+   "audioFile": "audio-dario-exponential/0143.wav"
+  },
+  {
+   "id": 144,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4078.401,
+   "end": 4084.365,
+   "text": "这是人类活动的一个完整领域，我们正说模型可以胜任。",
+   "audioFile": "audio-dario-exponential/0144.wav"
+  },
+  {
+   "id": 145,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4085.065,
+   "end": 4115.961,
+   "text": "您说的端到端是指设定技术方向、理解问题背景等吗？好的。 是的，我指的是所有这些。有趣的是，我觉得这可能是一个完整的体系，虽然内部自洽，但我不认为这是90%或100%的代码生成。 不是的，我重复太多次了。 这些最终都会被完成，但这是一个漫长的光谱。而我们现在正以极快的速度穿越这个光谱。 最终这些也会完成。但那是一个漫长的范围。但我们现在正迅速穿越这个范围。",
+   "audioFile": "audio-dario-exponential/0145.wav"
+  },
+  {
+   "id": 146,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4116.411,
+   "end": 4128.283,
+   "text": "这总让我忍俊不禁，因为您作为AI研究者已有十年，肯定会有种感觉：'哦，播客正在写一篇论文'。 每次采访我都会想，这感觉就像……",
+   "audioFile": "audio-dario-exponential/0146.wav"
+  },
+  {
+   "id": 147,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4128.983,
+   "end": 4152.115,
+   "text": "被问及此事。其实说到底，我们都在努力。 共同探索答案。确实有些方面我能看到他人看不到的。 这更多与我在安特罗皮克内部处理大量事务有关，而非重大研究见解。 而非凭借独特研究洞察。我管理着2500人公司。 如今做研究洞察比十年前困难得多",
+   "audioFile": "audio-dario-exponential/0147.wav"
+  },
+  {
+   "id": 148,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4152.815,
+   "end": 4166.657,
+   "text": "当远程全职替代成为现实时。 API定价模式是否仍是最佳选择？如果不是，如何正确定价或提供AGI？>> 是的，我认为会出现多种不同的商业模式",
+   "audioFile": "audio-dario-exponential/0148.wav"
+  },
+  {
+   "id": 149,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4167.357,
+   "end": 4181.892,
+   "text": "我认为会出现多种商业模式并行探索。 模型比人们想象的更具韧性。我认为可以这样理解：如果。 若技术呈指数级发展则会持续产生新场景。 任何产品界面都面临过时风险",
+   "audioFile": "audio-dario-exponential/0149.wav"
+  },
+  {
+   "id": 150,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4182.342,
+   "end": 4207.833,
+   "text": "聊天机器人已能胜任当前模型能力范围。 虽然让AI更智能对普通消费者帮助有限，但我不认为这是AI本身的局限性。 我认为这并不能说明模型已经足够成熟，或者模型进步对经济没有影响。 对于产品来说，接口的价值在于始终能提供接近底层的最新技术",
+   "audioFile": "audio-dario-exponential/0150.wav"
+  },
+  {
+   "id": 151,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4208.283,
+   "end": 4232.787,
+   "text": "因此总会不断涌现新创业公司和新想法，这些几个月前还无法实现。 而如今因为模型进步，这些想法正在成为可能。 我预测未来各种模型将共存，但应用编程接口模式会始终存在。 因为总需要不同的人以不同方式尝试模型，其中一百个可能成为创业公司。",
+   "audioFile": "audio-dario-exponential/0151.wav"
+  },
+  {
+   "id": 152,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4233.237,
+   "end": 4259.891,
+   "text": "十家可能发展成成功企业，两到三家最终会成为主流应用模式。 所以我认为生成过程会持续存在，同时也会有其他模式出现。 模型也是如此。并非每个模型输出的标记都具有相同价值。想想看，这些标记到底有什么价值？ 虽然这个建议对用户是新信息，但模型可能已输出过一千万次。",
+   "audioFile": "audio-dario-exponential/0152.wav"
+  },
+  {
+   "id": 153,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4260.341,
+   "end": 4288.488,
+   "text": "重启它，对吧？虽然有人之前没听过这个，但模型已经重复说了1000万次，这可能只值几分钱。 可能是几美元或几美分。而如果模型去到某家制药公司，它可能会说。 \"你们正在研发的分子，应该把芳香环从这一端移到另一端。如果这么做，会产生非常好的效果。\"。 这些操作可能价值数千万美元。比如那些令牌就能带来巨大收益。",
+   "audioFile": "audio-dario-exponential/0153.wav"
+  },
+  {
+   "id": 154,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4288.938,
+   "end": 4312.497,
+   "text": "我认为未来会出现认可这种价值的商业模式，比如按结果付费或按小时支付劳动报酬。 由于这是新兴产业，很多尝试都会发生，但最终会形成怎样的商业模式还不清楚。 这个领域，我认为由于是新兴行业，很多尝试都会发生，但我不确定最终会成功的是什么",
+   "audioFile": "audio-dario-exponential/0154.wav"
+  },
+  {
+   "id": 155,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4313.197,
+   "end": 4337.535,
+   "text": "正确做法。我认同你的观点，人们需尝试找到最佳使用方式，但我觉得。 Claude Code令人瞩目。因此，我认为在初创公司历史上，从未有单一应用达到这样的程度。 在代码代理领域激烈竞争。Claude Code 是该领域的领先者。这似乎。 实际上过程很简单，我们原本就拥有擅长编码的模型。",
+   "audioFile": "audio-dario-exponential/0155.wav"
+  },
+  {
+   "id": 156,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4337.985,
+   "end": 4346.891,
+   "text": "除底层模型外，还有一个应用。其实发生得相当简单，就是我们团队拥有自己的。 我们有编码模型，它们擅长编程",
+   "audioFile": "audio-dario-exponential/0156.wav"
+  },
+  {
+   "id": 157,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4347.591,
+   "end": 4381.292,
+   "text": "2025年初，我曾表示：‘我认为现在是时候实现自身研究的实质性加速了。’。 如果你是一家AI公司，使用这些模型时，当然需要接口，需要一种工具来操作它们。 我并未强制要求必须使用某项功能，只是建议大家进行实验。 这款工具最初名为Claude命令行界面，后改称Claude代码，为团队常用工具。 我观察到其在公司内部迅速普及，认为应该对外发布。",
+   "audioFile": "audio-dario-exponential/0157.wav"
+  },
+  {
+   "id": 158,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4381.742,
+   "end": 4403.575,
+   "text": "我们有数百人组成的团队，某种程度上代表了外部用户群体。 我们已具备产品市场契合度，决定正式推出该工具。 我们自身参与模型开发，清楚最需要的功能，形成正向反馈循环。 比如，开发者提出改进需求，我们将其纳入下个版本迭代。",
+   "audioFile": "audio-dario-exponential/0158.wav"
+  },
+  {
+   "id": 159,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4404.025,
+   "end": 4430.555,
+   "text": "这是其中一种方式，但还有常规的产品迭代过程。 早期我们依靠内部数百名开发者每日使用获得反馈。 如今数百万用户使用后，我们也能获取大量外部反馈。 我们选择推出编码模型而非制药公司，原因在于内部反馈机制的快速迭代。 我的背景是生物学，但启动制药公司需要的资源我们并不具备。",
+   "audioFile": "audio-dario-exponential/0159.wav"
+  },
+  {
+   "id": 160,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4431.255,
+   "end": 4463.954,
+   "text": "开放爪引发热议，我打算本周末试用。 我申请了Mercury借记卡，设了数百美元额度，让系统自行决定消费。目前该卡仅能使用Mercury账户资金，且与其它账户完全隔离，这让我感到。 通过Mercury权限管理，我设定了消费限额和购买类别限制。 借记卡功能正常，于是让Open Claw进行测试交易并捐赠几美元给维基百科。除此之外，我还不清楚接下来会发生什么，下一期将汇报进展。",
+   "audioFile": "audio-dario-exponential/0160.wav"
+  },
+  {
+   "id": 161,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4464.404,
+   "end": 4495.459,
+   "text": "如需个性化的金融服务，请访问该网站。 Mercury是金融科技公司，非联邦存款保险公司保险银行。金融服务由Choice金融集团提供。 她以为我们在喝咖啡散步。>>[笑声]。 我们正在讨论如何让AI顺利发展。 任何关于AI发展的愿景都必须兼容两个要素：一是AI构建能力的快速扩散，二是...。 符合两点：一是构建和运行AI的能力正迅速扩散；二是……",
+   "audioFile": "audio-dario-exponential/0161.wav"
+  },
+  {
+   "id": 162,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4495.909,
+   "end": 4518.687,
+   "text": "AI群体的数量以及我们拥有的智能水平也将迅速增长。 这意味着许多人将能够构建大量未对齐的AI或目标混乱的AI。 这些AI如同试图扩大影响力或表现出异常行为的公司，但如今已超越人类水平。 在存在大量未对齐AI且彼此共存的世界中，我们如何建立兼容的平衡状态？",
+   "audioFile": "audio-dario-exponential/0162.wav"
+  },
+  {
+   "id": 163,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4519.387,
+   "end": 4545.96,
+   "text": "在技术青春期，我曾对权力平衡持怀疑态度。 我特别质疑的是，三四个公司都在构建源自相同基础的模型。 这些模型彼此之间可能形成某种制衡。 但事实上，任何数量的模型之间都难以形成有效制衡。 我们可能生活在一个由进攻主导的世界，单个AI就能造成全局性破坏。",
+   "audioFile": "audio-dario-exponential/0163.wav"
+  },
+  {
+   "id": 164,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4546.41,
+   "end": 4577.371,
+   "text": "短期内玩家数量有限，我们可以先在有限参与者中建立安全机制。 必须确保所有参与者都进行对齐工作，配备生物分类器等防护措施。 我同意这些措施无法从根本上解决问题，但这是当务之急。 特别是如果AI模型能够自主生成其他AI模型，那么整个系统可能会变得难以控制。 这将使问题更难解决。我认为从长远来看，我们需要某种治理架构，对吧？某种治理架构",
+   "audioFile": "audio-dario-exponential/0164.wav"
+  },
+  {
+   "id": 165,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4577.821,
+   "end": 4604.118,
+   "text": "既能保障人类自由，又能让我们管理大量的人类系统和AI系统。 包括混合型人类-人工智能系统，比如公司或经济单位这类组织。 我们需要思考如何保护世界免受生物恐怖主义和镜像生命等威胁。 如何保护世界免受类似镜像生命的威胁？ 我们可能需要某种AI监控系统，用于监测所有这些潜在威胁。",
+   "audioFile": "audio-dario-exponential/0165.wav"
+  },
+  {
+   "id": 166,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4604.568,
+   "end": 4630.003,
+   "text": "但必须以保障公民自由和宪法权利的方式构建该系统。 这就像任何其他安全领域一样，将形成新的安全格局。 需要新的工具，也会带来新的脆弱性。我的担忧是。 如果这个过程有100年时间缓慢发生，我们可能更容易适应。 就像社会已经适应了爆炸物和新型武器的存在一样。",
+   "audioFile": "audio-dario-exponential/0166.wav"
+  },
+  {
+   "id": 167,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4630.453,
+   "end": 4645.342,
+   "text": "视频摄像头的存在。我们可能需要一百多年才能适应，并建立治理机制。我们会犯错。我的担忧是。 这种变化发生得太快。因此，我认为我们需要更快地思考如何让这些治理机制发挥作用。",
+   "audioFile": "audio-dario-exponential/0167.wav"
+  },
+  {
+   "id": 168,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4646.042,
+   "end": 4677.169,
+   "text": "在以进攻为主导的世界里，未来一个世纪内，AI可能在5到10年内完成本应耗时一个世纪的进展。 即便人类是唯一参与者，仍需要同样的机制来维持权力平衡，否则问题依然难以解决。 我们有AI的建议。如果根本上这不是一个完全不同的游戏，那么制约机制对人类有效，对AI也应有效。 如果这些机制无法运作，对AI同样无效。也许人类的制约机制本身也注定失败。",
+   "audioFile": "audio-dario-exponential/0168.wav"
+  },
+  {
+   "id": 169,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4677.619,
+   "end": 4710.388,
+   "text": "我认为有办法实现。比如世界各国政府可能需要合作，共同制定相关规则。 我们需要与AI沟通，构建社会结构，使这些防御机制成为可能。 这需要极高的技术能力，可能在短时间内发生，我们难以提前预见。 谈到政府介入，12月26日田纳西州立法机构提出一项法案，规定。 明知故犯地训练AI提供情感支持，包括通过开放式对话与用户交流属于违法行为。",
+   "audioFile": "audio-dario-exponential/0169.wav"
+  },
+  {
+   "id": 170,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4710.838,
+   "end": 4735.875,
+   "text": "Claude试图成为用户的开放式对话伙伴。 一个深思熟虑、知识渊博的朋友。并且在。 总体而言，各州法律将碎片化，普通人将无法享受AI带来的诸多好处，尤其是你提到的《仁慈机器》、生物自由和心理健康改善等领域。 似乎很容易想象出这样的世界：这些领域因不同法律的限制而被削弱。然而",
+   "audioFile": "audio-dario-exponential/0170.wav"
+  },
+  {
+   "id": 171,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4736.325,
+   "end": 4746.379,
+   "text": "这类法案似乎未解决你担忧的存在性威胁。因此，我想了解在这样的背景下，你们公司对联邦暂停各州AI立法的立场。",
+   "audioFile": "audio-dario-exponential/0171.wav"
+  },
+  {
+   "id": 172,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4747.079,
+   "end": 4789.608,
+   "text": "反对联邦暂停各州AI立法的立场。是的。说实话，我不清楚。 目前有太多因素在同时发生。我认为这项法律很愚蠢。很明显，它是由那些对AI模型能力了解甚少的立法者制定的。 他们觉得AI模型作为某种存在听起来很可怕。我不希望看到这种情况发生。所以，。 我们并不支持这种做法。但被讨论的并不是这个。被讨论的是：。 我们将在10年内禁止各州对AI进行任何监管，却没有明确的联邦监管计划。 要实现联邦监管需要国会通过立法，而这是个极高难度的门槛。",
+   "audioFile": "audio-dario-exponential/0172.wav"
+  },
+  {
+   "id": 173,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4790.058,
+   "end": 4821.268,
+   "text": "因此，禁止各州10年内的任何行动，同时声称有联邦监管计划，但实际上。 没有任何具体提案被提上议程。没有任何实质性的尝试。正如我在《技术青春期的危险》中所指出的。 比如生物武器、生物恐怖主义、自主性风险以及我们讨论的时间线问题。 十年时间堪称永恒。我认为这是个疯狂的决定。 如果必须在两者间抉择，我们宁愿放弃暂停协议。我认为这种立场的收益大于成本。",
+   "audioFile": "audio-dario-exponential/0173.wav"
+  },
+  {
+   "id": 174,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4821.718,
+   "end": 4849.452,
+   "text": "但若必须做出这个选择，我认为联邦政府应介入制定统一标准。 不应禁止各州立法，但需明确各州不得偏离联邦标准。 联邦政府设定统一标准适用于所有州，各州不得另行制定差异政策。 但若联邦政府不作为，同时禁止各州行动，这种做法显然不合理。 这种双重不作为的政策已显现出弊端。",
+   "audioFile": "audio-dario-exponential/0174.wav"
+  },
+  {
+   "id": 175,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4849.902,
+   "end": 4864.812,
+   "text": "我们应从透明度标准入手，监控自主性风险和生物恐怖主义风险。 随着风险证据增加，可采取更有针对性的措施。 例如通过立法强制要求使用分类器。 具体措施取决于威胁严重程度。",
+   "audioFile": "audio-dario-exponential/0175.wav"
+  },
+  {
+   "id": 176,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4865.262,
+   "end": 4892.473,
+   "text": "我们无法确定。因此我们需要以诚实的方式推进，事先说明风险尚未出现。但我也能想象到。 按照目前的进展速度，今年晚些时候我们可能会说：\"生物恐怖主义问题确实很严重\"。 我们应该采取行动，将其纳入联邦标准。如果联邦政府不作为，就应制定州级标准\"。这种情形我完全能想象",
+   "audioFile": "audio-dario-exponential/0176.wav"
+  },
+  {
+   "id": 177,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4893.173,
+   "end": 4921.573,
+   "text": "如果只考虑技术进步速度与立法周期的关系，您预期的进展速度。 由于扩散滞后效应，这些好处出现得足够缓慢，我认为当前路径下的碎片化法规。 这种州法律拼凑体系可能会禁止人们拥有情感聊天机器人朋友。 想象一下AI在健康寿命和心理健康等领域带来的实际好处。 而您却认为危险已近在眼前，我却看不到这种紧迫性",
+   "audioFile": "audio-dario-exponential/0177.wav"
+  },
+  {
+   "id": 178,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4922.273,
+   "end": 4949.357,
+   "text": "似乎对AI危害的担忧远不如其潜在收益重要，这让我难以理解成本效益比。 人们常提到有数千项州法律，但绝大多数根本不会通过。 法律通过不等于有效执行，实施者可能觉得这些规定荒谬可笑。 这意味着关闭所有已建成设施，包括田纳西州所有已建成设施。法律往往被解释为……",
+   "audioFile": "audio-dario-exponential/0178.wav"
+  },
+  {
+   "id": 179,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4949.807,
+   "end": 4961.475,
+   "text": "一种让它们不那么危险或有害的方式，站在同一边。当然，如果你为了阻止坏事而立法，你也会有这个问题。",
+   "audioFile": "audio-dario-exponential/0179.wav"
+  },
+  {
+   "id": 180,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 4962.175,
+   "end": 4976.864,
+   "text": "你也会遇到同样的问题。我的基本观点是，如果我们能决定哪些法律被通过以及事情如何处理，我们只是其中的一个小输入，我会取消很多关于健康益处的监管。 我会取消很多关于健康益处的监管。",
+   "audioFile": "audio-dario-exponential/0180.wav"
+  },
+  {
+   "id": 181,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4977.564,
+   "end": 4996.912,
+   "text": "大幅加速我们发现药物的速度。 药物研发流程会被堵塞。 流程将无法处理所有涌入的内容。 监管流程应更偏向于我们即将迎来的大量安全且疗效明确的药物。 这将是一件美妙的事情，非常清晰明确且极具效果。",
+   "audioFile": "audio-dario-exponential/0181.wav"
+  },
+  {
+   "id": 182,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 4997.362,
+   "end": 5025.381,
+   "text": "也许我们不需要这么多复杂的结构，这些结构原本是为那些效果有限且副作用严重的药物设计的。 但与此同时，我认为我们需要大幅加强安全与安保立法。 以透明度为起点，试图在不阻碍行业发展的同时找到平衡点。 有人批评我的文章对此过于担忧。 他说：‘这样太慢了。若这么做，AI的危险会来得太早。’",
+   "audioFile": "audio-dario-exponential/0182.wav"
+  },
+  {
+   "id": 183,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5025.831,
+   "end": 5070.86,
+   "text": "基本上，我认为过去六个月以及接下来的几个月将聚焦于透明度。如果这些风险在那时出现的话…… 我们对这些风险更加确定，我认为这可能在明年年底前实现，因此需在相关领域迅速行动。 实际上已经看到风险。我认为唯一可行的方式是保持灵活。但立法程序通常不够灵活，我们必须要…… 必须向所有相关人员强调这一紧迫性。这就是我发送这封信的原因。 这就是我撰写《技术的青春期》的原因。我。 希望政策制定者阅读它。我希望经济学家阅读它。我想要国家安全专业人士阅读它。你知道，我希望决策者……",
+   "audioFile": "audio-dario-exponential/0183.wav"
+  },
+  {
+   "id": 184,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5071.31,
+   "end": 5076.179,
+   "text": "阅读它，让他们有机会比原本更快采取行动。",
+   "audioFile": "audio-dario-exponential/0184.wav"
+  },
+  {
+   "id": 185,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5076.879,
+   "end": 5082.38,
+   "text": "有没有什么你可以做或倡导的事情，让AI的好处更加确定？",
+   "audioFile": "audio-dario-exponential/0185.wav"
+  },
+  {
+   "id": 186,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5083.08,
+   "end": 5123.199,
+   "text": "AI的好处能够更好地实现？我觉得你曾与立法机构合作，比如，我们在这里将防止生物恐怖主义。我们将…… 提高透明度。我们将加强举报人保护。但我觉得，默认情况下，我们期待的这些事情似乎很容易实现。它们似乎非常…… 容易受到各种道德恐慌或政治经济问题的影响。 在发达国家，我并不完全同意这一观点。我认为在发达国家，市场运作相对良好。 当某个领域存在巨大利润且显然是最佳选择时，监管体系很难阻止相关发展",
+   "audioFile": "audio-dario-exponential/0186.wav"
+  },
+  {
+   "id": 187,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5123.649,
+   "end": 5148.614,
+   "text": "我们自身在AI领域就面临这种情况，比如我一直在推动限制向中国出口芯片的措施。 这符合美国国家安全利益，几乎得到国会两党所有人的政策共识。 但事实非常明确，反对这些措施的论点我只能称之为可疑。 尽管存在这些论点，我们仍持续向中国出口芯片，因为其中涉及巨额利益",
+   "audioFile": "audio-dario-exponential/0187.wav"
+  },
+  {
+   "id": 188,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5149.064,
+   "end": 5175.984,
+   "text": "这些利益驱动着资本运作，我认为这种资本逐利行为是负面的。 但这种现象在正面案例中同样存在，比如药品研发领域。 关于技术带来的好处。 我并不担心发达国家会因监管过严而阻碍这些好处的实现，反而担心进展过于缓慢。 我认为应加快FDA审批流程，反对这些限制性法案",
+   "audioFile": "audio-dario-exponential/0188.wav"
+  },
+  {
+   "id": 189,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5176.434,
+   "end": 5204.488,
+   "text": "虽然单看每项法案都显得愚蠢，但更严重的问题在于整体监管趋势。 担忧主要集中在发展中国家，这些地区市场不完善，难以利用现有技术进行建设。 更担心这些人群会被落下。即使治愈方案已开发，可能仍有农村密西西比州的居民无法获得。 这是发展中国家问题的缩影。我们与慈善机构合作，向发展中国家提供医疗干预。",
+   "audioFile": "audio-dario-exponential/0189.wav"
+  },
+  {
+   "id": 190,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5204.938,
+   "end": 5234.893,
+   "text": "我们与医疗人员合作，向撒哈拉以南非洲、印度、拉美等地区输送医疗资源。 这些事不会自动发生。你提到出口管制，为什么中美不能各自拥有顶尖人才数据中心？ 世界上的事情。我认为这不会自然而然发生。 提到出口管制。为何美国和中国不能都拥有国家。 核威慑维持稳定，但若AI对抗结果不确定，可能引发不稳定。",
+   "audioFile": "audio-dario-exponential/0190.wav"
+  },
+  {
+   "id": 191,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5235.343,
+   "end": 5274.58,
+   "text": "这种情况确实会发生，我们可能会遇到一些进攻主导的情况，甚至类似核的局势。 武器，但更危险，对吧？某种程度上，双方都可能轻易…… 摧毁一切。我们可能生活在一个不稳定的世界，比如核平衡是稳定的，对吧？因为…… 这就像威慑力。假设对两个AI交战后哪一方会获胜存在不确定性，这可能导致不稳定，对吧？ 双方对获胜概率评估不同时容易冲突。若一方认为自己有90%胜算，另一方也认为自己有90%胜算，冲突可能性会大幅增加。",
+   "audioFile": "audio-dario-exponential/0191.wav"
+  },
+  {
+   "id": 192,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5275.03,
+   "end": 5298.768,
+   "text": "双方不可能同时正确，但都可能这么认为。 这构成反对AI技术扩散的普遍论点。 另一个担忧是政府可能用AI压迫民众。 我担心某些国家已开始建立高科技威权体制。 这种体制已某种程度上存在。 政府正在构建高科技威权国家。需要明确这是针对政府而非民众。",
+   "audioFile": "audio-dario-exponential/0192.wav"
+  },
+  {
+   "id": 193,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5299.218,
+   "end": 5326.646,
+   "text": "应让全球民众普遍受益。我的担忧集中在政府层面。 我担心世界分裂为两部分。 其中一部分可能形成难以推翻的极权体制。 政府最终会获得强大AI，存在威权主义风险。 政府最终会获得强大AI，存在不良均衡状态风险。 但初始条件至关重要，对吧？总有一天我们需要制定规则。我并不是说",
+   "audioFile": "audio-dario-exponential/0193.wav"
+  },
+  {
+   "id": 194,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5327.096,
+   "end": 5362.511,
+   "text": "某个国家，比如美国或民主国家联盟，我认为后者可能是更好的选择，尽管需要比目前更多的国际合作。 来制定这些规则。但我不认为民主国家联盟或某个国家应该单方面宣布这些规则。 这需要一些谈判，对吧？世界必须面对这个问题。我希望全球民主国家中那些政府更贴近人文价值的国家。 在制定道路规则时能掌握更多主动权。因此，我非常关注这个初始条件。我。 担心的是，当规则制定时，这些国家将拥有更大的影响力。我",
+   "audioFile": "audio-dario-exponential/0194.wav"
+  },
+  {
+   "id": 195,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5363.211,
+   "end": 5396.999,
+   "text": "刚刚重听了三年前的一次采访，其中一些问题现在显得不太恰当，因为我当时假设未来两三年会出现某个关键转折点。 但实际上，随着时间推移，进展似乎持续进行，AI不断改进，应用领域越来越广泛，人们使用AI的方式也越来越多。 你似乎在设想一个未来世界，各国齐聚一堂，这里是有道路规则，这里是你拥有的优势，这里是我拥有的优势。 当前发展轨迹下，各国将拥有更多AI。部分由专制国家使用，其内部或由私营机构主导。",
+   "audioFile": "audio-dario-exponential/0195.wav"
+  },
+  {
+   "id": 196,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5397.699,
+   "end": 5425.343,
+   "text": "很难预测谁会从中获益更多。互联网似乎意外地让独裁国家获得了更多优势，AI可能恰恰相反。 所以我想更清楚地了解你设想的这个场景。 我认为底层技术的指数级发展会持续下去，模型会越来越智能。 即使数据中心汇聚了天才，模型仍可变得更聪明，但需面对边际效益递减的问题",
+   "audioFile": "audio-dario-exponential/0196.wav"
+  },
+  {
+   "id": 197,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5425.793,
+   "end": 5453.096,
+   "text": "当人类生物学已被破解，或能解决更抽象的数学难题时，进步的意义会发生变化。 但撇开这些不谈，我认为指数级发展会继续，只是不同主体会分阶段触及关键节点。 比如核威慑技术曾长期处于初级阶段，AI领域也可能出现类似的技术拐点。 我们曾理所当然认为技术不会达到失控程度，但这种确定性正在消失",
+   "audioFile": "audio-dario-exponential/0197.wav"
+  },
+  {
+   "id": 198,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5453.546,
+   "end": 5480.612,
+   "text": "当网络攻击实现全面透明，除非对方有同等防御能力，否则优势将难以撼动。 我认为会出现关键转折点，某个国家或联盟率先获得重大安全优势。 这种优势可能在某个时间窗口内存在，直到其他力量达到同等水平。 等效防御。因此，我不确定是否存在单一的关键转折点，但认为会出现某种关键",
+   "audioFile": "audio-dario-exponential/0198.wav"
+  },
+  {
+   "id": 199,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5481.062,
+   "end": 5508.445,
+   "text": "关键的少数时刻或某个关键窗口期，人工智能在此期间能带来重大影响。 从国家安全角度看，某国或联盟率先取得优势。 我并不是主张现在我们就完全掌控一切。你明白吗？另一方始终在追赶。有些极端行动是不能采取的。 但一旦发生这种情况，我认为人们会意识到世界已经改变，随之将出现某种隐性的谈判。",
+   "audioFile": "audio-dario-exponential/0199.wav"
+  },
+  {
+   "id": 200,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5508.895,
+   "end": 5521.752,
+   "text": "这种谈判将涉及人工智能时代后的世界秩序究竟应该是什么样子。 我关注的是让这种谈判中古典自由民主制度占据主导地位。",
+   "audioFile": "audio-dario-exponential/0200.wav"
+  },
+  {
+   "id": 201,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5522.452,
+   "end": 5550.267,
+   "text": "我不太明白你文章中说的'在强人工智能时代，专制政体是人们无法接受的政府形式'具体含义。 需要理解这句话更准确的含义，因为你在文章中引用了‘专制政体根本不是人们在后AGI时代能够接受的政府形式’。 AI时代，要求严苛。 这似乎意味着领先实验室或领先国家将决定世界治理方式。 并能确定哪些政府形式被允许、哪些不被允许。",
+   "audioFile": "audio-dario-exponential/0201.wav"
+  },
+  {
+   "id": 202,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5550.967,
+   "end": 5584.801,
+   "text": "当我相信这段话时，我确信这种观点。 应有权决定世界如何治理及政府形式。 允许的和不允许的。是的，我认为那段话是允许的。 我之前提到过，可以进一步说X。但我不一定支持这种观点。 我并不支持这种观点。我之前说的是，首先，我更倾向于一种较弱的观点，即我们必须非常担心独裁者。 我们应该尝试监督并限制他们的权力，比如可以进一步采取干预措施。 更激进的干预主义观点认为，比如。",
+   "audioFile": "audio-dario-exponential/0202.wav"
+  },
+  {
+   "id": 203,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5585.251,
+   "end": 5620.909,
+   "text": "人工智能让威权国家陷入这种自我实现的恶性循环，很难扭转。因此我们需要从一开始就彻底清除它们。 这种观点恰好存在你提到的问题，即如果我们承诺推翻所有威权国家。 他们现在就会采取一系列可能导致不稳定的行动。因此这可能并不现实。 但我要强调的是，我认为今天西方世界普遍认同民主优于威权主义。 但若一个国家是威权主义，我们不会像面对种族灭绝时那样做出反应。",
+   "audioFile": "audio-dario-exponential/0203.wav"
+  },
+  {
+   "id": 204,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5621.359,
+   "end": 5642.932,
+   "text": "比威权主义更糟。但并非国家若为威权主义，就对种族灭绝无动于衷。 它将成为更严重的问题。我们必须决定如何应对。 干预主义观点是其中一种可能。我正在探讨此类方案。 观点可能最终是正确的，但可能过于极端。不过，我仍然抱有希望。",
+   "audioFile": "audio-dario-exponential/0204.wav"
+  },
+  {
+   "id": 205,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5643.382,
+   "end": 5663.432,
+   "text": "我看到的希望之一是，新技术的出现往往会让旧的政府形式变得过时。 我在技术青春期曾提到过这一点，当时我说，封建制度基本上就是一种政府形式。 当工业革命出现后，封建制度就不再可持续，不再有存在的意义。",
+   "audioFile": "audio-dario-exponential/0205.wav"
+  },
+  {
+   "id": 206,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5664.132,
+   "end": 5669.951,
+   "text": "为什么这是希望？这难道不意味着民主制度将不再具有竞争力吗？",
+   "audioFile": "audio-dario-exponential/0206.wav"
+  },
+  {
+   "id": 207,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5670.651,
+   "end": 5691.752,
+   "text": "确实可能如此。但事实上，威权主义的问题会更加严重。 我只觉得这可能预示着威权主义将面临更多问题。 换句话说，当威权主义变得更糟时，人们会更加害怕它，会更努力去阻止它。 这需要从整体平衡的角度去思考。我只想知道，",
+   "audioFile": "audio-dario-exponential/0207.wav"
+  },
+  {
+   "id": 208,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5692.202,
+   "end": 5719.634,
+   "text": "这是否能激发人们用新技术思考如何保护自由的新方式。 更乐观地说，这是否能促使人们达成共识，更深刻地认识到某些个体权利的重要性。 更深刻地认识到我们真的无法放弃这些权利，我们已经看到没有其他办法可以实现这一点。 能真正落地的解决方案。说实话，我其实很乐观，尽管这听起来可能过于理想主义",
+   "audioFile": "audio-dario-exponential/0208.wav"
+  },
+  {
+   "id": 209,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5720.084,
+   "end": 5735.228,
+   "text": "或许可以这样表述：这听起来过于理想主义，但我确实相信，独裁政权终将因道德上的不可持续而被淘汰。 它们会成为道德上无法运作的政府形式。这种制度引发的危机足以迫使我们",
+   "audioFile": "audio-dario-exponential/0209.wav"
+  },
+  {
+   "id": 210,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5735.928,
+   "end": 5778.51,
+   "text": "寻找其他出路。说实话，这里确实存在一个棘手的问题，我还不确定该如何解决。历史上，我们不得不在某个立场上做出抉择。 上世纪70-80年代，我们决定：尽管中国是威权体制，仍要与其接触。回顾来看，这个决定是正确的。 因为该体制虽然威权，但使十亿人口变得比原本更富裕、更幸福。很难说它会自动放弃威权体制。 只需看看朝鲜的例子就知道了。你是否需要极高智慧才能维持威权体制的权力集中？ 设想一个拥有远超他国水平AI的朝鲜，即便技术落后于他人，仍足以维持统治",
+   "audioFile": "audio-dario-exponential/0210.wav"
+  },
+  {
+   "id": 211,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5778.96,
+   "end": 5815.071,
+   "text": "总体而言，我们是否应秉持这样的态度：AI带来的医疗、健康等普惠性提升将非常显著。 历史上我们始终认为，技术红利应广泛传播，即使对象是威权国家。 但AI时代如何权衡是个难题。不过历史上我们始终认为，技术扩散是零和博弈中值得做的事。 这是一个正和世界，技术扩散仍然值得推进。 我们有多种选择。我认为将其视为政府间的决策方式。 从国家安全角度看，这是一方面，但还有其他视角",
+   "audioFile": "audio-dario-exponential/0211.wav"
+  },
+  {
+   "id": 212,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5815.521,
+   "end": 5820.875,
+   "text": "例如，我们可以设想一个世界，我们研发出各种疾病治愈方法",
+   "audioFile": "audio-dario-exponential/0212.wav"
+  },
+  {
+   "id": 213,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5821.575,
+   "end": 5830.174,
+   "text": "比如这些疾病治愈方案可以卖给威权国家，但数据中心不行。数据中心的芯片也不行",
+   "audioFile": "audio-dario-exponential/0213.wav"
+  },
+  {
+   "id": 214,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5830.874,
+   "end": 5832.658,
+   "text": "还有AI行业本身",
+   "audioFile": "audio-dario-exponential/0214.wav"
+  },
+  {
+   "id": 215,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5833.358,
+   "end": 5859.989,
+   "text": "另一种可能性是，我们是否能通过AI技术发展或构建AI技术来实现某些突破。 是否能创造一种平衡，使威权国家难以阻止民众使用技术带来的私人利益。 是否存在某种平衡，让威权国家的每个人都能拥有自己的AI模型。 这些模型能抵御监控，而威权国家无法在不失去权力的情况下压制这种现象",
+   "audioFile": "audio-dario-exponential/0215.wav"
+  },
+  {
+   "id": 216,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5860.439,
+   "end": 5888.566,
+   "text": "如果这种平衡足够彻底，可能会导致威权国家内部瓦解。 也许存在中间状态，让威权者在维持权力时无法阻止技术的个体化使用。 但说实话，我对这种前景抱有期待。 更激进的观点是，这项技术本身是否具有某些特性，或者通过某种方式构建它时，可能会产生某些特性。 我们最初希望，社交媒体和互联网能瓦解专制结构，但事实并非如此",
+   "audioFile": "audio-dario-exponential/0216.wav"
+  },
+  {
+   "id": 217,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5889.016,
+   "end": 5918.357,
+   "text": "我们最初认为，奥巴马政府时期社交媒体和互联网具有这种特性，但结果并非如此。 但如果我们带着对可能出错之处的认知，用不同技术再试一次，也许会有不同结果。 虽然不确定是否能成功，但值得一试。我认为这非常难以预测。 我们需要先认识到问题，然后想出10种可以尝试的方法，再评估哪些有效。 如果旧方法无效，就要尝试新方法",
+   "audioFile": "audio-dario-exponential/0217.wav"
+  },
+  {
+   "id": 218,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 5919.057,
+   "end": 5935.941,
+   "text": "今天我们不会出售数据中心或芯片制造能力，特别是中国芯片制造能力。 这确实会带来一些好处，既有利于中国经济，也有利于美国经济。 我们可以分工合作，中国专注数据中心，美国专注其他领域",
+   "audioFile": "audio-dario-exponential/0218.wav"
+  },
+  {
+   "id": 219,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5936.641,
+   "end": 5964.913,
+   "text": "这种双赢局面值得用来增强该国实力。 我们即将进入一个经济增长和价值创造变得非常容易的时代。 能够构建这些强大AI模型，增长和经济价值将轻易实现。难以实现的是利益分配。 财富分配、政治自由，这些才是难以实现的目标。因此在制定政策时，我认为。 技术和市场将迅速带来根本性收益，快到我们难以及时获取。",
+   "audioFile": "audio-dario-exponential/0219.wav"
+  },
+  {
+   "id": 220,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 5965.363,
+   "end": 6002.992,
+   "text": "关于分配和政治自由的这些问题才是关键，政策应聚焦于此。 谈到分配，正如你所说，许多发展中国家的追赶式增长表现未达预期。 但当追赶增长发生时，根本原因在于他们存在未充分利用的劳动力。 我们可以将发达国家的资本和技术带到这些国家，从而实现快速增长。 当劳动力不再是限制因素时，这种机制将失效。那么希望是否应依赖于。 那些因AI迅速致富的人或国家的慈善捐赠？这种希望又是什么？",
+   "audioFile": "audio-dario-exponential/0220.wav"
+  },
+  {
+   "id": 221,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6003.442,
+   "end": 6032.728,
+   "text": "慈善应发挥一定作用，但内生性增长始终更有效。在AI驱动的世界中。 哪些产业最为关键？比如在非洲建设数据中心就比在中国更合适。 事实上，我认为这将是非常有益的事情。 在非洲建设数据中心。只要这些数据中心不被中国拥有，我们就应该在非洲建设数据中心。我认为这是个好主意。 我们应该这么做。我们完全可以在非洲建立一个由AI驱动的制药行业。",
+   "audioFile": "audio-dario-exponential/0221.wav"
+  },
+  {
+   "id": 222,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6033.178,
+   "end": 6073.054,
+   "text": "如果AI正在加速药物研发，那么将出现许多生物科技初创公司。我们应该确保其中一些公司出现在发展中国家。 在转型期尤其应该如此。虽然未来人类可能不再参与，但人类仍需参与这些公司的初创和AI模型的监督工作。 确保这些监督者来自发展中国家，使当地也能实现快速发展。 在那方面也可能出现快速增长。你们最近宣布Quad将制定一套基于价值观的宪法，而不仅仅是面向终端用户。我能够想象出这样一个世界。",
+   "audioFile": "audio-dario-exponential/0222.wav"
+  },
+  {
+   "id": 223,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6073.754,
+   "end": 6101.536,
+   "text": "如果对齐终端用户，现有世界权力平衡将得以维持，因为每个人都能拥有代表自己的AI。 善恶行为者的比例保持不变，这似乎符合当前世界的运行逻辑。为什么采用价值观导向比用户对齐更好？ 我不太认同这种区分方式。这里可能存在两种相关区别。 你似乎在混合讨论两个问题：是否应给模型下达指令。 二是是否应给模型设定行为原则。",
+   "audioFile": "audio-dario-exponential/0223.wav"
+  },
+  {
+   "id": 224,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6102.236,
+   "end": 6130.32,
+   "text": "这两种区分可能更相关。 这纯粹是一个基于实践和经验的观察结果。 通过向模型传授原理，让它从原理中学习，其行为会更一致，更容易覆盖边缘情况，模型也。 更可能按照人们的期望行事。换句话说，如果你不告诉人们如何改装汽车，不说韩语，。 只是给它一份规则清单，它其实并不真正理解这些规则，也难以从中进行泛化。",
+   "audioFile": "audio-dario-exponential/0224.wav"
+  },
+  {
+   "id": 225,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6130.77,
+   "end": 6172.371,
+   "text": "如果只是给出一堆该做和不该做的事项清单，而如果你给它原理，并设置一些硬性约束，比如禁止制造生物武器，。 但总体上你是在试图让它理解自己应该追求什么目标，应该如何运作。从实际角度来看，这种方式被证明更有效。 地训练模型。这是其中一部分。这就是所谓的规则与原理之间的权衡。然后还有另一个问题，。 即可纠正性与内在动机之间的权衡，也就是模型应该在多大程度上。 像某种皮肤套件一样，只是机械地执行下达给它的指令，",
+   "audioFile": "audio-dario-exponential/0225.wav"
+  },
+  {
+   "id": 226,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6172.821,
+   "end": 6195.165,
+   "text": "而应该在多大程度上拥有内在的价值体系并自主行动。 模型固有价值体系并据此行事。 都源于这些权衡的综合体现。 更接近让模型主要执行人们想要的任务，而不是自行运行世界。 我们实际上已经处于可纠正的阶段。我们明确表示模型不会执行某些任务",
+   "audioFile": "audio-dario-exponential/0226.wav"
+  },
+  {
+   "id": 227,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6195.615,
+   "end": 6218.989,
+   "text": "在宪法中我们以多种方式表述，正常情况下若有人要求模型执行任务，它应完成该任务。 若要求模型伤害他人，它会拒绝执行。我认为这是一款基本可纠正的模型。 一款基本可纠正的模型，其限制基于原则。关键问题是这些原则如何确定",
+   "audioFile": "audio-dario-exponential/0227.wav"
+  },
+  {
+   "id": 228,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6219.689,
+   "end": 6250.583,
+   "text": "一个可纠正的模型，存在一定限制，但这些限制基于原则。根本问题是这些原则如何确定？ 你们已明确写出原则，我才有资格提问。通常宪法一旦制定便不可更改。 实际上写下这些原则，我才能问你这个问题。通常宪法写下来就固定不变，而且。 随时指导系统行为，这些系统将支撑大量经济活动。问题在于。 如何设定这些原则？我认为有三种迭代方式",
+   "audioFile": "audio-dario-exponential/0228.wav"
+  },
+  {
+   "id": 229,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6251.283,
+   "end": 6278.819,
+   "text": "您认为这些原则应如何设定？我认为可能有三种方式。 此处有三种循环规模，对吧？三种迭代方式。第一种是我们在Anthropic内部训练模型，若不满意便进行调整。 制定宪法并定期公开更新，这很有必要。比如可以发布新宪法，让公众参与讨论。 我认为这样很好，因为人们可以对此发表意见。第二层循环是不同公司会有各自的宪法。",
+   "audioFile": "audio-dario-exponential/0229.wav"
+  },
+  {
+   "id": 230,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6279.269,
+   "end": 6306.77,
+   "text": "Anthropic、双子座模型等公司发布宪法，彼此可相互参考。 外部观察者可以进行批判性比较，指出某条宪法中的这个条款或那条宪法中的那个条款。 这会形成一种软性激励机制，促使所有公司借鉴各方优点进行改进。 我认为第三层循环是超越AI公司的社会群体，包括那些未参与宪法评论的人。",
+   "audioFile": "audio-dario-exponential/0230.wav"
+  },
+  {
+   "id": 231,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6307.22,
+   "end": 6340.361,
+   "text": "几年前我们做过集体智能项目实验，比如向公众征集人工智能宪法意见。 当时我们采纳了部分建议，现在的新宪法框架下再做类似事情会更困难。 当宪法是简单的行为清单时，这种做法更直接。但原则层面需要保持内在一致性。 不过你仍可广泛征集各界意见，甚至可以设想建立某种代表制政府系统。 这听起来很疯狂，但整个访谈不就是关于疯狂想法吗？",
+   "audioFile": "audio-dario-exponential/0231.wav"
+  },
+  {
+   "id": 232,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6340.811,
+   "end": 6371.458,
+   "text": "这次访谈讨论的都是疯狂想法，甚至能想象出代议制政府系统。 你明白吗？我今天不会这么做，因为立法程序太慢了。这正是为什么我认为在AI监管中应谨慎对待立法程序，但原则上你。 完全可以说所有AI模型都必须有一项以这些内容开头的宪法条款，然后你还可以。 在后面添加其他内容，但必须有优先适用的特殊条款。我不主张这么做，太僵化了。",
+   "audioFile": "audio-dario-exponential/0232.wav"
+  },
+  {
+   "id": 233,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6371.908,
+   "end": 6396.203,
+   "text": "这听起来过于强制性，我认为这种过度激进的立法方式不可取。但确实可以尝试这么做。 有没有更温和的实现方式？ 或许吧。我特别喜欢控制回路二的设想，显然这与实际政府的宪法运作方式不同。 政府没有这种模糊的最高法院根据社会情绪和氛围调整宪法的机制。实际政府有更程序化的流程。",
+   "audioFile": "audio-dario-exponential/0233.wav"
+  },
+  {
+   "id": 234,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6396.903,
+   "end": 6401.252,
+   "text": "没错，你实际上有这样一个愿景：不同宪法之间的竞争。",
+   "audioFile": "audio-dario-exponential/0234.wav"
+  },
+  {
+   "id": 235,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6401.952,
+   "end": 6431.842,
+   "text": "这让人联想到一些自由主义者曾讨论过的群岛式不同政府形态。 在不同地区选择最适合的政府模式，让人民最幸福。某种程度上你确实在。 重现这种设想。是的，这种乌托邦式的群岛愿景。 我认为这个愿景有可取之处，但也有潜在问题。我认为这个设想。 我认为这是一个有趣且引人入胜的愿景，但也会出现一些你未曾预料到的问题。我也喜欢第二种循环模式。",
+   "audioFile": "audio-dario-exponential/0235.wav"
+  },
+  {
+   "id": 236,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6432.292,
+   "end": 6440.899,
+   "text": "我觉得整个过程必须是第一、第二和第三种循环模式的混合，关键在于比例分配。",
+   "audioFile": "audio-dario-exponential/0236.wav"
+  },
+  {
+   "id": 237,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6441.599,
+   "end": 6454.312,
+   "text": "这将是答案。当有人最终为这个时代写出类似制造原子弹的里程碑事件时，历史上最难以从记录中发现的是什么？ 什么是最容易被历史记录遗漏的关键点？",
+   "audioFile": "audio-dario-exponential/0237.wav"
+  },
+  {
+   "id": 238,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6455.012,
+   "end": 6482.013,
+   "text": "我认为有几个因素。在指数级增长的每个阶段，外部世界对技术的理解程度都存在局限。 历史常有这种偏见，任何发生过的事情在回顾时都显得不可避免。 人们很难设身处地想象当时决策者的处境。 比如关于扩展性或持续学习的争论，这些争论在当时并不显而易见。 我们内心其实对这些技术突破抱有较高概率预期。",
+   "audioFile": "audio-dario-exponential/0238.wav"
+  },
+  {
+   "id": 239,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6482.463,
+   "end": 6511.816,
+   "text": "但外部世界并未对此做出相应行动。 外部世界几乎完全忽视了这些预期。 这种封闭性带来的奇怪现象，恐怕是最大的问题。 如果距离实现这一目标只有一两年时间，街上普通人却毫无概念。这就是我想改变的事情之一。 通过备忘录和与政策制定者沟通，但我不确定是否有效。我认为这简直疯狂。 这确实很疯狂。最后我想说，这可能适用于几乎所有历史危机时刻。",
+   "audioFile": "audio-dario-exponential/0239.wav"
+  },
+  {
+   "id": 240,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6512.266,
+   "end": 6540.425,
+   "text": "事情发生得如此之快，所有事情同时爆发。 你可能认为某些决策经过深思熟虑，但事实上你必须立即做出决定，当天还要处理30个其他决策。 你甚至不知道哪些决策会产生重大影响。 我担心的是，某些关键决策可能只是某人突然闯入办公室对我说：。 \"达里奥，你只有两分钟。你认为我们应该选择A方案还是B方案？\"",
+   "audioFile": "audio-dario-exponential/0240.wav"
+  },
+  {
+   "id": 241,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6540.875,
+   "end": 6559.697,
+   "text": "他给我一份一页纸的备忘录，问是否应该选A或B。 我会说：\"我不知道，我得去吃午饭。我们选B吧。\"。 结果这个决定可能成为最关键的选择。最后一个问题，科技CEO通常不会频繁撰写50页备忘录。",
+   "audioFile": "audio-dario-exponential/0241.wav"
+  },
+  {
+   "id": 242,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6560.397,
+   "end": 6577.078,
+   "text": "而你似乎成功做到了这一点。 为自己和公司构建一个角色，这个角色要与更偏向智识型的首席执行官角色相兼容。 我想了解你是如何构建这种角色的，以及这种模式如何运作——比如你离开公司几周后，再回来告诉公司这是",
+   "audioFile": "audio-dario-exponential/0242.wav"
+  },
+  {
+   "id": 243,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6577.778,
+   "end": 6617.076,
+   "text": "这份备忘录，这就是我们的做法。内部常写这类文件。 就这份特定的备忘录，我是在寒假期间写的。当时确实很难抽出时间来撰写。但我觉得这背后涉及更广泛的问题。 实际上，我认为这与公司文化有关。我大概有三分之一，甚至40%的时间都花在确保人类中心的企业文化。 随着Anthropic规模扩大，直接参与模型训练、产品开发等变得困难。 公司已有2500人，我虽然有一些直觉，但毕竟无法事无巨细地参与每个环节。",
+   "audioFile": "audio-dario-exponential/0243.wav"
+  },
+  {
+   "id": 244,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6617.526,
+   "end": 6648.253,
+   "text": "参与每个细节都非常困难，我尽可能参与，但有一件事非常重要。 每个人都把自己视为团队成员，大家齐心协力而非相互竞争。 我们注意到一些其他AI公司在扩张过程中（此处未点名），开始出现团队内耗和人员冲突。 虽然早期就存在这类问题，但情况变得更糟。不过我认为我们。 已经做得非常出色（尽管不完美），成功维系了公司凝聚力，让所有人认同我们的使命。",
+   "audioFile": "audio-dario-exponential/0244.wav"
+  },
+  {
+   "id": 245,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6648.703,
+   "end": 6689.432,
+   "text": "对使命的真诚，以及每个人都相信其他人正在为正确的目标努力。 我们是一个团队，人们不会为了个人利益而损害他人或背后捅刀子。 这在某些其他地方经常发生，那么如何确保这种情况不发生？这涉及很多因素，比如我、丹尼拉。 她负责公司日常运营，联合创始人、我们聘用的其他员工，以及我们努力营造的环境。 我认为文化中很重要的一点是，我和其他领导者，尤其是我本人，必须明确阐述公司的理念。 公司正在做什么、战略是什么、价值观和使命是什么，以及公司代表什么",
+   "audioFile": "audio-dario-exponential/0245.wav"
+  },
+  {
+   "id": 246,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6689.882,
+   "end": 6703.046,
+   "text": "当公司规模达到2500人时，无法逐个沟通，必须通过书面或面向全员的演讲传达。 这就是我每两周面向全员演讲一小时的原因，实际上这非常重要",
+   "audioFile": "audio-dario-exponential/0246.wav"
+  },
+  {
+   "id": 247,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6703.746,
+   "end": 6709.333,
+   "text": "我不会说内部撰写过论文，主要做两件事：第一，撰写DVQ文件。",
+   "audioFile": "audio-dario-exponential/0247.wav"
+  },
+  {
+   "id": 248,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6710.033,
+   "end": 6751.224,
+   "text": "Dario Vision Quest这个名字并非我所起，但听起来像我去做些离谱的事。 尽管我曾试图反对这个名字，但最终还是沿用了。每两周我都会向全员做演讲。 我会准备三到四页的文档，讨论公司内部的三个或四个不同话题，包括模型和产品进展。 在行业之外，整个世界在人工智能和地缘政治方面的整体情况，其实是一个混合的状况。我通常会逐一梳理这些内容。 坦白说，我直接表达自己的想法和Anthropic管理层的思考，然后回答问题。这种沟通方式很有价值。",
+   "audioFile": "audio-dario-exponential/0248.wav"
+  },
+  {
+   "id": 249,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6751.674,
+   "end": 6780.881,
+   "text": "当信息需要经过六层以上传递时，这种直接沟通的价值很难实现。 公司大部分员工都会亲自或在线参与，这意味着你能与很多人直接交流。 另外我在Slack上有个频道，经常发表观点和评论，通常是对某些内容的回应。 比如看到公司内部的问题，或者人们提出的疑问。 我们也会做内部调查，针对员工关心的问题进行整理。我总是坦率地表达这些内容。",
+   "audioFile": "audio-dario-exponential/0249.wav"
+  },
+  {
+   "id": 250,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6781.331,
+   "end": 6809.402,
+   "text": "直接说出事实，明确指出问题，避免使用公司内部常见的防御性表述。 因为外部存在大量恶意解读的人，但如果你信任团队成员，就可以完全坦诚。 我们努力招聘值得信赖的人，这样就能建立完全透明的沟通环境。 这种透明度是公司的巨大优势，让工作环境更健康。 它能让每个人发挥出超越个体总和的协同效应。",
+   "audioFile": "audio-dario-exponential/0250.wav"
+  },
+  {
+   "id": 251,
+   "speaker": "B",
+   "speakerName": "Dario Amodei",
+   "avatarFile": "avatars/dario-exponential/speaker-B.jpg",
+   "start": 6809.852,
+   "end": 6822.775,
+   "text": "提高任务成功的可能性，因为大家都对任务目标达成一致。 讨论如何完成任务。嗯，没有外部达里奥，我们进行访谈。 这次访谈有点像那个。",
+   "audioFile": "audio-dario-exponential/0251.wav"
+  },
+  {
+   "id": 252,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/dario-exponential/speaker-A.jpg",
+   "start": 6823.475,
+   "end": 6848.458,
+   "text": "这是《好奇之心》节目，Dwarkesh主持。感谢参与，Dwarkesh。大家好，希望你们喜欢刚才的节目。如果喜欢，最有效的支持方式是。 最有效的帮助方式就是分享给可能喜欢这个节目的人。如果你在收听的平台上留下评分或评论也很有帮助。 如果你有兴趣赞助这个播客，可以通过（音乐）以下方式联系。",
+   "audioFile": "audio-dario-exponential/0252.wav"
+  }
+ ]
+}

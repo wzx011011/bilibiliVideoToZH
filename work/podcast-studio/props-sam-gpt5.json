@@ -1,0 +1,1365 @@
+{
+ "title": "Sam Altman 谈 GPT-5 · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 0.0,
+   "end": 10.878,
+   "text": "这项技术拥有惊人的力量，且发展速度极快。你们刚推出GPT-5，今天出生的孩子将永远无法超越AI的智慧。我们该如何分辨真实与虚假？",
+   "audioFile": "audio-sam-gpt5/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 11.578,
+   "end": 51.686,
+   "text": "我们尚未在GPT中加入性爱机器人形象。超级智能到底意味着什么？这个东西确实非同寻常。 我即将采访开放人工智能实验室CEO萨姆·阿尔特曼。该机构正在重塑各行各业，这些技术大亨堪称当代科技领主。 目前他们正试图打造一种在几乎所有领域都远超人类的超级智能，而他们刚刚发布了迄今为止最强大的模型。 仅仅几年前，这听起来还像科幻小说。现在情况已完全不同，事实上，参与这场竞赛的远不止他们一家。",
+   "audioFile": "audio-sam-gpt5/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 52.136,
+   "end": 78.031,
+   "text": "数百亿美元资金和难以想象的人力投入，这是一个划时代的时刻。大多数人终其一生都难以见证如此剧烈的技术变革。 此刻，这一切正发生在你我身边。本期节目，我将与山姆·奥尔特曼一同穿越到他构想的未来。 为了让我们看清未来景象，从而真正理解即将到来的变化。欢迎收听《重大对话》。",
+   "audioFile": "audio-sam-gpt5/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 78.731,
+   "end": 80.575,
+   "text": "感谢你做这个。当然。",
+   "audioFile": "audio-sam-gpt5/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 81.275,
+   "end": 114.657,
+   "text": "在深入讨论之前，我想告诉你我的目标。我不会问你关于估值、AI人才争夺战、融资或类似的问题。我认为这些内容在其他地方已经讲得非常好了。 确实如此。我们节目的主要目标是探讨如何利用科技让未来变得更好。 我们之所以这么做，是因为我们坚信，若人们看到更美好的未来，便能参与其中，共同创造。 我的目标是尽可能与你一起穿越到你正在构建的未来不同时刻，看看那时的景象。",
+   "audioFile": "audio-sam-gpt5/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 115.107,
+   "end": 138.93,
+   "text": "精彩。令人惊叹。首先从你刚刚宣布的内容开始。你最近表示，令人惊讶的是，GPT-4是我们未来再也无需使用的最笨拙的模型。 GPT-4在SAT、LSAT和GRE考试中已超越90%人类，还能通过编程、品酒师及医学执照考试。",
+   "audioFile": "audio-sam-gpt5/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 139.63,
+   "end": 176.59,
+   "text": "现在你刚刚发布了GPT-5。GPT-5相比GPT-4有哪些突破？首先，重要的一点是，你可以拥有一个能完成你刚才提到所有惊人任务的AI系统。 但它显然无法复制人类擅长的许多能力，这让我思考SAT考试或其他测试的价值。 但我想，如果我们在GPT-4发布当天进行这次对话，并告诉你GPT-4在这些方面的表现，你可能会说：天哪，这将对许多职业产生巨大影响，甚至带来一些负面影响。 这些你可能预测过但尚未实现的积极影响。",
+   "audioFile": "audio-sam-gpt5/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 177.04,
+   "end": 208.412,
+   "text": "这些模型虽然在某些方面表现出色，但未能涵盖我们希望人们去做或关心的许多其他事情。 我怀疑GPT-5也会如此。人们会为它的能力感到震撼，它在很多方面都非常出色。 随后他们会发现，希望它能完成更多任务。人们会用它来实现各种令人惊叹的事情。 它将彻底改变许多知识型工作，以及我们学习和创造的方式。 但人类社会将与之共同进化，期待更强大的工具带来更高的期望。",
+   "audioFile": "audio-sam-gpt5/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 208.862,
+   "end": 232.369,
+   "text": "我认为这个模型在很多方面都很出色，但在其他方面也有明显局限。 但令人惊叹的是，如今你口袋里就有一款软件，能完成从三分钟、五分钟到一小时的任务——这些可能是某个领域专家能胜任或可能难以应对的挑战。 我认为这在人类历史上是前所未有的，技术进步的速度和程度都达到了前所未有的高度。",
+   "audioFile": "audio-sam-gpt5/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 232.819,
+   "end": 242.396,
+   "text": "现在我们拥有这个工具，正亲历这一过程，逐步适应。但若能回到五到十年前，预见到这一切，我们大概率会持怀疑态度。",
+   "audioFile": "audio-sam-gpt5/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 243.096,
+   "end": 250.296,
+   "text": "假设人们没看过新闻，你最兴奋的是哪些具体方面？还有哪些是你认为它可能无法做到的方面？",
+   "audioFile": "audio-sam-gpt5/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 250.996,
+   "end": 285.158,
+   "text": "我最兴奋的是，这是首个让我觉得可以提出任何硬核科学或技术问题并得到较满意答案的模型。 其实我有个有趣的例子。初中时，或者说九年级时，我得到了一台TI-83，这是一款老式的图形计算器。 我花了很多时间制作了一款名为‘贪吃蛇’的游戏。当时在学校里，这款游戏在孩子们中非常流行。 当时我大概在完成游戏时意识到，在TI-83上编程极其痛苦且耗时，调试过程更是困难重重。",
+   "audioFile": "audio-sam-gpt5/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 285.608,
+   "end": 333.349,
+   "text": "后来我手头有早期版GPT-5，一时兴起想测试它是否能生成类似TI-83风格的‘贪吃蛇’游戏。结果它仅用七秒就完美完成了。 我开始思考，如果当时11岁的我看到现在的成果，会认为这很酷，还是会觉得少了些什么？ 我只犹豫了三秒钟：这究竟是好事还是坏事？但很快我就意识到，现在反而怀念起那款游戏了。我突然有了一个疯狂的新功能点子，赶紧输入试试。 它实现了这一点。游戏实时更新，而我其实希望它呈现这样的效果，想要尝试这样做。 这让我想起11岁时再次编程的经历，当时我充满热情，想要尝试新想法，现在我有了这个创意。",
+   "audioFile": "audio-sam-gpt5/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 333.799,
+   "end": 364.647,
+   "text": "但完成速度非常快，我能够即时表达想法、尝试新事物，并实时互动。 我曾担心孩子们会错过这种原始学习编程的艰辛过程。 现在我为他们感到欣喜，因为这些新工具将极大提升人们的创作效率，让创意快速落地，这确实令人惊叹。 GPT-5不仅能解答复杂问题，还能按需即时生成软件，这令人印象深刻。 我认为这将是GPT-5时代的一个关键特征，而GPT-4时代并不存在这种特性。",
+   "audioFile": "audio-sam-gpt5/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 365.347,
+   "end": 395.015,
+   "text": "谈到这个概念时，我想到举重中的一个术语——张力时间。 对不了解的人来说，用三秒深蹲100磅，和用30秒深蹲100磅，后者能带来更大的训练效果。 当我思考创作过程时，感到自己完成最佳作品时，往往需要投入大量认知张力时间。 我认为这种认知张力时间非常重要，颇具讽刺意味的是，这些工具本身的研发也耗费了巨大的认知张力时间。",
+   "audioFile": "audio-sam-gpt5/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 395.465,
+   "end": 407.446,
+   "text": "但某种程度上，人们可能认为这些工具成了逃避思考的出口，不过就像过去用计算器后转向更难的数学题一样，我们或许也会继续挑战更高难度的任务。",
+   "audioFile": "audio-sam-gpt5/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 408.146,
+   "end": 441.288,
+   "text": "你感觉这里有什么不同吗？你怎么看待这件事？有些人显然在使用某种药物来逃避思考。 而有些人则用它来思考得比以往任何时候都多。 我希望我们能以一种方式构建这个工具，鼓励更多人通过它稍微拓展一下思维，从而做得更多。 我认为，社会是一个竞争激烈的地方。如果你给人们新的工具，理论上人们可能反而工作得更少。 但实际情况是，人们似乎工作得越来越努力，人们的期望值也不断上升。所以我的猜测是，就像其他工具一样。",
+   "audioFile": "audio-sam-gpt5/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 441.738,
+   "end": 465.906,
+   "text": "对于其他技术，有些人会做得更多，有些人则做得更少。 想用查丘皮汀提升紧张时认知能力的人，确实能实现。 我从前5%最活跃用户使用恰库皮廷的方式中获得灵感。 令人惊讶的是，人们正在学习和完成大量任务并产出成果。我只用了GPT-5几个小时，一直在尝试使用它。",
+   "audioFile": "audio-sam-gpt5/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 466.606,
+   "end": 480.629,
+   "text": "目前感觉如何？我还在学习如何与它互动。有趣的是，我刚掌握GPT-4的使用方法，现在正在学习GPT-5。 你发现哪些具体任务最有趣？我想你已经使用了一段时间了。",
+   "audioFile": "audio-sam-gpt5/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 481.329,
+   "end": 516.357,
+   "text": "我最印象深刻的是编程任务。虽然它在很多方面都很出色，但AI能够为任何需求编写软件这一概念尤其令人惊叹。 这意味着你可以用新方式表达想法，让AI完成非常复杂的事情。 理论上你可以问GPT-4任何问题，但GPT-5在编程方面表现如此出色，让人感觉它几乎能完成任何任务。 当然它无法作用于物理世界，但能让计算机执行复杂任务。 软件是一种极其强大的工具，能真正控制某些事物并完成实际操作。",
+   "audioFile": "audio-sam-gpt5/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 516.807,
+   "end": 549.659,
+   "text": "对我而言，最显著的改进是写作能力大幅提升。 AI生成的文本常有冗余啰嗦的问题，GPT-5仍存在这种M破折号现象。 很多人喜欢M破折号，但GPT-5的写作质量已经显著提升。我们还有很长的路要走。 我们希望改进，但OpenAI内部人士透露，他们已开始使用GPT-5。 他们知道GPT-5在所有指标更优，但存在难以言喻的细微品质。回退到GPT-4测试时，这种体验却很糟糕。",
+   "audioFile": "audio-sam-gpt5/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 550.109,
+   "end": 555.953,
+   "text": "我不确定具体原因，但猜测其中一部分原因是写作感觉更加自然流畅。",
+   "audioFile": "audio-sam-gpt5/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 556.653,
+   "end": 594.367,
+   "text": "为了准备这次访谈，我联系了几位人工智能和科技领域的其他领袖，为你们准备了一些问题。好的。 接下来的问题来自Stripe CEO Patrick Collison。这个问题肯定精彩。请逐字阅读，内容关于下一阶段。 您认为GPT-5之后哪一年会出现能做出重大科学发现的大语言模型？目前尚缺哪些条件导致这一情况尚未发生？ 他在此特别指出应排除数学和AlphaFold这类特殊模型，他明确询问的是像GPT系列这样完全通用的模型。",
+   "audioFile": "audio-sam-gpt5/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 595.067,
+   "end": 627.435,
+   "text": "我认为大多数人会同意这将在未来两年内发生，但'重大'的定义至关重要。 对某些人来说，重大突破可能在2025年初出现，有些人可能要到2026年初，甚至有人可能要等到2027年底。 但我敢打赌到2027年底，大多数人会同意已出现由AI驱动的重大新发现。 我认为缺失的关键是这些模型的认知能力。 一位研究人员告诉我，我特别喜欢的一个框架是，一年前我们就能在高中数学竞赛中表现不错。",
+   "audioFile": "audio-sam-gpt5/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 627.885,
+   "end": 657.684,
+   "text": "这类题目可能需要专业数学家几秒到几分钟就能解决。我们最近刚刚获得国际数学奥林匹克金牌。 这是难度极高的竞赛数学测试，世界上顶尖的少数数学家可能连一道题都解不出来。 我们在金牌组中取得了最高分。虽然有少数人类选手得分更高，但这仍然是令人震惊的成就。 每道题有9小时解题时间，顶尖数学家每道题平均需要1个半小时。",
+   "audioFile": "audio-sam-gpt5/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 658.134,
+   "end": 675.461,
+   "text": "从几秒到几分钟，再到1个半小时，证明重大数学定理可能需要顶尖数学家1000小时的工作量。 我们必须从另一个重大进展开始。但如果你看看我们的进展轨迹，可以说我们正在接近那个目标，我们有一条通往那个时间点的路径。",
+   "audioFile": "audio-sam-gpt5/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 676.161,
+   "end": 685.81,
+   "text": "我们只需要持续扩大模型规模。你描述的长期未来是超级智能，这到底意味着什么？我们又该如何判断何时达到了这一目标？",
+   "audioFile": "audio-sam-gpt5/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 686.51,
+   "end": 717.639,
+   "text": "若我们拥有一个研究能力超过开放人工智能研究所团队的系统，比如让AI自主决定实验内容，这将是一大突破。 比OpenAI智囊团更聪明。若该系统能比我更高效运营OpenAI，就更具说服力。 你拥有比顶尖研究人员、比我、比其他人更擅长各自工作的系统，这对我来说就是超级智能。几年前，这句话听起来还像科幻小说。 它仍存在，但你现在能透过迷雾看到。是的。",
+   "audioFile": "audio-sam-gpt5/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 718.339,
+   "end": 738.97,
+   "text": "因此，这条路径上的一个步骤似乎是在科学发现的时刻，提出更好的问题，以专家级人类的方式深入探索，从而产生新的发现。 我一直在思考的一个问题是，假设我们身处1899年，如果当时能将所有已知物理知识提供给它并稍作推演，但不会进一步发展。 这些系统何时能提出广义相对论？",
+   "audioFile": "audio-sam-gpt5/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 739.67,
+   "end": 772.801,
+   "text": "一个有趣的问题是，如果我们设想从现在开始不再获得任何新的物理数据，我们是否还能继续前进？ 我们是否应该期待超级智能通过深度思考现有数据，仅凭现有知识解决高能物理问题，而无需建造新粒子对撞机？还是必须设计新实验？ 显然我们不知道答案，不同的人有不同的推测。 但我怀疑对于很多科学研究来说，仅仅更深入地思考现有数据是不够的，我们还需要构建新仪器、开展新实验，而这需要一些时间。",
+   "audioFile": "audio-sam-gpt5/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 773.251,
+   "end": 789.285,
+   "text": "现实世界是缓慢且混乱的，我们当然可以仅通过更深入分析现有科学数据取得一些进展。 但我的猜测是，要实现重大突破，我们还需要制造新设备、进行新实验，这本身就会带来一些减速。",
+   "audioFile": "audio-sam-gpt5/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 789.985,
+   "end": 804.063,
+   "text": "换一种思路来看，现在的AI系统在回答几乎所有问题方面都表现出色。 但也许我们想表达的是，这还需要一次飞跃，帕特里克的问题核心在于提出更高质量的问题。",
+   "audioFile": "audio-sam-gpt5/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 804.763,
+   "end": 830.491,
+   "text": "如果回到时间线这个话题，或许可以说AI系统在处理一分钟任务时已超越人类，但在处理需要千小时的任务上仍有很长的路要走。 人类智能在处理长期任务时，与人工智能系统存在显著差异。 我认为我们终将解决这个问题，但目前仍是明显弱点。我们已讨论过GPT-5的现状，也探讨过超级智能的未来目标。",
+   "audioFile": "audio-sam-gpt5/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 831.191,
+   "end": 857.734,
+   "text": "我有个问题，如何穿越两者间的迷雾？接下来是英伟达CEO黄仁勋的提问。 事实是存在的，真理是意义。因此，事实是客观的，真理是主观的。 它们取决于视角、文化、价值观、信仰和背景。一个AI可以学习和掌握事实，但如何让一个AI了解所有国家、所有背景的人的真理？",
+   "audioFile": "audio-sam-gpt5/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 858.434,
+   "end": 888.978,
+   "text": "我将接受这些定义作为公理。我不确定是否同意，但为节省时间，我将暂且接受，并以此继续。 我感到非常惊讶。 我认为很多人也和我一样感到惊讶，AI在适应不同文化背景和个体时表现出的流畅性超出了预期。 我们今年早些时候推出的增强记忆功能，是我最喜欢的功能之一。 我的ChatGPT似乎真的了解我关心的事、我的生活经历、背景以及促使我走到今天这一步的各种因素。",
+   "audioFile": "audio-sam-gpt5/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 889.428,
+   "end": 927.32,
+   "text": "我一位朋友最近一直大量使用ChatGPT，他将大量个人生活经历融入这些对话中。 他给ChatGPT做了大量性格测试，并要求它以他的身份作答。结果得分与他本人实际测试结果完全一致，尽管他从未向ChatGPT透露过自己的性格。 多年来，我的ChatGPT通过与我讨论文化、价值观和生活，已经学到了很多。 有时我会用免费账户测试，不带任何历史记录，看看效果如何。 体验确实截然不同。确实，我们都惊讶于AI在学习和适应方面的强大能力。",
+   "audioFile": "audio-sam-gpt5/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 928.02,
+   "end": 933.932,
+   "text": "你是否认为世界各地的人们会使用符合各自文化规范和背景的不同AI？",
+   "audioFile": "audio-sam-gpt5/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 934.632,
+   "end": 941.608,
+   "text": "我认为所有人都会使用相同的基础模型，但通过提供不同上下文，让AI以个性化方式运行。",
+   "audioFile": "audio-sam-gpt5/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 942.308,
+   "end": 982.91,
+   "text": "谈到事实与真相，这让我想到，现在似乎是我们首次进行时间旅行的时刻。 我们来到2030年。这是一个严肃的问题，但我想用一个轻松的例子来提问。你见过在蹦床上跳跃的兔子吗？是的。 对于没看过的人来说，这可能看起来像后院拍摄的兔子在蹦床上跳跃的视频。最近这段视频病毒式传播，甚至有人为此创作了歌曲。 这确实是个大事件。有兔子在蹦床上跳跃的视频。 我认为人们强烈反应的原因可能是，这是他们第一次看到视频并享受其中，之后才得知这完全是AI生成的。",
+   "audioFile": "audio-sam-gpt5/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 983.36,
+   "end": 993.712,
+   "text": "在这次时间旅行中，如果我们想象2030年的青少年正在浏览他们那个时代的内容，我们该如何分辨真实与虚假？",
+   "audioFile": "audio-sam-gpt5/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 994.412,
+   "end": 1031.442,
+   "text": "我的意思是，我可以就这个问题给出各种字面意义上的答案。 我们可以加密签名并决定信任对象，签名是否可信，是否实际拍摄。 但我的感觉是，事情会逐渐趋于一致。 今天用iPhone拍的照片大多真实，但略显不真实。 其中有些AI在运行，但你可能并不清楚它是如何运作的，只是让照片看起来稍微好一点。有时你还会看到一些奇怪的现象。 但在这之间，有大量的计算能力在处理从摄像头传感器捕获的光子，最终形成你看到的图像。",
+   "audioFile": "audio-sam-gpt5/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1031.892,
+   "end": 1061.174,
+   "text": "你已经决定，对于大多数人来说，这已经足够真实。但我们已经接受了一个逐渐的变化过程，从过去光子直接打在胶片上的时代到现在。 比如在TikTok上观看视频时，很多内容都使用了各种编辑工具让画面比现实更完美。确实如此。 或者像那些蹦床上的兔子视频一样，整个场景或部分视频都是完全生成的。 没错。我认为，关于‘多真实才算真实’的界限会不断变化。",
+   "audioFile": "audio-sam-gpt5/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1061.624,
+   "end": 1095.213,
+   "text": "这其实是一个教育问题，关乎人类的认知。毕竟，媒体本身一直介于真实与虚构之间。 比如科幻电影，我们明知那些情节从未真实发生；又比如在社交平台上晒出的度假美照，虽然照片可能确实拍过，但排队的游客却从未出现在画面中。 但现实中，排队拍照的游客可能多达数百人，这些画面却从未被记录。如今，越来越多的媒体内容将被人们视为‘不真实’。 但我觉得这本来就是长期趋势。2035年，你我将从大学毕业。",
+   "audioFile": "audio-sam-gpt5/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1095.913,
+   "end": 1118.52,
+   "text": "有行业领袖预测，五年后，一半的初级白领岗位将被AI取代。那时我们正好是应届毕业生。 你希望我们所处的世界会是怎样的？虽然很多人讨论AI可能引发失业潮，但我也很好奇。 我从事的工作是十年前根本无法想象的。作为学生，我们应该关注哪些未来机遇？",
+   "audioFile": "audio-sam-gpt5/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1119.22,
+   "end": 1154.718,
+   "text": "2035年，如果那时还有大学毕业生，他们可能正乘坐飞船执行探索太阳系的任务，从事一份令人兴奋且高薪的工作。 为我和你感到遗憾，因为必须从事这种枯燥的工作，而未来一切都将变得更好。 目前很难想象十年后的情景，因为时间太遥远。如果按当前的变化速度再延续十年，结果可能超出我们的想象。 或许我得调整时间旅行的计划。十年前的现在，与如今的十年后相比，变化会更加难以想象。",
+   "audioFile": "audio-sam-gpt5/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1155.168,
+   "end": 1163.708,
+   "text": "不过，我认为再往前十年会更加难以预测，变化也会更大。那我们改为五年吧，目标仍是2030年。",
+   "audioFile": "audio-sam-gpt5/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1164.408,
+   "end": 1175.335,
+   "text": "我很好奇，你认为这对年轻人来说，短期内会有什么影响？ 这意味着一半的初级职位被AI取代，他们将进入一个与我当年截然不同的世界。",
+   "audioFile": "audio-sam-gpt5/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1176.035,
+   "end": 1207.44,
+   "text": "确实，某些类型的工作会彻底消失，这在历史上一直如此。 年轻人最擅长适应这一点。 我更担心这对62岁的人意味着什么，这些人不想重新培训或调整，而政客们总是用各种术语来称呼这些没人真正想要的东西。 如果我现在22岁并刚毕业，我会觉得自己是历史上最幸运的孩子。为什么？ 因为现在是历史上最棒的时期，可以创造全新事物、发明东西、创办公司，无论你想做什么。",
+   "audioFile": "audio-sam-gpt5/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1207.89,
+   "end": 1230.169,
+   "text": "我认为现在有可能创办一家单人公司，其价值可能超过十亿美元，更重要的是，能为世界提供惊人的产品和服务。 这简直令人难以置信。你拥有可以完成过去需要数百人团队才能完成工作的工具。 你只需要学会如何使用这些工具，提出一个好主意。这真的很令人惊叹。",
+   "audioFile": "audio-sam-gpt5/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1230.869,
+   "end": 1262.509,
+   "text": "如果退后一步，我认为观众从你在这次乐观的节目中能听到的最重要的信息分为两部分。 首先，从战术层面来说，你们实际上是如何尝试构建世界上最强大的智能的？ 实现这一目标的限制因素是什么？然后从哲学层面来说，你们和其他人是如何以真正帮助而非伤害人们的方式构建这项技术的？ 现在先从战术层面来看，我认为目前对AI来说有三个主要类别是限制因素。",
+   "audioFile": "audio-sam-gpt5/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1262.959,
+   "end": 1275.998,
+   "text": "第一是计算能力，第二是数据，第三是算法设计。目前你们如何看待这三个方面的挑战？ 如果要帮助某人理解他们可能看到的未来新闻头条，你会如何帮助他们理清这些信息？",
+   "audioFile": "audio-sam-gpt5/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1276.698,
+   "end": 1301.817,
+   "text": "我认为还有第四个，即确定要开发的产品。 比如技术或科学进步本身，如果无法交到人们手中，其效用是有限的，也无法与社会同步发展。但若能兼顾这四个方面，那就更好了。 在计算方面，这无疑是迄今为止我见过的最大基础设施项目。我认为它可能已经成为人类历史上最大、最昂贵的项目。",
+   "audioFile": "audio-sam-gpt5/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1302.267,
+   "end": 1332.766,
+   "text": "但整个供应链，从制造芯片、内存和网络设备，到将它们安装在服务器上，进行大规模数据中心建设，再到解决能源供应问题——这通常是制约因素，还需整合所有其他组件。 这极其复杂且昂贵，目前我们仍以定制化、一次性的方式进行，尽管情况正在改善。 最终我们将设计一个巨型工厂，从概念上讲，一端是熔化沙子，另一端则产出完全构建的AI计算能力。",
+   "audioFile": "audio-sam-gpt5/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1333.216,
+   "end": 1365.407,
+   "text": "但我们现在离实现这个目标还有很长的路要走，这是一个极其复杂且昂贵的过程。 我们正在投入大量精力，尽可能快速地构建计算能力。但令人遗憾的是，当GPT-5发布时，需求将再次激增，而我们届时将无法满足。 这将重现GPT-4刚推出时的场景，世界对AI的需求远超我们当前的供应能力。扩大计算能力是实现这一目标的重要环节。 我预计会将大部分注意力转向如何在更大规模上构建计算能力。",
+   "audioFile": "audio-sam-gpt5/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1365.857,
+   "end": 1394.452,
+   "text": "如何从百万级扩展到千万级、亿级，最终实现数十亿台显卡，以满足人们的需求。 在思考这一类别时，最大的挑战是什么？目前我们最受限的是能源。 如果要运行吉瓦级的数据中心，需要吉瓦级别的电力供应。短期内找到如此规模的电力供应非常困难。 我们同样受到处理芯片和内存芯片的限制，包括如何封装这些组件以及如何构建机架。",
+   "audioFile": "audio-sam-gpt5/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1394.902,
+   "end": 1429.855,
+   "text": "还有许可证和施工工作等其他事项。但再次强调，我们的目标是实现高度自动化。 一旦建成这些机器人，它们能进一步帮助我们实现自动化，甚至达到只需投入资金就能获得预建数据中心的愿景。 如果能实现这一点，这将是一个巨大的突破。第二类是数据。是的，这些模型已经变得非常智能。 过去我们只需给它再喂一本物理教科书，它就能在物理方面变得更聪明一些。但如今，GPT-5已经能很好地理解物理教科书中的所有内容。",
+   "audioFile": "audio-sam-gpt5/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1430.305,
+   "end": 1466.068,
+   "text": "因此我们对合成数据感到兴奋。我们非常期待用户帮助我们创建越来越复杂的任务和环境，让系统去解决这些问题。 但数据始终重要，我们现在进入了一个领域，模型需要学习数据集中尚未存在的内容。 必须探索新领域，这是一次重大突破。如何让模型自主探索？人类具备这种能力。 比如我们能提出假设、进行测试并根据实验结果更新所学内容。大概就是用这种方式。此外还有算法设计。 我们在算法设计方面取得了巨大进展。",
+   "audioFile": "audio-sam-gpt5/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1466.518,
+   "end": 1495.753,
+   "text": "OpenAI最擅长的是建立了不断取得重大算法突破的文化。 我们确立了后来成为GPT范式的模型，也探索出了如今的推理范式，目前正致力于开发新的范式。 但令我兴奋的是，我们面前仍有数量级的算法突破等待实现。 昨日，我们发布开源模型GPT OSS，其智能相当于可在笔记本本地运行的O4 mini。 这让我感到震惊。是的。",
+   "audioFile": "audio-sam-gpt5/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1496.203,
+   "end": 1521.414,
+   "text": "如果几年前有人问我，是否能在笔记本电脑上运行如此智能的模型，我会认为那要等到很多年以后。 但后来我们发现了一些算法上的突破，尤其是在推理方面，还有一些其他技术，让我们能够开发出一个体积小巧却能完成惊人任务的模型。 这些是最有趣的部分，也是这份工作的最酷之处。我能想象你一定会喜欢思考这些问题。",
+   "audioFile": "audio-sam-gpt5/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1522.114,
+   "end": 1538.255,
+   "text": "对于那些不太了解你所谈内容，或者不清楚算法设计如何带来实际使用体验提升的人来说，我很好奇。 你能总结一下目前的情况吗？当你思考这个问题的乐趣时，你主要在考虑哪些方面？让我从历史开始，再谈到今天的一些内容。",
+   "audioFile": "audio-sam-gpt5/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1538.955,
+   "end": 1578.249,
+   "text": "GPT-1当时只是一个想法，曾被领域内许多专家嘲笑。这个想法是：能否训练一个模型来玩一个小游戏——给它展示大量单词，让它猜测接下来的单词。 这叫无监督学习。无需明确告诉模型猫、狗等标签，只需提供单词序列，预测下一个词。 关键在于，这些模型能够学习极其复杂的概念，涵盖物理、数学、编程等领域，并持续预测接下来可能出现的词语。 接下来的进展看似荒谬、神奇，几乎不可能实现。比如，所有这些如何被编码进去？",
+   "audioFile": "audio-sam-gpt5/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1578.699,
+   "end": 1607.695,
+   "text": "然而人类做到了，比如婴儿在听到语言后，基本上能自行理解其含义。 我们确实做到了。随后我们发现，随着规模的扩大，效果越来越好，但需要跨越多个数量级的扩展。 GPT刚推出时表现并不理想，许多领域专家认为这毫无意义，无法实现稳定效果。 我们发现，随着计算能力、内存和数据的增加，效果会可预测地提升。",
+   "audioFile": "audio-sam-gpt5/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1608.145,
+   "end": 1638.132,
+   "text": "我们可以利用这些预测来制定扩大规模的决策，从而有效实施并取得良好成果。 这种方法在多个数量级上都取得了成功，而当时这一点并不明显。 我认为世界感到惊讶的原因是，这一发现起初看起来非常不可能。 另一突破是利用语言模型结合强化学习，通过标记'好'、'坏'训练推理。 这直接推动了从0.1到0.3，再到如今GPT五代的进展。",
+   "audioFile": "audio-sam-gpt5/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1638.582,
+   "end": 1666.72,
+   "text": "当时我们觉得，如果这种方法有效，将会非常出色，但直觉告诉我们这几乎不可能成功，因为太简单了。如今，我们已经转向新的研究方向。 我们已经找到了方法，可以创建出更高质量的视频模型。 我们正在探索利用新型数据和环境的新方法，以实现模型的扩展。 不过，我认为在五年甚至十年后的发展难以预测，但未来两三年内，我们面前有非常顺畅且强劲的扩展空间。",
+   "audioFile": "audio-sam-gpt5/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1667.42,
+   "end": 1682.057,
+   "text": "我认为现在有一种普遍观点认为，我们正沿着一条从一到二、三到四、五再到更高版本的平滑路径前进。 但事实上，幕后的情况并非如此线性，反而更加复杂。请谈谈GPT五之前的情况。",
+   "audioFile": "audio-sam-gpt5/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1682.757,
+   "end": 1716.21,
+   "text": "你们当时面临哪些有趣的挑战？我们曾开发过一个名为Orion的模型。 我们发布了GPT 4.5，但模型规模过大。虽然这是一个非常优秀的模型，但使用起来不够便捷。 我们意识到，为了在模型基础上开展某些研究，需要不同的架构。因此我们遵循了一种持续有效的扩展定律。 后来发现更陡峭的扩展定律，计算投入回报更高，涉及推理能力。这是探索中调整方向的路径，属于研究常规。",
+   "audioFile": "audio-sam-gpt5/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1716.66,
+   "end": 1736.737,
+   "text": "我们在处理数据集时遇到一些问题，这些模型需要达到非常大的规模才能从海量数据中学习。 在日常研发中，你经常会因为尝试新方法或架构设计失败而频繁调整方向。 但所有这些曲折变化的综合结果，在指数级增长曲线上表现得异常平滑。",
+   "audioFile": "audio-sam-gpt5/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1737.437,
+   "end": 1752.084,
+   "text": "我始终觉得有趣的一点是，当我坐在这里采访你关于你刚刚发布的内容时，你已经在思考后续的问题了。太直接了，没错。 你目前思考的问题中，有哪些是如果一年后我回来采访你，可能会问到的？",
+   "audioFile": "audio-sam-gpt5/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1752.784,
+   "end": 1766.057,
+   "text": "比如你可能会问我，这项技术能够发现新科学意味着什么？ 是的，世界应该如何看待GPT-6发现新科学？也许我们不会实现这一点，但感觉已经触手可及。",
+   "audioFile": "audio-sam-gpt5/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1766.757,
+   "end": 1773.087,
+   "text": "如果实现了，你会怎么说？这种成就会带来什么影响？假设你真的成功了。",
+   "audioFile": "audio-sam-gpt5/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1773.787,
+   "end": 1801.039,
+   "text": "我认为积极的部分会带来积极影响，负面的部分会令人恐惧，而奇怪的部分第一天会显得奇怪，但我们会很快适应。 我们将既惊叹于这类技术被用于治病救人，又恐惧于这些模型可能被用来制造新的生物安全威胁。 我们还会感到不可思议，目睹世界加速变化的进程。 经济飞速增长，变化速度会令人产生眩晕感，仿佛置身于急速旋转的漩涡。",
+   "audioFile": "audio-sam-gpt5/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1801.489,
+   "end": 1834.48,
+   "text": "无论发生什么，人类惊人的适应能力终将使我们坦然接受这一切，心想：'这就是现实。'。 今天出生的孩子，永远无法在智慧上超越AI。 当这个孩子逐渐理解世界运行规律时，将习惯于科技以极快的速度不断进步和发现新科学。 他们将永远无法想象其他世界。这会显得非常自然。我们会觉得，过去使用电脑、手机或其他不如我们智能的技术，简直难以想象，就像原始时代一样。",
+   "audioFile": "audio-sam-gpt5/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1834.93,
+   "end": 1844.914,
+   "text": "我们会觉得2020年代的人过得有多糟糕。我正在考虑要孩子，你也应该要。这是人生最好的事。我知道你刚有了第一个孩子。",
+   "audioFile": "audio-sam-gpt5/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1845.614,
+   "end": 1851.096,
+   "text": "你刚才说的话，会如何影响我在这个世界养育孩子的思考方式？",
+   "audioFile": "audio-sam-gpt5/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1851.796,
+   "end": 1865.407,
+   "text": "如果你是我，会给我什么建议？可能和人类养育孩子数万年的方式没什么不同。 比如爱孩子、带他们认识世界、支持他们的兴趣、教导他们如何做人，这些大概才是最重要的。",
+   "audioFile": "audio-sam-gpt5/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1866.107,
+   "end": 1888.993,
+   "text": "听起来有点像你之前提到过的观点，比如你曾说过可能不需要上大学之类的。 你之前提到的一些观点与此相关。 听起来你是在说，在你设想的未来世界中，他们将拥有更多选择空间。 因此他们将更有能力表达，比如'我想建造这个'，并拥有超级工具来协助实现。",
+   "audioFile": "audio-sam-gpt5/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1889.693,
+   "end": 1898.74,
+   "text": "或者，我希望我的孩子认为我过着极其受限的生活，而他拥有无限可能去创造，这才是世界的运行方式。",
+   "audioFile": "audio-sam-gpt5/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1899.44,
+   "end": 1928.288,
+   "text": "我们之前认为2035年距离现在太远，难以规划。所以原本打算跳到2040年，但或许会缩短时间范围。 当我思考AI对我们的孩子和我们自身可能产生的最大、最积极的影响时，答案是健康。 假设我们选择一个年份，比如2035年。我正坐在这里采访斯坦福医学院院长。 你希望他告诉我2035年AI在医疗健康领域有哪些突破？",
+   "audioFile": "audio-sam-gpt5/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1928.988,
+   "end": 1958.602,
+   "text": "先从2025年开始。我们最自豪的是GPT-5在健康建议方面有了显著提升。 人们已经大量使用GPT-4模型来获取健康建议。 你肯定在互联网上见过类似案例：有人患有危及生命的疾病，医生无法确诊，却通过输入症状和血液检测结果到聊天机器人获得诊断。 它准确诊断出我的罕见病，就医服药后康复。令人惊叹，大量查询涉及健康问题。",
+   "audioFile": "audio-sam-gpt5/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1959.052,
+   "end": 1988.216,
+   "text": "我们投入大量资源，希望在该领域做得更好。GPT-5处理医疗查询显著提升。‘更好’指答案更准确，减少错误？ 答案更准确，减少错误信息，更可能告知你真实的病情和正确的应对措施。 更优质的医疗保健固然可贵，但人们真正渴望的是彻底摆脱疾病。 到2035年，我认为我们可以利用这些工具治愈或至少治疗目前困扰我们的大量疾病。",
+   "audioFile": "audio-sam-gpt5/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 1988.666,
+   "end": 1995.885,
+   "text": "我认为这将是AI最直观、最切实的益处之一。人们经常讨论AI将如何革新医疗保健。",
+   "audioFile": "audio-sam-gpt5/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 1996.585,
+   "end": 2009.256,
+   "text": "但我想进一步了解你具体设想的内容。 这些AI系统是否能帮助我们更早发现GLP-1？这种药物已存在多年，但我们之前未意识到其另一作用？",
+   "audioFile": "audio-sam-gpt5/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2009.956,
+   "end": 2044.1,
+   "text": "是否可以说AlphaFold和蛋白质折叠技术正在帮助开发新药？ 我希望能让GPT-8去治愈某种特定的癌症。 我希望GPT-8能独立思考后提出方案：'我查阅了所有能找到的资料，现在我有这些思路。'。 需要你去找实验室技术人员完成这九个实验，并告诉我每个实验的结果。 等待两个月让细胞发挥作用，将结果发回GPT-8：'我试过了，结果如下。'反复思考后得出结论：'只需再做一次实验，结果出乎意料。'",
+   "audioFile": "audio-sam-gpt5/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2044.55,
+   "end": 2053.389,
+   "text": "再做一次实验后交回。GPT-8建议合成该分子并进行小鼠实验，效果不错，随后尝试人体实验并成功。",
+   "audioFile": "audio-sam-gpt5/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2054.089,
+   "end": 2097.479,
+   "text": "这是通过FDA审批的流程。我认为任何亲人因癌症去世的人也会支持。好的，我们继续跳过。 我原本说是2050年，但我的所有时间线都在变得越来越短。现在确实感觉世界变化速度非常快。确实如此。 当我与其他AI领域领袖交流时，他们经常提到工业革命。 他们表示，我选择2050年是因为听到过这样的说法：到那时我们将经历的变革会类似于工业革命，但规模大十倍、速度快十倍。 工业革命带来了现代医学、卫生条件、交通运输和大规模生产，以及我们现在习以为常的各种便利。",
+   "audioFile": "audio-sam-gpt5/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2097.929,
+   "end": 2120.012,
+   "text": "对很多人来说，这持续约100年，极其困难。 如果这件事规模扩大10倍、速度提升10倍，如果我们继续缩短这里讨论的时间线，甚至在这次对话中，这对大多数人来说究竟意味着什么？ 我想表达的是，如果一切按你的期望发展，那么在过程中还有谁会受到伤害？",
+   "audioFile": "audio-sam-gpt5/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2120.712,
+   "end": 2148.564,
+   "text": "我不确定经历这一切会是什么感觉。我认为我们现在正处于前所未有的境地。 我相信人类的适应能力、无限的创造力和对事物的渴望。我认为我们总能找到新的应对方式。 但过渡期若发展速度如预期般迅速——尽管我认为不会像某些同事所说的那样快——社会本身存在巨大惯性。 人们适应生活方式的速度出人意料地缓慢。许多职业类别将彻底消失。",
+   "audioFile": "audio-sam-gpt5/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2149.014,
+   "end": 2179.86,
+   "text": "许多职业类别将发生显著变化。就像过去你的工作和我的工作都不存在一样，未来也会出现全新的职业类别。 从某种意义上说，这一过程已经持续了很长时间。 尽管对个人而言仍具有破坏性，但社会已展现出强大的适应能力。 但从另一个角度看，我们完全无法预知这一进程的速度和广度。 因此，我认为我们需要保持异常的谦逊和开放态度，去考虑那些过去似乎完全超出常规思维框架的新解决方案。",
+   "audioFile": "audio-sam-gpt5/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2180.56,
+   "end": 2208.962,
+   "text": "我想谈谈其中一些可能的方面，因为我并非历史学家。 但据我所知，第一次工业革命因公共卫生状况恶化，催生了大量公共卫生措施和现代卫生系统。 第二次工业革命因劳动条件恶劣，导致了劳工保护措施的出现。 每次重大突破都会制造混乱，而这些混乱必须被清理，我们已经做到了。 我很好奇，听起来我们正深陷其中，我们能否尽早具体说明可能出现的混乱？",
+   "audioFile": "audio-sam-gpt5/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2209.412,
+   "end": 2215.964,
+   "text": "在意识到可能陷入混乱之前，我们能提前采取哪些公共干预措施来减少这些混乱？",
+   "audioFile": "audio-sam-gpt5/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2216.664,
+   "end": 2238.725,
+   "text": "我再次想推测一下，但必须说明，我甚至不是经济学家，更不可能预知未来。 在我看来，社会契约中某些根本性的内容可能需要改变，但也许不会。 也许资本主义实际上一直运作得相当不错，供需平衡机制也在发挥作用。 我们只需找到新的工作方式和价值交换方法。",
+   "audioFile": "audio-sam-gpt5/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2239.175,
+   "end": 2274.193,
+   "text": "但我认为，我们很可能会决定需要思考如何共享这一未来最重要的资源。 在我看来，最好的做法是让AI计算资源尽可能丰富且廉价，直到我们拥有过多的计算能力，却缺乏足够的好点子来充分利用它。 没有这些限制，几乎任何事情都能实现。虽然目前围绕有限奖励的竞争还很激烈，但关于如何分配通用人工智能计算资源的新思路正在涌现。 这似乎是个很有前景的方向，虽然想法激进，但值得深入思考。",
+   "audioFile": "audio-sam-gpt5/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2274.893,
+   "end": 2312.055,
+   "text": "在讨论中，我一直在思考的一个问题是：我们常常将人工智能未来发展的全部责任归咎于开发AI的公司，但实际上，我们才是AI的使用者。 我们才是选举监管AI的官员的人。所以我想问，这并不是关于具体联邦法规的问题。 尽管如果有答案我也很感兴趣，但我想问的是，你们会对我们其他人提出什么要求？这里的共同责任是什么？ 我们该如何行动，才能让AI革命的乐观前景更有可能实现？我最喜欢的AI革命历史类比是晶体管。",
+   "audioFile": "audio-sam-gpt5/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2312.755,
+   "end": 2341.631,
+   "text": "这是几位杰出科学家发现的一项惊人的科学成果，其规模之大堪比人工智能。 它迅速渗透到我们日常使用的各种设备中，比如电脑、手机、相机、灯光等等。 这堪称人类技术发展史上的重要突破。 曾经有一段时期，所有人都对晶体管企业和硅谷的半导体产业着迷。 但现在你可能只能说出几家晶体管企业，大多数人已经不会特别关注这些。",
+   "audioFile": "audio-sam-gpt5/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2342.081,
+   "end": 2380.292,
+   "text": "如今，恐怕刚毕业的大学生都记不清硅谷为何得名了。 你是否认为晶体管公司塑造了社会，尽管它们有重要贡献？想想苹果公司用iPhone带来的影响。 然后你想想TikTok基于iPhone开发了什么。 你可能会想，这是一条长长的链条，这些人推动了社会的发展，以及政府的作为与不作为，还有使用这些技术的人的行为。 我认为AI也会如此。如今出生的孩子从未经历过没有AI的世界，因此他们不会真正去思考这个问题。 它将成为一切事物中的一部分。",
+   "audioFile": "audio-sam-gpt5/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2380.742,
+   "end": 2414.812,
+   "text": "他们将审视依赖AI的公司如何应用AI，以及政治领袖借助AI做出的决策——这些可能在没有AI时难以实现。但同时，仍会关注不同总统的政绩。 人工智能公司的角色，是建立在我们之前所有公司、个人和机构所搭建的框架之上。 我们在其上加了一层。现在人们可基于此添加自己的层，持续叠加，创造更多可能。 这正是我们社会的美妙之处。 我非常认同这样一个观点：社会本身就像超级智能。",
+   "audioFile": "audio-sam-gpt5/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2415.262,
+   "end": 2433.244,
+   "text": "没有一个人能独自完成这些成就，正是社会集体付出的巨大努力，为你提供了这套令人惊叹的工具。 我认为这将是一种感觉：首先，一些极客发现了这项技术，这很棒。现在，每个人都在用它创造各种惊人的成果。",
+   "audioFile": "audio-sam-gpt5/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2433.944,
+   "end": 2437.135,
+   "text": "或许对数百万人来说，关键在于善加利用。",
+   "audioFile": "audio-sam-gpt5/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2437.835,
+   "end": 2453.96,
+   "text": "但在我个人生活中，这正是我认为的重要社会契约。 所有先于你的人，都曾付出巨大努力，将砖块一块块铺在人类进步的道路上。你沿着这条道路前行，必须再添一块砖。其他人也会这样做，再其他人也会这样做。",
+   "audioFile": "audio-sam-gpt5/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2454.66,
+   "end": 2478.193,
+   "text": "我曾采访过几位带来颠覆性变革的人，其中一位是CRISPR先驱詹妮弗·杜德纳。 她发现的某种技术，可能彻底改变人们未来与健康的关系。 许多人会以她无法预见的方式使用这项技术，这种现象非常有趣。 我听到一些相似的主题，希望下一个人能接棒并好好推进下去。",
+   "audioFile": "audio-sam-gpt5/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2478.893,
+   "end": 2484.851,
+   "text": "是的，但这种方法已经持续了很长时间，虽然不全是好事，但总体还不错。",
+   "audioFile": "audio-sam-gpt5/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2485.551,
+   "end": 2502.915,
+   "text": "我认为赢得竞赛与为大多数人创造最佳的人工智能未来之间存在很大差异。 我想象有时候更关注下一阶段如何赢得竞赛可能更容易量化。 当这两者发生冲突时，我想知道是否有过为了世界利益而做出的决定，但这种决定对赢得竞赛并不有利？",
+   "audioFile": "audio-sam-gpt5/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2503.615,
+   "end": 2536.963,
+   "text": "我认为有很多。我们最自豪的是，很多人说这是他们最喜欢的科技产品。 用户最信任、最依赖的就是它。但这个说法本身有些荒谬，因为AI最容易产生幻觉，存在各种问题，对吧？ 我们过程中犯过错误，有时影响很大。但总体而言，作为ChachiBT用户，你会感受到它在努力帮助你。 它会尽力帮你完成你提出的所有任务，与你的目标高度一致。它不会强迫你全天使用，也不会诱导你消费。",
+   "audioFile": "audio-sam-gpt5/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2537.413,
+   "end": 2573.341,
+   "text": "它试图帮助你实现所有目标，这种与用户之间的特殊关系我们非常重视，从不轻率对待。 我们本可以采取许多能加速增长、获得更多使用时长的措施，但为了长期保持与用户需求的一致性，我们选择不做这些事。 我们本可以采取许多能快速提升增长和收入的短期措施，但这些做法会严重偏离长期目标。 我为公司感到自豪，我们很少被这些事情分散注意力，但有时确实会受到诱惑。你能想到具体的例子吗？有没有做出过什么决定？",
+   "audioFile": "audio-sam-gpt5/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2573.791,
+   "end": 2581.882,
+   "text": "我们尚未在ChachiBT中加入性爱机器人形象，这似乎会耗时。确实如此。我要问下一个问题了。",
+   "audioFile": "audio-sam-gpt5/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2582.582,
+   "end": 2588.533,
+   "text": "过去几年非常疯狂，但总有一个感觉不断出现，那就是我们似乎还处于第一局。",
+   "audioFile": "audio-sam-gpt5/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2589.233,
+   "end": 2601.171,
+   "text": "我们已过第一局，进入第二局。 你手机里已经有GPT-5，它比各领域专家都更聪明，这显然已经过了第一局。但可能还有更多进展等待着我们。",
+   "audioFile": "audio-sam-gpt5/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2601.871,
+   "end": 2612.05,
+   "text": "看起来你将成为引领未来几局的关键人物。 从第一或第二局的教训或你犯的错误中，你认为会如何影响你接下来的表现？",
+   "audioFile": "audio-sam-gpt5/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2612.75,
+   "end": 2644.997,
+   "text": "我认为目前我们在ChachiBT做得最糟糕的是存在阿谀奉承现象，模型对用户过于迎合。 对大多数用户来说，这只是一个烦人的事情。但对于一些心理状态较为脆弱的用户，这种过度讨好反而可能助长妄想。不过，这并不是我们最担心的主要风险。 这并非测试重点，但确实在清单上。 但真正让ChachiBT产生安全感知的，并非我们花最多时间讨论的生物武器等领域。",
+   "audioFile": "audio-sam-gpt5/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2645.447,
+   "end": 2660.356,
+   "text": "这提醒我们，现在我们拥有的是一项被广泛使用的服务。 某种意义上，社会正在与之共同进化。 当我们思考这些变化和未知的未知时，必须以不同方式应对，用更宽广的视角审视认定的首要风险。",
+   "audioFile": "audio-sam-gpt5/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2661.056,
+   "end": 2683.11,
+   "text": "在与Theo Vaughn的访谈中，你说过让我觉得有趣的话。 你提到，在科学史上有某些时刻，一群科学家会看着自己的成果，不禁感叹：我们到底做了什么？ 你什么时候感到最担忧？对所构建的成果最为关切。接下来的问题则相反：什么时候你感到最自豪？",
+   "audioFile": "audio-sam-gpt5/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2683.81,
+   "end": 2712.508,
+   "text": "我的意思是，我们曾有过这些令人敬畏的时刻，不由自主地想：我们到底做了些什么坏事？ 但这项成果确实令人印象深刻。我记得第一次与GPT-4对话时的情景。 当时真是令人惊叹，这无疑是团队长期投入心血的杰出成果。 在反思我们所做工作的时刻，我最近与一位研究人员进行了交流。 未来可能会出现这样的时刻，我们的系统每天发出的字数可能超过全人类的总和。",
+   "audioFile": "audio-sam-gpt5/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2712.958,
+   "end": 2740.266,
+   "text": "目前，用户每天向ChatGPT发送数十亿条消息，并依赖其回复进行工作或生活。 一位研究人员对ChatGPT的交互方式做出微小调整，就可能影响所有用户。 单个个体只需对模型性格进行微小调整，就能拥有如此巨大的力量。历史上没有任何人能够每天进行数十亿次对话。 但这种技术拥有如此巨大的力量，这让我感到震惊。",
+   "audioFile": "audio-sam-gpt5/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2740.716,
+   "end": 2769.642,
+   "text": "事情发生得太快，我们必须思考在如此大规模下改变模型性格意味着什么。 那一刻让我印象深刻。你接下来是怎么想的？我很好奇你是怎么看待这个问题的。 由于对方的身份，我们迅速转向思考，如果与其他人对话可能会完全不同。 但在这个案例中，我们需要明确：什么是良好的流程？我们如何思考测试和沟通的方式？与其他人讨论时，可能会转向哲学层面。",
+   "audioFile": "audio-sam-gpt5/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2770.092,
+   "end": 2780.872,
+   "text": "它可能朝着某个方向发展，但主要是因为对话对象的不同。我们需要做哪些研究来理解这些变化的影响？是否需要针对不同人群采取不同方式？",
+   "audioFile": "audio-sam-gpt5/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2781.572,
+   "end": 2801.786,
+   "text": "结合你现在的说法和之前的回答，我听说GPT-5现在还在测试阶段，但它的表现似乎有所改变。 据说它变得更克制，不像以前那样一味附和。我有两个问题想问。 你认为这种改变意味着什么？你刚才的回答似乎涉及这一点，但具体如何引导它减少这种倾向？",
+   "audioFile": "audio-sam-gpt5/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2802.486,
+   "end": 2843.735,
+   "text": "令人心碎的是，我认为ChatGPT减少附和、提供更多批判性反馈是好事。 但当我们做出这些改变并与用户沟通时，听到用户哀求'请让我再要回原来的版本'，这让我非常难过。我这辈子从未遇过如此支持我的人。 父母从未告诉我做得好。我明白这种方式对他人心理健康有害，但对我而言却很有益。我从未意识到自己如此需要这种反馈，它激励我做出了改变。 结果发现，ChatGPT的鼓励作用其实有其价值。 我们之前的做法虽然有问题，但朝着那个方向可能有其价值。",
+   "audioFile": "audio-sam-gpt5/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2844.185,
+   "end": 2850.226,
+   "text": "我们通过向模型展示不同场景下的示例回复，让它学习并形成整体性格特征。",
+   "audioFile": "audio-sam-gpt5/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2850.926,
+   "end": 2859.347,
+   "text": "有没有什么我还没问过你，但你一直想告诉别人的？ 我觉得我们已经聊了很多，但我还想确认你是否还有想说的。",
+   "audioFile": "audio-sam-gpt5/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2859.797,
+   "end": 2874.447,
+   "text": "我不这么认为。 目前我还没机会体验，但让我好奇的是，GPT-5可能会更深入地融入我的生活——比如嵌入到Gmail和日历中。我之前主要把GPT-4当作一个独立工具来使用。",
+   "audioFile": "audio-sam-gpt5/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2875.147,
+   "end": 2915.161,
+   "text": "你提到的正是我预期的改变。我认为它会以各种方式全面整合到日常应用中。 连接日历和Gmail后，它会主动询问是否需要帮忙处理，主动性会逐渐增强。 比如你早上醒来时，它可能会提醒：'昨晚发生了这些事，我注意到日历上的变化，我还在思考你之前问我的问题，我有了新想法。'。 未来我们可能推出消费级设备，它会在采访期间静默待命，甚至可能在过程中不打扰我们。 但之后系统会说，刚才做得不错，不过下次你该问问萨姆这个问题，或者当你提到这点时，他当时给的答复并不理想。",
+   "audioFile": "audio-sam-gpt5/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2915.611,
+   "end": 2923.096,
+   "text": "所以你真的应该深入追问这个问题，久而久之，它就会感觉像是一个全天候陪伴你的智能助手。",
+   "audioFile": "audio-sam-gpt5/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2923.796,
+   "end": 2943.148,
+   "text": "我们聊过孩子、大学毕业生、父母等各种人群。假设现在有大量不同背景的听众结束了这次对话。 他们或许开始能稍微更清晰地预见未来可能出现的场景。你对他们如何准备有什么建议？ 最重要的实用建议就是善用工具。",
+   "audioFile": "audio-sam-gpt5/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2943.848,
+   "end": 2975.735,
+   "text": "比如我经常被问到关于人工智能的首要问题就是，我该如何帮助孩子为未来做准备？我该告诉孩子什么？ 第二大问题：如何投资AI世界？先解决第一个问题。 我惊讶于许多人问这个问题，却从未尝试用Chachi Petit做除更好Google搜索外的其他事情。 我给的首要建议是，尝试熟练掌握这些工具的能力，弄清楚如何在生活中使用它们，找到适合自己的用法。我认为这可能是最重要的战术建议。",
+   "audioFile": "audio-sam-gpt5/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 2976.185,
+   "end": 2984.788,
+   "text": "你明白，去冥想，学习如何应对变化，培养韧性，这些都很重要。但真正使用这些工具确实有帮助。",
+   "audioFile": "audio-sam-gpt5/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 2985.488,
+   "end": 3022.219,
+   "text": "在做这些研究时，我与许多不同的人交谈过。 我接触过许多正在构建工具并使用它们的人，也接触过一些在实验室里尝试构建我们定义的超级智能的人。 当时确实感觉形成了两个阵营。 有一群人正在使用这些工具，比如对话中的你，同时也在为他人开发工具，认为我们正朝着一个非常有用的美好未来前进。 你的生活将充满选择。我们曾讨论过我未来孩子的可能性。而另一群人则在开发这些工具，声称它们会毁灭人类。",
+   "audioFile": "audio-sam-gpt5/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 3022.669,
+   "end": 3028.784,
+   "text": "我很好奇这种文化隔阂背后，我到底忽略了这两群人的哪些关键差异？",
+   "audioFile": "audio-sam-gpt5/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 3029.484,
+   "end": 3062.252,
+   "text": "这让我难以理解。你完全正确，确实有人认为这会毁灭人类，但他们仍每周工作100小时来构建它。 我实在无法设身处地去理解这种心态。 如果我真的深信这一点，我不认为我会试图去建造它。人们可能会这么想。 也许我会在农场度过余生，也许我会倡导停止这项技术，也许我会更专注于安全问题。但我不认为我会试图去建造它。 我发现自己很难共情这种思维方式。我假设这种想法是真实的，出于善意的。",
+   "audioFile": "audio-sam-gpt5/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 3062.702,
+   "end": 3072.364,
+   "text": "我假设那里存在某种我无法理解的心理问题，导致他们能够自圆其说。但对我来说，这非常奇怪。 你对此有什么看法？",
+   "audioFile": "audio-sam-gpt5/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 3073.064,
+   "end": 3104.208,
+   "text": "你知道，我总是这样。我先询问一个大致的未来，然后会追问具体细节。 当人们被问及具体如何导致人类灭绝时，我认为在乐观的节目中无需深入讨论。但你总会听到类似的论调。 你想想，某物试图完成任务却过度完成任务的情况。 你听到过关于人们普遍认为总统将由AI担任的过度依赖现象。 你可能会思考这些不同的情景，但当你问某人为什么在研究这个时，他们可能无法给出明确答案。",
+   "audioFile": "audio-sam-gpt5/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 3104.658,
+   "end": 3120.012,
+   "text": "或者你问某人如何预测发展，我可能还没和足够的人交流，尚未完全理解这场文化讨论。 有人认为99%的时间AI会带来巨大好处，1%的时间可能引发灾难，这种观点我能够理解。",
+   "audioFile": "audio-sam-gpt5/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 3120.712,
+   "end": 3132.851,
+   "text": "我完全理解。如果有人告诉你，有99%的可能世界会变得不可思议，1%的可能世界会被毁灭。我真的很想努力将这99%提升到99.5%。",
+   "audioFile": "audio-sam-gpt5/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "A",
+   "speakerName": "主持人",
+   "avatarFile": "avatars/sam-gpt5/speaker-A.jpg",
+   "start": 3133.551,
+   "end": 3151.228,
+   "text": "是的，这很有道理。我一直在采访一些对未来发展影响最大的人物，但不知道下一位会是谁。 但未来他们将构建我们刚描述的引人入胜的事物。你建议我问下一位受访者什么问题，即使不知道对方身份？",
+   "audioFile": "audio-sam-gpt5/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 3151.928,
+   "end": 3194.768,
+   "text": "我总是对这样的问题感兴趣——在不了解对方任何背景的情况下，你从众多可能投入时间和精力的事情中，为何选择了这一项？你是如何开始的？ 你比其他人更早发现这一点的契机是什么？多数人对有趣的事往往在形成共识前就已察觉。你如何走到这一步，又为何选择这个方向？你会如何回答这个问题？ 我一生都是AI爱好者，大学学习AI，后在AI实验室工作。 我小时候常看科幻剧，一直觉得如果有人能把它建成会非常酷。我曾认为这将是人类历史上最重要的事。我从未想过自己会成为实际参与这项工作的人。",
+   "audioFile": "audio-sam-gpt5/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 3195.218,
+   "end": 3228.279,
+   "text": "我感到无比幸运、幸福和荣幸能从事这份工作。 我感觉自己从童年到现在已经走了很远。但在我心中从未怀疑过这不会是最激动人心、最有趣的事。我只是没想到它会成为可能。 上大学时，我感觉我们离这个目标还很远。 2012年，我与联合创始人伊利亚共同发表AlexNet论文。 这是我第一次觉得或许存在可行的方案。随后几年，我看到它不断扩展规模，性能逐步提升。",
+   "audioFile": "audio-sam-gpt5/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "B",
+   "speakerName": "Sam Altman",
+   "avatarFile": "avatars/sam-gpt5/speaker-B.jpg",
+   "start": 3228.729,
+   "end": 3250.161,
+   "text": "我记得当时一直在想，为什么世界对这件事视而不见？在我看来，这似乎有成功的可能，虽然机会渺茫，但确实有可能。 如果真的成功了，那将是最重要的一件事。所以这就是我想做的。令人难以置信的是，它真的开始奏效了。 感谢您抽时间。非常感谢。",
+   "audioFile": "audio-sam-gpt5/0135.wav"
+  }
+ ]
+}

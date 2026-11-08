@@ -1,0 +1,317 @@
+[
+ {
+  "out": "work/broll/zq-08-jixia/s1_0.png",
+  "seed": 1800,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:稷下学宫全景:高门大第,学子云集,官办大学的恢弘气象。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s1_1.png",
+  "seed": 1801,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:上大夫待遇:学者受赐豪宅车马,弟子羡慕,养士的诚意。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s1_2.png",
+  "seed": 1802,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:稷门之外:学宫因稷门而得名,门内书声琅琅,门外车水马龙。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s1_3.png",
+  "seed": 1803,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:一百五十年:时间流逝的意象,学宫几代学子进出,薪火相传。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s1_bg.png",
+  "seed": 1854,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s2_0.png",
+  "seed": 1805,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:孟子来访:儒家亚圣步入学宫,学者们起身相迎,巨星驾到。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s2_1.png",
+  "seed": 1806,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:荀子三为祭酒:儒学大师三次担任学宫之长的庄重场面。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s2_2.png",
+  "seed": 1807,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:邹衍谈天:阴阳家高谈五德终始,听众听得入迷,夸大的手势。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s2_3.png",
+  "seed": 1808,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:公孙龙诡辩:白马非马的辩论现场,听者皱眉思考。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s2_bg.png",
+  "seed": 1859,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s3_0.png",
+  "seed": 1810,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:不治而议论:学者自由辩论国策的场景,朝廷官员在旁记录不加干涉。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s3_1.png",
+  "seed": 1811,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:批评国君:学者直言齐王之失,齐王面色不佳却忍住,宽容的雅量。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s3_2.png",
+  "seed": 1812,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:涨工资:批评者获赐金与上大夫待遇,言论自由的奖赏。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s3_3.png",
+  "seed": 1813,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:招贤的名声:天下贤士闻讯纷纷来投,学宫门庭若市。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s3_bg.png",
+  "seed": 1864,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s4_0.png",
+  "seed": 1815,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:白马非马:公孙龙牵白马立于高台辩难,听众抓耳挠腮。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s4_1.png",
+  "seed": 1816,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:鸡三足之辩:名家的诡辩手势,逻辑游戏的现场。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s4_2.png",
+  "seed": 1817,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:性善恶之辩:学者们激辩人性本善本恶,面红耳赤。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s4_3.png",
+  "seed": 1818,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:辩论规则:主持人执简宣告,辩者各就各位,学术的仪式感。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s4_bg.png",
+  "seed": 1869,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s5_0.png",
+  "seed": 1820,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:管子成书:学者们将学派文集汇编成书,托名管仲,集体智慧。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s5_1.png",
+  "seed": 1821,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:荀子成型:礼法并重的思想在荀子笔下成形,儒法的桥梁。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s5_2.png",
+  "seed": 1822,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:五德终始:邹衍以五行相生相克解释王朝更替,王朝理论的源头。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s5_3.png",
+  "seed": 1823,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:诸子合流:各派典籍并列书架,思想在学宫交融的意象。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s5_bg.png",
+  "seed": 1874,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s6_0.png",
+  "seed": 1825,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:五国破齐:乐毅联军攻入临淄,学宫学者仓皇四散,黄金时代落幕。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s6_1.png",
+  "seed": 1826,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:学宫荒废:院落杂草丛生,书案蒙尘,几卷竹简遗落。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s6_2.png",
+  "seed": 1827,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:齐襄王复办:重建的学宫人气不再,学者稀落,盛景难再。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s6_3.png",
+  "seed": 1828,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:土壤之思:凋零的学宫与远方新兴的秦国宫室对比,思想依附土壤。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s6_bg.png",
+  "seed": 1879,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s7_0.png",
+  "seed": 1830,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:吕不韦悬赏:千金改一字的布告,学者围观《吕氏春秋》,最后的盛举。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s7_1.png",
+  "seed": 1831,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:焚书之令:秦吏收缴民间典籍付之一炬,以吏为师,百家落幕。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s7_2.png",
+  "seed": 1832,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:埋藏典籍:有学者冒死将竹简藏入井壁地窖,保存火种。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s7_3.png",
+  "seed": 1833,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:四百年后的回响:魏晋清谈的名士形象,下一种声音的预告。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s7_bg.png",
+  "seed": 1884,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s8_0.png",
+  "seed": 1835,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:乱世竞争:列国地图上学者流动的意象,竞争催生思想。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s8_1.png",
+  "seed": 1836,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:供养宽容:齐王与学者对坐的画像,黄金时代的两要素。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s8_2.png",
+  "seed": 1837,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:稷下残迹:今天淄博的考古遗址地标,后人凭吊。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s8_3.png",
+  "seed": 1838,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:争鸣永驻:现代学术讲堂的画面,百家争鸣精神的延续。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s8_bg.png",
+  "seed": 1889,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s9_0.png",
+  "seed": 1840,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:淳于髡出场:其貌不扬的辩士立于殿中,君王与群臣轻视的目光。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s9_1.png",
+  "seed": 1841,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:一斗一石:淳于髡笑谈酒量,君王举杯的手停在半空,若有所悟。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s9_2.png",
+  "seed": 1842,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:酒极则乱:撤下夜宴的场面,烛火渐熄,讽谏成功。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s9_3.png",
+  "seed": 1843,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以朱砂红、赭石、青瓷绿点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国战国时代(约两千三百年前,诸子百家争鸣)。场景:一句话的力量:淳于髡离宫的背影,身后齐王目送,智者的分量。竹简上不出现任何文字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/zq-08-jixia/s9_bg.png",
+  "seed": 1894,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm light beige handmade paper background, extremely subtle bamboo slip strip texture fading in from the left and right edges, flat, minimal, clean empty center area, ancient Chinese parchment mood, no objects, no text, no letters, no watermark."
+ }
+]

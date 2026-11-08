@@ -1,0 +1,485 @@
+{
+  "title": "Hinton 访谈 · 中文播客(豆包翻译版)",
+  "chapters": [
+    {
+      "id": 0,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 0,
+      "end": 28.28,
+      "text": "能有机会和杰弗里·辛顿对话，我真的特别开心。我关注他的研究很多年了，但这是我们第一次真正碰面。所以对我来说，这期《事实本源》播客算得上一大亮点。欢迎你，杰夫。\n\n非常感谢。对我而言，这同样是难得的机会",
+      "audioFile": "audio_doubao/0000.wav"
+    },
+    {
+      "id": 1,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 28.58,
+      "end": 37.98,
+      "text": "对我来说这同样是个难得的机会。你擅长一个领域，我精通另一个领域，能碰面交流非常好。这恰恰是关键所在。",
+      "audioFile": "audio_doubao/0001.wav"
+    },
+    {
+      "id": 2,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 38.28,
+      "end": 78.64,
+      "text": "要说融合，这就是最典型的例子。我想先聊聊，你最近频频登上新闻。不过，真正让我想要和你对话的，是你在《60分钟》节目里和斯科特·佩尔的访谈。你当时提到，医疗领域显然能收获巨大益处。人工智能解读医学影像的",
+      "audioFile": "audio_doubao/0002.wav"
+    },
+    {
+      "id": 3,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 78.94,
+      "end": 111.18,
+      "text": "要说交汇点，这再合适不过了。我想就从这里切入。当然，你最近频繁登上新闻版面，但真正促使我想要和你交流的，是你做客《60分钟》，与斯科特·佩尔的那期访谈。你当时提到，医疗领域显然能收获巨大效益。人工智能",
+      "audioFile": "audio_doubao/0003.wav"
+    },
+    {
+      "id": 4,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 111.48,
+      "end": 121.56,
+      "text": "多年以来，一直都有定量构效关系这门学科。该学科主要用于预测某种化学物质能否和目标靶点结合，而基本上，他直接颠覆了这个领域。",
+      "audioFile": "audio_doubao/0004.wav"
+    },
+    {
+      "id": 5,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 121.86,
+      "end": 164.22,
+      "text": "有意思的是，医疗、医药以及生命科学领域，在当下Transformer模型的人工智能浪潮里，走出了一条相对独立的发展道路。当然，这一切还要追溯到你当年推动深度学习、深度神经网络发展的那些里程碑式研究。不",
+      "audioFile": "audio_doubao/0005.wav"
+    },
+    {
+      "id": 6,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 164.52,
+      "end": 177.64,
+      "text": "当然还有另一个例子，来自你的同事德米斯·哈萨比斯以及谷歌深度思维团队的其他人，这项技术带来的影响要更为",
+      "audioFile": "audio_doubao/0006.wav"
+    },
+    {
+      "id": 7,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 177.94,
+      "end": 188.38,
+      "text": "这又是一个典型案例，出自你的同行，谷歌深度思维的德米斯·哈萨比斯等人之手，这项成果展现出的前景要更加",
+      "audioFile": "audio_doubao/0007.wav"
+    },
+    {
+      "id": 8,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 188.68,
+      "end": 233.0,
+      "text": "更优秀的家庭医生。这点确实值得重视，由此我们聊到一篇昨天刚发布的预印本论文。有意思的是，发布这篇文章的预印本平台阿克西夫，通常并不大量刊载医学预印本。论文出自谷歌团队，他们后来告诉我，研究使用的是一款",
+      "audioFile": "audio_doubao/0008.wav"
+    },
+    {
+      "id": 9,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 233.3,
+      "end": 284.62,
+      "text": "更出色的家庭医生。这一点非常关键，由此我们聊到昨天刚发布的一篇预印本论文。论文发布在预印本平台阿克西夫，有意思的是，这个平台平时很少刊发医学类预印本。研究由谷歌团队完成。他们后来告诉我，实验用的是一款",
+      "audioFile": "audio_doubao/0009.wav"
+    },
+    {
+      "id": 10,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 284.92,
+      "end": 323.72,
+      "text": "说回这份报告，2016年我做过一个大胆但错误的预测：五年之内，神经网络解读医学影像的能力会超越放射科医生。这句话有时会被断章取义。我的本意是解读影像，而不是包揽放射科医生的全部工作。我当时确实预估错了",
+      "audioFile": "audio_doubao/0010.wav"
+    },
+    {
+      "id": 11,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 324.02,
+      "end": 346.34,
+      "text": "经过微调的模型。我记得它的微调方式和医帕姆2略有区别。单看大语言模型本身，表现似乎已经优于内科医生。但更有意思的是，内科医生借助大语言模型之后，诊疗水平会大幅提升。如果我没记错，使用大语言模型时，医生",
+      "audioFile": "audio_doubao/0011.wav"
+    },
+    {
+      "id": 12,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 346.64,
+      "end": 378.8,
+      "text": "模型，之后又做了微调。我记得它的微调方式和医疗帕姆2略有区别。单看大语言模型本身，表现已经优于内科医生。但更有意思的是，内科医生借助大模型之后，自身的诊疗水平也大幅提升。我印象里，医生使用大模型时，诊",
+      "audioFile": "audio_doubao/0012.wav"
+    },
+    {
+      "id": 13,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 379.1,
+      "end": 389.3,
+      "text": "想必你也清楚，即便到现在，它已经能够大致预判病情预后情况。我还了解到一点",
+      "audioFile": "audio_doubao/0013.wav"
+    },
+    {
+      "id": 14,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 389.6,
+      "end": 398.48,
+      "text": "想必你也清楚，虽然没能在五年内实现，但如今的发展态势已经和你当年的预测相当接近。我从中悟出一点",
+      "audioFile": "audio_doubao/0014.wav"
+    },
+    {
+      "id": 15,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 398.78,
+      "end": 441.34,
+      "text": "风险就会很高。如果训练数据没有经过严谨管控，医生过度信任这类模型会相当危险。\n\n说回这份新报告，大语言模型表现如此出色，会不会是因为《新英格兰医学杂志》里的部分病例，本身就被纳入了预训练数据集？这一直",
+      "audioFile": "audio_doubao/0015.wav"
+    },
+    {
+      "id": 16,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 441.64,
+      "end": 454.28,
+      "text": "回到刚才的话题，这份新报告里大语言模型表现如此出色，会不会部分原因在于，《新英格兰医学杂志》里的部分病例",
+      "audioFile": "audio_doubao/0016.wav"
+    },
+    {
+      "id": 17,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 454.58,
+      "end": 464.94,
+      "text": "回到刚才的话题，这份新报告里大语言模型表现亮眼，有没有一种可能，部分《新英格兰医学杂志》的病例本身就被用于预训练了？",
+      "audioFile": "audio_doubao/0017.wav"
+    },
+    {
+      "id": 18,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 465.24,
+      "end": 499.84,
+      "text": "各类主题，还有文本中可能出现的大量不同论证要点。如果我给出一个全新主题，要求模型完成五项指定任务，训练数据里几乎不可能存在围绕该主题同时实现这五项能力的内容。倘若模型做到了，那我们就有充分理由相信这是",
+      "audioFile": "audio_doubao/0018.wav"
+    },
+    {
+      "id": 19,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 500.14,
+      "end": 543.5,
+      "text": "大量主题，再搭配文本里需要呈现的多种表达效果。如果我给出一个陌生主题，要求模型同时展现五种表达能力，训练数据里几乎不可能刚好存在同一主题且同时满足这五项要求的样本。倘若模型做到了，那我们就有充分理由相",
+      "audioFile": "audio_doubao/0019.wav"
+    },
+    {
+      "id": 20,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 543.8,
+      "end": 578.04,
+      "text": "我站在理性的这一边，我认为模型确实具备理解能力。你可以给它出一些需要做简单推理的测试题。不过现在这件事变难了，毕竟GPT‑4可以检索网络内容。我要是把测试题公开出来，别人就有可能已经拿同样的题目喂给过",
+      "audioFile": "audio_doubao/0020.wav"
+    },
+    {
+      "id": 21,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 578.34,
+      "end": 610.7,
+      "text": "粉刷已经白色的房间，你不需要粉刷黄色房间，因为它们会自然褪成白色，但需要立即粉刷蓝色房间 第一次给它这个任务时，它从未遇到过这类问题，这类问题需要基本的常识推理，比如你必须 理解如果黄色房间一年后会褪",
+      "audioFile": "audio_doubao/0021.wav"
+    },
+    {
+      "id": 22,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 611.0,
+      "end": 648.68,
+      "text": "看法。我留意到你和扬之间的来回辩论，我知道这属于友好的观点交锋。当然，你对他的职业生涯影响深远，还有许多如今身处行业一线的人也是如此，比如开放人工智能的伊利亚，他近期也因为公司内部风波频繁出现在新闻里",
+      "audioFile": "audio_doubao/0022.wav"
+    },
+    {
+      "id": 23,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 648.98,
+      "end": 674.66,
+      "text": "我觉得这个说法最初并非完全出于好意。我记得，这个称呼是吴恩达在英国温莎镇的一场小型研讨会上提出来的。当时刚结束一场会议，会上我总打断其他人发言。我是这场研讨会举办机构的负责人。我想，当时取这个称呼，是",
+      "audioFile": "audio_doubao/0023.wav"
+    },
+    {
+      "id": 24,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 674.96,
+      "end": 709.56,
+      "text": "我很喜欢乔希·罗斯曼为《纽约客》撰写的人物专访，我之前和他有过合作。他专程去到加拿大，在你的住处和你相处了一段时间。文章深度挖掘了很多我此前并不了解的你的人生经历。我完全不知道你的妻子曾饱受癌症折磨，",
+      "audioFile": "audio_doubao/0024.wav"
+    },
+    {
+      "id": 25,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 709.86,
+      "end": 759.74,
+      "text": "没错，我想到很多。约书亚确实文笔出众，很感谢他完成那篇报道。我想到大语言模型有一个很好的应用方向，可以做一些差异化微调，生成适配场景的语言，用来帮助癌症患者的家属。癌症病程很长，属于耗时最久的疾病之一",
+      "audioFile": "audio_doubao/0025.wav"
+    },
+    {
+      "id": 26,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 760.04,
+      "end": 776.52,
+      "text": "向我解释情况，说明有哪些选择，以及某种看似不太靠谱的治疗是否值得尝试 有趣的是，他得出结论：目前缺乏支持该疗法的证据，但如果是他本人，他会选择这么做，于是我们进行了治疗 要特别注意不要伤及心脏，因为用",
+      "audioFile": "audio_doubao/0026.wav"
+    },
+    {
+      "id": 27,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 776.82,
+      "end": 813.7,
+      "text": "跟我解释病情、可选方案，还有一些听上去不太靠谱的疗法到底值不值得尝试。有意思的是，他认为这种疗法缺乏有力证据，但如果换作是他自己，他会选择试一试，于是我们就接受了这项治疗。\n\n疗法的原理是用电击肿瘤，",
+      "audioFile": "audio_doubao/0027.wav"
+    },
+    {
+      "id": 28,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 814.0,
+      "end": 827.68,
+      "text": "这点说得很关键，很高兴你提到我的朋友戴维·纳亚尔，他是一位非常出色的医生。这就引出了直觉这个话题，人类的直觉对比大语言模型的能力，你不觉得二者其实可以互补吗？",
+      "audioFile": "audio_doubao/0028.wav"
+    },
+    {
+      "id": 29,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 827.98,
+      "end": 839.1,
+      "text": "这点说得很关键，很高兴你提到我的朋友戴维·内勒，他是一位非常杰出的医生。这就聊到直觉这个话题，人类的直觉和大语言模型的能力，你不觉得二者其实可以互为补充吗？",
+      "audioFile": "audio_doubao/0029.wav"
+    },
+    {
+      "id": 30,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 839.4,
+      "end": 881.8,
+      "text": "大体原理和现在这些模型是相通的。如今的模型更复杂，因为引入了注意力机制，但核心逻辑没变：让模型自行生成词语的特征，学习不同特征之间的关联，以此预测下一个词的特征。当初提出这套机制，本意就是用来理解人脑",
+      "audioFile": "audio_doubao/0030.wav"
+    },
+    {
+      "id": 31,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 882.1,
+      "end": 924.54,
+      "text": "说起来，还有一点让我很意外，我想听听你的看法。在读《深度医学》这本书的时候，我预想过我们聊到的种种，比如模型能带来宝贵时间，作为问诊入口，给出诊断结果，甚至把现场对话整理成模拟病历。但我万万没有想到，",
+      "audioFile": "audio_doubao/0031.wav"
+    },
+    {
+      "id": 32,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 924.84,
+      "end": 963.28,
+      "text": "把它的成果不作数。还有一件事让我很意外，我也想听听你的看法。在《深度医学》这本书里，我之前预想过很多可能性，比如模型可以争取宝贵诊疗时间、给出诊断结果，甚至把现场问诊对话整理成电子病历。但我完全没有想",
+      "audioFile": "audio_doubao/0032.wav"
+    },
+    {
+      "id": 33,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 963.58,
+      "end": 1007.82,
+      "text": "若聊天机器人回应‘我理解，物体实际位于正前方，但我有主观体验认为它在另一侧’。 若聊天机器人如此表述，其用词方式将与人类完全一致。 其感知系统反馈的信息表明物体位于一侧，因此它依据该信息作出判断。 如",
+      "audioFile": "audio_doubao/0033.wav"
+    },
+    {
+      "id": 34,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1008.12,
+      "end": 1051.52,
+      "text": "物体其实就在正前方，我在你的摄像头前放了一块棱镜。试想，如果聊天机器人这样回应：“我明白了，物体实际就在正前方，但我的主观感受是它偏向一侧。”倘若机器人说出这番话，我认为它对“主观体验”这个词的用法，",
+      "audioFile": "audio_doubao/0034.wav"
+    },
+    {
+      "id": 35,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 1051.82,
+      "end": 1107.38,
+      "text": "这个回答十分耐人寻味，结合你对理解能力的看法，这也不由得让人联想到你今年五月离开谷歌时的心路历程。当时你看到人工智能已经达到全新层级，虽还称不上通用人工智能，但相比过去已经实现巨大跃升。虽然不能说你当",
+      "audioFile": "audio_doubao/0035.wav"
+    },
+    {
+      "id": 36,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1107.68,
+      "end": 1151.28,
+      "text": "以及你对未来走向的判断。好，我们把事实理清楚。媒体报道的故事听着很精彩，但实情是，我离开谷歌是因为当时已经75岁，我再也写不了代码了，总是记不住各个变量代表什么。当然，我也想趁机多看点网飞剧集。既然本",
+      "audioFile": "audio_doubao/0036.wav"
+    },
+    {
+      "id": 37,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1151.58,
+      "end": 1197.14,
+      "text": "再聊聊你当时的想法，以及你认为未来会走向何方。\n好，我们还原真实情况，媒体那边的版本传得很热闹，但实情并非那样。我离开谷歌，是因为我已经七十五岁，没法继续写程序了，总是记不住各个变量代表什么。另外我也",
+      "audioFile": "audio_doubao/0037.wav"
+    },
+    {
+      "id": 38,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 1197.44,
+      "end": 1228.0,
+      "text": "坦白说，我认为你对此的判断以及背后的论据确实带来了巨大影响，这场激烈的讨论至今仍在持续。某种程度上，开放人工智能发生的内部风波，根源正是这场围绕技术现状与未来走向的争论。最后，我想回到你之前提到的放射",
+      "audioFile": "audio_doubao/0038.wav"
+    },
+    {
+      "id": 39,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1228.3,
+      "end": 1255.02,
+      "text": "不得不说，你的判断以及背后的论证带来了巨大影响，相关讨论至今依旧激烈。某种程度上，OpenAI内部的动荡，根源也正是围绕人工智能当下状态与未来走向的这场争议。\n\n最后，我想回到你之前提到放射科医生的观",
+      "audioFile": "audio_doubao/0039.wav"
+    },
+    {
+      "id": 40,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 1255.32,
+      "end": 1312.04,
+      "text": "我们人类物种很难应对这件事。就像放射科医生的处境一样，一台机器，即便内部连接数量远少于人脑，也有可能在很多事情上超越人类。当然，正如我们整场对话反复谈到的，机器和人类协同工作，还能把能力推到更高层级。",
+      "audioFile": "audio_doubao/0040.wav"
+    },
+    {
+      "id": 41,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1312.34,
+      "end": 1359.9,
+      "text": "尤其是哲学家，他们认为意识和主观体验使人类与众不同 如果秉持科学唯物主义观点，这些机器不过就是机器 和大多数人一样，大脑只是机器。说它只是机器是错误的，因为它是一台奇妙复杂的机器，能完成令人惊叹的复杂",
+      "audioFile": "audio_doubao/0041.wav"
+    },
+    {
+      "id": 42,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1360.2,
+      "end": 1406.36,
+      "text": "尤其是哲学家，他们总主张人类拥有某种独一无二的特质，关乎意识、主观体验、感知能力以及感受质，而机器终究只是机器。可如果像我们大多数人一样站在科学唯物主义的立场，人脑本质上就是一台机器。当然，只说它“不",
+      "audioFile": "audio_doubao/0042.wav"
+    },
+    {
+      "id": 43,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 1406.66,
+      "end": 1446.1,
+      "text": "如果能妥善处理，这将是我们前进的好方法。当然，那些末日论者以及……那些人 他们对警报的级别更高，认为这不可能，但 显然，随着时间推移，我们会在后续看到。不过在结束前，我想快速了解一下你的看法，正如你所",
+      "audioFile": "audio_doubao/0043.wav"
+    },
+    {
+      "id": 44,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1446.4,
+      "end": 1480.8,
+      "text": "这当然会是非常理想的发展路径。不过那些末日论者，还有警报拉得更高的人，大多认为这种局面不可能实现，未来如何只能交给时间检验。\n\n访谈结束前，我想快速听听你的看法。德米斯·哈萨比斯与约翰·江珀凭借阿尔法",
+      "audioFile": "audio_doubao/0044.wav"
+    },
+    {
+      "id": 45,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 1481.1,
+      "end": 1524.5,
+      "text": "我们刚刚聊到的话题，很多人很难接受人机共生，更多看到的是人与机器之间的博弈。杰弗里，今天这场访谈内容非常充实，我们其实还可以再聊上好几个小时。能直接聆听你的观点与洞见，我收获良多。\n\n再说回这点，如今",
+      "audioFile": "audio_doubao/0045.wav"
+    },
+    {
+      "id": 46,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "avatarFile": "avatars/speaker-B.jpg",
+      "start": 1524.8,
+      "end": 1532.44,
+      "text": "人工智能继续向前发展。感谢，也祝愿人工智能能够真正带来巨大的",
+      "audioFile": "audio_doubao/0046.wav"
+    },
+    {
+      "id": 47,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "avatarFile": "avatars/speaker-A.jpg",
+      "start": 1532.74,
+      "end": 1542.98,
+      "text": "改变，希望我们能够如愿。我也会时不时向你请教，借鉴你的真知灼见，助力相关工作。",
+      "audioFile": "audio_doubao/0047.wav"
+    }
+  ]
+}

@@ -1,0 +1,2245 @@
+{
+ "title": "Demis Hassabis 谈超级智能 · 中文播客",
+ "chapters": [
+  {
+   "id": 0,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 0.0,
+   "end": 42.355,
+   "text": "以下是对DeepMind联合创始人兼首席执行官德米斯·哈萨比斯的访谈，这是一家发布并构建过许多人工智能系统的公司。 历史上最令人惊叹的人工智能系统之一。 包括阿尔法围棋零，它通过自学掌握了游戏规则。 完全依靠自身学习，就能在围棋游戏中击败世界上任何人类选手。 阿尔法折叠二，它成功破解了蛋白质折叠难题，这两个任务曾被认为在很长时间内几乎不可能完成。 德米斯被广泛认为是人工智能和科学工程领域最杰出且具有深远影响的人物之一。 在人工智能、科学和工程领域的历史上",
+   "audioFile": "audio-demis-superintelligence/0000.wav"
+  },
+  {
+   "id": 1,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 42.805,
+   "end": 54.493,
+   "text": "能与他进行这次对话，对我来说是莫大的荣幸和愉悦，我相信我们未来还会多次深入交流。 未来我们还会多次深入交流，这是Lex Friedman播客",
+   "audioFile": "audio-demis-superintelligence/0001.wav"
+  },
+  {
+   "id": 2,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 55.193,
+   "end": 59.368,
+   "text": "支持本节目，请查看描述中的赞助商信息，亲爱的朋友们",
+   "audioFile": "audio-demis-superintelligence/0002.wav"
+  },
+  {
+   "id": 3,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 60.068,
+   "end": 70.595,
+   "text": "现在让我们欢迎德米斯·哈萨比斯，让我们从一个个人问题开始，我是你编写的人工智能程序吗。 直到我足够优秀，能够采访你",
+   "audioFile": "audio-demis-superintelligence/0003.wav"
+  },
+  {
+   "id": 4,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 71.295,
+   "end": 113.746,
+   "text": "如果我真的能像你一样，我会为自己感到惊讶。但我觉得我们还没达到那个水平。不过，莱克斯，如果你来自未来，如果你真的能做到，你会告诉我吗？ 告诉一个负责接受采访的语言模型，这是否是件好事？ 这其实涉及某种元图灵测试。或许最好不要告诉你，以免影响你的表现。这本质上是一种。 海森堡不确定性原理情境。如果我告诉你，你可能会表现不同。这或许就是我们当前所处的基准情境——。 回放2022年，那时AI尚未达到足够水平，现在我们想看看。 它是否能通过测试？如果我是这样的",
+   "audioFile": "audio-demis-superintelligence/0004.wav"
+  },
+  {
+   "id": 5,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 114.446,
+   "end": 121.29,
+   "text": "程序，你认为能分辨出来吗？关于图灵测试的问题，衡量智能的基准是",
+   "audioFile": "audio-demis-superintelligence/0005.wav"
+  },
+  {
+   "id": 6,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 121.99,
+   "end": 154.349,
+   "text": "什么？你提到过系统获得诺贝尔奖。 的案例，但图灵测试仍是极具说服力的基准。图灵测试的精神内核始终是。 极具影响力的测试。图灵是我毕生敬仰的英雄之一。但如果你回顾1950年的原始论文。 会发现，他并未将其设定为严谨的正式测试，而更像是一种思想实验，带有哲学意味。从论文风格可见。 他并未对专家或裁判的知识范围做出严格界定，例如并未说明",
+   "audioFile": "audio-demis-superintelligence/0006.wav"
+  },
+  {
+   "id": 7,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 154.799,
+   "end": 179.547,
+   "text": "如果要将其设计成一项正式的测试，他们需要花多少时间来研究这些关键参数？ 有观点认为，早在十年前，图灵测试就已经通过了。 他们通过让机器伪装成儿童，使评委误以为机器是孩子。 这与专家AI人员审讯机器时的场景截然不同。 我认为我们应该摒弃这种形式化测试，转向更全面的能力评估。",
+   "audioFile": "audio-demis-superintelligence/0007.wav"
+  },
+  {
+   "id": 8,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 179.997,
+   "end": 190.415,
+   "text": "通过在数千甚至数百万项任务中测试AI表现，观察其是否达到或超越人类水平。 我认为在当时，这是一项惊人的思想实验。",
+   "audioFile": "audio-demis-superintelligence/0008.wav"
+  },
+  {
+   "id": 9,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 191.115,
+   "end": 218.631,
+   "text": "1950年代计算机技术才刚起步，图灵自然只考虑了文本交互。 现在我们有更多类型的输入方式，测试泛化能力更为重要。 像AlphaGo这样的系统最终可能将任务泛化能力映射回语言层面。 通过语言交流展示跨任务泛化能力，这本质上就是我们对话的运作方式。 对话中包含的不仅是知识的堆砌，更是思维的跳跃与关联。",
+   "audioFile": "audio-demis-superintelligence/0009.wav"
+  },
+  {
+   "id": 10,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 219.081,
+   "end": 230.422,
+   "text": "这涉及到你以完全不同的理解方式移动，这些方式最终映射到你的能力。 在所有这些领域中成功运作，这些领域你可以视为任务",
+   "audioFile": "audio-demis-superintelligence/0010.wav"
+  },
+  {
+   "id": 11,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 231.122,
+   "end": 255.156,
+   "text": "是的，我认为人类确实将语言作为主要的泛化沟通工具，因此我们最终会用语言来思考和表达我们的。 解决方案用语言来表达，这将是一种非常强大的模式，用来解释系统及其运作方式。 正在做的事情，但我认为这并不是唯一重要的模式，我认为还有许多其他方式。 表达能力的方式有很多，而不仅仅是语言",
+   "audioFile": "audio-demis-superintelligence/0011.wav"
+  },
+  {
+   "id": 12,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 255.856,
+   "end": 259.1,
+   "text": "仅仅是语言，比如视觉、机器人、肢体语言等",
+   "audioFile": "audio-demis-superintelligence/0012.wav"
+  },
+  {
+   "id": 13,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 259.8,
+   "end": 301.107,
+   "text": "是的，行动是所有这些互动的一部分，但有趣的是，Gato在预测方面达到了极限。 将任意序列映射到其他序列，并预测接下来会发生什么，因此预测似乎是智能的基础。 你预测的内容并不那么重要，看起来是这样。 你可以很好地泛化这一点，显然语言模型预测下一个词，Gato可能预测任何动作或任何标记，这只是开始，这是我们最通用的代理。 到目前为止，可以称之为最通用的代理，但显然，它本身可以被大规模扩展，远超过我们目前所做的，显然我们正处于这个阶段",
+   "audioFile": "audio-demis-superintelligence/0013.wav"
+  },
+  {
+   "id": 14,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 301.557,
+   "end": 310.592,
+   "text": "解决通用人工智能的关键在于创建基准测试，这些基准测试能帮助我们逐步接近目标，通过不断测试各种能力",
+   "audioFile": "audio-demis-superintelligence/0014.wav"
+  },
+  {
+   "id": 15,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 311.292,
+   "end": 335.786,
+   "text": "可记录性方面，有趣的是艾伦·图灵作为最早也是至今唯一尝试。 从哲学层面制定可遵循的基准，尽管标准模糊但足够严谨，足以让人实际执行测试。 最终我认为图灵测试仍将是真正打动人类的关键标准。 要让AI系统成为值得信赖的朋友，必须能完成诸如为你买啤酒等任务",
+   "audioFile": "audio-demis-superintelligence/0015.wav"
+  },
+  {
+   "id": 16,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 336.236,
+   "end": 363.599,
+   "text": "与你玩星际争霸、完成各种任务包括机器人操作等复杂动作。 与你玩游戏、使用语言、展现幽默等，但最终都可归结为语言能力。 就通用智能对世界的影响而言，语言将是其真正发光的领域。 我同意你的观点，图灵测试背后的理念是机器能否模仿人类行为。 如果AI能在行为上完全模拟人类，那么它就具备了真正的智能",
+   "audioFile": "audio-demis-superintelligence/0016.wav"
+  },
+  {
+   "id": 17,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 364.299,
+   "end": 375.629,
+   "text": "我认为超越语言文本的范畴，包括行动、创造力等各方面能力。 当AI在这些方面达到或超越人类认知水平时，就实现了真正的智能",
+   "audioFile": "audio-demis-superintelligence/0017.wav"
+  },
+  {
+   "id": 18,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 376.329,
+   "end": 411.02,
+   "text": "未来的人工智能系统可能会以一种幽默的方式回顾这次对话，思考图灵测试以及当时他们已经知道的年份。 思考当时他们已经知道的年份，以及到那时为止人类智能水平的门槛究竟在哪一年被突破。 思考人类竟然仍对这个早已被解决的问题感到困惑，这多么荒诞可笑。 向未来的人工智能代理问个好，那么回到您的经历，您何时开始对编程产生热爱。 回到您的经历，您何时开始对编程产生热爱",
+   "audioFile": "audio-demis-superintelligence/0018.wav"
+  },
+  {
+   "id": 19,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 411.72,
+   "end": 440.79,
+   "text": "其实我从小就对编程感兴趣，最初热爱的是游戏，四岁时开始下棋。 八岁时用国际象棋比赛奖金购买了人生第一台棋类电脑，当时是ZX Spectrum。 这款在英国曾风靡一时的电脑非常神奇，培养了整整一代程序员。 它的操作门槛极低，开机后直接出现BASIC提示符就能立即上手。 父母对计算机一窍不通，但因为是用棋赛奖金购买，我坚持要买下它",
+   "audioFile": "audio-demis-superintelligence/0019.wav"
+  },
+  {
+   "id": 20,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 441.24,
+   "end": 478.335,
+   "text": "跑去书店买编程书籍，开始输入代码并修改程序。 当自己动手调整代码并制作游戏时，我彻底爱上了计算机这种神奇的设备。 当时我其实可以解释清楚，但我觉得它们几乎像是你大脑的魔法延伸。我一直有这种感觉，也一直很喜欢这一点。 你可以让它们为你执行某项任务，你去睡觉，第二天回来问题就解决了。 这对我来说感觉很神奇。当然，所有机器在某种程度上都能做到这一点，它们都在增强我们的自然能力，比如汽车让我们移动得比跑步更快",
+   "audioFile": "audio-demis-superintelligence/0020.wav"
+  },
+  {
+   "id": 21,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 478.785,
+   "end": 518.623,
+   "text": "让我们移动得比跑步更快，但这是扩展思维的机器，而人工智能正是。 机器可能做到或学到的终极表达。对我来说，这种想法很快自然地延伸到了人工智能领域。 还记得最初使用的编程语言吗。 对机器来说并不特殊，它只是基础。我想当时是ZX Spectrum上的Basic，我不确定具体形式，后来我得到了一台Commodore Amiga。 那是一台非常棒的机器，你只是在炫耀。是的，我很多朋友都有Atari ST，而我设法得到了Amigas，它稍微强大一些",
+   "audioFile": "audio-demis-superintelligence/0021.wav"
+  },
+  {
+   "id": 22,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 519.073,
+   "end": 535.367,
+   "text": "那简直令人难以置信，我曾用汇编语言进行编程，还用过AMOS Basic，这种特定的Basic形式简直令人惊叹。 实际上，我的所有编程技能。你是什么时候开始爱上人工智能的？你是什么时候第一次意识到",
+   "audioFile": "audio-demis-superintelligence/0022.wav"
+  },
+  {
+   "id": 23,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 536.067,
+   "end": 541.221,
+   "text": "不仅仅是编写在你睡觉时执行数学运算的程序，而是能",
+   "audioFile": "audio-demis-superintelligence/0023.wav"
+  },
+  {
+   "id": 24,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 541.921,
+   "end": 571.971,
+   "text": "赋予一个实体生命，让它能解决比简单数学运算更复杂的问题。 我年轻时经历过几个阶段。首先，为了提高国际象棋水平，我曾担任英格兰少年国际象棋队队长，。 大约10到11岁时，我曾想成为职业棋手，。 那个梦想确实存在，我尝试达到最高水平，12岁时我获得了大师称号，。 当时我是仅次于朱迪特·波尔加的世界第二高手，她后来成为世界女子冠军，",
+   "audioFile": "audio-demis-superintelligence/0024.wav"
+  },
+  {
+   "id": 25,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 572.421,
+   "end": 591.955,
+   "text": "在提升棋艺时，首先要改进自己的思维过程，。 思考大脑如何产生想法，为何犯错，如何改进思维过程，。 其次，这发生在80年代中期，当时国际象棋电脑还是实体棋盘，。 卡斯帕罗夫曾推出过品牌版本，我买过一台，",
+   "audioFile": "audio-demis-superintelligence/0025.wav"
+  },
+  {
+   "id": 26,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 592.405,
+   "end": 614.115,
+   "text": "虽然不如现在强大，但当时已相当厉害，人们常用来练习开局，。 11或12岁时我买了第一台，惊叹于有人如何编程实现国际象棋，。 我读过大卫·利维1984年出版的《国际象棋电脑手册》，。 这本书详细解释了国际象棋程序的制作，我的第一个AI程序就是由此开始",
+   "audioFile": "audio-demis-superintelligence/0026.wav"
+  },
+  {
+   "id": 27,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 614.565,
+   "end": 666.144,
+   "text": "我曾尝试用Amiga编程，但它的算力不足以下国际象棋。我没能写出完整的国际象棋程序，但为它开发了能玩奥赛罗棋（又称反向棋）的程序。 在美国，奥赛罗棋比国际象棋简单一些。我运用了国际象棋程序中的所有原理，包括Alpha-beta剪枝算法，这成为我第一个AI程序，至今记忆犹新。 当时我约12岁，这段经历让我接触了AI。后来在16、17岁时，我开始从事游戏开发工作。 我曾专业设计游戏，开发过名为《主题公园》的游戏，其核心玩法包含AI系统。 作为模拟系统的一部分，该游戏全球售出数百万份，玩家喜爱AI虽简单却能根据玩家操作作出反应的特性。",
+   "audioFile": "audio-demis-superintelligence/0027.wav"
+  },
+  {
+   "id": 28,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 666.594,
+   "end": 678.127,
+   "text": "按今天AI标准，这种反应机制属于沙盒游戏，是最早期的同类游戏之一。 这类游戏包括《模拟城市》，意味着每次游玩都是独特的体验。",
+   "audioFile": "audio-demis-superintelligence/0028.wav"
+  },
+  {
+   "id": 29,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 678.827,
+   "end": 692.233,
+   "text": "能否简短谈谈您印象最深的游戏AI设计？ 从人类娱乐角度，您见过最令人惊叹的游戏AI是什么？构建这类系统需要哪些要素？ 这其实包含百万个问题，暂且作为小插曲讨论。",
+   "audioFile": "audio-demis-superintelligence/0029.wav"
+  },
+  {
+   "id": 30,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 692.933,
+   "end": 722.812,
+   "text": "游戏对我人生有三重意义：童年时通过游戏训练自己，后来设计游戏并开发AI系统。 我职业化开发的所有游戏，都包含AI系统设计。 当时AI是核心组件，主要在90年代。我之所以在游戏行业做这件事，是因为当时游戏行业我认为是技术前沿。 无论是约翰·卡马克和《雷神之锤》等图形技术，还是AI，我认为当时所有创新都发生在游戏领域。",
+   "audioFile": "audio-demis-superintelligence/0030.wav"
+  },
+  {
+   "id": 31,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 723.262,
+   "end": 759.334,
+   "text": "我们至今仍在享受这些技术带来的红利，比如GPU。我认为这颇具讽刺意味，因为GPU最初显然是为计算机图形设计的，但后来被证明对AI也非常有用。 事实证明，世界万物似乎都归结为矩阵运算。 当时游戏行业拥有最前沿的AI技术。我参与开发过一款名为《黑与白》的游戏，。 这是我早期参与的项目，至今仍是计算机游戏中强化学习最令人印象深刻的案例之一。 在游戏中，你需要训练一只宠物动物，它会根据你对待它的方式进行学习。",
+   "audioFile": "audio-demis-superintelligence/0031.wav"
+  },
+  {
+   "id": 32,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 759.784,
+   "end": 778.661,
+   "text": "如果你对它不好，它就会变得凶恶，进而对村民和族群不利；但如果你善待它，它也会变得友善。 人们对此感到着迷，我本人也深感震撼。 尤其是善恶映射的机制，让我意识到你的选择会决定最终的结局。",
+   "audioFile": "audio-demis-superintelligence/0032.wav"
+  },
+  {
+   "id": 33,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 779.361,
+   "end": 783.143,
+   "text": "这意味着我们每个人都有能力走向善或恶，",
+   "audioFile": "audio-demis-superintelligence/0033.wav"
+  },
+  {
+   "id": 34,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 783.843,
+   "end": 819.7,
+   "text": "关键在于你在通往这些结局的道路上做出的不同选择。 令人着迷的是，游戏在哲学层面上能以某种方式影响你，这种现象并不常见。 确实罕见。我认为游戏是一种独特的媒介，因为作为玩家，你不仅仅是被动地消费娱乐内容。 你实际上是以代理者的身份积极参与其中，这使得游戏在某些方面比电影和书籍等媒介更具感染力。 所以这是设计人工智能与游戏的结合，第三种应用是DeepMind从创立之初就采用的。",
+   "audioFile": "audio-demis-superintelligence/0034.wav"
+  },
+  {
+   "id": 35,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 820.15,
+   "end": 847.869,
+   "text": "将游戏作为验证和开发人工智能算法的试验场，这曾是我们愿景的核心组成部分。 DeepMind初创时就高度重视游戏，将其作为主要测试场，因为使用游戏进行验证非常高效。 同时游戏便于量化系统改进程度，明确技术发展方向及是否取得渐进式突破。 这些游戏往往根植于人类长期实践的规则体系，已形成明确的评判标准。",
+   "audioFile": "audio-demis-superintelligence/0035.wav"
+  },
+  {
+   "id": 36,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 848.319,
+   "end": 880.916,
+   "text": "这使游戏成为绝佳基准，能清晰衡量人类在相关领域的能力上限。 以围棋为例，人类已钻研数千年，且通常有明确的得分规则和胜负判定。 对奖励学习系统而言，明确奖励目标非常容易，最终也能通过实战检验系统强度。 通过与顶尖选手对弈，可以直观评估系统在游戏中的实际表现。 这有诸多优势，而且在云端并行运行数百万次模拟的效率也非常高，我认为",
+   "audioFile": "audio-demis-superintelligence/0036.wav"
+  },
+  {
+   "id": 37,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 881.366,
+   "end": 896.162,
+   "text": "我们2010年起步时之所以能取得巨大成功，有一个重要原因就是我们利用了游戏。 在DeepMind初创阶段，我们还聘请了一些顶尖游戏工程师，他们来自我之前在游戏行业工作时认识的团队",
+   "audioFile": "audio-demis-superintelligence/0037.wav"
+  },
+  {
+   "id": 38,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 896.862,
+   "end": 933.646,
+   "text": "这让我们迅速获得发展动力，而且这种人机博弈的哲学意味令人着迷。 在国际象棋棋盘或围棋棋盘上展开的人与机器对决，这种设定本身具有深刻的哲学意味。 人工智能发展史上，人们曾多次断言让机器战胜人类国际象棋选手是不可能的事。 当这一预言被打破后，我成长的AI领域普遍认为围棋因组合复杂度无法被攻克。 无论摩尔定律如何发展，计算能力永远无法破解围棋的复杂性，这曾是公认的事实",
+   "audioFile": "audio-demis-superintelligence/0038.wav"
+  },
+  {
+   "id": 39,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 934.096,
+   "end": 961.281,
+   "text": "从AI研究者和工程师视角来看，直面这种看似不可能的任务具有特殊吸引力。 作为观察者，看到自己认为不可能的事被实现，这种体验会颠覆认知。 意识到人类并不像想象中那么聪明，这种认知颠覆令人谦卑。 认识到当下认为不可能的事或许会在未来实现，这种认知带来的震撼难以言表",
+   "audioFile": "audio-demis-superintelligence/0039.wav"
+  },
+  {
+   "id": 40,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 961.731,
+   "end": 971.221,
+   "text": "游戏AI系统能以百万甚至数十亿人感知的方式，将人类在游戏中的体验传递得淋漓尽致，这确实非常强大。",
+   "audioFile": "audio-demis-superintelligence/0040.wav"
+  },
+  {
+   "id": 41,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 971.921,
+   "end": 999.61,
+   "text": "尤其是围棋，确实如此。坦白说，这是一段令人着迷的旅程，特别是当我从两个角度思考时——。 既作为AI的创造者，也作为最初的游戏选手。这对我来说是一个非常有趣且充满矛盾的时刻。 阿尔法围棋的那场比赛对我而言既精彩又略带苦涩，当时我深度参与其中。 正如你所说，国际象棋被卡斯帕罗夫恰当地称为'智力的果蝇'。",
+   "audioFile": "audio-demis-superintelligence/0041.wav"
+  },
+  {
+   "id": 42,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1000.06,
+   "end": 1022.644,
+   "text": "这个比喻我非常喜欢，因为国际象棋从人工智能诞生之初就密不可分。 从图灵、香农等先驱开始，每位AI研究者都尝试编写过国际象棋程序。 我曾见过克劳德·香农1949年发表的首个国际象棋程序论文。 图灵曾亲自用纸笔运行过自己编写的国际象棋程序。",
+   "audioFile": "audio-demis-superintelligence/0042.wav"
+  },
+  {
+   "id": 43,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1023.094,
+   "end": 1053.718,
+   "text": "他花了两三天时间，用纸笔与朋友对弈测试程序。 当然，深蓝击败卡斯帕罗夫是AI史上的重要时刻。 当时我清晰地记得这个场景，因为这融合了我热爱的棋类、计算机和人工智能。 当时我还在上大学，但那次经历让我对卡斯帕罗夫的智慧印象更深，而不是深蓝，因为这里有一个。 卡斯帕罗夫凭借人类大脑不仅能与这台计算机器在棋艺上达到相近水平",
+   "audioFile": "audio-demis-superintelligence/0043.wav"
+  },
+  {
+   "id": 44,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1054.168,
+   "end": 1085.887,
+   "text": "他还能做人类能做的一切：骑自行车、说多种语言、从事政治等所有令人惊叹的事情。 而深蓝虽然国际象棋下得好，但它是专门为国际象棋手工编码的。 实际上它整合了国际象棋大师的知识，却无法进行其他游戏，甚至不能下井字棋。 这让我意识到，这个系统缺少我们定义为智能的关键要素。 我认为是通用性和学习能力，这正是阿尔法围棋项目试图解决的问题",
+   "audioFile": "audio-demis-superintelligence/0044.wav"
+  },
+  {
+   "id": 45,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1086.337,
+   "end": 1095.47,
+   "text": "通过阿尔法围棋、阿尔法零等项目，我们探索了这些领域。 从游戏设计角度看，让国际象棋引人入胜的关键在于",
+   "audioFile": "audio-demis-superintelligence/0045.wav"
+  },
+  {
+   "id": 46,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1096.17,
+   "end": 1104.109,
+   "text": "主教与骑士之间存在创造性张力，您能解释一下吗。 思考什么让这款游戏如此吸引人确实很有趣",
+   "audioFile": "audio-demis-superintelligence/0046.wav"
+  },
+  {
+   "id": 47,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1104.809,
+   "end": 1144.309,
+   "text": "这种设计让国际象棋跨越几个世纪依然流行。 当我以游戏设计师的身份思考这个问题时，我一直在想，为什么国际象棋如此引人入胜？我认为一个关键原因是。 不同棋局的动态性，无论是封闭还是开放的局面，以及其他因素，都源于主教和骑士的移动方式。 主教和骑士的移动方式决定了它们的能力，而国际象棋的规则逐渐演化出对这两种棋子的平衡。 它们的价值大致相等，每个棋子都约值三枚兵。 这种动态性始终存在，而其余规则的作用是稳定游戏的整体性",
+   "audioFile": "audio-demis-superintelligence/0047.wav"
+  },
+  {
+   "id": 48,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1144.759,
+   "end": 1173.334,
+   "text": "也许这是一个先有鸡还是先有蛋的问题，但最终形成了主教和骑士力量差异与价值平衡的完美均衡。 在所有可能的棋局中，人类通过数百年实践让主教和骑士的价值达到惊人平衡。 这种平衡创造了创造性张力，你可以用主教换骑士或反之，它们价值基本相当。 但此时你必须追求不同局面：骑士适合封闭局面，主教适合开放局面",
+   "audioFile": "audio-demis-superintelligence/0048.wav"
+  },
+  {
+   "id": 49,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1174.034,
+   "end": 1181.516,
+   "text": "从AI视角看，这种受控的创造性张力是否意味着AI能设计出对人类最吸引人的游戏？",
+   "audioFile": "audio-demis-superintelligence/0049.wav"
+  },
+  {
+   "id": 50,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1182.216,
+   "end": 1208.639,
+   "text": "这是个有趣的问题，有时人们问我AI与创造力的关系，我认为。 创造力存在不同层次，如果定义创造力为产生原创且有用的事物。 如果有一个目标，我认为创造力的最低层次类似于插值，即对所见所有例子的平均，可能非常基础。 一个AI系统可以做到这一点，比如向它展示数百万张猫的图片，然后让它生成一张平均形态的猫",
+   "audioFile": "audio-demis-superintelligence/0050.wav"
+  },
+  {
+   "id": 51,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1209.089,
+   "end": 1236.861,
+   "text": "这是插值，而阿尔法围棋展示了更高级的外推能力，它通过自我对弈数百万局围棋。 并创造出人类从未想过的策略，比如第二局第37手的创新性落子方式。 我将这种能力称为外推，但还有更高层次的创造，比如发明围棋这种全新游戏。 能否发明象棋而非仅仅创造精彩棋步？能否设计出堪比围棋的全新游戏？",
+   "audioFile": "audio-demis-superintelligence/0051.wav"
+  },
+  {
+   "id": 52,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1237.311,
+   "end": 1265.591,
+   "text": "目前AI还无法做到，因为如何向程序明确描述这种任务仍是个难题。 如果让人类游戏设计师来设计，我会要求创造一种只需五分钟就能学会的游戏。 像围棋有简单规则却需要毕生才能掌握，同时具有深邃的复杂性。 这种游戏还要具备美学价值，能在三到四小时内完成完整对局。 这样的高层次概念描述，可能需要结合其他约束条件才能实现",
+   "audioFile": "audio-demis-superintelligence/0052.wav"
+  },
+  {
+   "id": 53,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1266.041,
+   "end": 1291.458,
+   "text": "但问题在于，我们目前还无法准确界定这些约束条件。 目前我们的AI系统还无法明确表达这种高层次的抽象概念，我认为其中仍然存在一些缺失之处。 在高层次概念或抽象的理解层面，以及这些概念的组合性方面，AI系统仍有待提升。 现阶段AI能够进行插值和外推，但还无法实现真正的创新。",
+   "audioFile": "audio-demis-superintelligence/0053.wav"
+  },
+  {
+   "id": 54,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1292.158,
+   "end": 1319.094,
+   "text": "发明新的规则集并围绕这些规则集优化复杂目标，我们目前还做不到。 但你可以选取特定规则集，通过自我对弈实验观察AI系统从零开始学习所需时间。 如果系统在学习速度等指标上满足某些条件，就能判断其是否具备快速学习能力。 即便AI系统需要漫长过程才能掌握，这样的游戏仍可能成为有前景的训练场。",
+   "audioFile": "audio-demis-superintelligence/0054.wav"
+  },
+  {
+   "id": 55,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1319.794,
+   "end": 1340.586,
+   "text": "比如Alpha代码或编程规则，生成能自动完成规则生成的规则系统，我对此做过思考。 如果游戏设计师能拥有一个系统，让它反复玩你的游戏数十亿次。 系统能自动调整规则、公式和参数，使游戏更加平衡。 通过调整游戏单位或规则，形成基础规则集后。",
+   "audioFile": "audio-demis-superintelligence/0055.wav"
+  },
+  {
+   "id": 56,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1341.036,
+   "end": 1367.786,
+   "text": "再结合蒙特卡洛树搜索等算法进行探索，这将是非常强大的工具。 平衡一款游戏通常需要数千小时的人工测试，比如平衡某款游戏。 《星际争霸》的开发商暴雪在平衡游戏方面非常出色，但这一过程通常需要数年时间。 当这些技术足够高效时，或许一夜之间就能完成。 你认为由AI系统设计的完美游戏，会与地球有相似之处吗",
+   "audioFile": "audio-demis-superintelligence/0056.wav"
+  },
+  {
+   "id": 57,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1368.236,
+   "end": 1394.794,
+   "text": "也许我真正想制作的游戏类型，是那种能让人设计整个城市的游戏。 比如在《共和国》中，我们尝试让玩家在完整设计的城市中游玩。 当然，像威尔·莱特设计的《模拟地球》这类游戏，试图完整模拟地球。 它确实包含进化机制，但更像是从宏观层面模拟整个生物圈。 你可以自由缩放视角，但他在90年代开发时显然做不到这点",
+   "audioFile": "audio-demis-superintelligence/0057.wav"
+  },
+  {
+   "id": 58,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1395.244,
+   "end": 1423.129,
+   "text": "这当然是终极沙盒游戏，那么你认为我们是否生活在模拟中。 是的，那么我将从哲学问题转向短期目标。 我非常期待能实现这些短期目标。 我认为这个问题的答案有些复杂，因为存在模拟理论，尼克·博斯特罗姆曾明确提出过这一理论。 但我不完全认同这种观点，即我们是否身处某种计算机游戏或后代在21世纪重建了地球用于实验",
+   "audioFile": "audio-demis-superintelligence/0058.wav"
+  },
+  {
+   "id": 59,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1423.579,
+   "end": 1451.792,
+   "text": "不过我认为从计算视角理解物理和宇宙可能是最佳方式，将宇宙视为信息构成的系统。 信息而非物质或能量才是现实的基本单位，物理学家通常认为物质和能量是宇宙基础。 但信息本身可以定义能量或物质，人体分子排列方式本质上就是信息的体现。 因此可以说我们身处某种模拟中，但我不认同存在数十亿次模拟的设想",
+   "audioFile": "audio-demis-superintelligence/0059.wav"
+  },
+  {
+   "id": 60,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1452.242,
+   "end": 1460.505,
+   "text": "我认为这个模拟可能具有特殊意义，将宇宙视为处理信息的计算机是理解物理化学生物问题的有效方式",
+   "audioFile": "audio-demis-superintelligence/0060.wav"
+  },
+  {
+   "id": 61,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1461.205,
+   "end": 1462.794,
+   "text": "或许还涉及人类本身",
+   "audioFile": "audio-demis-superintelligence/0061.wav"
+  },
+  {
+   "id": 62,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1463.494,
+   "end": 1467.013,
+   "text": "用信息论来理解物理学可能是最有效的方式",
+   "audioFile": "audio-demis-superintelligence/0062.wav"
+  },
+  {
+   "id": 63,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1467.713,
+   "end": 1485.484,
+   "text": "从我们对通用图灵机和计算机的理解来看，你认为是否存在。 超出计算机能力范围、存在于宇宙中的某种东西？你与罗杰·彭罗斯存在分歧吗。 关于意识本质，他认为意识不仅仅是计算，你认为意识整体",
+   "audioFile": "audio-demis-superintelligence/0063.wav"
+  },
+  {
+   "id": 64,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1486.184,
+   "end": 1511.676,
+   "text": "‘shebang’可能是一种竞争，我与罗杰·彭罗斯有过许多精彩辩论。 他著有《皇帝的新脑》等经典著作，20世纪90年代影响深远。 我在DeepMind的工作与个人职业发展都与此相关。 我们正像真正的环形冠军一样，将图灵机或经典计算推向极限。 目前经典计算能实现什么？我们同时研究神经科学",
+   "audioFile": "audio-demis-superintelligence/0064.wav"
+  },
+  {
+   "id": 65,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1512.126,
+   "end": 1537.411,
+   "text": "我攻读神经科学博士也是为了观察大脑是否存在量子现象。 目前主流神经科学家和生物学家认为，大脑中没有量子系统证据。 经典理论可以解释，但生物学领域仍在探索。 同时对经典图灵机能力的预期也在提升，包括我们的新型AI系统。 过去十年AI持续突破原有理论框架",
+   "audioFile": "audio-demis-superintelligence/0065.wav"
+  },
+  {
+   "id": 66,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1537.861,
+   "end": 1563.473,
+   "text": "从围棋到蛋白质折叠，不断推翻被认为不可能的理论。 我很难判断经典图灵机和传统计算范式极限。 我的判断是人脑功能完全可以被经典计算机模拟。 无需依赖量子或超自然因素，阿尔法折叠已开启生物建模之旅。 人类大脑的神奇之处在于仅用少量生物组织就能实现复杂计算",
+   "audioFile": "audio-demis-superintelligence/0066.wav"
+  },
+  {
+   "id": 67,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1563.923,
+   "end": 1567.678,
+   "text": "这与深度思维研究的神经网络在本质上具有相似性",
+   "audioFile": "audio-demis-superintelligence/0067.wav"
+  },
+  {
+   "id": 68,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1568.378,
+   "end": 1573.07,
+   "text": "人类大脑不过颅骨中几磅生物组织却能创造奇迹",
+   "audioFile": "audio-demis-superintelligence/0068.wav"
+  },
+  {
+   "id": 69,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1573.77,
+   "end": 1599.846,
+   "text": "大脑是我们已知宇宙中最复杂的物体，它们既令人惊叹又充满美感，我认为。 它是一台极其高效的机器。 它基本上是惊人的，我认为构建AI的其中一个原因就是。 通过构建像AI这样的智能实体，并将其与人类大脑进行比较，这将帮助我们揭示大脑的独特性和真正奥秘。 比如意识、梦境、创造力以及情感等现象",
+   "audioFile": "audio-demis-superintelligence/0069.wav"
+  },
+  {
+   "id": 70,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1600.296,
+   "end": 1626.232,
+   "text": "自人类文明伊始，我们就对这些现象充满好奇。 哲学和心灵哲学之所以困难，是因为我们缺乏工具。 除了通过聪明哲学家的内省之外，历史上从未有科学手段深入研究这些问题。 如今我们拥有了大量工具，包括神经科学工具、核磁共振仪、单细胞记录技术等。 同时我们还拥有计算机和AI构建智能系统的能力",
+   "audioFile": "audio-demis-superintelligence/0070.wav"
+  },
+  {
+   "id": 71,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1626.682,
+   "end": 1635.802,
+   "text": "人类大脑能做到的事情令人敬畏。 令人惊叹的是，人类无需依赖大脑本身，就能创造计算机并思考这些问题",
+   "audioFile": "audio-demis-superintelligence/0071.wav"
+  },
+  {
+   "id": 72,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1636.502,
+   "end": 1662.021,
+   "text": "宇宙创造了人类大脑，而如今人类正利用计算机来帮助理解宇宙和自身的大脑。 这正是关键所在，可以说我们或许正是宇宙试图理解自身的一种机制。 这非常美妙，让我们从生物学的基本构建模块入手，这是另一个理解人类思维的视角。 通过模拟这些基础模块，我们可以逐步构建更复杂的生命系统",
+   "audioFile": "audio-demis-superintelligence/0072.wav"
+  },
+  {
+   "id": 73,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1662.471,
+   "end": 1685.404,
+   "text": "也许有朝一日能完整模拟人类生物学，这就是蛋白质折叠问题，阿尔法折叠2成功解决了这个曾被认为不可能的难题。 我认为这是结构生物学史上最重要的突破，也是科学领域的重要里程碑。 从宏观层面来说，它是什么？它是如何运作的？之后我们可以探讨一些引人深思的问题",
+   "audioFile": "audio-demis-superintelligence/0073.wav"
+  },
+  {
+   "id": 74,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1686.104,
+   "end": 1711.505,
+   "text": "首先向不熟悉蛋白质折叠的人解释，蛋白质对所有生命都至关重要。 人体内所有功能都依赖蛋白质，它们常被称为生物学中的关键执行者。 过去几年我一直在研究蛋白质和结构生物学，这些分子机器令人惊叹。 如果观看它们工作原理的动画，会发现蛋白质由氨基酸序列决定",
+   "audioFile": "audio-demis-superintelligence/0074.wav"
+  },
+  {
+   "id": 75,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1711.955,
+   "end": 1745.838,
+   "text": "可以将这些序列视为蛋白质结构的蓝图。 基因构成，然后在体内，自然状态下，它们会折叠成三维结构，从而形成某种形态。 可以将其想象成一串珠子，随后折叠成一个球体。关键在于，你需要了解这种三维结构的具体形态。 因为蛋白质的三维结构决定了它在体内的功能，也决定了你是否能针对某种疾病设计药物。 如果想通过药物化合物靶向某种物质或阻断其作用，就必须了解蛋白质在表面的结合位点",
+   "audioFile": "audio-demis-superintelligence/0075.wav"
+  },
+  {
+   "id": 76,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1746.288,
+   "end": 1782.922,
+   "text": "显然，要实现这一点必须先了解三维结构。结构与功能之间存在映射关系，而结构显然由氨基酸序列所指定。 本质上，蛋白质折叠问题就是：仅凭氨基酸序列这一维字符串，能否计算预测出三维结构。 这被公认为生物学领域持续50多年的重大挑战。1972年诺贝尔奖得主克里斯蒂安·安芬森首次提出该问题。 他在诺贝尔奖演讲中推测，从氨基酸序列推导三维结构应属可能，但当时并未说明具体方法",
+   "audioFile": "audio-demis-superintelligence/0076.wav"
+  },
+  {
+   "id": 77,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1783.372,
+   "end": 1818.281,
+   "text": "有人将此难题类比为生物学领域的费马大定理，认为需要200年才能解决，但应确保其可行性。 我认为未来可能有诺贝尔奖得主会解决这个问题，但除此之外，应多在边缘领域进行探索。 在空白处随意添加一些可能需要200年才能解决的随机问题，这确实应该可行。 我认为每个人都应该对此保持兴趣，而不是完全忽视。 确实，我得记住这一点以备将来参考。是的，他就是用了一句随意的评论，就像费马那样，由此开启了整个领域",
+   "audioFile": "audio-demis-superintelligence/0077.wav"
+  },
+  {
+   "id": 78,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1818.731,
+   "end": 1854.643,
+   "text": "这个领域已经发展了50年，他们在这个领域遇到了瓶颈，实际上并没有取得太大进展。 直到AlphaFold出现之前，这些工作都必须通过实验完成，过程非常繁琐。 通常的规则是需要将蛋白质结晶化，这非常困难，膜蛋白等一些蛋白质根本无法结晶化。 必须使用昂贵的电子显微镜或X射线晶体衍射仪，通过极其繁琐的工作才能获得三维结构。 在实验生物学中，通常需要一位博士生用整个博士生涯才能完成一个蛋白质的结构解析",
+   "audioFile": "audio-demis-superintelligence/0078.wav"
+  },
+  {
+   "id": 79,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1855.093,
+   "end": 1882.701,
+   "text": "借助AlphaFold2，我们仅用数秒就预测出了三维结构，圣诞节期间我们完成了人类蛋白质组中所有2万个蛋白质的预测。 这相当于人类基因组在蛋白质空间中的对应物，彻底改变了结构生物学家的工作方式。 现在他们无需再为这些繁琐的实验耗费精力，几乎像谷歌搜索一样就能查到蛋白质结构。 他们不必再纠结是否要投入大量精力去做这些实验",
+   "audioFile": "audio-demis-superintelligence/0079.wav"
+  },
+  {
+   "id": 80,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1883.401,
+   "end": 1913.561,
+   "text": "它需要一个数据集来训练模型，并且要解决如何将氨基酸映射到蛋白质结构的问题。 令人难以置信的是，这种微型化学计算机能够以分布式方式快速完成计算，这种能力是进化过程中形成的。 这本身就是一个伟大的发明，蛋白质本身确实如此，我认为它们的进化过程中可能有很长的历史。 这些蛋白质能够自我组织成计算机般的结构，从而创造出可以相互作用的复合体",
+   "audioFile": "audio-demis-superintelligence/0080.wav"
+  },
+  {
+   "id": 81,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1914.261,
+   "end": 1951.756,
+   "text": "形成高级功能，这确实是一个奇怪的系统，他们竟然找到了解决方法。 当然，我们也许应该谈谈生命的起源，但蛋白质本身在我看来是神奇而不可思议的。 他说这些是微小的生物纳米机器，实际上，Levantal是另一位科学家，与Anfinsen同时代的人。 Anfinsen提出了后来被称为Levantal悖论的概念，这正是你在说的，他计算出一种蛋白质。 平均蛋白质可能有2000个氨基酸残基长，可以折叠成大约10的300次方种结构",
+   "audioFile": "audio-demis-superintelligence/0081.wav"
+  },
+  {
+   "id": 82,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1952.206,
+   "end": 1979.926,
+   "text": "因此有10的300次方种不同的折叠方式，但不知何故在自然界中。 自然界的物理法则在毫秒内就解决了这个问题，蛋白质在你的体内有时只需几分之一秒就能折叠。 物理学以某种方式解决了这个搜索问题，需要明确的是，在许多情况下。 如果你认为我错了请纠正我，通常这种序列会以独特的方式自我形成",
+   "audioFile": "audio-demis-superintelligence/0082.wav"
+  },
+  {
+   "id": 83,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 1980.626,
+   "end": 1988.2,
+   "text": "在这些巨大的可能性中，它确实找到了一种实现稳定的方法，尽管在某些情况下可能存在",
+   "audioFile": "audio-demis-superintelligence/0083.wav"
+  },
+  {
+   "id": 84,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 1988.9,
+   "end": 2023.834,
+   "text": "功能异常会导致许多疾病，但大多数情况下这种映射是唯一的，而这种唯一映射并不存在。 显然，这正是问题所在。通常在健康状态下，这种映射是唯一的。 在健康状态和疾病状态下都存在这种唯一映射。例如阿尔茨海默病的一个猜想是淀粉样β蛋白折叠方式错误。 这种蛋白以错误方式折叠后会在神经元中形成缠结。 理解正常功能与疾病机制对揭示这些物质的作用方式和结构至关重要",
+   "audioFile": "audio-demis-superintelligence/0084.wav"
+  },
+  {
+   "id": 85,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2024.284,
+   "end": 2031.679,
+   "text": "蛋白质在与外界相互作用时可能改变形状，生物学中的蛋白质不一定始终处于静态状态",
+   "audioFile": "audio-demis-superintelligence/0085.wav"
+  },
+  {
+   "id": 86,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2032.379,
+   "end": 2044.393,
+   "text": "或许可以分享一些关于AlphaFold早期研发过程中令人着迷的细节。 与游戏不同，蛋白质折叠涉及真实物理系统，难以通过自我对弈机制解决",
+   "audioFile": "audio-demis-superintelligence/0086.wav"
+  },
+  {
+   "id": 87,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2045.093,
+   "end": 2076.724,
+   "text": "数据集规模较小，需要更巧妙的设计，您能否谈谈具体挑战。 哪些问题特别难以解决？解决方案又有哪些精彩之处。 我认为AlphaFold是我们迄今为止构建的最复杂且意义最重大的系统。 过去两三年见证这一突破令人震撼，因为我们最初是从游戏领域起步的。 阿尔法围棋和阿尔法零的突破只是起点，我们真正的终极目标是构建能够推动通用学习的系统，而不仅仅是破解游戏。",
+   "audioFile": "audio-demis-superintelligence/0087.wav"
+  },
+  {
+   "id": 88,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2077.174,
+   "end": 2108.952,
+   "text": "这些系统可以应用于现实世界的挑战，我特别热衷于科学领域的挑战，比如蛋白质折叠，而阿尔法折叠正是这一方向的典范。 在数据和创新方面，我们需要整合大量技术才能实现突破。 破解蛋白质折叠问题需要整合超过30种不同的组件算法。 其中一些重大创新包括在物理和进化生物学中加入硬编码约束条件。 例如对蛋白质键角等参数进行约束，但不会影响系统的学习能力。",
+   "audioFile": "audio-demis-superintelligence/0088.wav"
+  },
+  {
+   "id": 89,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2109.402,
+   "end": 2128.922,
+   "text": "系统仍能通过示例自行学习物理规律。 即使经过40年实验生物学研究，已知的蛋白质结构也仅约15万个。 这成为我们的训练集，虽然规模远低于常规需求。 通过自蒸馏技术，我们将阿尔法折叠最自信的预测结果重新加入训练集。",
+   "audioFile": "audio-demis-superintelligence/0089.wav"
+  },
+  {
+   "id": 90,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2129.372,
+   "end": 2156.189,
+   "text": "这种创新对阿尔法折叠的成功至关重要。 阿尔法折叠一阶段的成果是生成距离图谱。 构建一个包含蛋白质中所有分子两两距离的矩阵，然后需要。 一个独立的优化过程来生成3D结构。我们在阿尔法折叠2中所做的，是将其真正实现端到端。 直接从氨基酸序列推导出3D结构，跳过了这个中间步骤",
+   "audioFile": "audio-demis-superintelligence/0090.wav"
+  },
+  {
+   "id": 91,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2156.639,
+   "end": 2183.516,
+   "text": "在机器学习领域，我们始终发现系统越端到端，效果越好。 最终系统比人类设计者更擅长学习约束条件。 当系统能直接生成目标结构时，比通过中间步骤手工设计更高效。 让梯度和学习过程贯穿整个系统，从最终输出反向传导至输入端。 人工设计大量约束条件，再逐步扩展学习模块的规模",
+   "audioFile": "audio-demis-superintelligence/0091.wav"
+  },
+  {
+   "id": 92,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2183.966,
+   "end": 2205.266,
+   "text": "直到学习模块完全覆盖整个问题，这就是我们开发的阿尔法X系列项目。 最典型的例子是阿尔法围棋到阿尔法零的演进过程。 最初版本的阿尔法围棋只需达到世界冠军水平即可。 而阿尔法零则完全摆脱了人类棋谱的限制，从随机开局自我对弈",
+   "audioFile": "audio-demis-superintelligence/0092.wav"
+  },
+  {
+   "id": 93,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2205.716,
+   "end": 2249.735,
+   "text": "从最初的设计出发，逐步消除了人类对围棋知识的依赖，最终AlphaZero实现了通用化，可应用于任何领域。 系统中原本包含围棋棋盘对称性等设定，AlphaZero移除了这些限制，可从零开始学习任何双人游戏。 最终版本MuZero更进一步，无需人工输入游戏规则，能自主学习并掌握游戏机制。 它同样能处理电子游戏和棋类游戏，这便是技术演进的完整路径。 从AlphaGo到AlphaZero再到MuZero，这是从模仿学习到完全自监督学习的完整发展轨迹。 从零开始学习环境结构，通过自我对弈逐步构建知识体系",
+   "audioFile": "audio-demis-superintelligence/0093.wav"
+  },
+  {
+   "id": 94,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2250.185,
+   "end": 2278.903,
+   "text": "但最初我们很难直接构建AlphaZero或MuZero，需要长期坚持信念并克服质疑。 当时很多人认为围棋AI至少要十年才能实现，2015-2016年我们完成时确实面临巨大压力。 先研发AlphaGo让我们积累了宝贵经验，这正是我强调AI是工程科学的原因。 与自然科学不同，AI研究需要在科学探索与工程实践之间找到平衡点",
+   "audioFile": "audio-demis-superintelligence/0094.wav"
+  },
+  {
+   "id": 95,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2279.353,
+   "end": 2289.087,
+   "text": "你研究的现象在自然界并不存在，必须先构建它，先制造出实体，然后才能研究它的运作方式，拆解它的原理。",
+   "audioFile": "audio-demis-superintelligence/0095.wav"
+  },
+  {
+   "id": 96,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2289.787,
+   "end": 2318.814,
+   "text": "这个问题很难问，因为你可能会回答这是所有因素的综合，但让我们试着思考，因为你现在所处的位置非常特殊。 DeepMind是人工智能历史上一些最卓越理念的诞生地，同时也是卓越工程实践的汇聚地。 DeepMind的终极目标是破解智能，这个目标中科学和工程各占多少比重？ 算法、数据、硬件计算基础设施、软件系统架构各占多少比例？",
+   "audioFile": "audio-demis-superintelligence/0096.wav"
+  },
+  {
+   "id": 97,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2319.264,
+   "end": 2333.24,
+   "text": "除了这些，人力资源的协作方式是否也至关重要？在所有这些理念的交汇空间中，哲学层面的思考又占多少比重？ 如果回望未来200年，推动智能突破的关键因素是什么？",
+   "audioFile": "audio-demis-superintelligence/0097.wav"
+  },
+  {
+   "id": 98,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2333.94,
+   "end": 2358.196,
+   "text": "我认为是多种要素的结合，但不同要素的占比会随时间变化。 以DeepMind为例，2010年创立时几乎无人谈论人工智能，如今仅过去12年。 当时在MIT做博士后时，人工智能几乎被视为失败的领域。 上世纪90年代MIT等机构尝试用逻辑系统实现AI，但都以失败告终。",
+   "audioFile": "audio-demis-superintelligence/0098.wav"
+  },
+  {
+   "id": 99,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2358.646,
+   "end": 2401.529,
+   "text": "当时像明斯基、帕特里克·温斯顿等先驱者都在探索传统AI的边界。 过去曾与一些人争论，他们曾认为我疯了，居然想着用学习系统实现新突破。但听到这个想法时，我其实很高兴，至少说明你走了一条独特的道路。 在那个阶段，即使所有教授都告诉你你疯了，这确实是真的。当然，在工业界，我们很难获得哪怕两分钱的支持。 如今难以想象，当时在风险投资圈和融资领域，这甚至是最热门的词汇。 2010年时情况完全不同，我和肖恩曾反复讨论，当时创办DeepMind的初衷是什么。",
+   "audioFile": "audio-demis-superintelligence/0099.wav"
+  },
+  {
+   "id": 100,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2401.979,
+   "end": 2433.322,
+   "text": "核心理念之一是算法突破，比如深度学习，杰夫·辛顿和科辛等人刚在学术界提出这一概念。 我们特别看好强化学习，认为其具备扩展潜力，同时脑科学领域也取得显著进展。 过去十年间，fMRI等技术帮助我们获得关于大脑架构的重要启示。 在系统层面而非实现层面，我们尝试借鉴大脑的表征方式。 另一个关键因素是计算能力，特别是GPU的普及。",
+   "audioFile": "audio-demis-superintelligence/0100.wav"
+  },
+  {
+   "id": 101,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2433.772,
+   "end": 2472.05,
+   "text": "当时游戏产业已使计算资源实现商品化，这为我们提供了契机。 最后是智能的数学定义，比如AIξ理论，肖恩与导师马库斯·胡特共同研究。 该理论本质上是强化学习系统的极限形式，假设拥有无限算力和无限内存。 但我也在期待看到类似的东西，比如图灵机和计算理论，像图灵这样的科学家所提出的理论。 香农提出的理论构成了现代计算机科学的基础，我当时期待能出现类似理论来支撑通用人工智能研究。",
+   "audioFile": "audio-demis-superintelligence/0101.wav"
+  },
+  {
+   "id": 102,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2472.5,
+   "end": 2508.07,
+   "text": "当我知道肖恩在研究类似理论时，这对我来说是拼图的最后一块。 早期阶段，我认为理念最为重要，对我们而言是深度强化学习和扩展深度学习。 当然，我们见证了Transformer模型带来的巨大飞跃，从2010年至今有三四次重大突破，比如阿尔法围棋。 虽然可能还需要几次突破，但随着接近通用人工智能，。 我认为工程和数据的重要性日益增加，因为规模效应，近期GPT-3等大语言模型的成果已证明。",
+   "audioFile": "audio-demis-superintelligence/0102.wav"
+  },
+  {
+   "id": 103,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2508.52,
+   "end": 2515.148,
+   "text": "大规模模型显然是必要但可能不充分的通用人工智能解决方案的一部分。 以及",
+   "audioFile": "audio-demis-superintelligence/0103.wav"
+  },
+  {
+   "id": 104,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2515.848,
+   "end": 2546.725,
+   "text": "正如你所说，我要向你表达由衷的感谢，你是这一领域的先驱者。 坚持强化学习等理念，证明其可行性，尽管过去成功有限。 尽管我们尚未完全掌握，但拥有全球顶尖研究人员探讨智能本质。 谈到通用人工智能（AGI）这类概念时，提到MIT（麻省理工学院）其实并不合适，因为这并不是一个会引发讨论的话题。 也许在40到50年前，AI还处于早期阶段，但那时的情况完全不同。",
+   "audioFile": "audio-demis-superintelligence/0104.wav"
+  },
+  {
+   "id": 105,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2547.175,
+   "end": 2555.429,
+   "text": "当时AI领域更多是小规模的试验性项目，而非雄心勃勃的计划，最大的项目也仅限于一些基础研究。",
+   "audioFile": "audio-demis-superintelligence/0105.wav"
+  },
+  {
+   "id": 106,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2556.129,
+   "end": 2587.986,
+   "text": "当时最大的挑战可能是在机器人领域，比如DARPA挑战赛，但真正具有变革意义的是解决智能问题，并相信人类能够实现这一点。 为了让工程团队发挥创造力，打造卓越系统，必须坚信能够攻克这些看似不可能的难题。 2010年我们的使命宣言（至今仍是核心）是：第一步解决智能，第二步用智能解决所有其他问题。 如果在2010年向风险投资人提出这个愿景，我们收到的反应可想而知。",
+   "audioFile": "audio-demis-superintelligence/0106.wav"
+  },
+  {
+   "id": 107,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2588.436,
+   "end": 2617.198,
+   "text": "我们最终只找到少数几位'异想天开'的投资者，这个过程充满挑战。 甚至不敢向教授们提及这个目标，因为他们会认为我们是在自毁职业生涯。 我始终坚信强化学习的价值，因为神经科学显示，灵长类动物的学习机制与之高度契合。 20世纪90年代末，研究发现猴子大脑的多巴胺系统实现了某种时间差分学习，这与游戏预测误差的机制完全一致。",
+   "audioFile": "audio-demis-superintelligence/0107.wav"
+  },
+  {
+   "id": 108,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2617.648,
+   "end": 2656.356,
+   "text": "我认为神经科学的终极价值，就是揭示这些底层学习机制的原理。 当你试图解决人工智能这样雄心勃勃的问题时，这属于基础研究，没人知道该如何着手。 要实现这一点，你需要利用所有可能的证据和信息来源，以确保你走在正确的方向上并增强信心。 因此，这也是我们为何在该领域投入大量精力的原因之一。回到你之前关于组织结构的问题，我认为我们另一个重要的创新是…… 我们在DeepMind推动创新的一大举措，就是建立跨学科的组织架构。",
+   "audioFile": "audio-demis-superintelligence/0108.wav"
+  },
+  {
+   "id": 109,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2656.806,
+   "end": 2692.64,
+   "text": "我们至今仍保留这一架构。DeepMind最初汇聚了神经科学与机器学习领域最前沿的知识。 工程学与数学，以及游戏领域。此后，我们进一步扩展了这一架构，如今团队中不仅有哲学家，还有伦理学家等各类科学家。 还包括其他类型的科学家，如物理学家等。正是这种多元化的组合，促使我尝试打造一种新型的贝尔实验室，但这次是在这个黄金时代。 黄金时代，对吧？这也是这一理念的新表达，旨在培育这种惊人的创新引擎。谈到……",
+   "audioFile": "audio-demis-superintelligence/0109.wav"
+  },
+  {
+   "id": 110,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2693.09,
+   "end": 2700.298,
+   "text": "机器中的人类，思维本身就是一个学习机器，众多杰出的人类智慧汇聚其中，共同构建这些系统。",
+   "audioFile": "audio-demis-superintelligence/0110.wav"
+  },
+  {
+   "id": 111,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2700.998,
+   "end": 2725.959,
+   "text": "学习系统，如果我们回到…… 阿尔法折叠这一宏大梦想，或许只是漫长旅程的最初一步。 你认为同样的方法能否用于预测更复杂生物结构和功能？ 系统可以模拟多蛋白相互作用，进而扩展到更大规模的系统模拟。 最终模拟人类大脑或人体，这种复杂而坚韧的微观生物学系统，您是否认同这一愿景",
+   "audioFile": "audio-demis-superintelligence/0111.wav"
+  },
+  {
+   "id": 112,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2726.409,
+   "end": 2735.655,
+   "text": "作为长期愿景，我确实如此认为。我认为，一旦我们拥有足够强大的系统，AI2的首要应用方向将包括这些领域",
+   "audioFile": "audio-demis-superintelligence/0112.wav"
+  },
+  {
+   "id": 113,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2736.355,
+   "end": 2771.119,
+   "text": "生物学和疾病治疗是我最优先考虑的事项之一，这也是我个人积极推动的原因。 阿尔法折叠虽然令人惊叹，但只是开始，我希望它能证明计算方法的潜力。 阿尔法折叠解决了蛋白质结构这一重大难题，但生物学是动态的，真正需要的是蛋白质相互作用的模拟。 我们目前正致力于蛋白质-配体结合等研究，即蛋白质与分子的相互作用。 最终目标是构建虚拟细胞，这将是我的终极梦想，或许在未来的十年内实现",
+   "audioFile": "audio-demis-superintelligence/0113.wav"
+  },
+  {
+   "id": 114,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2771.569,
+   "end": 2810.729,
+   "text": "我与许多生物学家朋友，包括保罗·纳斯教授（QRIK研究所负责人、诺贝尔奖得主）讨论了这一构想。 虚拟细胞能否被构建？如果能实现，将为生物学和疾病研究带来革命性突破。 可在虚拟细胞上进行大量实验，最后阶段再在湿实验室验证，极大缩短新药研发周期。 目前从确定靶点到获得候选药物平均需要十年时间，这一过程或许可以大幅缩短。 如果能在计算机中完成大部分工作，理论上可以将这一过程缩短一个数量级，从而实现虚拟细胞的构建。",
+   "audioFile": "audio-demis-superintelligence/0114.wav"
+  },
+  {
+   "id": 115,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2811.179,
+   "end": 2850.04,
+   "text": "我们必须逐步建立对生物学不同部分及其相互作用的理解，每隔几年我们都会讨论这个问题。 我曾与保罗讨论过此事，直到去年阿尔法折叠发布后，我认为现在是行动的时机。 这是首个证明这一可能性的实证，他对此非常兴奋。我们与他的实验室有合作，他们就在我们隔壁的国王十字区。 街对面就是快速研究所，我认为基于阿尔法折叠等技术，生物学领域将出现令人惊叹的突破。 我们已开源阿尔法折叠，社区正在积极应用。我常说数学是描述物理的完美语言。",
+   "audioFile": "audio-demis-superintelligence/0115.wav"
+  },
+  {
+   "id": 116,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2850.49,
+   "end": 2880.497,
+   "text": "如果数学是描述物理的完美语言，我认为AI最终可能成为描述生物学的完美语言，因为生物学过于复杂。 生物学如此复杂、动态且充满涌现性，我很难相信能像牛顿定律那样简洁地描述细胞。 必须从基本构建模块入手，用AI模拟所有组件，从而准确预测生物系统的功能演化。 给定这些构建模块，AI能预测生物系统的功能和演化方式，这类似于细胞自动机。",
+   "audioFile": "audio-demis-superintelligence/0116.wav"
+  },
+  {
+   "id": 117,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2880.947,
+   "end": 2918.81,
+   "text": "必须从基础成分入手，推导规则并运行模拟，但生物学的规则极难确定。 你无法从宏观层面分析，必须分解基本要素，找出规则并让系统自行运行。 是的，学习它们正是如此。生物学过于复杂，难以总结出规则，它过于动态和涌现，与……相比。 物理系统，比如行星的运动。没错，因此你必须学习规则，这正是我们正在构建的系统类型。你提到你们开源了。 阿尔法折叠，甚至相关数据，我个人也非常高兴，并衷心感谢",
+   "audioFile": "audio-demis-superintelligence/0117.wav"
+  },
+  {
+   "id": 118,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 2919.51,
+   "end": 2925.722,
+   "text": "开源了穆乔科物理模拟引擎，这常用于机器人研究等领域。我认为这是一项非常",
+   "audioFile": "audio-demis-superintelligence/0118.wav"
+  },
+  {
+   "id": 119,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2926.422,
+   "end": 2956.571,
+   "text": "激进的举措。那么，是什么促使你们这么做？毕竟，很少有公司或个人会采取这种做法。背后的哲学是。 具体情况具体分析。在上述两种情况下，我们认为对人类社会的最大益处就是这么做，同时也能为科学。 界带来最大价值。在机器人物理领域，我们购买了穆乔科，就是为了明确的开源原则。 希望人们能理解这一点。很高兴听到你们这么做。第二个原因是，我们这么做",
+   "audioFile": "audio-demis-superintelligence/0119.wav"
+  },
+  {
+   "id": 120,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2957.021,
+   "end": 2986.34,
+   "text": "主要是因为最初构建它的那位令人惊叹的教授已无法继续维护，因为项目规模太大了。 他最初创建了这个系统。我们帮助他解决了这个问题。至于阿尔法折叠，规模更为庞大。 我认为在那种情况下，阿尔法折叠有如此众多的下游应用，我们甚至无法想象所有可能性。因此，加速药物研发和基础研究的最佳方式。 就是公开所有数据和系统本身",
+   "audioFile": "audio-demis-superintelligence/0120.wav"
+  },
+  {
+   "id": 121,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 2986.79,
+   "end": 3024.027,
+   "text": "看到人们在短短一年内取得的成就令人欣慰，这在科学领域本就属于较短的时间段，而它已被广泛使用。 我们估计已有超过50万名研究人员使用了它，这几乎涵盖了全球所有专业生物学家。 生物学家们用它来研究感兴趣的蛋白质，我们已看到许多令人惊叹的基础研究成果。 《科学》杂志最近特别推出了整期专题，其中封面展示了核孔复合体这一人体内最大的蛋白质。 这种蛋白质控制着细胞核内外所有物质的运输，就像细胞核上的微型门户",
+   "audioFile": "audio-demis-superintelligence/0121.wav"
+  },
+  {
+   "id": 122,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3024.477,
+   "end": 3054.157,
+   "text": "它们结构庞大且呈巨大甜甜圈状，科学家们数十年来一直试图解析其结构。 尽管已有大量实验数据，但分辨率不足且存在缺失部分，研究人员通过结合阿尔法折叠预测与实验数据。 全球四个研究团队几乎同时利用阿尔法折叠预测完成拼图，最终成功解析结构。 几乎所有制药公司高管都表示，他们的团队正在使用阿尔法折叠加速新药研发",
+   "audioFile": "audio-demis-superintelligence/0122.wav"
+  },
+  {
+   "id": 123,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3054.607,
+   "end": 3097.111,
+   "text": "阿尔法折叠带来的连锁效应巨大，其影响力已渗透到整个生物领域。 它正在吸引更多人进入该领域，既因为研究的兴奋感，也因为涉及的技术深度。 它几乎就像生物学的入门药物，确实如此，它能激发更多人深入研究。 希望也有其他计算领域的人参与。正如我所说，未来我们需要考虑更多因素，我们是在此基础上进行开发的。 在阿尔法折叠及其他相关理念的基础上，我们讨论过蛋白质相互作用、基因组学等领域。并非所有内容都会开源，部分将用于商业开发，因为这是获取资源和影响力的最佳方式",
+   "audioFile": "audio-demis-superintelligence/0123.wav"
+  },
+  {
+   "id": 124,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3097.561,
+   "end": 3133.508,
+   "text": "其他项目将采取非营利模式。同时我们也必须考虑未来其他因素，例如安全与伦理问题。 比如合成生物学存在双重用途，我们必须考虑这些问题。在发布阿尔法折叠前，我们咨询了30位生物伦理专家。 未来还会有其他考量，但目前我认为阿尔法折叠是对科学界的重大馈赠。 我确信类似阿尔法折叠的成果未来会获得诺贝尔奖。 但人类在归因方面很糟糕，肯定会归功于人类。你认为会有AI系统获得诺贝尔奖吗？",
+   "audioFile": "audio-demis-superintelligence/0124.wav"
+  },
+  {
+   "id": 125,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3134.208,
+   "end": 3148.125,
+   "text": "这取决于我们最终构建的AI类型，是否是能自主设定目标并提出假设的智能体。 谁来决定要解决哪些问题？我认为这涉及。 一项宣布结果的声明，这正是作为成果发布的",
+   "audioFile": "audio-demis-superintelligence/0125.wav"
+  },
+  {
+   "id": 126,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3148.825,
+   "end": 3176.854,
+   "text": "目前这些系统背后体现的是人类的非凡智慧，而系统本身只是工具，就像伽利略用望远镜进行观测。 望远镜的功劳应归于伽利略，他创造了这个工具并加以使用。 如今这些工具虽然能自主学习，但像AlphaFold这样的系统仍是科学探索的终极工具。 未来某天AI可能不依赖网络数据而独立提出类似广义相对论的理论",
+   "audioFile": "audio-demis-superintelligence/0126.wav"
+  },
+  {
+   "id": 127,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3177.304,
+   "end": 3202.372,
+   "text": "而非简单汇总互联网或PubMed上的信息，尽管那样也颇具趣味性。 这让人联想到我们之前关于创造性的讨论，比如发明围棋而非仅仅提出好棋步。 若要授予其类似诺贝尔奖的荣誉，它需要像发明围棋那样提出全新猜想。 这种猜想应是人类科学家未明确指定的全新理论构想",
+   "audioFile": "audio-demis-superintelligence/0127.wav"
+  },
+  {
+   "id": 128,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3202.822,
+   "end": 3207.614,
+   "text": "目前AI确实是工具，但这种工具的潜力确实令人着迷",
+   "audioFile": "audio-demis-superintelligence/0128.wav"
+  },
+  {
+   "id": 129,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3208.314,
+   "end": 3230.377,
+   "text": "你提到通过汇总网络信息推进科学，很多人认为科学始终站在巨人肩上。 问题是究竟有多少突破是真正超越前人成果的全新视角。 这种突破性想法可能并非简单整合过往成果的再创造。 互联网上可能已经存在未来百年诺贝尔奖的全部信息，只是尚未被发现。",
+   "audioFile": "audio-demis-superintelligence/0129.wav"
+  },
+  {
+   "id": 130,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3231.077,
+   "end": 3256.874,
+   "text": "我认为这正是一个重大谜题，许多重大突破都出现在不同学科的交叉点。 当看似无关的领域之间建立新联系时，就会产生突破性进展。 DeepMind本身即是神经科学与人工智能工程的跨学科结合体。 我们今天无法想象的是，人类大脑难以理解掌握全部互联网信息的体验。 我们很难想象拥有完整互联网知识的思维状态。",
+   "audioFile": "audio-demis-superintelligence/0130.wav"
+  },
+  {
+   "id": 131,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3257.324,
+   "end": 3282.403,
+   "text": "假设我读完维基百科全书，这种思维实验能帮助我们理解。 但整个互联网的信息量远超人类认知极限。 同时激活所有信息并发现其中关联的可能性令人着迷。 毫无疑问存在大量待发现的知识，但真正突破性的创新依然需要。 那些从未被想到过的全新概念，无法通过已知事物的平均组合产生。",
+   "audioFile": "audio-demis-superintelligence/0131.wav"
+  },
+  {
+   "id": 132,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3282.853,
+   "end": 3289.664,
+   "text": "历史上最伟大的科学家都展现过这种独特创造力。 尽管很难确切知道他们那个时代的情况",
+   "audioFile": "audio-demis-superintelligence/0132.wav"
+  },
+  {
+   "id": 133,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3290.364,
+   "end": 3330.531,
+   "text": "虽然他们提出这些想法时的具体情况难以确定，但你让我深思，因为仅仅通过深入的思维实验。 即使我浏览过上百篇维基百科技术文章，我认为维基百科在技术主题上的内容确实令人印象深刻。 即便了解过数百甚至上千篇文章，我认为没有人能真正直观理解这种智能的本质。 这种智能若能正确运用和整合信息，本身就是非常强大的能力，我认为可以借此走得非常远。 甚至可以基于这些知识构建思维实验，模拟不同设想，如果这个假设成立，我可以进行这样的推演",
+   "audioFile": "audio-demis-superintelligence/0133.wav"
+  },
+  {
+   "id": 134,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3331.231,
+   "end": 3365.02,
+   "text": "这种实验并非发明，而是直接运用知识构建基础世界模型的模拟。 虽然有人认为这带有浪漫主义色彩，但爱因斯坦也曾用类似思维实验进行探索。 如果系统化地整合维基百科和PubMed等所有知识库，我认为还有大量未知领域等待发现。 这些知识在材料科学领域极具价值，比如常温超导体等突破性发现。 例如开发更高效的电池系统，这类机械工程问题都可以通过系统性搜索解决",
+   "audioFile": "audio-demis-superintelligence/0134.wav"
+  },
+  {
+   "id": 135,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3365.47,
+   "end": 3368.336,
+   "text": "这种搜索可以由模型进行指导和优化",
+   "audioFile": "audio-demis-superintelligence/0135.wav"
+  },
+  {
+   "id": 136,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3369.036,
+   "end": 3389.264,
+   "text": "极其强大，说到这个，您有一篇关于核聚变中托卡马克等离子体磁控制与深度强化学习的论文，对吗？ 您正试图用深度强化学习解决核聚变问题，对吗？这是在控制高温等离子体，能否解释这项工作？AI最终能解决核聚变吗？",
+   "audioFile": "audio-demis-superintelligence/0136.wav"
+  },
+  {
+   "id": 137,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3389.964,
+   "end": 3425.087,
+   "text": "过去一两年非常有趣且富有成效，因为我们实现了许多我多年来一直想做的项目。 我希望能推动多个科学领域的发展，这些领域若能加速突破将极具变革性，本身也充满有趣的科学挑战。 能源领域确实如此，我们讨论过疾病和生物学是AI能产生重大影响的领域之一，而能源与气候问题则是另一个关键领域。 目前我认为AI能帮助解决的首要领域是疾病和生物学，其次是能源与气候问题，其中核聚变就是AI可以发挥作用的领域之一。",
+   "audioFile": "audio-demis-superintelligence/0137.wav"
+  },
+  {
+   "id": 138,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3425.537,
+   "end": 3462.872,
+   "text": "核聚变面临诸多挑战，主要涉及物理、材料科学和工程领域，建造大型聚变反应堆并约束等离子体的难度极大。 每当进入新领域时，我们通常会寻找该领域的专家进行合作，努力找到全球最顶尖的合作者。 在核聚变领域，我们与瑞士洛桑联邦理工学院（EPFL）展开合作，他们拥有令人惊叹的实验反应堆。 我与团队反复确认，确保能安全谨慎地使用该设备，他们成功说服了相关方允许我们使用。 那是一台非常先进的实验反应堆，他们在那里尝试各种极具创意的实验。",
+   "audioFile": "audio-demis-superintelligence/0138.wav"
+  },
+  {
+   "id": 139,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3463.322,
+   "end": 3491.661,
+   "text": "当我们进入新领域时，通常会寻找该领域的关键瓶颈问题，例如在核聚变领域有哪些核心难题？ 从第一性原理出发，我们需要明确当前阻碍核聚变实现的所有瓶颈问题，然后我们会请核聚变专家来告诉我们具体情况。 我们分析这些瓶颈，判断哪些问题可以通过当前的人工智能方法解决。 从研究角度看，这正好能解决核聚变领域的一个关键瓶颈——等离子体控制。",
+   "audioFile": "audio-demis-superintelligence/0139.wav"
+  },
+  {
+   "id": 140,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3492.111,
+   "end": 3518.373,
+   "text": "等离子体温度高达数百万摄氏度，远超太阳表面温度，没有任何材料能直接接触它。 他们必须依靠超导磁体来约束这种等离子体，但等离子体本身非常不稳定。 你需要提前预测等离子体的行为，以便在几毫秒内调整磁场所需的位置。 这似乎是一个典型的强化学习预测问题，你的控制器需要移动磁体。",
+   "audioFile": "audio-demis-superintelligence/0140.wav"
+  },
+  {
+   "id": 141,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3518.823,
+   "end": 3546.921,
+   "text": "在我们介入前，他们使用的是传统操作研究方法设计的控制器。 这些控制器需要预先编码规则，无法实时响应等离子体的突发变化。 而我们恰好拥有等离子体模拟器，这与我们的技术需求高度契合。 人工智能最终能解决核聚变难题吗？我们正尝试解决这个问题。 去年我们在《自然》期刊发表论文，成功将等离子体约束成特定形状。",
+   "audioFile": "audio-demis-superintelligence/0141.wav"
+  },
+  {
+   "id": 142,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3547.371,
+   "end": 3575.433,
+   "text": "将等离子体塑造成不同形状并长时间稳定控制，这是聚变领域的一大难题，目前已部分解决。 我们开发了一种控制器，无论等离子体形状如何都能稳定约束，不同形状对能量输出效率有显著影响。 这种被称为'液滴'的结构具有突破性意义，目前我们正与多家聚变初创公司合作，探索下一个技术瓶颈。 在聚变领域寻找下一个挑战",
+   "audioFile": "audio-demis-superintelligence/0142.wav"
+  },
+  {
+   "id": 143,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3576.133,
+   "end": 3584.923,
+   "text": "通过解决分数电子问题推动密度泛函理论的边界，您正在承担这一任务。 模拟电子的量子力学行为",
+   "audioFile": "audio-demis-superintelligence/0143.wav"
+  },
+  {
+   "id": 144,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3585.623,
+   "end": 3607.202,
+   "text": "AI能否模拟任意量子系统？ 这是一直关注的难题，已有十余年研究。 若能模拟电子特性，即可解析元素和材料的运作机制。 我们有薛定谔方程，但实际应用需依赖密度泛函理论的近似方法。 人们尝试构建这些泛函的近似模型，以描述电子云的分布与相互作用",
+   "audioFile": "audio-demis-superintelligence/0144.wav"
+  },
+  {
+   "id": 145,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3607.652,
+   "end": 3636.331,
+   "text": "当不同电子云相互作用时，如何预测其分布与相互作用方式。 我们试图结合两个要素，学习一种能够描述更多化学类型的模拟功能，从而更全面地理解化学反应过程。 迄今为止，人们只能运行昂贵的模拟实验，但仅限于非常简单的分子。我们希望模拟更复杂的材料。 目前尚无可行方法模拟大型材料，我们正在构建能够近似薛定谔方程的功能模块。",
+   "audioFile": "audio-demis-superintelligence/0145.wav"
+  },
+  {
+   "id": 146,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3636.781,
+   "end": 3643.845,
+   "text": "通过该方程可以描述电子行为，而所有材料的科学特性都由电子及其相互作用决定。",
+   "audioFile": "audio-demis-superintelligence/0146.wav"
+  },
+  {
+   "id": 147,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3644.545,
+   "end": 3656.278,
+   "text": "因此需要通过功能模块准确概括模拟过程，同时保持与真实模拟结果的高度一致性。 但如何实现这种一致性？这项任务的难度主要体现在哪里？",
+   "audioFile": "audio-demis-superintelligence/0147.wav"
+  },
+  {
+   "id": 148,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3656.978,
+   "end": 3683.437,
+   "text": "需要运行复杂模拟，学习从初始条件和参数映射到功能模块的规律。 这确实颇具挑战性，但我们可以利用计算集群进行分子动力学模拟。 这些集群能生成大量数据，因此我们特别青睐这类系统。 我们使用游戏模拟器生成数据，可以按需创建任意数量的数据。 只要云平台有空闲计算资源，我们就会立即运行这些计算任务。",
+   "audioFile": "audio-demis-superintelligence/0148.wav"
+  },
+  {
+   "id": 149,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3683.887,
+   "end": 3721.695,
+   "text": "这些计算完全用于量子力学模拟，所有空闲计算时间都消耗在量子力学研究上。 除了模拟和蛋白质模拟等其他领域，当人们不在YouTube上搜索猫咪视频时，这些计算机正被用于量子化学等实际用途。 关键在于将这些资源用于有益的用途。随后，我们可以通过分析这些生成的计算数据，尝试学习相关函数。 一旦我们掌握了这些函数，其效率远高于运行模拟。你认为有一天AI是否能让我们做到…… 比如破解物理学的奥秘，甚至实现超光速旅行。",
+   "audioFile": "audio-demis-superintelligence/0149.wav"
+  },
+  {
+   "id": 150,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3722.145,
+   "end": 3753.934,
+   "text": "我毕生致力于AI研究的终极目标，是构建一个工具，帮助我们理解宇宙，也就是理解物理规律和现实的本质。 目前我们尚未拥有这样的系统，但当通用人工智能（AGI）实现时，我认为这将是AGI应用的首要方向。 我希望借此测试物理知识的极限，探索我们对物理规律认知的边界。 科学中有很多未知领域，这让我着迷。作为科学方法的坚定支持者，我认为这是人类历史上最伟大的理念之一，使我们得以不断拓展知识。",
+   "audioFile": "audio-demis-superintelligence/0150.wav"
+  },
+  {
+   "id": 151,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3754.384,
+   "end": 3777.584,
+   "text": "但作为真正的科学家，你会发现了解得越多，越意识到人类认知的局限性。 我常惊讶于更多人不为这些未知感到困扰。每天晚上，我都会思考那些我们习以为常却毫无头绪的事物。 时间、意识、引力、生命——这些都是自然最根本的谜题。 我们甚至不清楚它们的本质究竟是什么。",
+   "audioFile": "audio-demis-superintelligence/0151.wav"
+  },
+  {
+   "id": 152,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3778.284,
+   "end": 3804.365,
+   "text": "为了生活，我们会对某些事物做出假设，并将这些假设当作事实来对待，这使我们能够将它们归类。 但现实是，当你思考时间时，应该提醒自己，把它从架子上取下来，意识到…… 不，我们有很多假设，现在仍存在大量争议和不确定性，关于时间究竟是什么。 时间是否存在错误？你知道，有很多根本性问题不能仅凭假设，也许AI能帮助我们……",
+   "audioFile": "audio-demis-superintelligence/0152.wav"
+  },
+  {
+   "id": 153,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3805.065,
+   "end": 3838.175,
+   "text": "不要把任何东西放在架子上，不要做出强硬的假设。 真正打开它，看看究竟什么，我认为我们应该对这一点保持真正开放的心态，而不是对某个特定理论教条主义。 这也将使我们能够最终构建更先进的实验工具，从而测试某些理论。 比如我们最初讨论的宇宙的计算本质，如果这一假设成立，我们该如何验证？ 如何验证？目前已有学者如斯科特·阿伦森等人提出猜想，",
+   "audioFile": "audio-demis-superintelligence/0153.wav"
+  },
+  {
+   "id": 154,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3838.625,
+   "end": 3851.838,
+   "text": "一个普朗克时空单位能容纳多少信息？如果借助AI开发新型实验工具，。 或许数十年后，我们就能实现这些设想，。 通过模拟这些理论，我们或许能解答许多物理领域的难题。",
+   "audioFile": "audio-demis-superintelligence/0154.wav"
+  },
+  {
+   "id": 155,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3852.538,
+   "end": 3875.904,
+   "text": "可以想象出一些能够以高效方式运行的模拟，就像你们在量子模拟工作中所做的那样。 甚至生命的起源，探索在阿尔法折叠工作之前，生命是如何从一块静态的岩石中出现的。 你认为AI会让我们做到这一点吗？这是你关注的重点吗？ 首先，你自己认为，地球上的生命是如何起源的？你有没有想过这个问题？",
+   "audioFile": "audio-demis-superintelligence/0155.wav"
+  },
+  {
+   "id": 156,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3876.604,
+   "end": 3903.582,
+   "text": "是的，我稍后再谈。我认为AI的终极用途是加速科学。 我可以把它想象成一棵包含宇宙所有知识的知识之树。 尽管自启蒙时代以来人类已取得很大进展，但迄今为止我们只是略微触及了这棵树的表面。 我认为AI将极大加速这一进程，就像阿尔法折叠所展示的那样。 我想尽可能探索这棵树的每个分支，这需要AI帮助我们发现规律。",
+   "audioFile": "audio-demis-superintelligence/0156.wav"
+  },
+  {
+   "id": 157,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3904.032,
+   "end": 3924.702,
+   "text": "同时，AI还能帮助我们设计和构建新的实验工具。 目前我们只是在蹒跚学步阶段，但未来几十年这将发生巨大变化。 如果我能想象到这棵树的全面繁荣，那将真正令人惊叹。 知识告诉我，人类的知识树在所有可能的知识树中只是很小的一部分。",
+   "audioFile": "audio-demis-superintelligence/0157.wav"
+  },
+  {
+   "id": 158,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 3925.402,
+   "end": 3937.643,
+   "text": "考虑到人类认知能力的局限性，即使借助工具，我们仍无法理解许多事物。 即使借助我们构建的工具，人类仍无法理解许多事物，而非人类系统或许能走得更远。",
+   "audioFile": "audio-demis-superintelligence/0158.wav"
+  },
+  {
+   "id": 159,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3938.343,
+   "end": 3972.476,
+   "text": "不仅是作为工具，而是本身具备理解能力。 他们能够带回一些东西，确实如此，你刚才的话中其实蕴含了许多内容。 首先，我认为存在两个不同层面：我们今天能理解什么，人类大脑能理解什么，以及整个知识体系的全貌。 需要理解的是，存在三种共识：可以将其视为不断扩展的知识树，或探索更多分支。我认为，。 借助AI，我们将全面探索这些领域。问题在于，如果思考可被理解的全部内容，",
+   "audioFile": "audio-demis-superintelligence/0159.wav"
+  },
+  {
+   "id": 160,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 3972.926,
+   "end": 4008.656,
+   "text": "可能存在某些基本物理原因，使得某些事物无法被理解，例如模拟之外或宇宙之外的事物，或许无法从宇宙内部理解。 因此，可能存在一些硬性限制，例如，。 我们通常认为时空是基本的，而人类大脑习惯于。 这种三维时空的概念，但我们的工具可能超越这一限制，无需受限于三维，甚至能思考十一维、十二维等更高维度。 但我们可以从不同角度理解。比如我常举的例子，当我和加里·卡斯帕罗夫下快棋时",
+   "audioFile": "audio-demis-superintelligence/0160.wav"
+  },
+  {
+   "id": 161,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4009.106,
+   "end": 4040.745,
+   "text": "如果你棋艺不错，虽然想不出他的着法，但他能向你解释清楚，事后你能理解他的思路。 或许还有更深层的层面：虽然你无法自己发明那个着法，但通过语言你可以理解并欣赏这种思路。 就像欣赏维瓦尔第或莫扎特的作品，无需自己创作就能感受其中的美。 同样，我们能在各种生命形式中看到这种现象，这种时刻可能有百万次。 清晰简洁地解释事物也是智能的标志。理查德·费曼等科学巨匠都深谙此道",
+   "audioFile": "audio-demis-superintelligence/0161.wav"
+  },
+  {
+   "id": 162,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4041.195,
+   "end": 4061.637,
+   "text": "如果能用简单语言解释复杂概念，恰恰说明你真正理解了这个话题。 我确实曾在AI系统中这样自说自话，确实如此。 系统会因我的愚蠢而感到沮丧，试图向我解释时。 我会想：这说明你不够聪明，真正聪明的人应该能简单解释",
+   "audioFile": "audio-demis-superintelligence/0162.wav"
+  },
+  {
+   "id": 163,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4062.337,
+   "end": 4067.991,
+   "text": "当然我们也可以通过增强自身来实现，人类与计算设备早已形成共生关系",
+   "audioFile": "audio-demis-superintelligence/0163.wav"
+  },
+  {
+   "id": 164,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4068.691,
+   "end": 4094.23,
+   "text": "我们与手机等设备的协同，本质上就是一种增强智能的共生模式。 比如Neuralink这样的技术，可能会进一步推动这一领域的发展，我认为未来有很多令人惊叹的可能性。 那么，假设你正在寻找外星朋友，你认为宇宙中存在大量地外文明吗。 这其实也关联到生命起源的问题，因为我认为这是关键所在，这是我的个人看法",
+   "audioFile": "audio-demis-superintelligence/0164.wav"
+  },
+  {
+   "id": 165,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4094.68,
+   "end": 4122.493,
+   "text": "我经常思考这个问题，也与许多专家讨论，阅读了大量相关书籍。 目前我的感觉是，我们可能孤独存在，这是现有证据最可能支持的场景。 比如SETI计划等项目，自太空时代开启以来我们一直在尝试。 我们使用射电望远镜等设备试图探测信号，如果考虑人类文明的演化。 人类可能比现在早百万年或晚百万年出现，这取决于一些偶然因素",
+   "audioFile": "audio-demis-superintelligence/0165.wav"
+  },
+  {
+   "id": 166,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4122.943,
+   "end": 4153.189,
+   "text": "比如如果小行星早百万年撞击恐龙，生物进化可能会完全不同。 设想几百年后人类可能达到的文明程度，更不用说百万年后。 如果能解决气候变化等问题，同时发展AI和太空探索技术。 这些正是人类一直以来的梦想，科幻作品也反复探讨过。 关于未来，我们将在星海中扩散。冯·诺依曼曾计算，若向最近的恒星系发射探测器，仅需约百万年即可覆盖整个银河系。",
+   "audioFile": "audio-demis-superintelligence/0166.wav"
+  },
+  {
+   "id": 167,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4153.639,
+   "end": 4176.305,
+   "text": "冯·诺依曼探测器只需复制两代并派往更近的恒星系，百万年内就能在银河系每个恒星系部署探测器。 从宇宙学时间尺度看，这其实是非常短暂的时间。 像戴森设想的戴森球这类工程，可能在银河系尺度上可见。 我们自20世纪30年代以来发射的无线电和电视信号，",
+   "audioFile": "audio-demis-superintelligence/0167.wav"
+  },
+  {
+   "id": 168,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4176.755,
+   "end": 4194.764,
+   "text": "若持续百万年，数百文明同时发射信号，我们应能听到宇宙中的喧嚣。 当人类具备太空探索能力时，理应听到宇宙中的喧嚣。 但我们打开耳朵却什么也没听到。 一些人认为我们尚未进行彻底搜索，可能频率或设备选择错误。",
+   "audioFile": "audio-demis-superintelligence/0168.wav"
+  },
+  {
+   "id": 169,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4195.214,
+   "end": 4220.884,
+   "text": "但我觉得我们已搜索足够，若外星文明普遍存在，理应有证据。 戴森球的建造、恒星闪烁等现象应普遍存在。 另一些人认为我们仍属初级文明，尚未具备星际航行能力。 即使协调人类应对气候变化，我们同为一个物种，所有不同的人类文明乃至外星文明，是否会有相同的优先事项并达成共识？",
+   "audioFile": "audio-demis-superintelligence/0169.wav"
+  },
+  {
+   "id": 170,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4221.334,
+   "end": 4249.2,
+   "text": "即便如此，假设我们正身处某种为自身利益而设的保护机制中，。 这与模拟假说并无本质区别，因为模拟假说最根本的含义是，我们所见的并非真实现实。 而是存在更深层的计算基础。假设我们身处某种全息投影的虚拟园区，。 所见景象由外星生命体投射，这与认为我们身处另一个宇宙并无不同，因为我们仍无法触及真实现实",
+   "audioFile": "audio-demis-superintelligence/0170.wav"
+  },
+  {
+   "id": 171,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4249.9,
+   "end": 4278.042,
+   "text": "确实存在其他解释，比如他们的沟通方式本质上与我们截然不同。 我们可能过于愚钝，无法理解他们更高级的沟通方式。 甚至荒谬的是，我们的思想本身可能是他们使用的沟通方式。 正如作家们讨论的缪斯灵感，虽然听起来很疯狂，但可能是外星生命与我们意识的互动。 我们以为源自自身的思维活动，实际上可能来自其他生命形式",
+   "audioFile": "audio-demis-superintelligence/0171.wav"
+  },
+  {
+   "id": 172,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4278.742,
+   "end": 4311.809,
+   "text": "意识本身或许就是这种沟通方式，但我不认为有任何合理论据表明。 所有外星文明都会采用这种方式，部分文明可能比我们更原始。 这些事物会呈现出某种正态分布，有些会表现出攻击性，有些则充满好奇心，还有一些则非常冷静。 哲学层面的，因为它们可能比我们年长百万年，但不该像人类文明那样存在某种单一模式。 一些文明可能通过思维交流，另一些则可能建立暴力独裁政权，这完全取决于它们的发展路径。",
+   "audioFile": "audio-demis-superintelligence/0172.wav"
+  },
+  {
+   "id": 173,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4312.509,
+   "end": 4338.301,
+   "text": "那些成功的人类文明，或者说外星文明，可能会…… 获得比人类强大一个数量级的毁灭能力，但令人悲伤的是，人类可能正在走向自我毁灭。 要么人类非常特殊，经历了许多关键跃迁才形成如今的人类文明。 最特殊的是哪个阶段？如果其他文明也达到这个层次，那么'大过滤器'理论就变得至关重要。",
+   "audioFile": "audio-demis-superintelligence/0173.wav"
+  },
+  {
+   "id": 174,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4338.751,
+   "end": 4360.533,
+   "text": "这个过滤器阻止它们成为跨行星物种或向星际扩张，这些是关乎人类未来的重要问题。 无论是否存在其他文明，思考这些问题对我们都有重要价值。 如果我们自我毁灭，会以何种方式发生？这有多容易？ 如果人类是唯一文明，这从'大过滤器'角度看反而是个好消息。",
+   "audioFile": "audio-demis-superintelligence/0174.wav"
+  },
+  {
+   "id": 175,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4361.233,
+   "end": 4394.102,
+   "text": "这意味着'大过滤器'可能已经跨越，我确信这一点。回到你最初的问题…… 生命起源的问题中有一些令人难以置信的现象，比如显然第一个生命形式从化学汤中诞生似乎非常困难，但我觉得。 多细胞生物的出现，如果在其他星球上发现单细胞生命形式，比如细菌类生物，我不会太惊讶。 多细胞生命似乎极其困难，这个阶段即捕获线粒体并将其作为自身一部分的步骤，当你刚吃掉它时，你认为这是最大的",
+   "audioFile": "audio-demis-superintelligence/0175.wav"
+  },
+  {
+   "id": 176,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4394.552,
+   "end": 4424.006,
+   "text": "如果必须选择一个《银河系漫游指南》式的单句总结，比如'那些聪明生物做了这件事'，那会是多细胞生物的出现。 有一本很棒的书叫《进化十大伟大发明》，作者尼克·莱恩推测了十大可能的进化过滤器。 我认为其中最重要的是智能的出现，以及意识的诞生，对我们能够进行科学研究等至关重要。 在地球历史上，智能只进化了一次，这显然是一个重要的候选者",
+   "audioFile": "audio-demis-superintelligence/0176.wav"
+  },
+  {
+   "id": 177,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4424.456,
+   "end": 4432.885,
+   "text": "不过对于早期候选者，我认为多细胞生物的出现意义重大，顺便问一下，你认为智能的起源是什么",
+   "audioFile": "audio-demis-superintelligence/0177.wav"
+  },
+  {
+   "id": 178,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4433.585,
+   "end": 4457.131,
+   "text": "你是否假设过智能的起源，比如我们开始。 在火上烹饪肉类，还是通过协作发现自身力量。 我们的祖先通过合作推翻了alpha male，Richard·Randhawa认为我们都是beta male。 通过协作击败独裁者alpha male控制部落，是否存在。 其他解释是2001年太空中的某种石碑",
+   "audioFile": "audio-demis-superintelligence/0178.wav"
+  },
+  {
+   "id": 179,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4457.581,
+   "end": 4462.034,
+   "text": "降临地球后我认为你提到的火和烹饪都是很好的候选因素",
+   "audioFile": "audio-demis-superintelligence/0179.wav"
+  },
+  {
+   "id": 180,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4462.734,
+   "end": 4482.128,
+   "text": "能源效率确实重要比如烹饪肉类并更高效地进食。 利用火和工具确实能提升效率部落合作也至关重要。 语言可能是关键因素让我们战胜尼安德特人等不那么合作的物种。 制造矛和斧头让人类成为大型动物灭绝的主要原因",
+   "audioFile": "audio-demis-superintelligence/0180.wav"
+  },
+  {
+   "id": 181,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4482.578,
+   "end": 4501.35,
+   "text": "在美洲人类到达后大量灭绝事件随之发生工具使用对动物来说非常危险。 这类似于通用智能的演化初期大脑的能耗极高。 人类大脑消耗约20%身体能量相当于F1赛车手的耗能水平。 大脑耗能之大就像顶级棋手下棋时的消耗程度",
+   "audioFile": "audio-demis-superintelligence/0181.wav"
+  },
+  {
+   "id": 182,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4501.8,
+   "end": 4530.696,
+   "text": "生物必须获得巨大回报才能负担如此高能耗的大脑。 半脑或半智能的生物难以获得足够回报来维持生存。 将大脑比作猴子大脑，但直到进化到人类水平的大脑，这种进化过程才变得清晰，但如何实现这一飞跃呢？ 实现这一飞跃非常困难，这也是为什么我认为这种从动物特有的专用大脑到人类这种通用且强大的大脑的转变，历史上只发生过一次。",
+   "audioFile": "audio-demis-superintelligence/0182.wav"
+  },
+  {
+   "id": 183,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4531.146,
+   "end": 4561.42,
+   "text": "人类大脑的这种特性使我们能够创造现代世界，但跨越这一门槛需要巨大努力，我认为我们已经见证了这一点。 在AI系统方面也是如此，直到最近，人们发现解决特定问题（如国际象棋）比构建通用学习系统要容易得多。 最初，通用系统效率远低于专用系统，这正是为什么构建通用学习系统一直是个挑战。 人类心智的一个有趣特征是其看似具有意识，这种我们尚未完全理解的主观体验。",
+   "audioFile": "audio-demis-superintelligence/0183.wav"
+  },
+  {
+   "id": 184,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4562.12,
+   "end": 4582.299,
+   "text": "比如品尝饼干的美味，或看到颜色时的感知体验，这些主观感受是否是智能的必要条件？ 在通往智能的道路上，您认为通用人工智能系统需要具备意识才能真正智能吗？ 您认为AGI系统需要具备意识才能被称为真正智能吗？",
+   "audioFile": "audio-demis-superintelligence/0184.wav"
+  },
+  {
+   "id": 185,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4582.999,
+   "end": 4615.863,
+   "text": "我认为意识与智能可以相互分离，可以存在没有意识的智能，也可以存在没有智能的意识。 比如宠物狗等高等动物，它们表现出一定程度的自我意识和社会性，这说明意识并不必然与智能挂钩。 像海豚等高等动物也展现出自我意识和高度社会性，这进一步证明意识与智能是不同维度的属性。 它们似乎具备一些通常被视为有意识和自我认知的特质，但实际并不聪明。 按智商标准来看，它们并不算聪明",
+   "audioFile": "audio-demis-superintelligence/0185.wav"
+  },
+  {
+   "id": 186,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4616.313,
+   "end": 4647.442,
+   "text": "也许我们对智能的理解存在偏差，比如用智商来衡量。 它们可能在智能发展的道路上已经走得非常远，而人类却只能做到。 下棋或写诗，但如果我们回到AGI（通用人工智能）的概念，狗其实非常专业化，大多数动物也都有很强的专长。 它们就像顶尖运动员一样，专注于某一项技能，因为它们的整个大脑都优化于这一点。 它们通过某种方式说服了全人类为它们提供食物和服务，因此在某种程度上，它们在控制人类",
+   "audioFile": "audio-demis-superintelligence/0186.wav"
+  },
+  {
+   "id": 187,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4647.892,
+   "end": 4676.546,
+   "text": "我们与狗共同进化到了某种程度，包括它们摇尾巴、抽鼻子的方式，我们发现。 我们不可避免地觉得它们可爱，但我也认为，从另一角度看，像人工智能系统这样的系统可能展现出惊人的智能。 在某些方面非常聪明，比如下围棋、下棋等，但它们在任何意义上都不具备像你我这样的意识。 你对我的方式，或我对你的方式，我认为实际上构建AI，这些智能构造",
+   "audioFile": "audio-demis-superintelligence/0187.wav"
+  },
+  {
+   "id": 188,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4676.996,
+   "end": 4699.059,
+   "text": "探索意识之谜的最佳方式之一，因为我们将拥有。 在某些方面非常聪明或具备某些能力，但可能完全没有自我意识或其他特质。 事实上，如果可以选择，我主张从一开始就构建非意识的AI系统，它们只是工具。 工具，直到我们更好地理解它们和它们的能力，因此在这方面",
+   "audioFile": "audio-demis-superintelligence/0188.wav"
+  },
+  {
+   "id": 189,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4699.759,
+   "end": 4726.729,
+   "text": "不仅仅是作为DeepMind的CEO，而是作为一个人类，我想问你关于这个特定的轶事。 关于谷歌工程师的证据，他评论或认为语言模型存在某些方面。 lambda语言模型表现出意识，所以你说你认为可能有责任构建这样的系统。 非本质的，这种特定工程师的经历，我想听听你对这类事情的一般看法，但我觉得这种情况会越来越多",
+   "audioFile": "audio-demis-superintelligence/0189.wav"
+  },
+  {
+   "id": 190,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4727.179,
+   "end": 4765.559,
+   "text": "不是工程师，而是那些没有工程背景的人开始与越来越智能的系统互动时，我们会将它们拟人化，它们开始。 与我们进行深刻而有影响力互动的方式，以至于我们错过它们，是的，当它们消失时。 我们确实觉得它们是活的、有自我意识的实体，甚至可能将意识投射到它们身上，那么你对此有什么看法。 这个特定的系统，你有没有遇到过有意识的语言模型。 没有，没有，你对这种情况有什么看法，当你觉得这个系统有某种程度的意识时，是的，你知道",
+   "audioFile": "audio-demis-superintelligence/0190.wav"
+  },
+  {
+   "id": 191,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4766.009,
+   "end": 4774.777,
+   "text": "这是一个有趣的问题，显然也是一个非常根本的问题。首先需要指出的是，我认为我们目前拥有的任何系统都不具备",
+   "audioFile": "audio-demis-superintelligence/0191.wav"
+  },
+  {
+   "id": 192,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4775.477,
+   "end": 4803.931,
+   "text": "任何程度的意识或感知，这是我的个人感受。每天与它们互动后，我认为现在讨论那位工程师提到的内容还为时过早。 我理解他所说的某种程度上是人类思维模式的投射，即在几乎所有事物中寻找目的和方向。 我们的大脑被训练去解读几乎任何事物中的目的和方向，甚至包括无生命的物体。 由于语言对智能如此重要，我们很容易对语言系统进行拟人化解读",
+   "audioFile": "audio-demis-superintelligence/0192.wav"
+  },
+  {
+   "id": 193,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4804.381,
+   "end": 4832.809,
+   "text": "上世纪60年代最早的模板式聊天机器人，比如ELIZA，曾通过伪装成心理医生欺骗部分人。 它们只是简单地将你提出的问题原样返回，这种情况下确实有人相信了。 这就是为什么我认为图灵测试作为正式测试存在一些缺陷，因为它取决于评判者的专业程度。 是否具备区分机器与人类的能力，因此我们应该与顶尖哲学家讨论这个问题",
+   "audioFile": "audio-demis-superintelligence/0193.wav"
+  },
+  {
+   "id": 194,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4833.259,
+   "end": 4865.628,
+   "text": "比如丹尼尔·丹内特和大卫·查默斯等深入思考过意识本质的学者。 目前对意识尚无公认的定义，如果让我推测，我认为。 一个可行的定义是信息被处理时产生的主观感受，这个概念可能由马克斯·泰格马克提出。 除了更实际的操作层面，我认为这是一种很好的视角。我们显然可以从神经科学中看到某些先决条件。 比如自我意识是必要但不充分的条件，这种自我与他者及连贯的偏好体系",
+   "audioFile": "audio-demis-superintelligence/0194.wav"
+  },
+  {
+   "id": 195,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4866.078,
+   "end": 4895.522,
+   "text": "可能需要记忆等要素，这些对有意识的生物而言可能是必需的。 当我们接近通用人工智能时，如何判断系统能力成为哲学争论焦点。 当系统远超当前能力时，我们如何评判其水平？图灵测试通过行为判断系统是否展现人类行为。 系统是否回答正确问题、表达恰当内容、与人类无法区分等。 但人类互相认定对方有意识的第二个原因是基质等价性",
+   "audioFile": "audio-demis-superintelligence/0195.wav"
+  },
+  {
+   "id": 196,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4895.972,
+   "end": 4916.051,
+   "text": "我和丹尼尔·丹内特曾就此辩论，另一个常被忽视的原因是。 我们运行在相同生物基质上，若系统行为与人类相似。 且使用相同碳基生物基质（颅骨内几磅血肉），最合理的解释是。 它体验的感受与我们相同，但机器永远无法实现这种基质等价性",
+   "audioFile": "audio-demis-superintelligence/0196.wav"
+  },
+  {
+   "id": 197,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4916.501,
+   "end": 4931.743,
+   "text": "因此我们只能通过行为判断，基质等价性是人类做此假设的关键。 我们之所以认为高等动物可能具有意识，是因为它们表现出我们预期的有意识动物的行为，而且我们知道它们由相同的物质构成。",
+   "audioFile": "audio-demis-superintelligence/0197.wav"
+  },
+  {
+   "id": 198,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4932.443,
+   "end": 4964.217,
+   "text": "生物神经元，因此我们必须提出解释或模型，以弥合机器与人类在基质差异上的差距。 机器和人类之间的差异，才能超越单纯的行为层面。但对我而言，一个非常有趣且重要的实际问题是：。 当数以百万计甚至数十亿人相信你已实现升维AI，相信谷歌工程师所相信的那些内容时，。 这显然是通向通用人工智能的近期未来，这种技术将如何改变世界？",
+   "audioFile": "audio-demis-superintelligence/0198.wav"
+  },
+  {
+   "id": 199,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 4964.667,
+   "end": 4985.858,
+   "text": "AI系统对帮助这些数以百万计的人负有什么责任？同时，从伦理角度看，。 你能让很多人通过与系统产生有意义的深度体验而感到幸福，即使系统尚未真正实现。 但问题是，我们是否有权决定AI应该做什么？谁来判断什么是正确的事？",
+   "audioFile": "audio-demis-superintelligence/0199.wav"
+  },
+  {
+   "id": 200,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 4986.558,
+   "end": 5017.772,
+   "text": "为什么我们必须把AI限制为工具？ 为什么我们非要把AI当作工具，而不是朋友？我认为这些问题既精彩又关键，。 早在DeepMind创立之初，我们就为成功做好了规划，即使2010年时这看起来遥不可及。 我们始终将伦理考量视为DeepMind的根本原则，而我目前对语言模型和大模型的看法是：它们尚未准备就绪。 目前我们尚未充分理解这些工具的分析功能和安全限制，以及它们在大规模部署中的能力边界。",
+   "audioFile": "audio-demis-superintelligence/0200.wav"
+  },
+  {
+   "id": 201,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5018.222,
+   "end": 5054.274,
+   "text": "我认为仍存在重大伦理问题，例如AI系统是否应首先明确声明自身为AI，答案可能应是肯定的。 如何应对人们对AI系统可能错误归因的情感问题，这涉及哲学层面的思考。 我认为在负责任地部署这些系统之前，必须先进行大量研究以确保安全性。 在规模部署方面，我目前的立场是至少需要解决可解释性等工具问题，随着时间推移，我相信我们会拥有这些工具。 在伦理困境方面，我认为需要超越单纯的技术考量。",
+   "audioFile": "audio-demis-superintelligence/0201.wav"
+  },
+  {
+   "id": 202,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5054.724,
+   "end": 5086.216,
+   "text": "因此需要引入哲学、社会科学甚至神学等领域的视角，探讨人类本质与精神内涵。 通过增强人性特质与人类生存状态，让我们体验前所未有的事物，从而提升整个人类福祉。 解决众多科学难题，消除疾病，这将是一个充满可能性的新时代。 如果我们正确推进，这将是一个令人惊叹的时代，但必须保持谨慎。 例如社交媒体已证明，双用途技术可能被恶意行为者或轻率者滥用。",
+   "audioFile": "audio-demis-superintelligence/0202.wav"
+  },
+  {
+   "id": 203,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5086.666,
+   "end": 5112.034,
+   "text": "既有普通意义上的技术误用，也存在更深层次的伦理挑战。 AI最终可能拥有自主性，这是需要克服的额外挑战。 这种自主性本身可能是好是坏，因此必须谨慎对待这些问题。 应通过假设生成、严格控制实验而非直接在现实中测试。 若出现错误可能造成严重损害，不像普通应用那样容易修复",
+   "audioFile": "audio-demis-superintelligence/0203.wav"
+  },
+  {
+   "id": 204,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5112.484,
+   "end": 5126.573,
+   "text": "错误造成的危害相对较小，因此需要承担相应责任。 随着AI带来巨大机遇，必须广泛征集多方意见。 需要多维度参与系统设计和价值设定。 尤其需要非技术领域的声音参与决策",
+   "audioFile": "audio-demis-superintelligence/0204.wav"
+  },
+  {
+   "id": 205,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5127.023,
+   "end": 5147.137,
+   "text": "系统部署阶段影响最广泛，需要特别谨慎。 初期应将AI作为工具开发使用。 为后续探索保留充分试验空间。 工具与超越工具之间需要明确界限。 从工具到有知觉的实体，这需要非常谨慎。让我问一个可能有点冒昧的个人问题。",
+   "audioFile": "audio-demis-superintelligence/0205.wav"
+  },
+  {
+   "id": 206,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 5147.837,
+   "end": 5169.653,
+   "text": "你是AGI社区最杰出的人之一，也是最善良、最受人喜爱的人之一。 社区里有人认为，创造超级智能AI系统将是人类历史上最强大的工具之一。 正如老话所说，权力会腐蚀人，绝对权力导致绝对腐败。 毫无疑问，你极有可能成为这类系统的主要掌控者。",
+   "audioFile": "audio-demis-superintelligence/0206.wav"
+  },
+  {
+   "id": 207,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 5170.103,
+   "end": 5188.894,
+   "text": "当你谈论这些系统时，是否思考过权力的腐蚀性？ 历史上所有独裁者都曾认为自己在行善，但权力污染了他们的认知。 你是否思考过这种现象？还是说我们只关注语言模型？ 我一直在思考这个问题。我认为需要建立防御机制。",
+   "audioFile": "audio-demis-superintelligence/0207.wav"
+  },
+  {
+   "id": 208,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5189.594,
+   "end": 5221.725,
+   "text": "保持谦逊和接地气是关键。我始终努力做到这一点。 我的挚友仍是剑桥本科时期的同学，家人和朋友对我很重要。 跨学科背景能保持谦逊，因为每个领域都有比你更擅长的人。 从头开始重新学习一个新领域或新主题确实令人谦卑。对我而言，过去五年来，生物学就是这样一个巨大的领域。 这让我非常着迷，但这种持续学习的过程有助于保持谦逊，保持开放的心态。另一个重要的方面是",
+   "audioFile": "audio-demis-superintelligence/0208.wav"
+  },
+  {
+   "id": 209,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5222.175,
+   "end": 5253.076,
+   "text": "在你的公司或组织中，拥有一个真正优秀且富有道德感的团队，他们自身也保持务实态度，并能帮助你维持这种状态。 最终回答你的问题，我希望我们能成为推动人工智能发展的重要力量，这将是人类历史上最伟大的技术红利。 让我们进入一个资源极度丰富的时代，治愈疾病，解决许多迫在眉睫的挑战，。 最终帮助人类实现全面繁荣，探索星际，寻找外星生命，若它们不存在，也要弄清原因。",
+   "audioFile": "audio-demis-superintelligence/0209.wav"
+  },
+  {
+   "id": 210,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5253.526,
+   "end": 5282.363,
+   "text": "弄清楚宇宙中到底发生了什么。这一切都尚未实现，但这就是我一直以来的梦想。 我认为人工智能不是一个过于宏大的概念，希望我们能成为先驱者，从而影响其发展方向。 我认为人工智能系统的构建者来自何种文化、秉持哪些价值观至关重要。 尽管AI会自主学习，但系统中仍会残留创造者的文化印记和价值观，这引发了一些有趣的讨论。",
+   "audioFile": "audio-demis-superintelligence/0210.wav"
+  },
+  {
+   "id": 211,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5282.813,
+   "end": 5325.604,
+   "text": "在地缘政治层面，不同文化间的合作面临挑战。不幸的是，全球合作在气候问题上就显得力不从心。 我们似乎无法在全球层面协调行动应对这些紧迫问题，但希望未来能有所改变。 在资源不再稀缺的丰裕时代，我们或许不必再如此竞争，反而可以更注重合作。确实，从某种角度来看…… 权力确实会腐蚀人心，导致破坏性行为。过去一些暴行的发生，往往与资源存在重大限制有关。 资源约束确实是首要因素，但仅靠这一点并不足够。我认为资源稀缺确实引发了竞争，催生了零和博弈思维……",
+   "audioFile": "audio-demis-superintelligence/0211.wav"
+  },
+  {
+   "id": 212,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5326.054,
+   "end": 5358.054,
+   "text": "我希望能让我们进入一个正和世界，为此必须消除稀缺性。但不幸的是，仅靠消除稀缺性还不足以实现世界和平，因为还有其他腐蚀性因素…… 比如对权力的渴望，这类问题单靠丰裕未必能解决，但我认为这仍会有帮助。 但最终，我认为AI不应由任何个人或组织掌控，而应属于全世界，属于全人类。 我认为，实现这一目标的方式可能有多种，最终每个人都应有机会参与其中。",
+   "audioFile": "audio-demis-superintelligence/0212.wav"
+  },
+  {
+   "id": 213,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 5358.754,
+   "end": 5364.506,
+   "text": "您对高中生或大学生有什么建议？如果他们对AI或……",
+   "audioFile": "audio-demis-superintelligence/0213.wav"
+  },
+  {
+   "id": 214,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5365.206,
+   "end": 5398.142,
+   "text": "希望对世界产生重大影响，他们应该…… 如何拥有值得骄傲的职业和人生？我热爱向下一代演讲，通常我会传达两点建议。我认为最重要的是…… 年轻时最重要的学习和探索内容，是发现你真正的热情。首先，有两件事至关重要，第一是…… 找到你真正的热情。我认为实现这一点的方法，是在年轻时尽可能广泛探索，因为那时你有时间。 鼓励人们以独特视角发现事物间的联系，我认为这是找到热情的绝佳方式",
+   "audioFile": "audio-demis-superintelligence/0214.wav"
+  },
+  {
+   "id": 215,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5398.592,
+   "end": 5421.783,
+   "text": "其次，建议大家深入了解自己，花大量时间。 了解自己最佳的工作时段、学习方式，以及如何应对压力。 通过不同场景测试自己，改进弱点，同时发现独特技能与优势。 专注打磨这些优势，这将成为你未来的核心价值。 当热情与独特优势交汇时，你便找到了改变世界的契机",
+   "audioFile": "audio-demis-superintelligence/0215.wav"
+  },
+  {
+   "id": 216,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5422.233,
+   "end": 5436.363,
+   "text": "这将产生不可思议的成果，你能在世界上发挥巨大作用。 关于德米斯的日常生活，假设这是完美的一天。 如今的日常可能更复杂，但或许。 年轻时可以专注于演示项目",
+   "audioFile": "audio-demis-superintelligence/0216.wav"
+  },
+  {
+   "id": 217,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 5437.063,
+   "end": 5455.024,
+   "text": "你通常几点起床？是夜猫子吗？每天喝多少咖啡？ 使用的电脑配置如何？多少屏幕？键盘类型？ 我们讨论的是否是更现代的工具？比如Emacs和Vim，这些都是一些常见问题。或许可以谈谈日常的一天，什么样的日子才算完美？",
+   "audioFile": "audio-demis-superintelligence/0217.wav"
+  },
+  {
+   "id": 218,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5455.724,
+   "end": 5486.639,
+   "text": "如今与十年前甚至二十年前大不相同。那时候，可能一整天都在进行…… 独立研究或编程，进行一些实验，比如神经科学或计算机科学的实验，阅读大量研究论文…… 到了晚上，可能会读一些科幻小说，或者…… 玩一些游戏。但当时需要大量专注，无论是编程还是阅读论文，都必须深度投入。 如今过去五到十年，我逐渐形成了一套非常有效的结构化工作方式。",
+   "audioFile": "audio-demis-superintelligence/0218.wav"
+  },
+  {
+   "id": 219,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5487.089,
+   "end": 5519.338,
+   "text": "我一直是夜猫子，为此优化了作息。我基本在白天完成正常工作…… 大约11点开始工作，到办公室工作到晚上7点，期间安排连续的会议…… 全天尽可能与最多人进行密集会议，这是我的协作管理时段。之后回家与家人朋友共处…… 共进晚餐，放松一下，然后开启我所谓的‘第二天’工作…… 从晚上10点到11点开始，持续到凌晨4点、5点，这段时间我会进行思考和阅读……",
+   "audioFile": "audio-demis-superintelligence/0219.wav"
+  },
+  {
+   "id": 220,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5519.788,
+   "end": 5553.076,
+   "text": "撰写研究论文。遗憾的是，如今已没有时间进行编码，毕竟效率不高…… 我通常会留出一些时间，用于长时间的思考和规划，之后再处理其他事务。 我会通过邮件或其他方式，向团队发送大量任务，让他们第二天处理这些事项，以便我能在夜间深入思考是否要推进这个项目或安排会议。 第二天开会时，当你思考问题时，是用纸笔还是专利笔？有没有独立的结构？我仍然喜欢流程",
+   "audioFile": "audio-demis-superintelligence/0220.wav"
+  },
+  {
+   "id": 221,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5553.526,
+   "end": 5579.637,
+   "text": "我仍觉得纸笔最适合推导问题，但如今在屏幕上阅读论文效率更高，我仍习惯打印出来。 用纸笔标记内容时，信息更容易被大脑快速吸收并记忆。 我使用大量电子笔记和纸质笔记本，家里堆满了各种笔记本。 对于那些无人知晓的挑战性任务，需要深入思考才能找到突破方向",
+   "audioFile": "audio-demis-superintelligence/0221.wav"
+  },
+  {
+   "id": 222,
+   "speaker": "A",
+   "speakerName": "Lex Fridman",
+   "avatarFile": "avatars/demis-superintelligence/speaker-A.jpg",
+   "start": 5580.337,
+   "end": 5591.399,
+   "text": "对，比如要确定正确的问题和方法，因为整个团队都将投入大量时间推进这个方向。 强化学习在这里是否适用？应该尝试什么方法？",
+   "audioFile": "audio-demis-superintelligence/0222.wav"
+  },
+  {
+   "id": 223,
+   "speaker": "B",
+   "speakerName": "Demis Hassabis",
+   "avatarFile": "avatars/demis-superintelligence/speaker-B.jpg",
+   "start": 5592.099,
+   "end": 5605.196,
+   "text": "需要从零开始构建基准测试。 这些都需要在夜间阶段完成，但我更喜欢清晨的安静时光。 当所有人都睡着时，外面特别安静，我特别享受这种黄金时段",
+   "audioFile": "audio-demis-superintelligence/0223.wav"
+  }
+ ]
+}

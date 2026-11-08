@@ -1,0 +1,85 @@
+{
+  "title": "Hinton 访谈 · 中文播客 Demo",
+  "chapters": [
+    {
+      "id": 0,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "start": 0,
+      "end": 14.36,
+      "text": "能与Jeffrey Hon交谈令我欣喜。我多年关注他的工作，但这是我们第一次见面。 能见面是难得的机会，对我来说是‘Ground Truths’播客的重要亮点。",
+      "audioFile": "audio/0000.wav",
+      "avatarFile": "avatars/speaker-A.jpg"
+    },
+    {
+      "id": 1,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "start": 14.66,
+      "end": 24.22,
+      "text": "对我来说这也是一个难得的机会。你在某个领域是专家，而我在另一个领域是专家，很高兴能见面。这确实是一个重要的交汇点",
+      "audioFile": "audio/0001.wav",
+      "avatarFile": "avatars/speaker-B.jpg"
+    },
+    {
+      "id": 2,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "start": 24.52,
+      "end": 65.44,
+      "text": "如果真有融合的时刻，我想我应该从你最近频繁出现在新闻中说起，当然，这引起了我的兴趣。 让我想与你联系的是你与Scott Pell在《60分钟》上的采访，你当时提",
+      "audioFile": "audio/0002.wav",
+      "avatarFile": "avatars/speaker-A.jpg"
+    },
+    {
+      "id": 3,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "start": 65.74,
+      "end": 108.66,
+      "text": "嗯，是的，2012年时，我的一名研究生乔治·达尔曾做过语音识别相关研究。 2009年他参与了马克·弗罗斯特发起的比赛，预测某些化学物质与目标物的结合效果。 他完",
+      "audioFile": "audio/0003.wav",
+      "avatarFile": "avatars/speaker-B.jpg"
+    },
+    {
+      "id": 4,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "start": 108.96,
+      "end": 116.84,
+      "text": "已经持续了很多年，这个领域叫做定量构效关系。 试图预测某种化学物质是否会与某物结合",
+      "audioFile": "audio/0004.wav",
+      "avatarFile": "avatars/speaker-B.jpg"
+    },
+    {
+      "id": 5,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "start": 117.14,
+      "end": 165.14,
+      "text": "名字嘛，你知道，真是令人惊讶，嗯…… 医疗健康、生命科学在近期的人工智能领域似乎走了一条相对独立的道路，呃…… Transformer模型，还有ALS，当然也要",
+      "audioFile": "audio/0005.wav",
+      "avatarFile": "avatars/speaker-A.jpg"
+    },
+    {
+      "id": 6,
+      "speaker": "A",
+      "speakerName": "Eric Topol 主持人",
+      "start": 165.44,
+      "end": 176.12,
+      "text": "另一个例子，当然，来自你的同事德米斯·哈萨比斯和谷歌DeepMind的其他成员，这显然是一个具有更巨大潜力的领域",
+      "audioFile": "audio/0006.wav",
+      "avatarFile": "avatars/speaker-A.jpg"
+    },
+    {
+      "id": 7,
+      "speaker": "B",
+      "speakerName": "Geoffrey Hinton",
+      "start": 176.42,
+      "end": 197.82,
+      "text": "乐观的前景，绝对如此，我总是以医学为例来说明它能带来的所有好处，因为几乎所有。 它在那里的应用都会是正面的，虽然有一些负面用途，比如试图确定不应该治疗谁。 但它",
+      "audioFile": "audio/0007.wav",
+      "avatarFile": "avatars/speaker-B.jpg"
+    }
+  ]
+}

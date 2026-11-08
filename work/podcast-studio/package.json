@@ -1,0 +1,9 @@
+{
+  "name": "podcast-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render Podcast out/podcast.mp4"
+  }
+}

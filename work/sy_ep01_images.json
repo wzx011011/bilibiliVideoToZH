@@ -1,0 +1,296 @@
+[
+ {
+  "out": "work/broll/sy-01-liangzhu/s1_0.png",
+  "seed": 800,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:江南湿地晨雾中的史前城郭远景:水道环绕的土城剪影,木构水岸与独木舟,芦苇荡,飞鸟,静谧伟大的黎明感。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s1_1.png",
+  "seed": 801,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:考古发掘现场:规整的探方与地层剖面,考古队员跪姿持手铲毛刷细致清理黑色木桩遗迹,竹筐与测绘工具,严谨的田野氛围。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s1_2.png",
+  "seed": 802,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:夜晚瑶山祭坛:夯土高台上火把成列,先民们仰望浩瀚星空,剪影群像,银河横贯,苍茫的仪式感。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s1_3.png",
+  "seed": 803,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:俯瞰良渚古城全景:水网纵横环绕城郭,中央宫殿土台高耸,城内外舟楫往来,古道炊烟,史前大都气象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s1_bg.png",
+  "seed": 854,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s2_0.png",
+  "seed": 805,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:山谷间修坝的宏大工地:成百先民夯土运土,木栈道挑担的长队蜿蜒,竹筐石夯,号子与尘土,工程史诗感。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s2_1.png",
+  "seed": 806,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:汛期洪水被堤坝拦截:浑浊山洪在坝前库区蓄成湖泊,坝体岿然,坝上监工与坝下泽国对比,力量与秩序。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s2_2.png",
+  "seed": 807,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:高低两级坝群鸟瞰:两级水面如镜,堤线在青绿山谷间蜿蜒伸展,远处城郭隐现,水利系统的几何之美。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s2_3.png",
+  "seed": 808,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:坝间水道行舟运输:先民撑竹筏运粮石过闸,水面平静倒影,两岸绿意,工程惠民的日常图景。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s2_bg.png",
+  "seed": 859,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s3_0.png",
+  "seed": 810,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:莫角山宫殿区:巨型人工土台之巅的木构大殿,廊柱层叠,工匠们在台顶铺设梁木,恢宏的建设场景。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s3_1.png",
+  "seed": 811,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:反山王陵下葬仪式:大墓坑内玉璧玉琮成排铺陈,殉葬品层层叠叠,祭司主持,族人环立肃穆,幽暗庄严。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s3_2.png",
+  "seed": 812,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:城内作坊市井:玉匠聚精会神琢玉,陶窑烟火升腾,竹编漆器晾晒,街巷人流,史前都市的繁华日常。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s3_3.png",
+  "seed": 813,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:水城门舟楫入城:拱形水门下独木舟鱼贯而入,城墙夯土巍峨,门卒瞭望,晨光入城,门户气象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s3_bg.png",
+  "seed": 864,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s4_0.png",
+  "seed": 815,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:玉琮王供奉特写:神坛之上玉琮矗立,外方内圆,玉质温润泛幽光,四周烛火,器物圣物般的庄严构图。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s4_1.png",
+  "seed": 816,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:老玉工微雕场景:白发玉工屏息执石钻在玉琮上刻神徽,双眼几乎贴到玉面上,油灯如豆,毫厘之间的专注。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s4_2.png",
+  "seed": 817,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:神人兽面纹神徽的图案化构图:浮雕神徽铺满画面,羽冠神人骑跨獠牙神兽,对称威严,图腾的震撼。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s4_3.png",
+  "seed": 818,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:王者祭祀:祭坛之巅王者手捧玉琮高举向天,玉钺仪杖分列,火光冲天,万民仰望,沟通天人的时刻。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s4_bg.png",
+  "seed": 869,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s5_0.png",
+  "seed": 820,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:王与贵族仪仗行列:华服玉饰的显贵们拾级而上,玉璜项链成串,仪仗羽扇,等级森严的庄严行进。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s5_1.png",
+  "seed": 821,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:平民村落劳作:稻田间挑担送饭的农人,织机前的妇人,孩童追逐,茅屋炊烟,朴实生动的底层生活。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s5_2.png",
+  "seed": 822,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:两座墓葬的对比:并置的墓坑一满玉器一贫无物,发掘剖面前考古队员驻足沉思,生而不平等的证据。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s5_3.png",
+  "seed": 823,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:手工作坊三联场景:漆器上色、黑陶拉坯、缫丝绕线三个工位同框,工匠各司其职,高端制造业雏形。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s5_bg.png",
+  "seed": 874,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s6_0.png",
+  "seed": 825,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:金色稻浪丰收:弯腰割穗的农人,扬谷的木锨,谷粒在阳光下飞洒,饱满的丰收喜悦。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s6_1.png",
+  "seed": 826,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:池中寺高脚粮仓:架空木仓装满稻谷,粮吏持斛计量,运谷队伍络绎,仓廪充实的国家气象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s6_2.png",
+  "seed": 827,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:水田耕作:农人赤足踩泥持骨耜翻土,水面倒映人影与云,鹭鸟相伴,江南水田的鼻祖画面。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s6_3.png",
+  "seed": 828,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:饭稻羹鱼氏族共食:陶釜炖煮鱼稻冒热气,族人围坐分食,长者先食,孩童捧碗,温饱共同体的团聚。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s6_bg.png",
+  "seed": 879,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s7_0.png",
+  "seed": 830,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:满天星斗下的中华大地:黑暗大地上升起多处聚落灯火如星,各自闪烁,星斗与灯火上下呼应,多元起源的意象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s7_1.png",
+  "seed": 831,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:北方红山:雪原上的积石祭坛与女神庙,先民捧玉龙跪祭,北风猎猎,苍凉神圣的北国气象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s7_2.png",
+  "seed": 832,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:江淮凌家滩玉工:临河作坊里玉人雕琢玉鹰玉版,精巧玉器满案,水乡灵秀,另一种玉的文明。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s7_3.png",
+  "seed": 833,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:星图汇聚:大地上的灯火与星光连成光带,向着中原缓缓汇聚流动,多元一体的诞生意象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s7_bg.png",
+  "seed": 884,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s8_0.png",
+  "seed": 835,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:洪水退去的空城:水线痕迹爬满城墙,空荡的街巷,一只孤鸟掠过,荒芜中带着尊严的告别。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s8_1.png",
+  "seed": 836,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:商周王墓中的古玉琮:千年后的贵族墓室里,一枚古旧玉琮被郑重安放,烛光下审视,传世的重逢。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s8_2.png",
+  "seed": 837,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:玉琮的接力:一双双不同时代的手在时间长河中传递同一枚玉琮,手掌渐变,玉色不改,文明接力意象。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s8_3.png",
+  "seed": 838,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:现代考古遗址公园晨光:今人驻足玻璃展柜前凝视玉琮王,窗外是良渚古城复原景观,古今对望。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s8_bg.png",
+  "seed": 889,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s9_0.png",
+  "seed": 899,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国考古历史场景插画,干净利落的轮廓线,统一的灰米大地色调并以玉青、赭石、朱砂点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体。中国长江下游新石器时代晚期(约五千年前,无金属、无文字的玉器文明)。场景:博物馆课堂:孩子们围着玉琮展柜好奇提问,墙上'文明标准'展板前老师比划讲解,新旧答案同框,幽默求知氛围。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-01-liangzhu/s9_bg.png",
+  "seed": 900,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ }
+]

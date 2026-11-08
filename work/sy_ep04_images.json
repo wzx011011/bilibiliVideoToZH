@@ -1,0 +1,303 @@
+[
+ {
+  "out": "work/broll/sy-04-xizhou/s1_0.png",
+  "seed": 2000,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:周原晨曦:岐山之下沃野,农人耕作,村社安宁,农耕民族的积淀。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s1_1.png",
+  "seed": 2001,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:文王治国:仁厚长者听取诉讼,百姓围拢,敬老慈少,三分天下有其二的暗流。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s1_2.png",
+  "seed": 2002,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:渭水访贤:文王与姜尚渭水相遇,一钓一顾,君臣际会,历史名场面。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s1_3.png",
+  "seed": 2003,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:商周对望:西土周原生机勃勃,东方殷都暮霭沉沉,此消彼长。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s1_bg.png",
+  "seed": 2054,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s2_0.png",
+  "seed": 2005,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:牧野誓师:武王立于战车执黄钺宣誓,联军将士如林,白鱼入舟的征兆。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s2_1.png",
+  "seed": 2006,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:战场冲杀:戎车驰突,虎贲冲锋,商军阵前倒戈,尘土蔽日。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s2_2.png",
+  "seed": 2007,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:纣王末路:鹿台之上自焚,火光与浓烟,一代暴君的终结。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s2_3.png",
+  "seed": 2008,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:克商之后:武王散财发粟,释箕子囚,封比干墓,收拾人心。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s2_bg.png",
+  "seed": 2059,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s3_0.png",
+  "seed": 2010,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:分封大典:诸侯依次受土受民,旌旗仪仗,授民授疆土的庄严仪式。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s3_1.png",
+  "seed": 2011,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:诸侯就国:车队载着宗庙重器驶向四方封土,周人的网撒向天下。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s3_2.png",
+  "seed": 2012,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:营建洛邑:成周工地,筑城者众,天下之中的新都规划。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s3_3.png",
+  "seed": 2013,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:众星拱月:王畿居中,诸侯国环卫,四方屏藩的秩序图景。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s3_bg.png",
+  "seed": 2064,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s4_0.png",
+  "seed": 2015,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:宗庙昭穆:神主牌位按世系排列,嫡庶有别,大宗小宗的家族之树。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s4_1.png",
+  "seed": 2016,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:家族礼仪:嫡长子受胙,族人依序而立,尊卑井然。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s4_2.png",
+  "seed": 2017,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:世代传承:老宗主将圭璧传给嫡长子,族人见证,权力的交接。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s4_3.png",
+  "seed": 2018,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:宗法之树意象:一棵巨树根系深扎,枝叶分层伸展,树即国家。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s4_bg.png",
+  "seed": 2069,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s5_0.png",
+  "seed": 2020,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:列鼎而食:天子九鼎八簋盛陈,钟磬齐鸣,礼食的盛大。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s5_1.png",
+  "seed": 2021,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:等级宴饮:三桌对比,诸侯七鼎、大夫五鼎、士三鼎,器物即身份。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s5_2.png",
+  "seed": 2022,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:乐舞仪式:舞列八佾与四佾对比,乐有等差,礼乐相彰。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s5_3.png",
+  "seed": 2023,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:礼器工坊:铸鼎作坊中匠人按规格制器,礼制物化的生产。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s5_bg.png",
+  "seed": 2074,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s6_0.png",
+  "seed": 2025,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:1963年宝鸡农家后院:雨水冲刷出土堆,农人蹲看铜尊,意外之发现。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s6_1.png",
+  "seed": 2026,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:除锈见铭:博物馆修复室,铭文渐显,专家们凑近惊读,石破天惊。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s6_2.png",
+  "seed": 2027,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:何尊特写:庄严凝重的铜尊,饕餮纹饰,底部铭文幽光。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s6_3.png",
+  "seed": 2028,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:成王营洛:青铜时代的王在洛邑祭天,宣告宅兹中国,兹有天下。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s6_bg.png",
+  "seed": 2079,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s7_0.png",
+  "seed": 2030,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:镐京街市:国人聚议,面色愤懑,道路以目,山雨欲来。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s7_1.png",
+  "seed": 2031,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:国人暴动:人群执械冲向王宫,宫门摇撼,厉王仓皇出逃。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s7_2.png",
+  "seed": 2032,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:共和行政:周公召公并坐理政,百官分职,无王的十四年。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s7_3.png",
+  "seed": 2033,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:史官记事:史官在简上郑重刻下共和元年,纪元之始的庄重。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s7_bg.png",
+  "seed": 2084,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s8_0.png",
+  "seed": 2035,
+  "size": "1536x864",
+  "preset": "qwen21",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:骊山烽火:烽燧烟起,诸侯迟疑,犬戎铁骑压境,西周最后之夜。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s8_1.png",
+  "seed": 2036,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:镐京陷落:宫殿焚毁,王死骊山,都城残破,王朝悲鸣。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s8_2.png",
+  "seed": 2037,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:平王东迁:车队长载着九鼎与宗器东行,回望故都烟尘,苍凉启程。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s8_3.png",
+  "seed": 2038,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:春秋之门:少年天子虚坐洛邑,列侯环立各怀心思,新时代开启。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s8_bg.png",
+  "seed": 2089,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s9_0.png",
+  "seed": 2090,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:司马迁著书:太史公烛下疾书烽火戏诸侯,笔下美人一笑,小说家笔意。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s9_1.png",
+  "seed": 2091,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "厚涂绘本风格的中国历史场景插画,干净利落的轮廓线,统一暖羊皮纸色调并以玄青、赭石、玄鸟金点缀,全景式电影构图铺满画面,环境有纵深与氛围,背景整洁连贯,人物结构准确,无多余肢体,无扭曲面孔。中国西周时代(三千年前,礼乐文明的清晨)。场景:清华简出土:战国竹简在灯光下展开,学者细读,竟无烽火二字,千年童话被轻轻推翻。旗面一律为素色,不写任何字。画面中不出现任何文字与水印。"
+ },
+ {
+  "out": "work/broll/sy-04-xizhou/s9_bg.png",
+  "seed": 2099,
+  "size": "1536x864",
+  "preset": "qwen21-turbo",
+  "prompt": "Warm grey-beige archaeological paper background, extremely subtle stratigraphic soil-layer texture fading in from the left and right edges, flat, minimal, clean empty center area, museum-document mood, no objects, no text, no letters, no watermark."
+ }
+]
